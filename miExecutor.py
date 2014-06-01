@@ -27,13 +27,6 @@ def getMayaWindow():
     ptr = mui.MQtUtil.mainWindow()
     return shiboken.wrapInstance(long(ptr), QtGui.QWidget)
 
-# If command hisotry list doesn't exist, create the empty one
-try:
-    global commandHistory
-    commandHistory
-except NameError:
-    commandHistory = []
-
 
 class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
 
@@ -61,7 +54,6 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
 
         # 0: when return pressed without selecting an item on the completion list
         # 1: when an item on the completion list is selected by arrow keys
-        # 2: when an item on the command history list is selected
         self.executeType = 0
 
         self.createData()
@@ -108,12 +100,6 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
         self.lineEdit.textChanged.connect(self.getCurrentCompletion)
         self.lineEdit.setFocus()
 
-    def onClicked(self, index):
-        selectedCommand = index.data()
-        self.lineEdit.setText(selectedCommand)
-        self.lineEdit.setFocus()
-        self.executeType = 2
-
     def updateData(self):
         regExp = QtCore.QRegExp(self.lineEdit.text(),
                                 QtCore.Qt.CaseInsensitive,
@@ -148,11 +134,6 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
         else:
             cmds.warning("Command not found. No object created.")
 
-        if self.lastCommand in commandHistory:
-            pass
-        else:
-            commandHistory.insert(0, self.lastCommand)
-
     def secondaryExecution(self):
         if self.executeType == 0:
             if self.currentCompletion is None:
@@ -171,21 +152,8 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
             self.close()
             self.lastCommand = self._selected
             return self.lastCommand
-        elif self.executeType == 2:
-            command = self.lineEdit.text()
-            commandString = "self._%s()" % command
-            exec commandString
-            self.close()
-            self.lastCommand = command
         else:
             pass
-
-    def clearHistory(self):
-        global commandHistory
-        itemCount = len(commandHistory)
-        for i in range(itemCount):
-            self.commandHistoryListView.model().removeRow(0)
-        commandHistory = []
 
     def main(self):
         global executorWin
