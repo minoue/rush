@@ -213,10 +213,6 @@ class Commands(object):
         cmds.shadingNode('doubleShadingSwitch', asUtility=True)
     commandDict['doubleShadingSwitch'] = "render_doubleShadingSwitch.png"
 
-    def _eulerToQuat(self):
-        cmds.shadingNode('eulerToQuat', asUtility=True)
-    commandDict['doubleShadingSwitch'] = "render_doubleShadingSwitch.png"
-
     def _frameCache(self):
         cmds.shadingNode('frameCache', asUtility=True)
     commandDict['doubleShadingSwitch'] = ""
@@ -276,38 +272,6 @@ class Commands(object):
     def _quadShadingSwitch(self):
         cmds.shadingNode('quadShadingSwitch', asUtility=True)
     commandDict['quadShadingSwitch'] = "render_quadShadingSwitch.png"
-
-    def _quatAdd(self):
-        cmds.shadingNode('quatAdd', asUtility=True)
-    commandDict['quatAdd'] = ""
-
-    def _quatConjugate(self):
-        cmds.shadingNode('quatConjugate', asUtility=True)
-    commandDict['quatConjugate'] = ""
-
-    def _quatInvert(self):
-        cmds.shadingNode('quatInvert', asUtility=True)
-    commandDict['quatInvert'] = ""
-
-    def _quatNegate(self):
-        cmds.shadingNode('quatNegate', asUtility=True)
-    commandDict['quatNegate'] = ""
-
-    def _quatNormalize(self):
-        cmds.shadingNode('quatNormalize', asUtility=True)
-    commandDict['quatNormalize'] = ""
-
-    def _quatProd(self):
-        cmds.shadingNode('quatProd', asUtility=True)
-    commandDict['quatProd'] = ""
-
-    def _quatSub(self):
-        cmds.shadingNode('quatSub', asUtility=True)
-    commandDict['quatSub'] = ""
-
-    def _quatToEuler(self):
-        cmds.shadingNode('quatToEuler', asUtility=True)
-    commandDict['quatToEuler'] = ""
 
     def _remapColor(self):
         cmds.shadingNode('remapColor', asUtility=True)
