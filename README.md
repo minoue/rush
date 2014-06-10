@@ -1,27 +1,44 @@
  miExecutor
 ========
+TabMenu-like simple command launcher for Maya
+
 ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/miExecutor_overview.gif)
 
-## Installation
+## Requirements
 
-Make sure you have **PySide installed or Maya2014 or higher**.
+PySide or PyQt4.
+
+## Installation
 
 In your maya script directory,
 
 `git clone https://github.com/mifx/miExecutor.git`
 
-or, just download zip file from the right bottom of the repositry page and extract it.
+or, download zip file from the right bottom of the repositry page and extract it.
 Then, rename 'miExecutor-master' folder to 'miExecutor' and move it to the maya script directory.
 
 
 ## Usage
 
+
 In maya hotkey editor, assign the following python command to any key you want.
 
-    from miExecutor import miExecutor
-    reload(miExecutor)
-    miExecutor.MiExecutor().main()  
+* PyQt4:
 
+
+
+        from miExecutor import miExecutor_PyQt4  
+        reload(miExecutor_PyQt4)  
+        miExecutor_PyQt4.MiExecutor().main()  
+
+
+* PySide
+
+
+
+        from miExecutor import miExecutor_PySide
+        reload(miExecutor_PySide)
+        miExecutor_PySide.MiExecutor().main() 
 
 ## How to add commands
 1. Open **miExecutor/pref/miExecutorCommands.py** in your text editor.
@@ -36,5 +53,5 @@ This can be used to call commands name and icon names in the main script.
 3. Go back to Maya and run 'reGenerateCommands' using miExecutor. Your new command will be added to the JSON file.  
 ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/reGenerateCommands.jpg)  
 4. Your new command should be ready to use.  
-![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/yourNewCommand.jpg)  
-![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/output.jpg)  
+    ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/yourNewCommand.jpg)  
+    ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/output.jpg)  
