@@ -130,7 +130,7 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
 
         if self.lastCommand is not None:
             className = self.__class__.__name__
-            pa.callLastCommand("""python(\"miExecutor.%s()._%s()\")""" % (className, self.lastCommand))
+            pa.callLastCommand("""python(\"miExecutor_PyQt4.%s()._%s()\")""" % (className, self.lastCommand))
         else:
             cmds.warning("Command not found. No object created.")
 
