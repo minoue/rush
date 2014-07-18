@@ -52,7 +52,8 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
         # Attribute to check if item on the popup list is selected
         self._selected = None
 
-        # 0: when return pressed without selecting an item on the completion list
+        # 0: when return pressed without
+        #    selecting an item on the completion list
         # 1: when an item on the completion list is selected by arrow keys
         self.executeType = 0
 
@@ -62,7 +63,8 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
     def createData(self):
         self.model = QtGui.QStandardItemModel()
 
-        commandFile = os.path.normpath(os.path.join(os.path.dirname(__file__), "pref/commands.json"))
+        commandFile = os.path.normpath(
+            os.path.join(os.path.dirname(__file__), "pref/commands.json"))
         jsonDict = json.load(open(commandFile))
         self.commands = [i for i in jsonDict]
 
@@ -89,7 +91,8 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
 
         # Set up QCompleter
         self.completer = QtGui.QCompleter(self)
-        self.completer.setCompletionMode(QtGui.QCompleter.UnfilteredPopupCompletion)
+        self.completer.setCompletionMode(
+            QtGui.QCompleter.UnfilteredPopupCompletion)
         self.completer.highlighted.connect(self.selectionCallback)
         self.completer.setModel(self.filteredModel)
 
@@ -112,12 +115,20 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
         return self._selected
 
     def getCurrentCompletion(self, *args):
-        self.currentCompletionPrefix = self.completer.completionPrefix().lower()
-        self.currentCompletionList = [i for i in self.commands if self.currentCompletionPrefix in i.lower()]
+        self.curCompPrefix = self.completer.completionPrefix().lower()
+        self.curCompList = [i for i
+                            in self.commands
+                            if self.curCompPrefix in i.lower()]
         try:
-            self.currentCompletion = self.currentCompletionList[0]
+            self.currentCompletion = self.curCompList[0]
         except IndexError:
             self.currentCompletion = None
+
+        currentCompletion = self.completer.currentCompletion()
+        if str(currentCompletion) == "":
+            pass
+        else:
+            self.currentCompletion = currentCompletion
         return self.currentCompletion
 
     def initialExecution(self):
@@ -130,7 +141,9 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
 
         if self.lastCommand is not None:
             className = self.__class__.__name__
-            pa.callLastCommand("""python(\"miExecutor_PySide.%s()._%s()\")""" % (className, self.lastCommand))
+            pa.callLastCommand(
+                """python(\"miExecutor_PySide.%s()._%s()\")""" % (
+                    className, self.lastCommand))
         else:
             cmds.warning("Command not found. No object created.")
 
@@ -165,6 +178,7 @@ class MiExecutor(QtGui.QWidget, miExecutorCommands.Commands):
         executorWin.show()
 
         pos = QtGui.QCursor.pos()
-        executorWin.move(pos.x() - (self.width() / 2), pos.y() - (self.height() / 2))
+        executorWin.move(
+            pos.x() - (self.width() / 2), pos.y() - (self.height() / 2))
         executorWin.activateWindow()
         executorWin.raise_()
