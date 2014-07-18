@@ -9,6 +9,11 @@ current_dir = os.path.dirname(__file__)
 
 commandDict = {}
 
+iconPaths = os.environ["XBMLANGPATH"]
+
+vrayIconPath = [i for i in iconPaths.split(":") if '/vray/icons' in i][0]
+mentalrayIconPath = [i for i in iconPaths.split(":") if 'mentalray' in i][0]
+
 
 class Commands(object):
     ################################
@@ -80,14 +85,16 @@ class Commands(object):
         node = cmds.shadingNode('envFog', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.volumeShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor', shaderGroup + '.volumeShader', force=True)
     commandDict['envFog'] = "render_envFog.png"
 
     def _fluidShape(self):
         node = cmds.shadingNode('fluidShape', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.volumeShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor', shaderGroup + '.volumeShader', force=True)
         cmds.connectAttr("time1.outTime", node + ".currentTime")
     commandDict['fluidShape'] = "render_fluidShape.png"
 
@@ -95,28 +102,32 @@ class Commands(object):
         node = cmds.shadingNode('lightFog', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.volumeShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor', shaderGroup + '.volumeShader', force=True)
     commandDict['lightFog'] = "render_lightFog.png"
 
     def _particleCloud(self):
         node = cmds.shadingNode('particleCloud', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.volumeShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor', shaderGroup + '.volumeShader', force=True)
     commandDict['particleCloud'] = "render_particleCloud.png"
 
     def _volumeFog(self):
         node = cmds.shadingNode('volumeFog', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.volumeShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor', shaderGroup + '.volumeShader', force=True)
     commandDict['volumeFog'] = "render_volumeFog.png"
 
     def _volumeShader(self):
         node = cmds.shadingNode('volumeShader', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.volumeShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor', shaderGroup + '.volumeShader', force=True)
     commandDict['volumeShader'] = "render_volumeShader.png"
 
     # Displacement
@@ -125,14 +136,20 @@ class Commands(object):
         node = cmds.shadingNode('cMuscleShader', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.outColor', shaderGroup + '.displacementShader', force=True)
+        cmds.connectAttr(
+            node + '.outColor',
+            shaderGroup + '.displacementShader',
+            force=True)
     commandDict['volumeShader'] = "sphere.png"
 
     def _displacementShader(self):
         node = cmds.shadingNode('displacementShader', asShader=True)
         shaderGroup = cmds.sets(renderable=True, noSurfaceShader=True,
                                 empty=True, name=node + "SG")
-        cmds.connectAttr(node + '.displacement', shaderGroup + '.displacementShader', force=True)
+        cmds.connectAttr(
+            node + '.displacement',
+            shaderGroup + '.displacementShader',
+            force=True)
     commandDict['displacementShader'] = "render_displacementShader.png"
 
     # Utilities
@@ -341,115 +358,134 @@ class Commands(object):
     def _brownian(self):
         node = cmds.shadingNode('brownian', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['brownian'] = "render_brownian.png"
 
     def _cloud(self):
         node = cmds.shadingNode('cloud', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['cloud'] = "render_cloud.png"
 
     def _crater(self):
         node = cmds.shadingNode('crater', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['crater'] = "render_crater.png"
 
     def _granite(self):
         node = cmds.shadingNode('granite', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['granite'] = "render_granite.png"
 
     def _leather(self):
         node = cmds.shadingNode('leather', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['leather'] = "render_leather.png"
 
     def _mandelbrot3D(self):
         node = cmds.shadingNode('mandelbrot3D', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['mandelbrot3D'] = "render_mandelbrot3D.png"
 
     def _marble(self):
         node = cmds.shadingNode('marble', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['marble'] = "render_marble.png"
 
     def _rock(self):
         node = cmds.shadingNode('rock', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['rock'] = "render_rock.png"
 
     def _snow(self):
         node = cmds.shadingNode('snow', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['snow'] = "render_snow.png"
 
     def _solidFractal(self):
         node = cmds.shadingNode('solidFractal', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['solidFractal'] = "render_solidFractal.png"
 
     def _stucco(self):
         node = cmds.shadingNode('stucco', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['stucco'] = "render_stucco.png"
 
     def _volumeNoise(self):
         node = cmds.shadingNode('volumeNoise', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['volumeNoise'] = "render_volumeNoise.png"
 
     def _wood(self):
         node = cmds.shadingNode('wood', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['wood'] = "render_wood.png"
 
     def _fluidTexture3D(self):
         node = cmds.shadingNode('fluidTexture3D', asTexture=True)
-        cmds.connectAttr("time1.outTime", node + ".currentTime")
+        cmds.connectAttr(
+            "time1.outTime", node + ".currentTime")
     commandDict['fluidTexture3D'] = "render_fluidTexture3D.png"
 
     # env texture
     def _envBall(self):
         node = cmds.shadingNode('envBall', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['envBall'] = "render_envBall.png"
 
     def _envChrome(self):
         node = cmds.shadingNode('envChrome', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['envChrome'] = "render_envChrome.png"
 
     def _envCube(self):
         node = cmds.shadingNode('envCube', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['envCube'] = "render_envCube.png"
 
     def _envSky(self):
         node = cmds.shadingNode('envSky', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['envSky'] = "render_envSky.png"
 
     def _envSphere(self):
         node = cmds.shadingNode('envSphere', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
     commandDict['envSphere'] = "render_envSphere.png"
 
     # other textures
@@ -885,7 +921,9 @@ class Commands(object):
     commandDict['commandShell'] = "menuIconWindow.png"
 
     def _customStereoRigEditor(self):
-        mel.eval('stereoCameraCBwrapper("stereoRigToolEditor","customRigEditor()");')
+        mel.eval(
+            'stereoCameraCBwrapper(\
+                "stereoRigToolEditor","customRigEditor()");')
     commandDict['customStereoRigEditor'] = "menuIconWindow.png"
 
     def _renderingFlags(self):
@@ -1050,75 +1088,86 @@ class Commands(object):
     def _VRayBlendMtl(self):
         cmds.shadingNode('VRayBlendMtl', asShader=True)
     # commandDict['VRayBlendMtl'] = "render_VRayBlendMtl.png"
-    commandDict['VRayBlendMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayBlendMtl.png"
+    commandDict['VRayBlendMtl'] = "%s/render_VRayBlendMtl.png" % vrayIconPath
 
     def _VRayBumpMtl(self):
         cmds.shadingNode('VRayBumpMtl', asShader=True)
-    commandDict['VRayBumpMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayBumpMtl.png"
+    commandDict['VRayBumpMtl'] = "%s/render_VRayBumpMtl.png" % vrayIconPath
 
     def _VRayCarPaintMtl(self):
         cmds.shadingNode('VRayCarPaintMtl', asShader=True)
-    commandDict['VRayCarPaintMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayCarPaintMtl.png"
+    commandDict[
+        'VRayCarPaintMtl'] = "%s/render_VRayCarPaintMtl.png" % vrayIconPath
 
     def _VRayFastSSS2(self):
         cmds.shadingNode('VRayFastSSS2', asShader=True)
-    commandDict['VRayFastSSS2'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayFastSSS2.png"
+    commandDict['VRayFastSSS2'] = "%s/render_VRayFastSSS2.png" % vrayIconPath
 
     def _VRayFlakesMtl(self):
         cmds.shadingNode('VRayFlakesMtl', asShader=True)
-    commandDict['VRayFlakesMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayFlakesMtl.png"
+    commandDict['VRayFlakesMtl'] = "%s/render_VRayFlakesMtl.png" % vrayIconPath
 
     def _VRayLightMtl(self):
         cmds.shadingNode('VRayLightMtl', asShader=True)
-    commandDict['VRayLightMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayLightMtl.png"
+    commandDict['VRayLightMtl'] = "%s/render_VRayLightMtl.png" % vrayIconPath
 
     def _VRayMeshMaterial(self):
         cmds.shadingNode('VRayMeshMaterial', asShader=True)
-    commandDict['VRayMeshMaterial'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayMeshMaterial.png"
+    commandDict[
+        'VRayMeshMaterial'] = "%s/render_VRayMeshMaterial.png" % vrayIconPath
 
     def _VRayMtl(self):
         cmds.shadingNode('VRayMtl', asShader=True)
-    commandDict['VRayMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayMtl.png"
+    commandDict['VRayMtl'] = "%s/render_VRayMtl.png" % vrayIconPath
 
     def _VRayMtl2Sided(self):
         cmds.shadingNode('VRayMtl2Sided', asShader=True)
-    commandDict['VRayMtl2Sided'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayMtl2Sided.png"
+    commandDict['VRayMtl2Sided'] = "%s/render_VRayMtl2Sided.png" % vrayIconPath
 
     def _VRayMtlHair2(self):
         cmds.shadingNode('VRayMtlHair2', asShader=True)
-    commandDict['VRayMtlHair2'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict['VRayMtlHair2'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRayMtlHair3(self):
         cmds.shadingNode('VRayMtlHair3', asShader=True)
-    commandDict['VRayMtlHair3'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict['VRayMtlHair3'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRayMtlWrapper(self):
         cmds.shadingNode('VRayMtlWrapper', asShader=True)
-    commandDict['VRayMtlWrapper'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayMtlWrapper.png"
+    commandDict[
+        'VRayMtlWrapper'] = "%s/render_VRayMtlWrapper.png" % vrayIconPath
 
     def _VRayPluginNodeMtl(self):
         cmds.shadingNode('VRayPluginNodeMtl', asShader=True)
-    commandDict['VRayPluginNodeMtl'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayPluginNodeTex.png"
+    commandDict[
+        'VRayPluginNodeMtl'] = "%s/render_VRayPluginNodeTex.png" % vrayIconPath
 
     def _VRaySimbiont(self):
         cmds.shadingNode('VRaySimbiont', asShader=True)
-    commandDict['VRaySimbiont'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRaySimbiont.png"
+    commandDict['VRaySimbiont'] = "%s/render_VRaySimbiont.png" % vrayIconPath
 
     def _VRayEnvironmentFog(self):
         cmds.shadingNode('VRayEnvironmentFog', asShader=True)
-    commandDict['VRayEnvironmentFog'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayEnvironmentFog.png"
+    commandDict[
+        'VRayEnvironmentFog'] = ("%s"
+                                 "/render_VRayEnvironmentFog.png"
+                                 ) % vrayIconPath
 
     def _VRayScatterFog(self):
         cmds.shadingNode('VRayScatterFog', asShader=True)
-    commandDict['VRayScatterFog'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayScatterFog.png"
+    commandDict[
+        'VRayScatterFog'] = "%s/render_VRayScatterFog.png" % vrayIconPath
 
     def _VRaySimpleFog(self):
         cmds.shadingNode('VRaySimpleFog', asShader=True)
-    commandDict['VRaySimpleFog'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRaySimpleFog.png"
+    commandDict['VRaySimpleFog'] = "%s/render_VRaySimpleFog.png" % vrayIconPath
 
     def _VRaySphereFadeVolume(self):
         cmds.shadingNode('VRaySphereFadeVolume', asShader=True)
-    commandDict['VRaySphereFadeVolume'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRaySphereFadeVolume.png"
+    commandDict[
+        'VRaySphereFadeVolume'] = ("%s"
+                                   "/render_VRaySphereFadeVolume.png"
+                                   ) % vrayIconPath
 
     def _VRayDirt(self):
         node = cmds.shadingNode('VRayDirt', asTexture=True)
@@ -1127,7 +1176,7 @@ class Commands(object):
         cmds.connectAttr(tex + '.outUvFilterSize', node + '.uvFilterSize')
         cmds.setAttr(tex + '.repeatU', 1)
         cmds.setAttr(tex + '.repeatV', 1)
-    commandDict['VRayDirt'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayDirt.png"
+    commandDict['VRayDirt'] = "%s/render_VRayDirt.png" % vrayIconPath
 
     def _VRayEdges(self):
         node = cmds.shadingNode('VRayEdges', asTexture=True)
@@ -1136,7 +1185,7 @@ class Commands(object):
         cmds.connectAttr(tex + '.outUvFilterSize', node + '.uvFilterSize')
         cmds.setAttr(tex + '.repeatU', 1)
         cmds.setAttr(tex + '.repeatV', 1)
-    commandDict['VRayEdges'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayEdges.png"
+    commandDict['VRayEdges'] = "%s/render_VRayEdges.png" % vrayIconPath
 
     def _VRayFresnel(self):
         node = cmds.shadingNode('VRayFresnel', asTexture=True)
@@ -1145,7 +1194,10 @@ class Commands(object):
         cmds.connectAttr(tex + '.outUvFilterSize', node + '.uvFilterSize')
         cmds.setAttr(tex + '.repeatU', 1)
         cmds.setAttr(tex + '.repeatV', 1)
-    commandDict['VRayFresnel'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayFresnel.png"
+    commandDict[
+        'VRayFresnel'] = ("%s"
+                          "/render_VRayFresnel.png"
+                          ) % vrayIconPath
 
     def _VRayVertexColors(self):
         node = cmds.shadingNode('VRayVertexColors', asTexture=True)
@@ -1154,7 +1206,10 @@ class Commands(object):
         cmds.connectAttr(tex + '.outUvFilterSize', node + '.uvFilterSize')
         cmds.setAttr(tex + '.repeatU', 1)
         cmds.setAttr(tex + '.repeatV', 1)
-    commandDict['VRayVertexColors'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayVertexColors.png"
+    commandDict[
+        'VRayVertexColors'] = ("%s"
+                               "/render_VRayVertexColors.png"
+                               ) % vrayIconPath
 
     def _VRayWater(self):
         node = cmds.shadingNode('VRayWater', asTexture=True)
@@ -1163,81 +1218,112 @@ class Commands(object):
         cmds.connectAttr(tex + '.outUvFilterSize', node + '.uvFilterSize')
         cmds.setAttr(tex + '.repeatU', 1)
         cmds.setAttr(tex + '.repeatV', 1)
-    commandDict['VRayVertexColors'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayVertexColors.png"
+    commandDict[
+        'VRayWater'] = ("%s"
+                        "/render_VRayWater.png"
+                        ) % vrayIconPath
 
     def _VRayParticleTex(self):
         node = cmds.shadingNode('VRayParticleTex', asTexture=True)
         tex = cmds.shadingNode('place3dTexture', asUtility=True)
-        cmds.connectAttr(tex + '.worldInverseMatrix', node + '.placementMatrix')
-    commandDict['VRayParticleTex'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayParticleTex.png"
+        cmds.connectAttr(
+            tex + '.worldInverseMatrix', node + '.placementMatrix')
+    commandDict[
+        'VRayParticleTex'] = ("%s"
+                              "/render_VRayParticleTex.png"
+                              ) % vrayIconPath
 
     def _VRaySky(self):
         cmds.shadingNode('VRaySky', asTexture=True)
-    commandDict['VRaySky'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRaySky.png"
+    commandDict['VRaySky'] = "%s/render_VRaySky.png" % vrayIconPath
 
     def _VRayPtex(self):
         cmds.shadingNode('VRayPtex', asTexture=True)
-    commandDict['VRayPtex'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayPtex.png"
+    commandDict['VRayPtex'] = "%s/render_VRayPtex.png" % vrayIconPath
 
     def _VRayLightDomeShape(self):
         cmds.shadingNode('VRayLightDomeShape', asLight=True)
-    commandDict['VRayLightDomeShape'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayLightDomeShape.png"
+    commandDict[
+        'VRayLightDomeShape'] = ("%s"
+                                 "/render_VRayLightDomeShape.png"
+                                 ) % vrayIconPath
 
     def _VRayLightIESShape(self):
         cmds.shadingNode('VRayLightIESShape', asLight=True)
-    commandDict['VRayLightIESShape'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayLightIESShape.png"
+    commandDict[
+        'VRayLightIESShape'] = ("%s"
+                                "/render_VRayLightIESShape.png"
+                                ) % vrayIconPath
 
     def _VRayLightRectShape(self):
         cmds.shadingNode('VRayLightRectShape', asLight=True)
-    commandDict['VRayLightRectShape'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayLightRectShape.png"
+    commandDict[
+        'VRayLightRectShape'] = ("%s"
+                                 "/render_VRayLightRectShape.png"
+                                 ) % vrayIconPath
 
     def _VRayLightSphereShape(self):
         cmds.shadingNode('VRayLightSphereShape', asLight=True)
-    commandDict['VRayLightSphereShape'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayLightSphereShape.png"
+    commandDict[
+        'VRayLightSphereShape'] = ("%s"
+                                   "/render_VRayLightSphereShape.png"
+                                   ) % vrayIconPath
 
     def _VRaySunShape(self):
         cmds.shadingNode('VRaySunShape', asLight=True)
-    commandDict['VRaySunShape'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRaySunShape.png"
+    commandDict[
+        'VRaySunShape'] = "%s/render_VRaySunShape.png" % vrayIconPath
 
     def _VRayDistanceTex(self):
         cmds.shadingNode('VRayDistanceTex', asUtility=True)
-    commandDict['VRayDistanceTex'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict[
+        'VRayDistanceTex'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRayFurSampler(self):
         cmds.shadingNode('VRayFurSampler', asUtility=True)
-    commandDict['VRayFurSampler'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayFurSampler.png"
+    commandDict[
+        'VRayFurSampler'] = "%s/render_VRayFurSampler.png" % vrayIconPath
 
     def _VRayHairSampler(self):
         cmds.shadingNode('VRayHairSampler', asUtility=True)
-    commandDict['VRayHairSampler'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayHairSampler.png"
+    commandDict[
+        'VRayHairSampler'] = "%s/render_VRayHairSampler.png" % vrayIconPath
 
     def _VRayObjectProperties(self):
         cmds.shadingNode('VRayObjectProperties', asUtility=True)
-    commandDict['VRayObjectProperties'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict[
+        'VRayObjectProperties'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRayPlaceEnvTex(self):
         cmds.shadingNode('VRayPlaceEnvTex', asUtility=True)
-    commandDict['VRayPlaceEnvTex'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRayPlaceEnvTex.png"
+    commandDict[
+        'VRayPlaceEnvTex'] = "%s/render_VRayPlaceEnvTex.png" % vrayIconPath
 
     def _VRayRenderElementSet(self):
         cmds.shadingNode('VRayRenderElementSet', asUtility=True)
-    commandDict['VRayRenderElementSet'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict[
+        'VRayRenderElementSet'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRayShInfo(self):
         cmds.shadingNode('VRayShInfo', asUtility=True)
-    commandDict['VRayShInfo'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict['VRayShInfo'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRaySwitchTransform(self):
         cmds.shadingNode('VRaySwitchTransform', asUtility=True)
-    commandDict['VRaySwitchTransform'] = "/Applications/Autodesk/maya2015/vray/icons/render_VRaySwitchTransform.png"
+    commandDict[
+        'VRaySwitchTransform'] = ("%s"
+                                  "/render_VRaySwitchTransform.png"
+                                  ) % vrayIconPath
 
     def _VRayUserColor(self):
         cmds.shadingNode('VRayUserColor', asUtility=True)
-    commandDict['VRayUserColor'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict[
+        'VRayUserColor'] = "%s/render_unknown.png" % vrayIconPath
 
     def _VRayUserScalar(self):
         cmds.shadingNode('VRayUserScalar', asUtility=True)
-    commandDict['VRayUserScalar'] = "/Applications/Autodesk/maya2015/vray/icons/render_unknown.png"
+    commandDict[
+        'VRayUserScalar'] = "%s/render_unknown.png" % vrayIconPath
 
     ####################
     # ARNOLD
@@ -1245,113 +1331,287 @@ class Commands(object):
     # Shader
     def _aiMeshLightMaterial(self):
         cmds.shadingNode('aiMeshLightMaterial', asShader=True)
+    commandDict['aiMeshLightMaterial'] = "commandButton.png"
 
     def _aiAmbientOcclusion(self):
         cmds.shadingNode('aiAmbientOcclusion', asShader=True)
+    commandDict['aiAmbientOcclusion'] = "commandButton.png"
 
     def _aiHair(self):
         cmds.shadingNode('aiHair', asShader=True)
+    commandDict['aiHair'] = "commandButton.png"
 
     def _aiRaySwitch(self):
         cmds.shadingNode('aiRaySwitch', asShader=True)
+    commandDict['aiRaySwitch'] = "commandButton.png"
 
     def _aiShadowCatcher(self):
         cmds.shadingNode('aiShadowCatcher', asShader=True)
+    commandDict['aiShadowCatcher'] = "commandButton.png"
 
     def _aiSkin(self):
         cmds.shadingNode('aiSkin', asShader=True)
+    commandDict['aiSkin'] = "commandButton.png"
 
     def _aiSkinSss(self):
         cmds.shadingNode('aiSkinSss', asShader=True)
+    commandDict['aiSkinSss'] = "commandButton.png"
 
     def _aiStandard(self):
         cmds.shadingNode('aiStandard', asShader=True)
+    commandDict['aiStandard'] = "commandButton.png"
 
     def _aiUtility(self):
         cmds.shadingNode('aiUtility', asShader=True)
+    commandDict['aiUtility'] = "commandButton.png"
 
     def _aiWireframe(self):
         cmds.shadingNode('aiWireframe', asShader=True)
+    commandDict['aiWireframe'] = "commandButton.png"
 
     def _aiBump2d(self):
         cmds.shadingNode('aiBump2d', asShader=True)
+    commandDict['aiBump2d'] = "commandButton.png"
 
     def _aiBump3d(self):
         cmds.shadingNode('aiBump3d', asShader=True)
+    commandDict['aiBump3d'] = "commandButton.png"
 
     def _aiMotionVector(self):
         cmds.shadingNode('aiMotionVector', asShader=True)
+    commandDict['aiMotionVector'] = "commandButton.png"
 
     def _aiUserDataBool(self):
         cmds.shadingNode('aiUserDataBool', asShader=True)
+    commandDict['aiUserDataBool'] = "commandButton.png"
 
     def _aiUserDataColor(self):
         cmds.shadingNode('aiUserDataColor', asShader=True)
+    commandDict['aiUserDataColor'] = "commandButton.png"
 
     def _aiUserDataFloat(self):
         cmds.shadingNode('aiUserDataFloat', asShader=True)
+    commandDict['aiUserDataFloat'] = "commandButton.png"
 
     def _aiUserDataInt(self):
         cmds.shadingNode('aiUserDataInt', asShader=True)
+    commandDict['aiUserDataInt'] = "commandButton.png"
 
     def _aiUserDataPnt2(self):
         cmds.shadingNode('aiUserDataPnt2', asShader=True)
+    commandDict['aiUserDataPnt2'] = "commandButton.png"
 
     def _aiUserDataString(self):
         cmds.shadingNode('aiUserDataString', asShader=True)
+    commandDict['aiUserDataString'] = "commandButton.png"
 
     def _aiUserDataVector(self):
         cmds.shadingNode('aiUserDataVector', asShader=True)
+    commandDict['aiUserDataVector'] = "commandButton.png"
 
     def _aiVolumeCollector(self):
         cmds.shadingNode('aiVolumeCollector', asShader=True)
+    commandDict['aiVolumeCollector'] = "commandButton.png"
 
     def _aiWriteColor(self):
         cmds.shadingNode('aiWriteColor', asShader=True)
+    commandDict['aiWriteColor'] = "commandButton.png"
 
     def _aiWriteFloat(self):
         cmds.shadingNode('aiWriteFloat', asShader=True)
+    commandDict['aiWriteFloat'] = "commandButton.png"
 
     def _aiFog(self):
         cmds.shadingNode('aiFog', asShader=True)
+    commandDict['aiFog'] = "commandButton.png"
 
     def _aiVolumeScattering(self):
         cmds.shadingNode('aiVolumeScattering', asShader=True)
+    commandDict['aiVolumeScattering'] = "commandButton.png"
 
     # texture
     def _aiImage(self):
         cmds.shadingNode('aiImage', asTexture=True)
+    commandDict['aiImage'] = "commandButton.png"
 
     def _aiNoise(self):
         cmds.shadingNode('aiNoise', asTexture=True)
+    commandDict['aiNoise'] = "commandButton.png"
 
     def _aiPhysicalSky(self):
         cmds.shadingNode('aiPhysicalSky', asTexture=True)
+    commandDict['aiPhysicalSky'] = "commandButton.png"
 
     def _aiSky(self):
         cmds.shadingNode('aiSky', asTexture=True)
+    commandDict['aiSky'] = "commandButton.png"
 
     # Light
     def _aiAreaLight(self):
         cmds.shadingNode('aiAreaLight', asLight=True)
+    commandDict['aiAreaLight'] = "commandButton.png"
 
     def _aiPhotometricLight(self):
         cmds.shadingNode('aiPhotometricLight', asLight=True)
+    commandDict['aiPhotometricLight'] = "commandButton.png"
 
     def _aiSkyDomeLight(self):
         cmds.shadingNode('aiSkyDomeLight', asLight=True)
+    commandDict['aiSkyDomeLight'] = "commandButton.png"
 
     def _aiBarndoor(self):
         cmds.shadingNode('aiBarndoor', asLight=True)
+    commandDict['aiBarndoor'] = "commandButton.png"
 
     def _aiGobo(self):
         cmds.shadingNode('aiGobo', asLight=True)
+    commandDict['aiGobo'] = "commandButton.png"
 
     def _aiLightBlocker(self):
         cmds.shadingNode('aiLightBlocker', asLight=True)
+    commandDict['aiLightBlocker'] = "commandButton.png"
 
     def _aiLightDecay(self):
         cmds.shadingNode('aiLightDecay', asLight=True)
+    commandDict['aiLightDecay'] = "commandButton.png"
+
+    ####################
+    # MENTAL RAY
+    ####################
+    def _mi_car_paint_phen_x(self):
+        cmds.shadingNode('mi_car_paint_phen_x', asShader=True)
+    commandDict[
+        'mi_car_paint_phen_x'] = ("%s"
+                                  "/render_mi_car_paint_phen_x.png"
+                                  ) % mentalrayIconPath
+
+    def _mi_car_paint_phen_x_passes(self):
+        cmds.shadingNode('mi_car_paint_phen_x_passes', asShader=True)
+    commandDict[
+        'mi_car_paint_phen_x_passes'] = ("%s"
+                                         "/render_mi_car"
+                                         "_paint_phen_x_passes.png"
+                                         ) % mentalrayIconPath
+
+    def _mi_metallic_paint_x(self):
+        cmds.shadingNode('mi_metallic_paint_x', asShader=True)
+    commandDict[
+        'mi_metallic_paint_x'] = ("%s"
+                                  "/render_mi_metallic_paint_x.png"
+                                  ) % mentalrayIconPath
+
+    def _mi_metallic_paint_x_passes(self):
+        cmds.shadingNode('mi_metallic_paint_x_passes', asShader=True)
+    commandDict[
+        'mi_metallic_paint_x_passes'] = ("%s"
+                                         "/render_mi_metallic"
+                                         "_paint_x_passes.png"
+                                         ) % mentalrayIconPath
+
+    def _mia_material_x(self):
+        cmds.shadingNode('mia_material_x', asShader=True)
+    commandDict[
+        'mia_material_x'] = ("%s"
+                             "/render_mia_material_x.png"
+                             ) % mentalrayIconPath
+
+    def _mia_material_x_passes(self):
+        cmds.shadingNode('mia_material_x_passes', asShader=True)
+    commandDict[
+        'mia_material_x_passes'] = ("%s"
+                                    "/render_mia_material_x_passes.png"
+                                    ) % mentalrayIconPath
+
+    def _mib_illum_hair(self):
+        cmds.shadingNode('mib_illum_hair', asShader=True)
+    commandDict[
+        'mib_illum_hair'] = ("%s"
+                             "/render_mib_illum_hair.png"
+                             ) % mentalrayIconPath
+
+    def _mib_illum_hair_x(self):
+        cmds.shadingNode('mib_illum_hair_x', asShader=True)
+    commandDict[
+        'mib_illum_hair_x'] = ("%s"
+                               "/render_mib_illum_hair.png"
+                               ) % mentalrayIconPath
+
+    def _mib_ptex_lookup(self):
+        cmds.shadingNode('mib_ptex_lookup', asShader=True)
+    commandDict['mib_ptex_lookup'] = "render_unknown.png"
+
+    def _mila_material(self):
+        cmds.shadingNode('mila_material', asShader=True)
+    commandDict['mila_material'] = "render_unknown.png"
+
+    def _misss_fast_shader2_x(self):
+        cmds.shadingNode('misss_fast_shader2_x', asShader=True)
+    commandDict['misss_fast_shader2_x'] = "render_unknown.png"
+
+    def _misss_fast_shader_x(self):
+        node = cmds.shadingNode('misss_fast_shader_x', asShader=True)
+        tex = cmds.shadingNode('mentalrayTexture', asTexture=True)
+        cmds.expression(
+            string="%s.miWidth  = defaultResolution.width * 2" % tex)
+        cmds.expression(string="%s.miHeight = defaultResolution.height" % tex)
+        cmds.setAttr(tex + ".miWritable", 1)
+        cmds.setAttr(tex + ".miDepth", 4)
+        lmap = cmds.shadingNode('misss_fast_lmap_maya', asUtility=True)
+        cmds.connectAttr(tex + '.message', node + '.lightmap')
+        cmds.connectAttr(tex + '.message', lmap + '.lightmap')
+    commandDict[
+        'misss_fast_shader_x'] = ("%s"
+                                  "/render_misss_fast_shader_x.png"
+                                  ) % mentalrayIconPath
+
+    def _misss_fast_shader_x_passes(self):
+        node = cmds.shadingNode('misss_fast_shader_x_passes', asShader=True)
+        tex = cmds.shadingNode('mentalrayTexture', asTexture=True)
+        cmds.expression(
+            string="%s.miWidth  = defaultResolution.width * 2" % tex)
+        cmds.expression(string="%s.miHeight = defaultResolution.height" % tex)
+        cmds.setAttr(tex + ".miWritable", 1)
+        cmds.setAttr(tex + ".miDepth", 4)
+        lmap = cmds.shadingNode('misss_fast_lmap_maya', asUtility=True)
+        cmds.connectAttr(tex + '.message', node + '.lightmap')
+        cmds.connectAttr(tex + '.message', lmap + '.lightmap')
+    commandDict[
+        'misss_fast_shader_x_passes'] = ("%s"
+                                         "/render_misss_fast"
+                                         "_shader_x_passes.png"
+                                         ) % mentalrayIconPath
+
+    def _misss_fast_simple_maya(self):
+        node = cmds.shadingNode('misss_fast_simple_maya', asShader=True)
+        tex = cmds.shadingNode('mentalrayTexture', asTexture=True)
+        cmds.expression(
+            string="%s.miWidth  = defaultResolution.width * 2" % tex)
+        cmds.expression(string="%s.miHeight = defaultResolution.height" % tex)
+        cmds.setAttr(tex + ".miWritable", 1)
+        cmds.setAttr(tex + ".miDepth", 4)
+        lmap = cmds.shadingNode('misss_fast_lmap_maya', asUtility=True)
+        cmds.connectAttr(tex + '.message', node + '.lightmap')
+        cmds.connectAttr(tex + '.message', lmap + '.lightmap')
+    commandDict[
+        'misss_fast_simple_maya'] = ("%s"
+                                     "/render_misss_fast_simple_maya.png"
+                                     ) % mentalrayIconPath
+
+    def _misss_fast_skin_maya(self):
+        node = cmds.shadingNode('misss_fast_skin_maya', asShader=True)
+        tex = cmds.shadingNode('mentalrayTexture', asTexture=True)
+        cmds.expression(
+            string="%s.miWidth  = defaultResolution.width * 2" % tex)
+        cmds.expression(string="%s.miHeight = defaultResolution.height" % tex)
+        cmds.setAttr(tex + ".miWritable", 1)
+        cmds.setAttr(tex + ".miDepth", 4)
+        lmap = cmds.shadingNode('misss_fast_lmap_maya', asUtility=True)
+        cmds.connectAttr(tex + '.message', node + '.lightmap')
+        cmds.connectAttr(tex + '.message', lmap + '.lightmap')
+    commandDict[
+        'misss_fast_skin_maya'] = ("%s"
+                                   "/render_misss_fast_skin_maya.png"
+                                   ) % mentalrayIconPath
 
     ###################
     # OTHER
@@ -1362,9 +1622,12 @@ class Commands(object):
         basicFilter = "OBJ(*.obj)"  # "*All(*.*);;OBJ(*.obj)"
         returnPath = cmds.fileDialog2(
             fileFilter=basicFilter, ds=2, cc="CANCEL", okc="IMPORT")[0]
-        mel.eval(
-            """file -import -type "OBJ" -ra true -mergeNamespacesOnClash false -options "mo=1;lo=0"  -pr -loadReferenceDepth "all" "%s";""" %
-            returnPath)
+        cmds.file(returnPath,
+                  i=True,
+                  mergeNamespacesOnClash=False,
+                  type='OBJ',
+                  ra=True,
+                  pr=True)
     commandDict['importObj'] = "pythonFamily.png"
 
     def _renderThumbnailUpdate(self):
@@ -1378,7 +1641,8 @@ class Commands(object):
     # MENU
     ##################
     def _reGenerateCommands(self):
-        outFilePath = os.path.normpath(os.path.join(current_dir, "commands.json"))
+        outFilePath = os.path.normpath(
+            os.path.join(current_dir, "commands.json"))
 
         with open(outFilePath, 'w') as outFile:
             json.dump(commandDict,
