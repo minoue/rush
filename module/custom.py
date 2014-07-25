@@ -8,7 +8,7 @@ class Commands(object):
     def __init__(self):
         pass
 
-    def _locatorOnSelected(self):
+    def _locatorAtSelection(self):
         try:
             sel = cmds.ls(sl=True, fl=True, r=True)
             nodeType = cmds.nodeType(sel[0])
@@ -33,9 +33,9 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.spaceLocator(p=[0, 0, 0])
-    customDict['locatorOnSelected'] = "render_locator.png"
+    customDict['locatorAtSelection'] = "render_locator.png"
 
-    def _polyCubeOnSelected(self):
+    def _polyCubeAtSelection(self):
         try:
             sel = cmds.ls(sl=True, fl=True, r=True)
             nodeType = cmds.nodeType(sel[0])
@@ -60,9 +60,9 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.polyCube()
-    customDict['polyCubeOnSelected'] = "polyCube.png"
+    customDict['polyCubeAtSelection'] = "polyCube.png"
 
-    def _polySphereOnSelected(self):
+    def _polySphereAtSelection(self):
         try:
             print "test2"
             sel = cmds.ls(sl=True, fl=True, r=True)
@@ -88,9 +88,9 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.polySphere()
-    customDict['polySphereOnSelected'] = "polySphere.png"
+    customDict['polySphereAtSelection'] = "polySphere.png"
 
-    def _polyCylinderOnSelected(self):
+    def _polyCylinderAtSelection(self):
         try:
             sel = cmds.ls(sl=True, fl=True, r=True)
             nodeType = cmds.nodeType(sel[0])
@@ -115,9 +115,9 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.polyCylinder()
-    customDict['polyCylinderOnSelected'] = "polyCylinder.png"
+    customDict['polyCylinderAtSelection'] = "polyCylinder.png"
 
-    def _polyPlaneOnSelected(self):
+    def _polyPlaneAtSelection(self):
         try:
             sel = cmds.ls(sl=True, fl=True, r=True)
             nodeType = cmds.nodeType(sel[0])
@@ -142,4 +142,4 @@ class Commands(object):
                 cmds.CenterPivot
         except IndexError:
             cmds.polyPlane()
-    customDict['polyPlaneOnSelected'] = "polyPlane.png"
+    customDict['polyPlaneAtSelection'] = "polyPlane.png"
