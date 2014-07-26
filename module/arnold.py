@@ -1,10 +1,25 @@
 import maya.cmds as cmds
 import os
+import sys
 
 iconPaths = os.environ['XBMLANGPATH']
-for path in iconPaths.split(";"):
-    if 'solidangle' in path:
-        iconPath = path
+try:
+    if sys.platform == "linux2":
+        for path in iconPaths.split(":"):
+            if 'solidangle' in path:
+                iconPath = path
+    elif sys.platform == "darwin":
+        for path in iconPaths.split(":"):
+            if 'solidangle' in path:
+                iconPath = path
+    elif sys.platform == "win32":
+        for path in iconPaths.split(";"):
+            if 'solidangle' in path:
+                iconPath = path
+    else:
+        iconPath = ""
+except NameError:
+    iconPath = ""
 
 # iconPath = r"C:\solidangle\mtoadeploy\2013\icons"
 
