@@ -4,6 +4,17 @@ TabMenu-like simple command launcher for Maya
 
 ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/miExecutor_overview.gif)
 
+
+Differences between this script and the one in Node Editor in behavior.
+ノードエディタのタブメニューとの違い
+
+
+1. Repeatable by G key
+2. You don't need to complete commands. Just you can hit Enter once you got it on the top of the completion list.
+
+1. .Gキーでピート可能
+2. 候補リストの一番上にコマンドが来た時点でエンターを押せば実行可能 
+
 ## Requirements
 
 PyQt4.
