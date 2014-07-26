@@ -10,37 +10,36 @@ PyQt4.
 
 ## Installation
 
-In your maya script directory,
 
-`git clone https://github.com/mifx/miExecutor.git`
-
-or, download zip file from the right bottom of the repositry page and extract it.
-Then, rename 'miExecutor-master' folder to 'miExecutor' and move it to the maya script directory.
+[http://github.com/minoue/miExecutor/archive/1.0.0.zip](https://github.com/minoue/miExecutor/archive/1.0.0.zip)
 
 
-## Usage
 
-
-In maya hotkey editor, assign the following python command to any key you want.
-
-* PyQt4:
-
-
+1. Download zip file and extract it, then rename the folder to 'miExecutor'  
+2. Move the folder to your maya script directory.
+3. Restart maya or do 'rehash;' command.
+4. Assign the following python command to any key you want.
 
         from miExecutor import miExecutor
         reload(miExecutor)  
 
 
 ## How to add commands
-1. Open **miExecutor/module/custom.py** in your text editor.
-2. * Add any class methods you want like the following picture.
-![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/newCommandSample.jpg)  
+
+1. Copy and rename **miExecutor/module/templete.py** to whatever you like
+	 ![](https://dl.dropboxusercontent.com/u/408180/git/images/rename.jpg)
+
+2. Open the file and add any class methods like the following picture.  
+
+![](https://dl.dropboxusercontent.com/u/408180/git/images/yourModule2.jpg)
+
    * Make sure **all method names start with underscore**.
    * Add the following line at the under the method.  
-`customDict['YOUR COMMAND NAME'] = "YOUR ICON NAME"`  
-This dictionary is used to call commands name and icon names in the main script.
-   * 'YOUR COMMAND NAME' **must be same as the method name.**  
-   * You can also use absolute paths for icon names if you want.
+`yourCommandDict['YOUR COMMAND NAME'] = "YOUR ICON NAME"`  
+This dictionary is used to call commands names and icon paths in the main script.
+   * 'YOUR COMMAND NAME' **must be same as the method name.(no underscore)**  
+   * You can also use absolute paths for icon names if you need.
 4. Once you save the file, your new command should be ready to use.  
-    ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/yourNewCommand.jpg)  
-    ![alt tag](https://dl.dropboxusercontent.com/u/408180/git/images/output.jpg)  
+	![](https://dl.dropboxusercontent.com/u/408180/git/images/yourNewCommand2.jpg)  
+	![](https://dl.dropboxusercontent.com/u/408180/git/images/helloSphere.jpg)  
+
