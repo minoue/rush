@@ -16,7 +16,19 @@ PyQt4.
 
 
 1. Download zip file and extract it, then rename the folder to 'miExecutor'  
-2. Move the folder to your maya script directory.
+2. Move the folder to your maya script directory.  The directory structure should be something like this.
+
+        maya
+        |--version  
+        |    |--script
+        |    |    |--miExecutor
+        |    |    |    |--__init__.py
+        |    |    |    |--miExecutor.py
+        |    |    |    |--  ....
+        |    |    |    |--module
+        |    |    |    |    |--mayaNode.py
+
+
 3. Restart maya or do 'rehash;' command.
 4. Assign the following python command to any key you want.
 
@@ -42,4 +54,3 @@ This dictionary is used to call commands names and icon paths in the main script
 4. Once you save the file, your new command should be ready to use.  
 	![](https://dl.dropboxusercontent.com/u/408180/git/images/yourNewCommand2.jpg)  
 	![](https://dl.dropboxusercontent.com/u/408180/git/images/helloSphere.jpg)  
-
