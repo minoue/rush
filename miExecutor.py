@@ -70,7 +70,7 @@ class UI(QtGui.QWidget):
 
     def __init__(self, parent=getMayaWindow()):
         super(UI, self).__init__(parent)
-        self.setFixedSize(180, 20)
+        self.setFixedSize(200, 20)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
         self.setWindowTitle("miExecutor")
@@ -133,7 +133,7 @@ class UI(QtGui.QWidget):
 
     def createUI(self):
         self.lineEdit = QtGui.QLineEdit(self)
-        self.lineEdit.setFixedWidth(180)
+        self.lineEdit.setFixedWidth(200)
         vbox = QtGui.QBoxLayout(QtGui.QBoxLayout.TopToBottom, self)
         vbox.setSpacing(0)
         vbox.setContentsMargins(0, 0, 0, 0)
