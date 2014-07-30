@@ -13,7 +13,7 @@ try:
 except ImportError:
     import PyQt4.sip as sip
 
-current_dir = os.path.dirname(__file__)
+MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
 
 # Define mel procedure to call the previous function
 mel.eval("""
@@ -109,22 +109,24 @@ class UI(QtGui.QWidget):
 
         # Load json files as dicrectory.
         # key is command name, and its item is icon path.
-        commandFile = os.path.normpath(
-            os.path.join(os.path.dirname(__file__), "commands.json"))
-        jsonDict = json.load(open(commandFile))
+        commandFile = os.path.normpath(os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
+        try:
+            jsonDict = json.load(open(commandFile))
+        except IOError:
+            jsonDict = {}
 
         # Create a list of command names
         self.commands = [i for i in jsonDict]
 
         # Add all command names and icon paths to the the model(self.model)
-        for i, command in enumerate(jsonDict):
+        for num, command in enumerate(jsonDict):
             item = QtGui.QStandardItem(command)
             if os.path.isabs(jsonDict[command]) is True:
                 iconPath = os.path.normpath(jsonDict[command])
                 item.setIcon(QtGui.QIcon(iconPath))
             else:
                 item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
-            self.model.setItem(i, 0, item)
+            self.model.setItem(num, 0, item)
 
         # Store the model(self.model) into the sortFilterProxy model
         self.filteredModel = QtGui.QSortFilterProxyModel(self)
@@ -256,8 +258,7 @@ def mergeCommandDict():
     miExec = MainClass()
     for item in baseNames:
         exec("miExec.commandDict.update(miExec.%sDict)" % item)
-    outFilePath = os.path.normpath(
-        os.path.join(current_dir, "commands.json"))
+    outFilePath = os.path.normpath(os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
 
     with open(outFilePath, 'w') as outFile:
         json.dump(miExec.commandDict,
