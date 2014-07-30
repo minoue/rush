@@ -25,7 +25,7 @@ PyQt4
 ## Installation
 
 
-[http://github.com/minoue/miExecutor/archive/1.0.1.zip](https://github.com/minoue/miExecutor/archive/1.0.1.zip)
+[http://github.com/minoue/miExecutor/archive/1.0.2.zip](https://github.com/minoue/miExecutor/archive/1.0.2.zip)
 
 
 
