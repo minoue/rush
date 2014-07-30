@@ -3,22 +3,28 @@ import os
 import sys
 
 iconPaths = os.environ['XBMLANGPATH']
-try:
-    if sys.platform == "linux2":
-        for path in iconPaths.split(":"):
-            if 'vray/icons' in path:
-                iconPath = path
-    elif sys.platform == "darwin":
-        for path in iconPaths.split(":"):
-            if 'vray/icons' in path:
-                iconPath = path
-    elif sys.platform == "win32":
-        for path in iconPaths.split(";"):
-            if '/vray/icons' in path:
-                iconPath = path
-    else:
-        iconPath = ""
-except NameError:
+if sys.platform == "linux2":
+    for path in iconPaths.split(":"):
+        if 'vray/icons' in path:
+            iconPath = path
+            break
+        else:
+            iconPath = ""
+elif sys.platform == "darwin":
+    for path in iconPaths.split(":"):
+        if 'vray/icons' in path:
+            iconPath = path
+            break
+        else:
+            iconPath = ""
+elif sys.platform == "win32":
+    for path in iconPaths.split(";"):
+        if 'vray/icons' in path:
+            iconPath = path
+            break
+        else:
+            iconPath = ""
+else:
     iconPath = ""
 
 # iconPath = r"C:\Program Files\Autodesk\Maya2013\vray\icons"
