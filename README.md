@@ -20,12 +20,12 @@ Differences between this script and the one in Node Editor in behavior.
 
 ## Requirements
 
-PyQt4.
+PyQt4
 
 ## Installation
 
 
-[http://github.com/minoue/miExecutor/archive/1.0.0.zip](https://github.com/minoue/miExecutor/archive/1.0.0.zip)
+[http://github.com/minoue/miExecutor/archive/1.0.1.zip](https://github.com/minoue/miExecutor/archive/1.0.1.zip)
 
 
 
