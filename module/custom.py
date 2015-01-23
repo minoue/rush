@@ -143,3 +143,27 @@ class Commands(object):
         except IndexError:
             cmds.polyPlane()
     customDict['polyPlaneAtSelection'] = "polyPlane.png"
+
+    def _rebuildCurveOptions(self):
+        cmds.RebuildCurveOptions()
+    customDict['rebuildCurveOptions'] = "rebuildCurve.png"
+
+    def _createSet(self):
+        cmds.CreateSet()
+    customDict['createSet'] = 'menuIconEdit.png'
+
+    def _rebuildSurfacesOptions(self):
+        cmds.RebuildSurfacesOptions()
+    customDict['rebuildSurfacesOptions'] = 'rebuildSurface.png'
+
+    def _aTob(self):
+        sel = cmds.ls(sl=True, fl=True)
+        source = sel[0]
+        target = sel[-1]
+        pos = cmds.getAttr(target + ".translate")[0]
+        rot = cmds.getAttr(target + ".rotate")[0]
+        scl = cmds.getAttr(target + ".scale")[0]
+        cmds.setAttr(source + ".translate", *pos)
+        cmds.setAttr(source + ".rotate", *rot)
+        cmds.setAttr(source + ".scale", *scl)
+    customDict['aTob'] = 'sphere.png'
