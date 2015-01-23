@@ -8,29 +8,28 @@ TabMenu-like simple command launcher for Maya
 Differences between this script and the one in Node Editor in behavior.  
 ノードエディタのタブメニューとの違い  
 
-
+* You can add any commands you want.
 * Repeatable by G key  
 * You don't need to complete commands. Just you can hit Enter once you got it on the top of the completion list.  
     
     
-
+* 好きなコマンドを登録できる
 * Gキーでピート可能
 * 候補リストの一番上にコマンドが来た時点でエンターを押せば実行可能 
 
 
 ## Requirements
 
-PyQt4
+PyQt4 or PySide
 
 ## Installation
 
 
-[http://github.com/minoue/miExecutor/archive/1.0.2.zip](https://github.com/minoue/miExecutor/archive/1.0.2.zip)
+[http://github.com/minoue/miExecutor/archive/1.1.0.zip](https://github.com/minoue/miExecutor/archive/1.1.0.zip)  
 
 
-
-1. Download zip file and extract it, then rename the folder to 'miExecutor'  
-2. Move the folder to your maya script directory.  The directory structure should be something like this.
+* Download zip file and extract it, then rename the folder to 'miExecutor'  
+* Move the folder to your maya script directory.  The directory structure should be something like this.
 
         maya
         |--version  
@@ -43,11 +42,19 @@ PyQt4
         |    |    |    |    |--mayaNode.py
 
 
-3. Restart maya or do 'rehash;' command.
-4. Assign the following python command to any key you want.
 
-        from miExecutor import miExecutor
-        reload(miExecutor)  
+* Restart maya or do 'rehash;' command.  
+* Assign the following python command to any key you want.  
+
+    PyQt4  
+
+            from miExecutor import miExecutor
+            reload(miExecutor)  
+
+    PySide  
+
+            from miExecutor import miExecutor_pyside
+            reload(miExecutor_pyside)
 
 
 ## How to add commands
