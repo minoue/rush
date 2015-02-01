@@ -25,7 +25,7 @@ PyQt4 or PySide
 ## Installation
 
 
-[http://github.com/minoue/miExecutor/archive/1.1.0.zip](https://github.com/minoue/miExecutor/archive/1.1.0.zip)  
+[http://github.com/minoue/miExecutor/archive/1.1.1.zip](https://github.com/minoue/miExecutor/archive/1.1.1.zip)  
 
 
 * Download zip file and extract it, then rename the folder to 'miExecutor'  
