@@ -167,3 +167,11 @@ class Commands(object):
         cmds.setAttr(source + ".rotate", *rot)
         cmds.setAttr(source + ".scale", *scl)
     customDict['aTob'] = 'sphere.png'
+
+    def _attachBrushToCurves(self, *args):
+        cmds.AttachBrushToCurves()
+    customDict['attachBrushToCurves'] = 'rebuildCurve.png'
+
+    def _convertPaintFxToPolygons(self, *args):
+        mel.eval("doPaintEffectsToPoly( 1,0,1,1,100000);")
+    customDict['convertPaintFxToPolygons'] = 'polySphere.png'
