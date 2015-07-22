@@ -175,3 +175,10 @@ class Commands(object):
     def _convertPaintFxToPolygons(self, *args):
         mel.eval("doPaintEffectsToPoly( 1,0,1,1,100000);")
     customDict['convertPaintFxToPolygons'] = 'polySphere.png'
+
+    def _loadObjPlugin(self):
+        if cmds.pluginInfo('objExport', q=True, loaded=True):
+            pass
+        else:
+            cmds.loadPlugin('objExport')
+    customDict['loadObjPlugin'] = 'sphere.png'
