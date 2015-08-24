@@ -47,3 +47,35 @@ class Commands(object):
     def _freezeOnlyScale(self):
         cmds.makeIdentity(apply=True, t=False, r=False, s=True, n=False)
     modelingDict['freezeOnlyScale'] = "menuIconModify.png"
+
+    def _detachEdgeComponent(self):
+        cmds.DetachEdgeComponent()
+    modelingDict['detachEdgeComponent'] = 'polyEditEdgeFlow.png'
+
+    def _polyBevel(self):
+        cmds.polyBevel()
+    modelingDict['polyBevel'] = 'polyBevel.png'
+
+    def _polyBooleanUnion(self):
+        cmds.PolygonBooleanUnion()
+    modelingDict['polyBooleanUnion'] = 'polyBooleansUnion.png'
+
+    def _polyBooleanUnionOptions(self):
+        cmds.PolygonBooleanUnionOptions()
+    modelingDict['polyBooleanUnionOptions'] = 'polyBooleansUnion.png'
+
+    def _polyBooleanDifference(self):
+        cmds.PolygonBooleanDifference()
+    modelingDict['polyBooleanDifference'] = 'polyBooleansDifference.png'
+
+    def _polyBooleanDifferenceOptions(self):
+        cmds.PolygonBooleanDifferenceOptions()
+    modelingDict['polyBooleanDifferenceOptions'] = 'polyBooleansDifference.png'
+
+    def _polyBooleanIntersection(self):
+        cmds.PolygonBooleanIntersection()
+    modelingDict['polyBooleanIntersection'] = 'polyBooleansIntersection.png'
+
+    def _polyBooleanIntersectionOptions(self):
+        cmds.PolygonBooleanIntersectionOptions()
+    modelingDict['polyBooleanIntersectionOptions'] = 'polyBooleansIntersection.png'
