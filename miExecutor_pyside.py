@@ -76,6 +76,7 @@ class UI(QtGui.QWidget):
         super(UI, self).__init__(parent)
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground) 
         self.setFixedSize(200, 20)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
@@ -139,7 +140,16 @@ class UI(QtGui.QWidget):
         self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(self.model)
 
+        # History model
+        self.historyList = loadHistory()
+        self.historyModel = QtGui.QStandardItemModel()
+        for num, command in enumerate(self.historyList):
+            item = QtGui.QStandardItem(command)
+            self.historyModel.setItem(num, 0, item)
+
     def createUI(self):
+        """ Create UI """
+
         self.lineEdit = QtGui.QLineEdit(self)
         self.lineEdit.setFixedWidth(200)
         vbox = QtGui.QBoxLayout(QtGui.QBoxLayout.TopToBottom, self)
@@ -154,6 +164,14 @@ class UI(QtGui.QWidget):
             QtGui.QCompleter.UnfilteredPopupCompletion)
         self.completer.highlighted.connect(self.selectionCallback)
         self.completer.setModel(self.filteredModel)
+        self.completer.setObjectName("commandCompleter")
+
+        # Setup QCompleter for history
+        self.histCompleter = QtGui.QCompleter()
+        self.histCompleter.setCompletionMode(
+            QtGui.QCompleter.UnfilteredPopupCompletion)
+        self.histCompleter.setModel(self.historyModel)
+        self.histCompleter.setObjectName("historyCompleter")
 
         # Edit line Edit behavior
         self.lineEdit.setCompleter(self.completer)
@@ -162,7 +180,26 @@ class UI(QtGui.QWidget):
         self.lineEdit.returnPressed.connect(self.initialExecution)
         self.lineEdit.setFocus()
 
+    def keyPressEvent(self, event):
+        """ Show history command list by down arrow key """
+
+        key = event.key()
+        if key == QtCore.Qt.Key_Down:
+            self.lineEdit.setCompleter(self.histCompleter)
+            self.histCompleter.complete()
+        else:
+            self.close()
+
     def updateData(self):
+        """ Update current completion data """
+        
+        # If text is empty, change history completer back to
+        # command completer
+        currentText = self.lineEdit.text()
+        if currentText == "":
+            self.lineEdit.setCompleter(self.completer)
+
+        # Set commands to case insensitive
         regExp = QtCore.QRegExp(self.lineEdit.text(),
                                 QtCore.Qt.CaseInsensitive,
                                 QtCore.QRegExp.RegExp)
@@ -174,23 +211,31 @@ class UI(QtGui.QWidget):
         return self._selected
 
     def getCurrentCompletion(self, *args):
-        self.curCompPrefix = self.completer.completionPrefix().lower()
-        self.curCompList = [i for i
-                            in self.commands
-                            if self.curCompPrefix in i.lower()]
-        try:
-            self.currentCompletion = self.curCompList[0]
-        except IndexError:
-            self.currentCompletion = None
+        compType = self.lineEdit.completer().objectName()
+        if compType == "commandCompleter":
+            self.curCompPrefix = self.completer.completionPrefix().lower()
+            self.curCompList = [i for i
+                                in self.commands
+                                if self.curCompPrefix in i.lower()]
+            try:
+                self.currentCompletion = self.curCompList[0]
+            except IndexError:
+                self.currentCompletion = None
 
-        currentCompletion = self.completer.currentCompletion()
+            currentCompletion = self.completer.currentCompletion()
 
-        # If currentCompletion by QCompleter is empty, use the top item
-        # in the self.curComList instead.
-        if str(currentCompletion) == "":
-            pass
+            # If currentCompletion by QCompleter is empty, use the top item
+            # in the self.curComList instead.
+            if str(currentCompletion) == "":
+                pass
+            else:
+                self.currentCompletion = currentCompletion
+
+        elif compType == "historyCompleter":
+            self.currentCompletion = self.lineEdit.text()
+
         else:
-            self.currentCompletion = currentCompletion
+            pass
 
         return self.currentCompletion
 
@@ -219,22 +264,22 @@ class UI(QtGui.QWidget):
             if self.currentCompletion is None:
                 self.close()
                 self.lastCommand = None
-                return self.lastCommand
             else:
                 commandString = "self._%s()" % self.currentCompletion
                 exec commandString
                 self.close()
                 self.lastCommand = self.currentCompletion
-                return self.lastCommand
         # when any items on the completion list is selected by arrow keys
         elif self.executeType == 1:
             commandString = "self._%s()" % self._selected
             exec commandString
             self.close()
             self.lastCommand = self._selected
-            return self.lastCommand
         else:
             pass
+
+        updateHistory(self.lastCommand)
+        return self.lastCommand
 
 
 # This is the main class which will interit all command classes
@@ -272,6 +317,32 @@ def mergeCommandDict():
                   indent=4,
                   separators=(',', ':'),
                   sort_keys=True)
+
+
+def loadHistory():
+    histPath = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
+    if os.path.exists(histPath):
+        with open(histPath, 'r') as histFile:
+            histories = [i.rstrip() for i in histFile.readlines()]
+            return histories
+    else:
+        # Create empty text file for history
+        open(histPath, 'a').close()
+
+
+def updateHistory(command):
+    historyList = loadHistory()
+    if command in historyList:
+        historyList.remove(command)
+    historyList.insert(0, command)
+    histPath = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
+    with open(histPath, 'w') as histFile:
+        for i in historyList:
+            histFile.write(i + "\n")
+
+
+def clearHistory():
+    pass
 
 
 # Show window.
