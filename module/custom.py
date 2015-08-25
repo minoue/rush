@@ -1,5 +1,6 @@
 import maya.cmds as cmds
 import maya.mel as mel
+import os
 
 class Commands(object):
 
@@ -7,6 +8,12 @@ class Commands(object):
 
     def __init__(self):
         pass
+
+    def _clearHistory(self):
+        MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
+        histFile = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
+        open(histFile, 'w').close()
+    customDict['clearHistory'] = "menuIconEdit.png"
 
     def _locatorAtSelection(self):
         try:

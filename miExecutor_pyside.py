@@ -9,7 +9,10 @@ import json
 import sys
 import shiboken
 
+
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
+MIEXEC_HISTORY_FILE = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
+
 
 # Define mel procedure to call the previous function
 mel.eval("""
@@ -18,6 +21,7 @@ global proc callLastCommand(string $function)
     repeatLast -ac $function -acl "blah-blah....";
 }
 """)
+
 
 # Get a list of full paths of each modules.
 modules = glob.glob(
@@ -76,7 +80,7 @@ class UI(QtGui.QWidget):
         super(UI, self).__init__(parent)
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground) 
+        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setFixedSize(200, 20)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
@@ -116,7 +120,8 @@ class UI(QtGui.QWidget):
 
         # Load json files as dicrectory.
         # key is command name, and its item is icon path.
-        commandFile = os.path.normpath(os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
+        commandFile = os.path.normpath(
+            os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
         try:
             jsonDict = json.load(open(commandFile))
         except IOError:
@@ -145,6 +150,11 @@ class UI(QtGui.QWidget):
         self.historyModel = QtGui.QStandardItemModel()
         for num, command in enumerate(self.historyList):
             item = QtGui.QStandardItem(command)
+            if os.path.isabs(jsonDict[command]) is True:
+                iconPath = os.path.normpath(jsonDict[command])
+                item.setIcon(QtGui.QIcon(iconPath))
+            else:
+                item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
             self.historyModel.setItem(num, 0, item)
 
     def createUI(self):
@@ -192,7 +202,7 @@ class UI(QtGui.QWidget):
 
     def updateData(self):
         """ Update current completion data """
-        
+
         # If text is empty, change history completer back to
         # command completer
         currentText = self.lineEdit.text()
@@ -297,19 +307,24 @@ for i in baseNames:
 CLASSES = tuple(CLASSLIST)
 
 
-# Re-difine MainClass to inherit all classes from other modules
 def inheritClasses():
+    """ Re-difine MainClass to inherit all classes from other modules """
+
     global MainClass
     MainClass = type('MainClass', CLASSES, dict(MainClass.__dict__))
 
 
-# Combine all command dicrectories and create json files which includes
-# all command names and their icons paths.
 def mergeCommandDict():
+    """
+    Combine all command dicrectories and create json files which includes
+    all command names and their icons paths.
+    """
+
     miExec = MainClass()
     for item in baseNames:
         exec("miExec.commandDict.update(miExec.%sDict)" % item)
-    outFilePath = os.path.normpath(os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
+    outFilePath = os.path.normpath(
+        os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
 
     with open(outFilePath, 'w') as outFile:
         json.dump(miExec.commandDict,
@@ -320,29 +335,27 @@ def mergeCommandDict():
 
 
 def loadHistory():
-    histPath = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
-    if os.path.exists(histPath):
-        with open(histPath, 'r') as histFile:
+    """ Clear history list """
+
+    if os.path.exists(MIEXEC_HISTORY_FILE):
+        with open(MIEXEC_HISTORY_FILE, 'r') as histFile:
             histories = [i.rstrip() for i in histFile.readlines()]
             return histories
     else:
         # Create empty text file for history
-        open(histPath, 'a').close()
+        open(MIEXEC_HISTORY_FILE, 'a').close()
 
 
 def updateHistory(command):
+    """ Update and rewrite history list to file """
+
     historyList = loadHistory()
     if command in historyList:
         historyList.remove(command)
     historyList.insert(0, command)
-    histPath = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
-    with open(histPath, 'w') as histFile:
+    with open(MIEXEC_HISTORY_FILE, 'w') as histFile:
         for i in historyList:
             histFile.write(i + "\n")
-
-
-def clearHistory():
-    pass
 
 
 # Show window.
@@ -363,6 +376,7 @@ def main():
         pos.x() - (miExec.width() / 2), pos.y() - (miExec.height() / 2))
     miExec.activateWindow()
     miExec.raise_()
+
 
 if __name__ == "__main__":
     pass
