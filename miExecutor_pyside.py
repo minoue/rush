@@ -177,7 +177,7 @@ class UI(QtGui.QWidget):
         self.completer = QtGui.QCompleter()
         self.completer.setCompletionMode(
             QtGui.QCompleter.UnfilteredPopupCompletion)
-        self.completer.highlighted.connect(self.
+        self.completer.highlighted.connect(self.selectionCallback)
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
 
