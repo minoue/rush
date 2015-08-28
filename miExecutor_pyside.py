@@ -48,6 +48,7 @@ for i in baseNames:
 
 
 def importer(*args):
+    """ Funciton to load each module """
     return __import__(args[0], globals(), locals(), [])
 
 # Import all modules in the module directory.
@@ -67,8 +68,11 @@ def getMayaWindow():
 
 
 class UI(QtGui.QWidget):
+    """ main UI class """
 
     def closeExistingWindow(self):
+        """ Close a window if exits """
+
         for qtapp in QtGui.QApplication.topLevelWidgets():
             try:
                 if qtapp.__class__.__name__ == self.__class__.__name__:
@@ -80,7 +84,6 @@ class UI(QtGui.QWidget):
         super(UI, self).__init__(parent)
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setFixedSize(200, 20)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
@@ -116,6 +119,8 @@ class UI(QtGui.QWidget):
         self.createUI()
 
     def createData(self):
+        """ Create item models for completers """
+
         self.model = QtGui.QStandardItemModel()
 
         # Load json files as dicrectory.
@@ -172,7 +177,7 @@ class UI(QtGui.QWidget):
         self.completer = QtGui.QCompleter()
         self.completer.setCompletionMode(
             QtGui.QCompleter.UnfilteredPopupCompletion)
-        self.completer.highlighted.connect(self.selectionCallback)
+        self.completer.highlighted.connect(self.
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
 
@@ -221,6 +226,8 @@ class UI(QtGui.QWidget):
         return self._selected
 
     def getCurrentCompletion(self, *args):
+        """ Get a command to be completed """
+
         compType = self.lineEdit.completer().objectName()
         if compType == "commandCompleter":
             self.curCompPrefix = self.completer.completionPrefix().lower()
@@ -250,7 +257,10 @@ class UI(QtGui.QWidget):
         return self.currentCompletion
 
     def initialExecution(self):
+        """ Execute actuall command and register it to last command """
+
         try:
+            # Run command
             self.secondaryExecution()
         except RuntimeError:
             cmds.warning("Command not found. No object created.")
@@ -268,6 +278,8 @@ class UI(QtGui.QWidget):
             cmds.warning("Command not found. No object created.")
 
     def secondaryExecution(self):
+        """ Execute command """
+
         # When return pressed without selecting any items
         # on the completion list
         if self.executeType == 0:
@@ -292,9 +304,10 @@ class UI(QtGui.QWidget):
         return self.lastCommand
 
 
-# This is the main class which will interit all command classes
-# from all command modules
 class MainClass():
+    """ This is the main class which will interit all command classes
+    from all command modules """
+
     pass
 
 # Create a list of class objects.
@@ -315,10 +328,8 @@ def inheritClasses():
 
 
 def mergeCommandDict():
-    """
-    Combine all command dicrectories and create json files which includes
-    all command names and their icons paths.
-    """
+    """ Combine all command dicrectories and create json files which includes
+    all command names and their icons paths.  """
 
     miExec = MainClass()
     for item in baseNames:
