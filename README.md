@@ -20,12 +20,13 @@ Differences between this script and the one in Node Editor in behavior.
 
 ## Requirements
 
-PyQt4 or PySide
+PySide
+
 
 ## Installation
 
 
-[http://github.com/minoue/miExecutor/archive/1.1.1.zip](https://github.com/minoue/miExecutor/archive/1.1.1.zip)  
+[http://github.com/minoue/miExecutor/archive/1.1.2.zip](https://github.com/minoue/miExecutor/archive/1.1.1.zip)  
 
 
 * Download zip file and extract it, then rename the folder to 'miExecutor'  
@@ -46,15 +47,9 @@ PyQt4 or PySide
 * Restart maya or do 'rehash;' command.  
 * Assign the following python command to any key you want.  
 
-    PyQt4  
+        from miExecutor import miExecutor
+        reload(miExecutor)
 
-            from miExecutor import miExecutor
-            reload(miExecutor)  
-
-    PySide  
-
-            from miExecutor import miExecutor_pyside
-            reload(miExecutor_pyside)
 
 
 ## How to add commands
