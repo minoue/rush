@@ -3,7 +3,6 @@ import maya.cmds as cmds
 import maya.mel as mel
 from pymel.all import mel as pa
 import maya.OpenMayaUI as mui
-import glob
 import os
 import json
 import sys
@@ -12,6 +11,8 @@ import shiboken
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
 MIEXEC_HISTORY_FILE = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
+SCRIPT_PATH = os.path.dirname(__file__)
+MODULE_PATH = os.path.join(SCRIPT_PATH, 'module')
 
 
 # Define mel procedure to call the previous function
@@ -23,40 +24,46 @@ global proc callLastCommand(string $function)
 """)
 
 
-# Get a list of full paths of each modules.
-modules = glob.glob(
-    os.path.normpath(os.path.dirname(__file__) + "/module/*.py"))
+# List of module path
+# ['module.custom', 'module.general.display', module.renderer.vray' etc...]
+modulePath = []
 
-# Get a list of module names without extensions.
-# Result: ['mayaNode', 'mentalray', etc....]
-baseNames = [os.path.splitext(os.path.basename(i))[0]for
-             i in modules]
 
-# Get a list of module names without extensions but package names.
-# Result: ['module.mayaNode', 'module.vray', etc....]
-moduleNames = ['module.' + i for i in baseNames]
+# List of modules names
+# ['custom', 'general.display', 'general.mayaNode', 'polygon.mesh', etc...]
+moduleName = []
 
-# Remove '__init__' from the lists
-for i in moduleNames:
-    if '__init__' in i:
-        idx = moduleNames.index(i)
-        del moduleNames[idx]
-for i in baseNames:
-    if '__init__' in i:
-        idx = baseNames.index(i)
-        del baseNames[idx]
+
+# List of module base names
+# eg. ['mayaNode', 'mentalray', 'arnold', 'vray', etc...]
+moduleBaseName = []
+
+
+for root, dirs, files in os.walk(MODULE_PATH):
+    for f in files:
+        if f.endswith(".py"):
+            if "__init__" not in f:
+                name = os.path.splitext(f)[0]
+                moduleBaseName.append(name)
+                fullPath = os.path.join(root, name)
+                relatives = fullPath.replace(SCRIPT_PATH, "")
+                mp = relatives.replace("/", ".").lstrip(".")
+                modulePath.append(mp)
+                moduleName.append(mp.replace("module.", ""))
 
 
 def importer(*args):
     """ Funciton to load each module """
     return __import__(args[0], globals(), locals(), [])
 
+
 # Import all modules in the module directory.
-mods = map(importer, moduleNames)
+mods = map(importer, modulePath)
+
 
 # Create a list of module objects and reload them all
 moduleObjects = []
-for i in baseNames:
+for i in moduleName:
     exec("""moduleObjects.append(mods[0].%s)""" % i)
 for module in moduleObjects:
     reload(module)
@@ -89,7 +96,7 @@ class UI(QtGui.QWidget):
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
         self.setWindowTitle("miExecutor")
 
-        # Use window transparent if the OS is OSX or Windows
+        # Use window transparent in OSX or Windows
         osType = sys.platform
         if osType == "darwin":
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -310,10 +317,12 @@ class MainClass():
 
     pass
 
+
 # Create a list of class objects.
 CLASSLIST = [UI]
-for i in baseNames:
+for i in moduleName:
     exec("""CLASSLIST.append(mods[0].%s.Commands)""" % i)
+
 
 # Convert the list of classes to the tuple
 # The second argument of 'type' only accept a tuple
@@ -332,7 +341,7 @@ def mergeCommandDict():
     all command names and their icons paths.  """
 
     miExec = MainClass()
-    for item in baseNames:
+    for item in moduleBaseName:
         exec("miExec.commandDict.update(miExec.%sDict)" % item)
     outFilePath = os.path.normpath(
         os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
