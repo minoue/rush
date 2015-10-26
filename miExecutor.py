@@ -13,6 +13,9 @@ MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
 MIEXEC_HISTORY_FILE = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
 SCRIPT_PATH = os.path.dirname(__file__)
 MODULE_PATH = os.path.join(SCRIPT_PATH, 'module')
+FONT_PATH = os.path.join(SCRIPT_PATH, 'font', 'chogokubosogothic-5.ttf')
+
+QtGui.QFontDatabase.addApplicationFont(FONT_PATH)
 
 
 # Define mel procedure to call the previous function
@@ -22,6 +25,12 @@ global proc callLastCommand(string $function)
     repeatLast -ac $function -acl "blah-blah....";
 }
 """)
+
+
+# Load stylesheet data
+styleFile = open(os.path.join(SCRIPT_PATH, "style.json"), 'r')
+styleDict = json.load(styleFile)
+styleFile.close()
 
 
 # List of module path
@@ -74,6 +83,33 @@ def getMayaWindow():
     return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
 
 
+class CustomQLineEdit(QtGui.QLineEdit):
+    """ Custom QLineEdit """
+
+    def __init__(self, parent=None):
+        super(CustomQLineEdit, self).__init__(parent)
+        self.setStyleSheet("""
+            color: %s;
+            background-color: %s;
+            border-radius: %s;
+            border-width: %s;
+            border-style: %s;
+            border-color: %s;
+            font-family: %s;
+            font-size: %s;
+            font-weight: %s
+            """ % (styleDict['search']['color'],
+                   styleDict['search']['background-color'],
+                   styleDict['search']['border-radius'],
+                   styleDict['search']['border-width'],
+                   styleDict['search']['border-style'],
+                   styleDict['search']['border-color'],
+                   styleDict['search']['font-family'],
+                   styleDict['search']['font-size'],
+                   styleDict['search']['font-weight'])
+            )
+
+
 class UI(QtGui.QWidget):
     """ main UI class """
 
@@ -91,7 +127,9 @@ class UI(QtGui.QWidget):
         super(UI, self).__init__(parent)
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        self.setFixedSize(200, 20)
+        self.windowSize = QtCore.QSize(380, 50)
+        self.iconSize = QtCore.QSize(22, 22)
+        self.setFixedSize(self.windowSize)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
         self.setWindowTitle("miExecutor")
@@ -172,8 +210,9 @@ class UI(QtGui.QWidget):
     def createUI(self):
         """ Create UI """
 
-        self.lineEdit = QtGui.QLineEdit(self)
-        self.lineEdit.setFixedWidth(200)
+        self.lineEdit = CustomQLineEdit(self)
+        self.lineEdit.setFixedSize(self.windowSize)
+
         vbox = QtGui.QBoxLayout(QtGui.QBoxLayout.TopToBottom, self)
         vbox.setSpacing(0)
         vbox.setContentsMargins(0, 0, 0, 0)
@@ -187,6 +226,27 @@ class UI(QtGui.QWidget):
         self.completer.highlighted.connect(self.selectionCallback)
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
+        self.completer.popup().setIconSize(self.iconSize)
+        self.completer.popup().setStyleSheet("""
+            color: %s;
+            background-color: %s;
+            border-radius: %s;
+            border-width: %s;
+            border-style: %s;
+            border-color: %s;
+            font-family: %s;
+            font-size: %s;
+            font-weight: %s
+            """ % (styleDict['completer']['color'],
+                   styleDict['completer']['background-color'],
+                   styleDict['completer']['border-radius'],
+                   styleDict['completer']['border-width'],
+                   styleDict['completer']['border-style'],
+                   styleDict['completer']['border-color'],
+                   styleDict['completer']['font-family'],
+                   styleDict['completer']['font-size'],
+                   styleDict['completer']['font-weight'])
+            )
 
         # Setup QCompleter for history
         self.histCompleter = QtGui.QCompleter()
@@ -226,6 +286,16 @@ class UI(QtGui.QWidget):
                                 QtCore.Qt.CaseInsensitive,
                                 QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
+
+        '''
+        # Set height of popup based on number columns
+        rowCount = self.filteredModel.rowCount()
+        popup = self.completer.popup()
+        newHeight = rowCount * 45
+        if newHeight > 300:
+            newHeight = 400
+        popup.setFixedHeight(newHeight)
+        '''
 
     def selectionCallback(self, selected):
         self._selected = selected
