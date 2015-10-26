@@ -12,7 +12,6 @@ class Commands(object):
         pass
 
     def _transferMapWindow(self):
-        print "Hello World"
         mel.eval("performSurfaceSampling 1")
     lightingDict['transferMapWindow'] = "menuIconShading.png"
     # ^ Don't forget to add the command to the dictionary.
