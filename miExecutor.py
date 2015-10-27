@@ -427,13 +427,13 @@ def mergeCommandDict():
 def loadHistory():
     """ Clear history list """
 
-    if os.path.exists(MIEXEC_HISTORY_FILE):
-        with open(MIEXEC_HISTORY_FILE, 'r') as histFile:
-            histories = [i.rstrip() for i in histFile.readlines()]
-            return histories
-    else:
+    if not os.path.exists(MIEXEC_HISTORY_FILE):
         # Create empty text file for history
         open(MIEXEC_HISTORY_FILE, 'a').close()
+
+    with open(MIEXEC_HISTORY_FILE, 'r') as histFile:
+        histories = [i.rstrip() for i in histFile.readlines()]
+        return histories
 
 
 def updateHistory(command):
