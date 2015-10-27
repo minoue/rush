@@ -113,6 +113,9 @@ class CustomQLineEdit(QtGui.QLineEdit):
 class UI(QtGui.QWidget):
     """ main UI class """
 
+    # Dict to inherit all command dicrectories
+    cmdDict = {}
+
     def closeExistingWindow(self):
         """ Close a window if exits """
 
@@ -410,14 +413,14 @@ def mergeCommandDict():
     """ Combine all command dicrectories and create json files which includes
     all command names and their icons paths.  """
 
-    miExec = MainClass()
     for item in moduleBaseName:
-        exec("miExec.commandDict.update(miExec.%sDict)" % item)
+        exec("UI.cmdDict.update(MainClass.%sDict)" % item)
+
     outFilePath = os.path.normpath(
         os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
 
     with open(outFilePath, 'w') as outFile:
-        json.dump(miExec.commandDict,
+        json.dump(UI.cmdDict,
                   outFile,
                   indent=4,
                   separators=(',', ':'),
