@@ -448,10 +448,13 @@ def updateHistory(command):
             histFile.write(i + "\n")
 
 
-# Show window.
-def main():
+def init():
     inheritClasses()
     mergeCommandDict()
+
+
+# Show window.
+def main():
     global miExec
     try:
         miExec.close()
@@ -471,4 +474,4 @@ def main():
 if __name__ == "__main__":
     pass
 else:
-    main()
+    init()
