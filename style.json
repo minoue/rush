@@ -1,4 +1,9 @@
 {
+    "window": {
+        "width" : 380,
+        "height": 50
+    },
+    "icon_size": 22,
     "search": {
         "color": "rgb(255, 255, 255)",
         "background-color": "rgb(30, 30, 30)",
@@ -6,7 +11,7 @@
         "border-width": "2px",
         "border-style": "outset",
         "font-family": "Chogokuboso Gothic",
-        "font-size": "36pt",
+        "font-size": "28pt",
         "font-weight": "700",
         "border-color": "rgb(41, 245, 234)"
     },
@@ -17,7 +22,7 @@
         "border-width": "2px",
         "border-style": "outset",
         "font-family": "Chogokuboso Gothic",
-        "font-size": "20pt",
+        "font-size": "16pt",
         "font-weight": "700",
         "border-color": "rgb(41, 245, 234)"
     }

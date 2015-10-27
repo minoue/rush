@@ -130,8 +130,10 @@ class UI(QtGui.QWidget):
         super(UI, self).__init__(parent)
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        self.windowSize = QtCore.QSize(380, 50)
-        self.iconSize = QtCore.QSize(22, 22)
+        self.windowSize = QtCore.QSize(
+            styleDict['window']['width'], styleDict['window']['height'])
+        self.iconSize = QtCore.QSize(
+            styleDict['icon_size'], styleDict['icon_size'])
         self.setFixedSize(self.windowSize)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
