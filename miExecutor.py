@@ -176,7 +176,9 @@ class UI(QtGui.QWidget):
         commandFile = os.path.normpath(
             os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
         try:
-            jsonDict = json.load(open(commandFile))
+            f = open(commandFile)
+            jsonDict = json.load(f)
+            f.close()
         except IOError:
             jsonDict = {}
 
