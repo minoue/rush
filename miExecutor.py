@@ -28,7 +28,7 @@ global proc callLastCommand(string $function)
 
 
 # Load stylesheet data
-styleFile = open(os.path.join(SCRIPT_PATH, "style.json"), 'r')
+styleFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
 styleDict = json.load(styleFile)
 styleFile.close()
 
