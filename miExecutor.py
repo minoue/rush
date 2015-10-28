@@ -139,15 +139,8 @@ class UI(QtGui.QWidget):
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
         self.setWindowTitle("miExecutor")
 
-        # Use window transparent in OSX or Windows
-        osType = sys.platform
-        if osType == "darwin":
-            self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        elif osType == "linux2":
-            # Composite Window needs be enabled
-            # in linux to enable window transparent
-            pass
-        elif osType == "win32":
+        # Transparency setting
+        if prefDict['window']['transparent'] is True:
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         else:
             pass
@@ -214,13 +207,12 @@ class UI(QtGui.QWidget):
     def createUI(self):
         """ Create UI """
 
-        self.lineEdit = CustomQLineEdit(self)
-        self.lineEdit.setFixedSize(
-            prefDict['search']['width'], prefDict['search']['height'])
-
-        vbox = QtGui.QBoxLayout(QtGui.QBoxLayout.TopToBottom, self)
+        margin = prefDict['margin']
+        self.lineEdit = CustomQLineEdit()
+        self.lineEdit.setFixedHeight(prefDict['window']['height'] - margin * 2)
+        vbox = QtGui.QVBoxLayout()
         vbox.setSpacing(0)
-        vbox.setContentsMargins(0, 0, 0, 0)
+        vbox.setContentsMargins(margin, margin, margin, margin)
         vbox.addWidget(self.lineEdit)
         self.setLayout(vbox)
 

@@ -1,9 +1,17 @@
 {
     "window": {
         "width" : 380,
-        "height": 50
+        "height": 50,
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgb(200, 200, 200)",
+        "border-radius": "30px",
+        "border-width": "7px",
+        "border-style": "outset",
+        "border-color": "rgb(0, 236, 236)",
+        "transparent": false
     },
     "icon_size": 22,
+    "margin": 5,
     "search": {
         "color": "rgb(255, 255, 255)",
         "background-color": "rgb(30, 30, 30)",
