@@ -25,5 +25,6 @@
         "font-family": "Chogokuboso Gothic",
         "font-size": "16pt",
         "font-weight": "700"
-    }
+    },
+    "use_tab_key": true
 }

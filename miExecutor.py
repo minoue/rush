@@ -455,9 +455,44 @@ def updateHistory(command):
             histFile.write(i + "\n")
 
 
+# Use Tab key
+def useTab():
+    mainWin = getMayaWindow()
+
+    # Get list of QActions in main window
+    mainWinActions = mainWin.actions()
+
+    actionName = "miExec_TabKey"
+
+    # List of QAction's object name
+    actionNames = [i.objectName() for i in mainWinActions]
+
+    # If tab action already exists in main window, use it.
+    if actionName in actionNames:
+        for action in mainWinActions:
+            print action
+            if action.objectName() == actionName:
+                if styleDict['use_tab_key'] is True:
+                    action.setEnabled(True)
+                else:
+                    action.setDisabled(True)
+            else:
+                pass
+
+    # if it doesn't exist, create new tab action.
+    else:
+        tabAction = QtGui.QAction(mainWin)
+        tabAction.setObjectName(actionName)
+        tabAction.setShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Tab))
+        tabAction.setShortcutContext(QtCore.Qt.ApplicationShortcut)
+        tabAction.triggered.connect(main)
+        mainWin.addAction(tabAction)
+
+
 def init():
     inheritClasses()
     mergeCommandDict()
+    useTab()
 
 
 # Show window.
