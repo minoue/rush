@@ -28,9 +28,9 @@ global proc callLastCommand(string $function)
 
 
 # Load stylesheet data
-styleFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
-styleDict = json.load(styleFile)
-styleFile.close()
+prefFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
+prefDict = json.load(prefFile)
+prefFile.close()
 
 
 # List of module path
@@ -98,15 +98,15 @@ class CustomQLineEdit(QtGui.QLineEdit):
             font-family: %s;
             font-size: %s;
             font-weight: %s
-            """ % (styleDict['search']['color'],
-                   styleDict['search']['background-color'],
-                   styleDict['search']['border-radius'],
-                   styleDict['search']['border-width'],
-                   styleDict['search']['border-style'],
-                   styleDict['search']['border-color'],
-                   styleDict['search']['font-family'],
-                   styleDict['search']['font-size'],
-                   styleDict['search']['font-weight'])
+            """ % (prefDict['search']['color'],
+                   prefDict['search']['background-color'],
+                   prefDict['search']['border-radius'],
+                   prefDict['search']['border-width'],
+                   prefDict['search']['border-style'],
+                   prefDict['search']['border-color'],
+                   prefDict['search']['font-family'],
+                   prefDict['search']['font-size'],
+                   prefDict['search']['font-weight'])
             )
 
 
@@ -131,9 +131,9 @@ class UI(QtGui.QWidget):
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.windowSize = QtCore.QSize(
-            styleDict['window']['width'], styleDict['window']['height'])
+            prefDict['window']['width'], prefDict['window']['height'])
         self.iconSize = QtCore.QSize(
-            styleDict['icon_size'], styleDict['icon_size'])
+            prefDict['icon_size'], prefDict['icon_size'])
         self.setFixedSize(self.windowSize)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
@@ -151,9 +151,6 @@ class UI(QtGui.QWidget):
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         else:
             pass
-
-        # Dictionary that all commands and icon paths will be stored in.
-        self.commandDict = {}
 
         # Attribute to check if item on the popup list is selected
         self._selected = None
@@ -218,7 +215,8 @@ class UI(QtGui.QWidget):
         """ Create UI """
 
         self.lineEdit = CustomQLineEdit(self)
-        self.lineEdit.setFixedSize(self.windowSize)
+        self.lineEdit.setFixedSize(
+            prefDict['search']['width'], prefDict['search']['height'])
 
         vbox = QtGui.QBoxLayout(QtGui.QBoxLayout.TopToBottom, self)
         vbox.setSpacing(0)
@@ -244,15 +242,15 @@ class UI(QtGui.QWidget):
             font-family: %s;
             font-size: %s;
             font-weight: %s
-            """ % (styleDict['completer']['color'],
-                   styleDict['completer']['background-color'],
-                   styleDict['completer']['border-radius'],
-                   styleDict['completer']['border-width'],
-                   styleDict['completer']['border-style'],
-                   styleDict['completer']['border-color'],
-                   styleDict['completer']['font-family'],
-                   styleDict['completer']['font-size'],
-                   styleDict['completer']['font-weight'])
+            """ % (prefDict['completer']['color'],
+                   prefDict['completer']['background-color'],
+                   prefDict['completer']['border-radius'],
+                   prefDict['completer']['border-width'],
+                   prefDict['completer']['border-style'],
+                   prefDict['completer']['border-color'],
+                   prefDict['completer']['font-family'],
+                   prefDict['completer']['font-size'],
+                   prefDict['completer']['font-weight'])
             )
 
         # Setup QCompleter for history
@@ -472,7 +470,7 @@ def useTab():
         for action in mainWinActions:
             print action
             if action.objectName() == actionName:
-                if styleDict['use_tab_key'] is True:
+                if prefDict['use_tab_key'] is True:
                     action.setEnabled(True)
                 else:
                     action.setDisabled(True)
