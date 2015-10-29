@@ -5,7 +5,6 @@ from pymel.all import mel as pa
 import maya.OpenMayaUI as mui
 import os
 import json
-import sys
 import shiboken
 
 
@@ -27,10 +26,31 @@ global proc callLastCommand(string $function)
 """)
 
 
-# Load stylesheet data
+# Load pref data
 prefFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
 prefDict = json.load(prefFile)
 prefFile.close()
+
+# Load stylesheet data
+qssFilePath = os.path.join(
+    SCRIPT_PATH,
+    "style",
+    prefDict['style'],
+    prefDict['style']) + ".qss"
+qssFile = open(qssFilePath, "r")
+qss = qssFile.read()
+qssFile.close()
+
+
+# Load window setting
+windowFilePath = os.path.join(
+    SCRIPT_PATH,
+    "style",
+    prefDict['style'],
+    "window.json")
+windowFile = open(windowFilePath, 'r')
+windowDict = json.load(windowFile)
+windowFile.close()
 
 
 # List of module path
@@ -83,33 +103,6 @@ def getMayaWindow():
     return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
 
 
-class CustomQLineEdit(QtGui.QLineEdit):
-    """ Custom QLineEdit """
-
-    def __init__(self, parent=None):
-        super(CustomQLineEdit, self).__init__(parent)
-        self.setStyleSheet("""
-            color: %s;
-            background-color: %s;
-            border-radius: %s;
-            border-width: %s;
-            border-style: %s;
-            border-color: %s;
-            font-family: %s;
-            font-size: %s;
-            font-weight: %s
-            """ % (prefDict['search']['color'],
-                   prefDict['search']['background-color'],
-                   prefDict['search']['border-radius'],
-                   prefDict['search']['border-width'],
-                   prefDict['search']['border-style'],
-                   prefDict['search']['border-color'],
-                   prefDict['search']['font-family'],
-                   prefDict['search']['font-size'],
-                   prefDict['search']['font-weight'])
-            )
-
-
 class UI(QtGui.QWidget):
     """ main UI class """
 
@@ -131,16 +124,16 @@ class UI(QtGui.QWidget):
         self.closeExistingWindow()
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.windowSize = QtCore.QSize(
-            prefDict['window']['width'], prefDict['window']['height'])
+            windowDict['width'], windowDict['height'])
         self.iconSize = QtCore.QSize(
-            prefDict['icon_size'], prefDict['icon_size'])
+            windowDict['icon_size'], windowDict['icon_size'])
         self.setFixedSize(self.windowSize)
         self.setWindowFlags(QtCore.Qt.Tool)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
         self.setWindowTitle("miExecutor")
 
         # Transparency setting
-        if prefDict['window']['transparent'] is True:
+        if windowDict['transparent'] is True:
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         else:
             pass
@@ -207,9 +200,11 @@ class UI(QtGui.QWidget):
     def createUI(self):
         """ Create UI """
 
-        margin = prefDict['margin']
-        self.lineEdit = CustomQLineEdit()
-        self.lineEdit.setFixedHeight(prefDict['window']['height'] - margin * 2)
+        margin = windowDict['margin']
+        self.lineEdit = QtGui.QLineEdit()
+        # Apply stylesheet
+        self.lineEdit.setStyleSheet(qss)
+        self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
         vbox = QtGui.QVBoxLayout()
         vbox.setSpacing(0)
         vbox.setContentsMargins(margin, margin, margin, margin)
@@ -224,26 +219,8 @@ class UI(QtGui.QWidget):
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
         self.completer.popup().setIconSize(self.iconSize)
-        self.completer.popup().setStyleSheet("""
-            color: %s;
-            background-color: %s;
-            border-radius: %s;
-            border-width: %s;
-            border-style: %s;
-            border-color: %s;
-            font-family: %s;
-            font-size: %s;
-            font-weight: %s
-            """ % (prefDict['completer']['color'],
-                   prefDict['completer']['background-color'],
-                   prefDict['completer']['border-radius'],
-                   prefDict['completer']['border-width'],
-                   prefDict['completer']['border-style'],
-                   prefDict['completer']['border-color'],
-                   prefDict['completer']['font-family'],
-                   prefDict['completer']['font-size'],
-                   prefDict['completer']['font-weight'])
-            )
+        # Apply stylesheet
+        self.completer.popup().setStyleSheet(qss)
 
         # Setup QCompleter for history
         self.histCompleter = QtGui.QCompleter()
@@ -460,7 +437,6 @@ def useTab():
     # If tab action already exists in main window, use it.
     if actionName in actionNames:
         for action in mainWinActions:
-            print action
             if action.objectName() == actionName:
                 if prefDict['use_tab_key'] is True:
                     action.setEnabled(True)
