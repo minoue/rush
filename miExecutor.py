@@ -103,40 +103,51 @@ def getMayaWindow():
     return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
 
 
-class UI(QtGui.QWidget):
+class CustomQLineEdit(QtGui.QLineEdit):
+
+    escPressed = QtCore.Signal(str)
+    downPressed = QtCore.Signal(str)
+
+    def __init__(self, parent=None):
+        super(CustomQLineEdit, self).__init__(parent)
+
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Escape:
+            self.escPressed.emit('esc')
+
+        elif event.key() == QtCore.Qt.Key_Down:
+            self.downPressed.emit('down')
+        else:
+            super(CustomQLineEdit, self).keyPressEvent(event)
+
+
+class UI(QtGui.QFrame):
     """ main UI class """
 
     # Dict to inherit all command dicrectories
     cmdDict = {}
 
-    def closeExistingWindow(self):
-        """ Close a window if exits """
-
-        for qtapp in QtGui.QApplication.topLevelWidgets():
-            try:
-                if qtapp.__class__.__name__ == self.__class__.__name__:
-                    qtapp.close()
-            except:
-                pass
-
-    def __init__(self, parent=getMayaWindow()):
+    def __init__(self, parent=None):
         super(UI, self).__init__(parent)
-        self.closeExistingWindow()
-        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        # self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.windowSize = QtCore.QSize(
             windowDict['width'], windowDict['height'])
         self.iconSize = QtCore.QSize(
             windowDict['icon_size'], windowDict['icon_size'])
-        self.setFixedSize(self.windowSize)
-        self.setWindowFlags(QtCore.Qt.Tool)
-        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
-        self.setWindowTitle("miExecutor")
+        # self.setFixedSize(self.windowSize)
+        # self.setWindowFlags(QtCore.Qt.Tool)
+        # self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
+        # self.setWindowTitle("miExecutor")
 
+        self.setStyleSheet(qss)
+
+        '''
         # Transparency setting
         if windowDict['transparent'] is True:
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         else:
             pass
+        '''
 
         # Attribute to check if item on the popup list is selected
         self._selected = None
@@ -200,14 +211,15 @@ class UI(QtGui.QWidget):
     def createUI(self):
         """ Create UI """
 
-        margin = windowDict['margin']
-        self.lineEdit = QtGui.QLineEdit()
+        # margin = windowDict['margin']
+        self.lineEdit = CustomQLineEdit()
+        self.lineEdit.downPressed.connect(self.showHistory)
         # Apply stylesheet
-        self.lineEdit.setStyleSheet(qss)
-        self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
+        # self.lineEdit.setStyleSheet(qss)
+        # self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
         vbox = QtGui.QVBoxLayout()
         vbox.setSpacing(0)
-        vbox.setContentsMargins(margin, margin, margin, margin)
+        vbox.setContentsMargins(0, 0, 0, 0)
         vbox.addWidget(self.lineEdit)
         self.setLayout(vbox)
 
@@ -236,15 +248,9 @@ class UI(QtGui.QWidget):
         self.lineEdit.returnPressed.connect(self.initialExecution)
         self.lineEdit.setFocus()
 
-    def keyPressEvent(self, event):
-        """ Show history command list by down arrow key """
-
-        key = event.key()
-        if key == QtCore.Qt.Key_Down:
-            self.lineEdit.setCompleter(self.histCompleter)
-            self.histCompleter.complete()
-        else:
-            self.close()
+    def showHistory(self, *args):
+        self.lineEdit.setCompleter(self.histCompleter)
+        self.histCompleter.complete()
 
     def updateData(self):
         """ Update current completion data """
@@ -461,6 +467,46 @@ def init():
     useTab()
 
 
+class MainWindow(QtGui.QMainWindow):
+
+    def closeExistingWindow(self):
+        """ Close a window if exits """
+
+        for qtapp in QtGui.QApplication.topLevelWidgets():
+            try:
+                if qtapp.__class__.__name__ == self.__class__.__name__:
+                    qtapp.close()
+            except:
+                pass
+
+    def __init__(self, parent=getMayaWindow()):
+        super(MainWindow, self).__init__(parent)
+        self.closeExistingWindow()
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+
+        self.cw = MainClass()
+        self.cw.lineEdit.returnPressed.connect(self.close)
+        self.cw.lineEdit.escPressed.connect(self.close)
+
+        self.setCentralWidget(self.cw)
+
+        self.initWindow()
+
+    def initWindow(self):
+        self.resize(self.cw.windowSize)
+        margin = windowDict['margin']
+        self.setContentsMargins(margin, margin, margin, margin)
+
+        # Transparency setting
+        if windowDict['transparent'] is True:
+            self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        else:
+            pass
+
+        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
+        self.setWindowTitle("miExecutor")
+
+
 # Show window.
 def main():
     global miExec
@@ -468,7 +514,7 @@ def main():
         miExec.close()
     except:
         pass
-    miExec = MainClass()
+    miExec = MainWindow()
     miExec.show()
 
     # Move the window to the cursor position.
@@ -477,6 +523,7 @@ def main():
         pos.x() - (miExec.width() / 2), pos.y() - (miExec.height() / 2))
     miExec.activateWindow()
     miExec.raise_()
+    miExec.cw.lineEdit.setFocus()
 
 
 if __name__ == "__main__":
