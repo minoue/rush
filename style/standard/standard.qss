@@ -22,3 +22,14 @@ QLineEdit
     font-size: 12pt;
 }
 
+QFrame
+{
+    background-color: rgb(60, 60, 60, 255);
+    color: white;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgb(0, 236, 236);
+    font-size: 12pt;
+}
