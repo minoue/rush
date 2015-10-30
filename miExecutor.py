@@ -127,27 +127,17 @@ class UI(QtGui.QFrame):
     # Dict to inherit all command dicrectories
     cmdDict = {}
 
+    closeSignal = QtCore.Signal(str)
+
     def __init__(self, parent=None):
         super(UI, self).__init__(parent)
-        # self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.windowSize = QtCore.QSize(
             windowDict['width'], windowDict['height'])
         self.iconSize = QtCore.QSize(
             windowDict['icon_size'], windowDict['icon_size'])
-        # self.setFixedSize(self.windowSize)
-        # self.setWindowFlags(QtCore.Qt.Tool)
-        # self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
-        # self.setWindowTitle("miExecutor")
 
         self.setStyleSheet(qss)
-
-        '''
-        # Transparency setting
-        if windowDict['transparent'] is True:
-            self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        else:
-            pass
-        '''
 
         # Attribute to check if item on the popup list is selected
         self._selected = None
@@ -211,12 +201,12 @@ class UI(QtGui.QFrame):
     def createUI(self):
         """ Create UI """
 
-        # margin = windowDict['margin']
+        margin = windowDict['margin']
         self.lineEdit = CustomQLineEdit()
         self.lineEdit.downPressed.connect(self.showHistory)
         # Apply stylesheet
-        # self.lineEdit.setStyleSheet(qss)
-        # self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
+        self.lineEdit.setStyleSheet(qss)
+        self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
         vbox = QtGui.QVBoxLayout()
         vbox.setSpacing(0)
         vbox.setContentsMargins(0, 0, 0, 0)
@@ -224,7 +214,7 @@ class UI(QtGui.QFrame):
         self.setLayout(vbox)
 
         # Set up QCompleter
-        self.completer = QtGui.QCompleter()
+        self.completer = QtGui.QCompleter(self)
         self.completer.setCompletionMode(
             QtGui.QCompleter.UnfilteredPopupCompletion)
         self.completer.highlighted.connect(self.selectionCallback)
@@ -358,6 +348,9 @@ class UI(QtGui.QFrame):
             pass
 
         updateHistory(self.lastCommand)
+
+        self.closeSignal.emit('foobar')
+
         return self.lastCommand
 
 
@@ -467,54 +460,45 @@ def init():
     useTab()
 
 
-class MainWindow(QtGui.QMainWindow):
+def initMainWindow(mw):
+    """ init lineEdit window """
 
-    def closeExistingWindow(self):
-        """ Close a window if exits """
+    mw.resize(windowDict['width'], windowDict['height'])
+    mw.setWindowTitle("miExecutor")
 
-        for qtapp in QtGui.QApplication.topLevelWidgets():
-            try:
-                if qtapp.__class__.__name__ == self.__class__.__name__:
-                    qtapp.close()
-            except:
-                pass
+    # Transparency setting
+    if windowDict['transparent'] is True:
+        mw.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+    else:
+        pass
 
-    def __init__(self, parent=getMayaWindow()):
-        super(MainWindow, self).__init__(parent)
-        self.closeExistingWindow()
-        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+    cw = MainClass()
+    cw.lineEdit.escPressed.connect(miExec.close)
+    cw.lineEdit.escPressed.connect(cw.close)
+    cw.closeSignal.connect(miExec.close)
 
-        self.cw = MainClass()
-        self.cw.lineEdit.returnPressed.connect(self.close)
-        self.cw.lineEdit.escPressed.connect(self.close)
+    mw.setCentralWidget(cw)
+    mw.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
-        self.setCentralWidget(self.cw)
-
-        self.initWindow()
-
-    def initWindow(self):
-        self.resize(self.cw.windowSize)
-        margin = windowDict['margin']
-        self.setContentsMargins(margin, margin, margin, margin)
-
-        # Transparency setting
-        if windowDict['transparent'] is True:
-            self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        else:
-            pass
-
-        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
-        self.setWindowTitle("miExecutor")
+    cw.lineEdit.setFocus()
 
 
-# Show window.
+def destructor(*args):
+    print args
+
+
 def main():
+    """ Show window and move it to cursor position """
+
     global miExec
     try:
         miExec.close()
     except:
         pass
-    miExec = MainWindow()
+
+    miExec = QtGui.QMainWindow()
+    initMainWindow(miExec)
+    miExec.setAttribute(QtCore.Qt.WA_DeleteOnClose)
     miExec.show()
 
     # Move the window to the cursor position.
@@ -523,7 +507,6 @@ def main():
         pos.x() - (miExec.width() / 2), pos.y() - (miExec.height() / 2))
     miExec.activateWindow()
     miExec.raise_()
-    miExec.cw.lineEdit.setFocus()
 
 
 if __name__ == "__main__":
