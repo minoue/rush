@@ -12,9 +12,6 @@ MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
 MIEXEC_HISTORY_FILE = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
 SCRIPT_PATH = os.path.dirname(__file__)
 MODULE_PATH = os.path.join(SCRIPT_PATH, 'module')
-FONT_PATH = os.path.join(SCRIPT_PATH, 'font', 'chogokubosogothic-5.ttf')
-
-QtGui.QFontDatabase.addApplicationFont(FONT_PATH)
 
 
 # Define mel procedure to call the previous function
