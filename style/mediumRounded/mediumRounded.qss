@@ -1,0 +1,35 @@
+QListView
+{
+    color: white;
+    background-color: rgb(30, 30, 30);
+    padding: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgb(0, 236, 236);
+    font-size: 12pt;
+}
+
+QLineEdit
+{
+    color: white;
+    background-color: rgb(30, 30, 30);
+    padding: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    border-color: rgb(0, 236, 236);
+    font-size: 12pt;
+}
+
+QFrame
+{
+    background-color: rgb(60, 60, 60, 255);
+    color: white;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgb(0, 236, 236);
+    font-size: 12pt;
+}
