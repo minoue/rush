@@ -31,6 +31,7 @@ prefFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
 prefDict = json.load(prefFile)
 prefFile.close()
 
+
 # Load stylesheet data
 qssFilePath = os.path.join(
     SCRIPT_PATH,
@@ -54,12 +55,12 @@ windowFile.close()
 
 
 # List of module path
-# ['module.custom', 'module.general.display', module.renderer.vray' etc...]
+# eg. ['module.custom', 'module.general.display', module.renderer.vray' etc...]
 modulePath = []
 
 
 # List of modules names
-# ['custom', 'general.display', 'general.mayaNode', 'polygon.mesh', etc...]
+# eg. ['custom', 'general.display', 'general.mayaNode', 'polygon.mesh', etc...]
 moduleName = []
 
 
@@ -68,6 +69,7 @@ moduleName = []
 moduleBaseName = []
 
 
+# Init three lists above
 for root, dirs, files in os.walk(MODULE_PATH):
     for f in files:
         if f.endswith(".py"):
@@ -257,16 +259,6 @@ class UI(QtGui.QFrame):
                                 QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
 
-        '''
-        # Set height of popup based on number columns
-        rowCount = self.filteredModel.rowCount()
-        popup = self.completer.popup()
-        newHeight = rowCount * 45
-        if newHeight > 300:
-            newHeight = 400
-        popup.setFixedHeight(newHeight)
-        '''
-
     def selectionCallback(self, selected):
         self._selected = selected
         self.executeType = 1
@@ -319,12 +311,13 @@ class UI(QtGui.QFrame):
         if self.lastCommand is not None:
             className = self.__class__.__name__
             pa.callLastCommand(
-                """python(\"miExecutor_pyside.%s()._%s()\")""" % (
+                """python(\"miExecutor.%s()._%s()\")""" % (
                     className, self.lastCommand))
         else:
             cmds.warning("Command not found. No object created.")
 
     def secondaryExecution(self):
+
         """ Execute command """
 
         # When return pressed without selecting any items
@@ -421,8 +414,9 @@ def updateHistory(command):
             histFile.write(i + "\n")
 
 
-# Use Tab key
 def useTab():
+    """ Use Tab key as hotkey """
+
     mainWin = getMayaWindow()
 
     # Get list of QActions in main window
@@ -472,19 +466,15 @@ def initMainWindow(mw):
     else:
         pass
 
-    cw = MainClass()
+    cw = MainClass(parent=mw)
+    cw.setObjectName("miExec_frame")
     cw.lineEdit.escPressed.connect(miExec.close)
-    cw.lineEdit.escPressed.connect(cw.close)
     cw.closeSignal.connect(miExec.close)
 
     mw.setCentralWidget(cw)
     mw.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
     cw.lineEdit.setFocus()
-
-
-def destructor(*args):
-    print args
 
 
 def main():
