@@ -445,27 +445,28 @@ def init():
     useTab()
 
 
-def initMainWindow(mw):
-    """ init lineEdit window """
+class MainWindow(QtGui.QMainWindow):
+    def __init__(self, parent=None):
+        super(MainWindow, self).__init__(parent)
 
-    mw.resize(windowDict['width'], windowDict['height'])
-    mw.setWindowTitle("miExecutor")
+        self.resize(windowDict['width'], windowDict['height'])
+        self.setWindowTitle("miExecutor")
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 
-    # Transparency setting
-    if windowDict['transparent'] is True:
-        mw.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-    else:
-        pass
+        # Transparency setting
+        if windowDict['transparent'] is True:
+            self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        else:
+            pass
 
-    cw = MainClass(parent=mw)
-    cw.setObjectName("miExec_frame")
-    cw.lineEdit.escPressed.connect(miExec.close)
-    cw.closeSignal.connect(miExec.close)
+        centralWidget = MainClass(parent=self)
+        centralWidget.setObjectName("miExec_frame")
+        centralWidget.lineEdit.escPressed.connect(self.close)
+        centralWidget.closeSignal.connect(self.close)
+        centralWidget.lineEdit.setFocus()
 
-    mw.setCentralWidget(cw)
-    mw.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-
-    cw.lineEdit.setFocus()
+        self.setCentralWidget(centralWidget)
 
 
 def main():
@@ -477,9 +478,7 @@ def main():
     except:
         pass
 
-    miExec = QtGui.QMainWindow()
-    initMainWindow(miExec)
-    miExec.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+    miExec = MainWindow()
     miExec.show()
 
     # Move the window to the cursor position.
