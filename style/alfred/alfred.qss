@@ -1,0 +1,51 @@
+/*
+
+reference
+http://doc.qt.io/qt-4.8/stylesheet-reference.html
+
+*/
+
+QListView
+{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    selection-background-color: rgb(178, 215, 255);
+    /* padding: 0px; */
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: white;
+    font-size: 18pt;
+    font-family: "Hiragino Sans";
+    font-weight: 400
+}
+
+QLineEdit
+{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    selection-background-color: rgb(178, 215, 255);
+    /* padding: 0px; */
+    border-style: solid;
+    border-radius: 0px;
+    border-width: 0px;
+    border-color: rgb(255, 255, 255);
+    font-size: 28pt;
+    font-family: "Hiragino Sans";
+    font-weight: normal;
+    font-style: normal 
+}
+
+#miExec_frame
+{
+    /* color: white; */ 
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: white;
+    /* font-size: 10pt; */
+    font-family: "Hiragino Sans";
+    /* font-weight: 400 */
+}
