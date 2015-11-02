@@ -6,6 +6,7 @@ import maya.OpenMayaUI as mui
 import os
 import json
 import shiboken
+import importlib
 
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
@@ -51,50 +52,32 @@ windowDict = json.load(windowFile)
 windowFile.close()
 
 
-# List of module path
-# eg. ['module.custom', 'module.general.display', module.renderer.vray' etc...]
-modulePath = []
+modulePathList = []
 
-
-# List of modules names
-# eg. ['custom', 'general.display', 'general.mayaNode', 'polygon.mesh', etc...]
-moduleName = []
-
-
-# List of module base names
-# eg. ['mayaNode', 'mentalray', 'arnold', 'vray', etc...]
-moduleBaseName = []
-
-
-# Init three lists above
+# Init modulePathList
 for root, dirs, files in os.walk(MODULE_PATH):
     for f in files:
         if f.endswith(".py"):
             if "__init__" not in f:
                 name = os.path.splitext(f)[0]
-                moduleBaseName.append(name)
-                fullPath = os.path.join(root, name)
-                relatives = fullPath.replace(SCRIPT_PATH, "")
-                mp = relatives.replace("/", ".").lstrip(".")
-                modulePath.append(mp)
-                moduleName.append(mp.replace("module.", ""))
+                relPath = os.path.relpath(root, SCRIPT_PATH).replace("\\", "/")
+                modPath = "miExecutor." \
+                          + relPath.replace("/", ".")\
+                          + ".%s" % name
+                modulePathList.append(modPath)
 
 
-def importer(*args):
-    """ Funciton to load each module """
-    return __import__(args[0], globals(), locals(), [])
+# List of all module objects
+moduleObjectList = [importlib.import_module(i) for i in modulePathList]
 
 
-# Import all modules in the module directory.
-mods = map(importer, modulePath)
+# Reload all modules
+for m in moduleObjectList:
+    reload(m)
 
 
-# Create a list of module objects and reload them all
-moduleObjects = []
-for i in moduleName:
-    exec("""moduleObjects.append(mods[0].%s)""" % i)
-for module in moduleObjects:
-    reload(module)
+# List of all Commands class
+commandClassList = [i.Commands for i in moduleObjectList]
 
 
 def getMayaWindow():
@@ -188,14 +171,17 @@ class UI(QtGui.QFrame):
         # History model
         self.historyList = loadHistory()
         self.historyModel = QtGui.QStandardItemModel()
-        for num, command in enumerate(self.historyList):
-            item = QtGui.QStandardItem(command)
-            if os.path.isabs(jsonDict[command]) is True:
-                iconPath = os.path.normpath(jsonDict[command])
-                item.setIcon(QtGui.QIcon(iconPath))
-            else:
-                item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
-            self.historyModel.setItem(num, 0, item)
+        try:
+            for num, command in enumerate(self.historyList):
+                item = QtGui.QStandardItem(command)
+                if os.path.isabs(jsonDict[command]) is True:
+                    iconPath = os.path.normpath(jsonDict[command])
+                    item.setIcon(QtGui.QIcon(iconPath))
+                else:
+                    item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
+                self.historyModel.setItem(num, 0, item)
+        except KeyError:
+            pass
 
     def createUI(self):
         """ Create UI """
@@ -353,8 +339,8 @@ class MainClass():
 
 # Create a list of class objects.
 CLASSLIST = [UI]
-for i in moduleName:
-    exec("""CLASSLIST.append(mods[0].%s.Commands)""" % i)
+for i in commandClassList:
+    CLASSLIST.append(i)
 
 
 # Convert the list of classes to the tuple
@@ -373,8 +359,11 @@ def mergeCommandDict():
     """ Combine all command dicrectories and create json files which includes
     all command names and their icons paths.  """
 
-    for item in moduleBaseName:
-        exec("UI.cmdDict.update(MainClass.%sDict)" % item)
+    for c in commandClassList:
+        try:
+            UI.cmdDict.update(c.commandDict)
+        except:
+            print "%s does not have commandDict Attribute" % c
 
     outFilePath = os.path.normpath(
         os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
