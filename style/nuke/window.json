@@ -1,7 +1,7 @@
 {
-    "width" : 220,
-    "height": 28,
-    "icon_size": 22,
+    "width" : 300,
+    "height": 40,
+    "icon_size": 16,
     "margin": 5,
     "transparent": true
 }

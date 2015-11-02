@@ -28,7 +28,7 @@ QLineEdit
     border-radius: 4px;
     border-width: 1px;
     border-color: rgb(90, 120, 155);
-    font-size: 18pt;
+    font-size: 20pt;
     font-family: "Hiragino Sans";
     font-weight: 400
 }
