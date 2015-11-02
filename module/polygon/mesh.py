@@ -6,7 +6,7 @@ import maya.mel as mel
 class Commands(object):
 
     # Name of dictionary must be this module name + 'Dict'
-    meshDict = {}
+    commandDict = {}
 
     def __init__(self):
         pass
@@ -16,104 +16,104 @@ class Commands(object):
     # ############
     def _polyBooleanUnion(self):
         cmds.PolygonBooleanUnion()
-    meshDict['polyBooleanUnion'] = 'polyBooleansUnion.png'
+    commandDict['polyBooleanUnion'] = 'polyBooleansUnion.png'
 
     def _polyBooleanUnionOptions(self):
         cmds.PolygonBooleanUnionOptions()
-    meshDict['polyBooleanUnionOptions'] = 'polyBooleansUnion.png'
+    commandDict['polyBooleanUnionOptions'] = 'polyBooleansUnion.png'
 
     def _polyBooleanDifference(self):
         cmds.PolygonBooleanDifference()
-    meshDict['polyBooleanDifference'] = 'polyBooleansDifference.png'
+    commandDict['polyBooleanDifference'] = 'polyBooleansDifference.png'
 
     def _polyBooleanDifferenceOptions(self):
         cmds.PolygonBooleanDifferenceOptions()
-    meshDict['polyBooleanDifferenceOptions'] = 'polyBooleansDifference.png'
+    commandDict['polyBooleanDifferenceOptions'] = 'polyBooleansDifference.png'
 
     def _polyBooleanIntersection(self):
         cmds.PolygonBooleanIntersection()
-    meshDict['polyBooleanIntersection'] = 'polyBooleansIntersection.png'
+    commandDict['polyBooleanIntersection'] = 'polyBooleansIntersection.png'
 
     def _polyBooleanIntersectionOptions(self):
         cmds.PolygonBooleanIntersectionOptions()
-    meshDict['polyBooleanIntersectionOptions'] = 'polyBooleansIntersection.png'
+    commandDict['polyBooleanIntersectionOptions'] = 'polyBooleansIntersection.png'
 
     def _combinePolygons(self):
         cmds.CombinePolygons()
-    meshDict['combinePolygons'] = 'polyUnite.png'
+    commandDict['combinePolygons'] = 'polyUnite.png'
 
     def _combinePolygonsOptions(self):
         cmds.CombinePolygonsOptions()
-    meshDict['combinePolygonsOptions'] = 'polyUnite.png'
+    commandDict['combinePolygonsOptions'] = 'polyUnite.png'
 
     def _extractFace(self):
         cmds.ExtractFace()
-    meshDict['extractFace'] = 'polyChipOff.png'
+    commandDict['extractFace'] = 'polyChipOff.png'
 
     def _extractFaceOptions(self):
         cmds.ExtractFaceOptions()
-    meshDict['extractFaceOptions'] = 'polyChipOff.png'
+    commandDict['extractFaceOptions'] = 'polyChipOff.png'
 
     def _separatePolygons(self):
         cmds.SeparatePolygon()
-    meshDict['separatePolygons'] = 'polySeparate.png'
+    commandDict['separatePolygons'] = 'polySeparate.png'
 
     def _averageVertex(self):
         cmds.AverageVertex()
-    meshDict['averageVertex'] = 'polyAverageVertex.png'
+    commandDict['averageVertex'] = 'polyAverageVertex.png'
 
     def _averageVertexOptions(self):
         mel.eval("performPolyAverageVertex 1")
-    meshDict['averageVertexOptions'] = 'polyAverageVertex.png'
+    commandDict['averageVertexOptions'] = 'polyAverageVertex.png'
 
     def _fillHole(self):
         cmds.FillHole()
-    meshDict['fillHole'] = 'polyCloseBorder.png'
+    commandDict['fillHole'] = 'polyCloseBorder.png'
 
     def _quadrangulateOptions(self):
         cmds.QuadrangulateOptions()
-    meshDict['quadrangulateOptions'] = "polyQuad.png"
+    commandDict['quadrangulateOptions'] = "polyQuad.png"
 
     def _smoothPolygonOptions(self):
         cmds.SmoothPolygonOptions()
-    meshDict['smoothPolygonOptions'] = "polySphere.png"
+    commandDict['smoothPolygonOptions'] = "polySphere.png"
 
     def _triangulate(self):
         cmds.Triangulate()
-    meshDict['triangulate'] = "polyTriangulate.png"
+    commandDict['triangulate'] = "polyTriangulate.png"
 
     def _mirrorCutPolygonGeometry(self):
         cmds.MirrorCutPolygonGeometry()
-    meshDict['mirrorCutPolygonGeometry'] = "polyMirrorCut.png"
+    commandDict['mirrorCutPolygonGeometry'] = "polyMirrorCut.png"
 
     def _mirrorCutPolygonGeometryOptions(self):
         cmds.MirrorCutPolygonGeometryOptions()
-    meshDict['mirrorCutPolygonGeometryOptions'] = "polyMirrorCut.png"
+    commandDict['mirrorCutPolygonGeometryOptions'] = "polyMirrorCut.png"
 
     def _mirrorPolygonGeometry(self):
         cmds.MirrorPolygonGeometry()
-    meshDict['mirrorPolygonGeometry'] = "polyMirrorGeometry.png"
+    commandDict['mirrorPolygonGeometry'] = "polyMirrorGeometry.png"
 
     def _mirrorPolygonGeometryOptions(self):
         cmds.MirrorPolygonGeometryOptions()
-    meshDict['mirrorPolygonGeometryOptions'] = "polyMirrorGeometry.png"
+    commandDict['mirrorPolygonGeometryOptions'] = "polyMirrorGeometry.png"
 
     def _transferAttributesOptions(self):
         cmds.TransferAttributeValuesOptions()
-    meshDict['transferAttributesOptions'] = "polyTransferAttributes.png"
+    commandDict['transferAttributesOptions'] = "polyTransferAttributes.png"
 
     def _cleanupPolygon(self):
         cmds.CleanupPolygon()
-    meshDict['cleanupPolygon'] = "polyCleanup.png"
+    commandDict['cleanupPolygon'] = "polyCleanup.png"
 
     def _cleanupPolygonOptions(self):
         cmds.CleanupPolygonOptions()
-    meshDict['cleanupPolygonOptions'] = "polyCleanup.png"
+    commandDict['cleanupPolygonOptions'] = "polyCleanup.png"
 
     def _reducePolygon(self):
         cmds.ReducePolygon()
-    meshDict['reducePolygon'] = "polyReduce.png"
+    commandDict['reducePolygon'] = "polyReduce.png"
 
     def _reducePolygonOptions(self):
         cmds.ReducePolygonOptions()
-    meshDict['reducePolygonOptions'] = "polyReduce.png"
+    commandDict['reducePolygonOptions'] = "polyReduce.png"

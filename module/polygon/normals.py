@@ -1,12 +1,11 @@
 import maya.cmds as cmds
-import maya.mel as mel
 
 
 # class name must be 'Commands'
 class Commands(object):
 
     # Name of dictionary must be this module name + 'Dict'
-    normalsDict = {}
+    commandDict = {}
 
     def __init__(self):
         pass
@@ -16,4 +15,4 @@ class Commands(object):
     # ############
     def _setNormalAngle(self):
         cmds.SetNormalAngle()
-    normalsDict['setNormalAngle'] = "polyNormalSetAngle.png"
+    commandDict['setNormalAngle'] = "polyNormalSetAngle.png"

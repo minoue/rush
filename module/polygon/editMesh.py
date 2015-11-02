@@ -6,7 +6,7 @@ import maya.mel as mel
 class Commands(object):
 
     # Name of dictionary must be this module name + 'Dict'
-    editMeshDict = {}
+    commandDict = {}
 
     def __init__(self):
         pass
@@ -16,16 +16,16 @@ class Commands(object):
     # ############
     def _mergeComponents(self):
         mel.eval("performPolyMerge 0")
-    editMeshDict['mergeComponents'] = 'polyMerge.png'
+    commandDict['mergeComponents'] = 'polyMerge.png'
 
     def _mergeComponentsOptions(self):
         cmds.PolyMergeOptions()
-    editMeshDict['mergeComponentsOptions'] = 'polyMerge.png'
+    commandDict['mergeComponentsOptions'] = 'polyMerge.png'
 
     def _detachEdgeComponent(self):
         cmds.DetachEdgeComponent()
-    editMeshDict['detachEdgeComponent'] = 'polyEditEdgeFlow.png'
+    commandDict['detachEdgeComponent'] = 'polyEditEdgeFlow.png'
 
     def _polyBevel(self):
         cmds.polyBevel()
-    editMeshDict['polyBevel'] = 'polyBevel.png'
+    commandDict['polyBevel'] = 'polyBevel.png'

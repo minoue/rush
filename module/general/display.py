@@ -1,11 +1,12 @@
 import maya.cmds as cmds
+import maya.mel as mel
 
 
 # class name must be 'Commands'
 class Commands(object):
 
-    #Name of dictionary must be this module name + 'Dict'
-    displayDict = {}
+    # Name of dictionary must be this module name + 'Dict'
+    commandDict = {}
 
     def __init__(self):
         pass
@@ -31,7 +32,7 @@ class Commands(object):
         else:
             cmds.viewManip(v=0)
         cmds.ToggleOriginAxis()
-    displayDict['showAllHeadsup'] = 'menuIconDisplay.png'
+    commandDict['showAllHeadsup'] = 'menuIconDisplay.png'
 
     def _hideAllHeadsup(self):
         toggle = 0
@@ -54,21 +55,20 @@ class Commands(object):
         else:
             cmds.viewManip(v=0)
         cmds.ToggleOriginAxis()
-    displayDict['hideAllHeadsup'] = 'menuIconDisplay.png'
+    commandDict['hideAllHeadsup'] = 'menuIconDisplay.png'
 
     def _toggleVertexIDs(self):
         cmds.ToggleVertIDs()
-    displayDict['toggleVertexIDs'] = 'menuIconDisplay.png'
+    commandDict['toggleVertexIDs'] = 'menuIconDisplay.png'
 
     def _toggleEdgeIDs(self):
         cmds.ToggleEdgeIDs()
-    displayDict['toggleEdgeIDs'] = 'menuIconDisplay.png'
+    commandDict['toggleEdgeIDs'] = 'menuIconDisplay.png'
 
     def _toggleFaceIDs(self):
         cmds.ToggleFaceIDs()
-    displayDict['toggleFaceIDs'] = 'menuIconDisplay.png'
+    commandDict['toggleFaceIDs'] = 'menuIconDisplay.png'
 
     def _toggleCompIDs(self):
         cmds.ToggleCompIDs()
-    displayDict['toggleCompIDs'] = 'menuIconDisplay.png'
-
+    commandDict['toggleCompIDs'] = 'menuIconDisplay.png'

@@ -4,23 +4,23 @@ import maya.cmds as cmds
 class Commands(object):
 
     #Name of dictionary must be this module name + 'Dict'
-    modifyDict = {}
+    commandDict = {}
 
     def __init__(self):
         pass
 
     def _freezeAll(self):
         cmds.makeIdentity(apply=True, t=True, r=True, s=True, n=False)
-    modifyDict['freezeAll'] = "menuIconModify.png"
+    commandDict['freezeAll'] = "menuIconModify.png"
 
     def _freezeOnlyTranslation(self):
         cmds.makeIdentity(apply=True, t=True, r=False, s=False, n=False)
-    modifyDict['freezeOnlyTranslation'] = "menuIconModify.png"
+    commandDict['freezeOnlyTranslation'] = "menuIconModify.png"
 
     def _freezeOnlyRotation(self):
         cmds.makeIdentity(apply=True, t=False, r=True, s=False, n=False)
-    modifyDict['freezeOnlyRotation'] = "menuIconModify.png"
+    commandDict['freezeOnlyRotation'] = "menuIconModify.png"
 
     def _freezeOnlyScale(self):
         cmds.makeIdentity(apply=True, t=False, r=False, s=True, n=False)
-    modifyDict['freezeOnlyScale'] = "menuIconModify.png"
+    commandDict['freezeOnlyScale'] = "menuIconModify.png"

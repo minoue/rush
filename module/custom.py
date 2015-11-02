@@ -4,7 +4,7 @@ import os
 
 class Commands(object):
 
-    customDict = {}
+    commandDict = {}
 
     def __init__(self):
         pass
@@ -13,7 +13,7 @@ class Commands(object):
         MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
         histFile = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
         open(histFile, 'w').close()
-    customDict['clearHistory'] = "menuIconEdit.png"
+    commandDict['clearHistory'] = "menuIconEdit.png"
 
     def _locatorAtSelection(self):
         try:
@@ -40,7 +40,7 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.spaceLocator(p=[0, 0, 0])
-    customDict['locatorAtSelection'] = "render_locator.png"
+    commandDict['locatorAtSelection'] = "render_locator.png"
 
     def _polyCubeAtSelection(self):
         try:
@@ -67,7 +67,7 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.polyCube()
-    customDict['polyCubeAtSelection'] = "polyCube.png"
+    commandDict['polyCubeAtSelection'] = "polyCube.png"
 
     def _polySphereAtSelection(self):
         try:
@@ -95,7 +95,7 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.polySphere()
-    customDict['polySphereAtSelection'] = "polySphere.png"
+    commandDict['polySphereAtSelection'] = "polySphere.png"
 
     def _polyCylinderAtSelection(self):
         try:
@@ -122,7 +122,7 @@ class Commands(object):
                 cmds.CenterPivot()
         except IndexError:
             cmds.polyCylinder()
-    customDict['polyCylinderAtSelection'] = "polyCylinder.png"
+    commandDict['polyCylinderAtSelection'] = "polyCylinder.png"
 
     def _polyPlaneAtSelection(self):
         try:
@@ -149,19 +149,19 @@ class Commands(object):
                 cmds.CenterPivot
         except IndexError:
             cmds.polyPlane()
-    customDict['polyPlaneAtSelection'] = "polyPlane.png"
+    commandDict['polyPlaneAtSelection'] = "polyPlane.png"
 
     def _rebuildCurveOptions(self):
         cmds.RebuildCurveOptions()
-    customDict['rebuildCurveOptions'] = "rebuildCurve.png"
+    commandDict['rebuildCurveOptions'] = "rebuildCurve.png"
 
     def _createSet(self):
         cmds.CreateSet()
-    customDict['createSet'] = 'menuIconEdit.png'
+    commandDict['createSet'] = 'menuIconEdit.png'
 
     def _rebuildSurfacesOptions(self):
         cmds.RebuildSurfacesOptions()
-    customDict['rebuildSurfacesOptions'] = 'rebuildSurface.png'
+    commandDict['rebuildSurfacesOptions'] = 'rebuildSurface.png'
 
     def _aTob(self):
         sel = cmds.ls(sl=True, fl=True)
@@ -173,22 +173,22 @@ class Commands(object):
         cmds.setAttr(source + ".translate", *pos)
         cmds.setAttr(source + ".rotate", *rot)
         cmds.setAttr(source + ".scale", *scl)
-    customDict['aTob'] = 'sphere.png'
+    commandDict['aTob'] = 'sphere.png'
 
     def _attachBrushToCurves(self, *args):
         cmds.AttachBrushToCurves()
-    customDict['attachBrushToCurves'] = 'rebuildCurve.png'
+    commandDict['attachBrushToCurves'] = 'rebuildCurve.png'
 
     def _convertPaintFxToPolygons(self, *args):
         mel.eval("doPaintEffectsToPoly( 1,0,1,1,100000);")
-    customDict['convertPaintFxToPolygons'] = 'polySphere.png'
+    commandDict['convertPaintFxToPolygons'] = 'polySphere.png'
 
     def _loadObjPlugin(self):
         if cmds.pluginInfo('objExport', q=True, loaded=True):
             pass
         else:
             cmds.loadPlugin('objExport')
-    customDict['loadObjPlugin'] = 'sphere.png'
+    commandDict['loadObjPlugin'] = 'sphere.png'
 
     def _showAllHeadsup(self):
         toggle = 1
@@ -211,7 +211,7 @@ class Commands(object):
         else:
             cmds.viewManip(v=0)
         cmds.ToggleOriginAxis()
-    customDict['showAllHeadsup'] = 'sphere.png'
+    commandDict['showAllHeadsup'] = 'sphere.png'
 
     def _hideAllHeadsup(self):
         toggle = 0
@@ -234,4 +234,4 @@ class Commands(object):
         else:
             cmds.viewManip(v=0)
         cmds.ToggleOriginAxis()
-    customDict['hideAllHeadsup'] = 'sphere.png'
+    commandDict['hideAllHeadsup'] = 'sphere.png'

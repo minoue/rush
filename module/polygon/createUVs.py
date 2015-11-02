@@ -5,15 +5,15 @@ import maya.cmds as cmds
 class Commands(object):
 
     # Name of dictionary must be this module name + 'Dict'
-    createUVsDict = {}
+    commandDict = {}
 
     def __init__(self):
         pass
 
     def _UVSetEditor(self):
         cmds.UVSetEditor()
-    createUVsDict['UVSetEditor'] = "sphere.png"
+    commandDict['UVSetEditor'] = "sphere.png"
 
     def _SetCurrentUVSet(self):
         cmds.SetCurrentUVSet()
-    createUVsDict['SetCurrentUVSet'] = "sphere.png"
+    commandDict['SetCurrentUVSet'] = "sphere.png"
