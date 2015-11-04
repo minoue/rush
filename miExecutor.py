@@ -446,14 +446,12 @@ def init():
 
 
 class MainWindow(QtGui.QMainWindow):
-    def __init__(self, parent=getMayaWindow()):
+    def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
 
         self.resize(windowDict['width'], windowDict['height'])
         self.setWindowTitle("miExecutor")
-        # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
-        self.setWindowFlags(QtCore.Qt.Tool)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 
         # Transparency setting
