@@ -1,5 +1,4 @@
 {
-    "style": "alfred",
-    "use_tab_key": true,
-    "custom_font_path": "" 
+    "style": "standard",
+    "use_tab_key": true
 }
