@@ -108,6 +108,11 @@ class CustomQLineEdit(QtGui.QLineEdit):
             super(CustomQLineEdit, self).keyPressEvent(event)
 
 
+class TestFrame(QtGui.QFrame):
+    def __init__(self, parent=None):
+        super(TestFrame, self).__init__(parent)
+
+
 class UI(QtGui.QFrame):
     """ main UI class """
 
@@ -446,19 +451,18 @@ def init():
 
 
 class MainWindow(QtGui.QMainWindow):
-    def __init__(self, parent=None):
+    def __init__(self, parent=getMayaWindow()):
         super(MainWindow, self).__init__(parent)
 
         self.resize(windowDict['width'], windowDict['height'])
         self.setWindowTitle("miExecutor")
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setWindowFlags(QtCore.Qt.Tool)
+        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
 
         # Transparency setting
         if windowDict['transparent'] is True:
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        else:
-            pass
 
         centralWidget = MainClass(parent=self)
         centralWidget.setObjectName("miExec_frame")
