@@ -3,11 +3,7 @@ import maya.cmds as cmds
 
 class Commands(object):
 
-    #Name of dictionary must be this module name + 'Dict'
     commandDict = {}
-
-    def __init__(self):
-        pass
 
     def _freezeAll(self):
         cmds.makeIdentity(apply=True, t=True, r=True, s=True, n=False)

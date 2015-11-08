@@ -1,13 +1,8 @@
 
-
-# class name must be 'Commands'
 class Commands(object):
+    """ class name must be 'Commands' """
 
-    # Name of dictionary must be this module name + 'Dict'
     commandDict = {}
-
-    def __init__(self):
-        pass
 
     def _sampleCommand(self):
         print "Hello World"

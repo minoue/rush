@@ -5,15 +5,8 @@ import maya.mel as mel
 # class name must be 'Commands'
 class Commands(object):
 
-    # Name of dictionary must be this module name + 'Dict'
     commandDict = {}
 
-    def __init__(self):
-        pass
-
-    # ############
-    # Mesh Tool Menu
-    # ############
     def _mergeComponents(self):
         mel.eval("performPolyMerge 0")
     commandDict['mergeComponents'] = 'polyMerge.png'

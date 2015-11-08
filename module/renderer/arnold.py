@@ -27,15 +27,10 @@ elif sys.platform == "win32":
 else:
     iconPath = ""
 
-# iconPath = r"C:\solidangle\mtoadeploy\2013\icons"
-
 
 class Commands(object):
 
     commandDict = {}
-
-    def __init__(self):
-        pass
 
     def _aiMeshLightMaterial(self):
         cmds.shadingNode('aiMeshLightMaterial', asShader=True)

@@ -108,11 +108,6 @@ class CustomQLineEdit(QtGui.QLineEdit):
             super(CustomQLineEdit, self).keyPressEvent(event)
 
 
-class TestFrame(QtGui.QFrame):
-    def __init__(self, parent=None):
-        super(TestFrame, self).__init__(parent)
-
-
 class UI(QtGui.QFrame):
     """ main UI class """
 

@@ -6,9 +6,6 @@ class Commands(object):
 
     commandDict = {}
 
-    def __init__(self):
-        pass
-
     def _clearHistory(self):
         MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
         histFile = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")

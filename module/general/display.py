@@ -5,11 +5,7 @@ import maya.mel as mel
 # class name must be 'Commands'
 class Commands(object):
 
-    # Name of dictionary must be this module name + 'Dict'
     commandDict = {}
-
-    def __init__(self):
-        pass
 
     def _showAllHeadsup(self):
         toggle = 1

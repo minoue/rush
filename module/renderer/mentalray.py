@@ -27,19 +27,11 @@ elif sys.platform == "win32":
 else:
     iconPath = ""
 
-# iconPath = r"C:\Program Files\Autodesk\Maya2013\mentalray\icons"
-
 
 class Commands(object):
 
     commandDict = {}
 
-    def __init__(self):
-        pass
-
-    ####################
-    # MENTAL RAY
-    ####################
     def _builtin_bsdf_architectural(self):
         cmds.shadingNode('builtin_bsdf_architectural', asShader=True)
     commandDict['builtin_bsdf_architectural'] = 'render_unknown.png'

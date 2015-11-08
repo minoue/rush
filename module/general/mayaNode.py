@@ -6,8 +6,6 @@ class Commands(object):
 
     commandDict = {}
 
-    def __init__(self):
-        pass
     # ################################ #
     # ###### Maya Default Nodes ###### #
     # ################################ #

@@ -27,15 +27,10 @@ elif sys.platform == "win32":
 else:
     iconPath = ""
 
-# iconPath = r"C:\Program Files\Autodesk\Maya2013\vray\icons"
-
 
 class Commands(object):
 
     commandDict = {}
-
-    def __init__(self):
-        pass
 
     def _VRayBlendMtl(self):
         cmds.shadingNode('VRayBlendMtl', asShader=True)

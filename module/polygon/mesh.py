@@ -5,15 +5,8 @@ import maya.mel as mel
 # class name must be 'Commands'
 class Commands(object):
 
-    # Name of dictionary must be this module name + 'Dict'
     commandDict = {}
 
-    def __init__(self):
-        pass
-
-    # ############
-    # Mesh menu
-    # ############
     def _polyBooleanUnion(self):
         cmds.PolygonBooleanUnion()
     commandDict['polyBooleanUnion'] = 'polyBooleansUnion.png'
