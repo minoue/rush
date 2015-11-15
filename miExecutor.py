@@ -445,6 +445,11 @@ def init():
     useTab()
 
 
+def getFocusWidget():
+        'Get the currently focused widget'
+        return QtGui.qApp.focusWidget()
+
+
 class MainWindow(QtGui.QMainWindow):
     def __init__(self, parent=getMayaWindow()):
         super(MainWindow, self).__init__(parent)
@@ -471,12 +476,18 @@ class MainWindow(QtGui.QMainWindow):
 def main():
     """ Show window and move it to cursor position """
 
+    # Move to next widget (like Tab key) when any fields are focused.
+    focusWidget = getFocusWidget()
+    if 'field' in focusWidget.objectName().lower():
+        focusWidget.focusNextPrevChild(True)
+        return
+
+    # Create and show window
     global miExec
     try:
         miExec.close()
     except:
         pass
-
     miExec = MainWindow()
     miExec.show()
 
