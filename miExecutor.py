@@ -7,6 +7,7 @@ import os
 import json
 import shiboken
 import importlib
+import imp
 
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
@@ -71,9 +72,30 @@ for root, dirs, files in os.walk(MODULE_PATH):
 moduleObjectList = [importlib.import_module(i) for i in modulePathList]
 
 
+extraModPathList = []
+
+for p in prefDict['extra_module_path']:
+    for root, dirs, files in os.walk(p):
+        for f in files:
+            if f.endswith(".py"):
+                if "__init__" not in f:
+                    extraModPathList.append(
+                        os.path.join(root, f).replace("\\", "/"))
+
+
+extraModObjectList = [
+        imp.load_source(
+            os.path.basename(m).rsplit(".py")[0],
+            m) for m in extraModPathList]
+
+
 # Reload all modules
 for m in moduleObjectList:
     reload(m)
+
+
+# Append extra module objects
+moduleObjectList.extend(extraModObjectList)
 
 
 # List of all Commands class
