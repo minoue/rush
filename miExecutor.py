@@ -72,8 +72,11 @@ for root, dirs, files in os.walk(MODULE_PATH):
 moduleObjectList = [importlib.import_module(i) for i in modulePathList]
 
 
+# Init a list of extra modules
 extraModPathList = []
 
+
+# Get a list of module names
 for p in prefDict['extra_module_path']:
     for root, dirs, files in os.walk(p):
         for f in files:
@@ -83,10 +86,10 @@ for p in prefDict['extra_module_path']:
                         os.path.join(root, f).replace("\\", "/"))
 
 
+# Load extra modules
 extraModObjectList = [
-        imp.load_source(
-            os.path.basename(m).rsplit(".py")[0],
-            m) for m in extraModPathList]
+    imp.load_source(
+        os.path.basename(m).rsplit(".py")[0], m) for m in extraModPathList]
 
 
 # Reload all modules
@@ -108,6 +111,7 @@ def getMayaWindow():
 
 
 class CustomQLineEdit(QtGui.QLineEdit):
+    """ Custom QLineEdit with custom events and signals"""
 
     escPressed = QtCore.Signal(str)
     downPressed = QtCore.Signal(str)
@@ -216,8 +220,10 @@ class UI(QtGui.QFrame):
         margin = windowDict['margin']
         self.lineEdit = CustomQLineEdit()
         self.lineEdit.downPressed.connect(self.showHistory)
+
         # Apply stylesheet
         self.lineEdit.setStyleSheet(qss)
+
         self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
         vbox = QtGui.QVBoxLayout()
         vbox.setSpacing(0)
@@ -233,6 +239,7 @@ class UI(QtGui.QFrame):
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
         self.completer.popup().setIconSize(self.iconSize)
+
         # Apply stylesheet
         self.completer.popup().setStyleSheet(qss)
 
@@ -251,6 +258,8 @@ class UI(QtGui.QFrame):
         self.lineEdit.setFocus()
 
     def showHistory(self, *args):
+        """ Show previously executed commands """
+
         self.lineEdit.setCompleter(self.histCompleter)
         self.histCompleter.complete()
 
@@ -270,6 +279,8 @@ class UI(QtGui.QFrame):
         self.filteredModel.setFilterRegExp(regExp)
 
     def selectionCallback(self, selected):
+        """ Return highlighted command """
+
         self._selected = selected
         self.executeType = 1
         return self._selected
@@ -327,7 +338,6 @@ class UI(QtGui.QFrame):
             cmds.warning("Command not found. No object created.")
 
     def secondaryExecution(self):
-
         """ Execute command """
 
         # When return pressed without selecting any items
@@ -358,8 +368,10 @@ class UI(QtGui.QFrame):
 
 
 class MainClass():
-    """ This is the main class which will interit all command classes
-    from all command modules """
+    """
+    This is the main class which will interit all command classes
+    from all command modules
+    """
 
     pass
 
@@ -468,11 +480,14 @@ def init():
 
 
 def getFocusWidget():
-        'Get the currently focused widget'
-        return QtGui.qApp.focusWidget()
+    # Get Maya's currently focused widget
+
+    return QtGui.qApp.focusWidget()
 
 
 class MainWindow(QtGui.QMainWindow):
+    """ MainWindow"""
+
     def __init__(self, parent=getMayaWindow()):
         super(MainWindow, self).__init__(parent)
 
