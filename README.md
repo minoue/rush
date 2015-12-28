@@ -7,6 +7,7 @@ TabMenu-like simple command launcher for Maya
 
 <iframe src="https://player.vimeo.com/video/144866783" width="620" height="401" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/144866783">miExecutor</a> from <a href="https://vimeo.com/user4337917">michitaka inoue</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
+[![thumbnail](images/thumb.jpg)](https://player.vimeo.com/video/144866783)
 
 ## Requirements
 PySide
