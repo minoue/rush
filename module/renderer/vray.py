@@ -1,4 +1,11 @@
 import maya.cmds as cmds
+
+# If plugin is not loaded, stop loading this module
+if "vrayformaya" in cmds.pluginInfo(q=True, listPlugins=True):
+    pass
+else:
+    raise ImportError
+
 import os
 import sys
 
