@@ -6,7 +6,6 @@ import maya.OpenMayaUI as mui
 import os
 import json
 import shiboken
-import importlib
 import imp
 
 
@@ -53,23 +52,31 @@ windowDict = json.load(windowFile)
 windowFile.close()
 
 
-modulePathList = []
+modulePathDict = {}
 
-# Init modulePathList
+# Init modulePathDict
 for root, dirs, files in os.walk(MODULE_PATH):
     for f in files:
         if f.endswith(".py"):
             if "__init__" not in f:
+                fullpath = os.path.join(root, f)
                 name = os.path.splitext(f)[0]
                 relPath = os.path.relpath(root, SCRIPT_PATH).replace("\\", "/")
                 modPath = "miExecutor." \
                           + relPath.replace("/", ".")\
                           + ".%s" % name
-                modulePathList.append(modPath)
+                modulePathDict[modPath] = fullpath
 
 
 # List of all module objects
-moduleObjectList = [importlib.import_module(i) for i in modulePathList]
+moduleObjectList = []
+for i in modulePathDict:
+    try:
+        mod = imp.load_source(i, modulePathDict[i])
+        moduleObjectList.append(mod)
+    except ImportError:
+        # Ignore if plugins are not loaded, eg, Mayatomr, mtoa, etc...
+        continue
 
 
 # Init a list of extra modules
