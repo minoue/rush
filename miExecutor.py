@@ -99,11 +99,6 @@ extraModObjectList = [
         os.path.basename(m).rsplit(".py")[0], m) for m in extraModPathList]
 
 
-# Reload all modules
-for m in moduleObjectList:
-    reload(m)
-
-
 # Append extra module objects
 moduleObjectList.extend(extraModObjectList)
 
