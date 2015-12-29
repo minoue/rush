@@ -13,7 +13,7 @@ TabMenu-like simple command launcher for Maya
 PySide
 
 ## Installation
-https://github.com/minoue/miExecutor/archive/1.2.0.zip
+https://github.com/minoue/miExecutor/archive/1.2.2.zip
 
 Download zip file from the above link and extract it. Rename miExecutor-1.2.0 directory to miExecutor and move it to the maya user script direcotry.
 
@@ -44,17 +44,24 @@ from miExecutor import miExecutor
 ```
 
 
-### If you waant to run by hotkey, 
+### Run using hotkey 
 
-just assgin the following command to any keys you want by Maya's hotkey editor.
+Just assgin the following command to any keys you want by Maya's hotkey editor.
 
 ```python
 miExecutor.main()
 ```
+or simply you can assign commands together.
+
+```python
+from miExecutor import miExecutor
+reload(miExecutor)
+miExecutor.main()
+```
 
 
-### If you want to use tab key,
-Maya usually can't use tab key as hot key but it can be overrode using Qt.
+### Run using Tab-key
+Maya is not able to use tab key as a hot key but it can be overrode using Qt.
 
 [Assigning TAB as hotkey](https://groups.google.com/forum/#!topic/python_inside_maya/U9VI7qbJGwc)
 
