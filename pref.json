@@ -1,6 +1,6 @@
 {
     "style": "standard",
-    "use_tab_key": true,
+    "use_tab_key": false,
     "extra_module_path": [
         ""
     ]
