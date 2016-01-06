@@ -1,6 +1,7 @@
 from PySide import QtGui, QtCore
 from pymel.all import mel as pa
-from preference import pref
+from .. import preference
+reload(preference)
 import maya.cmds as cmds
 import maya.mel as mel
 import lineedit
@@ -14,16 +15,17 @@ SCRIPT_PATH = os.path.dirname(__file__)
 
 
 # Load pref data
-prefDict = pref.getPreference()
+prefDict = preference.pref.getPreference()
 
 
 # Load window setting
-windowDict = pref.getWindowSetting()
+windowDict = preference.pref.getWindowSetting()
 
 
 # Load stylesheet data
 qssFilePath = os.path.join(
     SCRIPT_PATH,
+    os.pardir,
     "style",
     prefDict['style'],
     prefDict['style']) + ".qss"

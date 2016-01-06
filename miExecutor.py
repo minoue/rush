@@ -1,7 +1,8 @@
 from PySide import QtGui, QtCore
 from preference import pref
 reload(pref)
-import frame
+from gui import frame
+reload(frame)
 import maya.OpenMayaUI as mui
 import maya.cmds as cmds
 import os
