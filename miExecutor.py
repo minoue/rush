@@ -24,87 +24,117 @@ prefDict = pref.getPreference()
 windowDict = pref.getWindowSetting()
 
 
-modulePathDict = {}
-
-# Init modulePathDict
-for root, dirs, files in os.walk(MODULE_PATH):
-    for f in files:
-        if f.endswith(".py"):
-            if "__init__" not in f:
-                fullpath = os.path.join(root, f)
-                name = os.path.splitext(f)[0]
-                relPath = os.path.relpath(root, SCRIPT_PATH).replace("\\", "/")
-                modPath = "miExecutor." \
-                          + relPath.replace("/", ".")\
-                          + ".%s" % name
-                modulePathDict[modPath] = fullpath
-
-
-# List of all module objects
-moduleObjectList = []
-for i in modulePathDict:
-    try:
-        mod = imp.load_source(i, modulePathDict[i])
-        moduleObjectList.append(mod)
-    except ImportError:
-        # Ignore if plugins are not loaded, eg, Mayatomr, mtoa, etc...
-        continue
-
-
-# Init a list of extra modules
-extraModPathList = []
-
-
-# Get a list of module names
-for p in prefDict['extra_module_path']:
-    for root, dirs, files in os.walk(p):
+def getModPathDict():
+    """ Dict of modules and their paths.
+        Key is module name and item is absolute path of the file.
+    """
+    modulePathDict = {}
+    # Init modulePathDict
+    for root, dirs, files in os.walk(MODULE_PATH):
         for f in files:
             if f.endswith(".py"):
                 if "__init__" not in f:
-                    extraModPathList.append(
-                        os.path.join(root, f).replace("\\", "/"))
+                    fullpath = os.path.join(root, f)
+                    name = os.path.splitext(f)[0]
+                    relPath = os.path.relpath(
+                        root, SCRIPT_PATH).replace("\\", "/")
+                    modPath = "miExecutor." \
+                              + relPath.replace("/", ".")\
+                              + ".%s" % name
+                    modulePathDict[modPath] = fullpath
+    return modulePathDict
 
 
-# Load extra modules
-extraModObjectList = [
-    imp.load_source(
-        os.path.basename(m).rsplit(".py")[0], m) for m in extraModPathList]
+def getModObjList():
+    """ List of all module objects.
+    """
+
+    pathList = getModPathDict()
+    moduleObjectList = []
+    for i in pathList:
+        try:
+            mod = imp.load_source(i, pathList[i])
+            moduleObjectList.append(mod)
+        except ImportError:
+            # Ignore if plugins are not loaded, eg, Mayatomr, mtoa, etc...
+            continue
+    return moduleObjectList
 
 
-# Append extra module objects
-moduleObjectList.extend(extraModObjectList)
+def getExtraModPath():
+    """ Get a list of module names.
+    """
+
+    # Init a list of extra modules
+    extraModPathList = []
+    for p in prefDict['extra_module_path']:
+        for root, dirs, files in os.walk(p):
+            for f in files:
+                if f.endswith(".py"):
+                    if "__init__" not in f:
+                        extraModPathList.append(
+                            os.path.join(root, f).replace("\\", "/"))
+    return extraModPathList
 
 
-# List of all Commands class
-commandClassList = [i.Commands for i in moduleObjectList]
+def loadExtraModules():
+    """ Load extra modules.
+    """
+    extraModObjectList = [
+        imp.load_source(os.path.basename(m).rsplit(".py")[0], m) for m
+        in getExtraModPath()]
+    return extraModObjectList
 
 
 def getMayaWindow():
+    """ Get maya main window object.
+    """
     ptr = mui.MQtUtil.mainWindow()
     return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
 
 
 class MainClass():
+    """ The main class which will interit all command classes
+        from all command modules.
     """
-    This is the main class which will interit all command classes
-    from all command modules
-    """
-
     pass
 
-# Create a list of class objects.
-CLASSLIST = [frame.UI]
-for i in commandClassList:
-    CLASSLIST.append(i)
+
+def getClassList():
+    """Create a list of class objects
+   """
+
+    modObjs = getModObjList()
+
+    # Append extra module objects
+    modObjs.extend(loadExtraModules())
+
+    # List of all Commands class
+    commandClassList = [i.Commands for i in modObjs]
+
+    return commandClassList
 
 
-# Convert the list of classes to the tuple
-# The second argument of 'type' only accept a tuple
-CLASSES = tuple(CLASSLIST)
+def getClassTuple():
+    """ Get tuple of classes which include GUI class
+        to send it to the MainClass.
+    """
+
+    # Create a list of class objects.
+    cl = [frame.UI]
+    for i in getClassList():
+        cl.append(i)
+
+    # Convert the list of classes to the tuple
+    # The second argument of 'type' only accept a tuple
+    return tuple(cl)
 
 
 def inheritClasses():
-    """ Re-difine MainClass to inherit all classes from other modules """
+    """ Re-difine MainClass to inherit all classes from other modules
+    """
+
+    CLASSES = getClassTuple()
 
     global MainClass
     MainClass = type('MainClass', CLASSES, dict(MainClass.__dict__))
@@ -114,7 +144,7 @@ def mergeCommandDict():
     """ Combine all command dicrectories and create json files which includes
     all command names and their icons paths.  """
 
-    for c in commandClassList:
+    for c in getClassList():
         try:
             frame.UI.cmdDict.update(c.commandDict)
         except:
