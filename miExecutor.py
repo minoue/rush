@@ -153,44 +153,51 @@ def mergeCommandDict():
                   sort_keys=True)
 
 
-def useTab():
-    """ Use Tab key as hotkey """
-
+def initTab():
+    """ Use Tab key as hotkey.
+    """
     mainWin = getMayaWindow()
 
     # Get list of QActions in main window
-    mainWinActions = mainWin.actions()
+    actions = mainWin.actions()
 
-    actionName = "miExec_TabKey"
-
-    # List of QAction's object name
-    actionNames = [i.objectName() for i in mainWinActions]
-
-    # If tab action already exists in main window, use it.
-    if actionName in actionNames:
-        for action in mainWinActions:
-            if action.objectName() == actionName:
-                if prefDict['use_tab_key'] is True:
-                    action.setEnabled(True)
-                else:
-                    action.setDisabled(True)
-            else:
-                pass
-
-    # if it doesn't exist, create new tab action.
+    if prefDict['use_tab_key'] is True:
+        enableTab(actions, mainWin)
     else:
+        disableTab(actions, mainWin)
+
+
+def enableTab(actions, mainWin):
+    """ enable tab-key as a hotkey
+    """
+    if len(actions) == 0:
         tabAction = QtGui.QAction(mainWin)
-        tabAction.setObjectName(actionName)
+        tabAction.setObjectName('miExec_TabKey')
         tabAction.setShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Tab))
         tabAction.setShortcutContext(QtCore.Qt.ApplicationShortcut)
         tabAction.triggered.connect(main)
         mainWin.addAction(tabAction)
+    else:
+        for a in actions:
+            if a.objectName() == 'miExec_TabKey':
+                a.setEnabled(True)
+
+
+def disableTab(actions, mainWin):
+    """ Disable tab-key.
+    """
+    if len(actions) == 0:
+        return
+    else:
+        for a in actions:
+            if a.objectName() == 'miExec_TabKey':
+                a.setDisabled(True)
 
 
 def init():
     inheritClasses()
     mergeCommandDict()
-    useTab()
+    initTab()
 
 
 def getFocusWidget():
