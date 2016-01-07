@@ -15,11 +15,11 @@ SCRIPT_PATH = os.path.dirname(__file__)
 
 
 # Load pref data
-prefDict = preference.pref.getPreference()
+prefDict = preference.miExecPref.getPreference()
 
 
 # Load window setting
-windowDict = preference.pref.getWindowSetting()
+windowDict = preference.miExecPref.getWindowSetting()
 
 
 # Load stylesheet data

@@ -8,7 +8,7 @@ SCRIPT_PATH = os.path.dirname(__file__)
 def getPreference():
     """ Load pref json data nad return as dict"""
 
-    prefFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
+    prefFile = open(os.path.join(SCRIPT_PATH, "miExecPref.json"), 'r')
     prefDict = json.load(prefFile)
     prefFile.close()
 

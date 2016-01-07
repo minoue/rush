@@ -1,6 +1,6 @@
 from PySide import QtGui, QtCore
-from preference import pref
-reload(pref)
+from preference import miExecPref
+reload(miExecPref)
 from gui import frame
 reload(frame)
 import maya.OpenMayaUI as mui
@@ -17,11 +17,11 @@ MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
 
 
 # Load pref data
-prefDict = pref.getPreference()
+prefDict = miExecPref.getPreference()
 
 
 # Load window setting
-windowDict = pref.getWindowSetting()
+windowDict = miExecPref.getWindowSetting()
 
 
 def getModPathDict():
