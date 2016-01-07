@@ -1,396 +1,132 @@
 from PySide import QtGui, QtCore
-import maya.cmds as cmds
-import maya.mel as mel
-from pymel.all import mel as pa
+from preference import miExecPref
+reload(miExecPref)
+from gui import frame
+reload(frame)
 import maya.OpenMayaUI as mui
-import os
-import json
+import maya.cmds as cmds
+import itertools
 import shiboken
+import glob
+import json
 import imp
+import os
 
 
-MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
-MIEXEC_HISTORY_FILE = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
 SCRIPT_PATH = os.path.dirname(__file__)
 MODULE_PATH = os.path.join(SCRIPT_PATH, 'module')
-
-
-# Define mel procedure to call the previous function
-mel.eval("""
-global proc callLastCommand(string $function)
-{
-    repeatLast -ac $function -acl "blah-blah....";
-}
-""")
+MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
 
 
 # Load pref data
-prefFile = open(os.path.join(SCRIPT_PATH, "pref.json"), 'r')
-prefDict = json.load(prefFile)
-prefFile.close()
-
-
-# Load stylesheet data
-qssFilePath = os.path.join(
-    SCRIPT_PATH,
-    "style",
-    prefDict['style'],
-    prefDict['style']) + ".qss"
-qssFile = open(qssFilePath, "r")
-qss = qssFile.read()
-qssFile.close()
+prefDict = miExecPref.getPreference()
 
 
 # Load window setting
-windowFilePath = os.path.join(
-    SCRIPT_PATH,
-    "style",
-    prefDict['style'],
-    "window.json")
-windowFile = open(windowFilePath, 'r')
-windowDict = json.load(windowFile)
-windowFile.close()
+windowDict = miExecPref.getWindowSetting()
 
 
-modulePathDict = {}
-
-# Init modulePathDict
-for root, dirs, files in os.walk(MODULE_PATH):
-    for f in files:
-        if f.endswith(".py"):
-            if "__init__" not in f:
-                fullpath = os.path.join(root, f)
-                name = os.path.splitext(f)[0]
-                relPath = os.path.relpath(root, SCRIPT_PATH).replace("\\", "/")
-                modPath = "miExecutor." \
-                          + relPath.replace("/", ".")\
-                          + ".%s" % name
-                modulePathDict[modPath] = fullpath
+def getModDirs(module_root_dir):
+    mod_dirs = [module_root_dir]
+    for root, dirs, files in os.walk(module_root_dir):
+        for d in dirs:
+            mod_dirs.append(os.path.join(root, d))
+    return mod_dirs
 
 
-# List of all module objects
-moduleObjectList = []
-for i in modulePathDict:
+def getModFiles(dir_path):
+    return [
+        i for i
+        in glob.glob(os.path.join(dir_path, "*.py"))
+        if os.path.basename(i) != "__init__.py"]
+
+
+def loadModules(module_file_path):
+    """ Return module object by given file path
+    """
+
+    name = os.path.splitext(module_file_path)[0].split("/")
+    name = "/".join(name[-2:])
     try:
-        mod = imp.load_source(i, modulePathDict[i])
-        moduleObjectList.append(mod)
+        mod = imp.load_source(name, module_file_path)
+        return mod
     except ImportError:
-        # Ignore if plugins are not loaded, eg, Mayatomr, mtoa, etc...
-        continue
+        return None
 
 
-# Init a list of extra modules
-extraModPathList = []
+def getExtraModPath(extra_dir):
+    """ Return a list of python module files in abs path in given directory.
+    """
+    return [
+        i.replace("\\", "/") for i
+        in glob.glob(os.path.join(extra_dir, "*.py"))
+        if os.path.basename(i) != "__init__.py"]
 
 
-# Get a list of module names
-for p in prefDict['extra_module_path']:
-    for root, dirs, files in os.walk(p):
-        for f in files:
-            if f.endswith(".py"):
-                if "__init__" not in f:
-                    extraModPathList.append(
-                        os.path.join(root, f).replace("\\", "/"))
-
-
-# Load extra modules
-extraModObjectList = [
-    imp.load_source(
-        os.path.basename(m).rsplit(".py")[0], m) for m in extraModPathList]
-
-
-# Append extra module objects
-moduleObjectList.extend(extraModObjectList)
-
-
-# List of all Commands class
-commandClassList = [i.Commands for i in moduleObjectList]
+def loadExtraModule(module_path):
+    return imp.load_source(
+        os.path.basename(module_path).rsplit(".py")[0], module_path)
 
 
 def getMayaWindow():
+    """ Get maya main window object.
+    """
     ptr = mui.MQtUtil.mainWindow()
     return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
 
 
-class CustomQLineEdit(QtGui.QLineEdit):
-    """ Custom QLineEdit with custom events and signals"""
-
-    escPressed = QtCore.Signal(str)
-    downPressed = QtCore.Signal(str)
-
-    def __init__(self, parent=None):
-        super(CustomQLineEdit, self).__init__(parent)
-        self.setFocusPolicy(QtCore.Qt.StrongFocus)
-
-    def focusOutEvent(self, event):
-        # emit signal to close the window when it gets focus out
-        self.escPressed.emit('esc')
-
-    def keyPressEvent(self, event):
-        if event.key() == QtCore.Qt.Key_Escape:
-            self.escPressed.emit('esc')
-
-        elif event.key() == QtCore.Qt.Key_Down:
-            self.downPressed.emit('down')
-        else:
-            super(CustomQLineEdit, self).keyPressEvent(event)
-
-
-class UI(QtGui.QFrame):
-    """ main UI class """
-
-    # Dict to inherit all command dicrectories
-    cmdDict = {}
-
-    closeSignal = QtCore.Signal(str)
-
-    def __init__(self, parent=None):
-        super(UI, self).__init__(parent)
-        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-        self.windowSize = QtCore.QSize(
-            windowDict['width'], windowDict['height'])
-        self.iconSize = QtCore.QSize(
-            windowDict['icon_size'], windowDict['icon_size'])
-
-        self.setStyleSheet(qss)
-
-        # Attribute to check if item on the popup list is selected
-        self._selected = None
-
-        # 0: When return pressed without selecting any items
-        #    on the completion list
-        # 1: when any items on the completion list is selected by arrow keys
-        # Default is 1
-        self.executeType = 0
-
-        # Create Data then UI
-        self.createData()
-        self.createUI()
-
-    def createData(self):
-        """ Create item models for completers """
-
-        self.model = QtGui.QStandardItemModel()
-
-        # Load json files as dicrectory.
-        # key is command name, and its item is icon path.
-        commandFile = os.path.normpath(
-            os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
-        try:
-            f = open(commandFile)
-            jsonDict = json.load(f)
-            f.close()
-        except IOError:
-            jsonDict = {}
-
-        # Create a list of command names
-        self.commands = [i for i in jsonDict]
-
-        # Add all command names and icon paths to the the model(self.model)
-        for num, command in enumerate(jsonDict):
-            item = QtGui.QStandardItem(command)
-            if os.path.isabs(jsonDict[command]) is True:
-                iconPath = os.path.normpath(jsonDict[command])
-                item.setIcon(QtGui.QIcon(iconPath))
-            else:
-                item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
-            self.model.setItem(num, 0, item)
-
-        # Store the model(self.model) into the sortFilterProxy model
-        self.filteredModel = QtGui.QSortFilterProxyModel(self)
-        self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
-        self.filteredModel.setSourceModel(self.model)
-
-        # History model
-        self.historyList = loadHistory()
-        self.historyModel = QtGui.QStandardItemModel()
-        try:
-            for num, command in enumerate(self.historyList):
-                item = QtGui.QStandardItem(command)
-                if os.path.isabs(jsonDict[command]) is True:
-                    iconPath = os.path.normpath(jsonDict[command])
-                    item.setIcon(QtGui.QIcon(iconPath))
-                else:
-                    item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
-                self.historyModel.setItem(num, 0, item)
-        except KeyError:
-            pass
-
-    def createUI(self):
-        """ Create UI """
-
-        margin = windowDict['margin']
-        self.lineEdit = CustomQLineEdit()
-        self.lineEdit.downPressed.connect(self.showHistory)
-
-        # Apply stylesheet
-        self.lineEdit.setStyleSheet(qss)
-
-        self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
-        vbox = QtGui.QVBoxLayout()
-        vbox.setSpacing(0)
-        vbox.setContentsMargins(0, 0, 0, 0)
-        vbox.addWidget(self.lineEdit)
-        self.setLayout(vbox)
-
-        # Set up QCompleter
-        self.completer = QtGui.QCompleter(self)
-        self.completer.setCompletionMode(
-            QtGui.QCompleter.UnfilteredPopupCompletion)
-        self.completer.highlighted.connect(self.selectionCallback)
-        self.completer.setModel(self.filteredModel)
-        self.completer.setObjectName("commandCompleter")
-        self.completer.popup().setIconSize(self.iconSize)
-
-        # Apply stylesheet
-        self.completer.popup().setStyleSheet(qss)
-
-        # Setup QCompleter for history
-        self.histCompleter = QtGui.QCompleter()
-        self.histCompleter.setCompletionMode(
-            QtGui.QCompleter.UnfilteredPopupCompletion)
-        self.histCompleter.setModel(self.historyModel)
-        self.histCompleter.setObjectName("historyCompleter")
-
-        # Edit line Edit behavior
-        self.lineEdit.setCompleter(self.completer)
-        self.lineEdit.textEdited.connect(self.updateData)
-        self.lineEdit.textChanged.connect(self.getCurrentCompletion)
-        self.lineEdit.returnPressed.connect(self.initialExecution)
-        self.lineEdit.setFocus()
-
-    def showHistory(self, *args):
-        """ Show previously executed commands """
-
-        self.lineEdit.setCompleter(self.histCompleter)
-        self.histCompleter.complete()
-
-    def updateData(self):
-        """ Update current completion data """
-
-        # If text is empty, change history completer back to
-        # command completer
-        currentText = self.lineEdit.text()
-        if currentText == "":
-            self.lineEdit.setCompleter(self.completer)
-
-        # Set commands to case insensitive
-        regExp = QtCore.QRegExp(self.lineEdit.text(),
-                                QtCore.Qt.CaseInsensitive,
-                                QtCore.QRegExp.RegExp)
-        self.filteredModel.setFilterRegExp(regExp)
-
-    def selectionCallback(self, selected):
-        """ Return highlighted command """
-
-        self._selected = selected
-        self.executeType = 1
-        return self._selected
-
-    def getCurrentCompletion(self, *args):
-        """ Get a command to be completed """
-
-        compType = self.lineEdit.completer().objectName()
-        if compType == "commandCompleter":
-            self.curCompPrefix = self.completer.completionPrefix().lower()
-            self.curCompList = [i for i
-                                in self.commands
-                                if self.curCompPrefix in i.lower()]
-            try:
-                self.currentCompletion = self.curCompList[0]
-            except IndexError:
-                self.currentCompletion = None
-
-            currentCompletion = self.completer.currentCompletion()
-
-            # If currentCompletion by QCompleter is empty, use the top item
-            # in the self.curComList instead.
-            if str(currentCompletion) == "":
-                pass
-            else:
-                self.currentCompletion = currentCompletion
-
-        elif compType == "historyCompleter":
-            self.currentCompletion = self.lineEdit.text()
-
-        else:
-            pass
-
-        return self.currentCompletion
-
-    def initialExecution(self):
-        """ Execute actuall command and register it to last command """
-
-        try:
-            # Run command
-            self.secondaryExecution()
-        except RuntimeError:
-            cmds.warning("Command not found. No object created.")
-            self.close()
-            return
-
-        # Send the last command to the mel procedure defined
-        # at the begging of the script
-        if self.lastCommand is not None:
-            className = self.__class__.__name__
-            pa.callLastCommand(
-                """python(\"miExecutor.%s()._%s()\")""" % (
-                    className, self.lastCommand))
-        else:
-            cmds.warning("Command not found. No object created.")
-
-    def secondaryExecution(self):
-        """ Execute command """
-
-        # When return pressed without selecting any items
-        # on the completion list
-        if self.executeType == 0:
-            if self.currentCompletion is None:
-                self.close()
-                self.lastCommand = None
-            else:
-                commandString = "self._%s()" % self.currentCompletion
-                exec commandString
-                self.close()
-                self.lastCommand = self.currentCompletion
-        # when any items on the completion list is selected by arrow keys
-        elif self.executeType == 1:
-            commandString = "self._%s()" % self._selected
-            exec commandString
-            self.close()
-            self.lastCommand = self._selected
-        else:
-            pass
-
-        updateHistory(self.lastCommand)
-
-        self.closeSignal.emit('foobar')
-
-        return self.lastCommand
-
-
 class MainClass():
+    """ The main class which will interit all command classes
+        from all command modules.
     """
-    This is the main class which will interit all command classes
-    from all command modules
-    """
-
     pass
 
 
-# Create a list of class objects.
-CLASSLIST = [UI]
-for i in commandClassList:
-    CLASSLIST.append(i)
+def getClassList():
+    """Create a list of class objects
+   """
+
+    # List of module objects from miExec package
+    mod_path_list = list(itertools.chain.from_iterable(
+        map(getModFiles, getModDirs(MODULE_PATH))))
+    modObjs = map(loadModules, mod_path_list)
+
+    # List of extra module path lists
+    extModPathLists = map(getExtraModPath, prefDict['extra_module_path'])
+
+    # Flatten the lists above into a single list.
+    extModPathList = list(itertools.chain.from_iterable(extModPathLists))
+
+    # Append extra module objects
+    exModObjs = map(loadExtraModule, extModPathList)
+    modObjs.extend(exModObjs)
+
+    # List of all Commands class
+    commandClassList = [i.Commands for i in modObjs if i is not None]
+
+    return commandClassList
 
 
-# Convert the list of classes to the tuple
-# The second argument of 'type' only accept a tuple
-CLASSES = tuple(CLASSLIST)
+def getClassTuple():
+    """ Get tuple of classes which include GUI class
+        to send it to the MainClass.
+    """
+
+    # Create a list of class objects.
+    cl = [frame.UI]
+    for i in getClassList():
+        cl.append(i)
+
+    # Convert the list of classes to the tuple
+    # The second argument of 'type' only accept a tuple
+    return tuple(cl)
 
 
 def inheritClasses():
-    """ Re-difine MainClass to inherit all classes from other modules """
+    """ Re-difine MainClass to inherit all classes from other modules
+    """
+
+    CLASSES = getClassTuple()
 
     global MainClass
     MainClass = type('MainClass', CLASSES, dict(MainClass.__dict__))
@@ -400,9 +136,9 @@ def mergeCommandDict():
     """ Combine all command dicrectories and create json files which includes
     all command names and their icons paths.  """
 
-    for c in commandClassList:
+    for c in getClassList():
         try:
-            UI.cmdDict.update(c.commandDict)
+            frame.UI.cmdDict.update(c.commandDict)
         except:
             print "%s does not have commandDict Attribute" % c
 
@@ -410,75 +146,58 @@ def mergeCommandDict():
         os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
 
     with open(outFilePath, 'w') as outFile:
-        json.dump(UI.cmdDict,
+        json.dump(frame.UI.cmdDict,
                   outFile,
                   indent=4,
                   separators=(',', ':'),
                   sort_keys=True)
 
 
-def loadHistory():
-    """ Clear history list """
-
-    if not os.path.exists(MIEXEC_HISTORY_FILE):
-        # Create empty text file for history
-        open(MIEXEC_HISTORY_FILE, 'a').close()
-
-    with open(MIEXEC_HISTORY_FILE, 'r') as histFile:
-        histories = [i.rstrip() for i in histFile.readlines()]
-        return histories
-
-
-def updateHistory(command):
-    """ Update and rewrite history list to file """
-
-    historyList = loadHistory()
-    if command in historyList:
-        historyList.remove(command)
-    historyList.insert(0, command)
-    with open(MIEXEC_HISTORY_FILE, 'w') as histFile:
-        for i in historyList:
-            histFile.write(i + "\n")
-
-
-def useTab():
-    """ Use Tab key as hotkey """
-
+def initTab():
+    """ Use Tab key as hotkey.
+    """
     mainWin = getMayaWindow()
 
     # Get list of QActions in main window
-    mainWinActions = mainWin.actions()
+    actions = mainWin.actions()
 
-    actionName = "miExec_TabKey"
-
-    # List of QAction's object name
-    actionNames = [i.objectName() for i in mainWinActions]
-
-    # If tab action already exists in main window, use it.
-    if actionName in actionNames:
-        for action in mainWinActions:
-            if action.objectName() == actionName:
-                if prefDict['use_tab_key'] is True:
-                    action.setEnabled(True)
-                else:
-                    action.setDisabled(True)
-            else:
-                pass
-
-    # if it doesn't exist, create new tab action.
+    if prefDict['use_tab_key'] is True:
+        enableTab(actions, mainWin)
     else:
+        disableTab(actions, mainWin)
+
+
+def enableTab(actions, mainWin):
+    """ enable tab-key as a hotkey
+    """
+    if len(actions) == 0:
         tabAction = QtGui.QAction(mainWin)
-        tabAction.setObjectName(actionName)
+        tabAction.setObjectName('miExec_TabKey')
         tabAction.setShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Tab))
         tabAction.setShortcutContext(QtCore.Qt.ApplicationShortcut)
         tabAction.triggered.connect(main)
         mainWin.addAction(tabAction)
+    else:
+        for a in actions:
+            if a.objectName() == 'miExec_TabKey':
+                a.setEnabled(True)
+
+
+def disableTab(actions, mainWin):
+    """ Disable tab-key.
+    """
+    if len(actions) == 0:
+        return
+    else:
+        for a in actions:
+            if a.objectName() == 'miExec_TabKey':
+                a.setDisabled(True)
 
 
 def init():
     inheritClasses()
     mergeCommandDict()
-    useTab()
+    initTab()
 
 
 def getFocusWidget():
