@@ -5,10 +5,12 @@ from gui import frame
 reload(frame)
 import maya.OpenMayaUI as mui
 import maya.cmds as cmds
-import os
-import json
+import itertools
 import shiboken
+import glob
+import json
 import imp
+import os
 
 
 SCRIPT_PATH = os.path.dirname(__file__)
@@ -24,66 +26,46 @@ prefDict = miExecPref.getPreference()
 windowDict = miExecPref.getWindowSetting()
 
 
-def getModPathDict():
-    """ Dict of modules and their paths.
-        Key is module name and item is absolute path of the file.
-    """
-    modulePathDict = {}
-    # Init modulePathDict
-    for root, dirs, files in os.walk(MODULE_PATH):
-        for f in files:
-            if f.endswith(".py"):
-                if "__init__" not in f:
-                    fullpath = os.path.join(root, f)
-                    name = os.path.splitext(f)[0]
-                    relPath = os.path.relpath(
-                        root, SCRIPT_PATH).replace("\\", "/")
-                    modPath = "miExecutor." \
-                              + relPath.replace("/", ".")\
-                              + ".%s" % name
-                    modulePathDict[modPath] = fullpath
-    return modulePathDict
+def getModDirs(module_root_dir):
+    mod_dirs = [module_root_dir]
+    for root, dirs, files in os.walk(module_root_dir):
+        for d in dirs:
+            mod_dirs.append(os.path.join(root, d))
+    return mod_dirs
 
 
-def getModObjList():
-    """ List of all module objects.
+def getModFiles(dir_path):
+    return [
+        i for i
+        in glob.glob(os.path.join(dir_path, "*.py"))
+        if os.path.basename(i) != "__init__.py"]
+
+
+def loadModules(module_file_path):
+    """ Return module object by given file path
     """
 
-    pathList = getModPathDict()
-    moduleObjectList = []
-    for i in pathList:
-        try:
-            mod = imp.load_source(i, pathList[i])
-            moduleObjectList.append(mod)
-        except ImportError:
-            # Ignore if plugins are not loaded, eg, Mayatomr, mtoa, etc...
-            continue
-    return moduleObjectList
+    name = os.path.splitext(module_file_path)[0].split("/")
+    name = "/".join(name[-2:])
+    try:
+        mod = imp.load_source(name, module_file_path)
+        return mod
+    except ImportError:
+        return None
 
 
-def getExtraModPath():
-    """ Get a list of module names.
+def getExtraModPath(extra_dir):
+    """ Return a list of python module files in abs path in given directory.
     """
-
-    # Init a list of extra modules
-    extraModPathList = []
-    for p in prefDict['extra_module_path']:
-        for root, dirs, files in os.walk(p):
-            for f in files:
-                if f.endswith(".py"):
-                    if "__init__" not in f:
-                        extraModPathList.append(
-                            os.path.join(root, f).replace("\\", "/"))
-    return extraModPathList
+    return [
+        i.replace("\\", "/") for i
+        in glob.glob(os.path.join(extra_dir, "*.py"))
+        if os.path.basename(i) != "__init__.py"]
 
 
-def loadExtraModules():
-    """ Load extra modules.
-    """
-    extraModObjectList = [
-        imp.load_source(os.path.basename(m).rsplit(".py")[0], m) for m
-        in getExtraModPath()]
-    return extraModObjectList
+def loadExtraModule(module_path):
+    return imp.load_source(
+        os.path.basename(module_path).rsplit(".py")[0], module_path)
 
 
 def getMayaWindow():
@@ -104,13 +86,23 @@ def getClassList():
     """Create a list of class objects
    """
 
-    modObjs = getModObjList()
+    # List of module objects from miExec package
+    mod_path_list = list(itertools.chain.from_iterable(
+        map(getModFiles, getModDirs(MODULE_PATH))))
+    modObjs = map(loadModules, mod_path_list)
+
+    # List of extra module path lists
+    extModPathLists = map(getExtraModPath, prefDict['extra_module_path'])
+
+    # Flatten the lists above into a single list.
+    extModPathList = list(itertools.chain.from_iterable(extModPathLists))
 
     # Append extra module objects
-    modObjs.extend(loadExtraModules())
+    exModObjs = map(loadExtraModule, extModPathList)
+    modObjs.extend(exModObjs)
 
     # List of all Commands class
-    commandClassList = [i.Commands for i in modObjs]
+    commandClassList = [i.Commands for i in modObjs if i is not None]
 
     return commandClassList
 
