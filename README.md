@@ -14,9 +14,9 @@ https://player.vimeo.com/video/144866783
 PySide
 
 ## Installation
-https://github.com/minoue/miExecutor/archive/1.2.2.zip
+https://github.com/minoue/miExecutor/archive/1.2.4.zip
 
-Download zip file from the above link and extract it. Rename miExecutor-1.2.0 directory to miExecutor and move it to the maya user script direcotry.
+Download zip file from the above link and extract it. Rename miExecutor-1.2.4 directory to miExecutor and move it to the maya user script direcotry.
 
 Directory structure should be something like this
 
@@ -34,7 +34,15 @@ maya
 |    |    |    |    |--  ...
 ```
 
-Try restarting Maya or run rehash command to activate the command.
+or you can download through git.  
+In maya scriiiipt directory,
+
+```
+git clone https://github.com/minoue/miExecutor.git
+```
+
+
+Then, try restarting Maya or run rehash command to activate the command.
 
 
 ## How to run
