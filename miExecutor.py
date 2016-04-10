@@ -153,51 +153,9 @@ def mergeCommandDict():
                   sort_keys=True)
 
 
-def initTab():
-    """ Use Tab key as hotkey.
-    """
-    mainWin = getMayaWindow()
-
-    # Get list of QActions in main window
-    actions = mainWin.actions()
-
-    if prefDict['use_tab_key'] is True:
-        enableTab(actions, mainWin)
-    else:
-        disableTab(actions, mainWin)
-
-
-def enableTab(actions, mainWin):
-    """ enable tab-key as a hotkey
-    """
-    if len(actions) == 0:
-        tabAction = QtGui.QAction(mainWin)
-        tabAction.setObjectName('miExec_TabKey')
-        tabAction.setShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Tab))
-        tabAction.setShortcutContext(QtCore.Qt.ApplicationShortcut)
-        tabAction.triggered.connect(main)
-        mainWin.addAction(tabAction)
-    else:
-        for a in actions:
-            if a.objectName() == 'miExec_TabKey':
-                a.setEnabled(True)
-
-
-def disableTab(actions, mainWin):
-    """ Disable tab-key.
-    """
-    if len(actions) == 0:
-        return
-    else:
-        for a in actions:
-            if a.objectName() == 'miExec_TabKey':
-                a.setDisabled(True)
-
-
 def init():
     inheritClasses()
     mergeCommandDict()
-    initTab()
 
 
 def getFocusWidget():
@@ -233,12 +191,6 @@ class MainWindow(QtGui.QMainWindow):
 
 def main():
     """ Show window and move it to cursor position """
-
-    # Move to next widget (like Tab key) when any fields are focused.
-    focusWidget = getFocusWidget()
-    if 'field' in focusWidget.objectName().lower():
-        focusWidget.focusNextPrevChild(True)
-        return
 
     # Create and show window
     global miExec
