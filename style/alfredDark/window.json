@@ -1,7 +1,7 @@
 {
     "width" : 350,
     "height": 70,
-    "icon_size": 18,
+    "icon_size": 32,
     "margin": 5,
     "transparent": true
 }

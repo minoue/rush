@@ -16,7 +16,7 @@ QListView
     border-width: 1px;
     border-color: rgb(60, 60, 60, 100);
     font-size: 20pt;
-    font-family: "M+ 1p";
+    font-family: "M+ 1p light";
     font-weight: normal;
     font-style: normal 
 }
@@ -32,7 +32,7 @@ QLineEdit
     border-width: 7px;
     border-color: black;
     font-size: 28pt;
-    font-family: "M+ 1p";
+    font-family: "M+ 1p light";
     font-weight: normal;
     font-style: normal 
 }
