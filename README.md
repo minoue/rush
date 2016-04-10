@@ -5,9 +5,10 @@ miExecutor
 ## What's this?
 TabMenu-like simple command launcher for Maya
 
-<iframe src="https://player.vimeo.com/video/144866783" width="620" height="401" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="https://vimeo.com/144866783">miExecutor</a> from <a href="https://vimeo.com/user4337917">michitaka inoue</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
-[![thumbnail](images/thumb.jpg)](https://player.vimeo.com/video/144866783)
+![](https://dl.dropboxusercontent.com/u/408180/miexec/miExec.gif)
+
+https://player.vimeo.com/video/144866783
 
 ## Requirements
 PySide
@@ -37,49 +38,14 @@ Try restarting Maya or run rehash command to activate the command.
 
 
 ## How to run
-### Load
 
-```python
-from miExecutor import miExecutor
-```
+Just assgin the following command to any keys you want in hotkey editor.
 
-
-### Run using hotkey 
-
-Just assgin the following command to any keys you want by Maya's hotkey editor.
-
-```python
-miExecutor.main()
-```
-or simply you can assign commands together.
 
 ```python
 from miExecutor import miExecutor
 reload(miExecutor)
 miExecutor.main()
-```
-
-
-### Run using Tab-key
-Maya is not able to use tab key as a hot key but it can be overrode using Qt.
-
-[Assigning TAB as hotkey](https://groups.google.com/forum/#!topic/python_inside_maya/U9VI7qbJGwc)
-
-
-Open the pref.json file in the miExecutor directory and change "use_tab_key" option. If it's true, you can use tab key to launch the GUI. 
-
-If it's false, tab key behavie as normal. 
-
-You may edit userSetup.py to avoid running setup command everytime.
-
-Be careful there is one problem if you use tab key. (explained later) 
-
-
-```python
-import maya.utils
-def miExecLoad():
-	from miExecutor import miExecutor
-maya.utils.executeDeferred(miExecLoad)
 ```
 
 
@@ -113,7 +79,7 @@ reload(miExecutor)
 
 Now your new command should be available.
 
-Commands can be organized by module and directory. If you use directory, don't forget to add __init__.py so it can be loaded as package.
+Commands can be organized by module and directory. If you use directory, don't forget to add **\_\_init\_\_.py** so it can be loaded as package.
 
 
 
@@ -145,34 +111,24 @@ like Alfred in Mac
 <img src="https://dl.dropboxusercontent.com/u/408180/blog/15_11_07_miExecutorUpdate/alfredDark.png" alt="nuke" style="width: 320px;"/>
 
 
-## known issues
-### tab behavior                   
-It's useful to tab key as hotkey but this feature disable all original actions.
+## Issues
 
 ### Transparency
-一部環境では透過処理がうまくいきません。
-例えばCompositeWIndowがオフのLinux環境ではデスクトップの透過処理ができないので、透過部分が完全に黒く塗りつぶされた、あるいはファミコンがバグったようにうつります。また、Windowsでも下の画像のように透過がうまく処理されませんでした。
+Backgraound transparency will not work in some environments as it's shown in the following image.
+For example, windows and linux with compositeWindow off.
 
 <img src="https://dl.dropboxusercontent.com/u/408180/blog/15_11_07_miExecutorUpdate/alphaIssue.jpg" alt="nuke" style="width: 320px;"/>
 
-Macでは特に問題がなかったような気がします。
+Looks fine in my Mac.
 
-### Dropshadow
-OSによってはデフォルトでウィンドウのドロップシャドウが有効になっています。
-例えばWindows10ではこのような感じになります。
+### Drop Shadow
+You might need to disable drop shadow effect. It's not from PySide but OS.
 
 <img src="https://dl.dropboxusercontent.com/u/408180/blog/15_11_07_miExecutorUpdate/windowBorder.jpg" alt="nuke" style="width: 320px;"/>
-
-これはスクリプト側で治せるのかはわかりませんが、OS側から消すことができます。
+Windows10
 
 [How to Disable the Drop Shadows in Windows 10](http://www.howtogeek.com/197866/how-to-disable-the-drop-shadows-in-windows-10/)
 
-### Manual addtions.
-You need to add all commands by hand...no automatic ways..
+### No automatic way to add custom commands
 
-
-___
-
-
-
-とまぁそんな感じで、コマンドさえわかればなんでも実行できるし、それなりに便利かなぁと思います。個人ツール用モジュールや、社内ツール用モジュールを作ったりするといいです。
+so much work...
