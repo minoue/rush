@@ -159,7 +159,7 @@ class UI(QtGui.QFrame):
         self.completer.popup().setStyleSheet(qss)
 
         # Setup QCompleter for history
-        self.histCompleter = QtGui.QCompleter()
+        self.histCompleter = QtGui.QCompleter(self)
         self.histCompleter.setCompletionMode(
             QtGui.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
