@@ -247,7 +247,7 @@ class UI(QtGui.QFrame):
         if self.lastCommand is not None:
             className = self.__class__.__name__
             pa.callLastCommand(
-                """python(\"miExecutor.%s()._%s()\")""" % (
+                """python(\"miExecutor.app.%s()._%s()\")""" % (
                     className, self.lastCommand))
         else:
             cmds.warning("Command not found. No object created.")
