@@ -1,12 +1,14 @@
 from PySide import QtGui, QtCore
 from pymel.all import mel as pa
-from .. import preference
-reload(preference)
+from . import preference
+from . import customWidgets
 import maya.cmds as cmds
 import maya.mel as mel
-import lineedit
 import json
 import os
+
+reload(preference)
+reload(customWidgets)
 
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
@@ -25,7 +27,6 @@ windowDict = preference.miExecPref.getWindowSetting()
 # Load stylesheet data
 qssFilePath = os.path.join(
     SCRIPT_PATH,
-    os.pardir,
     "style",
     prefDict['style'],
     prefDict['style']) + ".qss"
@@ -133,9 +134,8 @@ class UI(QtGui.QFrame):
         """ Create UI """
 
         margin = windowDict['margin']
-        self.lineEdit = lineedit.CustomQLineEdit()
+        self.lineEdit = customWidgets.CustomQLineEdit()
         self.lineEdit.downPressed.connect(self.showHistory)
-
         # Apply stylesheet
         self.lineEdit.setStyleSheet(qss)
 

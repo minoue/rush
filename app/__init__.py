@@ -1,10 +1,8 @@
 from PySide import QtGui, QtCore
 from preference import miExecPref
-reload(miExecPref)
-from gui import frame
-reload(frame)
-import maya.OpenMayaUI as mui
+from maya import OpenMayaUI
 import maya.cmds as cmds
+import miExec
 import itertools
 import shiboken
 import glob
@@ -12,6 +10,8 @@ import json
 import imp
 import os
 
+reload(miExecPref)
+reload(miExec)
 
 SCRIPT_PATH = os.path.dirname(__file__)
 MODULE_PATH = os.path.join(SCRIPT_PATH, 'module')
@@ -71,7 +71,7 @@ def loadExtraModule(module_path):
 def getMayaWindow():
     """ Get maya main window object.
     """
-    ptr = mui.MQtUtil.mainWindow()
+    ptr = OpenMayaUI.MQtUtil.mainWindow()
     return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
 
 
@@ -113,7 +113,7 @@ def getClassTuple():
     """
 
     # Create a list of class objects.
-    cl = [frame.UI]
+    cl = [miExec.UI]
     for i in getClassList():
         cl.append(i)
 
@@ -138,7 +138,7 @@ def mergeCommandDict():
 
     for c in getClassList():
         try:
-            frame.UI.cmdDict.update(c.commandDict)
+            miExec.UI.cmdDict.update(c.commandDict)
         except:
             print "%s does not have commandDict Attribute" % c
 
@@ -146,7 +146,7 @@ def mergeCommandDict():
         os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
 
     with open(outFilePath, 'w') as outFile:
-        json.dump(frame.UI.cmdDict,
+        json.dump(miExec.UI.cmdDict,
                   outFile,
                   indent=4,
                   separators=(',', ':'),
@@ -158,16 +158,22 @@ def init():
     mergeCommandDict()
 
 
-def getFocusWidget():
-    # Get Maya's currently focused widget
-
-    return QtGui.qApp.focusWidget()
-
-
 class MainWindow(QtGui.QMainWindow):
     """ MainWindow"""
 
+    def closeExistingWindow(self):
+        """ Close window if exists """
+
+        for qt in QtGui.QApplication.topLevelWidgets():
+            try:
+                if qt.__class__.__name__ == self.__class__.__name__:
+                    qt.close()
+            except:
+                pass
+
     def __init__(self, parent=getMayaWindow()):
+        self.closeExistingWindow()
+
         super(MainWindow, self).__init__(parent)
 
         self.resize(windowDict['width'], windowDict['height'])
@@ -180,36 +186,12 @@ class MainWindow(QtGui.QMainWindow):
         if windowDict['transparent'] is True:
             self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
-        centralWidget = MainClass(parent=self)
-        centralWidget.setObjectName("miExec_frame")
-        centralWidget.lineEdit.escPressed.connect(self.close)
-        centralWidget.closeSignal.connect(self.close)
-        centralWidget.lineEdit.setFocus()
+        init()
 
-        self.setCentralWidget(centralWidget)
+        self.centralWidget = MainClass(parent=self)
+        self.centralWidget.setObjectName("miExec_frame")
+        self.centralWidget.lineEdit.escPressed.connect(self.close)
+        self.centralWidget.closeSignal.connect(self.close)
+        self.centralWidget.lineEdit.setFocus()
 
-
-def main():
-    """ Show window and move it to cursor position """
-
-    # Create and show window
-    global miExec
-    try:
-        miExec.close()
-    except:
-        pass
-    miExec = MainWindow()
-    miExec.show()
-
-    # Move the window to the cursor position.
-    pos = QtGui.QCursor.pos()
-    miExec.move(
-        pos.x() - (miExec.width() / 2), pos.y() - (miExec.height() / 2))
-    miExec.activateWindow()
-    miExec.raise_()
-
-
-if __name__ == "__main__":
-    pass
-else:
-    init()
+        self.setCentralWidget(self.centralWidget)

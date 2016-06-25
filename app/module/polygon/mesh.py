@@ -92,7 +92,7 @@ class Commands(object):
     commandDict['mirrorPolygonGeometryOptions'] = "polyMirrorGeometry.png"
 
     def _transferAttributesOptions(self):
-        cmds.TransferAttributeValuesOptions()
+        mel.eval("performTransferAttributes 1")        
     commandDict['transferAttributesOptions'] = "polyTransferAttributes.png"
 
     def _cleanupPolygon(self):
