@@ -14,9 +14,9 @@ https://player.vimeo.com/video/144866783
 PySide
 
 ## Installation
-https://github.com/minoue/miExecutor/archive/1.2.4.zip
+https://github.com/minoue/miExecutor/archive/1.3.0.zip
 
-Download zip file from the above link and extract it. Rename miExecutor-1.2.4 directory to miExecutor and move it to the maya user script direcotry.
+Download zip file from the above link and extract it. Rename miExecutor-1.3.0 directory to miExecutor and move it to the maya user script direcotry.
 
 Directory structure should be something like this
 
@@ -27,11 +27,12 @@ maya
 |    |    |--miExecutor
 |    |    |    |--__init__.py
 |    |    |    |--miExecutor.py
-|    |    |    |--  ....
-|    |    |    |--module
+|    |    |    |--README.md
+|    |    |    |--app
 |    |    |    |    |--mayaNode.py
-|    |    |    |    |--  ...
-|    |    |    |    |--  ...
+|    |    |    |    |--module
+|    |    |    |    |    |general
+|    |    |    |    |    |...
 ```
 
 or you can download through git.  
@@ -51,7 +52,7 @@ Just assgin the following command to any keys you want in hotkey editor.
 
 
 ```python
-from miExecutor import miExecutor
+import miExecutor
 reload(miExecutor)
 miExecutor.main()
 ```
