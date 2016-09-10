@@ -1,4 +1,4 @@
-from PySide import QtGui
+from Qt import QtGui
 import app
 reload(app)
 

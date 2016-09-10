@@ -1,12 +1,11 @@
-from PySide import QtGui, QtCore
-from pymel.all import mel as pa
-from . import preference
-from . import customWidgets
 import maya.cmds as cmds
 import maya.mel as mel
 import json
 import os
-
+import preference
+import customWidgets
+from Qt import QtWidgets, QtCore, QtGui
+from pymel.all import mel as pa
 reload(preference)
 reload(customWidgets)
 
@@ -44,7 +43,7 @@ global proc callLastCommand(string $function)
 """)
 
 
-class UI(QtGui.QFrame):
+class UI(QtWidgets.QFrame):
     """ main UI class """
 
     # Dict to inherit all command dicrectories
@@ -111,7 +110,7 @@ class UI(QtGui.QFrame):
             self.model.setItem(num, 0, item)
 
         # Store the model(self.model) into the sortFilterProxy model
-        self.filteredModel = QtGui.QSortFilterProxyModel(self)
+        self.filteredModel = QtCore.QSortFilterProxyModel(self)
         self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(self.model)
 
@@ -140,16 +139,16 @@ class UI(QtGui.QFrame):
         self.lineEdit.setStyleSheet(qss)
 
         self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
-        vbox = QtGui.QVBoxLayout()
+        vbox = QtWidgets.QVBoxLayout()
         vbox.setSpacing(0)
         vbox.setContentsMargins(0, 0, 0, 0)
         vbox.addWidget(self.lineEdit)
         self.setLayout(vbox)
 
         # Set up QCompleter
-        self.completer = QtGui.QCompleter(self)
+        self.completer = QtWidgets.QCompleter(self)
         self.completer.setCompletionMode(
-            QtGui.QCompleter.UnfilteredPopupCompletion)
+            QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.completer.highlighted.connect(self.selectionCallback)
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
@@ -159,9 +158,9 @@ class UI(QtGui.QFrame):
         self.completer.popup().setStyleSheet(qss)
 
         # Setup QCompleter for history
-        self.histCompleter = QtGui.QCompleter(self)
+        self.histCompleter = QtWidgets.QCompleter(self)
         self.histCompleter.setCompletionMode(
-            QtGui.QCompleter.UnfilteredPopupCompletion)
+            QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
         self.histCompleter.setObjectName("historyCompleter")
 

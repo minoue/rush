@@ -1,10 +1,8 @@
-from PySide import QtGui, QtCore
+from Qt import QtWidgets, QtCore
 from preference import miExecPref
-from maya import OpenMayaUI
 import maya.cmds as cmds
 import miExec
 import itertools
-import shiboken
 import glob
 import json
 import imp
@@ -69,10 +67,11 @@ def loadExtraModule(module_path):
 
 
 def getMayaWindow():
-    """ Get maya main window object.
-    """
-    ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken.wrapInstance(long(ptr), QtGui.QMainWindow)
+    """ Return Maya's main window. """
+    for obj in QtWidgets.qApp.topLevelWidgets():
+        if obj.objectName() == 'MayaWindow':
+            return obj
+    raise RuntimeError('Could not find MayaWindow instance')
 
 
 class MainClass():
@@ -158,13 +157,13 @@ def init():
     mergeCommandDict()
 
 
-class MainWindow(QtGui.QMainWindow):
+class MainWindow(QtWidgets.QMainWindow):
     """ MainWindow"""
 
     def closeExistingWindow(self):
         """ Close window if exists """
 
-        for qt in QtGui.QApplication.topLevelWidgets():
+        for qt in QtWidgets.QApplication.topLevelWidgets():
             try:
                 if qt.__class__.__name__ == self.__class__.__name__:
                     qt.close()

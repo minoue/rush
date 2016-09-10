@@ -1,7 +1,7 @@
-from PySide import QtGui, QtCore
+from Qt import QtWidgets, QtCore
 
 
-class CustomQLineEdit(QtGui.QLineEdit):
+class CustomQLineEdit(QtWidgets.QLineEdit):
     """ Custom QLineEdit with custom events and signals"""
 
     escPressed = QtCore.Signal(str)
