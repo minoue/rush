@@ -1,10 +1,13 @@
+try:
+    import Qt
+except ImportError:
+    from . import Qt
 import maya.cmds as cmds
 import maya.mel as mel
 import json
 import os
 import preference
 import customWidgets
-from Qt import QtWidgets, QtCore, QtGui
 from pymel.all import mel as pa
 reload(preference)
 reload(customWidgets)
@@ -43,26 +46,26 @@ global proc callLastCommand(string $function)
 """)
 
 
-class UI(QtWidgets.QFrame):
+class UI(Qt.QtWidgets.QFrame):
     """ main UI class """
 
     # Dict to inherit all command dicrectories
     cmdDict = {}
 
-    closeSignal = QtCore.Signal(str)
+    closeSignal = Qt.QtCore.Signal(str)
 
     def __init__(self, parent=None):
         super(UI, self).__init__(parent)
-        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
 
         # These attributes will be used in MainClass as well
         self.windowWidth = windowDict['width']
         self.windowHeight = windowDict['height']
         self.windowTransparency = windowDict['transparent']
 
-        self.windowSize = QtCore.QSize(
+        self.windowSize = Qt.QtCore.QSize(
             self.windowWidth, self.windowHeight)
-        self.iconSize = QtCore.QSize(
+        self.iconSize = Qt.QtCore.QSize(
             windowDict['icon_size'], windowDict['icon_size'])
 
         self.setStyleSheet(qss)
@@ -83,7 +86,7 @@ class UI(QtWidgets.QFrame):
     def createData(self):
         """ Create item models for completers """
 
-        self.model = QtGui.QStandardItemModel()
+        self.model = Qt.QtGui.QStandardItemModel()
 
         # Load json files as dicrectory.
         # key is command name, and its item is icon path.
@@ -101,30 +104,31 @@ class UI(QtWidgets.QFrame):
 
         # Add all command names and icon paths to the the model(self.model)
         for num, command in enumerate(jsonDict):
-            item = QtGui.QStandardItem(command)
+            item = Qt.QtGui.QStandardItem(command)
             if os.path.isabs(jsonDict[command]) is True:
                 iconPath = os.path.normpath(jsonDict[command])
-                item.setIcon(QtGui.QIcon(iconPath))
+                item.setIcon(Qt.QtGui.QIcon(iconPath))
             else:
-                item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
+                item.setIcon(Qt.QtGui.QIcon(":%s" % jsonDict[command]))
             self.model.setItem(num, 0, item)
 
         # Store the model(self.model) into the sortFilterProxy model
-        self.filteredModel = QtCore.QSortFilterProxyModel(self)
-        self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.filteredModel = Qt.QtCore.QSortFilterProxyModel(self)
+        self.filteredModel.setFilterCaseSensitivity(
+            Qt.QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(self.model)
 
         # History model
         self.historyList = loadHistory()
-        self.historyModel = QtGui.QStandardItemModel()
+        self.historyModel = Qt.QtGui.QStandardItemModel()
         try:
             for num, command in enumerate(self.historyList):
-                item = QtGui.QStandardItem(command)
+                item = Qt.QtGui.QStandardItem(command)
                 if os.path.isabs(jsonDict[command]) is True:
                     iconPath = os.path.normpath(jsonDict[command])
-                    item.setIcon(QtGui.QIcon(iconPath))
+                    item.setIcon(Qt.QtGui.QIcon(iconPath))
                 else:
-                    item.setIcon(QtGui.QIcon(":%s" % jsonDict[command]))
+                    item.setIcon(Qt.QtGui.QIcon(":%s" % jsonDict[command]))
                 self.historyModel.setItem(num, 0, item)
         except KeyError:
             pass
@@ -139,16 +143,16 @@ class UI(QtWidgets.QFrame):
         self.lineEdit.setStyleSheet(qss)
 
         self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
-        vbox = QtWidgets.QVBoxLayout()
+        vbox = Qt.QtWidgets.QVBoxLayout()
         vbox.setSpacing(0)
         vbox.setContentsMargins(0, 0, 0, 0)
         vbox.addWidget(self.lineEdit)
         self.setLayout(vbox)
 
         # Set up QCompleter
-        self.completer = QtWidgets.QCompleter(self)
+        self.completer = Qt.QtWidgets.QCompleter(self)
         self.completer.setCompletionMode(
-            QtWidgets.QCompleter.UnfilteredPopupCompletion)
+            Qt.QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.completer.highlighted.connect(self.selectionCallback)
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
@@ -158,9 +162,9 @@ class UI(QtWidgets.QFrame):
         self.completer.popup().setStyleSheet(qss)
 
         # Setup QCompleter for history
-        self.histCompleter = QtWidgets.QCompleter(self)
+        self.histCompleter = Qt.QtWidgets.QCompleter(self)
         self.histCompleter.setCompletionMode(
-            QtWidgets.QCompleter.UnfilteredPopupCompletion)
+            Qt.QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
         self.histCompleter.setObjectName("historyCompleter")
 
@@ -187,9 +191,10 @@ class UI(QtWidgets.QFrame):
             self.lineEdit.setCompleter(self.completer)
 
         # Set commands to case insensitive
-        regExp = QtCore.QRegExp(self.lineEdit.text(),
-                                QtCore.Qt.CaseInsensitive,
-                                QtCore.QRegExp.RegExp)
+        regExp = Qt.QtCore.QRegExp(
+            self.lineEdit.text(),
+            Qt.QtCore.Qt.CaseInsensitive,
+            Qt.QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
 
     def selectionCallback(self, selected):

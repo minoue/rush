@@ -1,4 +1,7 @@
-from Qt import QtGui
+try:
+    import Qt
+except ImportError:
+    from app import Qt
 import app
 reload(app)
 
@@ -17,7 +20,7 @@ def main():
     miExec.show()
 
     # Move the window to the cursor position.
-    pos = QtGui.QCursor.pos()
+    pos = Qt.QtGui.QCursor.pos()
     miExec.move(
         pos.x() - (miExec.width() / 2), pos.y() - (miExec.height() / 2))
     miExec.activateWindow()

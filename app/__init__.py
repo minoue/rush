@@ -1,4 +1,7 @@
-from Qt import QtWidgets, QtCore
+try:
+    import Qt
+except ImportError:
+    from . import Qt
 from preference import miExecPref
 import maya.cmds as cmds
 import miExec
@@ -68,7 +71,7 @@ def loadExtraModule(module_path):
 
 def getMayaWindow():
     """ Return Maya's main window. """
-    for obj in QtWidgets.qApp.topLevelWidgets():
+    for obj in Qt.QtWidgets.qApp.topLevelWidgets():
         if obj.objectName() == 'MayaWindow':
             return obj
     raise RuntimeError('Could not find MayaWindow instance')
@@ -157,13 +160,13 @@ def init():
     mergeCommandDict()
 
 
-class MainWindow(QtWidgets.QMainWindow):
+class MainWindow(Qt.QtWidgets.QMainWindow):
     """ MainWindow"""
 
     def closeExistingWindow(self):
         """ Close window if exists """
 
-        for qt in QtWidgets.QApplication.topLevelWidgets():
+        for qt in Qt.QtWidgets.QApplication.topLevelWidgets():
             try:
                 if qt.__class__.__name__ == self.__class__.__name__:
                     qt.close()
@@ -177,13 +180,14 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.resize(windowDict['width'], windowDict['height'])
         self.setWindowTitle("miExecutor")
-        self.setWindowFlags(QtCore.Qt.Tool)
-        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+        self.setWindowFlags(Qt.QtCore.Qt.Tool)
+        self.setWindowFlags(
+            Qt.QtCore.Qt.Popup | Qt.QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
 
         # Transparency setting
         if windowDict['transparent'] is True:
-            self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+            self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
         init()
 
