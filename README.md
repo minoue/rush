@@ -120,7 +120,7 @@ like Alfred in Mac
 <img src="https://dl.dropboxusercontent.com/u/408180/blog/15_11_07_miExecutorUpdate/alfredDark.png" alt="nuke" style="width: 320px;"/>
 
 
-## Issues
+## Known issues
 
 ### Transparency
 Backgraound transparency will not work in some environments as it's shown in the following image.
@@ -138,6 +138,5 @@ Windows10
 
 [How to Disable the Drop Shadows in Windows 10](http://www.howtogeek.com/197866/how-to-disable-the-drop-shadows-in-windows-10/)
 
-### No automatic way to add custom commands
-
-so much work...
+## Libraries used
+[Qt.py](https://github.com/mottosso/Qt.py)
