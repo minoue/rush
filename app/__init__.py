@@ -16,18 +16,6 @@ import os
 reload(miExecPref)
 reload(miExec)
 
-SCRIPT_PATH = os.path.dirname(__file__)
-MODULE_PATH = os.path.join(SCRIPT_PATH, 'module')
-MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
-
-
-# Load pref data
-prefDict = miExecPref.getPreference()
-
-
-# Load window setting
-windowDict = miExecPref.getWindowSetting()
-
 
 def getModDirs(module_root_dir):
     mod_dirs = [module_root_dir]
@@ -90,10 +78,16 @@ def getClassList():
     """Create a list of class objects
    """
 
+    script_path = os.path.dirname(__file__)
+    module_path = os.path.join(script_path, 'module')
+
     # List of module objects from miExec package
     mod_path_list = list(itertools.chain.from_iterable(
-        map(getModFiles, getModDirs(MODULE_PATH))))
+        map(getModFiles, getModDirs(module_path))))
     modObjs = map(loadModules, mod_path_list)
+
+    # Load pref data
+    prefDict = miExecPref.getPreference()
 
     # List of extra module path lists
     extModPathLists = map(getExtraModPath, prefDict['extra_module_path'])
@@ -146,8 +140,10 @@ def mergeCommandDict():
         except:
             print "%s does not have commandDict Attribute" % c
 
+    maya_script_dir = cmds.internalVar(userScriptDir=True)
+
     outFilePath = os.path.normpath(
-        os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
+        os.path.join(maya_script_dir, "miExecutorCommands.json"))
 
     with open(outFilePath, 'w') as outFile:
         json.dump(miExec.UI.cmdDict,
@@ -179,6 +175,9 @@ class MainWindow(Qt.QtWidgets.QMainWindow):
         self.closeExistingWindow()
 
         super(MainWindow, self).__init__(parent)
+
+        # Load window setting
+        windowDict = miExecPref.getWindowSetting()
 
         self.resize(windowDict['width'], windowDict['height'])
         self.setWindowTitle("miExecutor")

@@ -15,30 +15,6 @@ reload(preference)
 reload(customWidgets)
 
 
-MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
-MIEXEC_HISTORY_FILE = os.path.join(MAYA_SCRIPT_DIR, "miExecutorHistory.txt")
-SCRIPT_PATH = os.path.dirname(__file__)
-
-
-# Load pref data
-prefDict = preference.miExecPref.getPreference()
-
-
-# Load window setting
-windowDict = preference.miExecPref.getWindowSetting()
-
-
-# Load stylesheet data
-qssFilePath = os.path.join(
-    SCRIPT_PATH,
-    "style",
-    prefDict['style'],
-    prefDict['style']) + ".qss"
-qssFile = open(qssFilePath, "r")
-qss = qssFile.read()
-qssFile.close()
-
-
 # Define mel procedure to call the previous function
 mel.eval("""
 global proc callLastCommand(string $function)
@@ -46,6 +22,25 @@ global proc callLastCommand(string $function)
     repeatLast -ac $function -acl "blah-blah....";
 }
 """)
+
+
+def loadQssFile():
+    """ Load stylesheet data """
+
+    # Load pref data
+    prefDict = preference.miExecPref.getPreference()
+
+    script_path = os.path.dirname(__file__)
+    qssFilePath = os.path.join(
+        script_path,
+        "style",
+        prefDict['style'],
+        prefDict['style']) + ".qss"
+    qssFile = open(qssFilePath, "r")
+    qss = qssFile.read()
+    qssFile.close()
+
+    return qss
 
 
 class UI(Qt.QtWidgets.QFrame):
@@ -60,17 +55,21 @@ class UI(Qt.QtWidgets.QFrame):
         super(UI, self).__init__(parent)
         self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
 
+        # Load window setting
+        self.windowDict = preference.miExecPref.getWindowSetting()
+        self.qss = loadQssFile()
+
         # These attributes will be used in MainClass as well
-        self.windowWidth = windowDict['width']
-        self.windowHeight = windowDict['height']
-        self.windowTransparency = windowDict['transparent']
+        self.windowWidth = self.windowDict['width']
+        self.windowHeight = self.windowDict['height']
+        self.windowTransparency = self.windowDict['transparent']
 
         self.windowSize = Qt.QtCore.QSize(
             self.windowWidth, self.windowHeight)
         self.iconSize = Qt.QtCore.QSize(
-            windowDict['icon_size'], windowDict['icon_size'])
+            self.windowDict['icon_size'], self.windowDict['icon_size'])
 
-        self.setStyleSheet(qss)
+        self.setStyleSheet(self.qss)
 
         # Attribute to check if item on the popup list is selected
         self._selected = None
@@ -90,10 +89,12 @@ class UI(Qt.QtWidgets.QFrame):
 
         self.model = Qt.QtGui.QStandardItemModel()
 
+        maya_script_dir = cmds.internalVar(userScriptDir=True)
+
         # Load json files as dicrectory.
         # key is command name, and its item is icon path.
         commandFile = os.path.normpath(
-            os.path.join(MAYA_SCRIPT_DIR, "miExecutorCommands.json"))
+            os.path.join(maya_script_dir, "miExecutorCommands.json"))
         try:
             f = open(commandFile)
             jsonDict = json.load(f)
@@ -121,7 +122,7 @@ class UI(Qt.QtWidgets.QFrame):
         self.filteredModel.setSourceModel(self.model)
 
         # History model
-        self.historyList = loadHistory()
+        self.historyList = loadHistoryList()
         self.historyModel = Qt.QtGui.QStandardItemModel()
         try:
             for num, command in enumerate(self.historyList):
@@ -138,13 +139,13 @@ class UI(Qt.QtWidgets.QFrame):
     def createUI(self):
         """ Create UI """
 
-        margin = windowDict['margin']
+        margin = self.windowDict['margin']
         self.lineEdit = customWidgets.CustomQLineEdit()
         self.lineEdit.downPressed.connect(self.showHistory)
         # Apply stylesheet
-        self.lineEdit.setStyleSheet(qss)
+        self.lineEdit.setStyleSheet(self.qss)
 
-        self.lineEdit.setFixedHeight(windowDict['height'] - margin * 2)
+        self.lineEdit.setFixedHeight(self.windowDict['height'] - margin * 2)
         vbox = Qt.QtWidgets.QVBoxLayout()
         vbox.setSpacing(0)
         vbox.setContentsMargins(0, 0, 0, 0)
@@ -161,7 +162,7 @@ class UI(Qt.QtWidgets.QFrame):
         self.completer.popup().setIconSize(self.iconSize)
 
         # Apply stylesheet
-        self.completer.popup().setStyleSheet(qss)
+        self.completer.popup().setStyleSheet(self.qss)
 
         # Setup QCompleter for history
         self.histCompleter = Qt.QtWidgets.QCompleter(self)
@@ -288,14 +289,22 @@ class UI(Qt.QtWidgets.QFrame):
         return self.lastCommand
 
 
-def loadHistory():
+def getHistoryFilePath():
+    maya_script_dir = cmds.internalVar(userScriptDir=True)
+    path = os.path.join(maya_script_dir, "miExecutorHistory.txt")
+    return path
+
+
+def loadHistoryList():
     """ Clear history list """
 
-    if not os.path.exists(MIEXEC_HISTORY_FILE):
-        # Create empty text file for history
-        open(MIEXEC_HISTORY_FILE, 'a').close()
+    historyFilePath = getHistoryFilePath()
 
-    with open(MIEXEC_HISTORY_FILE, 'r') as histFile:
+    if not os.path.exists(historyFilePath):
+        # Create empty text file for history
+        open(historyFilePath, 'a').close()
+
+    with open(historyFilePath, 'r') as histFile:
         histories = [i.rstrip() for i in histFile.readlines()]
         return histories
 
@@ -303,10 +312,11 @@ def loadHistory():
 def updateHistory(command):
     """ Update and rewrite history list to file """
 
-    historyList = loadHistory()
+    historyList = loadHistoryList()
+    historyFilePath = getHistoryFilePath()
     if command in historyList:
         historyList.remove(command)
     historyList.insert(0, command)
-    with open(MIEXEC_HISTORY_FILE, 'w') as histFile:
+    with open(historyFilePath, 'w') as histFile:
         for i in historyList:
             histFile.write(i + "\n")
