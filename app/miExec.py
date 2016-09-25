@@ -140,8 +140,9 @@ class UI(Qt.QtWidgets.QFrame):
         """ Create UI """
 
         margin = self.windowDict['margin']
-        self.lineEdit = customWidgets.CustomQLineEdit()
+        self.lineEdit = customWidgets.CustomQLineEdit(self)
         self.lineEdit.downPressed.connect(self.showHistory)
+
         # Apply stylesheet
         self.lineEdit.setStyleSheet(self.qss)
 
