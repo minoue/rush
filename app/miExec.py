@@ -161,15 +161,16 @@ class UI(Qt.QtWidgets.QFrame):
         self.completer.setObjectName("commandCompleter")
         self.completer.popup().setIconSize(self.iconSize)
 
-        # Apply stylesheet
-        self.completer.popup().setStyleSheet(self.qss)
-
         # Setup QCompleter for history
         self.histCompleter = Qt.QtWidgets.QCompleter(self)
         self.histCompleter.setCompletionMode(
             Qt.QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
         self.histCompleter.setObjectName("historyCompleter")
+
+        # Apply stylesheet
+        self.completer.popup().setStyleSheet(self.qss)
+        self.histCompleter.popup().setStyleSheet(self.qss)
 
         # Edit line Edit behavior
         self.lineEdit.setCompleter(self.completer)
