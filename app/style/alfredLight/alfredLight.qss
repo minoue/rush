@@ -10,13 +10,11 @@ QListView
     color: black;
     background-color: rgb(251, 251, 251);
     selection-background-color: rgb(178, 215, 255);
-    /* padding: 0px; */
     border-style: solid;
     border-radius: 1px;
     border-width: 1px;
     border-color: rgb(60, 60, 60, 100);
     font-size: 20pt;
-    font-family: "M+ 1p";
     font-weight: normal;
     font-style: normal 
 }
@@ -32,14 +30,12 @@ QLineEdit
     border-width: 7px;
     border-color: rgb(251, 251, 251);
     font-size: 28pt;
-    font-family: "M+ 1p";
     font-weight: normal;
     font-style: normal 
 }
 
 #miExec_frame
 {
-    /* color: white; */ 
     background-color: rgb(10, 10, 10, 120);
     padding: 7px;
     border-style: solid;
