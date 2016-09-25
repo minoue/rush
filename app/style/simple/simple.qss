@@ -1,0 +1,10 @@
+QListView
+{
+    font-size: 14pt;
+}
+
+QLineEdit
+{
+    padding: 4px;
+    font-size: 18pt;
+}
