@@ -1,6 +1,6 @@
 {
-    "style": "standard",
+    "style": "simple",
     "extra_module_path": [
-        "E:/Dropbox/dev/git/maya/extraModules"
+        ""
     ]
 }
