@@ -11,15 +11,19 @@ TabMenu-like simple command launcher for Maya
 https://player.vimeo.com/video/144866783
 
 ## Requirements
-PySide
+PySide  
+[Qt.py](https://github.com/mottosso/Qt.py)
 
 ## Installation
-https://github.com/minoue/miExecutor/archive/1.3.0.zip
+1. Install Qt.py
+```
+pip install Qt.py
+```
 
+2. Download and install miExecutor  
+[miExecutor](https://github.com/minoue/miExecutor/archive/1.3.1.zip)  
 Download zip file from the above link and extract it. Rename miExecutor-1.3.0 directory to miExecutor and move it to the maya user script direcotry.
-
 Directory structure should be something like this
-
 ```python
 maya
 |--version
@@ -34,15 +38,11 @@ maya
 |    |    |    |    |    |general
 |    |    |    |    |    |...
 ```
-
 or you can download through git.  
 In maya scriiiipt directory,
-
 ```
 git clone https://github.com/minoue/miExecutor.git
 ```
-
-
 Then, try restarting Maya or run rehash command to activate the command.
 
 
@@ -52,9 +52,7 @@ Just assgin the following command to any keys you want in hotkey editor.
 
 
 ```python
-import miExecutor
-reload(miExecutor)
-miExecutor.main()
+import miExecutor; miExecutor.main()
 ```
 
 
@@ -138,5 +136,3 @@ Windows10
 
 [How to Disable the Drop Shadows in Windows 10](http://www.howtogeek.com/197866/how-to-disable-the-drop-shadows-in-windows-10/)
 
-## Libraries used
-[Qt.py](https://github.com/mottosso/Qt.py)
