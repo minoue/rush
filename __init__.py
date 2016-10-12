@@ -1,10 +1,4 @@
-try:
-    # Try import Qt.py from global site-package, if not import copy of Qt.py
-    # in a current directory
-    import Qt
-except ImportError:
-    from app import Qt
-
+import Qt
 import app
 reload(app)
 

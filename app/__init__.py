@@ -1,9 +1,3 @@
-try:
-    # Try import Qt.py from global site-package, if not import copy of Qt.py
-    # in a current directory
-    import Qt
-except ImportError:
-    from . import Qt
 from preference import miExecPref
 import maya.cmds as cmds
 import miExec
@@ -12,6 +6,7 @@ import glob
 import json
 import imp
 import os
+import Qt
 
 reload(miExecPref)
 reload(miExec)

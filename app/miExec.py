@@ -1,13 +1,8 @@
-try:
-    # Try import Qt.py from global site-package, if not import copy of Qt.py
-    # in a current directory
-    import Qt
-except ImportError:
-    from . import Qt
 import maya.cmds as cmds
 import maya.mel as mel
 import json
 import os
+import Qt
 import preference
 import customWidgets
 from pymel.all import mel as pa
