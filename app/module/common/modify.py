@@ -18,6 +18,52 @@ class Commands(object):
         cmds.makeIdentity(apply=True, t=False, r=True, s=False, n=False)
     commandDict['freezeOnlyRotation'] = "menuIconModify.png"
 
+    # Snap align
+    def _snapPointToPoint(self):
+        cmds.SnapPointToPoint()
+    commandDict['snapPointToPoint'] = "pointToPoint.png"
+
+    def _snap2PointsTo2Points(self):
+        cmds.Snap2PointsTo2Points()
+    commandDict['snap2PointsTo2Points'] = "twoPointToPoint.png"
+
+    def _snap3PointsTo3Points(self):
+        cmds.Snap3PointsTo3Points(0)
+    commandDict['snap3PointsTo3Points'] = "threePointToPoint.png"
+
+    def _performAlignObjects(self):
+        cmds.perform
+        mel.eval("performAlignObjects 0")
+    commandDict['performAlignObjects'] = "alignObjects.png"
+
+    def _positionAlongCurve(self):
+        cmds.PositionAlongCurve()
+    commandDict['positionAlongCurve'] = "positionAlongCurve.png"
+
+    def _alignTool(self):
+        mel.eval("setToolTo alignToolCtx")
+    commandDict['alignTool'] = "alignTool.png"
+
+    def _snapTogetherTool(self):
+        cmds.setToolTo(cmds.snapTogetherCtx())
+    commandDict['snapTogetherTool'] = "snapTogetherTool.png"
+
+    def _addAttribute(self):
+        cmds.AddAttribute()
+    commandDict['addAttribute'] = "menuIconModify.png"
+
+    def _editAttribute(self):
+        cmds.RenameAttribute()
+    commandDict['editAttribute'] = "menuIconModify.png"
+
+    def _deleteAttribute(self):
+        cmds.DeleteAttribute()
+    commandDict['deleteAttribute'] = "menuIconModify.png"
+
+    def _scriptPaintTool(self):
+        cmds.ScriptPaintTool()
+    commandDict['scriptPaintTool'] = "userPaint.png"
+
     def _freezeOnlyScale(self):
         cmds.makeIdentity(apply=True, t=False, r=False, s=True, n=False)
     commandDict['freezeOnlyScale'] = "menuIconModify.png"
