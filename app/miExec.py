@@ -20,7 +20,14 @@ global proc callLastCommand(string $function)
 
 
 def loadQssFile():
-    """ Load stylesheet data """
+    """ Load stylesheet data
+
+    Args:
+
+    Return:
+        qss (str): Contents of stylesheet
+    
+    """
 
     # Load pref data
     prefDict = preference.miExecPref.getPreference()
@@ -80,7 +87,13 @@ class UI(Qt.QtWidgets.QFrame):
         self.createUI()
 
     def createData(self):
-        """ Create item models for completers """
+        """ Create item models for completers
+
+        Args:
+
+        Return:
+        
+        """
 
         self.model = Qt.QtGui.QStandardItemModel()
 
@@ -132,7 +145,14 @@ class UI(Qt.QtWidgets.QFrame):
             pass
 
     def createUI(self):
-        """ Create UI """
+        """ Create UI
+
+        Args:
+
+        Return:
+        
+        
+        """
 
         margin = self.windowDict['margin']
         self.lineEdit = customWidgets.CustomQLineEdit(self)
@@ -176,13 +196,25 @@ class UI(Qt.QtWidgets.QFrame):
         self.lineEdit.setFocus()
 
     def showHistory(self, *args):
-        """ Show previously executed commands """
+        """ Show previously executed commands
+
+        Args:
+
+        Return:
+        
+        """
 
         self.lineEdit.setCompleter(self.histCompleter)
         self.histCompleter.complete()
 
     def updateData(self):
-        """ Update current completion data """
+        """ Update current completion data
+
+        Args:
+
+        Return:
+        
+        """
 
         # If text is empty, change history completer back to
         # command completer
@@ -198,14 +230,31 @@ class UI(Qt.QtWidgets.QFrame):
         self.filteredModel.setFilterRegExp(regExp)
 
     def selectionCallback(self, selected):
-        """ Return highlighted command """
+        """ Return highlighted command name and change exec type
+
+        Args:
+            selected (str): Selected command of the completion list
+
+        Return:
+            _selected (str): Selected command
+        
+        """
 
         self._selected = selected
         self.executeType = 1
+
         return self._selected
 
     def getCurrentCompletion(self, *args):
-        """ Get a command to be completed """
+        """ Get a command name to be completed
+
+        Args:
+
+        Return:
+            currentCompletion (str): Name of the command at the top of the 
+                                     completion list
+        
+        """
 
         compType = self.lineEdit.completer().objectName()
         if compType == "commandCompleter":
@@ -236,7 +285,13 @@ class UI(Qt.QtWidgets.QFrame):
         return self.currentCompletion
 
     def initialExecution(self):
-        """ Execute actuall command and register it to last command """
+        """ Execute actuall command and register it to last command
+
+        Args:
+
+        Return:
+
+        """
 
         try:
             # Run command
@@ -257,7 +312,14 @@ class UI(Qt.QtWidgets.QFrame):
             cmds.warning("Command not found. No object created.")
 
     def secondaryExecution(self):
-        """ Execute command """
+        """ Execute command
+
+        Args:
+
+        Return:
+            lastCommand (str): Name of the command executed
+        
+        """
 
         # When return pressed without selecting any items
         # on the completion list
@@ -287,14 +349,27 @@ class UI(Qt.QtWidgets.QFrame):
 
 
 def getHistoryFilePath():
+    """ Get full path of history file
+    
+    Args:
+    
+    Return:
+        path (str): History file path
+    
+    """
     maya_script_dir = cmds.internalVar(userScriptDir=True)
     path = os.path.join(maya_script_dir, "miExecutorHistory.txt")
     return path
 
 
 def loadHistoryList():
-    """ Clear history list """
+    """ Clear history list
+    
+    Args:
 
+    Return:
+    
+    """
     historyFilePath = getHistoryFilePath()
 
     if not os.path.exists(historyFilePath):
@@ -307,8 +382,14 @@ def loadHistoryList():
 
 
 def updateHistory(command):
-    """ Update and rewrite history list to file """
+    """ Update and rewrite history list to file
 
+    Args:
+        command (str): Name of command
+
+    Return:
+    
+    """
     historyList = loadHistoryList()
     historyFilePath = getHistoryFilePath()
     if command in historyList:
