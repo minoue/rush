@@ -1,8 +1,10 @@
 import Qt
 import app
+from app.utils import generalUtils
 reload(app)
 
 
+@generalUtils.timer
 def main():
     """ Show window and move it to cursor position """
 

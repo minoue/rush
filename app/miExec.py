@@ -4,7 +4,7 @@ import json
 import os
 import Qt
 import preference
-import customWidgets
+from utils import customWidgets
 from pymel.all import mel as pa
 reload(preference)
 reload(customWidgets)

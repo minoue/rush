@@ -56,7 +56,7 @@ def loadExtraModule(module_path):
 
 def getMayaWindow():
     """ Return Maya's main window. """
-    for obj in Qt.QtWidgets.qApp.topLevelWidgets():
+    for obj in Qt.QtWidgets.QApplication.topLevelWidgets():
         if obj.objectName() == 'MayaWindow':
             return obj
     raise RuntimeError('Could not find MayaWindow instance')
@@ -92,7 +92,6 @@ def getClassList():
 
     # Append extra module objects
     exModObjs = map(loadExtraModule, extModPathList)
-    modObjs.extend(exModObjs)
 
     # List of all Commands class
     commandClassList = [i.Commands for i in modObjs if i is not None]
