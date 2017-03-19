@@ -92,6 +92,7 @@ def getClassList():
 
     # Append extra module objects
     exModObjs = map(loadExtraModule, extModPathList)
+    modObjs.extend(exModObjs)
 
     # List of all Commands class
     commandClassList = [i.Commands for i in modObjs if i is not None]
