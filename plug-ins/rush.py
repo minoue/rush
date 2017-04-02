@@ -69,6 +69,7 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
     """ Custom QLineEdit with custom events and signals"""
 
     escPressed = Qt.QtCore.Signal(str)
+    tabPressed = Qt.QtCore.Signal(str)
 
     def __init__(self, parent=None):
         super(CustomQLineEdit, self).__init__(parent)
@@ -81,6 +82,8 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
     def keyPressEvent(self, event):
         if event.key() == Qt.QtCore.Qt.Key_Escape:
             self.escPressed.emit('esc')
+        elif event.key() == Qt.QtCore.Qt.Key_Tab:
+            self.tabPressed.emit('tab')
         else:
             super(CustomQLineEdit, self).keyPressEvent(event)
 
@@ -123,6 +126,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
         self.LE.textEdited.connect(self.updateData)
         self.LE.returnPressed.connect(self.execute)
         self.LE.escPressed.connect(self.exitApp)
+        self.LE.tabPressed.connect(self.tabCompletion)
         self.LE.setFocus()
 
     def createData(self):
@@ -186,6 +190,13 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
             Qt.QtCore.Qt.CaseInsensitive,
             Qt.QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
+
+    def tabCompletion(self):
+        text = self.LE.text().lower()
+        print self.completer.modelSorting()
+        currents = [i for i in self.commands if text in i.lower()]
+        top = currents[0]
+        self.LE.setText(top)
 
     def execute(self):
         cmd = self.LE.text()
