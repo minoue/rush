@@ -14,25 +14,58 @@ logger.setLevel(level)
 handler.setLevel(level)
 
 
-def getClassList():
+def loadRushCohfig():
+    """
+
+    Return:
+        config(list): List of path module paths
+
+    """
+    userDir = os.path.expanduser("~")
+    configPath = os.path.join(userDir, ".rushConfig")
+
+    defaultModulePath = os.path.join(
+        cmds.internalVar(userScriptDir=True), 'rush')
+
+    if os.path.exists(configPath):
+        try:
+            with open(configPath, 'r') as inFile:
+                config = inFile.read().split()
+        except IOError:
+            config = [defaultModulePath]
+            logger.debug("Failed to load config file")
+    else:
+        logger.debug("Config file doesn't exist. Creating a new config file")
+
+        # Init config file
+        try:
+            with open(configPath, 'w') as outFile:
+                outFile.writelines([defaultModulePath])
+            logger.debug("Created new config file")
+        except IOError:
+            logger.debug("Failed to save config file")
+        finally:
+            config = [defaultModulePath]
+
+    return config
+
+
+def getModulePath(path):
     """
 
     Args:
-        param (logger): logger
+        path (str): directory path to search modules
 
     Return:
-        list: list of classes
+        moduleList (list): List of module paths
+        None: if the path doesn't exist
 
     """
-
-    moduleDirName = "rush"
-    mayaScriptDir = cmds.internalVar(userScriptDir=True)
-
-    moduleRoot = os.path.join(mayaScriptDir, moduleDirName)
-    logger.debug("Module path: %s " % moduleRoot)
+    if not os.path.exists(path):
+        return None
 
     moduleList = []
-    for root, dirs, files in os.walk(moduleRoot):
+    for root, dirs, files in os.walk(path):
         for f in files:
             fullPath = os.path.join(root, f)
             if (fullPath.endswith(".py") and not
@@ -40,7 +73,31 @@ def getClassList():
                     fullPath.endswith("rush.py")):
                 moduleList.append(fullPath)
 
+    return moduleList
+
+
+def getClassList(config):
+    """
+
+    Args:
+        config (list): List of paths
+
+    Return:
+        list: list of classes
+
+    """
+
+    mayaScriptDir = cmds.internalVar(userScriptDir=True)
+
+    # logger.debug("Module path: %s " % moduleRoot)
+
+    moduleList = []
     moduleObjectList = []
+
+    for path in config:
+        pathList = getModulePath(path)
+        if pathList is not None:
+            moduleList.extend(pathList)
 
     for path in moduleList:
         # Create module names for import, for exapmle ...
@@ -103,5 +160,6 @@ class RushCommands(object):
 
 
 # Re-difine RushCommands class to inherit all comamnd classes for the list
-cl = tuple(getClassList())
+config = loadRushCohfig()
+cl = tuple(getClassList(config))
 RushCommands = type('RushCommands', cl, dict(RushCommands.__dict__))
