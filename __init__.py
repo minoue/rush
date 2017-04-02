@@ -14,8 +14,8 @@ logger.setLevel(level)
 handler.setLevel(level)
 
 
-def loadRushCohfig():
-    """
+def loadConfig():
+    """ Load config file
 
     Return:
         config(list): List of path module paths
@@ -27,103 +27,139 @@ def loadRushCohfig():
     defaultModulePath = os.path.join(
         cmds.internalVar(userScriptDir=True), 'rush')
 
-    if os.path.exists(configPath):
-        try:
-            with open(configPath, 'r') as inFile:
-                config = inFile.read().split()
-        except IOError:
-            config = [defaultModulePath]
-            logger.debug("Failed to load config file")
-    else:
-        logger.debug("Config file doesn't exist. Creating a new config file")
+    # Create new config file
+    if not os.path.exists(configPath):
+        initConfig(configPath, defaultModulePath)
+        config = [defaultModulePath]
+        return config
 
-        # Init config file
-        try:
-            with open(configPath, 'w') as outFile:
-                outFile.writelines([defaultModulePath])
-            logger.debug("Created new config file")
-        except IOError:
-            logger.debug("Failed to save config file")
-        finally:
-            config = [defaultModulePath]
+    try:
+        f = open(configPath, 'r')
+        config = f.read().split()
+        f.close()
+    except IOError:
+        config = [defaultModulePath]
+        logger.debug("Failed to load config file")
 
     return config
 
 
-def getModulePath(path):
+def initConfig(configPath, defaultModulePath):
+    """ Init and save new config file
+
+    Args:
+        configPath (str): path to config file
+        defaultModulePath (str): default module path
+
+    Return:
+        None
+
     """
+    logger.debug("Config file doesn't exist. Creating a new config file")
+    # Init config file
+    try:
+        with open(configPath, 'w') as outFile:
+            outFile.writelines([defaultModulePath])
+        logger.debug("Created new config file")
+    except IOError:
+        logger.debug("Failed to save config file")
+
+
+def getModulePath(path):
+    """ Create and return a list of module paths
 
     Args:
         path (str): directory path to search modules
 
     Return:
-        moduleList (list): List of module paths
+        mods (list): List of module paths
         None: if the path doesn't exist
 
     """
     if not os.path.exists(path):
         return None
 
-    moduleList = []
-    for root, dirs, files in os.walk(path):
-        for f in files:
-            fullPath = os.path.join(root, f)
-            if (fullPath.endswith(".py") and not
-                    fullPath.endswith("__init__.py") and not
-                    fullPath.endswith("rush.py")):
-                moduleList.append(fullPath)
+    # Get all files in the directory
+    allFiles = [os.path.join(root, f) for root, firs, files in os.walk(path)
+                for f in files]
 
-    return moduleList
+    # Get only python files
+    pythonFiles = [i for i in allFiles if i.endswith(".py")]
+
+    # Remove __init__ and main plugin file
+    mods = [f for f in pythonFiles
+            if not f.endswith("__init__.py") and not f.endswith("rush.py")]
+
+    return mods
+
+
+def loadModule(path):
+    """ Load module
+
+    Args:
+        path (str): module path
+
+    Return:
+        mod (module object): command module
+        None: if path doesn't exist
+
+    """
+    # Create module names for import, for exapmle ...
+    #
+    # "rush/template"
+    # "animation/animate"
+    # "common/create"
+    # "common/display"
+
+    name = os.path.splitext(path)[0].split("/")
+    name = "/".join(name[-2:])
+
+    try:
+        mod = imp.load_source(name, path)
+        return mod
+    except:
+        logger.debug("Failed to load module : %s" % path)
+        return None
 
 
 def getClassList(config):
-    """
+    """ Create and return a list of command classes
 
     Args:
         config (list): List of paths
 
     Return:
-        list: list of classes
+        commandClassList: list of classes
 
     """
 
-    mayaScriptDir = cmds.internalVar(userScriptDir=True)
-
-    # logger.debug("Module path: %s " % moduleRoot)
-
+    # Create a single list of module paths
     moduleList = []
-    moduleObjectList = []
-
     for path in config:
+        logger.debug("Module path: %s " % path)
         pathList = getModulePath(path)
         if pathList is not None:
             moduleList.extend(pathList)
 
+    # Create a list of module objects
+    moduleObjectList = []
     for path in moduleList:
-        # Create module names for import, for exapmle ...
-        #
-        # "rush/template"
-        # "animation/animate"
-        # "common/create"
-        # "common/display"
+        m = loadModule(path)
+        if m is not None:
+            moduleObjectList.append(m)
 
-        name = os.path.splitext(path)[0].split("/")
-        name = "/".join(name[-2:])
-
-        try:
-            mod = imp.load_source(name, path)
-            moduleObjectList.append(mod)
-        except:
-            logger.debug("Failed to load module : %s" % path)
-
+    # Crate a list of classes
     commandClassList = [i.Commands for i in moduleObjectList]
     logger.debug("All command classes: %s" % str(commandClassList))
 
+    # Create and write a list of all commands for the completer in main plugin
     cmdsDict = {}
     for c in commandClassList:
         cmdsDict.update(c.commandDict)
-
-    outPath = os.path.normpath(os.path.join(mayaScriptDir, "rushCmds.json"))
+    outPath = os.path.normpath(
+        os.path.join(
+            cmds.internalVar(userScriptDir=True),
+            "rushCmds.json"))
     saveCommands(outPath, cmdsDict)
 
     return commandClassList
@@ -160,6 +196,6 @@ class RushCommands(object):
 
 
 # Re-difine RushCommands class to inherit all comamnd classes for the list
-config = loadRushCohfig()
+config = loadConfig()
 cl = tuple(getClassList(config))
 RushCommands = type('RushCommands', cl, dict(RushCommands.__dict__))
