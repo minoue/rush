@@ -230,6 +230,7 @@ class MainWindow(Qt.QtWidgets.QMainWindow):
         self.setWindowFlags(
             Qt.QtCore.Qt.Popup | Qt.QtCore.Qt.FramelessWindowHint)
         self.setFixedHeight(25)
+        self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
         self.cw = Gui(logger, self)
         self.setCentralWidget(self.cw)
