@@ -11,7 +11,6 @@ import json
 import sys
 import os
 import Qt
-reload(rush)
 
 
 kPluginCmdName = "rush"
@@ -193,7 +192,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
 
     def tabCompletion(self):
         text = self.LE.text().lower()
-        print self.completer.modelSorting()
         currents = [i for i in self.commands if text in i.lower()]
         top = currents[0]
         self.LE.setText(top)
@@ -243,6 +241,7 @@ class MainWindow(Qt.QtWidgets.QMainWindow):
         self.setFixedHeight(25)
         self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
+        reload(rush)
         self.cw = Gui(logger, self)
         self.setCentralWidget(self.cw)
 

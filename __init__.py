@@ -148,8 +148,21 @@ def getClassList(config):
         if m is not None:
             moduleObjectList.append(m)
 
+    # Class only for the reload command
+    class Reload(object):
+        commandDict = {}
+
+        def _reloadRush(self):
+            try:
+                cmds.unloadPlugin("rush.py")
+                cmds.loadPlugin("rush.py")
+            except:
+                print "Failed to reload plugin"
+        commandDict['reloadRush'] = "sphere.png"
+
     # Crate a list of classes
     commandClassList = [i.Commands for i in moduleObjectList]
+    commandClassList.append(Reload)
     logger.debug("All command classes: %s" % str(commandClassList))
 
     # Create and write a list of all commands for the completer in main plugin
