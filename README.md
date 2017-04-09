@@ -1,6 +1,7 @@
 Rush
 ========
 
+
 TabMenu-like simple command launcher for Maya
 
 * You can add any commands you want
@@ -25,9 +26,10 @@ TabMenu-like simple command launcher for Maya
 	```python
 	import rush
 	```
+	
 2. Then, activate the plugin.
 
-	![image here](asdfsdf)
+	![gif](https://github.com/minoue/miExecutor/blob/media/images/plugin.png)
 	
 3. Run the comamnd in your script editor.
     
@@ -52,6 +54,7 @@ TabMenu-like simple command launcher for Maya
 	```python
 	from maya import cmds
 	from maya import utils
+	
 	def setupRush():
 	    try:
 	        import rush
@@ -65,8 +68,8 @@ TabMenu-like simple command launcher for Maya
 
 
 ## How to add commands
-Commands can be added by editting/creating module files in the module directory.
-For example, here is the templete script.
+Commands can be added by editting/creating module files.
+For example, here is the templete script in the module directory.
 
 
 ```python
@@ -81,16 +84,30 @@ class Commands(object):
 ```
 
 To add new command, just add new method to the Command class.
-Make sure to add underscore at the begging of the method name. Then, add new key/item to the commandDict. Key is the command name which is the method name without underscore, and item is an icon path(relative or absolute)
+Make sure to add underscore at the begging of the method name. Then, add new key/item to the commandDict. Key is the command name without underscore, and the item is an icon path(relative or absolute)
 
-1. Create a new file.  
-	![image here](asd)
+1. Create a new file.  	
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/createFile.png" alt="Drawing" style="width: 400px;"/>
 	
-2. Copy and paste template.  
-	![image here](asdf)
-	
-3. Add a command.  
-	![image here](asdf)
+2. Copy and paste the code from template file and edit your command as you want.  
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/editFile.png" alt="Drawing" style="width: 400px;"/>
 
-4. Done.  
-	![image here](asdf)
+3. Save the file, go back to maya, and run reload command.  
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/reload.png" alt="Drawing" style="width: 400px;"/>
+	
+4. You new command should be available in the completion.  
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/runNewCommand.png" alt="Drawing" style="width: 400px;"/>
+
+5. Done.  
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/done.png" alt="Drawing" style="width: 400px;"/>
+		
+## Using custom module directory
+You can choose any directories for you modules.  
+Create '.rushConfig' file in your home directory and paths line by line.
+
+eg.
+
+```
+/Users/XXXXXXX/Library/Preferences/Autodesk/maya/2015-x64/scripts/rush
+/Users/XXXXXXX/Dropbox/dev/git/maya/extraModules
+```
