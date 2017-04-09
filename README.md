@@ -88,12 +88,12 @@ Make sure to add underscore at the begging of the method name. Then, add new key
 
 
 1. Create a new file.
-
-  <img src="https://github.com/minoue/miExecutor/blob/media/images/createFile.png" alt="Drawing" style="width: 400px;"/>
+	
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/createFile.png" alt="Drawing" style="width: 400px;"/>
 
 2. Copy and paste the code from template file and edit your command as you want.
-
-  <img src="https://github.com/minoue/miExecutor/blob/media/images/editFile.png" alt="Drawing" style="width: 400px;"/>
+	
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/editFile.png" alt="Drawing" style="width: 400px;"/>
 
 3. Save the file, go back to maya, and run reload command.
 
