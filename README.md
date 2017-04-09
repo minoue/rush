@@ -29,7 +29,7 @@ TabMenu-like simple command launcher for Maya
 	
 2. Then, activate the plugin.
 
-	![gif](https://github.com/minoue/miExecutor/blob/media/images/plugin.png)
+	<img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 400px;"/>
 	
 3. Run the comamnd in your script editor.
     
@@ -85,6 +85,7 @@ class Commands(object):
 
 To add new command, just add new method to the Command class.
 Make sure to add underscore at the begging of the method name. Then, add new key/item to the commandDict. Key is the command name without underscore, and the item is an icon path(relative or absolute)
+
 
 1. Create a new file.  	
 	<img src="https://github.com/minoue/miExecutor/blob/media/images/createFile.png" alt="Drawing" style="width: 400px;"/>
