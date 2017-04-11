@@ -198,6 +198,10 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
 
     def execute(self):
         cmd = self.LE.text()
+
+        # Close gui first otherwise maya clashes(2017)
+        self.exitApp()
+
         try:
             f = getattr(self, "_%s" % cmd)
             f()
@@ -207,7 +211,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
             # by G key
             pm.callLastCommand(
                 """python(\"rush.RushCommands()._%s()\")""" % cmd)
-            self.exitApp()
         except AttributeError:
             pass
 
