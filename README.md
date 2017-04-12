@@ -13,58 +13,41 @@ TabMenu-like simple command launcher for Maya
 
 [Qt.py](https://github.com/mottosso/Qt.py)
 
-## Installation
+## Installation and setup
 
 
-* Download zip file and extract it to your maya script directory. Move the 'rush.py' in the repository to your maya plug-ins directory.
+1. Download zip file and extract it. Rename "rush-master" folder to "rush".
+2. Move the "rush" folder to your maya script directory.
+3. Move the 'Rush.py' in the the folder to your maya plug-ins directory.
+4. Activate Rush.py in the plugin manager.
+
+	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 300px;"/>
 
 
-## Setup and how to run
+## How to run
 
-1. import rush module first.
 
-	```python
-	import rush
-	```
+mel  
 
-2. Then, activate the plugin.
+```
+rush;
+```
 
-  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 300px;"/>
+in python
 
-3. Run the comamnd in your script editor.
+```
+from maya import cmds
+cmds.rush()
+```
 
-    mel  
+You can open the hotkey editor and assign the command to any key you want.
 
-	```
-	rush;
-	```
+### Making commands repeatable by G key
+You have to load rush module to make commands repeatable by G key. Run the following command in the script editor, or simply **add the line to your userSetup.py**.
 
-	or in python
-
-	```
-	from maya import cmds
-	cmds.rush()
-	```
-
-	Or open the hotkey editor and assign the command to any key you want.
-
-	### Automatic setup
-	You can skip the step 1 and 2 by adding the follwing code in your userSetup.py.
-
-	```python
-	from maya import cmds
-	from maya import utils
-
-	def setupRush():
-	    try:
-	        import rush
-	        if not cmds.pluginInfo("rush.py", q=True, loaded=True):
-	            cmds.loadPlugin("rush.py")
-	    except:
-	        print "Failed to import rush module"
-
-	utils.executeDeferred(setupRush)
-	```
+```python
+import rush
+```
 
 
 ## How to add commands
