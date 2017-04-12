@@ -88,7 +88,7 @@ def getModulePath(path):
 
     # Remove __init__ and main plugin file
     mods = [f for f in pythonFiles
-            if not f.endswith("__init__.py") and not f.endswith("rush.py")]
+            if not f.endswith("__init__.py") and not f.endswith("Rush.py")]
 
     return mods
 
@@ -154,8 +154,8 @@ def getClassList(config):
 
         def _reloadRush(self):
             try:
-                cmds.unloadPlugin("rush.py")
-                cmds.loadPlugin("rush.py")
+                cmds.unloadPlugin("Rush.py")
+                cmds.loadPlugin("Rush.py")
             except:
                 print "Failed to reload plugin"
         commandDict['reloadRush'] = "sphere.png"
