@@ -101,9 +101,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        font = self.LE.font()
-        font.setPointSize(14)
-        self.LE.setFont(font)
         self.LE.setFixedWidth(200)
         layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
@@ -241,7 +238,8 @@ class MainWindow(Qt.QtWidgets.QMainWindow):
         self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
         self.setWindowFlags(
             Qt.QtCore.Qt.Popup | Qt.QtCore.Qt.FramelessWindowHint)
-        self.setFixedHeight(25)
+        self.setWindowFlags(
+            self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
         self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
         reload(rush)
