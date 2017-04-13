@@ -54,6 +54,22 @@ def setupLogger(verbose=False):
     return logger
 
 
+def loadStyle():
+    """ Load stylesheet
+    
+    Return:
+        contents(str): stylesheet info in string
+    
+    """
+    mayaScriptDir = cmds.internalVar(userScriptDir=True)
+    qss = os.path.normpath(
+        os.path.join(mayaScriptDir, "rush", "style.qss"))
+    f = file(qss, 'r')
+    contents = f.read()
+    f.close()
+    return contents
+
+
 def getMayaWindow():
     """ Return Maya's main window
     """
@@ -101,7 +117,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(200)
+        self.LE.setFixedWidth(400)
         layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         layout.setSpacing(0)
@@ -116,6 +132,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
         # self.completer.popup().setIconSize(self.iconSize)
+        self.completer.popup().setStyleSheet(loadStyle())
 
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
