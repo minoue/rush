@@ -136,7 +136,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(400)
+        self.LE.setFixedWidth(300)
         self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
@@ -149,7 +149,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
         # self.completer.popup().setIconSize(self.iconSize)
-        # self.completer.popup().setStyleSheet(loadStyle())
+        self.completer.popup().setStyleSheet(loadStyle())
 
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
@@ -267,6 +267,7 @@ class Rush(OpenMayaMPx.MPxCommand):
 
         logger = setupLogger(self.verbose)
         self.mw = Gui(logger, getMayaWindow())
+        self.mw.setStyleSheet(loadStyle())
         self.mw.show()
 
         pos = Qt.QtGui.QCursor.pos()

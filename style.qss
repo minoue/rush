@@ -1,0 +1,23 @@
+QListView
+{
+    color: white;
+    background-color: rgb(60, 60, 60);
+    selection-background-color: rgb(178, 215, 255);
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 0px;
+    border-color: rgb(60, 60, 60, 100);
+    font-size: 10pt;
+}
+
+QLineEdit
+{
+    color: white;
+    background-color: rgb(60, 60, 60);
+    selection-background-color: rgb(178, 215, 255);
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 0px;
+    border-color: white;
+    font-size: 14pt;
+}
