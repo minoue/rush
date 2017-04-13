@@ -56,10 +56,10 @@ def setupLogger(verbose=False):
 
 def loadStyle():
     """ Load stylesheet
-    
+
     Return:
         contents(str): stylesheet info in string
-    
+
     """
     mayaScriptDir = cmds.internalVar(userScriptDir=True)
     qss = os.path.normpath(
@@ -103,13 +103,32 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
             super(CustomQLineEdit, self).keyPressEvent(event)
 
 
-class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
+class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
+
+    def closeExistingWindow(self):
+        """ Close window if exists """
+
+        for qt in Qt.QtWidgets.QApplication.topLevelWidgets():
+            try:
+                if qt.__class__.__name__ == self.__class__.__name__:
+                    qt.close()
+            except:
+                pass
 
     def __init__(self, logger, parent=None):
+        self.closeExistingWindow()
         super(Gui, self).__init__(parent)
-        self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
 
         self.logger = logger
+
+        self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
+        self.setWindowTitle("Rush")
+        self.setWindowFlags(Qt.QtCore.Qt.Window)
+        self.setWindowFlags(
+            Qt.QtCore.Qt.Popup | Qt.QtCore.Qt.FramelessWindowHint)
+        self.setWindowFlags(
+            self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
+        self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
         # Create Data then UI
         self.createData()
@@ -118,12 +137,10 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
     def createUI(self):
         self.LE = CustomQLineEdit(self)
         self.LE.setFixedWidth(400)
-        layout = Qt.QtWidgets.QBoxLayout(
+        self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
-        layout.setSpacing(0)
-        layout.setContentsMargins(0, 0, 0, 0)
-        layout.addWidget(self.LE)
-        self.setLayout(layout)
+        self.layout.addWidget(self.LE)
+        self.setLayout(self.layout)
 
         # Set up QCompleter
         self.completer = Qt.QtWidgets.QCompleter(self)
@@ -132,13 +149,13 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
         # self.completer.popup().setIconSize(self.iconSize)
-        self.completer.popup().setStyleSheet(loadStyle())
+        # self.completer.popup().setStyleSheet(loadStyle())
 
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
         self.LE.textEdited.connect(self.updateData)
         self.LE.returnPressed.connect(self.execute)
-        self.LE.escPressed.connect(self.exitApp)
+        self.LE.escPressed.connect(self.close)
         self.LE.tabPressed.connect(self.tabCompletion)
         self.LE.setFocus()
 
@@ -214,7 +231,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
         cmd = self.LE.text()
 
         # Close gui first otherwise maya clashes(2017)
-        self.exitApp()
+        self.close()
 
         try:
             f = getattr(self, "_%s" % cmd)
@@ -227,41 +244,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
                 """python(\"rush.RushCommands()._%s()\")""" % cmd)
         except AttributeError:
             pass
-
-    def exitApp(self):
-        self.close()
-        self.parent().close()
-
-
-class MainWindow(Qt.QtWidgets.QMainWindow):
-
-    def closeExistingWindow(self):
-        """ Close window if exists """
-
-        for qt in Qt.QtWidgets.QApplication.topLevelWidgets():
-            try:
-                if qt.__class__.__name__ == self.__class__.__name__:
-                    qt.close()
-            except:
-                pass
-
-    def __init__(self, logger, parent=getMayaWindow()):
-        self.closeExistingWindow()
-        super(MainWindow, self).__init__(parent)
-
-        self.logger = logger
-        self.setWindowTitle("test")
-        self.setWindowFlags(Qt.QtCore.Qt.Tool)
-        self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
-        self.setWindowFlags(
-            Qt.QtCore.Qt.Popup | Qt.QtCore.Qt.FramelessWindowHint)
-        self.setWindowFlags(
-            self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
-        self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
-
-        reload(rush)
-        self.cw = Gui(logger, self)
-        self.setCentralWidget(self.cw)
 
 
 class Rush(OpenMayaMPx.MPxCommand):
@@ -284,17 +266,16 @@ class Rush(OpenMayaMPx.MPxCommand):
             self.verbose = argData.flagArgumentBool(kVerboseFlag, 0)
 
         logger = setupLogger(self.verbose)
-        self.mainWindow = MainWindow(logger)
-        self.mainWindow.show()
+        self.mw = Gui(logger, getMayaWindow())
+        self.mw.show()
 
-        # Move the window to the cursor position.
         pos = Qt.QtGui.QCursor.pos()
-        self.mainWindow.move(
-            pos.x() - (self.mainWindow.width() / 2),
-            pos.y() - (self.mainWindow.height() / 2))
+        self.mw.move(
+            pos.x() - (self.mw.width() / 2),
+            pos.y() - (self.mw.height() / 2))
 
-        self.mainWindow.raise_()
-        self.mainWindow.activateWindow()
+        self.mw.raise_()
+        self.mw.activateWindow()
 
     def undoIt(self):
         pass
