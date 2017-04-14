@@ -48,6 +48,18 @@ class Commands(object):
         cmds.setToolTo(cmds.snapTogetherCtx())
     commandDict['snapTogetherTool'] = "snapTogetherTool.png"
 
+    def _centerPivot(self):
+        cmds.CenterPivot()
+    commandDict['centerPivot'] = "menuIconModify.png"
+
+    def _prefixHierarchyNames(self):
+        cmds.PrefixHierarchyNames()
+    commandDict['prefixHierarchyNames'] = "menuIconModify.png"
+
+    def _searchReplaceNames(self):
+        mel.eval("performSearchReplaceNames 1")
+    commandDict['searchReplaceNames'] = "menuIconModify.png"
+
     def _addAttribute(self):
         cmds.AddAttribute()
     commandDict['addAttribute'] = "menuIconModify.png"
@@ -68,29 +80,30 @@ class Commands(object):
         cmds.makeIdentity(apply=True, t=False, r=False, s=True, n=False)
     commandDict['freezeOnlyScale'] = "menuIconModify.png"
 
-    def _nurbsToPolygonOptions(self):
+    # Conversions
+    def _convertNurbsToPolygonOptions(self):
         cmds.NURBSToPolygonsOptions()
-    commandDict['nurbsToPolygonOptions'] = "nurbsToPolygons.png"
+    commandDict['convertNurbsToPolygonOptions'] = "nurbsToPolygons.png"
 
-    def _nurbsToSubdivOptions(self):
+    def _convertNurbsToSubdivOptions(self):
         cmds.CreateSubdivSurfaceOptions()
-    commandDict['nurbsToSubdivOptions'] = "nurbsToSubdivs.png"
+    commandDict['convertNurbsToSubdivOptions'] = "nurbsToSubdivs.png"
 
-    def _polygonToSubdivOptions(self):
+    def _convertPolygonToSubdivOptions(self):
         cmds.CreateSubdivSurfaceOptions()
-    commandDict['polygonToSubdivOptions'] = "subdivCreate.png"
+    commandDict['convertPolygonToSubdivOptions'] = "subdivCreate.png"
 
-    def _polygonEdgesToCurveOptions(self):
+    def _convertPolygonEdgesToCurveOptions(self):
         cmds.CreateCurveFromPolyOptions()
-    commandDict['polygonEdgesToCurveOptions'] = "menuIconModify.png"
+    commandDict['convertPolygonEdgesToCurveOptions'] = "menuIconModify.png"
 
-    def _subdivToPolygonsOptions(self):
+    def _convertSubdivToPolygonsOptions(self):
         cmds.TesselateSubdivSurfaceOptions()
-    commandDict['subdivToPolygonsOptions'] = "subdivTessellate.png"
+    commandDict['convertSubdivToPolygonsOptions'] = "subdivTessellate.png"
 
-    def _subdivToNURBSOptions(self):
+    def _convertSubdivToNURBSOptions(self):
         cmds.SubdivToNURBSOptions()
-    commandDict['subdivToNURBSOptions'] = "subdivToNurbs.png"
+    commandDict['convertSubdivToNURBSOptions'] = "subdivToNurbs.png"
 
     def _paintEffectsToPolygonsOptions(self):
         cmds.PaintEffectsToPolyOptions()
