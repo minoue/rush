@@ -143,7 +143,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(200)
+        self.LE.setFixedWidth(300)
         self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
