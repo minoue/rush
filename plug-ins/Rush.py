@@ -11,6 +11,7 @@ import json
 import sys
 import os
 import Qt
+reload(rush)
 
 
 kPluginCmdName = "rush"
