@@ -2,7 +2,7 @@ Rush
 ========
 
 
-TabMenu-like simple command launcher for Maya
+TabMenu-like simple command launcher for Maya (formerly miExecutor)
 
 * You can add any commands you want
 * Repeatable by G key
@@ -16,7 +16,7 @@ TabMenu-like simple command launcher for Maya
 ## Installation and setup
 
 
-1. Download zip file and extract it. Rename "rush-master" folder to "rush".
+1. Download [zip](https://github.com/minoue/rush/zipball/master) file and extract it. Rename the folder to "rush".
 2. Move the "rush" folder to your maya script directory.
 3. Move the 'Rush.py' in the the folder to your maya plug-ins directory.
 4. Activate Rush.py in the plugin manager.
