@@ -126,9 +126,15 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.setWindowFlags(Qt.QtCore.Qt.Window)
         self.setWindowFlags(
             Qt.QtCore.Qt.Popup | Qt.QtCore.Qt.FramelessWindowHint)
-        self.setWindowFlags(
-            self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
+        try:
+            self.setWindowFlags(
+                self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
+        except AttributeError:
+            pass
+
         self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
+
+        self.setStyleSheet(loadStyle())
 
         # Create Data then UI
         self.createData()
@@ -136,7 +142,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(300)
+        self.LE.setFixedWidth(200)
         self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
@@ -267,7 +273,6 @@ class Rush(OpenMayaMPx.MPxCommand):
 
         logger = setupLogger(self.verbose)
         self.mw = Gui(logger, getMayaWindow())
-        self.mw.setStyleSheet(loadStyle())
         self.mw.show()
 
         pos = Qt.QtGui.QCursor.pos()
