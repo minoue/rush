@@ -133,7 +133,9 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         except AttributeError:
             pass
 
-        self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
+        # Dpi value to set the width for window and lineedit.
+        # self.dpi = self.logicalDpiX()
+        self.dpi = self.physicalDpiX()
 
         self.setStyleSheet(loadStyle())
 
@@ -141,12 +143,15 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.createData()
         self.createUI()
 
+        self.setFixedWidth(self.dpi * 2)
+
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(300)
+        self.LE.setFixedWidth(self.dpi * 2)
         self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
+        self.layout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.layout)
 
         # Set up QCompleter
