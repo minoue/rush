@@ -19,6 +19,9 @@ kVerboseFlag = "-v"
 kVerboseLongFlag = "-verbose"
 
 
+MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
+
+
 # Define mel procedure to call the previous function
 mel.eval("""
 global proc callLastCommand(string $function)
@@ -26,6 +29,18 @@ global proc callLastCommand(string $function)
     repeatLast -ac $function -acl "blah-blah....";
 }
 """)
+
+
+# Load json files as dicrectory.
+# key is command name, and its item is icon path.
+commandFile = os.path.normpath(
+    os.path.join(MAYA_SCRIPT_DIR, "rushCmds.json"))
+try:
+    f = open(commandFile)
+    CMD_DICT = json.load(f)
+    f.close()
+except IOError:
+    CMD_DICT = {}
 
 
 def setupLogger(verbose=False):
@@ -62,9 +77,8 @@ def loadStyle():
         contents(str): stylesheet info in string
 
     """
-    mayaScriptDir = cmds.internalVar(userScriptDir=True)
     qss = os.path.normpath(
-        os.path.join(mayaScriptDir, "rush", "style.qss"))
+        os.path.join(MAYA_SCRIPT_DIR, "rush", "style.qss"))
     f = file(qss, 'r')
     contents = f.read()
     f.close()
@@ -116,11 +130,19 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
             except:
                 pass
 
-    def __init__(self, logger, parent=None):
+    def __init__(self, logger, cmdDict, parent=None):
+        """
+
+        Args:
+            logger (Logger): logger
+            cmdDict (dict): Dict of all commands
+
+        """
         self.closeExistingWindow()
         super(Gui, self).__init__(parent)
 
         self.logger = logger
+        self.cmdDict = cmdDict
 
         self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
         self.setWindowTitle("Rush")
@@ -181,29 +203,17 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
 
         model = Qt.QtGui.QStandardItemModel()
 
-        # Load json files as dicrectory.
-        # key is command name, and its item is icon path.
-        mayaScriptDir = cmds.internalVar(userScriptDir=True)
-        commandFile = os.path.normpath(
-            os.path.join(mayaScriptDir, "rushCmds.json"))
-        try:
-            f = open(commandFile)
-            jsonDict = json.load(f)
-            f.close()
-        except IOError:
-            jsonDict = {}
-
         # Create a list of command names
-        self.commands = [i for i in jsonDict]
+        self.commands = [i for i in self.cmdDict]
 
         # Add all command names and icon paths to the the model(model)
-        for num, command in enumerate(jsonDict):
+        for num, command in enumerate(self.cmdDict):
             item = Qt.QtGui.QStandardItem(command)
-            if os.path.isabs(jsonDict[command]) is True:
-                iconPath = os.path.normpath(jsonDict[command])
+            if os.path.isabs(self.cmdDict[command]) is True:
+                iconPath = os.path.normpath(self.cmdDict[command])
                 item.setIcon(Qt.QtGui.QIcon(iconPath))
             else:
-                item.setIcon(Qt.QtGui.QIcon(":%s" % jsonDict[command]))
+                item.setIcon(Qt.QtGui.QIcon(":%s" % self.cmdDict[command]))
             model.setItem(num, 0, item)
 
         # Store the model(model) into the sortFilterProxy model
@@ -278,7 +288,7 @@ class Rush(OpenMayaMPx.MPxCommand):
             self.verbose = argData.flagArgumentBool(kVerboseFlag, 0)
 
         logger = setupLogger(self.verbose)
-        self.mw = Gui(logger, getMayaWindow())
+        self.mw = Gui(logger, CMD_DICT, getMayaWindow())
         self.mw.show()
 
         pos = Qt.QtGui.QCursor.pos()
