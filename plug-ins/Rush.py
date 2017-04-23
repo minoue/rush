@@ -342,7 +342,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMayaMPx.MFnPlugin(mobject, "Michitaka Inoue", "1.0", "Any")
+    mplugin = OpenMayaMPx.MFnPlugin(mobject, "Michitaka Inoue", "2.0.1", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, cmdCreator, syntaxCreator)
     except:
