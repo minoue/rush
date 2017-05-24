@@ -1,12 +1,11 @@
 Rush
 ========
 
-[日本語](https://github.com/minoue/rush/blob/master/README_jp.md)
 
-TabMenu-like simple command launcher for Maya (formerly miExecutor)
+Maya用のタブメニュー風コマンドランチャー
 
-* You can add any commands you want
-* Repeatable by G key
+* 好きなコマンドを登録可能
+* Gキーでリピート可能
 
 ![gif](https://github.com/minoue/miExecutor/blob/media/images/demo.gif)
 
@@ -17,10 +16,10 @@ TabMenu-like simple command launcher for Maya (formerly miExecutor)
 ## Installation and setup
 
 ### Install from zip file
-1. Download [zip](https://github.com/minoue/rush/archive/master.zip) file and extract it. Rename the 'rush-master' folder to "rush".
-2. Move the "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
-3. Move the 'Rush.py' in the the folder to your maya plug-ins directory.
-4. Activate Rush.py in the plugin manager.
+1. [zip](https://github.com/minoue/rush/archive/master.zip)をダウンロードし、解凍したあとにできる 'rush-master' フォルダを "rush"にリネームする。
+2. "rush" フォルダをMayaのスクリプトフォルダに移動する。 例 C:\Users\YOURNAME\Documents\maya\2017\scripts
+3. "rush/plug-ins"フォルダの中にある'Rush.py'をMayaのプラグインフォルダに移動する。
+4. MayaのプラグインマネージャからRush.pyを有効にする。
 
 	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 300px;"/>
 
