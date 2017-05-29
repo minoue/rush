@@ -1,8 +1,14 @@
 from pymel.all import mel as pm
 from maya import OpenMayaMPx
+from maya import OpenMayaUI
 from maya import OpenMaya
 from maya import cmds
 from maya import mel
+try:
+    import shiboken
+except ImportError:
+    import shiboken2 as shiboken
+
 import rush
 import logging
 import string
@@ -86,13 +92,8 @@ def loadStyle():
 
 
 def getMayaWindow():
-    """ Return Maya's main window
-    """
-
-    for obj in Qt.QtWidgets.QApplication.topLevelWidgets():
-        if obj.objectName() == 'MayaWindow':
-            return obj
-    raise RuntimeError('Could not find MayaWindow instance')
+        ptr = OpenMayaUI.MQtUtil.mainWindow()
+        return shiboken.wrapInstance(long(ptr), Qt.QtWidgets.QMainWindow)
 
 
 class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
