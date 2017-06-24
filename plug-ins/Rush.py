@@ -210,11 +210,12 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         # Add all command names and icon paths to the the model(model)
         for num, command in enumerate(self.cmdDict):
             item = Qt.QtGui.QStandardItem(command)
-            if os.path.isabs(self.cmdDict[command]) is True:
-                iconPath = os.path.normpath(self.cmdDict[command])
+            if os.path.isabs(self.cmdDict[command]['icon']) is True:
+                iconPath = os.path.normpath(self.cmdDict[command]['icon'])
                 item.setIcon(Qt.QtGui.QIcon(iconPath))
             else:
-                item.setIcon(Qt.QtGui.QIcon(":%s" % self.cmdDict[command]))
+                item.setIcon(
+                    Qt.QtGui.QIcon(":%s" % self.cmdDict[command]['icon']))
             model.setItem(num, 0, item)
 
         # Store the model(model) into the sortFilterProxy model

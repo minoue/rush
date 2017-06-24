@@ -168,7 +168,20 @@ def getClassList(config):
     # Create and write a list of all commands for the completer in main plugin
     cmdsDict = {}
     for c in commandClassList:
-        cmdsDict.update(c.commandDict)
+        module_path = c.__module__
+
+        # Create temp dict for each command to store basic information
+        # about the command
+        tempDict = {}
+        for cmd in c.commandDict:
+            command_data = {}
+            command_data[cmd] = {}
+            command_data[cmd]['icon'] = c.commandDict[cmd]
+            command_data[cmd]['path'] = module_path
+            tempDict.update(command_data)
+
+        cmdsDict.update(tempDict)
+
     outPath = os.path.normpath(
         os.path.join(
             cmds.internalVar(userScriptDir=True),
