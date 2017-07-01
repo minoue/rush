@@ -1,6 +1,7 @@
 from maya import cmds
 import logging
 import json
+import sys
 import imp
 import os
 
@@ -97,7 +98,7 @@ def loadModule(path):
     """ Load module
 
     Args:
-        path (str): module path
+        path (str): Full path to the python module
 
     Return:
         mod (module object): command module
@@ -111,7 +112,13 @@ def loadModule(path):
     # "common/create"
     # "common/display"
 
-    name = os.path.splitext(path)[0].split("/")
+    normpath = os.path.normpath(path)
+
+    if sys.platform == "win32":
+        name = os.path.splitext(normpath)[0].split("\\")
+    else:
+        name = os.path.splitext(normpath)[0].split("/")
+
     name = "/".join(name[-2:])
 
     try:
