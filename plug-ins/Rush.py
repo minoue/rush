@@ -23,6 +23,8 @@ reload(rush)
 kPluginCmdName = "rush"
 kVerboseFlag = "-v"
 kVerboseLongFlag = "-verbose"
+kMenuFlag = "-m"
+kMenuFlagLong = "-menu"
 
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
@@ -119,6 +121,65 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
             super(CustomQLineEdit, self).keyPressEvent(event)
 
 
+class Menu(Qt.QtWidgets.QMenu):
+
+    def __init__(self, commandDict, width, parent=None):
+        super(Menu, self).__init__(parent)
+
+        self.menuList = []
+        self.commandDict = commandDict
+        self.setFixedWidth(width)
+
+        self.createMenu()
+
+    def closeWindow(self):
+        self.parent().close()
+
+    def createMenu(self):
+        def getExistingMenu(menuList, title):
+            for m in menuList:
+                if m.title() == title:
+                    return m
+            return None
+
+        for command in self.commandDict:
+            path = self.commandDict[command]['path']
+            if path == "rush":
+                continue
+            if path == "module/template":
+                continue
+
+            pathList = path.split("/")
+            pathLength = len(pathList)
+            lastIndex = pathLength - 1
+
+            parentMenu = None
+
+            for num, category in enumerate(pathList):
+                if num == 0:
+                    m = getExistingMenu(self.menuList, category)
+                    if m is None:
+                        menu = Qt.QtWidgets.QMenu(category)
+                        # rootMenu.addMenu(menu)
+                        self.addMenu(menu)
+                        self.menuList.append(menu)
+                        parentMenu = menu
+                    else:
+                        parentMenu = m
+                elif num == lastIndex:
+                    m = getExistingMenu(self.menuList, category)
+                    if m is None:
+                        subMenu = Qt.QtWidgets.QMenu(category)
+                        parentMenu.addMenu(subMenu)
+                        self.menuList.append(subMenu)
+                        parentMenu = subMenu
+                    else:
+                        parentMenu = m
+                    parentMenu.addAction(command, self.closeWindow)
+                else:
+                    pass
+
+
 class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
 
     def closeExistingWindow(self):
@@ -131,7 +192,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
             except:
                 pass
 
-    def __init__(self, logger, cmdDict, parent=None):
+    def __init__(self, logger, cmdDict, menu=False, parent=None):
         """
 
         Args:
@@ -143,6 +204,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         super(Gui, self).__init__(parent)
 
         self.logger = logger
+        self.menu = menu
         self.cmdDict = cmdDict
 
         self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
@@ -171,9 +233,14 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
     def createUI(self):
         self.LE = CustomQLineEdit(self)
         self.LE.setFixedWidth(self.dpi * 2)
+
+        # Layout
         self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
+        if self.menu is True:
+            menu = Menu(self.cmdDict, self.dpi * 2)
+            self.layout.addWidget(menu)
         self.layout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.layout)
 
@@ -276,6 +343,7 @@ class Rush(OpenMayaMPx.MPxCommand):
         super(Rush, self).__init__()
 
         self.verbose = False
+        self.menu = False
         self.cmdArg = "Initial arg"
 
     def doIt(self, args):
@@ -289,8 +357,11 @@ class Rush(OpenMayaMPx.MPxCommand):
         if argData.isFlagSet(kVerboseFlag):
             self.verbose = argData.flagArgumentBool(kVerboseFlag, 0)
 
+        if argData.isFlagSet(kMenuFlag):
+            self.menu = argData.flagArgumentBool(kMenuFlag, 0)
+
         logger = setupLogger(self.verbose)
-        self.mw = Gui(logger, CMD_DICT, getMayaWindow())
+        self.mw = Gui(logger, CMD_DICT, self.menu, getMayaWindow())
         self.mw.show()
 
         pos = Qt.QtGui.QCursor.pos()
@@ -334,6 +405,7 @@ def syntaxCreator():
     syntax = OpenMaya.MSyntax()
     syntax.addArg(OpenMaya.MSyntax.kString)
     syntax.addFlag(kVerboseFlag, kVerboseLongFlag, OpenMaya.MSyntax.kBoolean)
+    syntax.addFlag(kMenuFlag, kMenuFlagLong, OpenMaya.MSyntax.kBoolean)
     return syntax
 
 
