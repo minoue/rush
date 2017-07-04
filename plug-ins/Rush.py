@@ -99,7 +99,10 @@ def getMayaWindow():
 
 
 class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
-    """ Custom QLineEdit with custom events and signals"""
+    """ Custom QLineEdit with custom events and signals
+    Reference:
+    https://ilmvfx.wordpress.com/2016/11/02/how-to-add-a-search-icon-and-clear-button-to-qlineedit/
+    """
 
     escPressed = Qt.QtCore.Signal(str)
     tabPressed = Qt.QtCore.Signal(str)
@@ -107,6 +110,44 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
     def __init__(self, parent=None):
         super(CustomQLineEdit, self).__init__(parent)
         self.setFocusPolicy(Qt.QtCore.Qt.StrongFocus)
+
+        b64_data = (
+            'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tI'
+            'EdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IF'
+            'BsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFl'
+            'QRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93'
+            'd3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcge'
+            'G1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaH'
+            'R0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2F'
+            'wYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIg'
+            'dmlld0JveD0iMCAwIDQ4NS4yMTMgNDg1LjIxMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ'
+            '3JvdW5kOm5ldyAwIDAgNDg1LjIxMyA0ODUuMjEzOyIgeG1sOnNwYWNlPSJwcmVzZX'
+            'J2ZSI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ3MS44ODIsNDA3LjU2N0wzNjAuNTY'
+            '3LDI5Ni4yNDNjLTE2LjU4NiwyNS43OTUtMzguNTM2LDQ3LjczNC02NC4zMzEsNjQu'
+            'MzIxbDExMS4zMjQsMTExLjMyNCAgICBjMTcuNzcyLDE3Ljc2OCw0Ni41ODcsMTcuN'
+            'zY4LDY0LjMyMSwwQzQ4OS42NTQsNDU0LjE0OSw0ODkuNjU0LDQyNS4zMzQsNDcxLj'
+            'g4Miw0MDcuNTY3eiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTxwYXRoIGQ9Ik0zNjMuOTA'
+            '5LDE4MS45NTVDMzYzLjkwOSw4MS40NzMsMjgyLjQ0LDAsMTgxLjk1NiwwQzgxLjQ3'
+            'NCwwLDAuMDAxLDgxLjQ3MywwLjAwMSwxODEuOTU1czgxLjQ3MywxODEuOTUxLDE4M'
+            'S45NTUsMTgxLjk1MSAgICBDMjgyLjQ0LDM2My45MDYsMzYzLjkwOSwyODIuNDM3LD'
+            'M2My45MDksMTgxLjk1NXogTTE4MS45NTYsMzE4LjQxNmMtNzUuMjUyLDAtMTM2LjQ'
+            '2NS02MS4yMDgtMTM2LjQ2NS0xMzYuNDYgICAgYzAtNzUuMjUyLDYxLjIxMy0xMzYu'
+            'NDY1LDEzNi40NjUtMTM2LjQ2NWM3NS4yNSwwLDEzNi40NjgsNjEuMjEzLDEzNi40N'
+            'jgsMTM2LjQ2NSAgICBDMzE4LjQyNCwyNTcuMjA4LDI1Ny4yMDYsMzE4LjQxNiwxOD'
+            'EuOTU2LDMxOC40MTZ6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTc1Ljg'
+            'xNywxODEuOTU1aDMwLjMyMmMwLTQxLjgwMywzNC4wMTQtNzUuODE0LDc1LjgxNi03'
+            'NS44MTRWNzUuODE2QzEyMy40MzgsNzUuODE2LDc1LjgxNywxMjMuNDM3LDc1LjgxN'
+            'ywxODEuOTU1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+Cj'
+            'xnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo'
+            '8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+'
+            'CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=')
+
+        data = Qt.QtCore.QByteArray.fromBase64(b64_data)
+        tempPixmap = Qt.QtGui.QPixmap()
+        tempPixmap.loadFromData(data)
+        self.iconPixmap = tempPixmap.scaled(32, 32)
+
+        self.setTextMargins(36, 0, 0, 0)
 
     def focusOutEvent(self, event):
         # Emit signal to close the window when it gets out of focus
@@ -119,6 +160,15 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
             self.tabPressed.emit('tab')
         else:
             super(CustomQLineEdit, self).keyPressEvent(event)
+
+    def paintEvent(self, event):
+        super(CustomQLineEdit, self).paintEvent(event)
+
+        painter = Qt.QtGui.QPainter(self)
+        height = self.iconPixmap.height()
+        right_border = 3
+        painter.drawPixmap(
+            right_border+2, (self.height() - height) / 2, self.iconPixmap)
 
 
 class Menu(Qt.QtWidgets.QMenu):
@@ -233,6 +283,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
     def createUI(self):
         self.LE = CustomQLineEdit(self)
         self.LE.setFixedWidth(self.dpi * 2)
+        self.LE.setPlaceholderText("Search")
 
         # Layout
         self.layout = Qt.QtWidgets.QBoxLayout(
