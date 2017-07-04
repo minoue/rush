@@ -225,9 +225,14 @@ class Menu(Qt.QtWidgets.QMenu):
                         parentMenu = subMenu
                     else:
                         parentMenu = m
-                    parentMenu.addAction(command, self.closeWindow)
+                    parentMenu.addAction(command, self.execute)
                 else:
                     pass
+
+    def execute(self):
+        command = self.sender().text()
+        self.parent().LE.setText(command)
+        self.parent().execute()
 
 
 class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
