@@ -145,7 +145,11 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
         data = Qt.QtCore.QByteArray.fromBase64(b64_data)
         tempPixmap = Qt.QtGui.QPixmap()
         tempPixmap.loadFromData(data)
-        self.iconPixmap = tempPixmap.scaled(32, 32)
+        self.iconPixmap = tempPixmap.scaled(
+            32,
+            32,
+            Qt.QtCore.Qt.IgnoreAspectRatio,
+            Qt.QtCore.Qt.SmoothTransformation)
 
         self.setTextMargins(36, 0, 0, 0)
 
