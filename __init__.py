@@ -23,10 +23,10 @@ def loadConfig():
 
     """
     userDir = os.path.expanduser("~")
-    configPath = os.path.join(userDir, ".rushConfig")
+    configPath = os.path.normpath(os.path.join(userDir, ".rushConfig"))
 
-    defaultModulePath = os.path.join(
-        cmds.internalVar(userScriptDir=True), 'rush')
+    defaultModulePath = os.path.normpath(os.path.join(
+        cmds.internalVar(userScriptDir=True), 'rush'))
 
     # Create new config file
     if not os.path.exists(configPath):
