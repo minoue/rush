@@ -169,6 +169,7 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
         super(CustomQLineEdit, self).paintEvent(event)
 
         painter = Qt.QtGui.QPainter(self)
+        painter.setOpacity(0.75)
         height = self.iconPixmap.height()
         right_border = 3
         painter.drawPixmap(
