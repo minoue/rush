@@ -49,6 +49,28 @@ cmds.rush()
 ```
 
 You can open the hotkey editor and assign the command to any key you want.
+### Option
+
+|Longname|Shortname|Argument Type|Default|Properties|
+|:--:|:--:|:--:|:--:|:--:|
+|menu|m|bool|False|C|
+
+For example,
+
+```python
+from maya import cmds
+cmds.rush()
+```
+
+<img src="https://github.com/minoue/rush/blob/media/images/normalGUI.png" alt="Drawing" style="width: 300px;"/>
+
+```python
+from maya import cmds
+cmds.rush(menu=True)
+```
+
+<img src="https://github.com/minoue/rush/blob/media/images/menuGUI.png" alt="Drawing" style="width: 300px;"/>
+
 
 ### Making commands repeatable by G key
 You have to load rush module to make commands repeatable by G key. Run the following command in the script editor, or simply **add the line to your userSetup.py**.
