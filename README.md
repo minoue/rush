@@ -22,7 +22,7 @@ TabMenu-like simple command launcher for Maya (formerly miExecutor)
 3. Move the 'Rush.py' in the the folder to your maya plug-ins directory.
 4. Activate Rush.py in the plugin manager.
 
-	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 300px;"/>
+	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" width="600">
 
 ### Install using git
 In your user script directory,
@@ -62,14 +62,14 @@ from maya import cmds
 cmds.rush()
 ```
 
-<img src="https://github.com/minoue/rush/blob/media/images/normalGUI.png" alt="Drawing" style="width: 300px;"/>
+<img src="https://github.com/minoue/rush/blob/media/images/normalGUI.png" width="400">
 
 ```python
 from maya import cmds
 cmds.rush(menu=True)
 ```
 
-<img src="https://github.com/minoue/rush/blob/media/images/menuGUI.png" alt="Drawing" style="width: 300px;"/>
+<img src="https://github.com/minoue/rush/blob/media/images/menuGUI.png" width="400">
 
 
 ### Making commands repeatable by G key
