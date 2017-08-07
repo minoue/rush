@@ -98,6 +98,61 @@ def getMayaWindow():
         return shiboken.wrapInstance(long(ptr), Qt.QtWidgets.QMainWindow)
 
 
+class History(object):
+
+    def __init__(self, parent=None):
+
+        self.history = self.read()
+
+    def read(self):
+        """ Load history
+
+        Return:
+            history(list): list of commands
+
+        """
+        historyPath = os.path.join(MAYA_SCRIPT_DIR, "rushHistory.txt")
+        if os.path.exists(historyPath):
+            try:
+                historyFile = open(historyPath, 'r')
+                h = historyFile.read().splitlines()
+                historyFile.close()
+                return h
+            except IOError:
+                return []
+        else:
+            return []
+
+    def append(self, command):
+        """ append history
+
+        """
+        self.history.append(command)
+
+    def save(self):
+        """ Write history
+
+        """
+
+        historyPath = os.path.join(MAYA_SCRIPT_DIR, "rushHistory.txt")
+        try:
+            historyFile = open(historyPath, 'w')
+            for line in self.history:
+                historyFile.write(line + "\n")
+            historyFile.close()
+        except IOError:
+            pass
+
+    def clear(self):
+        """ Clear history
+
+        Return:
+            None
+
+        """
+        pass
+
+
 class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
     """ Custom QLineEdit with custom events and signals
     Reference:
@@ -290,6 +345,8 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
 
         self.setFixedWidth(self.dpi * 2)
 
+        self.history = History()
+
     def createUI(self):
         self.LE = CustomQLineEdit(self)
         self.LE.setFixedWidth(self.dpi * 2)
@@ -382,6 +439,9 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
     def execute(self):
         cmd = self.LE.text()
 
+        # Add command to history data
+        self.history.append(cmd)
+
         # Close gui first otherwise maya clashes(2017)
         self.close()
 
@@ -396,6 +456,8 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
                 """python(\"rush.RushCommands()._%s()\")""" % cmd)
         except AttributeError:
             pass
+
+        self.history.save()
 
 
 class Rush(OpenMayaMPx.MPxCommand):
@@ -422,7 +484,11 @@ class Rush(OpenMayaMPx.MPxCommand):
             self.menu = argData.flagArgumentBool(kMenuFlag, 0)
 
         logger = setupLogger(self.verbose)
-        self.mw = Gui(logger, CMD_DICT, self.menu, getMayaWindow())
+
+        self.mw = Gui(logger,
+                      CMD_DICT,
+                      self.menu,
+                      getMayaWindow())
         self.mw.show()
 
         pos = Qt.QtGui.QCursor.pos()
