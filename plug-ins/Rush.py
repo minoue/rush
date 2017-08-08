@@ -161,6 +161,7 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
 
     escPressed = Qt.QtCore.Signal(str)
     tabPressed = Qt.QtCore.Signal(str)
+    downPressed = Qt.QtCore.Signal(str)
 
     def __init__(self, parent=None):
         super(CustomQLineEdit, self).__init__(parent)
@@ -217,6 +218,8 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
             self.escPressed.emit('esc')
         elif event.key() == Qt.QtCore.Qt.Key_Tab:
             self.tabPressed.emit('tab')
+        elif event.key() == Qt.QtCore.Qt.Key_Down:
+            self.downPressed.emit('down')
         else:
             super(CustomQLineEdit, self).keyPressEvent(event)
 
@@ -321,6 +324,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.logger = logger
         self.menu = menu
         self.cmdDict = cmdDict
+        self.history = History()
 
         self.setAttribute(Qt.QtCore.Qt.WA_DeleteOnClose)
         self.setWindowTitle("Rush")
@@ -344,8 +348,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.createUI()
 
         self.setFixedWidth(self.dpi * 2)
-
-        self.history = History()
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
@@ -371,12 +373,20 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         # self.completer.popup().setIconSize(self.iconSize)
         self.completer.popup().setStyleSheet(loadStyle())
 
+        # Setup QCompleter for history
+        self.histCompleter = Qt.QtWidgets.QCompleter(self)
+        self.histCompleter.setCompletionMode(
+            Qt.QtWidgets.QCompleter.UnfilteredPopupCompletion)
+        self.histCompleter.setModel(self.historyModel)
+        # self.histCompleter.setObjectName("historyCompleter")
+
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
         self.LE.textEdited.connect(self.updateData)
         self.LE.returnPressed.connect(self.execute)
         self.LE.escPressed.connect(self.close)
         self.LE.tabPressed.connect(self.tabCompletion)
+        self.LE.downPressed.connect(self.showHistory)
         self.LE.setFocus()
 
     def createData(self):
@@ -409,6 +419,20 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
             Qt.QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(model)
 
+        # History model
+        self.historyList = self.history.read()
+        self.historyModel = Qt.QtGui.QStandardItemModel()
+
+        for num, command in enumerate(self.historyList):
+            item = Qt.QtGui.QStandardItem(command)
+            if os.path.isabs(self.cmdDict[command]['icon']) is True:
+                iconPath = os.path.normpath(self.cmdDict[command]['icon'])
+                item.setIcon(Qt.QtGui.QIcon(iconPath))
+            else:
+                item.setIcon(
+                    Qt.QtGui.QIcon(":%s" % self.cmdDict[command]['icon']))
+            self.historyModel.setItem(num, 0, item)
+
     def updateData(self):
         """ Update current completion data
 
@@ -435,6 +459,14 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         currents = [i for i in self.commands if text in i.lower()]
         top = currents[0]
         self.LE.setText(top)
+
+    def showHistory(self, *args):
+        """ Show previously executed commands
+
+        """
+
+        self.LE.setCompleter(self.histCompleter)
+        self.histCompleter.complete()
 
     def execute(self):
         cmd = self.LE.text()
