@@ -126,8 +126,22 @@ class History(object):
     def append(self, command):
         """ append history
 
+        Args:
+            command (str): name of a command
+
+        Return:
+            None
+
         """
-        self.history.append(command)
+        # If command already exists in the history, move it to the front
+        if command in self.history:
+            self.history.insert(
+                0, self.history.pop(self.history.index(command)))
+        else:
+            self.history.insert(0, command)
+
+        # Set maximum number of histories
+        self.history = self.history[:25]
 
     def save(self):
         """ Write history
@@ -471,9 +485,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
     def execute(self):
         cmd = self.LE.text()
 
-        # Add command to history data
-        self.history.append(cmd)
-
         # Close gui first otherwise maya clashes(2017)
         self.close()
 
@@ -486,10 +497,13 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
             # by G key
             pm.callLastCommand(
                 """python(\"rush.RushCommands()._%s()\")""" % cmd)
+
+            # Add command to history data
+            self.history.append(cmd)
+            self.history.save()
+
         except AttributeError:
             pass
-
-        self.history.save()
 
 
 class Rush(OpenMayaMPx.MPxCommand):
