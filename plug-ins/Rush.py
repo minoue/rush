@@ -216,8 +216,8 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
         tempPixmap = Qt.QtGui.QPixmap()
         tempPixmap.loadFromData(data)
         self.iconPixmap = tempPixmap.scaled(
-            32,
-            32,
+            24,
+            24,
             Qt.QtCore.Qt.IgnoreAspectRatio,
             Qt.QtCore.Qt.SmoothTransformation)
 
@@ -361,11 +361,11 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.createData()
         self.createUI()
 
-        self.setFixedWidth(self.dpi * 2)
+        self.setFixedWidth(self.dpi * 2.5)
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(self.dpi * 2)
+        self.LE.setFixedWidth(self.dpi * 2.5)
         self.LE.setPlaceholderText("Search")
 
         # Layout
@@ -373,7 +373,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
         if self.menu is True:
-            menu = Menu(self.cmdDict, self.dpi * 2)
+            menu = Menu(self.cmdDict, self.dpi * 2.5)
             self.layout.addWidget(menu)
         self.layout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.layout)
