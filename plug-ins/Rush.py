@@ -469,10 +469,18 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.filteredModel.setFilterRegExp(regExp)
 
     def tabCompletion(self):
-        text = self.LE.text().lower()
-        currents = [i for i in self.commands if text in i.lower()]
-        top = currents[0]
-        self.LE.setText(top)
+        """ Complete commands by tab key
+
+        """
+        selections = self.completer.popup().selectedIndexes()
+        if len(selections) == 0:
+            modelIndex = self.filteredModel.index(0, 0)
+            self.completer.popup().setCurrentIndex(modelIndex)
+        else:
+            modelIndex = selections[0]
+            nextIndex = modelIndex.row() + 1
+            newModelIndex = self.filteredModel.index(nextIndex, 0)
+            self.completer.popup().setCurrentIndex(newModelIndex)
 
     def showHistory(self, *args):
         """ Show previously executed commands
