@@ -53,18 +53,26 @@ class Commands(object):
         cmds.ToggleOriginAxis()
     commandDict['hideAllHeadsup'] = 'menuIconDisplay.png'
 
-    def _toggleVertexIDs(self):
+    def _toggleComponentID_vertex(self):
         cmds.ToggleVertIDs()
-    commandDict['toggleVertexIDs'] = 'menuIconDisplay.png'
+    commandDict['toggleComponentID_vertex'] = 'menuIconDisplay.png'
 
-    def _toggleEdgeIDs(self):
+    def _toggleComponentID_edge(self):
         cmds.ToggleEdgeIDs()
-    commandDict['toggleEdgeIDs'] = 'menuIconDisplay.png'
+    commandDict['toggleComponentID_edge'] = 'menuIconDisplay.png'
 
-    def _toggleFaceIDs(self):
+    def _toggleComponentID_face(self):
         cmds.ToggleFaceIDs()
-    commandDict['toggleFaceIDs'] = 'menuIconDisplay.png'
+    commandDict['toggleComponentID_face'] = 'menuIconDisplay.png'
 
-    def _toggleCompIDs(self):
-        cmds.ToggleCompIDs()
-    commandDict['toggleCompIDs'] = 'menuIconDisplay.png'
+    def _toggleBorderEdges(self):
+        cmds.ToggleBorderEdges()
+    commandDict['toggleBorderEdges'] = 'menuIconDisplay.png'
+
+    def _toggleCreaseEdges(self):
+        cmds.ToggleCreaseEdges()
+    commandDict['toggleCreaseEdges'] = 'menuIconDisplay.png'
+
+    def _toggleTextureBorderEdges(self):
+        cmds.ToggleTextureBorderEdges()
+    commandDict['toggleTextureBorderEdges'] = 'menuIconDisplay.png'
