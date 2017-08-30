@@ -438,6 +438,12 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.historyModel = Qt.QtGui.QStandardItemModel()
 
         for num, command in enumerate(self.historyList):
+
+            # If a command dosen't exist in the history list,
+            # for some reason(eg. command renamed), do nothing.
+            if command not in self.cmdDict:
+                continue
+
             item = Qt.QtGui.QStandardItem(command)
             if os.path.isabs(self.cmdDict[command]['icon']) is True:
                 iconPath = os.path.normpath(self.cmdDict[command]['icon'])
