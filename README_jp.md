@@ -9,13 +9,13 @@ Maya用のタブメニュー風コマンドランチャー
 
 ![gif](https://github.com/minoue/miExecutor/blob/media/images/demo.gif)
 
-## Requirements
+## 必須
 
 [Qt.py](https://github.com/mottosso/Qt.py)
 
-## Installation and setup
+## インストール/セットアップ
 
-### Install from zip file
+### zipファイルをダウンロードしてインストールする場合
 1. [zip](https://github.com/minoue/rush/archive/master.zip)をダウンロードし、解凍したあとにできる 'rush-master' フォルダを "rush"にリネームする。
 2. "rush" フォルダをMayaのスクリプトフォルダに移動する。 例 C:\Users\YOURNAME\Documents\maya\2017\scripts
 3. "rush/plug-ins"フォルダの中にある'Rush.py'をMayaのプラグインフォルダに移動する。
@@ -23,7 +23,7 @@ Maya用のタブメニュー風コマンドランチャー
 
 	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 300px;"/>
 
-### Install using git
+### gitでクローンしてインストールする場合
 In your user script directory,
 
 ```
@@ -31,7 +31,7 @@ git clone https://github.com/minoue/rush.git
 ```
 Then, copy Rush.py to the maya plug-ins directory
 
-## How to run
+## 実行方法
 
 
 mel  
@@ -47,7 +47,7 @@ from maya import cmds
 cmds.rush()
 ```
 
-You can open the hotkey editor and assign the command to any key you want.
+どちらかのコマンドをホットキーエディタから任意のキーに登録すると便利。
 
 ### Making commands repeatable by G key
 You have to load rush module to make commands repeatable by G key. Run the following command in the script editor, or simply **add the line to your userSetup.py**.
@@ -57,9 +57,9 @@ import rush
 ```
 
 
-## How to add commands
-Commands can be added by editting/creating module files.
-For example, here is the templete script in the module directory.
+## カスタムコマンドの登録
+カスタムコマンドはモジュールファイルに関数を追加することで登録できます。
+たとえばモジュールディレクトリ内のテンプレートモジュールの中身は下記のようになっています。
 
 
 ```python
@@ -73,8 +73,7 @@ class Commands(object):
     # ^ Don't forget to add the command to the dictionary.
 ```
 
-To add new command, just add new method to the Command class.
-Make sure to add underscore at the begging of the method name. Then, add new key/item to the commandDict. Key is the command name without underscore, and the item is an icon path(relative or absolute)
+このCommandsクラスに追加したいコマンドをメソッドとして加えます。メソッド名にはアンダースコアを一つ、CommandDictにはキーにはアンダースコアを抜いたメソッド名、その値にはアイコンのパスを指定します。アイコンパスは相対パスでも絶対パスどちらでも可。
 
 
 1. Create a new file.
