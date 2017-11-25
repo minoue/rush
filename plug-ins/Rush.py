@@ -1,7 +1,6 @@
 from pymel.all import mel as pm
-from maya import OpenMayaMPx
 from maya import OpenMayaUI
-from maya import OpenMaya
+from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
 try:
@@ -520,7 +519,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
             pass
 
 
-class Rush(OpenMayaMPx.MPxCommand):
+class Rush(OpenMaya.MPxCommand):
 
     def __init__(self):
         super(Rush, self).__init__()
@@ -568,18 +567,9 @@ class Rush(OpenMayaMPx.MPxCommand):
     def isUndoable(self):
         return False
 
-
-# Creator
-def cmdCreator():
-    # Create the command
-    """
-
-    Return:
-        pointer to the command
-
-    """
-    ptr = OpenMayaMPx.asMPxPtr(Rush())
-    return ptr
+    @staticmethod
+    def cmdCreator():
+        return Rush()
 
 
 def syntaxCreator():
@@ -596,6 +586,14 @@ def syntaxCreator():
     return syntax
 
 
+def maya_useNewAPI():
+    """
+    The presence of this function tells Maya that the plugin produces, and
+    expects to be passed, objects created using the Maya Python API 2.0.
+    """
+    pass
+
+
 def initializePlugin(mobject):
     """ Initialize the script plug-in
 
@@ -603,9 +601,10 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMayaMPx.MFnPlugin(mobject, "Michitaka Inoue", "2.0.1", "Any")
+    # mplugin = OpenMayaMPx.MFnPlugin(mobject, "Michitaka Inoue", "2.0.1", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject)
     try:
-        mplugin.registerCommand(kPluginCmdName, cmdCreator, syntaxCreator)
+        mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
         sys.stderr.write("Failed to register command: %s\n" % kPluginCmdName)
         raise
@@ -618,7 +617,8 @@ def uninitializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMayaMPx.MFnPlugin(mobject)
+    # mplugin = OpenMayaMPx.MFnPlugin(mobject)
+    mplugin = OpenMaya.MFnPlugin(mobject)
     try:
         mplugin.deregisterCommand(kPluginCmdName)
     except:
