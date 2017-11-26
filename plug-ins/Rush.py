@@ -215,12 +215,12 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
         tempPixmap = Qt.QtGui.QPixmap()
         tempPixmap.loadFromData(data)
         self.iconPixmap = tempPixmap.scaled(
-            24,
-            24,
+            20,
+            20,
             Qt.QtCore.Qt.IgnoreAspectRatio,
             Qt.QtCore.Qt.SmoothTransformation)
 
-        self.setTextMargins(36, 0, 0, 0)
+        self.setTextMargins(26, 0, 0, 0)
 
     def focusOutEvent(self, event):
         # Emit signal to close the window when it gets out of focus
@@ -242,7 +242,7 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
         painter = Qt.QtGui.QPainter(self)
         painter.setOpacity(0.75)
         height = self.iconPixmap.height()
-        right_border = 3
+        right_border = 8
         painter.drawPixmap(
             right_border+2, (self.height() - height) / 2, self.iconPixmap)
 
@@ -311,7 +311,7 @@ class Menu(Qt.QtWidgets.QMenu):
         self.parent().execute()
 
 
-class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
+class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
 
     def closeExistingWindow(self):
         """ Close window if exists """
@@ -349,6 +349,8 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
                 self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
         except AttributeError:
             pass
+        # self.setAttribute(Qt.QtCore.Qt.WA_NoSystemBackground)
+        self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
         # Dpi value to set the width for window and lineedit.
         # self.dpi = self.logicalDpiX()
@@ -384,7 +386,7 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QDialog):
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
         # self.completer.popup().setIconSize(self.iconSize)
-        self.completer.popup().setStyleSheet(loadStyle())
+        # self.completer.popup().setStyleSheet(loadStyle())
 
         # Setup QCompleter for history
         self.histCompleter = Qt.QtWidgets.QCompleter(self)

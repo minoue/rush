@@ -12,9 +12,9 @@ QLineEdit
 {
     background-color: rgb(42, 42, 42);
     border-style: solid;
-    border-radius: 0x;
+    border-radius: 10px;
     padding: 4px;
-    border-width: 4;
+    border-width: 5px;
     border-color: rgb(68, 68, 68);
     font-size: 14pt;
 }
