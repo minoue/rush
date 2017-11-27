@@ -603,8 +603,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    # mplugin = OpenMayaMPx.MFnPlugin(mobject, "Michitaka Inoue", "2.0.1", "Any")
-    mplugin = OpenMaya.MFnPlugin(mobject)
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.1.0", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
