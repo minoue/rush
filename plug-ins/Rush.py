@@ -349,11 +349,9 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
                 self.windowFlags() | Qt.QtCore.Qt.NoDropShadowWindowHint)
         except AttributeError:
             pass
-        # self.setAttribute(Qt.QtCore.Qt.WA_NoSystemBackground)
         self.setAttribute(Qt.QtCore.Qt.WA_TranslucentBackground)
 
         # Dpi value to set the width for window and lineedit.
-        # self.dpi = self.logicalDpiX()
         self.dpi = self.physicalDpiX()
 
         self.setStyleSheet(loadStyle())
@@ -385,15 +383,12 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
             Qt.QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
-        # self.completer.popup().setIconSize(self.iconSize)
-        # self.completer.popup().setStyleSheet(loadStyle())
 
         # Setup QCompleter for history
         self.histCompleter = Qt.QtWidgets.QCompleter(self)
         self.histCompleter.setCompletionMode(
             Qt.QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
-        # self.histCompleter.setObjectName("historyCompleter")
 
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
