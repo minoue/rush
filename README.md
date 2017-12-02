@@ -17,9 +17,9 @@ TabMenu-like simple command launcher for Maya (formerly miExecutor)
 ## Installation and setup
 
 ### Install from zip file
-1. Make sure to install Qt.py first.
-2. Download [zip](https://github.com/minoue/rush/archive/master.zip) file and extract it. Rename the 'rush-master' folder to "rush".
-3. Move the "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
+1. Make sure to install [Qt.py](https://github.com/mottosso/Qt.py) first.
+2. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
+3. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
 4. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
 5. Add the follwoing line to your userSetup.py. This is required to make your commands repeatable by G key
 
