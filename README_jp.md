@@ -16,12 +16,18 @@ Maya用のタブメニュー風コマンドランチャー
 ## インストール/セットアップ
 
 ### zipファイルをダウンロードしてインストールする場合
-1. [zip](https://github.com/minoue/rush/archive/master.zip)をダウンロードし、解凍したあとにできる 'rush-master' フォルダを "rush"にリネームする。
-2. "rush" フォルダをMayaのスクリプトフォルダに移動する。 例 C:\Users\YOURNAME\Documents\maya\2017\scripts
-3. "rush/plug-ins"フォルダの中にある'Rush.py'をMayaのプラグインフォルダに移動する。
-4. MayaのプラグインマネージャからRush.pyを有効にする。
+1. [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip)をダウンロードし、解凍したあとにできる 'rush' フォルダをMayaのスクリプトフォルダに移動する。 例 C:\Users\YOURNAME\Documents\maya\2017\scripts
+2. "rush/plug-ins"フォルダの中にある'Rush.py'をMayaのプラグインフォルダに移動する。 例 C:\Users\YOURNAME\Documents\maya\plug-ins
+3. userSetup.py下記のコマンドを追加する。
+
+	```python
+	import rush
+	```
+3. Mayaを起動し、プラグインマネージャからRush.pyを有効にする。
 
 	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" alt="Drawing" style="width: 300px;"/>
+
+
 
 ### gitでクローンしてインストールする場合
 In your user script directory,
