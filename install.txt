@@ -1,1 +1,3 @@
 Please read README.md for installation.
+
+https://github.com/minoue/rush/blob/master/README.md
