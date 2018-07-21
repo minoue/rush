@@ -33,16 +33,23 @@ global proc callLastCommand(string $function)
 """)
 
 
-# Load json files as dicrectory.
-# key is command name, and its item is icon path.
-commandFile = os.path.normpath(
-    os.path.join(MAYA_SCRIPT_DIR, "rushCmds.json"))
-try:
-    f = open(commandFile)
-    CMD_DICT = json.load(f)
-    f.close()
-except IOError:
-    CMD_DICT = {}
+def getCommandDict():
+    """
+    Load json files as dicrectory.
+    key is command name, and its item is icon path.
+    """
+
+    cmdFile = os.path.normpath(os.path.join(MAYA_SCRIPT_DIR, "rushCmds.json"))
+
+    d = {}
+
+    try:
+        f = open(cmdFile)
+        d = json.load(f)
+        f.close()
+        return d
+    except IOError:
+        return d
 
 
 def setupLogger(verbose=False):
@@ -445,13 +452,16 @@ class Rush(OpenMaya.MPxCommand):
 
         logger = setupLogger(self.verbose)
 
-        self.mw = Gui(logger, CMD_DICT, getMayaWindow())
+        self.mw = Gui(logger, getCommandDict(), getMayaWindow())
         self.mw.show()
 
         pos = QtGui.QCursor.pos()
         self.mw.move(
             pos.x() - (self.mw.width() / 2),
             pos.y() - (self.mw.height() / 2))
+
+        self.mw.raise_()
+        self.mw.activateWindow()
 
     def undoIt(self):
         pass
@@ -495,7 +505,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.1.2", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.1.3", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
