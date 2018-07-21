@@ -8,7 +8,6 @@ try:
 except ImportError:
     import shiboken2 as shiboken
 
-import rush
 import logging
 import string
 import random
@@ -16,14 +15,13 @@ import json
 import sys
 import os
 import Qt
+import rush
 reload(rush)
 
 
 kPluginCmdName = "rush"
 kVerboseFlag = "-v"
 kVerboseLongFlag = "-verbose"
-kMenuFlag = "-m"
-kMenuFlagLong = "-menu"
 
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
@@ -93,8 +91,8 @@ def loadStyle():
 
 
 def getMayaWindow():
-        ptr = OpenMayaUI.MQtUtil.mainWindow()
-        return shiboken.wrapInstance(long(ptr), Qt.QtWidgets.QMainWindow)
+    ptr = OpenMayaUI.MQtUtil.mainWindow()
+    return shiboken.wrapInstance(long(ptr), Qt.QtWidgets.QMainWindow)
 
 
 class History(object):
@@ -247,83 +245,9 @@ class CustomQLineEdit(Qt.QtWidgets.QLineEdit):
             right_border+2, (self.height() - height) / 2, self.iconPixmap)
 
 
-class Menu(Qt.QtWidgets.QMenu):
-
-    def __init__(self, commandDict, width, parent=None):
-        super(Menu, self).__init__(parent)
-
-        self.menuList = []
-        self.commandDict = commandDict
-        self.setFixedWidth(width)
-
-        self.createMenu()
-
-    def closeWindow(self):
-        self.parent().close()
-
-    def createMenu(self):
-        def getExistingMenu(menuList, title):
-            for m in menuList:
-                if m.title() == title:
-                    return m
-            return None
-
-        for command in self.commandDict:
-            path = self.commandDict[command]['path']
-            if path == "rush":
-                continue
-            if path == "module/template":
-                continue
-
-            pathList = path.split("/")
-            pathLength = len(pathList)
-            lastIndex = pathLength - 1
-
-            parentMenu = None
-
-            for num, category in enumerate(pathList):
-                if num == 0:
-                    m = getExistingMenu(self.menuList, category)
-                    if m is None:
-                        menu = Qt.QtWidgets.QMenu(category)
-                        # rootMenu.addMenu(menu)
-                        self.addMenu(menu)
-                        self.menuList.append(menu)
-                        parentMenu = menu
-                    else:
-                        parentMenu = m
-                elif num == lastIndex:
-                    m = getExistingMenu(self.menuList, category)
-                    if m is None:
-                        subMenu = Qt.QtWidgets.QMenu(category)
-                        parentMenu.addMenu(subMenu)
-                        self.menuList.append(subMenu)
-                        parentMenu = subMenu
-                    else:
-                        parentMenu = m
-                    parentMenu.addAction(command, self.execute)
-                else:
-                    pass
-
-    def execute(self):
-        command = self.sender().text()
-        self.parent().LE.setText(command)
-        self.parent().execute()
-
-
 class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
 
-    def closeExistingWindow(self):
-        """ Close window if exists """
-
-        for qt in Qt.QtWidgets.QApplication.topLevelWidgets():
-            try:
-                if qt.__class__.__name__ == self.__class__.__name__:
-                    qt.close()
-            except:
-                pass
-
-    def __init__(self, logger, cmdDict, menu=False, parent=None):
+    def __init__(self, logger, cmdDict, parent=None):
         """
 
         Args:
@@ -331,11 +255,9 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
             cmdDict (dict): Dict of all commands
 
         """
-        self.closeExistingWindow()
         super(Gui, self).__init__(parent)
 
         self.logger = logger
-        self.menu = menu
         self.cmdDict = cmdDict
         self.history = History()
 
@@ -371,9 +293,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
         self.layout = Qt.QtWidgets.QBoxLayout(
             Qt.QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
-        if self.menu is True:
-            menu = Menu(self.cmdDict, self.dpi * 2.5)
-            self.layout.addWidget(menu)
         self.layout.setContentsMargins(0, 0, 0, 0)
         self.setLayout(self.layout)
 
@@ -452,10 +371,6 @@ class Gui(rush.RushCommands, Qt.QtWidgets.QFrame):
     def updateData(self):
         """ Update current completion data
 
-        Args:
-
-        Return:
-
         """
 
         # command completer
@@ -522,38 +437,24 @@ class Rush(OpenMaya.MPxCommand):
         super(Rush, self).__init__()
 
         self.verbose = False
-        self.menu = False
-        self.cmdArg = "Initial arg"
 
     def doIt(self, args):
 
         # Parse the arguments.
         argData = OpenMaya.MArgDatabase(self.syntax(), args)
-        try:
-            self.cmdArg = argData.commandArgumentString(0)
-        except RuntimeError:
-            pass
+
         if argData.isFlagSet(kVerboseFlag):
             self.verbose = argData.flagArgumentBool(kVerboseFlag, 0)
 
-        if argData.isFlagSet(kMenuFlag):
-            self.menu = argData.flagArgumentBool(kMenuFlag, 0)
-
         logger = setupLogger(self.verbose)
 
-        self.mw = Gui(logger,
-                      CMD_DICT,
-                      self.menu,
-                      getMayaWindow())
+        self.mw = Gui(logger, CMD_DICT, getMayaWindow())
         self.mw.show()
 
         pos = Qt.QtGui.QCursor.pos()
         self.mw.move(
             pos.x() - (self.mw.width() / 2),
             pos.y() - (self.mw.height() / 2))
-
-        self.mw.raise_()
-        self.mw.activateWindow()
 
     def undoIt(self):
         pass
@@ -579,7 +480,6 @@ def syntaxCreator():
     syntax = OpenMaya.MSyntax()
     syntax.addArg(OpenMaya.MSyntax.kString)
     syntax.addFlag(kVerboseFlag, kVerboseLongFlag, OpenMaya.MSyntax.kBoolean)
-    syntax.addFlag(kMenuFlag, kMenuFlagLong, OpenMaya.MSyntax.kBoolean)
     return syntax
 
 
@@ -598,7 +498,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.1.0", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.1.1", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
@@ -613,7 +513,6 @@ def uninitializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    # mplugin = OpenMayaMPx.MFnPlugin(mobject)
     mplugin = OpenMaya.MFnPlugin(mobject)
     try:
         mplugin.deregisterCommand(kPluginCmdName)
