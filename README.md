@@ -1,7 +1,7 @@
 Rush
 ========
 
-[Maya 2017 or higher](https://github.com/minoue/rush/tree/2017)
+[Maya 2017 or higher](https://github.com/minoue/rush/tree/dev)
 
 [日本語](https://github.com/minoue/rush/blob/master/README_jp.md)
 
