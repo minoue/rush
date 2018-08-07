@@ -3,7 +3,7 @@ Rush
 
 [日本語](https://github.com/minoue/rush/blob/master/README_jp.md)
 
-TabMenu-like simple command launcher for Maya (formerly miExecutor)
+TabMenu-like simple command launcher for Maya
 
 * You can add any commands you want
 * Repeatable by G key
