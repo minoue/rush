@@ -1,8 +1,6 @@
 Rush
 ========
 
-[Maya 2017 or higher](https://github.com/minoue/rush/tree/2017)
-
 [日本語](https://github.com/minoue/rush/blob/master/README_jp.md)
 
 TabMenu-like simple command launcher for Maya (formerly miExecutor)
@@ -14,16 +12,15 @@ TabMenu-like simple command launcher for Maya (formerly miExecutor)
 
 ## Requirements
 
-[Qt.py](https://github.com/mottosso/Qt.py)
+Maya 2017 or higher
 
 ## Installation and setup
 
 ### Install from zip file
-1. Make sure to install [Qt.py](https://github.com/mottosso/Qt.py) first.
-2. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
-3. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
-4. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
-5. Add the follwoing line to your userSetup.py. This is required to make your commands repeatable by G key
+1. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
+2. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
+3. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
+4. Add the follwoing line to your userSetup.py. This is required to make your commands repeatable by G key
 
 	```python
 	import rush
@@ -59,11 +56,6 @@ cmds.rush()
 ```
 
 You can open the hotkey editor and assign the command to any key you want.
-### Option
-
-|Longname|Shortname|Argument Type|Default|Properties|
-|:--:|:--:|:--:|:--:|:--:|
-|menu|m|bool|False|C|
 
 For example,
 
@@ -73,13 +65,6 @@ cmds.rush()
 ```
 
 <img src="https://github.com/minoue/rush/blob/media/images/normalGUI.png" width="400">
-
-```python
-from maya import cmds
-cmds.rush(menu=True)
-```
-
-<img src="https://github.com/minoue/rush/blob/media/images/menuGUI.png" width="400">
 
 
 ## How to add commands
@@ -130,8 +115,8 @@ Create '.rushConfig' file in your home directory and paths line by line.
 eg.
 
 ```
-/Users/XXXXXXX/Library/Preferences/Autodesk/maya/2015-x64/scripts/rush
 /Users/XXXXXXX/Dropbox/dev/git/maya/extraModules
+/Users/some/other/module/dir
 ```
 
 
