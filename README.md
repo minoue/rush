@@ -57,16 +57,6 @@ cmds.rush()
 
 You can open the hotkey editor and assign the command to any key you want.
 
-For example,
-
-```python
-from maya import cmds
-cmds.rush()
-```
-
-<img src="https://github.com/minoue/rush/blob/media/images/normalGUI.png" width="400">
-
-
 ## How to add commands
 Commands can be added by editting/creating module files.
 For example, here is the templete script in the module directory.
