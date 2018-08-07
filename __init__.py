@@ -5,6 +5,7 @@ import sys
 import imp
 import os
 
+
 # level = logging.DEBUG
 level = logging.ERROR
 
@@ -28,42 +29,25 @@ def loadConfig():
     defaultModulePath = os.path.normpath(os.path.join(
         cmds.internalVar(userScriptDir=True), 'rush'))
 
-    # Create new config file
+    config = [defaultModulePath]
+
+    # Use only default module path if confi file does not exist
     if not os.path.exists(configPath):
-        initConfig(configPath, defaultModulePath)
-        config = [defaultModulePath]
         return config
 
+    # Open and load config file in use home dir and append it to the
+    # config list
     try:
         f = open(configPath, 'r')
-        config = f.read().split()
+        extra_config = f.read().split()
         f.close()
     except IOError:
-        config = [defaultModulePath]
+        pass
         logger.debug("Failed to load config file")
 
+    config.extend(extra_config)
+
     return config
-
-
-def initConfig(configPath, defaultModulePath):
-    """ Init and save new config file
-
-    Args:
-        configPath (str): path to config file
-        defaultModulePath (str): default module path
-
-    Return:
-        None
-
-    """
-    logger.debug("Config file doesn't exist. Creating a new config file")
-    # Init config file
-    try:
-        with open(configPath, 'w') as outFile:
-            outFile.writelines([defaultModulePath])
-        logger.debug("Created new config file")
-    except IOError:
-        logger.debug("Failed to save config file")
 
 
 def getModulePath(path):
