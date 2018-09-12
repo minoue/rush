@@ -13,8 +13,8 @@ import json
 import sys
 import os
 
-from rush import core
-reload(core)
+import rush
+reload(rush)
 
 QSS = """
 QListView
@@ -257,7 +257,7 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             right_border+2, (self.height() - height) / 2, self.iconPixmap)
 
 
-class Gui(core.RushCommands, QtWidgets.QFrame):
+class Gui(rush.RushCommands, QtWidgets.QFrame):
 
     def __init__(self, logger, cmdDict, parent=None):
         """
@@ -433,7 +433,7 @@ class Gui(core.RushCommands, QtWidgets.QFrame):
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
             pm.callLastCommand(
-                """python(\"from rush import core as rushCore; reload(rushCore); rushCore.RushCommands()._%s()\")""" % cmd)
+                """python(\"import rush; reload(rush); rush.RushCommands()._%s()\")""" % cmd)
 
             # Add command to history data
             self.history.append(cmd)
