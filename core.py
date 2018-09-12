@@ -27,7 +27,7 @@ def loadConfig():
     configPath = os.path.normpath(os.path.join(userDir, ".rushConfig"))
 
     defaultModulePath = os.path.normpath(os.path.join(
-        cmds.internalVar(userScriptDir=True), 'rush'))
+        cmds.internalVar(userScriptDir=True), 'rush', 'module'))
 
     config = [defaultModulePath]
 
