@@ -6,7 +6,8 @@ TabMenu-like simple command launcher for Maya
 * You can add any commands you want
 * Repeatable by G key
 
-![gif](https://github.com/minoue/rush/blob/media/images/demo.gif)
+[!gif](https://github.com/minoue/rush/blob/dev/docs/media/demo.gif)
+
 ## Installation
 
 ### Install from zip file
