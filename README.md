@@ -1,35 +1,20 @@
 Rush
 ========
 
-[Maya 2017 or higher](https://github.com/minoue/rush/tree/dev)
-
-[日本語](https://github.com/minoue/rush/blob/master/README_jp.md)
-
-TabMenu-like simple command launcher for Maya (formerly miExecutor)
+TabMenu-like simple command launcher for Maya
 
 * You can add any commands you want
 * Repeatable by G key
 
-![gif](https://github.com/minoue/miExecutor/blob/media/images/demo.gif)
+![gif](https://github.com/minoue/rush/blob/dev/docs/media/demo.gif)
 
-## Requirements
-
-[Qt.py](https://github.com/mottosso/Qt.py)
-
-## Installation and setup
+## Installation
 
 ### Install from zip file
-1. Make sure to install [Qt.py](https://github.com/mottosso/Qt.py) first.
-2. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
-3. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
-4. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
-5. Add the follwoing line to your userSetup.py. This is required to make your commands repeatable by G key
-
-	```python
-	import rush
-	```
-
-6. Open maya and activate Rush.py in the plugin manager.
+1. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
+2. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
+3. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
+4. Open maya and activate Rush.py in the plugin manager.
 
 	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" width="600">
 
@@ -48,39 +33,17 @@ Then, copy Rush.py to the maya plug-ins directory
 mel  
 
 ```
-rush;
+rush2;
 ```
 
 in python
 
 ```
 from maya import cmds
-cmds.rush()
+cmds.rush2()
 ```
 
 You can open the hotkey editor and assign the command to any key you want.
-### Option
-
-|Longname|Shortname|Argument Type|Default|Properties|
-|:--:|:--:|:--:|:--:|:--:|
-|menu|m|bool|False|C|
-
-For example,
-
-```python
-from maya import cmds
-cmds.rush()
-```
-
-<img src="https://github.com/minoue/rush/blob/media/images/normalGUI.png" width="400">
-
-```python
-from maya import cmds
-cmds.rush(menu=True)
-```
-
-<img src="https://github.com/minoue/rush/blob/media/images/menuGUI.png" width="400">
-
 
 ## How to add commands
 Commands can be added by editting/creating module files.
@@ -130,10 +93,11 @@ Create '.rushConfig' file in your home directory and paths line by line.
 eg.
 
 ```
-/Users/XXXXXXX/Library/Preferences/Autodesk/maya/2015-x64/scripts/rush
 /Users/XXXXXXX/Dropbox/dev/git/maya/extraModules
+/Users/some/other/module/dir
 ```
 
 
 ## Credit
+[Qt.py](https://github.com/mottosso/Qt.py) by Marcus Ottosson
 <div>Icons made by <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
