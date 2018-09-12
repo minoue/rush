@@ -1,32 +1,19 @@
 Rush
 ========
 
-[日本語](https://github.com/minoue/rush/blob/master/README_jp.md)
-
 TabMenu-like simple command launcher for Maya
 
 * You can add any commands you want
 * Repeatable by G key
 
-![gif](https://github.com/minoue/miExecutor/blob/media/images/demo.gif)
-
-## Requirements
-
-Maya 2017 or higher
-
-## Installation and setup
+![gif](https://github.com/minoue/rush/blob/media/images/demo.gif)
+## Installation
 
 ### Install from zip file
 1. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
 2. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
 3. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
-4. Add the follwoing line to your userSetup.py. This is required to make your commands repeatable by G key
-
-	```python
-	import rush
-	```
-
-6. Open maya and activate Rush.py in the plugin manager.
+4. Open maya and activate Rush.py in the plugin manager.
 
 	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" width="600">
 
@@ -45,14 +32,14 @@ Then, copy Rush.py to the maya plug-ins directory
 mel  
 
 ```
-rush;
+rush2;
 ```
 
 in python
 
 ```
 from maya import cmds
-cmds.rush()
+cmds.rush2()
 ```
 
 You can open the hotkey editor and assign the command to any key you want.
@@ -111,4 +98,5 @@ eg.
 
 
 ## Credit
+[Qt.py](https://github.com/mottosso/Qt.py) by Marcus Ottosson
 <div>Icons made by <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
