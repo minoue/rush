@@ -42,7 +42,7 @@ QLineEdit
 }
 """
 
-kPluginCmdName = "rush"
+kPluginCmdName = "rush2"
 kVerboseFlag = "-v"
 kVerboseLongFlag = "-verbose"
 
