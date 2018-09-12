@@ -3,8 +3,11 @@ from maya import OpenMayaUI
 from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
-from PySide2 import QtGui, QtWidgets, QtCore
-import shiboken2
+from rush.Qt import QtGui, QtWidgets, QtCore
+try:
+    import shiboken2 as shiboken
+except ImportError:
+    import shiboken
 
 import logging
 import string
@@ -104,7 +107,7 @@ def setupLogger(verbose=False):
 
 def getMayaWindow():
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
+    return shiboken.wrapInstance(long(ptr), QtWidgets.QMainWindow)
 
 
 class History(object):
