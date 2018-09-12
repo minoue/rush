@@ -11,7 +11,7 @@ TabMenu-like simple command launcher for Maya
 ## Installation
 
 ### Install from zip file
-1. Download [zip](https://github.com/minoue/rush/releases/download/2.1.0/rush.zip) file and extract it.
+1. Download [zip](https://github.com/minoue/rush/releases/download/2.2.0/rush.zip) file and extract it.
 2. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
 3. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
 4. Open maya and activate Rush.py in the plugin manager.
