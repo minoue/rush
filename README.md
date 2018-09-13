@@ -12,20 +12,28 @@ TabMenu-like simple command launcher for Maya
 
 ### Install from zip file
 1. Download [zip](https://github.com/minoue/rush/releases/download/2.2.0/rush.zip) file and extract it.
-2. Move the extracted "rush" folder to your user script directory. e.g. C:\Users\YOURNAME\Documents\maya\2017\scripts
-3. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.  e.g C:\Users\YOURNAME\Documents\maya\plug-ins
+2. Move the extracted "rush" folder to your user script directory. 
+    ```
+    e.g. C:\Users\USER\Documents\maya\scripts
+    ```
+3. Move the 'Rush.py' in rush\plug-ins directory to your maya plug-ins directory.
+    ```
+    e.g C:\Users\USES\Documents\maya\plug-ins
+    ```
 4. Open maya and activate Rush.py in the plugin manager.
 
 	  <img src="https://github.com/minoue/miExecutor/blob/media/images/plugin.png" width="600">
 
 ### Install using git
-If git command is available to you, alternatively you can install using git command.  
+You can also use git to download the scripts.  
 In your user script directory,
 
 ```
-git clone https://github.com/minoue/rush.git
+>> git clone https://github.com/minoue/rush
+>> cd rush
+>> git submodule update --init
 ```
-Then, copy Rush.py to the maya plug-ins directory
+Then, copy Rush.py to the maya plug-ins directory, and activate the plugin.
 
 ## How to run
 
@@ -46,7 +54,7 @@ cmds.rush2()
 You can open the hotkey editor and assign the command to any key you want.
 
 ## How to add commands
-Commands can be added by editting/creating module files.
+Any commands can be added by editting/creating module files.
 For example, here is the templete script in the module directory.
 
 
@@ -87,8 +95,8 @@ Make sure to add underscore at the begging of the method name. Then, add new key
 
 
 ## Using custom module directory
-You can choose any directories for you modules.  
-Create '.rushConfig' file in your home directory and paths line by line.
+You can use custom module directories.  
+Create '.rushConfig' file in your home directory and add paths line by line.
 
 eg.
 
