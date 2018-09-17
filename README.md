@@ -3,9 +3,11 @@
 <div align="center">
 <strong>TabMenu-style simple command launcher for Maya</strong>
 </div>
-<br>
 
-![demo](docs/media/demo.gif)
+<p align="center">
+  <img src="docs/media/demo.gif" alt="demo"/>
+</p>
+
 
 ## Features
 
