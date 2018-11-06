@@ -27,7 +27,7 @@ QListView
     border-radius: 0px;
     border-width: 0px;
     border-color: rgb(60, 60, 60, 100);
-    font-size: 10pt;
+    font-size: 14pt;
 }
 
 QLineEdit
@@ -38,7 +38,7 @@ QLineEdit
     padding: 4px;
     border-width: 5px;
     border-color: rgb(68, 68, 68);
-    font-size: 14pt;
+    font-size: 16pt;
 }
 """
 
@@ -317,6 +317,7 @@ class Gui(rush.Commands, QtWidgets.QFrame):
             QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.completer.setModel(self.filteredModel)
         self.completer.setObjectName("commandCompleter")
+        self.completer.popup().setStyleSheet(QSS)
 
         # Setup QCompleter for history
         self.histCompleter = QtWidgets.QCompleter(self)
