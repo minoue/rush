@@ -1,4 +1,3 @@
-from pymel.all import mel as pm
 from maya import OpenMayaUI
 from maya.api import OpenMaya
 from maya import cmds
@@ -436,9 +435,8 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
-            pm.callLastCommand(
-                """python(\"import rush; reload(rush);"""
-                """rush.Commands()._%s()\")""" % cmd)
+            cmdString = """python(\\"import rush; reload(rush); rush.Commands()._%s()\\")""" % cmd
+            mel.eval("""callLastCommand("%s")""" % cmdString)
 
             # Add command to history data
             self.history.append(cmd)
