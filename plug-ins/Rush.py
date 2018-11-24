@@ -3,6 +3,7 @@ from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
 from rush.Qt import QtGui, QtWidgets, QtCore
+
 try:
     import shiboken2 as shiboken
 except ImportError:
@@ -17,6 +18,7 @@ import os
 
 import rush
 reload(rush)
+
 
 QSS = """
 QListView
@@ -435,7 +437,7 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
-            cmdString = """python(\\"import rush; reload(rush); rush.Commands()._%s()\\")""" % cmd
+            cmdString = """python(\\"from rush import Commands; obj = Commands(); obj._%s()\\")""" % cmd
             mel.eval("""callLastCommand("%s")""" % cmdString)
 
             # Add command to history data
@@ -516,7 +518,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.2", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.3", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:

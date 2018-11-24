@@ -208,23 +208,11 @@ def saveCommands(path, cmdsDict):
         logger.debug("Failed to save command file")
 
 
-def getCommands():
-    """ Create class object which includes all commands
 
-    Return:
-        class (RushCommands): A class obj which includes all commands
-    """
-
-    class Cmds(object):
-        pass
-
-    # Re-difine RushCommands class to inherit all comamnd classes for the list
-    config = loadConfig()
-    cl = tuple(getClassList(config))
-
-    Cmds = type('RushCommands', cl, dict(Cmds.__dict__))
-
-    return Cmds
+class Temp(object):
+    pass
 
 
-Commands = getCommands()
+# Re-difine Temp class to inherit all comamnd classes
+# Commands is new class definition, not class instance object
+Commands = type('RushCommands', tuple(getClassList(loadConfig())), dict(Temp.__dict__))
