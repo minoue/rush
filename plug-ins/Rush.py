@@ -325,6 +325,7 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         self.histCompleter.setCompletionMode(
             QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
+        self.histCompleter.popup().setStyleSheet(QSS)
 
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
