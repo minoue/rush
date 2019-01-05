@@ -4,17 +4,19 @@
 <strong>TabMenu-style simple command launcher for Maya</strong>
 </div>
 
+<br>
+<br>
+
 <p align="center">
   <img src="docs/media/demo.gif" alt="demo"/>
 </p>
-
 
 ## Features
 
 You can ..
 
 * Add any commands you want
-* repeat a command by G key (Maya's default shortcut key to repeat a command)
+* Repeat commands by G key (Maya's default shortcut key to repeat a command)
 
 ## Installation
 
@@ -31,7 +33,8 @@ You can ..
    ```
     e.g C:\Users\USES\Documents\maya\MAYA_VERSION\plug-ins
    ```
-4. Open maya and activate Rush.py in the plugin manager.   <img src="docs/images/plugin.png" width="600">
+4. Open maya and activate Rush.py in the plugin manager.   
+    ![](docs/images/plugin.png)
 
 #### Install using git
 
@@ -82,23 +85,23 @@ Make sure to add underscore at the begging of the method name. Then, add new key
 
 1. Create a new file.
 
-    <img src="docs/images/createFile.png" alt="Drawing" style="width: 400px;"/>
+    ![](docs/images/createFile.png)
 
 2. Copy and paste the code from template file and edit your command as you want.
 
-    <img src="docs/images/editFile.png" alt="Drawing" style="width: 400px;"/>
+    ![](docs/images/editFile.png)
 
 3. Save the file, go back to maya, and run reload command.
 
-    <img src="docs/images/reload.png" alt="Drawing" style="width: 400px;"/>
+    ![](docs/images/reload.png)
 
 4. You new command should be available in the completion.
 
-    <img src="docs/images/runNewCommand.png" alt="Drawing" style="width: 400px;"/>
+    ![](docs/images/runNewCommand.png)
 
 5. Done.
 
-    <img src="docs/images/done.png" alt="Drawing" style="width: 400px;"/>
+    ![](docs/images/done.png)
 
 ## Using custom module directory
 
