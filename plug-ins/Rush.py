@@ -1,9 +1,9 @@
-from pymel.all import mel as pm
 from maya import OpenMayaUI
 from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
 from rush.Qt import QtGui, QtWidgets, QtCore
+
 try:
     import shiboken2 as shiboken
 except ImportError:
@@ -18,6 +18,7 @@ import os
 
 import rush
 reload(rush)
+
 
 QSS = """
 QListView
@@ -324,6 +325,7 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         self.histCompleter.setCompletionMode(
             QtWidgets.QCompleter.UnfilteredPopupCompletion)
         self.histCompleter.setModel(self.historyModel)
+        self.histCompleter.popup().setStyleSheet(QSS)
 
         # Edit line Edit behavior
         self.LE.setCompleter(self.completer)
@@ -406,9 +408,9 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
         """
         selections = self.completer.popup().selectedIndexes()
+        currentModelIndex = self.completer.popup().currentIndex()
         if len(selections) == 0:
-            modelIndex = self.filteredModel.index(0, 0)
-            self.completer.popup().setCurrentIndex(modelIndex)
+            self.completer.popup().setCurrentIndex(currentModelIndex)
         else:
             modelIndex = selections[0]
             nextIndex = modelIndex.row() + 1
@@ -436,9 +438,8 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
-            pm.callLastCommand(
-                """python(\"import rush; reload(rush);"""
-                """rush.Commands()._%s()\")""" % cmd)
+            cmdString = """python(\\"from rush import Commands; obj = Commands(); obj._%s()\\")""" % cmd
+            mel.eval("""callLastCommand("%s")""" % cmdString)
 
             # Add command to history data
             self.history.append(cmd)
@@ -518,7 +519,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.1", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.3", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
