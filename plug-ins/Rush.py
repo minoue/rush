@@ -408,9 +408,9 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
         """
         selections = self.completer.popup().selectedIndexes()
+        currentModelIndex = self.completer.popup().currentIndex()
         if len(selections) == 0:
-            modelIndex = self.filteredModel.index(0, 0)
-            self.completer.popup().setCurrentIndex(modelIndex)
+            self.completer.popup().setCurrentIndex(currentModelIndex)
         else:
             modelIndex = selections[0]
             nextIndex = modelIndex.row() + 1
