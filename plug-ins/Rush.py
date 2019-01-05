@@ -410,8 +410,14 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         selections = self.completer.popup().selectedIndexes()
         currentModelIndex = self.completer.popup().currentIndex()
         if len(selections) == 0:
-            self.completer.popup().setCurrentIndex(currentModelIndex)
+            # When no completion item is selected
+            if currentModelIndex.row() == -1:
+                modelIndex = self.filteredModel.index(0, 0)
+                self.completer.popup().setCurrentIndex(modelIndex)
+            else:
+                self.completer.popup().setCurrentIndex(currentModelIndex)
         else:
+            # When any of completions are selected
             modelIndex = selections[0]
             nextIndex = modelIndex.row() + 1
             newModelIndex = self.filteredModel.index(nextIndex, 0)
@@ -519,7 +525,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.4", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.5", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
