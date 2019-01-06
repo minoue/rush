@@ -107,7 +107,7 @@ def loadModule(path):
     try:
         mod = imp.load_source(name, path)
         return mod
-    except:
+    except Exception:
         logger.debug("Failed to load module : %s" % path)
         return None
 
