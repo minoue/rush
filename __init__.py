@@ -42,7 +42,6 @@ def loadConfig():
         extra_config = f.read().split()
         f.close()
     except IOError:
-        pass
         logger.debug("Failed to load config file")
 
     config.extend(extra_config)
@@ -65,7 +64,7 @@ def getModulePath(path):
         return None
 
     # Get all files in the directory
-    allFiles = [os.path.join(root, f) for root, firs, files in os.walk(path)
+    allFiles = [os.path.join(root, f) for root, _, files in os.walk(path)
                 for f in files]
 
     # Get only python files
@@ -143,11 +142,12 @@ def getClassList(config):
     class Reload(object):
         commandDict = {}
 
-        def _reloadRush(self):
+        @classmethod
+        def _reloadRush(cls):
             try:
                 cmds.unloadPlugin("Rush.py")
                 cmds.loadPlugin("Rush.py")
-            except:
+            except Exception:
                 print "Failed to reload plugin"
         commandDict['reloadRush'] = "sphere.png"
 

@@ -117,7 +117,8 @@ class History(object):
 
         self.history = self.read()
 
-    def read(self):
+    @classmethod
+    def read(cls):
         """ Load history
 
         Return:
@@ -489,7 +490,8 @@ class Rush(OpenMaya.MPxCommand):
     def redoIt(self):
         pass
 
-    def isUndoable(self):
+    @classmethod
+    def isUndoable(cls):
         return False
 
     @staticmethod
@@ -525,7 +527,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.5", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.2.6", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
