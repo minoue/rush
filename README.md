@@ -4,6 +4,14 @@
 <strong>TabMenu-style simple command launcher for Maya</strong>
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/maya-2015+-red.svg" alt="demo"/>
+  <img src="https://img.shields.io/github/license/minoue/rush.svg"/>
+  <img src="https://img.shields.io/github/release/minoue/rush.svg" alt="demo"/>
+  <img src="https://api.codacy.com/project/badge/Grade/03596fa2dec14561a216281ab7dab6c3"/>
+
+</p>
+
 <br>
 <br>
 
