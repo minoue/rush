@@ -113,16 +113,24 @@ Make sure to add underscore at the begging of the method name. Then, add new key
 
     ![](docs/images/done.png)
 
-## Using custom module directory
+## Additional module directory
 
-You can use custom module directories.  
-Create '.rushConfig' file in your home directory and add paths line by line.
+You can use additional module directories by adding rush.json in your maya script directory.
 
-eg.
-
+For example,
 ```
-/Users/XXXXXXX/Dropbox/dev/git/maya/extraModules
-/Users/some/other/module/dir
+C:\Users\YOURNAME\Documents\maya\2018\scripts\rush.json
+(Make sure it's script directory under the version number directory)
+```
+
+rush.json
+```json
+{
+    "path": [
+        "C:/Users/MYNAME/Dropbox/dev/maya/rushModule",
+        "C:/or/wherever/you/want
+    ]
+}
 ```
 
 ## Credit
