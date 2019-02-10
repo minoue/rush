@@ -23,28 +23,30 @@ def loadConfig():
         config(list): List of path module paths
 
     """
-    userDir = os.path.expanduser("~")
-    configPath = os.path.normpath(os.path.join(userDir, ".rushConfig"))
+    configFilePath = os.path.normpath(os.path.join(
+        cmds.internalVar(userScriptDir=True), 'rush.json'))
 
     defaultModulePath = os.path.normpath(os.path.join(
         cmds.internalVar(userScriptDir=True), 'rush', 'module'))
 
     config = [defaultModulePath]
 
-    # Use only default module path if confi file does not exist
-    if not os.path.exists(configPath):
+    # Use only default module path if config file does not exist
+    if not os.path.exists(configFilePath):
+        logger.debug("Additional config file not found: %s" % configFilePath)
         return config
 
     # Open and load config file in use home dir and append it to the
     # config list
     try:
-        f = open(configPath, 'r')
-        extra_config = f.read().split()
+        f = open(configFilePath, 'r')
+        extra_config = json.load(f)
+        additionalPaths = extra_config["path"]
         f.close()
     except IOError:
         logger.debug("Failed to load config file")
 
-    config.extend(extra_config)
+    config.extend(additionalPaths)
 
     return config
 
@@ -206,7 +208,6 @@ def saveCommands(path, cmdsDict):
                 sort_keys=True)
     except IOError:
         logger.debug("Failed to save command file")
-
 
 
 class Temp(object):
