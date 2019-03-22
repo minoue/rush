@@ -48,16 +48,16 @@ You can ..
 
 #### Install using git
 
-You can also use git to download the scripts.  
-In your user script directory,
+You can also download the scripts using git.  
 
 ```
+>> cd C:\Users\YOURNAME\Documents\maya\2018\scripts
 >> git clone https://github.com/minoue/rush
->> cd rush
->> git submodule update --init
 ```
 
 Then, copy Rush.py to the maya plug-ins directory, and activate the plugin.
+
+## How to use
 
 mel  
 
