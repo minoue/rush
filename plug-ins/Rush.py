@@ -347,9 +347,6 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
         model = QtGui.QStandardItemModel()
 
-        # Create a list of command names
-        self.commands = [i for i in self.cmdDict]
-
         # Add all command names and icon paths to the the model(model)
         for num, command in enumerate(self.cmdDict):
             item = QtGui.QStandardItem(command)
