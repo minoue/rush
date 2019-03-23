@@ -430,7 +430,8 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         self.histCompleter.complete()
 
     def execute(self):
-        cmd = self.LE.text()
+        # cmd = self.LE.text()
+        cmd = self.cmdDict[self.LE.text()]['command']
 
         # Close gui first otherwise maya clashes(2017)
         self.close()
@@ -524,7 +525,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.3.0", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.3.1", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:

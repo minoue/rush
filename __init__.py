@@ -167,10 +167,12 @@ def getClassList(config):
         # about the command
         tempDict = {}
         for cmd in c.commandDict:
+            displayName = cmd[:1].capitalize() + cmd[1:]
             command_data = {}
-            command_data[cmd] = {}
-            command_data[cmd]['icon'] = c.commandDict[cmd]
-            command_data[cmd]['path'] = module_path
+            command_data[displayName] = {}
+            command_data[displayName]['icon'] = c.commandDict[cmd]
+            command_data[displayName]['path'] = module_path
+            command_data[displayName]['command'] = cmd
             tempDict.update(command_data)
 
         cmdsDict.update(tempDict)
