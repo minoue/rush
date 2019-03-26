@@ -299,11 +299,11 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         self.createData()
         self.createUI()
 
-        self.setFixedWidth(self.dpi * 2.5)
+        self.setFixedWidth(self.dpi * 3.5)
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(self.dpi * 2.5)
+        self.LE.setFixedWidth(self.dpi * 3.5)
         self.LE.setPlaceholderText("Search")
 
         # Layout
@@ -370,7 +370,7 @@ class Gui(rush.Commands, QtWidgets.QFrame):
 
         for num, command in enumerate(self.historyList):
 
-            # Capitalize the first letter of the command 
+            # Capitalize the first letter of the command
             displayName = command[:1].capitalize() + command[1:]
 
             # If a command dosen't exist in the history list,
@@ -528,7 +528,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.3.1", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.3.3", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except:
