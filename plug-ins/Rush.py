@@ -531,7 +531,7 @@ def initializePlugin(mobject):
     mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.3.3", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
-    except:
+    except Exception:
         sys.stderr.write("Failed to register command: %s\n" % kPluginCmdName)
         raise
 
@@ -546,6 +546,6 @@ def uninitializePlugin(mobject):
     mplugin = OpenMaya.MFnPlugin(mobject)
     try:
         mplugin.deregisterCommand(kPluginCmdName)
-    except:
+    except Exception:
         sys.stderr.write("Failed to unregister command: %s\n" % kPluginCmdName)
         raise
