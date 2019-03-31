@@ -2,35 +2,41 @@ from maya import cmds
 from maya import mel
 
 
-# class name must be 'Commands'
-class Commands(object):
+commandDict = {}
 
-    commandDict = {}
 
-    def _uvTextureEditor(self):
-        cmds.TextureViewWindow()
-    commandDict['uvTextureEditor'] = "textureEditor.png"
+def uvTextureEditor():
+    cmds.TextureViewWindow()
 
-    def _uVSetEditor(self):
-        cmds.UVSetEditor()
-    commandDict['uVSetEditor'] = "sphere.png"
 
-    def _uvProjection_automatic(self):
-        mel.eval("performPolyAutoProj 0")
-    commandDict['uvProjection_automatic'] = "polyAutoProj.png"
+def uVSetEditor():
+    cmds.UVSetEditor()
 
-    def _uvProjection_automatic_options(self):
-        mel.eval("performPolyAutoProj 1")
-    commandDict['uvProjection_automatic_options'] = "polyAutoProj.png"
 
-    def _bestPlaneTexturingTool(self):
-        mel.eval("setToolTo polyBestPlaneTexturingContext")
-    commandDict['bestPlaneTexturingTool'] = "bestPlaneTxt.png"
+def uvProjection_automatic():
+    mel.eval("performPolyAutoProj 0")
 
-    def _uvProjection_cameraBased(self):
-        mel.eval("polyProjection -type Planar -md p ")
-    commandDict['uvProjection_cameraBased'] = "polyCameraUVs.png"
 
-    def _uvProjection_cameraBased_options(self):
-        mel.eval('performPolyForceUVArgList "1" {"1", "camera", "ls -selection", "0"} "" ')
-    commandDict['uvProjection_cameraBased_options'] = "polyCameraUVs.png"
+def uvProjection_automatic_options():
+    mel.eval("performPolyAutoProj 1")
+
+
+def bestPlaneTexturingTool():
+    mel.eval("setToolTo polyBestPlaneTexturingContext")
+
+
+def uvProjection_cameraBased():
+    mel.eval("polyProjection -type Planar -md p ")
+
+
+def uvProjection_cameraBased_options():
+    mel.eval('performPolyForceUVArgList "1" {"1", "camera", "ls -selection", "0"} "" ')
+
+
+commandDict['uvTextureEditor'] = "textureEditor.png"
+commandDict['uVSetEditor'] = "sphere.png"
+commandDict['uvProjection_automatic'] = "polyAutoProj.png"
+commandDict['uvProjection_automatic_options'] = "polyAutoProj.png"
+commandDict['bestPlaneTexturingTool'] = "bestPlaneTxt.png"
+commandDict['uvProjection_cameraBased'] = "polyCameraUVs.png"
+commandDict['uvProjection_cameraBased_options'] = "polyCameraUVs.png"

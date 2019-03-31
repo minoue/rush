@@ -1,11 +1,11 @@
 import maya.cmds as cmds
 
 
-# class name must be 'Commands'
-class Commands(object):
+commandDict = {}
 
-    commandDict = {}
 
-    def _setNormalAngle(self):
-        cmds.SetNormalAngle()
-    commandDict['setNormalAngle'] = "polyNormalSetAngle.png"
+def setNormalAngle():
+    cmds.SetNormalAngle()
+
+
+commandDict['setNormalAngle'] = "polyNormalSetAngle.png"

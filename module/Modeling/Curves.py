@@ -2,131 +2,160 @@ from maya import mel
 from maya import cmds
 
 
-class Commands(object):
-    """ class name must be 'Commands' """
+commandDict = {}
 
-    commandDict = {}
 
-    def _curve_lockLength(self):
-        cmds.LockCurveLength()
-    commandDict['curve_lockLength'] = "lockLength.png"
+def curve_lockLength():
+    cmds.LockCurveLength()
 
-    def _curve_unlockLength(self):
-        cmds.UnlockCurveLength()
-    commandDict['curve_unlockLength'] = "unlockLength.png"
 
-    def _curve_bend(self):
-        cmds.BendCurves()
-    commandDict['curve_bend'] = "modifyBend.png"
+def curve_unlockLength():
+    cmds.UnlockCurveLength()
 
-    def _curve_bend_Options(self):
-        cmds.BendCurvesOptions()
-    commandDict['curve_bend_Options'] = "modifyBend.png"
 
-    def _curve_curl(self):
-        cmds.CurlCurves()
-    commandDict['curve_curl'] = "modifyCurl.png"
+def curve_bend():
+    cmds.BendCurves()
 
-    def _curve_curl_Options(self):
-        cmds.CurlCurvesOptions()
-    commandDict['curve_curl_Options'] = "modifyCurl.png"
 
-    def _curve_scaleCurvature(self):
-        cmds.ScaleCurvature()
-    commandDict['curve_scaleCurvature'] = "modifyScaleCurvature.png"
+def curve_bend_Options():
+    cmds.BendCurvesOptions()
 
-    def _curve_scaleCurvature_Options(self):
-        cmds.ScaleCurvatureOptions()
-    commandDict['curve_scaleCurvature_Options'] = "modifyScaleCurvature.png"
 
-    def _curve_smooth(self):
-        cmds.SmoothCurve()
-    commandDict['curve_smooth'] = "modifySmooth.png"
+def curve_curl():
+    cmds.CurlCurves()
 
-    def _curve_smooth_Options(self):
-        cmds.SmoothCurveOptions()
-    commandDict['curve_smooth_Options'] = "modifySmooth.png"
 
-    def _curve_straighten(self):
-        cmds.StraightenCurves()
-    commandDict['curve_straighten'] = "modifyStraighten.png"
+def curve_curl_Options():
+    cmds.CurlCurvesOptions()
 
-    def _curve_straighten_Options(self):
-        cmds.StraightenCurvesOptions()
-    commandDict['curve_straighten_Options'] = "modifyStraighten.png"
 
-    def _curve_duplicateSurfaceCurves(self):
-        mel.eval("""duplicateCurvePresetArgList( "2", {"1","0","0","2"} )""")
-    commandDict['curve_duplicateSurfaceCurves'] = "duplicateCurve.png"
+def curve_scaleCurvature():
+    cmds.ScaleCurvature()
 
-    def _curve_align(self):
-        cmds.AlignCurve()
-    commandDict['curve_align'] = "alignCurve.png"
 
-    def _curve_align_Options(self):
-        cmds.AlignCurveOptions()
-    commandDict['curve_align_Options'] = "alignCurve.png"
+def curve_scaleCurvature_Options():
+    cmds.ScaleCurvatureOptions()
 
-    def _curve_addPointTool(self):
-        cmds.AddPointsTool()
-    commandDict['curve_addPointTool'] = "curveAddPt.png"
 
-    def _curve_attach(self):
-        cmds.AttachCurve()
-    commandDict['curve_attach'] = "attachCurves.png"
+def curve_smooth():
+    cmds.SmoothCurve()
 
-    def _curve_attach_Options(self):
-        cmds.AttachCurveOptions()
-    commandDict['curve_attach_Options'] = "attachCurves.png"
 
-    def _curve_detach(self):
-        cmds.DetachCurve()
-    commandDict['curve_detach'] = "detachCurve.png"
+def curve_smooth_Options():
+    cmds.SmoothCurveOptions()
 
-    def _curve_detach_Options(self):
-        cmds.DetachCurveOptions()
-    commandDict['curve_detach_Options'] = "detachCurve.png"
 
-    def _curve_editCurveTool(self):
-        cmds.CurveEditTool()
-    commandDict['curve_editCurveTool'] = "curveEditor.png"
+def curve_straighten():
+    cmds.StraightenCurves()
 
-    def _curve_moveSeam(self):
-        mel.eval("""moveNurbsCurveSeam""")
-    commandDict['curve_moveSeam'] = "newSeamLocation.png"
 
-    def _curve_opneClose(self):
-        cmds.OpenCloseCurve()
-    commandDict['curve_openClose'] = "closeGeom.png"
+def curve_straighten_Options():
+    cmds.StraightenCurvesOptions()
 
-    def _curve_extend(self):
-        cmds.ExtendCurve()
-    commandDict['curve_extend'] = "extend.png"
 
-    def _curve_extend_Options(self):
-        cmds.ExtendCurveOptions()
-    commandDict['curve_extend_Options'] = "extend.png"
+def curve_duplicateSurfaceCurves():
+    mel.eval("""duplicateCurvePresetArgList( "2", {"1","0","0","2"} )""")
 
-    def _curve_extendOnSurface(self):
-        cmds.ExtendCurveOnSurface()
-    commandDict['curve_extendOnSurface'] = "extendCos.png"
 
-    def _curve_extendOnSurface_Options(self):
-        cmds.ExtendCurveOnSurfaceOptions()
-    commandDict['curve_extendOnSurface_Options'] = "extendCos.png"
+def curve_align():
+    cmds.AlignCurve()
 
-    def _curve_rebuild(self):
-        cmds.RebuildCurve()
-    commandDict['curve_rebuild'] = "rebuildCurve.png"
 
-    def _curve_rebuild_Options(self):
-        cmds.RebuildCurveOptions()
-    commandDict['curve_rebuild_Options'] = "rebuildCurve.png"
+def curve_align_Options():
+    cmds.AlignCurveOptions()
 
-    def _curve_reverseDirection(self):
-        cmds.ReverseCurve()
-    commandDict['curve_reverseDirection'] = "reverse.png"
 
-    def _curve_reverseDirection_Options(self):
-        cmds.ReverseCurveOptions()
-    commandDict['curve_reverseDirection_Options'] = "reverse.png"
+def curve_addPointTool():
+    cmds.AddPointsTool()
+
+
+def curve_attach():
+    cmds.AttachCurve()
+
+
+def curve_attach_Options():
+    cmds.AttachCurveOptions()
+
+
+def curve_detach():
+    cmds.DetachCurve()
+
+
+def curve_detach_Options():
+    cmds.DetachCurveOptions()
+
+
+def curve_editCurveTool():
+    cmds.CurveEditTool()
+
+
+def curve_moveSeam():
+    mel.eval("""moveNurbsCurveSeam""")
+
+
+def curve_opneClose():
+    cmds.OpenCloseCurve()
+
+
+def curve_extend():
+    cmds.ExtendCurve()
+
+
+def curve_extend_Options():
+    cmds.ExtendCurveOptions()
+
+
+def curve_extendOnSurface():
+    cmds.ExtendCurveOnSurface()
+
+
+def curve_extendOnSurface_Options():
+    cmds.ExtendCurveOnSurfaceOptions()
+
+
+def curve_rebuild():
+    cmds.RebuildCurve()
+
+
+def curve_rebuild_Options():
+    cmds.RebuildCurveOptions()
+
+
+def curve_reverseDirection():
+    cmds.ReverseCurve()
+
+
+def curve_reverseDirection_Options():
+    cmds.ReverseCurveOptions()
+
+
+commandDict['curve_lockLength'] = "lockLength.png"
+commandDict['curve_unlockLength'] = "unlockLength.png"
+commandDict['curve_bend'] = "modifyBend.png"
+commandDict['curve_bend_Options'] = "modifyBend.png"
+commandDict['curve_curl'] = "modifyCurl.png"
+commandDict['curve_curl_Options'] = "modifyCurl.png"
+commandDict['curve_scaleCurvature'] = "modifyScaleCurvature.png"
+commandDict['curve_scaleCurvature_Options'] = "modifyScaleCurvature.png"
+commandDict['curve_smooth'] = "modifySmooth.png"
+commandDict['curve_smooth_Options'] = "modifySmooth.png"
+commandDict['curve_straighten'] = "modifyStraighten.png"
+commandDict['curve_duplicateSurfaceCurves'] = "duplicateCurve.png"
+commandDict['curve_align'] = "alignCurve.png"
+commandDict['curve_align_Options'] = "alignCurve.png"
+commandDict['curve_addPointTool'] = "curveAddPt.png"
+commandDict['curve_attach'] = "attachCurves.png"
+commandDict['curve_attach_Options'] = "attachCurves.png"
+commandDict['curve_detach'] = "detachCurve.png"
+commandDict['curve_detach_Options'] = "detachCurve.png"
+commandDict['curve_editCurveTool'] = "curveEditor.png"
+commandDict['curve_moveSeam'] = "newSeamLocation.png"
+commandDict['curve_openClose'] = "closeGeom.png"
+commandDict['curve_extend'] = "extend.png"
+commandDict['curve_extend_Options'] = "extend.png"
+commandDict['curve_extendOnSurface'] = "extendCos.png"
+commandDict['curve_extendOnSurface_Options'] = "extendCos.png"
+commandDict['curve_rebuild'] = "rebuildCurve.png"
+commandDict['curve_rebuild_Options'] = "rebuildCurve.png"
+commandDict['curve_reverseDirection'] = "reverse.png"
+commandDict['curve_reverseDirection_Options'] = "reverse.png"

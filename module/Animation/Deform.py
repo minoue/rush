@@ -1,95 +1,158 @@
-import maya.cmds as cmds
-import maya.mel as mel
+from maya import cmds
 
 
-class Commands(object):
+commandDict = {}
 
-    commandDict = {}
 
-    def _createBlendShape(self):
-        cmds.CreateBlendShape()
-    commandDict['createBlendShape'] = "blendShape.png"
+def createBlendShape():
+    cmds.CreateBlendShape()
 
-    def _createBlendShapeOptions(self):
-        cmds.CreateBlendShapeOptions()
-    commandDict['createBlendShapeOptions'] = "blendShape.png"
 
-    def _createLattice(self):
-        cmds.CreateLattice()
-    commandDict['createLattice'] = "lattice.png"
+commandDict['createBlendShape'] = "blendShape.png"
 
-    def _createLatticeOptions(self):
-        cmds.CreateLatticeOptions()
-    commandDict['createLatticeOptions'] = "lattice.png"
 
-    def _createWrap(self):
-        cmds.CreateWrap()
-    commandDict['createWrap'] = "wrap.png"
+def createBlendShapeOptions():
+    cmds.CreateBlendShapeOptions()
 
-    def _createWrapOptions(self):
-        cmds.CreateWrapOptions()
-    commandDict['createWrapOptions'] = "wrap.png"
 
-    def _createShrinkWrap(self):
-        cmds.CreateShrinkWrap()
-    commandDict['createShrinkWrap'] = "shrinkwrap.png"
+commandDict['createBlendShapeOptions'] = "blendShape.png"
 
-    def _createShrinkWrapOptions(self):
-        cmds.CreateShrinkWrapOptions()
-    commandDict['createShrinkWrapOptions'] = "shrinkwrap.png"
 
-    def _createCluster(self):
-        cmds.CreateCluster()
-    commandDict['createCluster'] = "cluster.png"
+def createLattice():
+    cmds.CreateLattice()
 
-    def _createClusterOptions(self):
-        cmds.CreateClusterOptions()
-    commandDict['createClusterOptions'] = "cluster.png"
 
-    def _bend(self):
-        cmds.Bend()
-    commandDict['bend'] = "bendNLD.png"
+commandDict['createLattice'] = "lattice.png"
 
-    def _bendOptions(self):
-        cmds.BendOptions()
-    commandDict['bendOptions'] = "bendNLD.png"
 
-    def _flare(self):
-        cmds.Flare()
-    commandDict['flare'] = "flareNLD.png"
+def createLatticeOptions():
+    cmds.CreateLatticeOptions()
 
-    def _flareOptions(self):
-        cmds.FlareOptions()
-    commandDict['flareOptions'] = "flareNLD.png"
 
-    def _sine(self):
-        cmds.Sine()
-    commandDict['sine'] = "sineNLD.png"
+commandDict['createLatticeOptions'] = "lattice.png"
 
-    def _sineOptions(self):
-        cmds.SineOptions()
-    commandDict['sineOptions'] = "sineNLD.png"
 
-    def _squash(self):
-        cmds.Squash()
-    commandDict['squash'] = "squashNLD.png"
+def createWrap():
+    cmds.CreateWrap()
 
-    def _squashOptions(self):
-        cmds.SquashOptions()
-    commandDict['squashOptions'] = "squashNLD.png"
 
-    def _twist(self):
-        cmds.Twist()
-    commandDict['twist'] = "twistNLD.png"
+commandDict['createWrap'] = "wrap.png"
 
-    def _twistOptions(self):
-        cmds.TwistOptions()
-    commandDict['twistOptions'] = "twistNLD.png"
 
-    def _wave(self):
-        cmds.Wave()
-    commandDict['wave'] = "waveNLD.png"
+def createWrapOptions():
+    cmds.CreateWrapOptions()
 
-    def _waveOptions(self):
-        cmds.WaveOptions()
-    commandDict['waveOptions'] = "waveNLD.png"   
+
+commandDict['createWrapOptions'] = "wrap.png"
+
+
+def createShrinkWrap():
+    cmds.CreateShrinkWrap()
+
+
+commandDict['createShrinkWrap'] = "shrinkwrap.png"
+
+
+def createShrinkWrapOptions():
+    cmds.CreateShrinkWrapOptions()
+
+
+commandDict['createShrinkWrapOptions'] = "shrinkwrap.png"
+
+
+def createCluster():
+    cmds.CreateCluster()
+
+
+commandDict['createCluster'] = "cluster.png"
+
+
+def createClusterOptions():
+    cmds.CreateClusterOptions()
+
+
+commandDict['createClusterOptions'] = "cluster.png"
+
+
+def bend():
+    cmds.Bend()
+
+
+commandDict['bend'] = "bendNLD.png"
+
+
+def bendOptions():
+    cmds.BendOptions()
+
+
+commandDict['bendOptions'] = "bendNLD.png"
+
+
+def flare():
+    cmds.Flare()
+
+
+commandDict['flare'] = "flareNLD.png"
+
+
+def flareOptions():
+    cmds.FlareOptions()
+
+
+commandDict['flareOptions'] = "flareNLD.png"
+
+
+def sine():
+    cmds.Sine()
+
+
+commandDict['sine'] = "sineNLD.png"
+
+
+def sineOptions():
+    cmds.SineOptions()
+
+
+commandDict['sineOptions'] = "sineNLD.png"
+
+
+def squash():
+    cmds.Squash()
+
+
+commandDict['squash'] = "squashNLD.png"
+
+
+def squashOptions():
+    cmds.SquashOptions()
+
+
+commandDict['squashOptions'] = "squashNLD.png"
+
+
+def twist():
+    cmds.Twist()
+
+
+commandDict['twist'] = "twistNLD.png"
+
+
+def twistOptions():
+    cmds.TwistOptions()
+
+
+commandDict['twistOptions'] = "twistNLD.png"
+
+
+def wave():
+    cmds.Wave()
+
+
+commandDict['wave'] = "waveNLD.png"
+
+
+def waveOptions():
+    cmds.WaveOptions()
+
+
+commandDict['waveOptions'] = "waveNLD.png"

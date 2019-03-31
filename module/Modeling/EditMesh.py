@@ -1,100 +1,123 @@
-import maya.cmds as cmds
-import maya.mel as mel
+from maya import cmds
+from maya import mel
 
 
-# class name must be 'Commands'
-class Commands(object):
+commandDict = {}
 
-    commandDict = {}
 
-    # Components -------------------------------
+# Components -------------------------------
 
-    def _polyBevel(self):
-        cmds.polyBevel()
-    commandDict['polyBevel'] = 'polyBevel.png'
+def polyBevel():
+    cmds.polyBevel()
 
-    def _polyBridge(self):
-        mel.eval("performPolyBridgeEdge 0")
-    commandDict['polyBridge'] = 'polyBridge.png'
 
-    def _polyCircularize(self):
-        cmds.PolyCircularize()
-    commandDict['polyCircularize'] = 'polyCircularize.png'
+def polyBridge():
+    mel.eval("performPolyBridgeEdge 0")
 
-    def _polyCollapse(self):
-        cmds.PolygonCollapse()
-    commandDict['polyCollapse'] = 'polyCollapseEdge.png'
 
-    def _polyConnectComponents(self):
-        cmds.polyConnectComponents()
-    commandDict['polyConnectComponents'] = 'polyConnectComponents.png'
+def polyCircularize():
+    cmds.PolyCircularize()
 
-    def _detachComponent(self):
-        cmds.DetachComponent()
-    commandDict['detachComponent'] = 'polySplitVertex.png'
 
-    def _polyExtrude(self):
-        cmds.PolyExtrude()
-    commandDict['polyExtrude'] = 'polyExtrudeFacet.png'
+def polyCollapse():
+    cmds.PolygonCollapse()
 
-    def _mergeComponents(self):
-        cmds.PolyMerge()
-    commandDict['mergeComponents'] = 'polyMerge.png'
 
-    def _mergeComponentsOptions(self):
-        cmds.PolyMergeOptions()
-    commandDict['mergeComponentsOptions'] = 'polyMerge.png'
+def polyConnectComponents():
+    cmds.polyConnectComponents()
 
-    def _mergeToCenter(self):
-        cmds.MergeToCenter()
-    commandDict['mergeToCenter'] = 'polyMergeToCenter.png'
 
-    def _transformComponents(self):
-        cmds.MovePolygonComponent()
-    commandDict['transformComponents'] = 'polyMoveVertex.png'
+def detachComponent():
+    cmds.DetachComponent()
 
-    def _transformComponentsOptions(self):
-        cmds.MovePolygonComponentOptions()
-    commandDict['transformComponentsOptions'] = 'polyMoveVertex.png'
 
-    def _polyFlip(self):
-        mel.eval("dR_performSymmetryFlip")
-    commandDict['polyFlip'] = 'polyFlip.png'
+def polyExtrude():
+    cmds.PolyExtrude()
 
-    def _polySymmetrize(self):
-        mel.eval("dR_performSymmetrize")
-    commandDict['polySymmetrize'] = 'symmetrize.png'
 
-    # Vertex -------------------------------
+def mergeComponents():
+    cmds.PolyMerge()
 
-    def _averageVertex(self):
-        cmds.AverageVertex()
-    commandDict['averageVertex'] = 'polyAverageVertex.png'
 
-    def _averageVertexOptions(self):
-        mel.eval("performPolyAverageVertex 1")
-    commandDict['averageVertexOptions'] = 'polyAverageVertex.png'
+def mergeComponentsOptions():
+    cmds.PolyMergeOptions()
 
-    def _chamferVertex(self):
-        cmds.ChamferVertex()
-    commandDict['chamferVertex'] = 'polyChamfer.png'
 
-    def _chamferVertexOptions(self):
-        cmds.ChamferVertexOptions()
-    commandDict['chamferVertexOptions'] = 'polyChamfer.png'
+def mergeToCenter():
+    cmds.MergeToCenter()
 
-    # Edge -------------------------------
 
-    def _detachEdgeComponent(self):
-        cmds.DetachEdgeComponent()
-    commandDict['detachEdgeComponent'] = 'polyEditEdgeFlow.png'
+def transformComponents():
+    cmds.MovePolygonComponent()
 
-    # Face -------------------------------
 
-    def _extractFace(self):
-        cmds.ExtractFace()
-    commandDict['extractFace'] = 'polyChipOff.png'
+def transformComponentsOptions():
+    cmds.MovePolygonComponentOptions()
 
-    def _extractFaceOptions(self):
-        cmds.ExtractFaceOptions()
-    commandDict['extractFaceOptions'] = 'polyChipOff.png'
+
+def polyFlip():
+    mel.eval("dR_performSymmetryFlip")
+
+
+def polySymmetrize():
+    mel.eval("dR_performSymmetrize")
+
+
+# Vertex -------------------------------
+
+
+def averageVertex():
+    cmds.AverageVertex()
+
+
+def averageVertexOptions():
+    mel.eval("performPolyAverageVertex 1")
+
+
+def chamferVertex():
+    cmds.ChamferVertex()
+
+
+def chamferVertexOptions():
+    cmds.ChamferVertexOptions()
+
+
+# Edge -------------------------------
+
+
+def detachEdgeComponent():
+    cmds.DetachEdgeComponent()
+
+
+# Face -------------------------------
+
+
+def extractFace():
+    cmds.ExtractFace()
+
+
+def extractFaceOptions():
+    cmds.ExtractFaceOptions()
+
+
+commandDict['polyBevel'] = 'polyBevel.png'
+commandDict['polyBridge'] = 'polyBridge.png'
+commandDict['polyCircularize'] = 'polyCircularize.png'
+commandDict['polyCollapse'] = 'polyCollapseEdge.png'
+commandDict['polyConnectComponents'] = 'polyConnectComponents.png'
+commandDict['detachComponent'] = 'polySplitVertex.png'
+commandDict['polyExtrude'] = 'polyExtrudeFacet.png'
+commandDict['mergeComponents'] = 'polyMerge.png'
+commandDict['mergeComponentsOptions'] = 'polyMerge.png'
+commandDict['mergeToCenter'] = 'polyMergeToCenter.png'
+commandDict['transformComponents'] = 'polyMoveVertex.png'
+commandDict['transformComponentsOptions'] = 'polyMoveVertex.png'
+commandDict['polyFlip'] = 'polyFlip.png'
+commandDict['polySymmetrize'] = 'symmetrize.png'
+commandDict['averageVertex'] = 'polyAverageVertex.png'
+commandDict['averageVertexOptions'] = 'polyAverageVertex.png'
+commandDict['chamferVertex'] = 'polyChamfer.png'
+commandDict['chamferVertexOptions'] = 'polyChamfer.png'
+commandDict['detachEdgeComponent'] = 'polyEditEdgeFlow.png'
+commandDict['extractFace'] = 'polyChipOff.png'
+commandDict['extractFaceOptions'] = 'polyChipOff.png'

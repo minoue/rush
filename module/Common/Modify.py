@@ -1,122 +1,150 @@
-import maya.cmds as cmds
-import maya.mel as mel
+from maya import cmds
+from maya import mel
 
 
-class Commands(object):
+commandDict = {}
 
-    commandDict = {}
 
-    def _freezeAll(self):
-        cmds.makeIdentity(apply=True, t=True, r=True, s=True, n=False)
-    commandDict['freezeAll'] = "menuIconModify.png"
+def freezeAll():
+    cmds.makeIdentity(apply=True, t=True, r=True, s=True, n=False)
 
-    def _freezeOnlyTranslation(self):
-        cmds.makeIdentity(apply=True, t=True, r=False, s=False, n=False)
-    commandDict['freezeOnlyTranslation'] = "menuIconModify.png"
 
-    def _freezeOnlyRotation(self):
-        cmds.makeIdentity(apply=True, t=False, r=True, s=False, n=False)
-    commandDict['freezeOnlyRotation'] = "menuIconModify.png"
+def freezeOnlyTranslation():
+    cmds.makeIdentity(apply=True, t=True, r=False, s=False, n=False)
 
-    # Snap align
-    def _snapPointToPoint(self):
-        cmds.SnapPointToPoint()
-    commandDict['snapPointToPoint'] = "pointToPoint.png"
 
-    def _snap2PointsTo2Points(self):
-        cmds.Snap2PointsTo2Points()
-    commandDict['snap2PointsTo2Points'] = "twoPointToPoint.png"
+def freezeOnlyRotation():
+    cmds.makeIdentity(apply=True, t=False, r=True, s=False, n=False)
 
-    def _snap3PointsTo3Points(self):
-        cmds.Snap3PointsTo3Points(0)
-    commandDict['snap3PointsTo3Points'] = "threePointToPoint.png"
 
-    def _performAlignObjects(self):
-        cmds.perform
-        mel.eval("performAlignObjects 0")
-    commandDict['performAlignObjects'] = "alignObjects.png"
+# Snap align
+def snapPointToPoint():
+    cmds.SnapPointToPoint()
 
-    def _positionAlongCurve(self):
-        cmds.PositionAlongCurve()
-    commandDict['positionAlongCurve'] = "positionAlongCurve.png"
 
-    def _alignTool(self):
-        mel.eval("setToolTo alignToolCtx")
-    commandDict['alignTool'] = "alignTool.png"
+def snap2PointsTo2Points():
+    cmds.Snap2PointsTo2Points()
 
-    def _snapTogetherTool(self):
-        cmds.setToolTo(cmds.snapTogetherCtx())
-    commandDict['snapTogetherTool'] = "snapTogetherTool.png"
 
-    def _centerPivot(self):
-        cmds.CenterPivot()
-    commandDict['centerPivot'] = "menuIconModify.png"
+def snap3PointsTo3Points():
+    cmds.Snap3PointsTo3Points(0)
 
-    def _prefixHierarchyNames(self):
-        cmds.PrefixHierarchyNames()
-    commandDict['prefixHierarchyNames'] = "menuIconModify.png"
 
-    def _searchReplaceNames(self):
-        mel.eval("performSearchReplaceNames 1")
-    commandDict['searchReplaceNames'] = "menuIconModify.png"
+def performAlignObjects():
+    cmds.perform
+    mel.eval("performAlignObjects 0")
 
-    def _addAttribute(self):
-        cmds.AddAttribute()
-    commandDict['addAttribute'] = "menuIconModify.png"
 
-    def _editAttribute(self):
-        cmds.RenameAttribute()
-    commandDict['editAttribute'] = "menuIconModify.png"
+def positionAlongCurve():
+    cmds.PositionAlongCurve()
 
-    def _deleteAttribute(self):
-        cmds.DeleteAttribute()
-    commandDict['deleteAttribute'] = "menuIconModify.png"
 
-    def _scriptPaintTool(self):
-        cmds.ScriptPaintTool()
-    commandDict['scriptPaintTool'] = "userPaint.png"
+def alignTool():
+    mel.eval("setToolTo alignToolCtx")
 
-    def _freezeOnlyScale(self):
-        cmds.makeIdentity(apply=True, t=False, r=False, s=True, n=False)
-    commandDict['freezeOnlyScale'] = "menuIconModify.png"
 
-    # Conversions
-    def _convertNurbsToPolygonOptions(self):
-        cmds.NURBSToPolygonsOptions()
-    commandDict['convertNurbsToPolygonOptions'] = "nurbsToPolygons.png"
+def snapTogetherTool():
+    cmds.setToolTo(cmds.snapTogetherCtx())
 
-    def _convertNurbsToSubdivOptions(self):
-        cmds.CreateSubdivSurfaceOptions()
-    commandDict['convertNurbsToSubdivOptions'] = "nurbsToSubdivs.png"
 
-    def _convertPolygonToSubdivOptions(self):
-        cmds.CreateSubdivSurfaceOptions()
-    commandDict['convertPolygonToSubdivOptions'] = "subdivCreate.png"
+def centerPivot():
+    cmds.CenterPivot()
 
-    def _convertPolygonEdgesToCurveOptions(self):
-        cmds.CreateCurveFromPolyOptions()
-    commandDict['convertPolygonEdgesToCurveOptions'] = "menuIconModify.png"
 
-    def _convertSubdivToPolygonsOptions(self):
-        cmds.TesselateSubdivSurfaceOptions()
-    commandDict['convertSubdivToPolygonsOptions'] = "subdivTessellate.png"
+def prefixHierarchyNames():
+    cmds.PrefixHierarchyNames()
 
-    def _convertSubdivToNURBSOptions(self):
-        cmds.SubdivToNURBSOptions()
-    commandDict['convertSubdivToNURBSOptions'] = "subdivToNurbs.png"
 
-    def _paintEffectsToPolygonsOptions(self):
-        cmds.PaintEffectsToPolyOptions()
-    commandDict['paintEffectsToPolygonsOptions'] = "paintFXtoPoly.png"
+def searchReplaceNames():
+    mel.eval("performSearchReplaceNames 1")
 
-    def _paintEffectsToNURBSOptions(self):
-        cmds.PaintEffectsToNurbsOptions()
-    commandDict['paintEffectsToNURBSOptions'] = "paintFXtoNurbs.png"
 
-    def _paintEffectsToCurveOptions(self):
-        cmds.PaintEffectsToCurveOptions()
-    commandDict['paintEffectsToCurveOptions'] = "paintFXtoCurve.png"
+def addAttribute():
+    cmds.AddAttribute()
 
-    def _textureToGeometryOptions(self):
-        mel.eval("""performTextureToGeom 1""")
-    commandDict['textureToGeometryOptions'] = "textureToGeom.png"
+
+def editAttribute():
+    cmds.RenameAttribute()
+
+
+def deleteAttribute():
+    cmds.DeleteAttribute()
+
+
+def scriptPaintTool():
+    cmds.ScriptPaintTool()
+
+
+def freezeOnlyScale():
+    cmds.makeIdentity(apply=True, t=False, r=False, s=True, n=False)
+
+
+# Conversions
+def convertNurbsToPolygonOptions():
+    cmds.NURBSToPolygonsOptions()
+
+
+def convertNurbsToSubdivOptions():
+    cmds.CreateSubdivSurfaceOptions()
+
+
+def convertPolygonToSubdivOptions():
+    cmds.CreateSubdivSurfaceOptions()
+
+
+def convertPolygonEdgesToCurveOptions():
+    cmds.CreateCurveFromPolyOptions()
+
+
+def convertSubdivToPolygonsOptions():
+    cmds.TesselateSubdivSurfaceOptions()
+
+
+def convertSubdivToNURBSOptions():
+    cmds.SubdivToNURBSOptions()
+
+
+def paintEffectsToPolygonsOptions():
+    cmds.PaintEffectsToPolyOptions()
+
+
+def paintEffectsToNURBSOptions():
+    cmds.PaintEffectsToNurbsOptions()
+
+
+def paintEffectsToCurveOptions():
+    cmds.PaintEffectsToCurveOptions()
+
+
+def textureToGeometryOptions():
+    mel.eval("""performTextureToGeom 1""")
+
+
+commandDict['freezeAll'] = "menuIconModify.png"
+commandDict['freezeOnlyTranslation'] = "menuIconModify.png"
+commandDict['freezeOnlyRotation'] = "menuIconModify.png"
+commandDict['snapPointToPoint'] = "pointToPoint.png"
+commandDict['snap2PointsTo2Points'] = "twoPointToPoint.png"
+commandDict['snap3PointsTo3Points'] = "threePointToPoint.png"
+commandDict['performAlignObjects'] = "alignObjects.png"
+commandDict['positionAlongCurve'] = "positionAlongCurve.png"
+commandDict['alignTool'] = "alignTool.png"
+commandDict['snapTogetherTool'] = "snapTogetherTool.png"
+commandDict['centerPivot'] = "menuIconModify.png"
+commandDict['prefixHierarchyNames'] = "menuIconModify.png"
+commandDict['searchReplaceNames'] = "menuIconModify.png"
+commandDict['addAttribute'] = "menuIconModify.png"
+commandDict['editAttribute'] = "menuIconModify.png"
+commandDict['deleteAttribute'] = "menuIconModify.png"
+commandDict['scriptPaintTool'] = "userPaint.png"
+commandDict['freezeOnlyScale'] = "menuIconModify.png"
+commandDict['convertNurbsToPolygonOptions'] = "nurbsToPolygons.png"
+commandDict['convertNurbsToSubdivOptions'] = "nurbsToSubdivs.png"
+commandDict['convertPolygonToSubdivOptions'] = "subdivCreate.png"
+commandDict['convertPolygonEdgesToCurveOptions'] = "menuIconModify.png"
+commandDict['convertSubdivToPolygonsOptions'] = "subdivTessellate.png"
+commandDict['convertSubdivToNURBSOptions'] = "subdivToNurbs.png"
+commandDict['paintEffectsToPolygonsOptions'] = "paintFXtoPoly.png"
+commandDict['paintEffectsToNURBSOptions'] = "paintFXtoNurbs.png"
+commandDict['paintEffectsToCurveOptions'] = "paintFXtoCurve.png"
+commandDict['textureToGeometryOptions'] = "textureToGeom.png"

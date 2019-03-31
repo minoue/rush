@@ -1,11 +1,11 @@
+from __future__ import print_function
 
 
-class Commands(object):
-    """ class name must be 'Commands' """
+commandDict = {}
 
-    commandDict = {}
 
-    def _sampleCommand(self):
-        print "Hello World"
-    commandDict['sampleCommand'] = "sphere.png"
-    # ^ Don't forget to add the command to the dictionary.
+def sampleCommand():
+    print("Hello World")
+
+
+commandDict['sampleCommand'] = "sphere.png"

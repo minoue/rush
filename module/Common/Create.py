@@ -1,96 +1,116 @@
 from maya import cmds
 
 
-class Commands(object):
-    """ class name must be 'Commands' """
+commandDict = {}
 
-    commandDict = {}
 
-    # Primitives
-    def _polyCube(self):
-        cmds.polyCube()
-    commandDict['polyCube'] = "polyCube.png"
+# Primitives
+def polyCube():
+    cmds.polyCube()
 
-    def _polySphere(self):
-        cmds.polySphere()
-    commandDict['polySphere'] = "polySphere.png"
 
-    def _polyCylinder(self):
-        cmds.polyCylinder()
-    commandDict['polyCylinder'] = "polyCylinder.png"
+def polySphere():
+    cmds.polySphere()
 
-    def _polyPlane(self):
-        cmds.polyPlane()
-    commandDict['polyPlane'] = "polyPlane.png"
 
-    def _polyCone(self):
-        cmds.polyCone()
-    commandDict['polyCone'] = "polyCone.png"
+def polyCylinder():
+    cmds.polyCylinder()
 
-    def _polyTorus(self):
-        cmds.polyTorus()
-    commandDict['polyTorus'] = "polyTorus.png"
 
-    def _polyPrism(self):
-        cmds.polyPrism()
-    commandDict['polyPrism'] = "polyPrism.png"
+def polyPlane():
+    cmds.polyPlane()
 
-    def _polyPyramid(self):
-        cmds.polyPyramid()
-    commandDict['polyPyramid'] = "polyPyramid.png"
 
-    def _polyPipe(self):
-        cmds.polyPipe()
-    commandDict['polyPipe'] = "polyPipe.png"
+def polyCone():
+    cmds.polyCone()
 
-    def _polyHelix(self):
-        cmds.polyHelix()
-    commandDict['polyHelix'] = "polyHelix.png"
 
-    # Lights
-    def _ambientLight(self):
-        cmds.shadingNode('ambientLight', asLight=True)
-    commandDict['ambientLight'] = "render_ambientLight.png"
+def polyTorus():
+    cmds.polyTorus()
 
-    def _areaLight(self):
-        cmds.shadingNode('areaLight', asLight=True)
-    commandDict['areaLight'] = "render_areaLight.png"
 
-    def _directionalLight(self):
-        cmds.shadingNode('directionalLight', asLight=True)
-    commandDict['directionalLight'] = "render_directionalLight.png"
+def polyPrism():
+    cmds.polyPrism()
 
-    def _pointLight(self):
-        cmds.shadingNode('pointLight', asLight=True)
-    commandDict['pointLight'] = "render_pointLight.png"
 
-    def _spotLight(self):
-        cmds.shadingNode('spotLight', asLight=True)
-    commandDict['spotLight'] = "render_spotLight.png"
+def polyPyramid():
+    cmds.polyPyramid()
 
-    def _volumeLight(self):
-        cmds.shadingNode('volumeLight', asLight=True)
-    commandDict['volumeLight'] = "render_volumeLight.png"
 
-    # Cameras
-    def _camera(self):
-        cmds.camera()
-    commandDict['camera'] = "Camera.png"
+def polyPipe():
+    cmds.polyPipe()
 
-    # Locator
-    def _locator(self):
-        cmds.spaceLocator(p=[0, 0, 0])
-    commandDict['locator'] = "render_locator.png"
 
-    # Measure Tools
-    def _distanceTool(self):
-        cmds.DistanceTool()
-    commandDict['distanceTool'] = "distanceDim.png"
+def polyHelix():
+    cmds.polyHelix()
 
-    def _parameterTool(self):
-        cmds.ParameterTool()
-    commandDict['parameterTool'] = "paramDim.png"
 
-    def _arcLengthTool(self):
-        cmds.ArcLengthTool()
-    commandDict['arcLengthTool'] = "arcLengthDim.png"
+# Lights
+def ambientLight():
+    cmds.shadingNode('ambientLight', asLight=True)
+
+
+def areaLight():
+    cmds.shadingNode('areaLight', asLight=True)
+
+
+def directionalLight():
+    cmds.shadingNode('directionalLight', asLight=True)
+
+
+def pointLight():
+    cmds.shadingNode('pointLight', asLight=True)
+
+
+def spotLight():
+    cmds.shadingNode('spotLight', asLight=True)
+
+
+def volumeLight():
+    cmds.shadingNode('volumeLight', asLight=True)
+
+
+# Cameras
+def camera():
+    cmds.camera()
+
+
+# Locator
+def locator():
+    cmds.spaceLocator(p=[0, 0, 0])
+
+
+# Measure Tools
+def distanceTool():
+    cmds.DistanceTool()
+
+
+def parameterTool():
+    cmds.ParameterTool()
+
+
+def arcLengthTool():
+    cmds.ArcLengthTool()
+
+
+commandDict['polyCube'] = "polyCube.png"
+commandDict['polySphere'] = "polySphere.png"
+commandDict['polyCylinder'] = "polyCylinder.png"
+commandDict['polyPlane'] = "polyPlane.png"
+commandDict['polyCone'] = "polyCone.png"
+commandDict['polyTorus'] = "polyTorus.png"
+commandDict['polyPrism'] = "polyPrism.png"
+commandDict['polyPyramid'] = "polyPyramid.png"
+commandDict['polyPipe'] = "polyPipe.png"
+commandDict['polyHelix'] = "polyHelix.png"
+commandDict['ambientLight'] = "render_ambientLight.png"
+commandDict['areaLight'] = "render_areaLight.png"
+commandDict['directionalLight'] = "render_directionalLight.png"
+commandDict['pointLight'] = "render_pointLight.png"
+commandDict['spotLight'] = "render_spotLight.png"
+commandDict['volumeLight'] = "render_volumeLight.png"
+commandDict['camera'] = "Camera.png"
+commandDict['locator'] = "render_locator.png"
+commandDict['distanceTool'] = "distanceDim.png"
+commandDict['parameterTool'] = "paramDim.png"
+commandDict['arcLengthTool'] = "arcLengthDim.png"
