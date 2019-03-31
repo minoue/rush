@@ -57,8 +57,6 @@ global proc callLastCommand(string $function)
 """)
 
 
-
-
 def getMayaWindow():
     ptr = OpenMayaUI.MQtUtil.mainWindow()
     return shiboken.wrapInstance(long(ptr), QtWidgets.QMainWindow)
