@@ -1,20 +1,10 @@
+from __future__ import print_function
 from maya import cmds
-import logging
 import inspect
 import json
 import sys
 import imp
 import os
-
-
-# level = logging.DEBUG
-level = logging.ERROR
-
-logger = logging.getLogger(__name__)
-handler = logging.StreamHandler()
-logger.addHandler(handler)
-logger.setLevel(level)
-handler.setLevel(level)
 
 
 def loadConfig():
@@ -34,7 +24,7 @@ def loadConfig():
 
     # Use only default module path if config file does not exist
     if not os.path.exists(configFilePath):
-        logger.debug("Additional config file not found: %s" % configFilePath)
+        print("Additional config file not found: %s" % configFilePath)
         return config
 
     # Open and load config file in use home dir and append it to the
@@ -45,7 +35,7 @@ def loadConfig():
         additionalPaths = extra_config["path"]
         f.close()
     except IOError:
-        logger.debug("Failed to load config file")
+        print("Failed to load config file")
 
     config.extend(additionalPaths)
 
@@ -111,7 +101,7 @@ def loadModule(path):
         mod = imp.load_source(name, path)
         return mod
     except Exception:
-        logger.debug("Failed to load module : %s" % path)
+        print("Failed to load module : %s" % path)
         return None
 
 
