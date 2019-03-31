@@ -12,7 +12,6 @@ except ImportError:
 import logging
 import string
 import random
-import json
 import sys
 import os
 
@@ -58,25 +57,6 @@ global proc callLastCommand(string $function)
     repeatLast -ac $function -acl "blah-blah....";
 }
 """)
-
-
-def getCommandDict():
-    """
-    Load json files as dicrectory.
-    key is command name, and its item is icon path.
-    """
-
-    cmdFile = os.path.normpath(os.path.join(MAYA_SCRIPT_DIR, "rushCmds.json"))
-
-    d = {}
-
-    try:
-        f = open(cmdFile)
-        d = json.load(f)
-        f.close()
-        return d
-    except IOError:
-        return d
 
 
 def setupLogger(verbose=False):
@@ -262,9 +242,9 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             right_border+2, (self.height() - height) / 2, self.iconPixmap)
 
 
-class Gui(rush.Commands, QtWidgets.QFrame):
+class Gui(rush.TempClass, QtWidgets.QFrame):
 
-    def __init__(self, logger, cmdDict, parent=None):
+    def __init__(self, logger, parent=None):
         """
 
         Args:
@@ -275,7 +255,7 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         super(Gui, self).__init__(parent)
 
         self.logger = logger
-        self.cmdDict = cmdDict
+        self.cmdDict = self.commandDict
         self.history = History()
 
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
@@ -440,13 +420,13 @@ class Gui(rush.Commands, QtWidgets.QFrame):
         self.close()
 
         try:
-            f = getattr(self, "_%s" % cmd)
+            f = getattr(self, "%s" % cmd)
             f()
             self.logger.debug("Running command : %s" % cmd)
 
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
-            cmdString = """python(\\"from rush import Commands; obj = Commands(); obj._%s()\\")""" % cmd
+            cmdString = """python(\\"from rush import TempClass; TempClass.%s()\\")""" % cmd
             mel.eval("""callLastCommand("%s")""" % cmdString)
 
             # Add command to history data
@@ -474,7 +454,7 @@ class Rush(OpenMaya.MPxCommand):
 
         logger = setupLogger(self.verbose)
 
-        self.mw = Gui(logger, getCommandDict(), getMayaWindow())
+        self.mw = Gui(logger, getMayaWindow())
         self.mw.show()
 
         pos = QtGui.QCursor.pos()
@@ -528,7 +508,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.3.3", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.4.0", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except Exception:
