@@ -76,22 +76,22 @@ You can open the hotkey editor and assign the command to any key you want.
 
 ## How to add commands
 
-Any commands can be added by editting/creating module files.
-For example, here is the templete script in the module directory.
+It's easy to add your own commands. Just create new python file in the module directory or open existing module files, and add functions to them.
+
+Take a look sample.py
 
 ```python
-class Commands(object):
 
-    commandDict = {}
+commandDict = {}
 
-    def _sampleCommand(self):
-        print "Hello World"
-    commandDict['sampleCommand'] = "sphere.png"
-    # ^ Don't forget to add the command to the dictionary.
+def sampleCommand():
+    print "Hello World"
+
+commandDict['sampleCommand'] = "sphere.png"
 ```
 
-To add new command, just add new method to the Command class.
-Make sure to add underscore at the begging of the method name. Then, add new key/item to the commandDict. Key is the command name without underscore, and the item is an icon path(relative or absolute)
+Once you add functions to a module file, you have to add additional dict data which key is a command name and value is icon path.
+Icon paths can be maya's default icon names or absolute paths if you have your own icons.
 
 1. Create a new file.
 
