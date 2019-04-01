@@ -17,9 +17,7 @@
 <br>
 <br>
 
-<p align="center">
-  <img src="docs/media/demo.gif" alt="demo"/>
-</p>
+![demo](images/rush.gif)
 
 ## Features
 
@@ -76,9 +74,10 @@ You can open the hotkey editor and assign the command to any key you want.
 
 ## How to add commands
 
-It's easy to add your own commands. Just create new python file in the module directory or open existing module files, and add functions to them.
+It's easy to add your own commands. Just create new python file in the module directory or open existing module files, and add functions to them. Once you added functions, you have to add additional dict data which key is a command name(function name) and value is icon path.
+Icon paths can be maya's default icon names or absolute paths if you have your own icons.
 
-Take a look sample.py
+Take a look 'sample.py'
 
 ```python
 
@@ -90,28 +89,7 @@ def sampleCommand():
 commandDict['sampleCommand'] = "sphere.png"
 ```
 
-Once you add functions to a module file, you have to add additional dict data which key is a command name and value is icon path.
-Icon paths can be maya's default icon names or absolute paths if you have your own icons.
-
-1. Create a new file.
-
-    ![](docs/images/createFile.png)
-
-2. Copy and paste the code from template file and edit your command as you want.
-
-    ![](docs/images/editFile.png)
-
-3. Save the file, go back to maya, and run reload command.
-
-    ![](docs/images/reload.png)
-
-4. You new command should be available in the completion.
-
-    ![](docs/images/runNewCommand.png)
-
-5. Done.
-
-    ![](docs/images/done.png)
+![sample](images/sample.gif)
 
 ## Additional module directory
 
