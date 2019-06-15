@@ -383,7 +383,14 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
 
     def execute(self):
         # cmd = self.LE.text()
-        cmd = self.cmdDict[self.LE.text()]['command']
+        if not self.LE.text():
+            return
+
+        try:
+            cmd = self.cmdDict[self.LE.text()]['command']
+        except KeyError:
+            print("No such command.")
+            return
 
         # Close gui first otherwise maya clashes(2017)
         self.close()
