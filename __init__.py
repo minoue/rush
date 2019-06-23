@@ -97,6 +97,12 @@ def loadModule(path):
 
     name = "/".join(name[-2:])
 
+    # If arnold is not loaded or installed, ignore modules for arnold
+    if name.startswith("Arnold"):
+        hasArnold = cmds.pluginInfo("mtoa", q=True, loaded=True)
+        if not hasArnold:
+            return None
+
     try:
         mod = imp.load_source(name, path)
         return mod
