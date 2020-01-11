@@ -91,6 +91,12 @@ commandDict['sampleCommand'] = "sphere.png"
 
 ![sample](images/sample.gif)
 
+## Command history
+Use down arrow key in a black field to show recently used commands.
+
+![sample](images/showHistory.gif)
+
+
 ## Additional module directory
 
 You can use additional module directories by adding rush.json in your maya script directory.
