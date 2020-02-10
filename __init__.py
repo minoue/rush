@@ -133,6 +133,7 @@ for path in loadConfig():
                     command_data[displayName]['icon'] = m.commandDict[cmd]
                     command_data[displayName]['path'] = module_path
                     command_data[displayName]['command'] = cmd
+                    command_data[displayName]['module'] = m.__name__
                     tempDict.update(command_data)
                 TempClass.commandDict.update(tempDict)
             except AttributeError:
