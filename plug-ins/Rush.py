@@ -18,25 +18,14 @@ reload(rush)
 
 
 QSS = """
-QListView
-{
+QWidget {
     background-color: rgb(42, 42, 42);
     border-style: solid;
     border-radius: 0px;
+    padding: 2px;
     border-width: 0px;
-    border-color: rgb(60, 60, 60, 100);
-    font-size: 14pt;
-}
-
-QLineEdit
-{
-    background-color: rgb(42, 42, 42);
-    border-style: solid;
-    border-radius: 10px;
-    padding: 4px;
-    border-width: 5px;
     border-color: rgb(68, 68, 68);
-    font-size: 16pt;
+    font-size: 14pt;
 }
 """
 
@@ -140,7 +129,8 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
 
     escPressed = QtCore.Signal(str)
     tabPressed = QtCore.Signal(str)
-    downPressed = QtCore.Signal(str)
+    backtabPressed = QtCore.Signal(str)
+    arrowPressed = QtCore.Signal(str)
 
     def __init__(self, parent=None):
         super(CustomQLineEdit, self).__init__(parent)
@@ -186,19 +176,29 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             QtCore.Qt.IgnoreAspectRatio,
             QtCore.Qt.SmoothTransformation)
 
-        self.setTextMargins(26, 0, 0, 0)
+        self.setTextMargins(30, 0, 0, 0)
 
     def focusOutEvent(self, event):
         # Emit signal to close the window when it gets out of focus
         self.escPressed.emit('esc')
 
     def keyPressEvent(self, event):
+        # modifiers = QtWidgets.QApplication.keyboardModifiers()
+
         if event.key() == QtCore.Qt.Key_Escape:
             self.escPressed.emit('esc')
         elif event.key() == QtCore.Qt.Key_Tab:
             self.tabPressed.emit('tab')
+        elif event.key() == QtCore.Qt.Key_Backtab:
+            self.backtabPressed.emit('backtab')
         elif event.key() == QtCore.Qt.Key_Down:
-            self.downPressed.emit('down')
+            self.arrowPressed.emit('down')
+        elif event.key() == QtCore.Qt.Key_Up:
+            self.arrowPressed.emit('up')
+        elif event.key() == QtCore.Qt.Key_Right:
+            self.arrowPressed.emit('right')
+        elif event.key() == QtCore.Qt.Key_Left:
+            self.arrowPressed.emit('left')
         else:
             super(CustomQLineEdit, self).keyPressEvent(event)
 
@@ -213,7 +213,30 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             right_border+2, (self.height() - height) / 2, self.iconPixmap)
 
 
-class Gui(rush.TempClass, QtWidgets.QFrame):
+class CustomQTableView(QtWidgets.QTableView):
+    def __init__(self, parent=None):
+        super(CustomQTableView, self).__init__(parent)
+
+        self.setFocusPolicy(QtCore.Qt.NoFocus)
+
+
+class CustomQTableView(QtWidgets.QTableView):
+
+    tabPressed = QtCore.Signal(str)
+
+    def __init__(self, parent=None):
+        super(CustomQTableView, self).__init__(parent)
+
+        self.setFocusPolicy(QtCore.Qt.NoFocus)
+
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Tab:
+            self.tabPressed.emit('tab')
+        else:
+            super(CustomQTableView, self).keyPressEvent(event)
+
+
+class Gui(rush.TempClass, QtWidgets.QWidget):
 
     def __init__(self, parent=None):
         """
@@ -230,61 +253,91 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.setWindowTitle("Rush")
         self.setWindowFlags(QtCore.Qt.Window)
-        self.setWindowFlags(
-            QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
-        try:
-            self.setWindowFlags(
-                self.windowFlags() | QtCore.Qt.NoDropShadowWindowHint)
-        except AttributeError:
-            pass
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
 
         # Dpi value to set the width for window and lineedit.
         self.dpi = self.physicalDpiX()
 
         self.setStyleSheet(QSS)
+        self.setContentsMargins(0, 0, 0, 0)
 
         # Create Data then UI
         self.createData()
         self.createUI()
 
-        self.setFixedWidth(self.dpi * 3.5)
+        self.toolWidth = self.dpi * 6
+        self.setFixedWidth(self.toolWidth)
+        # self.setFixedHeight(55)
+
+        self.currentRow = 0
 
     def createUI(self):
         self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(self.dpi * 3.5)
         self.LE.setPlaceholderText("Search")
+        self.LE.setFixedHeight(30)
+
+        self.testView = CustomQTableView()
+        self.testView.setShowGrid(False)
+        self.testView.verticalHeader().hide()
+        self.testView.verticalScrollBar().hide()
+        self.testView.horizontalScrollBar().hide()
+        # self.testView.setFixedHeight(200)
+        self.testView.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.testView.setVisible(False)
 
         # Layout
-        self.layout = QtWidgets.QBoxLayout(
-            QtWidgets.QBoxLayout.TopToBottom)
+        self.layout = QtWidgets.QBoxLayout(QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
-        self.layout.setContentsMargins(0, 0, 0, 0)
+        self.layout.addWidget(self.testView)
+        self.layout.setSpacing(10)
         self.setLayout(self.layout)
 
         # Set up QCompleter
-        self.completer = QtWidgets.QCompleter(self)
-        self.completer.setCompletionMode(
-            QtWidgets.QCompleter.UnfilteredPopupCompletion)
-        self.completer.setModel(self.filteredModel)
-        self.completer.setObjectName("commandCompleter")
-        self.completer.popup().setStyleSheet(QSS)
+        # self.completer = QtWidgets.QCompleter(self)
+        # self.completer.setCompletionMode(
+        #     QtWidgets.QCompleter.UnfilteredPopupCompletion)
+        # self.completer.setModel(self.filteredModel)
+        # self.completer.setObjectName("commandCompleter")
+        # self.completer.popup().setStyleSheet(QSS)
 
         # Setup QCompleter for history
-        self.histCompleter = QtWidgets.QCompleter(self)
-        self.histCompleter.setCompletionMode(
-            QtWidgets.QCompleter.UnfilteredPopupCompletion)
-        self.histCompleter.setModel(self.historyModel)
-        self.histCompleter.popup().setStyleSheet(QSS)
+        # self.histCompleter = QtWidgets.QCompleter(self)
+        # self.histCompleter.setCompletionMode(
+        #     QtWidgets.QCompleter.UnfilteredPopupCompletion)
+        # self.histCompleter.setModel(self.historyModel)
+        # self.histCompleter.popup().setStyleSheet(QSS)
+
+        self.testView.setModel(self.filteredModel)
+
+        # Header adjustment
+        self.testView.horizontalHeader().hide()
+        self.testView.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Fixed)
+        self.testView.horizontalHeader().resizeSection(0, 250)
+        self.testView.horizontalHeader().setStretchLastSection(True)
+        self.testView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
 
         # Edit line Edit behavior
-        self.LE.setCompleter(self.completer)
+        # self.LE.setCompleter(self.completer)
         self.LE.textEdited.connect(self.updateData)
         self.LE.returnPressed.connect(self.execute)
         self.LE.escPressed.connect(self.close)
-        self.LE.tabPressed.connect(self.tabCompletion)
-        self.LE.downPressed.connect(self.showHistory)
+        self.LE.tabPressed.connect(self.tabComplete)
+        self.LE.backtabPressed.connect(self.shiftTabComplete)
+        self.LE.arrowPressed.connect(self.arrowPressed)
         self.LE.setFocus()
+
+    def arrowPressed(self, direction):
+        # print(direction)
+
+        if self.LE.text() == "":
+            # for history
+            pass
+        elif direction == "down":
+            self.tabComplete()
+        elif direction == "up":
+            self.shiftTabComplete()
+        else:
+            pass
 
     def createData(self):
         """
@@ -305,12 +358,19 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
             else:
                 item.setIcon(
                     QtGui.QIcon(":%s" % self.cmdDict[command]['icon']))
-            model.setItem(num, 0, item)
+            module = QtGui.QStandardItem(self.cmdDict[command]['module'])
+            module.setTextAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            f = module.font()
+            f.setItalic(True)
+            f.setPointSize(11)
+            module.setFont(f)
+            item.setEditable(False)
+            module.setEditable(False)
+            model.appendRow([item, module])
 
         # Store the model(model) into the sortFilterProxy model
         self.filteredModel = QtCore.QSortFilterProxyModel(self)
-        self.filteredModel.setFilterCaseSensitivity(
-            QtCore.Qt.CaseInsensitive)
+        self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(model)
 
         # History model
@@ -341,37 +401,108 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
 
         """
 
+        if self.LE.text() == "":
+            self.testView.setVisible(False)
+            self.setFixedHeight(55)
+        else:
+            self.testView.setVisible(True)
+            self.setFixedHeight(300)
+
         # command completer
         currentText = self.LE.text()
-        if currentText == "":
-            self.LE.setCompleter(self.completer)
+        # if currentText == "":
+        #     self.LE.setCompleter(self.completer)
 
         # Set commands to case insensitive
-        regExp = QtCore.QRegExp(
-            self.LE.text(),
-            QtCore.Qt.CaseInsensitive,
-            QtCore.QRegExp.RegExp)
+        regExp = QtCore.QRegExp(self.LE.text(), QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
 
-    def tabCompletion(self):
+        numRows = self.testView.model().rowCount()
+
+        if numRows < 8:
+            height = 36 * numRows + 55 + 4
+            self.setFixedHeight(height)
+
+    def tabComplete(self):
         """ Complete commands by tab key
 
         """
-        selections = self.completer.popup().selectedIndexes()
-        currentModelIndex = self.completer.popup().currentIndex()
-        if len(selections) == 0:
-            # When no completion item is selected
-            if currentModelIndex.row() == -1:
-                modelIndex = self.filteredModel.index(0, 0)
-                self.completer.popup().setCurrentIndex(modelIndex)
-            else:
-                self.completer.popup().setCurrentIndex(currentModelIndex)
+
+        selection = self.testView.selectionModel()
+
+        if selection.hasSelection() is False:
+            self.testView.selectRow(0)
+            index = self.filteredModel.index(0, 0)
         else:
-            # When any of completions are selected
-            modelIndex = selections[0]
-            nextIndex = modelIndex.row() + 1
-            newModelIndex = self.filteredModel.index(nextIndex, 0)
-            self.completer.popup().setCurrentIndex(newModelIndex)
+            currentIndex = selection.currentIndex()
+            currentRow = currentIndex.row()
+
+            numRows = self.filteredModel.rowCount()
+            if currentRow == (numRows - 1):
+                nextRow = 0
+            else:
+                nextRow = currentRow + 1
+
+            self.testView.clearSelection()
+            self.testView.selectRow(nextRow)
+
+            index = self.filteredModel.index(nextRow, 0)
+            selection.select(index, QtCore.QItemSelectionModel.Select)
+
+
+        data = self.filteredModel.itemData(index)
+        name = data[0]
+        self.LE.setText(name)
+        self.LE.setFocus()
+
+        # selections = self.completer.popup().selectedIndexes()
+        # currentModelIndex = self.completer.popup().currentIndex()
+        # if len(selections) == 0:
+        #     # When no completion item is selected
+        #     if currentModelIndex.row() == -1:
+        #         modelIndex = self.filteredModel.index(0, 0)
+        #         self.completer.popup().setCurrentIndex(modelIndex)
+        #     else:
+        #         self.completer.popup().setCurrentIndex(currentModelIndex)
+        # else:
+        #     # When any of completions are selected
+        #     modelIndex = selections[0]
+        #     nextIndex = modelIndex.row() + 1
+        #     newModelIndex = self.filteredModel.index(nextIndex, 0)
+        #     self.completer.popup().setCurrentIndex(newModelIndex)
+
+    def shiftTabComplete(self):
+
+        if self.LE.text() == "":
+            return
+
+        selection = self.testView.selectionModel()
+        numRows = self.filteredModel.rowCount()
+
+        if selection.hasSelection() is False:
+            lastIndex = numRows - 1
+            self.testView.selectRow(lastIndex)
+            index = self.filteredModel.index(lastIndex, 0)
+        else:
+            currentIndex = selection.currentIndex()
+            currentRow = currentIndex.row()
+
+            if currentRow == 0:
+                nextRow = numRows - 1
+            else:
+                nextRow = currentRow - 1
+
+            index = self.filteredModel.index(nextRow, 0)
+
+            self.testView.selectRow(nextRow)
+            self.testView.clearSelection()
+            selection.select(index, QtCore.QItemSelectionModel.Select)
+
+        data = self.filteredModel.itemData(index)
+        name = data[0]
+        self.LE.setText(name)
+        self.LE.setFocus()
+
 
     def showHistory(self, *args):
         """ Show previously executed commands
@@ -482,7 +613,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.4.1", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.5.0", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except Exception:
