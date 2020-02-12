@@ -214,13 +214,6 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
 
 
 class CustomQTableView(QtWidgets.QTableView):
-    def __init__(self, parent=None):
-        super(CustomQTableView, self).__init__(parent)
-
-        self.setFocusPolicy(QtCore.Qt.NoFocus)
-
-
-class CustomQTableView(QtWidgets.QTableView):
 
     tabPressed = QtCore.Signal(str)
 
@@ -228,6 +221,19 @@ class CustomQTableView(QtWidgets.QTableView):
         super(CustomQTableView, self).__init__(parent)
 
         self.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.setShowGrid(False)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+
+        # header
+        self.verticalHeader().hide()
+        self.horizontalHeader().hide()
+        self.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Fixed)
+        self.horizontalHeader().setStretchLastSection(True)
+
+        # scrollbar
+        self.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.verticalScrollBar().hide()
+        self.horizontalScrollBar().hide()
 
     def keyPressEvent(self, event):
         if event.key() == QtCore.Qt.Key_Tab:
@@ -277,13 +283,9 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         self.LE.setFixedHeight(30)
 
         self.testView = CustomQTableView()
-        self.testView.setShowGrid(False)
-        self.testView.verticalHeader().hide()
-        self.testView.verticalScrollBar().hide()
-        self.testView.horizontalScrollBar().hide()
-        # self.testView.setFixedHeight(200)
-        self.testView.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.testView.setVisible(False)
+        self.testView.setModel(self.filteredModel)
+        self.testView.horizontalHeader().resizeSection(0, 250)
 
         # Layout
         self.layout = QtWidgets.QBoxLayout(QtWidgets.QBoxLayout.TopToBottom)
@@ -306,15 +308,6 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         #     QtWidgets.QCompleter.UnfilteredPopupCompletion)
         # self.histCompleter.setModel(self.historyModel)
         # self.histCompleter.popup().setStyleSheet(QSS)
-
-        self.testView.setModel(self.filteredModel)
-
-        # Header adjustment
-        self.testView.horizontalHeader().hide()
-        self.testView.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Fixed)
-        self.testView.horizontalHeader().resizeSection(0, 250)
-        self.testView.horizontalHeader().setStretchLastSection(True)
-        self.testView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
 
         # Edit line Edit behavior
         # self.LE.setCompleter(self.completer)
@@ -359,11 +352,12 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
                 item.setIcon(
                     QtGui.QIcon(":%s" % self.cmdDict[command]['icon']))
             module = QtGui.QStandardItem(self.cmdDict[command]['module'])
-            module.setTextAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
-            f = module.font()
-            f.setItalic(True)
-            f.setPointSize(11)
-            module.setFont(f)
+            module.setTextAlignment(
+                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            font = module.font()
+            font.setItalic(True)
+            font.setPointSize(11)
+            module.setFont(font)
             item.setEditable(False)
             module.setEditable(False)
             model.appendRow([item, module])
@@ -409,16 +403,18 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
             self.setFixedHeight(300)
 
         # command completer
-        currentText = self.LE.text()
+        # currentText = self.LE.text()
         # if currentText == "":
         #     self.LE.setCompleter(self.completer)
 
         # Set commands to case insensitive
-        regExp = QtCore.QRegExp(self.LE.text(), QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
+        regExp = QtCore.QRegExp(
+            self.LE.text(), QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
 
         numRows = self.testView.model().rowCount()
 
+        # Resize window based on number rows
         if numRows < 8:
             height = 36 * numRows + 55 + 4
             self.setFixedHeight(height)
@@ -448,7 +444,6 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
 
             index = self.filteredModel.index(nextRow, 0)
             selection.select(index, QtCore.QItemSelectionModel.Select)
-
 
         data = self.filteredModel.itemData(index)
         name = data[0]
@@ -502,7 +497,6 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         name = data[0]
         self.LE.setText(name)
         self.LE.setFocus()
-
 
     def showHistory(self, *args):
         """ Show previously executed commands
@@ -613,7 +607,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.5.0", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.5.1", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except Exception:
