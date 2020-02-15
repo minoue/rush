@@ -195,10 +195,6 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             self.arrowPressed.emit('down')
         elif event.key() == QtCore.Qt.Key_Up:
             self.arrowPressed.emit('up')
-        elif event.key() == QtCore.Qt.Key_Right:
-            self.arrowPressed.emit('right')
-        elif event.key() == QtCore.Qt.Key_Left:
-            self.arrowPressed.emit('left')
         else:
             super(CustomQLineEdit, self).keyPressEvent(event)
 
@@ -227,7 +223,8 @@ class CustomQTableView(QtWidgets.QTableView):
         # header
         self.verticalHeader().hide()
         self.horizontalHeader().hide()
-        self.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Fixed)
+        self.horizontalHeader().setSectionResizeMode(
+            QtWidgets.QHeaderView.Fixed)
         self.horizontalHeader().setStretchLastSection(True)
 
         # scrollbar
@@ -242,7 +239,7 @@ class CustomQTableView(QtWidgets.QTableView):
             super(CustomQTableView, self).keyPressEvent(event)
 
 
-class Gui(rush.TempClass, QtWidgets.QWidget):
+class Gui(rush.TmpCls, QtWidgets.QWidget):
 
     def __init__(self, parent=None):
         """
@@ -261,6 +258,8 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         self.setWindowFlags(QtCore.Qt.Window)
         self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
 
+        self.completeMode = None
+
         # Dpi value to set the width for window and lineedit.
         self.dpi = self.physicalDpiX()
 
@@ -268,7 +267,8 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         self.setContentsMargins(0, 0, 0, 0)
 
         # Create Data then UI
-        self.createData()
+        self.createCommandData()
+        self.createHistoryData()
         self.createUI()
 
         self.toolWidth = self.dpi * 6
@@ -287,58 +287,83 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         self.testView.setModel(self.filteredModel)
         self.testView.horizontalHeader().resizeSection(0, 250)
 
+        self.historyView = CustomQTableView()
+        self.historyView.setVisible(False)
+        self.historyView.setModel(self.historyModel)
+        self.historyView.horizontalHeader().resizeSection(0, 250)
+
         # Layout
         self.layout = QtWidgets.QBoxLayout(QtWidgets.QBoxLayout.TopToBottom)
         self.layout.addWidget(self.LE)
         self.layout.addWidget(self.testView)
+        self.layout.addWidget(self.historyView)
         self.layout.setSpacing(10)
         self.setLayout(self.layout)
 
-        # Set up QCompleter
-        # self.completer = QtWidgets.QCompleter(self)
-        # self.completer.setCompletionMode(
-        #     QtWidgets.QCompleter.UnfilteredPopupCompletion)
-        # self.completer.setModel(self.filteredModel)
-        # self.completer.setObjectName("commandCompleter")
-        # self.completer.popup().setStyleSheet(QSS)
-
-        # Setup QCompleter for history
-        # self.histCompleter = QtWidgets.QCompleter(self)
-        # self.histCompleter.setCompletionMode(
-        #     QtWidgets.QCompleter.UnfilteredPopupCompletion)
-        # self.histCompleter.setModel(self.historyModel)
-        # self.histCompleter.popup().setStyleSheet(QSS)
-
-        # Edit line Edit behavior
-        # self.LE.setCompleter(self.completer)
-        self.LE.textEdited.connect(self.updateData)
+        self.LE.textEdited.connect(self.showCompleter)
         self.LE.returnPressed.connect(self.execute)
         self.LE.escPressed.connect(self.close)
-        self.LE.tabPressed.connect(self.tabComplete)
-        self.LE.backtabPressed.connect(self.shiftTabComplete)
+        self.LE.tabPressed.connect(self.complete)
+        self.LE.backtabPressed.connect(self.complete)
         self.LE.arrowPressed.connect(self.arrowPressed)
         self.LE.setFocus()
 
-    def arrowPressed(self, direction):
-        # print(direction)
+    def showCompleter(self, *args):
+        """ Show commands
+
+        """
+        self.updateData()
 
         if self.LE.text() == "":
-            # for history
-            pass
-        elif direction == "down":
-            self.tabComplete()
-        elif direction == "up":
-            self.shiftTabComplete()
+            self.completeMode = None
+        else:
+            self.completeMode = "normal"
+
+    def complete(self, *args):
+        tabType = args[0]
+
+        if self.completeMode == "normal":
+            if tabType == "tab":
+                self.tabComplete(self.testView, self.filteredModel)
+            else:
+                self.shiftTabComplete(self.testView, self.filteredModel)
+        elif self.completeMode == "history":
+            if tabType == "tab":
+                self.tabComplete(self.historyView, self.historyFilteredModel)
+            else:
+                self.shiftTabComplete(
+                    self.historyView, self.historyFilteredModel)
         else:
             pass
 
-    def createData(self):
-        """
+    def arrowPressed(self, direction):
 
-        Return:
-            QSortFilterProxyModel: data
+        if self.completeMode is None:
+            if direction == "down":
+                # Show history view
+                self.testView.setVisible(False)
+                self.historyView.setVisible(True)
+                self.historyView.setFixedHeight(300)
+                self.setFixedHeight(300)
+                self.completeMode = "history"
+        elif self.completeMode == "normal":
+            if direction == "down":
+                self.tabComplete(self.testView, self.filteredModel)
+            else:
+                self.shiftTabComplete(self.testView, self.filteredModel)
+        elif self.completeMode == "history":
+            if direction == "down":
+                self.tabComplete(self.historyView, self.historyFilteredModel)
+            else:
+                self.shiftTabComplete(
+                    self.historyView, self.historyFilteredModel)
+        else:
+            pass
 
-        """
+        if self.LE.text() != "":
+            return
+
+    def createCommandData(self):
 
         model = QtGui.QStandardItemModel()
 
@@ -367,6 +392,8 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
         self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(model)
 
+    def createHistoryData(self):
+
         # History model
         self.historyList = self.history.read()
         self.historyModel = QtGui.QStandardItemModel()
@@ -388,7 +415,22 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
             else:
                 item.setIcon(
                     QtGui.QIcon(":%s" % self.cmdDict[displayName]['icon']))
-            self.historyModel.setItem(num, 0, item)
+            module = QtGui.QStandardItem("History")
+            module.setTextAlignment(
+                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            font = module.font()
+            font.setItalic(True)
+            font.setPointSize(11)
+            module.setFont(font)
+            item.setEditable(False)
+            module.setEditable(False)
+            self.historyModel.appendRow([item, module])
+
+        # Store the model(model) into the sortFilterProxy model
+        self.historyFilteredModel = QtCore.QSortFilterProxyModel(self)
+        self.historyFilteredModel.setFilterCaseSensitivity(
+            QtCore.Qt.CaseInsensitive)
+        self.historyFilteredModel.setSourceModel(self.historyModel)
 
     def updateData(self):
         """ Update current completion data
@@ -397,15 +439,12 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
 
         if self.LE.text() == "":
             self.testView.setVisible(False)
+            self.historyView.setVisible(False)
             self.setFixedHeight(55)
         else:
+            self.historyView.setVisible(False)
             self.testView.setVisible(True)
             self.setFixedHeight(300)
-
-        # command completer
-        # currentText = self.LE.text()
-        # if currentText == "":
-        #     self.LE.setCompleter(self.completer)
 
         # Set commands to case insensitive
         regExp = QtCore.QRegExp(
@@ -419,65 +458,51 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
             height = 36 * numRows + 55 + 4
             self.setFixedHeight(height)
 
-    def tabComplete(self):
+    def tabComplete(self, view, model):
         """ Complete commands by tab key
+        Args:
+            currentView (QTableView): view
 
         """
 
-        selection = self.testView.selectionModel()
+        selection = view.selectionModel()
+        numRows = model.rowCount()
 
         if selection.hasSelection() is False:
-            self.testView.selectRow(0)
-            index = self.filteredModel.index(0, 0)
+            view.selectRow(0)
+            index = model.index(0, 0)
         else:
             currentIndex = selection.currentIndex()
             currentRow = currentIndex.row()
 
-            numRows = self.filteredModel.rowCount()
             if currentRow == (numRows - 1):
                 nextRow = 0
             else:
                 nextRow = currentRow + 1
 
-            self.testView.clearSelection()
-            self.testView.selectRow(nextRow)
+            view.clearSelection()
+            view.selectRow(nextRow)
 
-            index = self.filteredModel.index(nextRow, 0)
+            index = model.index(nextRow, 0)
             selection.select(index, QtCore.QItemSelectionModel.Select)
 
-        data = self.filteredModel.itemData(index)
+        data = model.itemData(index)
         name = data[0]
         self.LE.setText(name)
         self.LE.setFocus()
 
-        # selections = self.completer.popup().selectedIndexes()
-        # currentModelIndex = self.completer.popup().currentIndex()
-        # if len(selections) == 0:
-        #     # When no completion item is selected
-        #     if currentModelIndex.row() == -1:
-        #         modelIndex = self.filteredModel.index(0, 0)
-        #         self.completer.popup().setCurrentIndex(modelIndex)
-        #     else:
-        #         self.completer.popup().setCurrentIndex(currentModelIndex)
-        # else:
-        #     # When any of completions are selected
-        #     modelIndex = selections[0]
-        #     nextIndex = modelIndex.row() + 1
-        #     newModelIndex = self.filteredModel.index(nextIndex, 0)
-        #     self.completer.popup().setCurrentIndex(newModelIndex)
-
-    def shiftTabComplete(self):
+    def shiftTabComplete(self, view, model):
 
         if self.LE.text() == "":
             return
 
-        selection = self.testView.selectionModel()
-        numRows = self.filteredModel.rowCount()
+        selection = view.selectionModel()
+        numRows = model.rowCount()
 
         if selection.hasSelection() is False:
             lastIndex = numRows - 1
-            self.testView.selectRow(lastIndex)
-            index = self.filteredModel.index(lastIndex, 0)
+            view.selectRow(lastIndex)
+            index = model.index(lastIndex, 0)
         else:
             currentIndex = selection.currentIndex()
             currentRow = currentIndex.row()
@@ -487,27 +512,19 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
             else:
                 nextRow = currentRow - 1
 
-            index = self.filteredModel.index(nextRow, 0)
+            index = model.index(nextRow, 0)
 
-            self.testView.selectRow(nextRow)
-            self.testView.clearSelection()
+            view.selectRow(nextRow)
+            view.clearSelection()
             selection.select(index, QtCore.QItemSelectionModel.Select)
 
-        data = self.filteredModel.itemData(index)
+        data = model.itemData(index)
+
         name = data[0]
         self.LE.setText(name)
         self.LE.setFocus()
 
-    def showHistory(self, *args):
-        """ Show previously executed commands
-
-        """
-
-        self.LE.setCompleter(self.histCompleter)
-        self.histCompleter.complete()
-
     def execute(self):
-        # cmd = self.LE.text()
         if not self.LE.text():
             return
 
@@ -527,8 +544,8 @@ class Gui(rush.TempClass, QtWidgets.QWidget):
 
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
-            cmdString = """python(\\"from rush import TempClass; TempClass.%s()\\")""" % cmd
-            mel.eval("""callLastCommand("%s")""" % cmdString)
+            cs = """python(\\"from rush import TmpCls; TmpCls.%s()\\")""" % cmd
+            mel.eval("""callLastCommand("%s")""" % cs)
 
             # Add command to history data
             self.history.append(cmd)
@@ -607,7 +624,7 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.5.1", "Any")
+    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.5.2", "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except Exception:

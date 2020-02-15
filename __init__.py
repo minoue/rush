@@ -111,7 +111,7 @@ def loadModule(path):
         return None
 
 
-class TempClass(object):
+class TmpCls(object):
     commandDict = {}
 
 
@@ -135,9 +135,9 @@ for path in loadConfig():
                     command_data[displayName]['command'] = cmd
                     command_data[displayName]['module'] = m.__name__
                     tempDict.update(command_data)
-                TempClass.commandDict.update(tempDict)
+                TmpCls.commandDict.update(tempDict)
             except AttributeError:
                 pass
             fs = inspect.getmembers(m, inspect.isfunction)
             for f in fs:
-                setattr(TempClass, f[0], staticmethod(f[1]))
+                setattr(TmpCls, f[0], staticmethod(f[1]))
