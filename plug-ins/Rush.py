@@ -3,12 +3,8 @@ from maya import OpenMayaUI
 from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
-from rush.Qt import QtGui, QtWidgets, QtCore
-
-try:
-    import shiboken2 as shiboken
-except ImportError:
-    import shiboken
+from PySide2 import QtGui, QtWidgets, QtCore
+import shiboken2
 
 import sys
 import os
@@ -29,6 +25,7 @@ QWidget {
 }
 """
 
+kPluginVersion = "2.5.3"
 kPluginCmdName = "rush2"
 kVerboseFlag = "-v"
 kVerboseLongFlag = "-verbose"
@@ -48,7 +45,7 @@ global proc callLastCommand(string $function)
 
 def getMayaWindow():
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken.wrapInstance(long(ptr), QtWidgets.QMainWindow)
+    return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
 
 
 class History(object):
@@ -624,7 +621,8 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.5.2", "Any")
+    mplugin = OpenMaya.MFnPlugin(
+        mobject, "Michitaka Inoue", kPluginCmdName, "Any")
     try:
         mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
     except Exception:
