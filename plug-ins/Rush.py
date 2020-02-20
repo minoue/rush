@@ -27,8 +27,6 @@ QWidget {
 
 kPluginVersion = "2.5.3"
 kPluginCmdName = "rush2"
-kVerboseFlag = "-v"
-kVerboseLongFlag = "-verbose"
 
 
 MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
@@ -557,15 +555,10 @@ class Rush(OpenMaya.MPxCommand):
     def __init__(self):
         super(Rush, self).__init__()
 
-        self.verbose = False
-
     def doIt(self, args):
 
         # Parse the arguments.
-        argData = OpenMaya.MArgDatabase(self.syntax(), args)
-
-        if argData.isFlagSet(kVerboseFlag):
-            self.verbose = argData.flagArgumentBool(kVerboseFlag, 0)
+        # argData = OpenMaya.MArgDatabase(self.syntax(), args)
 
         self.mw = Gui(getMayaWindow())
         self.mw.show()
@@ -602,7 +595,6 @@ def syntaxCreator():
     """
     syntax = OpenMaya.MSyntax()
     syntax.addArg(OpenMaya.MSyntax.kString)
-    syntax.addFlag(kVerboseFlag, kVerboseLongFlag, OpenMaya.MSyntax.kBoolean)
     return syntax
 
 
