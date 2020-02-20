@@ -25,7 +25,7 @@ QWidget {
 }
 """
 
-kPluginVersion = "2.5.3"
+kPluginVersion = "2.5.4"
 kPluginCmdName = "rush2"
 
 
