@@ -7,7 +7,7 @@
 <br>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/maya-2015+-red.svg" alt="demo"/>
+  <img src="https://img.shields.io/badge/maya-2017+-red.svg" alt="demo"/>
   <img src="https://img.shields.io/github/license/minoue/rush.svg"/>
   <img src="https://img.shields.io/github/release/minoue/rush.svg" alt="demo"/>
   <img src="https://api.codacy.com/project/badge/Grade/03596fa2dec14561a216281ab7dab6c3"/>
@@ -118,7 +118,5 @@ rush.json
 ```
 
 ## Credit
-
-[Qt.py](https://github.com/mottosso/Qt.py) by Marcus Ottosson
 
 <div>Icons made by <a href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon">SimpleIcon</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
