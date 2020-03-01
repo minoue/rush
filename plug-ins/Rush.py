@@ -1,51 +1,36 @@
+"""
+Rush, tab-menu like command launcher
+"""
+
 from __future__ import print_function
+import sys
+import os
+
 from maya import OpenMayaUI
 from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
-from rush.Qt import QtGui, QtWidgets, QtCore
-
-try:
-    import shiboken2 as shiboken
-except ImportError:
-    import shiboken
-
-import sys
-import os
+from PySide2 import QtGui, QtWidgets, QtCore
+import shiboken2
 
 import rush
 reload(rush)
 
 
 QSS = """
-QListView
-{
+QWidget {
     background-color: rgb(42, 42, 42);
     border-style: solid;
     border-radius: 0px;
+    padding: 2px;
     border-width: 0px;
-    border-color: rgb(60, 60, 60, 100);
-    font-size: 14pt;
-}
-
-QLineEdit
-{
-    background-color: rgb(42, 42, 42);
-    border-style: solid;
-    border-radius: 10px;
-    padding: 4px;
-    border-width: 5px;
     border-color: rgb(68, 68, 68);
-    font-size: 16pt;
+    font-size: 14pt;
 }
 """
 
-kPluginCmdName = "rush2"
-kVerboseFlag = "-v"
-kVerboseLongFlag = "-verbose"
-
-
-MAYA_SCRIPT_DIR = cmds.internalVar(userScriptDir=True)
+PLUGIN_VERSION = "2.5.5"
+PLUGIN_COMMAND = "rush2"
 
 
 # Define mel procedure to call the previous function
@@ -58,13 +43,16 @@ global proc callLastCommand(string $function)
 
 
 def getMayaWindow():
+    """ Get main window pointer """
+
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken.wrapInstance(long(ptr), QtWidgets.QMainWindow)
+    return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
 
 
 class History(object):
+    """ Custom class to read/write command history """
 
-    def __init__(self, parent=None):
+    def __init__(self):
 
         self.history = self.read()
 
@@ -76,13 +64,15 @@ class History(object):
             history(list): list of commands
 
         """
-        historyPath = os.path.join(MAYA_SCRIPT_DIR, "rushHistory.txt")
+
+        mayaScriptDir = cmds.internalVar(userScriptDir=True)
+        historyPath = os.path.join(mayaScriptDir, "rushHistory.txt")
         if os.path.exists(historyPath):
             try:
                 historyFile = open(historyPath, 'r')
-                h = historyFile.read().splitlines()
+                history = historyFile.read().splitlines()
                 historyFile.close()
-                return h
+                return history
             except IOError:
                 return []
         else:
@@ -113,7 +103,8 @@ class History(object):
 
         """
 
-        historyPath = os.path.join(MAYA_SCRIPT_DIR, "rushHistory.txt")
+        mayaScriptDir = cmds.internalVar(userScriptDir=True)
+        historyPath = os.path.join(mayaScriptDir, "rushHistory.txt")
         try:
             historyFile = open(historyPath, 'w')
             for line in self.history:
@@ -140,13 +131,14 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
 
     escPressed = QtCore.Signal(str)
     tabPressed = QtCore.Signal(str)
-    downPressed = QtCore.Signal(str)
+    backtabPressed = QtCore.Signal(str)
+    arrowPressed = QtCore.Signal(str)
 
     def __init__(self, parent=None):
         super(CustomQLineEdit, self).__init__(parent)
         self.setFocusPolicy(QtCore.Qt.StrongFocus)
 
-        b64_data = (
+        b64Data = (
             'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tI'
             'EdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IF'
             'BsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFl'
@@ -177,7 +169,7 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             '8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+'
             'CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=')
 
-        data = QtCore.QByteArray.fromBase64(b64_data)
+        data = QtCore.QByteArray.fromBase64(b64Data)
         tempPixmap = QtGui.QPixmap()
         tempPixmap.loadFromData(data)
         self.iconPixmap = tempPixmap.scaled(
@@ -186,19 +178,25 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             QtCore.Qt.IgnoreAspectRatio,
             QtCore.Qt.SmoothTransformation)
 
-        self.setTextMargins(26, 0, 0, 0)
+        self.setTextMargins(30, 0, 0, 0)
 
     def focusOutEvent(self, event):
         # Emit signal to close the window when it gets out of focus
         self.escPressed.emit('esc')
 
     def keyPressEvent(self, event):
+        # modifiers = QtWidgets.QApplication.keyboardModifiers()
+
         if event.key() == QtCore.Qt.Key_Escape:
             self.escPressed.emit('esc')
         elif event.key() == QtCore.Qt.Key_Tab:
             self.tabPressed.emit('tab')
+        elif event.key() == QtCore.Qt.Key_Backtab:
+            self.backtabPressed.emit('backtab')
         elif event.key() == QtCore.Qt.Key_Down:
-            self.downPressed.emit('down')
+            self.arrowPressed.emit('down')
+        elif event.key() == QtCore.Qt.Key_Up:
+            self.arrowPressed.emit('up')
         else:
             super(CustomQLineEdit, self).keyPressEvent(event)
 
@@ -208,12 +206,44 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
         painter = QtGui.QPainter(self)
         painter.setOpacity(0.75)
         height = self.iconPixmap.height()
-        right_border = 8
+        rightBorder = 8
         painter.drawPixmap(
-            right_border+2, (self.height() - height) / 2, self.iconPixmap)
+            rightBorder+2, (self.height() - height) / 2, self.iconPixmap)
 
 
-class Gui(rush.TempClass, QtWidgets.QFrame):
+class CustomQTableView(QtWidgets.QTableView):
+    """ Custom QTableView """
+
+    tabPressed = QtCore.Signal(str)
+
+    def __init__(self, parent=None):
+        super(CustomQTableView, self).__init__(parent)
+
+        self.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.setShowGrid(False)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+
+        # header
+        self.verticalHeader().hide()
+        self.horizontalHeader().hide()
+        self.horizontalHeader().setSectionResizeMode(
+            QtWidgets.QHeaderView.Fixed)
+        self.horizontalHeader().setStretchLastSection(True)
+
+        # scrollbar
+        self.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.verticalScrollBar().hide()
+        self.horizontalScrollBar().hide()
+
+    def keyPressEvent(self, event):
+        if event.key() == QtCore.Qt.Key_Tab:
+            self.tabPressed.emit('tab')
+        else:
+            super(CustomQTableView, self).keyPressEvent(event)
+
+
+class Gui(rush.TmpCls, QtWidgets.QWidget):
+    """ Gui class """
 
     def __init__(self, parent=None):
         """
@@ -230,74 +260,125 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
         self.setWindowTitle("Rush")
         self.setWindowFlags(QtCore.Qt.Window)
-        self.setWindowFlags(
-            QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
-        try:
-            self.setWindowFlags(
-                self.windowFlags() | QtCore.Qt.NoDropShadowWindowHint)
-        except AttributeError:
-            pass
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowFlags(QtCore.Qt.Popup | QtCore.Qt.FramelessWindowHint)
+
+        self.completeMode = None
 
         # Dpi value to set the width for window and lineedit.
         self.dpi = self.physicalDpiX()
 
         self.setStyleSheet(QSS)
+        self.setContentsMargins(0, 0, 0, 0)
 
         # Create Data then UI
-        self.createData()
+        self.createCommandData()
+        self.createHistoryData()
         self.createUI()
 
-        self.setFixedWidth(self.dpi * 3.5)
+        self.toolWidth = self.dpi * 6
+        self.setFixedWidth(self.toolWidth)
+        # self.setFixedHeight(55)
+
+        self.currentRow = 0
 
     def createUI(self):
-        self.LE = CustomQLineEdit(self)
-        self.LE.setFixedWidth(self.dpi * 3.5)
-        self.LE.setPlaceholderText("Search")
+        """ docstring """
+
+        self.cmdsLE = CustomQLineEdit(self)
+        self.cmdsLE.setPlaceholderText("Search")
+        self.cmdsLE.setFixedHeight(30)
+
+        self.cmdsView = CustomQTableView()
+        self.cmdsView.setVisible(False)
+        self.cmdsView.setModel(self.filteredModel)
+        self.cmdsView.horizontalHeader().resizeSection(0, 250)
+
+        self.historyView = CustomQTableView()
+        self.historyView.setVisible(False)
+        self.historyView.setModel(self.historyModel)
+        self.historyView.horizontalHeader().resizeSection(0, 250)
 
         # Layout
-        self.layout = QtWidgets.QBoxLayout(
-            QtWidgets.QBoxLayout.TopToBottom)
-        self.layout.addWidget(self.LE)
-        self.layout.setContentsMargins(0, 0, 0, 0)
+        self.layout = QtWidgets.QBoxLayout(QtWidgets.QBoxLayout.TopToBottom)
+        self.layout.addWidget(self.cmdsLE)
+        self.layout.addWidget(self.cmdsView)
+        self.layout.addWidget(self.historyView)
+        self.layout.setSpacing(10)
         self.setLayout(self.layout)
 
-        # Set up QCompleter
-        self.completer = QtWidgets.QCompleter(self)
-        self.completer.setCompletionMode(
-            QtWidgets.QCompleter.UnfilteredPopupCompletion)
-        self.completer.setModel(self.filteredModel)
-        self.completer.setObjectName("commandCompleter")
-        self.completer.popup().setStyleSheet(QSS)
+        self.cmdsLE.textEdited.connect(self.showCompleter)
+        self.cmdsLE.returnPressed.connect(self.execute)
+        self.cmdsLE.escPressed.connect(self.close)
+        self.cmdsLE.tabPressed.connect(self.complete)
+        self.cmdsLE.backtabPressed.connect(self.complete)
+        self.cmdsLE.arrowPressed.connect(self.arrowPressed)
+        self.cmdsLE.setFocus()
 
-        # Setup QCompleter for history
-        self.histCompleter = QtWidgets.QCompleter(self)
-        self.histCompleter.setCompletionMode(
-            QtWidgets.QCompleter.UnfilteredPopupCompletion)
-        self.histCompleter.setModel(self.historyModel)
-        self.histCompleter.popup().setStyleSheet(QSS)
-
-        # Edit line Edit behavior
-        self.LE.setCompleter(self.completer)
-        self.LE.textEdited.connect(self.updateData)
-        self.LE.returnPressed.connect(self.execute)
-        self.LE.escPressed.connect(self.close)
-        self.LE.tabPressed.connect(self.tabCompletion)
-        self.LE.downPressed.connect(self.showHistory)
-        self.LE.setFocus()
-
-    def createData(self):
-        """
-
-        Return:
-            QSortFilterProxyModel: data
+    def showCompleter(self, *args):
+        """ Show commands
 
         """
+        self.updateData()
+
+        if self.cmdsLE.text() == "":
+            self.completeMode = None
+        else:
+            self.completeMode = "normal"
+
+    def complete(self, *args):
+        """ docstring """
+
+        tabType = args[0]
+
+        if self.completeMode == "normal":
+            if tabType == "tab":
+                self.tabComplete(self.cmdsView, self.filteredModel)
+            else:
+                self.shiftTabComplete(self.cmdsView, self.filteredModel)
+        elif self.completeMode == "history":
+            if tabType == "tab":
+                self.tabComplete(self.historyView, self.historyFilteredModel)
+            else:
+                self.shiftTabComplete(
+                    self.historyView, self.historyFilteredModel)
+        else:
+            pass
+
+    def arrowPressed(self, direction):
+        """ docstring """
+
+        if self.completeMode is None:
+            if direction == "down":
+                # Show history view
+                self.cmdsView.setVisible(False)
+                self.historyView.setVisible(True)
+                self.historyView.setFixedHeight(300)
+                self.setFixedHeight(300)
+                self.completeMode = "history"
+        elif self.completeMode == "normal":
+            if direction == "down":
+                self.tabComplete(self.cmdsView, self.filteredModel)
+            else:
+                self.shiftTabComplete(self.cmdsView, self.filteredModel)
+        elif self.completeMode == "history":
+            if direction == "down":
+                self.tabComplete(self.historyView, self.historyFilteredModel)
+            else:
+                self.shiftTabComplete(
+                    self.historyView, self.historyFilteredModel)
+        else:
+            pass
+
+        if self.cmdsLE.text() != "":
+            return
+
+    def createCommandData(self):
+        """ Crete data for standard commands """
 
         model = QtGui.QStandardItemModel()
 
         # Add all command names and icon paths to the the model(model)
-        for num, command in enumerate(self.cmdDict):
+        for command in self.cmdDict:
             item = QtGui.QStandardItem(command)
             if os.path.isabs(self.cmdDict[command]['icon']) is True:
                 iconPath = os.path.normpath(self.cmdDict[command]['icon'])
@@ -305,19 +386,30 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
             else:
                 item.setIcon(
                     QtGui.QIcon(":%s" % self.cmdDict[command]['icon']))
-            model.setItem(num, 0, item)
+            module = QtGui.QStandardItem(self.cmdDict[command]['module'])
+            module.setTextAlignment(
+                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            font = module.font()
+            font.setItalic(True)
+            font.setPointSize(11)
+            module.setFont(font)
+            item.setEditable(False)
+            module.setEditable(False)
+            model.appendRow([item, module])
 
         # Store the model(model) into the sortFilterProxy model
         self.filteredModel = QtCore.QSortFilterProxyModel(self)
-        self.filteredModel.setFilterCaseSensitivity(
-            QtCore.Qt.CaseInsensitive)
+        self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
         self.filteredModel.setSourceModel(model)
+
+    def createHistoryData(self):
+        """ Create data for history list """
 
         # History model
         self.historyList = self.history.read()
         self.historyModel = QtGui.QStandardItemModel()
 
-        for num, command in enumerate(self.historyList):
+        for command in self.historyList:
 
             # Capitalize the first letter of the command
             displayName = command[:1].capitalize() + command[1:]
@@ -334,60 +426,134 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
             else:
                 item.setIcon(
                     QtGui.QIcon(":%s" % self.cmdDict[displayName]['icon']))
-            self.historyModel.setItem(num, 0, item)
+            module = QtGui.QStandardItem("History")
+            module.setTextAlignment(
+                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            font = module.font()
+            font.setItalic(True)
+            font.setPointSize(11)
+            module.setFont(font)
+            item.setEditable(False)
+            module.setEditable(False)
+            self.historyModel.appendRow([item, module])
+
+        # Store the model(model) into the sortFilterProxy model
+        self.historyFilteredModel = QtCore.QSortFilterProxyModel(self)
+        self.historyFilteredModel.setFilterCaseSensitivity(
+            QtCore.Qt.CaseInsensitive)
+        self.historyFilteredModel.setSourceModel(self.historyModel)
 
     def updateData(self):
         """ Update current completion data
 
         """
 
-        # command completer
-        currentText = self.LE.text()
-        if currentText == "":
-            self.LE.setCompleter(self.completer)
+        if self.cmdsLE.text() == "":
+            self.cmdsView.setVisible(False)
+            self.historyView.setVisible(False)
+            self.setFixedHeight(55)
+        else:
+            self.historyView.setVisible(False)
+            self.cmdsView.setVisible(True)
+            self.setFixedHeight(300)
 
         # Set commands to case insensitive
         regExp = QtCore.QRegExp(
-            self.LE.text(),
-            QtCore.Qt.CaseInsensitive,
-            QtCore.QRegExp.RegExp)
+            self.cmdsLE.text(), QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
         self.filteredModel.setFilterRegExp(regExp)
 
-    def tabCompletion(self):
+        numRows = self.cmdsView.model().rowCount()
+
+        # Resize window based on number rows
+        if numRows < 8:
+            height = 36 * numRows + 55 + 4
+            self.setFixedHeight(height)
+
+    def tabComplete(self, view, model):
         """ Complete commands by tab key
+        Args:
+            currentView (QTableView): view
 
         """
-        selections = self.completer.popup().selectedIndexes()
-        currentModelIndex = self.completer.popup().currentIndex()
-        if len(selections) == 0:
-            # When no completion item is selected
-            if currentModelIndex.row() == -1:
-                modelIndex = self.filteredModel.index(0, 0)
-                self.completer.popup().setCurrentIndex(modelIndex)
-            else:
-                self.completer.popup().setCurrentIndex(currentModelIndex)
+
+        selection = view.selectionModel()
+        numRows = model.rowCount()
+
+        if selection.hasSelection() is False:
+            view.selectRow(0)
+            index = model.index(0, 0)
         else:
-            # When any of completions are selected
-            modelIndex = selections[0]
-            nextIndex = modelIndex.row() + 1
-            newModelIndex = self.filteredModel.index(nextIndex, 0)
-            self.completer.popup().setCurrentIndex(newModelIndex)
+            currentIndex = selection.currentIndex()
+            currentRow = currentIndex.row()
 
-    def showHistory(self, *args):
-        """ Show previously executed commands
+            if currentRow == (numRows - 1):
+                nextRow = 0
+            else:
+                nextRow = currentRow + 1
+
+            view.clearSelection()
+            view.selectRow(nextRow)
+
+            index = model.index(nextRow, 0)
+            selection.select(index, QtCore.QItemSelectionModel.Select)
+
+        data = model.itemData(index)
+        name = data[0]
+        self.cmdsLE.setText(name)
+        self.cmdsLE.setFocus()
+
+    def shiftTabComplete(self, view, model):
+        """ shift tab completion
+
+        Args:
+            view (QTableView): view
+            model (QSortFilterProxyModel): model
+
+        Return:
+            None
 
         """
 
-        self.LE.setCompleter(self.histCompleter)
-        self.histCompleter.complete()
+
+        if self.cmdsLE.text() == "":
+            return
+
+        selection = view.selectionModel()
+        numRows = model.rowCount()
+
+        if selection.hasSelection() is False:
+            lastIndex = numRows - 1
+            view.selectRow(lastIndex)
+            index = model.index(lastIndex, 0)
+        else:
+            currentIndex = selection.currentIndex()
+            currentRow = currentIndex.row()
+
+            if currentRow == 0:
+                nextRow = numRows - 1
+            else:
+                nextRow = currentRow - 1
+
+            index = model.index(nextRow, 0)
+
+            view.selectRow(nextRow)
+            view.clearSelection()
+            selection.select(index, QtCore.QItemSelectionModel.Select)
+
+        data = model.itemData(index)
+
+        name = data[0]
+        self.cmdsLE.setText(name)
+        self.cmdsLE.setFocus()
 
     def execute(self):
-        # cmd = self.LE.text()
-        if not self.LE.text():
+        """ execute commands """
+
+        if not self.cmdsLE.text():
             return
 
         try:
-            cmd = self.cmdDict[self.LE.text()]['command']
+            cmd = self.cmdDict[self.cmdsLE.text()]['command']
         except KeyError:
             print("No such command.")
             return
@@ -396,14 +562,14 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
         self.close()
 
         try:
-            f = getattr(self, "%s" % cmd)
-            f()
+            func = getattr(self, "%s" % cmd)
+            func()
             print("Rush command executed : %s" % cmd)
 
             # Add to repeatLast command so the comamnd can be repeatable
             # by G key
-            cmdString = """python(\\"from rush import TempClass; TempClass.%s()\\")""" % cmd
-            mel.eval("""callLastCommand("%s")""" % cmdString)
+            cs = """python(\\"from rush import TmpCls; TmpCls.%s()\\")""" % cmd
+            mel.eval("""callLastCommand("%s")""" % cs)
 
             # Add command to history data
             self.history.append(cmd)
@@ -414,36 +580,29 @@ class Gui(rush.TempClass, QtWidgets.QFrame):
 
 
 class Rush(OpenMaya.MPxCommand):
+    """ Main plugin class """
 
-    def __init__(self):
-        super(Rush, self).__init__()
+    # def __init__(self):
+    #     super(Rush, self).__init__()
 
-        self.verbose = False
+    def doIt(self, *args):
 
-    def doIt(self, args):
-
-        # Parse the arguments.
-        argData = OpenMaya.MArgDatabase(self.syntax(), args)
-
-        if argData.isFlagSet(kVerboseFlag):
-            self.verbose = argData.flagArgumentBool(kVerboseFlag, 0)
-
-        self.mw = Gui(getMayaWindow())
-        self.mw.show()
+        mainWindow = Gui(getMayaWindow())
+        mainWindow.show()
 
         pos = QtGui.QCursor.pos()
-        self.mw.move(
-            pos.x() - (self.mw.width() / 2),
-            pos.y() - (self.mw.height() / 2))
+        mainWindow.move(
+            pos.x() - (mainWindow.width() / 2),
+            pos.y() - (mainWindow.height() / 2))
 
-        self.mw.raise_()
-        self.mw.activateWindow()
+        mainWindow.raise_()
+        mainWindow.activateWindow()
 
-    def undoIt(self):
-        pass
-
-    def redoIt(self):
-        pass
+    # def undoIt(self):
+    #     pass
+    #
+    # def redoIt(self):
+    #     pass
 
     @classmethod
     def isUndoable(cls):
@@ -463,7 +622,6 @@ def syntaxCreator():
     """
     syntax = OpenMaya.MSyntax()
     syntax.addArg(OpenMaya.MSyntax.kString)
-    syntax.addFlag(kVerboseFlag, kVerboseLongFlag, OpenMaya.MSyntax.kBoolean)
     return syntax
 
 
@@ -482,11 +640,12 @@ def initializePlugin(mobject):
         mobject (OpenMaya.MObject):
 
     """
-    mplugin = OpenMaya.MFnPlugin(mobject, "Michitaka Inoue", "2.4.1", "Any")
+    mplugin = OpenMaya.MFnPlugin(
+        mobject, "Michitaka Inoue", PLUGIN_VERSION, "Any")
     try:
-        mplugin.registerCommand(kPluginCmdName, Rush.cmdCreator, syntaxCreator)
+        mplugin.registerCommand(PLUGIN_COMMAND, Rush.cmdCreator, syntaxCreator)
     except Exception:
-        sys.stderr.write("Failed to register command: %s\n" % kPluginCmdName)
+        sys.stderr.write("Failed to register command: %s\n" % PLUGIN_COMMAND)
         raise
 
 
@@ -499,7 +658,7 @@ def uninitializePlugin(mobject):
     """
     mplugin = OpenMaya.MFnPlugin(mobject)
     try:
-        mplugin.deregisterCommand(kPluginCmdName)
+        mplugin.deregisterCommand(PLUGIN_COMMAND)
     except Exception:
-        sys.stderr.write("Failed to unregister command: %s\n" % kPluginCmdName)
+        sys.stderr.write("Failed to unregister command: %s\n" % PLUGIN_COMMAND)
         raise

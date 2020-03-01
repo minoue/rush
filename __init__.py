@@ -1,10 +1,15 @@
+"""
+Initialize rush plugin commands
+
+"""
+
 from __future__ import print_function
-from maya import cmds
 import inspect
 import json
 import sys
 import imp
 import os
+from maya import cmds
 
 
 def loadConfig():
@@ -30,10 +35,10 @@ def loadConfig():
     # Open and load config file in use home dir and append it to the
     # config list
     try:
-        f = open(configFilePath, 'r')
-        extra_config = json.load(f)
-        additionalPaths = extra_config["path"]
-        f.close()
+        fileData = open(configFilePath, 'r')
+        extraConfig = json.load(fileData)
+        additionalPaths = extraConfig["path"]
+        fileData.close()
     except IOError:
         print("Failed to load config file")
 
@@ -42,39 +47,39 @@ def loadConfig():
     return config
 
 
-def getModulePath(path):
+def getModulePath(moduleDirPath):
     """ Create and return a list of module paths
 
     Args:
-        path (str): directory path to search modules
+        moduleDirPath (str): directory path to search modules
 
     Return:
         mods (list): List of module paths
         None: if the path doesn't exist
 
     """
-    if not os.path.exists(path):
+    if not os.path.exists(moduleDirPath):
         return None
 
     # Get all files in the directory
-    allFiles = [os.path.join(root, f) for root, _, files in os.walk(path)
-                for f in files]
+    allFiles = [os.path.join(root, filePath) for root, _, files
+                in os.walk(moduleDirPath) for filePath in files]
 
     # Get only python files
     pythonFiles = [i for i in allFiles if i.endswith(".py")]
 
     # Remove __init__ and main plugin file
-    mods = [f for f in pythonFiles
-            if not f.endswith("__init__.py") and not f.endswith("Rush.py")]
+    mods = [filePath for filePath in pythonFiles
+            if not filePath.endswith("__init__.py") and not filePath.endswith("Rush.py")]
 
     return mods
 
 
-def loadModule(path):
+def loadModule(modulePath):
     """ Load module
 
     Args:
-        path (str): Full path to the python module
+        modulePath (str): Full path to the python module
 
     Return:
         mod (module object): command module
@@ -88,12 +93,12 @@ def loadModule(path):
     # "common/create"
     # "common/display"
 
-    normpath = os.path.normpath(path)
+    normPath = os.path.normpath(modulePath)
 
     if sys.platform == "win32":
-        name = os.path.splitext(normpath)[0].split("\\")
+        name = os.path.splitext(normPath)[0].split("\\")
     else:
-        name = os.path.splitext(normpath)[0].split("/")
+        name = os.path.splitext(normPath)[0].split("/")
 
     name = "/".join(name[-2:])
 
@@ -104,18 +109,16 @@ def loadModule(path):
             return None
 
     try:
-        mod = imp.load_source(name, path)
+        mod = imp.load_source(name, modulePath)
         return mod
     except Exception:
-        print("Failed to load module : %s" % path)
+        print("Failed to load module : %s" % modulePath)
         return None
 
 
-class TempClass(object):
+class TmpCls(object):
+
     commandDict = {}
-
-
-modules = []
 
 
 for path in loadConfig():
@@ -135,9 +138,9 @@ for path in loadConfig():
                     command_data[displayName]['command'] = cmd
                     command_data[displayName]['module'] = m.__name__
                     tempDict.update(command_data)
-                TempClass.commandDict.update(tempDict)
+                TmpCls.commandDict.update(tempDict)
             except AttributeError:
                 pass
             fs = inspect.getmembers(m, inspect.isfunction)
             for f in fs:
-                setattr(TempClass, f[0], staticmethod(f[1]))
+                setattr(TmpCls, f[0], staticmethod(f[1]))
