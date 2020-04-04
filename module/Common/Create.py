@@ -93,6 +93,32 @@ def arcLengthTool():
     cmds.ArcLengthTool()
 
 
+# Sets
+def createSet():
+    cmds.CreateSet()
+commandDict['createSet'] = "menuIconEdit.png"
+
+
+def createSetOptions():
+    cmds.CreateSetOptions()
+commandDict['createSetOptions'] = "menuIconEdit.png"
+
+
+def createPartition():
+    cmds.CreatePartition()
+commandDict['createPartition'] = "menuIconEdit.png"
+
+
+def createPartitionOptions():
+    cmds.CreatePartitionOptions()
+commandDict['createPartitionOptions'] = "menuIconEdit.png"
+
+
+def createQuickSelectSet():
+    cmds.CreateQuickSelectSet()
+commandDict['createQuickSelectSet'] = "menuIconEdit.png"
+
+
 commandDict['polyCube'] = "polyCube.png"
 commandDict['polySphere'] = "polySphere.png"
 commandDict['polyCylinder'] = "polyCylinder.png"
