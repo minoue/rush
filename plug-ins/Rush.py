@@ -29,7 +29,7 @@ QWidget {
 }
 """
 
-PLUGIN_VERSION = "2.5.5"
+PLUGIN_VERSION = "2.5.6"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -185,7 +185,6 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
         self.escPressed.emit('esc')
 
     def keyPressEvent(self, event):
-        # modifiers = QtWidgets.QApplication.keyboardModifiers()
 
         if event.key() == QtCore.Qt.Key_Escape:
             self.escPressed.emit('esc')
@@ -459,7 +458,10 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
 
         # Set commands to case insensitive
         regExp = QtCore.QRegExp(
-            self.cmdsLE.text(), QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
+            self.cmdsLE.text(),
+            QtCore.Qt.CaseInsensitive,
+            QtCore.QRegExp.RegExp)
+
         self.filteredModel.setFilterRegExp(regExp)
 
         numRows = self.cmdsView.model().rowCount()
@@ -513,7 +515,6 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
             None
 
         """
-
 
         if self.cmdsLE.text() == "":
             return
@@ -582,9 +583,6 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
 class Rush(OpenMaya.MPxCommand):
     """ Main plugin class """
 
-    # def __init__(self):
-    #     super(Rush, self).__init__()
-
     def doIt(self, *args):
 
         mainWindow = Gui(getMayaWindow())
@@ -597,12 +595,6 @@ class Rush(OpenMaya.MPxCommand):
 
         mainWindow.raise_()
         mainWindow.activateWindow()
-
-    # def undoIt(self):
-    #     pass
-    #
-    # def redoIt(self):
-    #     pass
 
     @classmethod
     def isUndoable(cls):
