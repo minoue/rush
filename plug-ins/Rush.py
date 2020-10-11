@@ -22,14 +22,14 @@ QWidget {
     background-color: rgb(42, 42, 42);
     border-style: solid;
     border-radius: 0px;
-    adding: 2px;
+    adding: 0px;
     border-width: 0px;
     border-color: rgb(68, 68, 68);
     font-size: 14pt;
 }
 """
 
-PLUGIN_VERSION = "2.6.0"
+PLUGIN_VERSION = "2.6.1"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -267,7 +267,8 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.dpi = self.physicalDpiX()
 
         self.setStyleSheet(QSS)
-        self.setContentsMargins(0, 0, 0, 0)
+        margin = 5
+        self.setContentsMargins(margin, margin, margin, margin)
 
         # Create Data then UI
         self.createCommandData()
@@ -302,7 +303,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.layout.addWidget(self.cmdsLE)
         self.layout.addWidget(self.cmdsView)
         self.layout.addWidget(self.historyView)
-        self.layout.setSpacing(10)
+        self.layout.setSpacing(5)
         self.setLayout(self.layout)
 
         self.cmdsLE.textEdited.connect(self.showCompleter)
@@ -473,6 +474,8 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.filteredModel.setFilterRegExp(regExp)
 
         numRows = self.cmdsView.model().rowCount()
+        if numRows == 0:
+            self.cmdsView.setVisible(False)
 
         # Resize window based on number rows
         if numRows < 8:
