@@ -25,6 +25,8 @@ You can ..
 
 * Add any commands you want
 * Repeat commands by G key (Maya's default shortcut key to repeat a command)
+* Use multiple words separated by whitespaces
+![mw](images/multiWords.gif)
 
 ## Installation
 
