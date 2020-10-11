@@ -22,14 +22,14 @@ QWidget {
     background-color: rgb(42, 42, 42);
     border-style: solid;
     border-radius: 0px;
-    padding: 2px;
+    adding: 2px;
     border-width: 0px;
     border-color: rgb(68, 68, 68);
     font-size: 14pt;
 }
 """
 
-PLUGIN_VERSION = "2.5.6"
+PLUGIN_VERSION = "2.6.0"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -447,7 +447,9 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
 
         """
 
-        if self.cmdsLE.text() == "":
+        text = self.cmdsLE.text()
+
+        if text == "":
             self.cmdsView.setVisible(False)
             self.historyView.setVisible(False)
             self.setFixedHeight(55)
@@ -456,11 +458,17 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
             self.cmdsView.setVisible(True)
             self.setFixedHeight(300)
 
+        if " " in text:
+            # If multiple words separated by whitespace
+            words = text.rstrip()  # Remove whitespace at the end
+            wordList = words.split(" ")
+            text = "^"
+            for word in wordList:
+                text += "(?=.*{})".format(word)
+
         # Set commands to case insensitive
         regExp = QtCore.QRegExp(
-            self.cmdsLE.text(),
-            QtCore.Qt.CaseInsensitive,
-            QtCore.QRegExp.RegExp)
+            text, QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
 
         self.filteredModel.setFilterRegExp(regExp)
 
