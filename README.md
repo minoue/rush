@@ -32,7 +32,7 @@ You can ..
 
 #### Install from zip file
 
-1. Download [zip](https://github.com/minoue/rush/releases/download/2.5.5/rush.zip) file and extract it.
+1. Download [zip](https://github.com/minoue/rush/releases/download/2.6.1/rush.zip) file and extract it.
 2. Move the extracted "rush" folder to your user script directory. 
 
    ```
