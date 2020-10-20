@@ -44,7 +44,7 @@ You can ..
     e.g C:\Users\USES\Documents\maya\MAYA_VERSION\plug-ins
    ```
 4. Open maya and activate Rush.py in the plugin manager.   
-    ![](docs/images/plugin.png)
+    ![](images/plugin.png)
 
 #### Install using git
 
