@@ -29,7 +29,7 @@ QWidget {
 }
 """
 
-PLUGIN_VERSION = "2.6.1"
+PLUGIN_VERSION = "2.6.2"
 PLUGIN_COMMAND = "rush2"
 
 

@@ -12,7 +12,7 @@ import os
 from maya import cmds
 
 
-def loadConfig():
+def __loadConfig():
     """ Load config file
 
     Return:
@@ -47,7 +47,7 @@ def loadConfig():
     return config
 
 
-def getModulePath(moduleDirPath):
+def __getModulePath(moduleDirPath):
     """ Create and return a list of module paths
 
     Args:
@@ -75,7 +75,7 @@ def getModulePath(moduleDirPath):
     return mods
 
 
-def loadModule(modulePath):
+def __loadModule(modulePath):
     """ Load module
 
     Args:
@@ -121,12 +121,12 @@ class TmpCls(object):
     commandDict = {}
 
 
-for path in loadConfig():
+for path in __loadConfig():
     normpath = os.path.normpath(path)
     if os.path.exists(normpath):
-        module_paths = getModulePath(path)
+        module_paths = __getModulePath(path)
         for module_path in module_paths:
-            m = loadModule(module_path)
+            m = __loadModule(module_path)
             try:
                 tempDict = {}
                 for cmd in m.commandDict:
