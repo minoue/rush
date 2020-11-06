@@ -1,5 +1,6 @@
-"""
-Initialize rush plugin commands
+# -*- coding: utf-8 -*-
+
+""" Initialize rush plugin commands
 
 """
 
@@ -48,6 +49,7 @@ def __loadConfig():
 
 
 def __getModulePath(moduleDirPath):
+    # type: (str) -> list
     """ Create and return a list of module paths
 
     Args:
@@ -76,6 +78,7 @@ def __getModulePath(moduleDirPath):
 
 
 def __loadModule(modulePath):
+    # type: (str) -> module
     """ Load module
 
     Args:

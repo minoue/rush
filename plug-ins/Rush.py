@@ -16,6 +16,9 @@ import shiboken2
 import rush
 reload(rush)
 
+__author__ = "Michi Inoue"
+__version__ = "2.6.3"
+
 
 QSS = """
 QWidget {
@@ -29,7 +32,6 @@ QWidget {
 }
 """
 
-PLUGIN_VERSION = "2.6.2"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -483,6 +485,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
             self.setFixedHeight(height)
 
     def tabComplete(self, view, model):
+        # type: (QtWidgets.QTableView, QtCore.QSortFilterProxyModel) -> None
         """ Complete commands by tab key
         Args:
             currentView (QTableView): view
@@ -516,6 +519,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsLE.setFocus()
 
     def shiftTabComplete(self, view, model):
+        # type: (QtWidgets.QTableView, QtCore.QSortFilterProxyModel) -> None
         """ shift tab completion
 
         Args:
@@ -637,6 +641,7 @@ def maya_useNewAPI():
 
 
 def initializePlugin(mobject):
+    # type: (OpenMaya.MObject) -> None
     """ Initialize the script plug-in
 
     Args:
@@ -644,7 +649,7 @@ def initializePlugin(mobject):
 
     """
     mplugin = OpenMaya.MFnPlugin(
-        mobject, "Michitaka Inoue", PLUGIN_VERSION, "Any")
+        mobject, "Michitaka Inoue", __version__, "Any")
     try:
         mplugin.registerCommand(PLUGIN_COMMAND, Rush.cmdCreator, syntaxCreator)
     except Exception:
@@ -653,6 +658,7 @@ def initializePlugin(mobject):
 
 
 def uninitializePlugin(mobject):
+    # type: (OpenMaya.MObject) -> None
     """ Uninitialize the script plug-in
 
     Args:
