@@ -14,6 +14,7 @@ from maya import cmds
 
 
 def __loadConfig():
+    # type: () -> list
     """ Load config file
 
     Return:
@@ -124,26 +125,38 @@ class TmpCls(object):
     commandDict = {}
 
 
-for path in __loadConfig():
-    normpath = os.path.normpath(path)
+MODULES = []
+
+
+for module_dir in __loadConfig():
+    normpath = os.path.normpath(module_dir)
     if os.path.exists(normpath):
-        module_paths = __getModulePath(path)
-        for module_path in module_paths:
-            m = __loadModule(module_path)
-            try:
-                tempDict = {}
-                for cmd in m.commandDict:
-                    displayName = cmd[:1].capitalize() + cmd[1:]
-                    command_data = {}
-                    command_data[displayName] = {}
-                    command_data[displayName]['icon'] = m.commandDict[cmd]
-                    command_data[displayName]['path'] = module_path
-                    command_data[displayName]['command'] = cmd
-                    command_data[displayName]['module'] = m.__name__
-                    tempDict.update(command_data)
-                TmpCls.commandDict.update(tempDict)
-            except AttributeError:
-                pass
-            fs = inspect.getmembers(m, inspect.isfunction)
-            for f in fs:
-                setattr(TmpCls, f[0], staticmethod(f[1]))
+        module_paths = __getModulePath(module_dir)
+        for i in module_paths:
+            MODULES.append(i)
+
+
+for module_name in MODULES:
+    m = __loadModule(module_name)
+
+    try:
+        tempDict = {}
+        for cmd in m.commandDict:
+            displayName = cmd[:1].capitalize() + cmd[1:]
+            command_data = {}
+            command_data[displayName] = {}
+            command_data[displayName]['icon'] = m.commandDict[cmd]
+            command_data[displayName]['path'] = module_name
+            command_data[displayName]['command'] = cmd
+            command_data[displayName]['module'] = m.__name__
+            tempDict.update(command_data)
+        TmpCls.commandDict.update(tempDict)
+    except AttributeError:
+        pass
+
+    functions = inspect.getmembers(m, inspect.isfunction)
+
+    for funcTuple in functions:
+        funcName = funcTuple[0]
+        funcObj = funcTuple[1]
+        setattr(TmpCls, funcName, staticmethod(funcObj))
