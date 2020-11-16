@@ -53,7 +53,7 @@ class ModuleList(QtWidgets.QWidget):
 
         listWidget = QtWidgets.QListWidget()
         for m in modules:
-            listWidget.addItem(modules[m])
+            listWidget.addItem(m)
         listWidget.itemDoubleClicked.connect(self.open)
 
         layout = QtWidgets.QVBoxLayout()
