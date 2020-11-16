@@ -58,24 +58,22 @@ def __getModulePath(moduleDirPath):
 
     Return:
         mods (list): List of module paths
-        None: if the path doesn't exist
-
     """
+
     if not os.path.exists(moduleDirPath):
-        return None
+        return []
 
-    # Get all files in the directory
-    allFiles = [os.path.join(root, filePath) for root, _, files
-                in os.walk(moduleDirPath) for filePath in files]
+    # Get all module files in the directories
 
-    # Get only python files
-    pythonFiles = [i for i in allFiles if i.endswith(".py")]
+    module_paths = []
 
-    # Remove __init__ and main plugin file
-    mods = [filePath for filePath in pythonFiles
-            if not filePath.endswith("__init__.py") and not filePath.endswith("Rush.py")]
+    for root, _, files in os.walk(moduleDirPath):
+        for f in files:
+            if f.endswith(".py"):
+                path = os.path.join(root, f)
+                module_paths.append(path)
 
-    return mods
+    return module_paths
 
 
 def __loadModule(modulePath):
