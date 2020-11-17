@@ -17,7 +17,7 @@ import rush
 reload(rush)
 
 __author__ = "Michi Inoue"
-__version__ = "2.6.6"
+__version__ = "2.6.7"
 
 
 QSS = """
@@ -347,27 +347,48 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
             pass
 
     def arrowPressed(self, direction):
-        """ docstring """
+        # type: (str) -> None
+        """ key press event when arrow key pressed
+
+        Args:
+            direction (str): "down" or "up"
+
+        """
+
+        if direction == "down":
+            self.downPressed()
+        if direction == "up":
+            self.upPressed()
+        else:
+            pass
+
+    def downPressed(self):
+        """ Down arrow key pressed event """
 
         if self.completeMode is None:
-            if direction == "down":
-                # Show history view
-                self.cmdsView.setVisible(False)
-                self.historyView.setVisible(True)
-                self.historyView.setFixedHeight(300)
-                self.setFixedHeight(300)
-                self.completeMode = "history"
+            # Show history view
+            self.cmdsView.setVisible(False)
+            self.historyView.setVisible(True)
+            self.historyView.setFixedHeight(300)
+            self.setFixedHeight(300)
+            self.completeMode = "history"
         elif self.completeMode == "normal":
-            if direction == "down":
-                self.tabComplete(self.cmdsView, self.filteredModel)
-            else:
-                self.shiftTabComplete(self.cmdsView, self.filteredModel)
+            self.tabComplete(self.cmdsView, self.filteredModel)
         elif self.completeMode == "history":
-            if direction == "down":
-                self.tabComplete(self.historyView, self.historyFilteredModel)
-            else:
-                self.shiftTabComplete(
-                    self.historyView, self.historyFilteredModel)
+            self.tabComplete(self.historyView, self.historyFilteredModel)
+        else:
+            pass
+
+        if self.cmdsLE.text() != "":
+            return
+
+    def upPressed(self):
+        """ Up arrow key pressed event """
+
+        if self.completeMode == "normal":
+            self.shiftTabComplete(self.cmdsView, self.filteredModel)
+        elif self.completeMode == "history":
+            self.shiftTabComplete(self.historyView, self.historyFilteredModel)
         else:
             pass
 
