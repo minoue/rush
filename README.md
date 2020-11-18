@@ -91,7 +91,19 @@ def sampleCommand():
 commandDict['sampleCommand'] = "sphere.png"
 ```
 
+Once you added your commands, make sure to **reload** the plugin.
+
+![sample](images/reload.gif)
+
+Your command should be ready.
+
 ![sample](images/sample.gif)
+
+### Quick access to your modules
+
+Use "openRushModules" command
+
+![sample](images/quickModuleAccess.gif)
 
 ## Command history
 Use down arrow key in a black field to show recently used commands.
