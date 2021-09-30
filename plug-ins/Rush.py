@@ -3,6 +3,7 @@ Rush, tab-menu like command launcher
 """
 
 from __future__ import print_function
+from importlib import reload
 import sys
 import os
 
@@ -48,7 +49,7 @@ def getMayaWindow():
     """ Get main window pointer """
 
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
+    return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
 
 
 class History(object):
@@ -171,7 +172,7 @@ class CustomQLineEdit(QtWidgets.QLineEdit):
             '8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+'
             'CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=')
 
-        data = QtCore.QByteArray.fromBase64(b64Data)
+        data = QtCore.QByteArray.fromBase64(b64Data.encode())
         tempPixmap = QtGui.QPixmap()
         tempPixmap.loadFromData(data)
         self.iconPixmap = tempPixmap.scaled(
