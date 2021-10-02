@@ -18,7 +18,7 @@ import rush
 reload(rush)
 
 __author__ = "Michi Inoue"
-__version__ = "2.6.7"
+__version__ = "2.7.0"
 
 
 QSS = """
