@@ -33,6 +33,7 @@ QWidget {
 }
 """
 
+PYTHON_VER = sys.version_info[0]
 PLUGIN_COMMAND = "rush2"
 
 
@@ -49,7 +50,12 @@ def getMayaWindow():
     """ Get main window pointer """
 
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
+    if PYTHON_VER == 2:
+        return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
+    elif PYTHON_VER == 3:
+        return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
+    else:
+        raise Exception("Invalid Python version")
 
 
 class History(object):
