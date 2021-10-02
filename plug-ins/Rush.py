@@ -3,7 +3,6 @@ Rush, tab-menu like command launcher
 """
 
 from __future__ import print_function
-from importlib import reload
 import sys
 import os
 
@@ -14,11 +13,17 @@ from maya import mel
 from PySide2 import QtGui, QtWidgets, QtCore
 import shiboken2
 
+# For python2/3 compability
+try:
+    from importlib import reload
+except ImportError:
+    pass
+
 import rush
 reload(rush)
 
 __author__ = "Michi Inoue"
-__version__ = "2.7.0"
+__version__ = "2.7.1"
 
 
 QSS = """
