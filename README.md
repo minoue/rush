@@ -8,6 +8,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/maya-2017+-red.svg" alt="demo"/>
+  <img src="https://img.shields.io/badge/Maya-20202/py3-red" alt=""/>
   <img src="https://img.shields.io/github/license/minoue/rush.svg"/>
   <img src="https://img.shields.io/github/release/minoue/rush.svg" alt="demo"/>
   <img src="https://api.codacy.com/project/badge/Grade/03596fa2dec14561a216281ab7dab6c3"/>
@@ -26,13 +27,14 @@ You can ..
 * Add any commands you want
 * Repeat commands by G key (Maya's default shortcut key to repeat a command)
 * Use multiple words separated by whitespaces
+* Run in maya2022/python3
 ![mw](images/multiWords.gif)
 
 ## Installation
 
 #### Install from zip file
 
-1. Download [zip](https://github.com/minoue/rush/releases/download/2.6.1/rush.zip) file and extract it.
+1. Download [zip](https://github.com/minoue/rush/releases/download/2.7.1/rush.zip) file and extract it.
 2. Move the extracted "rush" folder to your user script directory. 
 
    ```
@@ -51,7 +53,7 @@ You can ..
 You can also download the scripts using git.  
 
 ```
->> cd C:\Users\YOURNAME\Documents\maya\2018\scripts
+>> cd C:\Users\YOURNAME\Documents\maya\MAYA_VERSION\scripts
 >> git clone https://github.com/minoue/rush
 ```
 
