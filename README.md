@@ -18,6 +18,12 @@
 <br>
 <br>
 
+**UPDATE:** [A built-in command launcher](https://knowledge.autodesk.com/support/maya/troubleshooting/caas/CloudHelp/cloudhelp/2023/ENU/Maya-Basics/files/GUID-A41539AD-F566-4F3D-8671-FE6237BB3C2B-htm.html)
+is now included with Maya2023. I recommend using that one, as it is official and covers all commands by default.
+
+<br>
+<br>
+
 ![demo](images/rush.gif)
 
 ## Features
