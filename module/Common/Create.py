@@ -45,6 +45,104 @@ def polyHelix():
     cmds.polyHelix()
 
 
+def polyDisk():
+    cmds.CreatePolygonDisc()
+
+
+commandDict['polyDisk'] = "polyDisk.png"
+
+
+def polyPlatonic():
+    cmds.CreatePolygonPlatonic()
+
+
+commandDict['polyPlatonic'] = "polyPlatonicSolid.png"
+
+
+def polyGear():
+    cmds.CreatePolygonGear()
+
+
+commandDict['polyGear'] = "polyGear.png"
+
+
+def polySoccerBall():
+    cmds.CreatePolygonSoccerBall()
+
+
+commandDict['polySoccerBall'] = "polySoccerBall.png"
+
+
+def nurbsSphere():
+    cmds.sphere()
+
+
+commandDict['nurbsSphere'] = "sphere.png"
+
+
+def nurbsCube():
+    cmds.nurbsCube()
+
+
+commandDict['nurbsCube'] = "cube.png"
+
+
+def nurbsCylinder():
+    cmds.cylinder()
+
+
+commandDict['nurbsCylinder'] = "cylinder.png"
+
+
+def nurbsCone():
+    cmds.cone()
+
+
+commandDict['nurbsCone'] = "cone.png"
+
+
+def nurbsPlane():
+    cmds.nurbsPlane()
+
+
+commandDict['nurbsPlane'] = "plane.png"
+
+
+def nurbsTorus():
+    cmds.torus()
+
+
+commandDict['nurbsTorus'] = "torus.png"
+
+
+def nurbsCircle():
+    cmds.circle()
+
+
+commandDict['nurbsCircle'] = "circle.png"
+
+
+def nurbsSquare():
+    cmds.nurbsSquare()
+
+
+commandDict['nurbsSquare'] = "square.png"
+
+
+def type():
+    cmds.CreatePolygonType()
+
+
+commandDict['type'] = "polyType.png"
+
+
+def bifrostGraph():
+    cmds.CreateNewBifrostGraph()
+
+
+commandDict['bifrostGraph'] = "menuIconEdit.png"
+
+
 # Lights
 def ambientLight():
     cmds.shadingNode('ambientLight', asLight=True)
@@ -77,7 +175,7 @@ def camera():
 
 # Locator
 def locator():
-    cmds.spaceLocator(p=[0, 0, 0])
+    cmds.CreateLocator()
 
 
 # Measure Tools
@@ -96,26 +194,36 @@ def arcLengthTool():
 # Sets
 def createSet():
     cmds.CreateSet()
+
+
 commandDict['createSet'] = "menuIconEdit.png"
 
 
 def createSetOptions():
     cmds.CreateSetOptions()
+
+
 commandDict['createSetOptions'] = "menuIconEdit.png"
 
 
 def createPartition():
     cmds.CreatePartition()
+
+
 commandDict['createPartition'] = "menuIconEdit.png"
 
 
 def createPartitionOptions():
     cmds.CreatePartitionOptions()
+
+
 commandDict['createPartitionOptions'] = "menuIconEdit.png"
 
 
 def createQuickSelectSet():
     cmds.CreateQuickSelectSet()
+
+
 commandDict['createQuickSelectSet'] = "menuIconEdit.png"
 
 
