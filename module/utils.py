@@ -15,7 +15,7 @@ def getMayaWindow():
     """ Get main window pointer """
 
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
+    return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
 
 
 commandDict = {}

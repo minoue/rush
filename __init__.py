@@ -4,7 +4,6 @@
 
 """
 
-from __future__ import print_function
 import inspect
 import json
 import sys
@@ -13,8 +12,7 @@ import os
 from maya import cmds
 
 
-def __loadConfig():
-    # type: () -> list
+def __loadConfig() -> list:
     """ Load config file
 
     Return:
@@ -49,8 +47,7 @@ def __loadConfig():
     return config
 
 
-def __getModulePath(moduleDirPath):
-    # type: (str) -> list
+def __getModulePath(moduleDirPath: str) -> list:
     """ Create and return a list of module paths
 
     Args:
@@ -76,8 +73,7 @@ def __getModulePath(moduleDirPath):
     return module_paths
 
 
-def __loadModule(modulePath):
-    # type: (str) -> module
+def __loadModule(modulePath: str):
     """ Load module
 
     Args:

@@ -2,7 +2,6 @@
 Rush, tab-menu like command launcher
 """
 
-from __future__ import print_function
 import sys
 import os
 
@@ -12,18 +11,13 @@ from maya import cmds
 from maya import mel
 from PySide2 import QtGui, QtWidgets, QtCore
 import shiboken2
-
-# For python2/3 compability
-try:
-    from importlib import reload
-except ImportError:
-    pass
+from importlib import reload
 
 import rush
 reload(rush)
 
 __author__ = "Michi Inoue"
-__version__ = "2.7.1"
+__version__ = "2.8.0"
 
 
 QSS = """
@@ -55,12 +49,7 @@ def getMayaWindow():
     """ Get main window pointer """
 
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    if PYTHON_VER == 2:
-        return shiboken2.wrapInstance(long(ptr), QtWidgets.QMainWindow)
-    elif PYTHON_VER == 3:
-        return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
-    else:
-        raise Exception("Invalid Python version")
+    return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
 
 
 class History(object):
@@ -92,7 +81,7 @@ class History(object):
         else:
             return []
 
-    def append(self, command):
+    def append(self, command: str):
         """ append history
 
         Args:
@@ -358,7 +347,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         else:
             pass
 
-    def arrowPressed(self, direction):
+    def arrowPressed(self, direction: str):
         # type: (str) -> None
         """ key press event when arrow key pressed
 
@@ -517,8 +506,9 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
             height = 36 * numRows + 55 + 4
             self.setFixedHeight(height)
 
-    def tabComplete(self, view, model):
-        # type: (QtWidgets.QTableView, QtCore.QSortFilterProxyModel) -> None
+    def tabComplete(self,
+                    view: QtWidgets.QTableView,
+                    model: QtCore.QSortFilterProxyModel):
         """ Complete commands by tab key
         Args:
             currentView (QTableView): view
@@ -551,8 +541,9 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsLE.setText(name)
         self.cmdsLE.setFocus()
 
-    def shiftTabComplete(self, view, model):
-        # type: (QtWidgets.QTableView, QtCore.QSortFilterProxyModel) -> None
+    def shiftTabComplete(self,
+                         view: QtWidgets.QTableView,
+                         model: QtCore.QSortFilterProxyModel):
         """ shift tab completion
 
         Args:
@@ -673,8 +664,7 @@ def maya_useNewAPI():
     pass
 
 
-def initializePlugin(mobject):
-    # type: (OpenMaya.MObject) -> None
+def initializePlugin(mobject: OpenMaya.MObject):
     """ Initialize the script plug-in
 
     Args:
@@ -690,8 +680,7 @@ def initializePlugin(mobject):
         raise
 
 
-def uninitializePlugin(mobject):
-    # type: (OpenMaya.MObject) -> None
+def uninitializePlugin(mobject: OpenMaya.MObject):
     """ Uninitialize the script plug-in
 
     Args:
