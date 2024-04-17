@@ -18,7 +18,7 @@ reload(rush)
 
 
 __author__ = "Michi Inoue"
-__version__ = "2.9.1"
+__version__ = "2.9.2"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -393,6 +393,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsView.setVisible(False)
         self.cmdsView.setModel(self.filteredModel)
         self.cmdsView.horizontalHeader().resizeSection(0, 400)
+        self.cmdsView.doubleClicked.connect(self.execute)
         self.cmdsViewSelModel = self.cmdsView.selectionModel()
         self.cmdsViewSelModel.selectionChanged.connect(self.viewSelectionChanged)
 
@@ -400,6 +401,8 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.historyView.setVisible(False)
         self.historyView.setModel(self.historyModel)
         self.historyView.horizontalHeader().resizeSection(0, 400)
+        self.historyView.selectionModel().selectionChanged.connect(self.viewSelectionChanged)
+        self.historyView.doubleClicked.connect(self.execute)
 
         # Layout
         self.layout = QtWidgets.QBoxLayout(QtWidgets.QBoxLayout.TopToBottom)
@@ -424,10 +427,10 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         indexes = item.indexes()
         if len(indexes) == 2:
             index = indexes[0]
-            data = self.filteredModel.itemData(index)
+            model = index.model()
+            data = model.itemData(index)
             command_uuid = data[4]
             command_label = self.cmdDict[command_uuid]["label"]
-            # command_exec = self.cmdDict[command_uuid]["command"]
             self.cmdsLE.setText(command_label)
 
     def showCompleter(self, *args):
