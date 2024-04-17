@@ -1,0 +1,1026 @@
+{
+    "1692167e-8672-4f97-aea4-4b78ee3ba08d": {
+        "label": "Home",
+        "sourceType": "mel",
+        "command": "AppHome",
+        "category": "",
+        "module": "Windows",
+        "icon": "home.png"
+    },
+    "db88ea93-1fbb-4423-9e06-ba64ca7127e6": {
+        "label": "General* : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"General\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "397efa1a-2e0e-4197-adc3-429a4a8b1e2d": {
+        "label": "General* Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"General\",\"WorkspaceMenuID_0\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "03f750a8-07d7-46a5-99bf-1e4a7cbab875": {
+        "label": "Modeling - Standard : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Modeling - Standard\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "b13f089c-ceb3-44a7-a3ff-80bbe63b056f": {
+        "label": "Modeling - Standard Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Modeling - Standard\",\"WorkspaceMenuID_1\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "f19c096e-2904-4204-8615-29bcc120d029": {
+        "label": "Modeling - Expert : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Modeling - Expert\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "7060e912-c634-4df0-9523-0e61ac71b4e4": {
+        "label": "Modeling - Expert Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Modeling - Expert\",\"WorkspaceMenuID_2\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "920c6f98-1215-44b4-9975-2df8f95adb1e": {
+        "label": "Sculpting : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Sculpting\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "0d6ca91b-20f5-4616-9f58-9b4f66b35a3d": {
+        "label": "Sculpting Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Sculpting\",\"WorkspaceMenuID_3\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "cd7aabd2-56f2-41d7-8d71-48f6587a2620": {
+        "label": "Pose Sculpting : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Pose Sculpting\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "1c9a50c4-fca7-45b0-a231-6720fc1f79f5": {
+        "label": "Pose Sculpting Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Pose Sculpting\",\"WorkspaceMenuID_4\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "9781194a-4feb-40bb-ad6d-716055d4be6c": {
+        "label": "UV Editing : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"UV Editing\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "3e6d3fcc-ca35-455e-9f0a-7647fe43fedf": {
+        "label": "UV Editing Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"UV Editing\",\"WorkspaceMenuID_5\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "e618a5b5-e510-450b-8dcf-b888030f8690": {
+        "label": "XGen : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"XGen\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "afc38add-2674-4acf-999b-a57b8d09c617": {
+        "label": "XGen Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"XGen\",\"WorkspaceMenuID_6\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "fb98109c-8e4c-482e-92e4-a90adcac36dc": {
+        "label": "XGen - Interactive Groom : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"XGen - Interactive Groom\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "d4a5a68a-8823-4c12-a200-83dded09c67e": {
+        "label": "XGen - Interactive Groom Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"XGen - Interactive Groom\",\"WorkspaceMenuID_7\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "b11c4765-bce7-491a-b780-7a6cebe2c730": {
+        "label": "Rigging : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Rigging\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "f7025c65-268d-425b-88ff-9fd770db0926": {
+        "label": "Rigging Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Rigging\",\"WorkspaceMenuID_8\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "9e9dfe26-3941-49f9-a93e-a12d45057ee5": {
+        "label": "Animation : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Animation\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "4be1e45f-2a41-4600-bd60-371a998891d1": {
+        "label": "Animation Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Animation\",\"WorkspaceMenuID_9\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "f3e26720-5a8d-4575-bd14-de862907e0e3": {
+        "label": "Rendering - Standard : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Rendering - Standard\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "4f92518b-4b4a-4b92-a3e5-3796e75d06eb": {
+        "label": "Rendering - Standard Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Rendering - Standard\",\"WorkspaceMenuID_10\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "ff8caa3e-df0b-41fe-b1e0-335364a5cd8a": {
+        "label": "Rendering - Expert : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Rendering - Expert\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "ce2d40a4-8410-486c-9ccf-79d5e68c22e4": {
+        "label": "Rendering - Expert Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Rendering - Expert\",\"WorkspaceMenuID_11\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "b4ac249e-f7e5-43a2-9546-0af7c5fac22e": {
+        "label": "MASH : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"MASH\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "e5d7d6fc-c60a-4392-868a-e838a2917fd3": {
+        "label": "MASH Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"MASH\",\"WorkspaceMenuID_12\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "a582134d-db0e-47d5-9f44-e4be2f196eb3": {
+        "label": "Motion Graphics : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Motion Graphics\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "346f75cc-a7ff-4fda-9fde-f3ac034077f4": {
+        "label": "Motion Graphics Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Motion Graphics\",\"WorkspaceMenuID_13\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "542cd42f-1893-481d-9316-e1e963bdebd7": {
+        "label": "Bifrost Fluids : Workspaces",
+        "sourceType": "mel",
+        "command": "evalDeferred(\"workspaceLayoutManager -setCurrent \\\"Bifrost Fluids\\\"\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "6e2c9990-8430-4a7f-bd0c-093ce6365d3f": {
+        "label": "Bifrost Fluids Options : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists workspaceLayoutOptions`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nworkspaceLayoutOptions(\"Bifrost Fluids\",\"WorkspaceMenuID_14\");",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "d6c43604-1341-412f-a63a-bee078483f4b": {
+        "label": "Reset \"General\" to Factory Default : Workspaces",
+        "sourceType": "mel",
+        "command": "ResetCurrentWorkspace",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "6dffbd10-07aa-4837-a187-1cd5e1413eb9": {
+        "label": "Save Current Workspace As... : Workspaces",
+        "sourceType": "mel",
+        "command": "SaveCurrentWorkspace",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "dc111d60-3e36-44a6-9532-48d6ba162caf": {
+        "label": "Import Workspace Files... : Workspaces",
+        "sourceType": "mel",
+        "command": "ImportWorkspaceFiles",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "ec56cea5-8049-47a0-8577-28efd99ea993": {
+        "label": "Delete Current Workspace : Workspaces",
+        "sourceType": "mel",
+        "command": "DeleteCurrentWorkspace",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "36426f7d-a80f-472f-a563-273143669bb6": {
+        "label": "Disable Docking/Undocking : Workspaces",
+        "sourceType": "mel",
+        "command": "if(!`exists updateWorkspaceDocking`) {\n\teval(\"source workspaceHelperProcs.mel\");\n}\nupdateWorkspaceDocking #1",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "e2e7062b-8d79-4a36-9d72-4dbf3173bc30": {
+        "label": "Attribute Editor : General Editors",
+        "sourceType": "mel",
+        "command": "AttributeEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "attributes.png"
+    },
+    "9c5d4580-cd55-48d0-8b40-0c1e696964ff": {
+        "label": "Channel Box / Layer Editor : General Editors",
+        "sourceType": "mel",
+        "command": "OpenChannelsLayers",
+        "category": "",
+        "module": "Windows",
+        "icon": "channelLayers.png"
+    },
+    "ef302dc6-ca4e-4ad9-811b-95628c833842": {
+        "label": "Tool Settings : General Editors",
+        "sourceType": "mel",
+        "command": "ToolSettingsWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "toolSettings.png"
+    },
+    "78b17d69-1903-4772-8810-13b9a8748db8": {
+        "label": "Hypergraph: Hierarchy : General Editors",
+        "sourceType": "mel",
+        "command": "HypergraphHierarchyWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "hypergraph.png"
+    },
+    "46bc1f35-b983-4a4a-9a16-f1e5c2877ab4": {
+        "label": "Hypergraph: Hierarchy Options : General Editors",
+        "sourceType": "mel",
+        "command": "hyperGraphOptions DAG",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "6b214da1-196e-4aee-a45e-d662508a2b7c": {
+        "label": "Hypergraph: Connections : General Editors",
+        "sourceType": "mel",
+        "command": "HypergraphDGWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "hypergraph.png"
+    },
+    "e9b43075-cfa5-4d5c-a428-33064a7ab9ed": {
+        "label": "Hypergraph: Connections Options : General Editors",
+        "sourceType": "mel",
+        "command": "hyperGraphOptions DG",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "70c1857b-ef57-4ae2-9411-9509a1cd4654": {
+        "label": "Viewport : General Editors",
+        "sourceType": "mel",
+        "command": "DisplayViewport",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "50c52f8a-f32f-496d-bba4-1c90912abd01": {
+        "label": "Adobe(R) After Effects(R) Live Link : General Editors",
+        "sourceType": "mel",
+        "command": "OpenAELiveLink",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "7a24c2ec-44cd-4a29-b912-0ba1143296d7": {
+        "label": "Asset Editor : General Editors",
+        "sourceType": "mel",
+        "command": "AssetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "edeff0d8-5572-43da-8925-b604e4dba817": {
+        "label": "Attribute Spread Sheet : General Editors",
+        "sourceType": "mel",
+        "command": "SpreadSheetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "0eb0f70a-c6ff-472e-bc93-04a832b33109": {
+        "label": "Component Editor : General Editors",
+        "sourceType": "mel",
+        "command": "ComponentEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "a4cc9e75-f08d-4fae-9149-125f39dbde69": {
+        "label": "Connection Editor : General Editors",
+        "sourceType": "mel",
+        "command": "ConnectionEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "6b0749b2-6a8a-449b-a32e-4363fcca7776": {
+        "label": "Channel Control : General Editors",
+        "sourceType": "mel",
+        "command": "ChannelControlEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "b07ea0be-a734-421b-9a1f-874ad312d9d0": {
+        "label": "Display Layer Editor : General Editors",
+        "sourceType": "mel",
+        "command": "DisplayLayerEditorWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "225d3718-cbbf-4804-bb00-7cf6bab7e9c0": {
+        "label": "File Path Editor : General Editors",
+        "sourceType": "mel",
+        "command": "FilePathEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "9764da37-e8b4-4a2f-8876-e71bfce3ddff": {
+        "label": "Namespace Editor : General Editors",
+        "sourceType": "mel",
+        "command": "NamespaceEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "a57adcc7-45d5-4a43-9bb2-4bbb39c2885f": {
+        "label": "Script Editor : General Editors",
+        "sourceType": "mel",
+        "command": "ScriptEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "cmdWndIcon.png"
+    },
+    "05765372-f410-49a8-8bfd-8b50c78e9681": {
+        "label": "Command Shell : General Editors",
+        "sourceType": "mel",
+        "command": "CommandShell",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "c7ba5569-a46a-4a81-bc0a-a218c27d1d04": {
+        "label": "Profiler : General Editors",
+        "sourceType": "mel",
+        "command": "ProfilerTool",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "57634f45-4b14-493b-b42e-74931d393ab9": {
+        "label": "Evaluation Toolkit : General Editors",
+        "sourceType": "mel",
+        "command": "EvaluationToolkit",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "08a1bd32-49b3-4a62-a778-f6328188d951": {
+        "label": "Modeling Toolkit : Modeling Editors",
+        "sourceType": "mel",
+        "command": "OpenModelingToolkit",
+        "category": "",
+        "module": "Windows",
+        "icon": "modelToolkit.png"
+    },
+    "2cb16e1f-bfa4-4d06-87d5-2cc7a99ebdf0": {
+        "label": "Paint Effects : Modeling Editors",
+        "sourceType": "mel",
+        "command": "PaintEffectsWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "02e777aa-9bc9-42f1-9f0e-b3568b77205f": {
+        "label": "UV Editor : Modeling Editors",
+        "sourceType": "mel",
+        "command": "TextureViewWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "textureEditor.png"
+    },
+    "fc0fee84-d49e-4712-a962-227a25e4a4d7": {
+        "label": "XGen Editor : Modeling Editors",
+        "sourceType": "mel",
+        "command": "OpenXGenEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "xgDEditor.png"
+    },
+    "a2c60351-f45d-4d94-a531-b781f03f92fb": {
+        "label": "Crease Sets : Modeling Editors",
+        "sourceType": "mel",
+        "command": "OpenCreaseEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "polyCrease.png"
+    },
+    "c1535609-c68a-4a90-8260-3d420813e9b5": {
+        "label": "Graph Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "GraphEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "teGraphEditor.png"
+    },
+    "073bf023-65f3-4e06-bd10-0fccc9f43884": {
+        "label": "Time Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "TimeEditorWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "getCTE.png"
+    },
+    "57540743-5eb9-431f-ab4a-e1ab02a47d53": {
+        "label": "Trax Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "CharacterAnimationEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "getTrax.png"
+    },
+    "5b531263-c850-4245-8b9a-5017ac99443a": {
+        "label": "Camera Sequencer : Animation Editors",
+        "sourceType": "mel",
+        "command": "SequenceEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "0dc4e705-6c7c-4882-bc9e-c265278a1abb": {
+        "label": "Dope Sheet : Animation Editors",
+        "sourceType": "mel",
+        "command": "DopeSheetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "getDopeSheet.png"
+    },
+    "0839a8c9-69d6-448f-9e85-fd074267182b": {
+        "label": "Ghosting Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "OpenGhostEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "ghostingEditor.png"
+    },
+    "cabd42fd-0d17-4657-9aeb-b1f3ad6ffb1f": {
+        "label": "Quick Rig : Animation Editors",
+        "sourceType": "mel",
+        "command": "QuickRigEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "QR_QuickRigTool.png"
+    },
+    "2631d0d0-827f-4fcf-9ed7-0886c7f3a71e": {
+        "label": "HumanIK : Animation Editors",
+        "sourceType": "mel",
+        "command": "HIKCharacterControlsTool",
+        "category": "",
+        "module": "Windows",
+        "icon": "humanIK_CharCtrl.png"
+    },
+    "bdfa9ff1-36b3-40f2-9038-684831e3d436": {
+        "label": "Shape Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "ShapeEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "blendShapeEditor.png"
+    },
+    "b5278b94-7b3d-4a97-bae0-c8d3544fbeb3": {
+        "label": "Pose Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "PoseEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "poseEditor.png"
+    },
+    "6b6e20b6-5205-4da5-b396-6278bccdf21b": {
+        "label": "Expression Editor : Animation Editors",
+        "sourceType": "mel",
+        "command": "ExpressionEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "5804b029-85e9-4aa0-8c2f-2b82c197c620": {
+        "label": "Render View : Rendering Editors",
+        "sourceType": "mel",
+        "command": "RenderViewWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "rvOpenWindow.png"
+    },
+    "f26f8ec3-4cfe-49ec-bbbc-8c6f3f26a6d8": {
+        "label": "Render Settings : Rendering Editors",
+        "sourceType": "mel",
+        "command": "RenderGlobalsWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "d0117ffe-51a9-43be-90e9-509cf96182b1": {
+        "label": "Hypershade : Rendering Editors",
+        "sourceType": "mel",
+        "command": "HypershadeWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "hypershadeIcon.png"
+    },
+    "9329d442-1125-48e8-addc-d530d97abc47": {
+        "label": "Render Setup : Rendering Editors",
+        "sourceType": "mel",
+        "command": "RenderSetupWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "render_setup.png"
+    },
+    "9a7825ac-2b46-4270-bfc9-5af9ac205468": {
+        "label": "Light Editor : Rendering Editors",
+        "sourceType": "mel",
+        "command": "OpenLightEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "light_manager.png"
+    },
+    "9aeca0f1-98bd-447d-a998-6f90dbee15dd": {
+        "label": "Rendering Flags : Rendering Editors",
+        "sourceType": "mel",
+        "command": "RenderFlagsWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "558010f5-5fcc-4879-b6b0-70102f8d9427": {
+        "label": "Shading Group Attributes : Rendering Editors",
+        "sourceType": "mel",
+        "command": "ShadingGroupAttributeEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "bdf13c57-a100-4bbf-89d4-62a0dc302b88": {
+        "label": "Animation Layers : Relationship Editors",
+        "sourceType": "mel",
+        "command": "AnimLayerRelationshipEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "d6078901-58da-48a8-9583-4f64a555d18f": {
+        "label": "Camera Sets : Relationship Editors",
+        "sourceType": "mel",
+        "command": "CameraSetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "61c246ca-d24a-46d1-8d82-77ebfcf37b58": {
+        "label": "Character Sets : Relationship Editors",
+        "sourceType": "mel",
+        "command": "CharacterSetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "8c5e3eeb-a956-433a-a7c2-a0bf9906084d": {
+        "label": "Deformer Sets : Relationship Editors",
+        "sourceType": "mel",
+        "command": "DeformerSetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "2d5583bf-fb13-4d04-bda6-951895fe9c2b": {
+        "label": "Display Layers : Relationship Editors",
+        "sourceType": "mel",
+        "command": "LayerRelationshipEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "c44381e2-8ddf-475b-a720-7fb64eeccd8a": {
+        "label": "Dynamic Relationships : Relationship Editors",
+        "sourceType": "mel",
+        "command": "DynamicRelationshipEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "3b1175e9-e5fd-4144-bed0-60a569320620": {
+        "label": "Light-Centric : Light Linking",
+        "sourceType": "mel",
+        "command": "LightCentricLightLinkingEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "166252d9-10e2-44c2-bca6-8b5cd284cd91": {
+        "label": "Object-Centric : Light Linking",
+        "sourceType": "mel",
+        "command": "ObjectCentricLightLinkingEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "a1562b19-1932-4352-8d1f-dfcb10fbf439": {
+        "label": "Partitions : Relationship Editors",
+        "sourceType": "mel",
+        "command": "PartitionEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "4fd5f957-fed9-4578-9d83-37f4105e79bc": {
+        "label": "Render Pass Sets : Relationship Editors",
+        "sourceType": "mel",
+        "command": "RenderPassSetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "7fa10859-8192-4869-82a1-a9ed0fcda0a8": {
+        "label": "Sets : Relationship Editors",
+        "sourceType": "mel",
+        "command": "SetEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "6f52c6db-4f36-43cb-9407-de0d37a26918": {
+        "label": "Texture-Centric : UV Linking",
+        "sourceType": "mel",
+        "command": "TextureCentricUVLinkingEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "b917d606-6859-43b6-b154-715a6d8808b6": {
+        "label": "UV-Centric : UV Linking",
+        "sourceType": "mel",
+        "command": "UVCentricUVLinkingEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "368e9185-2f13-45a3-9f4e-4558ece89e8b": {
+        "label": "Paint Effects/UV : UV Linking",
+        "sourceType": "mel",
+        "command": "PFXUVSetLinkingEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "236ed02f-fe7c-4ab4-8e5b-baf1f46533cf": {
+        "label": "Hair/UV : UV Linking",
+        "sourceType": "mel",
+        "command": "HairUVSetLinkingEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "288d3e9d-093e-4384-8a62-26c78e2f1be4": {
+        "label": "Status Line : UI Elements",
+        "sourceType": "mel",
+        "command": "ToggleStatusLine",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "9cea717b-3b43-4e7a-b010-74a27cce8614": {
+        "label": "Shelf : UI Elements",
+        "sourceType": "mel",
+        "command": "ToggleShelf",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "44fa73a5-33ea-4228-96ff-e46675720229": {
+        "label": "Time Slider : UI Elements",
+        "sourceType": "mel",
+        "command": "ToggleTimeSlider",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "b582e1bf-13b3-4d9c-ae5f-68735cbd79bd": {
+        "label": "Enabled Clips : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeEnabledClips",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "287d159b-9903-4817-a907-1c8fe4ee9199": {
+        "label": "Min/Max : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeMinMax",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "f1721f15-003e-46d2-8a71-7f93f089a842": {
+        "label": "Preferences : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangePrefs",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "50baed2e-963b-4133-bb51-257ff8ec34f6": {
+        "label": "Selected : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeHighlight",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "90d3ea6a-8cae-4ee9-85df-fb6b3af4e7cb": {
+        "label": "Sound Length : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeSound",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "79b70cb6-55a4-4370-8525-e94f477f4719": {
+        "label": "Start/End : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeStartEnd",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "af38fb21-517b-4dcf-bc7f-50e894501c58": {
+        "label": "Command Line : UI Elements",
+        "sourceType": "mel",
+        "command": "ToggleCommandLine",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "a18d7618-dcdc-4064-afae-9b8301cf0afd": {
+        "label": "Help Line : UI Elements",
+        "sourceType": "mel",
+        "command": "ToggleHelpLine",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "76a63b31-0887-4251-a2f7-3c373bdb809f": {
+        "label": "Tool Box : UI Elements",
+        "sourceType": "mel",
+        "command": "ToggleToolbox",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "270fefd2-23a5-41c7-b265-2f3d7cd5ca30": {
+        "label": "Hide All UI Elements : UI Elements",
+        "sourceType": "mel",
+        "command": "HideUIElements",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "e9007f31-82a4-47de-9fb6-fb3c36c396f2": {
+        "label": "Show All UI Elements : UI Elements",
+        "sourceType": "mel",
+        "command": "ShowUIElements",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "e7ce7ed5-75d7-4345-911e-4b8e65172fcc": {
+        "label": "Restore UI Elements : UI Elements",
+        "sourceType": "mel",
+        "command": "RestoreUIElements",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "ec68117d-9af6-4529-8233-6238f385e006": {
+        "label": "Preferences : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "PreferencesWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "2e0ddc85-600e-4d5a-b64e-ba94419b4299": {
+        "label": "Hotkey Editor : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "HotkeyPreferencesWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "ce5c0f14-a3bc-4c43-9421-a5b36e3ccac6": {
+        "label": "Color Settings : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "ColorPreferencesWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "f84e2857-6300-4b9b-80ac-39b39c51cc06": {
+        "label": "Marking Menu Editor : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "MarkingMenuPreferencesWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "452c2245-b756-4d54-a8be-a7bb84949b22": {
+        "label": "Shelf Editor : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "ShelfPreferencesWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "a553c62c-7827-407f-9542-b127ba114584": {
+        "label": "Panel Editor : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "PanelPreferencesWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "d61419b4-e658-4928-b292-b5da1532cbce": {
+        "label": "Plug-in Manager : Settings/Preferences",
+        "sourceType": "mel",
+        "command": "PluginManager",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "69164d7e-d41c-4519-8846-8a2ecd4b8483": {
+        "label": "Outliner",
+        "sourceType": "mel",
+        "command": "OutlinerWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "85ded904-3db1-421c-8f06-17b87c419128": {
+        "label": "Node Editor",
+        "sourceType": "mel",
+        "command": "NodeEditorWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "6c975315-04a4-4151-9086-2dbbb6300671": {
+        "label": "LookdevX Graph Editor",
+        "sourceType": "mel",
+        "command": "lookdevXGraph -openView",
+        "category": "",
+        "module": "Windows",
+        "icon": "LookdevX.png"
+    },
+    "f8f2b0b4-1d80-478d-ac63-6012940bc318": {
+        "label": "Bifrost Graph Editor",
+        "sourceType": "mel",
+        "command": "openBifrostGraphEditorFromSelection",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "3272ac25-a05b-4b62-a58a-f4a1209291cf": {
+        "label": "Bifrost Browser",
+        "sourceType": "mel",
+        "command": "bifrostBrowser",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "72cc3bce-a77a-458d-8dba-fdac1031700c": {
+        "label": "Content Browser",
+        "sourceType": "mel",
+        "command": "OpenContentBrowser",
+        "category": "",
+        "module": "Windows",
+        "icon": "contentBrowserGeneric.png"
+    },
+    "918ebadb-0354-46a1-88c8-0a7dae08ae37": {
+        "label": "Playblast",
+        "sourceType": "mel",
+        "command": "PlayblastWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": "playblast.png"
+    },
+    "81e661f5-f248-4a93-931b-1ee176700d5d": {
+        "label": "Playblast Options",
+        "sourceType": "mel",
+        "command": "PlayblastOptions",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "cf2f0415-de5b-4ce0-b029-a01d766511d0": {
+        "label": "USD Layer Editor",
+        "sourceType": "mel",
+        "command": "mayaUsdOpenUsdLayerEditor",
+        "category": "",
+        "module": "Windows",
+        "icon": "USD_generic.png"
+    },
+    "bce65c10-157e-441e-b165-78b14d66ccaa": {
+        "label": "Raise Main Window",
+        "sourceType": "mel",
+        "command": "RaiseMainWindow",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    },
+    "ea4adaaf-e024-48ec-82c9-ea91feecc133": {
+        "label": "Raise Application Windows",
+        "sourceType": "mel",
+        "command": "RaiseApplicationWindows",
+        "category": "",
+        "module": "Windows",
+        "icon": ""
+    }
+}

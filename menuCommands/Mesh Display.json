@@ -1,0 +1,386 @@
+{
+    "3f773faf-08ab-4a11-a5c8-ec04ed5a87f2": {
+        "label": "Average",
+        "sourceType": "mel",
+        "command": "AveragePolygonNormals",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalAverage.png"
+    },
+    "61f2308e-8325-474e-9ddd-76687a8be90f": {
+        "label": "Average Options",
+        "sourceType": "mel",
+        "command": "AveragePolygonNormalsOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalAverage.png"
+    },
+    "8362de52-7bff-4fd1-827a-f681e0be5b8d": {
+        "label": "Conform",
+        "sourceType": "mel",
+        "command": "ConformPolygonNormals",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalsConform.png"
+    },
+    "6544b60f-57aa-4950-8a2a-cac0be64f642": {
+        "label": "Reverse",
+        "sourceType": "mel",
+        "command": "ReversePolygonNormals",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormal.png"
+    },
+    "24f97bf0-eb45-444e-9b2a-33e425b9407e": {
+        "label": "Reverse Options",
+        "sourceType": "mel",
+        "command": "ReversePolygonNormalsOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormal.png"
+    },
+    "5784706a-f284-410a-bb2b-f907bcce2303": {
+        "label": "Set to Face",
+        "sourceType": "mel",
+        "command": "SetToFaceNormals",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalSetToFace.png"
+    },
+    "652a4fd8-e236-4220-a728-c73d1a06556d": {
+        "label": "Set to Face Options",
+        "sourceType": "mel",
+        "command": "SetToFaceNormalsOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalSetToFace.png"
+    },
+    "1ad240a5-1323-4c71-b039-02e4d8483b03": {
+        "label": "Set Vertex Normal",
+        "sourceType": "mel",
+        "command": "SetVertexNormal",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polySetVertexNormal.png"
+    },
+    "76291767-551b-488d-b44e-2b6fabb66a91": {
+        "label": "Set Vertex Normal Options",
+        "sourceType": "mel",
+        "command": "SetVertexNormalOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polySetVertexNormal.png"
+    },
+    "aee6e681-432f-45ab-ad33-fcaf19829541": {
+        "label": "Harden Edge",
+        "sourceType": "mel",
+        "command": "PolygonHardenEdge",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyHardEdge.png"
+    },
+    "bf15bf8d-36f3-46a6-b146-3830e1a48012": {
+        "label": "Soften Edge",
+        "sourceType": "mel",
+        "command": "PolygonSoftenEdge",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polySoftEdge.png"
+    },
+    "fbc5082e-d6e5-4580-9fad-9be5f61c03ec": {
+        "label": "Soften/Harden Edges",
+        "sourceType": "mel",
+        "command": "PolygonSoftenHarden",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polySoftEdge.png"
+    },
+    "0f1a1162-9dfc-43b7-a01a-05d6d6628797": {
+        "label": "Soften/Harden Edges Options",
+        "sourceType": "mel",
+        "command": "PolygonSoftenHardenOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polySoftEdge.png"
+    },
+    "b1e77c25-35d7-444f-a415-bf1081a2d58c": {
+        "label": "Lock Normals",
+        "sourceType": "mel",
+        "command": "LockNormals",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalLock.png"
+    },
+    "b45301c2-d367-4ed2-8aa2-a6e21cf7f469": {
+        "label": "Unlock Normals",
+        "sourceType": "mel",
+        "command": "UnlockNormals",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyNormalUnlock.png"
+    },
+    "324ae50e-83a2-4256-b608-4cebac53b2ab": {
+        "label": "Vertex Normal Edit Tool",
+        "sourceType": "mel",
+        "command": "PolygonNormalEditTool",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "vertexNormalEdit.png"
+    },
+    "df521f67-519b-4e93-a687-537691899a34": {
+        "label": "Vertex Normal Edit Tool Options",
+        "sourceType": "mel",
+        "command": "PolygonNormalEditTool; toolPropertyWindow",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "vertexNormalEdit.png"
+    },
+    "9996ec62-9f70-47a6-8310-9729e09a2c74": {
+        "label": "Apply Color",
+        "sourceType": "mel",
+        "command": "PolygonApplyColor",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyApplyColor.png"
+    },
+    "4fdb416a-7d91-4486-a6da-525bdfa00112": {
+        "label": "Apply Color Options",
+        "sourceType": "mel",
+        "command": "PolygonApplyColorOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyApplyColor.png"
+    },
+    "8aa2b16c-8159-4052-a08c-5d5a7f253188": {
+        "label": "Paint Vertex Color Tool",
+        "sourceType": "mel",
+        "command": "PaintVertexColorTool",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "paintVertexColour.png"
+    },
+    "a9da749e-81b5-4a61-b0f1-0a700123b905": {
+        "label": "Paint Vertex Color Tool Options",
+        "sourceType": "mel",
+        "command": "PaintVertexColorToolOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "paintVertexColour.png"
+    },
+    "7be587f3-94ea-4671-a207-097eb8565025": {
+        "label": "Create Empty Set",
+        "sourceType": "mel",
+        "command": "CreateEmptySet",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetCreateEmpty.png"
+    },
+    "2ac59099-3cb0-442f-aa75-3fa37793bd1f": {
+        "label": "Create Empty Set Options",
+        "sourceType": "mel",
+        "command": "CreateEmptySetOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetCreateEmpty.png"
+    },
+    "ecf022ad-3be8-4f0c-8ca5-aae161ba7d1f": {
+        "label": "Delete Current Set",
+        "sourceType": "mel",
+        "command": "DeleteCurrentSet",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetDelete.png"
+    },
+    "42047b17-a76e-4bc1-ac9e-17a0183ef9bf": {
+        "label": "Rename Current Set...",
+        "sourceType": "mel",
+        "command": "RenameCurrentSet",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetRename.png"
+    },
+    "120224e2-1ba4-4026-9232-5da8a24eefcd": {
+        "label": "Modify Current Set",
+        "sourceType": "mel",
+        "command": "ModifyCurrentSet",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetModify.png"
+    },
+    "37e58044-a144-42a9-9669-b45992a8a6e2": {
+        "label": "Set Keyframe for Vertex Color",
+        "sourceType": "mel",
+        "command": "SetKeyframeForVertexColor",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetKeyframe.png"
+    },
+    "66818b7b-719c-4df3-ad41-3e3cfb81bb9b": {
+        "label": "Color Set Editor",
+        "sourceType": "mel",
+        "command": "OpenColorSetEditor",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorSetEditor.png"
+    },
+    "13a5cccb-a72b-4c59-b05e-4b0a783e2d43": {
+        "label": "Prelight (Maya)",
+        "sourceType": "mel",
+        "command": "PreflightPolygon",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyPrelight.png"
+    },
+    "fe8811a1-9c8a-44ef-863a-0db8d5a27f5e": {
+        "label": "Prelight (Maya) Options",
+        "sourceType": "mel",
+        "command": "PreflightPolygonOptions",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyPrelight.png"
+    },
+    "87ab12a2-1930-4e1a-9e06-507da0edfcd0": {
+        "label": "Assign New Set",
+        "sourceType": "mel",
+        "command": "AssignNewSet",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyBakeSetNew.png"
+    },
+    "06403162-6ee2-44cd-83ed-a9f4c984a850": {
+        "label": "Edit Assigned Set",
+        "sourceType": "mel",
+        "command": "EditAssignedSet",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyBakeSetEdit.png"
+    },
+    "b06059f0-05f4-4562-997a-d0c3015c0398": {
+        "label": "Toggle Display Colors Attribute",
+        "sourceType": "mel",
+        "command": "ToggleDisplayColorsAttr",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyToggleDisplayColor.png"
+    },
+    "b0438a64-4a1d-4d30-afd9-3385a8c6223a": {
+        "label": "None : Color Material Channel",
+        "sourceType": "mel",
+        "command": "SetCMCNone",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorMaterialNone.png"
+    },
+    "59dcf3b6-5c0b-4818-87f4-6d9313bea4dc": {
+        "label": "Ambient : Color Material Channel",
+        "sourceType": "mel",
+        "command": "SetCMCAmbient",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorMaterialAmbient.png"
+    },
+    "5787da34-9d9f-4600-9cde-16e787f3d066": {
+        "label": "Ambient+Diffuse : Color Material Channel",
+        "sourceType": "mel",
+        "command": "SetCMCAmbientDiffuse",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorMaterialAmbientDiffuse.png"
+    },
+    "13e74580-2f6e-4869-a389-aa423c8cef88": {
+        "label": "Diffuse : Color Material Channel",
+        "sourceType": "mel",
+        "command": "SetCMCDiffuse",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorMaterialDiffuse.png"
+    },
+    "8efcb2de-c90e-4908-a5a9-f933c00f8839": {
+        "label": "Specular : Color Material Channel",
+        "sourceType": "mel",
+        "command": "SetCMCSpecular",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorMaterialSpecular.png"
+    },
+    "c7dd7663-2122-4c4b-a29e-33167e73ced5": {
+        "label": "Emission : Color Material Channel",
+        "sourceType": "mel",
+        "command": "SetCMCEmission",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorMaterialEmission.png"
+    },
+    "a7ddd953-fb17-4013-a810-a031b2f73043": {
+        "label": "Overwrite : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSOverwrite",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendOverwrite.png"
+    },
+    "51b56d32-258a-43af-8f63-1697c4e593cd": {
+        "label": "Add : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSAdd",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendAdd.png"
+    },
+    "2d28cf24-169c-4aeb-939d-30a85ef09702": {
+        "label": "Subtract : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSSubtract",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendSubtract.png"
+    },
+    "0fcdaaa1-c5c1-40e4-aa2a-947cc22ce255": {
+        "label": "Multiply : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSMultiply",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendMultiply.png"
+    },
+    "0fb857bc-4470-4ca7-8e7b-d5726d0a5dda": {
+        "label": "Divide : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSDivide",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendDivide.png"
+    },
+    "e6957199-4cf1-47d2-8095-7f57daf13165": {
+        "label": "Average : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSAverage",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendAverage.png"
+    },
+    "a90295a7-1f76-495b-a6a8-42370067174c": {
+        "label": "Modulate 2x : Material Blend Setting",
+        "sourceType": "mel",
+        "command": "SetMBSModulate2",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyMaterialBlendModx2.png"
+    },
+    "1fddba7e-c813-4165-8cac-8db1a9b4cfef": {
+        "label": "Select Shared Instances : Per Instance Sharing",
+        "sourceType": "mel",
+        "command": "SelectSharedColorInstances",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorInstancesSelect.png"
+    },
+    "c4d822a7-ab7d-4a7c-af0b-2f11083b43d7": {
+        "label": "Share Instances : Per Instance Sharing",
+        "sourceType": "mel",
+        "command": "ShareColorInstances",
+        "category": "",
+        "module": "Mesh Display",
+        "icon": "polyColorInstancesShare.png"
+    }
+}

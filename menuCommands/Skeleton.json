@@ -1,0 +1,498 @@
+{
+    "425ee3ab-73bd-47d2-ab95-685301684a07": {
+        "label": "Create Joints",
+        "sourceType": "mel",
+        "command": "JointTool",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinJoint.png"
+    },
+    "0a340ecd-0eae-4ab6-be9d-a3d19a3a5256": {
+        "label": "Create Joints Options",
+        "sourceType": "mel",
+        "command": "JointToolOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinJoint.png"
+    },
+    "810f7358-9c7a-4011-8da9-ca94dad072b2": {
+        "label": "Insert Joints",
+        "sourceType": "mel",
+        "command": "InsertJointTool",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinInsert.png"
+    },
+    "0b983ebf-bfbb-489e-b493-8025761d17cd": {
+        "label": "Mirror Joints",
+        "sourceType": "mel",
+        "command": "MirrorJoint",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinMirrorJoint_S.png"
+    },
+    "8e825f99-3951-48a6-a191-214056da9b8d": {
+        "label": "Mirror Joints Options",
+        "sourceType": "mel",
+        "command": "MirrorJointOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinMirrorJoint_S.png"
+    },
+    "32aa3621-93ef-469b-ba18-4c87240b01cd": {
+        "label": "Orient Joint",
+        "sourceType": "mel",
+        "command": "OrientJoint",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "orientJoint.png"
+    },
+    "d8526cc8-7c2c-4998-bd58-36a7bb481fdf": {
+        "label": "Orient Joint Options",
+        "sourceType": "mel",
+        "command": "OrientJointOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "orientJoint.png"
+    },
+    "9275bf5c-397b-4044-9e1a-8655d1ae2b71": {
+        "label": "Remove Joints",
+        "sourceType": "mel",
+        "command": "RemoveJoint",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinRemove.png"
+    },
+    "b6d1b783-dfc9-4ce2-ab20-e7c86b8a2b91": {
+        "label": "Connect Joint",
+        "sourceType": "mel",
+        "command": "ConnectJoint",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinConnect.png"
+    },
+    "835c23d8-3994-46d6-a740-f71cd2d39575": {
+        "label": "Connect Joint Options",
+        "sourceType": "mel",
+        "command": "ConnectJointOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinConnect.png"
+    },
+    "cccf7cf4-0659-439a-b9e3-b4c2c1a8d92a": {
+        "label": "Disconnect Joint",
+        "sourceType": "mel",
+        "command": "DisconnectJoint",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinDisconnect.png"
+    },
+    "e0f279c7-75c1-4841-8677-0e972e6d32e3": {
+        "label": "Reroot Skeleton",
+        "sourceType": "mel",
+        "command": "RerootSkeleton",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinReroot.png"
+    },
+    "5560a1a0-8814-40f8-938f-e2d233e4f874": {
+        "label": "Label Left : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelLeft",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "caa8c07d-1a51-42d7-a5db-81cf41dc829c": {
+        "label": "Label Right : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelRight",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "a40e56e4-6fa0-435a-8bf2-8bff958d4580": {
+        "label": "Label Center : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelCenter",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "33384e7d-33b9-4b21-9fc0-43b2c8aeb998": {
+        "label": "Label None : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelNone",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "053aa410-194b-4a45-a88f-99a5a99967ab": {
+        "label": "Label Shoulder : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelArm",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "c8257caf-f1b6-4ab0-bac7-632a37f847d9": {
+        "label": "Label Hip : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelLeg",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "c12df80b-be44-4e20-bb42-c10b562629c0": {
+        "label": "Label Collar : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelCollar",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "1df12787-5ba8-422c-952f-99ed494494d9": {
+        "label": "Label Elbow : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelElbow",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "f790ab0a-e4c3-4ade-88ac-186a39bbe219": {
+        "label": "Label Foot : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelFoot",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "5521537c-ab0a-4043-a0e7-98c31c5b6a0b": {
+        "label": "Label Hand : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelHand",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "53b1a68d-2225-49f2-a241-64c8370f4a13": {
+        "label": "Label Head : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelHead",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "1585f984-d4fb-43b1-907c-132df3fc279d": {
+        "label": "Label Hip : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelHip",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "7ea197e1-6fc1-45ca-ad51-56978e189943": {
+        "label": "Label Knee : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelKnee",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "af1943fd-2936-404f-b5d7-0cd4b65f3cc5": {
+        "label": "Label Neck : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelNeck",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "4c3aa147-36c8-47c5-ac02-44cdf2513518": {
+        "label": "Label Root : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelRoot",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "693ce91f-432e-43ec-9f25-4ecfe9482d96": {
+        "label": "Label Shoulder : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelShoulder",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "3ad5e745-f65e-4d1c-a0c8-96a77b1f9e23": {
+        "label": "Label Spine : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelSpine",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "c963bd61-89a0-442f-984d-6581a57cdd8e": {
+        "label": "Label Thumb : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelThumb",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "1d8f2f3a-4277-4208-b74f-2a66145a79ee": {
+        "label": "Label Index Finger : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelIndex",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "1e6be27e-4eb6-4f03-bf46-693a13c031b0": {
+        "label": "Label Middle Finger : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelMiddleFinger",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "8a58b9d4-5579-4e02-8505-9f4bdfaf70d6": {
+        "label": "Label Ring Finger : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelRingFinger",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "f04794c7-7b1a-4c66-8da4-3e14f850d4ab": {
+        "label": "Label Pinky Finger : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelPinky",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "fbdcc857-9274-4f5a-841d-ffd07f9e89bc": {
+        "label": "Label Extra Finger : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelExtraFinger",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "530095e6-9080-4d13-abf9-231a6953a68b": {
+        "label": "Label Finger : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelFingerBase",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "2b1879cf-5049-4328-bbd5-28af22fbbfd2": {
+        "label": "Label Big Toe : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelBigToe",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "7344556b-c92c-4030-ab3d-b6c59934f53b": {
+        "label": "Label Index Toe : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelIndexToe",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "818ceadd-59dc-4cfc-b042-9ec83de2c157": {
+        "label": "Label Middle Toe : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelMiddleToe",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "a3f48011-2211-4cf9-94ce-03ccd61d65f5": {
+        "label": "Label Ring Toe : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelRingToe",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "f372d4b4-dd8a-4c1b-aa47-c4ca0f4cf532": {
+        "label": "Label Pinky Toe : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelPinkyToe",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "60c7cade-3610-4944-9f28-47b12388917d": {
+        "label": "Label Foot Thumb : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelFootThumb",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "daf57d27-84e9-4c96-819b-74df922aca6d": {
+        "label": "Label Toe : Add Joint Labels",
+        "sourceType": "mel",
+        "command": "FBIKLabelToeBase",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "e776e26b-c652-4012-8642-54c381197bd1": {
+        "label": "Toggle Selected Labels : Joint Labelling",
+        "sourceType": "mel",
+        "command": "ToggleSelectedLabels",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "bb44c0a8-c4c6-4541-bd17-1cdddbc352e3": {
+        "label": "Show All Labels : Joint Labelling",
+        "sourceType": "mel",
+        "command": "ShowAllLabels",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "e60a29d9-de26-428d-9c20-19d0a8410150": {
+        "label": "Hide All Labels : Joint Labelling",
+        "sourceType": "mel",
+        "command": "HideAllLabels",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "325e196d-8f6d-44f3-9966-22fe54890ccf": {
+        "label": "Rename Joints From Labels : Joint Labelling",
+        "sourceType": "mel",
+        "command": "RenameJointsFromLabels",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "206a6bab-6f35-4818-ae66-74cd2fdcac33": {
+        "label": "Label Based on Joint Names : Joint Labelling",
+        "sourceType": "mel",
+        "command": "LabelBasedOnJointNames",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "d5f92994-df75-489d-a082-146787cbae3a": {
+        "label": "Create IK Handle",
+        "sourceType": "mel",
+        "command": "IKHandleTool",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinHandle.png"
+    },
+    "104f56d2-ecca-4b33-bc17-3fbbca3c8249": {
+        "label": "Create IK Handle Options",
+        "sourceType": "mel",
+        "command": "IKHandleToolOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinHandle.png"
+    },
+    "a8d64c47-897c-41a5-bc05-e1ed077336ca": {
+        "label": "Create IK Spline Handle",
+        "sourceType": "mel",
+        "command": "IKSplineHandleTool",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinSplineHandle.png"
+    },
+    "11e0ef1b-36b6-405a-b6e1-cb8e134f6fa6": {
+        "label": "Create IK Spline Handle Options",
+        "sourceType": "mel",
+        "command": "IKSplineHandleToolOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinSplineHandle.png"
+    },
+    "0dd3f953-5206-4323-a300-bb14df5ae0eb": {
+        "label": "Set Preferred Angle",
+        "sourceType": "mel",
+        "command": "SetPreferredAngle",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinSetPreferredAngle.png"
+    },
+    "03cd53c0-88ea-4653-a3b6-0ee8f92d7b74": {
+        "label": "Set Preferred Angle Options",
+        "sourceType": "mel",
+        "command": "SetPreferredAngleOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "a74011b5-0c49-4917-9bc1-bff7f3729ce6": {
+        "label": "Assume Preferred Angle",
+        "sourceType": "mel",
+        "command": "AssumePreferredAngle",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "kinAssumeAngle.png"
+    },
+    "aecb9617-e1ab-4244-b225-0ec5e94b9b1b": {
+        "label": "Assume Preferred Angle Options",
+        "sourceType": "mel",
+        "command": "AssumePreferredAngleOptions",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "57a0b153-ecda-414f-91f5-ff280c27cb55": {
+        "label": "Enable IK Handle Snap",
+        "sourceType": "mel",
+        "command": "ToggleIKHandleSnap",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "1f84efa3-8bc3-438d-a70f-9af89e7e6d25": {
+        "label": "Enable IK/FK Control",
+        "sourceType": "mel",
+        "command": "ToggleIKAllowRotation",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "ee4868f5-52d1-472c-9222-507d556a8634": {
+        "label": "Enable Selected IK Handles",
+        "sourceType": "mel",
+        "command": "EnableSelectedIKHandles",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "f7d7cd3b-c6d5-4895-9e6b-4e1eb7a23234": {
+        "label": "Disable Selected IK Handles",
+        "sourceType": "mel",
+        "command": "DisableSelectedIKHandles",
+        "category": "",
+        "module": "Skeleton",
+        "icon": ""
+    },
+    "6b23148d-f411-42be-b868-387d89bf8d68": {
+        "label": "Quick Rig",
+        "sourceType": "mel",
+        "command": "QuickRigEditor",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "QR_QuickRigTool.png"
+    },
+    "79648f5e-5390-46c9-a3cf-105a100b635a": {
+        "label": "HumanIK",
+        "sourceType": "mel",
+        "command": "HIKCharacterControlsTool",
+        "category": "",
+        "module": "Skeleton",
+        "icon": "humanIK_CharCtrl.png"
+    }
+}

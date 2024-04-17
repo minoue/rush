@@ -9,6 +9,7 @@ import json
 import sys
 import imp
 import os
+import glob
 from maya import cmds
 
 
@@ -100,12 +101,6 @@ def __loadModule(modulePath: str):
 
     name = "/".join(name[-2:])
 
-    # If arnold is not loaded or installed, ignore modules for arnold
-    if name.startswith("Arnold"):
-        hasArnold = cmds.pluginInfo("mtoa", q=True, loaded=True)
-        if not hasArnold:
-            return None
-
     try:
         mod = imp.load_source(name, modulePath)
         return mod
@@ -137,12 +132,18 @@ for module_name in MODULES:
         tempDict = {}
         for cmd in m.commandDict:
             displayName = cmd[:1].capitalize() + cmd[1:]
+
+            # id = str(uuid.uuid4())
+            id = displayName + "_exmod"
             command_data = {}
-            command_data[displayName] = {}
-            command_data[displayName]['icon'] = m.commandDict[cmd]
-            command_data[displayName]['path'] = module_name
-            command_data[displayName]['command'] = cmd
-            command_data[displayName]['module'] = m.__name__
+            command_data[id] = {
+                    'label': displayName,
+                    'icon': m.commandDict[cmd],
+                    'path': module_name,
+                    'command': cmd,
+                    'module': m.__name__,
+                    'sourceType': "python",
+                }
             tempDict.update(command_data)
         TmpCls.commandDict.update(tempDict)
     except AttributeError:
@@ -154,3 +155,14 @@ for module_name in MODULES:
         funcName = funcTuple[0]
         funcObj = funcTuple[1]
         setattr(TmpCls, funcName, staticmethod(funcObj))
+
+current_file_path = os.path.dirname(__file__)
+default_command_path = os.path.join(current_file_path, "menuCommands")
+
+# Dict to be used in the main plugin file
+cmdDict = {}
+
+commandFiles = glob.glob("{}/*.json".format(default_command_path))
+for f in commandFiles:
+    with open(f, "r") as cmdFile:
+        cmdDict |= json.load(cmdFile)

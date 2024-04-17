@@ -1,0 +1,450 @@
+{
+    "208871bf-832d-4889-ba8b-32a7288cffeb": {
+        "label": "Air",
+        "sourceType": "mel",
+        "command": "Air",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posAir.png"
+    },
+    "0c863ed8-2a2f-42cf-ac42-6f84db78096b": {
+        "label": "Air Options",
+        "sourceType": "mel",
+        "command": "AirOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posAir.png"
+    },
+    "d6c0002e-97a1-4bd8-8f44-eb938914dbd4": {
+        "label": "Drag",
+        "sourceType": "mel",
+        "command": "Drag",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posDrag.png"
+    },
+    "80b80beb-c867-44b2-9f07-8fa63d0a6cc7": {
+        "label": "Drag Options",
+        "sourceType": "mel",
+        "command": "DragOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posDrag.png"
+    },
+    "18e0e549-dd3d-4ebb-b1cb-bd3142d41785": {
+        "label": "Gravity",
+        "sourceType": "mel",
+        "command": "Gravity",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posGravity.png"
+    },
+    "a89b74ac-b799-4545-aa5e-c1c8102fe809": {
+        "label": "Gravity Options",
+        "sourceType": "mel",
+        "command": "GravityOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posGravity.png"
+    },
+    "03ae7692-53a8-4d32-bb72-ae4486771b16": {
+        "label": "Newton",
+        "sourceType": "mel",
+        "command": "Newton",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posNewton.png"
+    },
+    "7c039017-173f-4a38-8a19-f66a5f555c0c": {
+        "label": "Newton Options",
+        "sourceType": "mel",
+        "command": "NewtonOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posNewton.png"
+    },
+    "11fdb8f7-53ae-47b6-a777-8f356b600d79": {
+        "label": "Radial",
+        "sourceType": "mel",
+        "command": "Radial",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posRadial.png"
+    },
+    "7c40ca18-2420-46cc-848a-1094d5419b64": {
+        "label": "Radial Options",
+        "sourceType": "mel",
+        "command": "RadialOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posRadial.png"
+    },
+    "0a478f02-8264-476d-9428-9c5a268b80d1": {
+        "label": "Turbulence",
+        "sourceType": "mel",
+        "command": "Turbulence",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posTurbulence.png"
+    },
+    "e794fc59-2558-4d99-8540-1a2493087575": {
+        "label": "Turbulence Options",
+        "sourceType": "mel",
+        "command": "TurbulenceOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posTurbulence.png"
+    },
+    "4bb088f0-61a9-4447-a9cd-08865b98fb0c": {
+        "label": "Uniform",
+        "sourceType": "mel",
+        "command": "Uniform",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posUniform.png"
+    },
+    "7575ebdd-bf30-4cae-9bf1-3f753cf182ad": {
+        "label": "Uniform Options",
+        "sourceType": "mel",
+        "command": "UniformOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posUniform.png"
+    },
+    "cbed2f5a-72be-4cc6-bcb7-320ef2278645": {
+        "label": "Vortex",
+        "sourceType": "mel",
+        "command": "Vortex",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posVortex.png"
+    },
+    "b69a9557-79d5-497f-af97-f23087af0102": {
+        "label": "Vortex Options",
+        "sourceType": "mel",
+        "command": "VortexOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posVortex.png"
+    },
+    "de924dc5-836a-4b8a-b69a-2c445273d6a8": {
+        "label": "Volume Axis",
+        "sourceType": "mel",
+        "command": "VolumeAxis",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posVolumeAxis.png"
+    },
+    "efbda533-6464-4b81-a25b-be609e31d746": {
+        "label": "Volume Axis Options",
+        "sourceType": "mel",
+        "command": "VolumeAxisOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posVolumeAxis.png"
+    },
+    "231b689e-d399-44ba-8025-73d9b2cb6198": {
+        "label": "Volume Curve",
+        "sourceType": "mel",
+        "command": "CreateCurveField",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "posVolumeAxis.png"
+    },
+    "038c1340-ac64-46f6-8145-27480e56eb2d": {
+        "label": "Use Selected as Source",
+        "sourceType": "mel",
+        "command": "AttachSelectedAsSourceField",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "selectedFields.png"
+    },
+    "3d097f8c-d03f-4303-9f21-b9cc6ba66bf3": {
+        "label": "Assign to Selected",
+        "sourceType": "mel",
+        "command": "AffectSelectedObject",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "connectField.png"
+    },
+    "fb18ef46-3df2-49b6-8b57-abde9a4a0c76": {
+        "label": "Connect to Time",
+        "sourceType": "mel",
+        "command": "ConnectToTime",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "1275fdfe-9005-4111-9159-8a1cdf4c00b1": {
+        "label": "Set for Selected : Initial State",
+        "sourceType": "mel",
+        "command": "setDynStartState",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "57d977d2-a1a9-4e7c-adcb-c95a41c4749c": {
+        "label": "Set for All Dynamic : Initial State",
+        "sourceType": "mel",
+        "command": "SaveInitialStateAll",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "60fbdcaa-7755-4e83-ba25-0677f9c9818f": {
+        "label": "Clear Initial State : Initial State",
+        "sourceType": "mel",
+        "command": "clearDynStartState",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "0db01a65-79f4-45b8-ba66-befacd4832ea": {
+        "label": "Set From Mesh : Initial State",
+        "sourceType": "mel",
+        "command": "SetNClothStartFromMesh",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "7f515a04-5885-4cda-afbc-02dc8c370e17": {
+        "label": "Relax Initial State : Initial State",
+        "sourceType": "mel",
+        "command": "RelaxInitialState",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "88ce11f2-ad51-4dc3-a736-0fd7d9622b2c": {
+        "label": "Relax Initial State Options : Initial State",
+        "sourceType": "mel",
+        "command": "RelaxInitialStateOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "903374e3-3630-4fdb-8bc5-acf0c1060ee2": {
+        "label": "Resolve Interpenetration : Initial State",
+        "sourceType": "mel",
+        "command": "ResolveInterpenetration",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "d73f3ad8-ab2b-4e9b-8674-a25451b31283": {
+        "label": "Resolve Interpenetration Options : Initial State",
+        "sourceType": "mel",
+        "command": "ResolveInterpenetrationOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "d43d8a2e-8c88-4d70-a1c2-23cdd496149d": {
+        "label": "Set Initial State : Initial State",
+        "sourceType": "mel",
+        "command": "SetInitialState",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "fluidInitialStateSet.png"
+    },
+    "7d2ec0c4-c7c5-43ef-8411-c18aa34a25ed": {
+        "label": "Set Initial State Options : Initial State",
+        "sourceType": "mel",
+        "command": "SetInitialStateOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "7f9362b1-19c9-4dc4-afc4-49b64ac0e078": {
+        "label": "Save State As Example... : Initial State",
+        "sourceType": "mel",
+        "command": "SaveFluidStateAs",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "fc1065b1-5afa-43b2-b83e-61bc5915886f": {
+        "label": "Interactive Playback",
+        "sourceType": "mel",
+        "command": "InteractivePlayback",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "interactivePlayback.png"
+    },
+    "e7fbc121-569d-48b5-a9b0-7d5979471ca9": {
+        "label": "New Solver : Assign Solver",
+        "sourceType": "mel",
+        "command": "assignNSolver \"\"",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "9a37c66a-d0de-4249-a5ef-7bdea0161a2c": {
+        "label": "Create Active Rigid Body",
+        "sourceType": "mel",
+        "command": "CreateActiveRigidBody",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "rigid.png"
+    },
+    "1ab3c608-d5e7-444e-b528-65070693580e": {
+        "label": "Create Active Rigid Body Options",
+        "sourceType": "mel",
+        "command": "CreateActiveRigidBodyOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "rigid.png"
+    },
+    "bc1fb099-bd0e-4100-b336-9dd0bf77c081": {
+        "label": "Create Passive Rigid Body",
+        "sourceType": "mel",
+        "command": "CreatePassiveRigidBody",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "rigidPassive.png"
+    },
+    "f01757fb-c3b1-49fe-83b0-9fbf519973a1": {
+        "label": "Create Passive Rigid Body Options",
+        "sourceType": "mel",
+        "command": "CreatePassiveRigidBodyOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "rigidPassive.png"
+    },
+    "20a36533-564c-4656-93c2-4575c59ce0e7": {
+        "label": "Create Nail Constraint",
+        "sourceType": "mel",
+        "command": "CreateNailConstraint",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "17d98a97-186d-4573-88b7-257ce0b8048b": {
+        "label": "Create Nail Constraint Options",
+        "sourceType": "mel",
+        "command": "CreateNailConstraintOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "03652d8d-4bb0-4bdd-a5a7-3cc7607ea328": {
+        "label": "Create Pin Constraint",
+        "sourceType": "mel",
+        "command": "CreatePinConstraint",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "832718e1-e70e-42c4-98ac-02cd22b7df18": {
+        "label": "Create Pin Constraint Options",
+        "sourceType": "mel",
+        "command": "CreatePinConstraintOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "4c441cac-e71e-4b26-8184-ffdbaf051f81": {
+        "label": "Create Hinge Constraint",
+        "sourceType": "mel",
+        "command": "CreateHingeConstraint",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "b066d985-9a4d-4385-9e2f-7135a75d0577": {
+        "label": "Create Hinge Constraint Options",
+        "sourceType": "mel",
+        "command": "CreateHingeConstraintOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "96e7c94f-1e3e-41ba-827a-6de5f6a58514": {
+        "label": "Create Spring Constraint",
+        "sourceType": "mel",
+        "command": "CreateSpringConstraint",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "7ad54b5c-a4e3-4fcc-88a8-dadbaa8619d1": {
+        "label": "Create Spring Constraint Options",
+        "sourceType": "mel",
+        "command": "CreateSpringConstraintOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "9bec5b7d-16a8-40d0-bebe-d1bb02dedf14": {
+        "label": "Create Barrier Constraint",
+        "sourceType": "mel",
+        "command": "CreateBarrierConstraint",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "2718878b-acfd-4b0e-a554-9ddc925469a4": {
+        "label": "Create Barrier Constraint Options",
+        "sourceType": "mel",
+        "command": "CreateBarrierConstraintOptions",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": "constraint.png"
+    },
+    "d27612fc-a8b6-4ba9-bab6-ef171765a4c0": {
+        "label": "Set Active Key",
+        "sourceType": "mel",
+        "command": "SetActiveKey",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "68f0eb6d-09bf-4592-aff4-cb72dce17f8f": {
+        "label": "Set Passive Key",
+        "sourceType": "mel",
+        "command": "SetPassiveKey",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "d07297b3-94f5-4ea3-a51c-a78849da67be": {
+        "label": "Break Rigid Body Connections",
+        "sourceType": "mel",
+        "command": "BreakRigidBodyConnection",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "10a64f33-f51f-4394-8223-9651df0b548d": {
+        "label": "Set Rigid Body Interpenetration",
+        "sourceType": "mel",
+        "command": "SetRigidBodyInterpenetration",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "7d41c6dd-23cc-4f25-a373-1d8e860d18ae": {
+        "label": "Set Rigid Body Collision",
+        "sourceType": "mel",
+        "command": "SetRigidBodyCollision",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "421834f8-b12b-4637-8b58-3e1ef72ee272": {
+        "label": "Rigid Body Solver Attributes",
+        "sourceType": "mel",
+        "command": "RigidBodySolver",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    },
+    "b1f923d6-9fa2-4ceb-8ae6-c11603a06b36": {
+        "label": "Create Rigid Body Solver",
+        "sourceType": "mel",
+        "command": "CreateRigidBodySolver",
+        "category": "",
+        "module": "Fields_Solvers",
+        "icon": ""
+    }
+}

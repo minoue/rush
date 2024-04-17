@@ -1,0 +1,626 @@
+{
+    "1699a263-6e3a-4acc-95a1-a366d70086c5": {
+        "label": "Loft",
+        "sourceType": "mel",
+        "command": "Loft",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "skin.png"
+    },
+    "292f0aa3-34d2-466e-b53c-c616efb4f839": {
+        "label": "Loft Options",
+        "sourceType": "mel",
+        "command": "LoftOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "skin.png"
+    },
+    "518cf123-cddf-4366-817c-ea71afa847b5": {
+        "label": "Planar",
+        "sourceType": "mel",
+        "command": "Planar",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "planarTrim.png"
+    },
+    "4a3a503e-0d27-4754-ba9f-7e83eb8c2e7b": {
+        "label": "Planar Options",
+        "sourceType": "mel",
+        "command": "PlanarOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "planarTrim.png"
+    },
+    "9f049494-0484-4232-ba74-7e1c6aecbee6": {
+        "label": "Revolve",
+        "sourceType": "mel",
+        "command": "Revolve",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "revolve.png"
+    },
+    "75b0927e-0dee-4c79-9d52-8a7195127db6": {
+        "label": "Revolve Options",
+        "sourceType": "mel",
+        "command": "RevolveOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "revolve.png"
+    },
+    "35f9a3ad-3811-40b1-a094-5888ee4a8680": {
+        "label": "Birail 1 Tool : Birail",
+        "sourceType": "mel",
+        "command": "Birail1",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "birail1Gen.png"
+    },
+    "4941b12b-a4ff-4fc6-a999-3f068e69280d": {
+        "label": "Birail 1 Tool Options : Birail",
+        "sourceType": "mel",
+        "command": "Birail1Options",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "birail1Gen.png"
+    },
+    "5d4a82ee-39f5-45dd-854c-86af3293dbf6": {
+        "label": "Birail 2 Tool : Birail",
+        "sourceType": "mel",
+        "command": "Birail2",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "birail2Gen.png"
+    },
+    "3c772980-d0cc-4d3f-9372-3e587ba0085f": {
+        "label": "Birail 2 Tool Options : Birail",
+        "sourceType": "mel",
+        "command": "Birail2Options",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "birail2Gen.png"
+    },
+    "a9b3fe82-357e-4d39-9f57-2c9ddb931065": {
+        "label": "Birail 3+ Tool : Birail",
+        "sourceType": "mel",
+        "command": "Birail3",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "birail3Gen.png"
+    },
+    "53e18537-6f38-4d52-9626-479c73744ab2": {
+        "label": "Birail 3+ Tool Options : Birail",
+        "sourceType": "mel",
+        "command": "Birail3Options",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "birail3Gen.png"
+    },
+    "573fe996-60af-47a5-a724-1f1ba3ae2d3b": {
+        "label": "Extrude",
+        "sourceType": "mel",
+        "command": "Extrude",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "extrude.png"
+    },
+    "159304fe-f600-4b00-b7a1-6f363eaaed79": {
+        "label": "Extrude Options",
+        "sourceType": "mel",
+        "command": "ExtrudeOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "extrude.png"
+    },
+    "d828fad1-a1b3-4048-addd-d7f0f19406b6": {
+        "label": "Boundary",
+        "sourceType": "mel",
+        "command": "Boundary",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "boundary.png"
+    },
+    "61ab0ad7-5fc5-42db-8c82-2a0f6d3fd1a5": {
+        "label": "Boundary Options",
+        "sourceType": "mel",
+        "command": "BoundaryOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "boundary.png"
+    },
+    "ff212164-3dca-431a-9709-9c5e8dd1e334": {
+        "label": "Square",
+        "sourceType": "mel",
+        "command": "SquareSurface",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "squareSrf.png"
+    },
+    "60ef4546-30d7-4d91-b1d0-2b103b82fda1": {
+        "label": "Square Options",
+        "sourceType": "mel",
+        "command": "SquareSurfaceOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "squareSrf.png"
+    },
+    "072a2bf3-11b6-4c50-950b-7aa7ac49d50d": {
+        "label": "Bevel",
+        "sourceType": "mel",
+        "command": "Bevel",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "bevel.png"
+    },
+    "99476e7b-9c31-4170-a9ae-d21d42abe9d2": {
+        "label": "Bevel Options",
+        "sourceType": "mel",
+        "command": "BevelOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "bevel.png"
+    },
+    "bb1a36d4-4952-4348-b14a-7ed545b2badf": {
+        "label": "Bevel Plus",
+        "sourceType": "mel",
+        "command": "BevelPlus",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "bevelPlus.png"
+    },
+    "f0fe0831-f94b-42e5-87e5-0b508ce1c27a": {
+        "label": "Bevel Plus Options",
+        "sourceType": "mel",
+        "command": "BevelPlusOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "bevelPlus.png"
+    },
+    "fed05988-7945-4474-b29b-b1ec9390890d": {
+        "label": "Duplicate NURBS Patch",
+        "sourceType": "mel",
+        "command": "DuplicateNURBSPatches",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "duplicateSurface.png"
+    },
+    "b8e587de-0c6c-49b9-8f44-46aff2e4984b": {
+        "label": "Duplicate NURBS Patch Options",
+        "sourceType": "mel",
+        "command": "DuplicateNURBSPatchesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "duplicateSurface.png"
+    },
+    "4e371d69-e4a0-430f-a565-00ee4438d43b": {
+        "label": "Align",
+        "sourceType": "mel",
+        "command": "AlignCurve",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "alignCurve.png"
+    },
+    "3ea5dade-b565-41c0-9c18-f20309c53b17": {
+        "label": "Align Options",
+        "sourceType": "mel",
+        "command": "AlignCurveOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "alignCurve.png"
+    },
+    "bd3d1200-48e2-4260-8413-74c4b0c44381": {
+        "label": "Attach",
+        "sourceType": "mel",
+        "command": "AttachSurfaces",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "align.png"
+    },
+    "fd7b7194-2068-4ea2-a123-b3f7a8ecde9e": {
+        "label": "Attach Options",
+        "sourceType": "mel",
+        "command": "AttachSurfacesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "align.png"
+    },
+    "50daf47d-6c71-4bd3-b120-cf70d2c2a079": {
+        "label": "Attach Without Moving",
+        "sourceType": "mel",
+        "command": "AttachSurfaceWithoutMoving",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "attachWithoutMoving.png"
+    },
+    "1e02295e-8400-4023-95d7-f2a3d52f5897": {
+        "label": "Detach",
+        "sourceType": "mel",
+        "command": "DetachCurve",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "detachCurve.png"
+    },
+    "4c2c5a48-59a4-45be-a681-452ed7a4401d": {
+        "label": "Detach Options",
+        "sourceType": "mel",
+        "command": "DetachCurveOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "detachCurve.png"
+    },
+    "fb9b1fff-28d5-4a6c-bbb1-5b8452db2196": {
+        "label": "Move Seam",
+        "sourceType": "mel",
+        "command": "MoveSurfaceSeam",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "moveSeam.png"
+    },
+    "f29d191a-dbda-4881-9e99-ead61d30c30d": {
+        "label": "Open/Close",
+        "sourceType": "mel",
+        "command": "OpenCloseCurve",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "closeGeom.png"
+    },
+    "bddc2401-b16b-4b20-85d6-f725e9e59f21": {
+        "label": "Open/Close Options",
+        "sourceType": "mel",
+        "command": "OpenCloseCurveOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "closeGeom.png"
+    },
+    "8b21657a-639d-466b-822d-d3b5eb85893b": {
+        "label": "Intersect",
+        "sourceType": "mel",
+        "command": "IntersectSurfaces",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "srfIntersect.png"
+    },
+    "6e31604d-e3b0-4e6b-9002-687027e48be8": {
+        "label": "Intersect Options",
+        "sourceType": "mel",
+        "command": "IntersectSurfacesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "srfIntersect.png"
+    },
+    "0290829a-3a3f-49d0-b474-9e9caeeaf924": {
+        "label": "Project Curve on Surface",
+        "sourceType": "mel",
+        "command": "ProjectCurveOnSurface",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "projectCurve.png"
+    },
+    "db1edfd4-8ff0-4e85-bd06-f2bd097d8995": {
+        "label": "Project Curve on Surface Options",
+        "sourceType": "mel",
+        "command": "ProjectCurveOnSurfaceOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "projectCurve.png"
+    },
+    "b11e80bd-1792-4988-89c6-2e2d9d59def1": {
+        "label": "Trim Tool",
+        "sourceType": "mel",
+        "command": "TrimTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "trim.png"
+    },
+    "6ce46165-7f8c-4c0d-9fa7-6ee13405069d": {
+        "label": "Trim Tool Options",
+        "sourceType": "mel",
+        "command": "TrimToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "trim.png"
+    },
+    "23b26177-5184-4540-8b48-e2ffaf11ce8a": {
+        "label": "Untrim",
+        "sourceType": "mel",
+        "command": "UntrimSurfaces",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "untrim.png"
+    },
+    "a2685c66-aea2-4be1-8ffc-2d2ea9e9aa6a": {
+        "label": "Untrim Options",
+        "sourceType": "mel",
+        "command": "UntrimSurfacesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "untrim.png"
+    },
+    "6c80b296-a2eb-479e-9eab-8615d9c46059": {
+        "label": "Extend",
+        "sourceType": "mel",
+        "command": "ExtendSurfaces",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "extendSurface.png"
+    },
+    "d01d5064-bca4-464e-a012-f45f0155e80a": {
+        "label": "Extend Options",
+        "sourceType": "mel",
+        "command": "ExtendSurfacesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "extendSurface.png"
+    },
+    "0da5d33a-e79b-4368-a66b-127d55b65a60": {
+        "label": "Insert Knot",
+        "sourceType": "mel",
+        "command": "InsertKnot",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "insertKnot.png"
+    },
+    "7a9e1606-38bd-4e71-a068-22f6713e200a": {
+        "label": "Insert Knot Options",
+        "sourceType": "mel",
+        "command": "InsertKnotOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "insertKnot.png"
+    },
+    "605a56ee-e996-4800-928e-43483ad69212": {
+        "label": "Offset",
+        "sourceType": "mel",
+        "command": "OffsetSurfaces",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "offsetSurface.png"
+    },
+    "b12d193d-3b10-4ccb-a20a-89655ac4d925": {
+        "label": "Offset Options",
+        "sourceType": "mel",
+        "command": "OffsetSurfacesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "offsetSurface.png"
+    },
+    "f0049722-8e06-4f7a-8d0d-8852d6f62eeb": {
+        "label": "Round Tool",
+        "sourceType": "mel",
+        "command": "RoundTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "roundSrf.png"
+    },
+    "883c3a74-e6a1-4cbf-881d-02c825ab382e": {
+        "label": "Round Tool Options",
+        "sourceType": "mel",
+        "command": "RoundToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "roundSrf.png"
+    },
+    "be828656-8a48-4f94-b127-e5a49e088c23": {
+        "label": "Stitch Surface Points : Stitch",
+        "sourceType": "mel",
+        "command": "StitchSurfacePoints",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "stitchSurfacePoints.png"
+    },
+    "9fd445a4-3012-4c60-a43e-bf757d670170": {
+        "label": "Stitch Surface Points Options : Stitch",
+        "sourceType": "mel",
+        "command": "StitchSurfacePointsOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "stitchSurfacePoints.png"
+    },
+    "3d4498e2-c89f-448b-9d3f-df581d8bc182": {
+        "label": "Stitch Edges Tool : Stitch",
+        "sourceType": "mel",
+        "command": "StitchEdgesTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "stitchSrf.png"
+    },
+    "9b5d477a-12ea-443f-9eba-12b974de4623": {
+        "label": "Stitch Edges Tool Options : Stitch",
+        "sourceType": "mel",
+        "command": "StitchEdgesToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "stitchSrf.png"
+    },
+    "0b3de367-2f23-4d19-9a0a-d43945287f70": {
+        "label": "Global Stitch : Stitch",
+        "sourceType": "mel",
+        "command": "GlobalStitch",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "globalStitch.png"
+    },
+    "e8cab4cb-29d9-4041-8bec-776ecbbfcdc5": {
+        "label": "Global Stitch Options : Stitch",
+        "sourceType": "mel",
+        "command": "GlobalStitchOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "globalStitch.png"
+    },
+    "904c9403-c777-4fc6-b5f9-748a42476293": {
+        "label": "Circular Fillet : Surface Fillet",
+        "sourceType": "mel",
+        "command": "CircularFillet",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "surfaceFillet.png"
+    },
+    "7fe61675-bf22-4ff8-8f8a-305dd0c7a447": {
+        "label": "Circular Fillet Options : Surface Fillet",
+        "sourceType": "mel",
+        "command": "CircularFilletOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "surfaceFillet.png"
+    },
+    "5a8b1fb9-de39-479d-971b-f7dee7baa7e4": {
+        "label": "Freeform Fillet : Surface Fillet",
+        "sourceType": "mel",
+        "command": "FreeformFillet",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "filletFreeform_S.png"
+    },
+    "8542f38e-e81b-4ee2-8778-c2b1a0ec47e8": {
+        "label": "Freeform Fillet Options : Surface Fillet",
+        "sourceType": "mel",
+        "command": "FreeformFilletOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "filletFreeform_S.png"
+    },
+    "429718ed-f084-4217-a13e-99b3f4bb486f": {
+        "label": "Fillet Blend Tool : Surface Fillet",
+        "sourceType": "mel",
+        "command": "FilletBlendTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "blendSurface.png"
+    },
+    "a48aaffe-b936-49f3-85f1-b13da21d7c81": {
+        "label": "Fillet Blend Tool Options : Surface Fillet",
+        "sourceType": "mel",
+        "command": "FilletBlendToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "blendSurface.png"
+    },
+    "c9f65562-de37-4542-b0b5-0f18bec4c853": {
+        "label": "Sculpt Geometry Tool",
+        "sourceType": "mel",
+        "command": "SculptGeometryTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "putty.png"
+    },
+    "e71b7c90-8eda-4a6e-8076-7083f4586b1b": {
+        "label": "Sculpt Geometry Tool Options",
+        "sourceType": "mel",
+        "command": "SculptGeometryToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "putty.png"
+    },
+    "9c3dd33f-6c7a-4726-8c50-63e9b8b99e2d": {
+        "label": "Surface Editing Tool : Surface Editing",
+        "sourceType": "mel",
+        "command": "SurfaceEditingTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "surfaceEditor.png"
+    },
+    "b05f89e2-6370-48cd-832e-8fda16cbf8bc": {
+        "label": "Surface Editing Tool Options : Surface Editing",
+        "sourceType": "mel",
+        "command": "SurfaceEditingToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "surfaceEditor.png"
+    },
+    "32cc7525-42d6-4f1c-9bbb-79e638e5260c": {
+        "label": "Break Tangent : Surface Editing",
+        "sourceType": "mel",
+        "command": "BreakTangent",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "breakSrfTangent.png"
+    },
+    "87f7e8e7-0d5d-4501-8841-dd15eeccb89f": {
+        "label": "Smooth Tangent : Surface Editing",
+        "sourceType": "mel",
+        "command": "SmoothTangent",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "smoothTangent.png"
+    },
+    "015696ca-c1ae-494c-b91d-b8906621bb2a": {
+        "label": "Union Tool : Booleans",
+        "sourceType": "mel",
+        "command": "SurfaceBooleanUnionTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "nurbsShellUnion.png"
+    },
+    "5d372045-3b86-4ac6-ad7f-067fea9c55cd": {
+        "label": "Union Tool Options : Booleans",
+        "sourceType": "mel",
+        "command": "SurfaceBooleanUnionToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "nurbsShellUnion.png"
+    },
+    "3b9f622d-35e1-4fe3-967f-220150bffedd": {
+        "label": "Difference Tool : Booleans",
+        "sourceType": "mel",
+        "command": "SurfaceBooleanSubtractTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "nurbsShellSubtract.png"
+    },
+    "84b38856-d8c1-4904-83c0-e6f51afa3945": {
+        "label": "Difference Tool Options : Booleans",
+        "sourceType": "mel",
+        "command": "SurfaceBooleanSubtractToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "nurbsShellSubtract.png"
+    },
+    "90f81c4e-b611-4ced-94ec-2c3fa895ba9d": {
+        "label": "Intersection Tool : Booleans",
+        "sourceType": "mel",
+        "command": "SurfaceBooleanIntersectTool",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "nurbsShellIntersect.png"
+    },
+    "8b956115-2b42-431f-a8e2-67f63ecc6b5e": {
+        "label": "Intersection Tool Options : Booleans",
+        "sourceType": "mel",
+        "command": "SurfaceBooleanIntersectToolOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "nurbsShellIntersect.png"
+    },
+    "06474be7-af0f-4bef-b0d1-6b72f42944e5": {
+        "label": "Rebuild",
+        "sourceType": "mel",
+        "command": "RebuildSurfaces",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "rebuildSurface.png"
+    },
+    "5a2102c2-7c05-4128-b793-ad9ae0e45ec7": {
+        "label": "Rebuild Options",
+        "sourceType": "mel",
+        "command": "RebuildSurfacesOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "rebuildSurface.png"
+    },
+    "526b430f-0fb5-4297-9e03-65cd730ee6e2": {
+        "label": "Reverse Direction",
+        "sourceType": "mel",
+        "command": "ReverseCurve",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "reverse.png"
+    },
+    "5b1f5306-7a13-45cb-808c-0046ac7750df": {
+        "label": "Reverse Direction Options",
+        "sourceType": "mel",
+        "command": "ReverseCurveOptions",
+        "category": "",
+        "module": "Surfaces",
+        "icon": "reverse.png"
+    }
+}

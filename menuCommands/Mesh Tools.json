@@ -1,0 +1,570 @@
+{
+    "73740f55-77b7-4eeb-9ccf-7dea07981a29": {
+        "label": "Hide Modeling Toolkit",
+        "sourceType": "mel",
+        "command": "ToggleModelingToolkit",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": ""
+    },
+    "29eaf442-93ab-4477-bc26-9caddc49fc28": {
+        "label": "Append to Polygon",
+        "sourceType": "mel",
+        "command": "AppendToPolygonTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyAppendFacet.png"
+    },
+    "9e47eafd-8a74-429b-8180-e9d4d7d17f0b": {
+        "label": "Append to Polygon Options",
+        "sourceType": "mel",
+        "command": "AppendToPolygonToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyAppendFacet.png"
+    },
+    "73286413-0b01-4512-b433-77aa45526447": {
+        "label": "Connect",
+        "sourceType": "mel",
+        "command": "EnterConnectTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "connect_NEX32.png"
+    },
+    "a77c4785-ea92-49d5-8c84-9eb1728ac69f": {
+        "label": "Connect Options",
+        "sourceType": "mel",
+        "command": "dR_connectTool; toolPropertyWindow;",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "connect_NEX32.png"
+    },
+    "6119c7a3-d1c2-46f7-91d6-bf40b4a19a7f": {
+        "label": "Crease Tool",
+        "sourceType": "mel",
+        "command": "PolyCreaseTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyCrease.png"
+    },
+    "4d58c147-3de3-4ad0-b428-ea95dfefce39": {
+        "label": "Crease Tool Options",
+        "sourceType": "mel",
+        "command": "PolyCreaseToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyCrease.png"
+    },
+    "b4525dbc-e768-44f1-a6a3-00b3dddf8c56": {
+        "label": "Create Polygon",
+        "sourceType": "mel",
+        "command": "CreatePolygonTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyCreateFacet.png"
+    },
+    "4dc517b8-4b14-4e45-9ea3-3d0d2e39efbb": {
+        "label": "Create Polygon Options",
+        "sourceType": "mel",
+        "command": "CreatePolygonToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyCreateFacet.png"
+    },
+    "124990b2-dbeb-467b-b3ad-9870ebde4283": {
+        "label": "Insert Edge Loop",
+        "sourceType": "mel",
+        "command": "SplitEdgeRingTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polySplitEdgeRing.png"
+    },
+    "0c1af0e8-b080-46fe-b299-de10bbd3d0ec": {
+        "label": "Insert Edge Loop Options",
+        "sourceType": "mel",
+        "command": "SplitEdgeRingToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polySplitEdgeRing.png"
+    },
+    "0782d223-3881-4efc-a0ed-6071354754a6": {
+        "label": "Make Hole",
+        "sourceType": "mel",
+        "command": "MakeHoleTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyMergeFacet.png"
+    },
+    "d6f7d9ce-2040-459c-994f-ee19ba00f9a1": {
+        "label": "Make Hole Options",
+        "sourceType": "mel",
+        "command": "MakeHoleToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyMergeFacet.png"
+    },
+    "89945169-1c16-4586-a6c0-d42bdb2d6e3c": {
+        "label": "Multi-Cut",
+        "sourceType": "mel",
+        "command": "MultiCutTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "multiCut_NEX32.png"
+    },
+    "9220eb52-076d-4f9c-9cc5-4c5ee1442b3e": {
+        "label": "Multi-Cut Options",
+        "sourceType": "mel",
+        "command": "dR_multiCutTool;  toolPropertyWindow;",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "multiCut_NEX32.png"
+    },
+    "15b54cf9-61b6-499d-881c-b59756cab6e6": {
+        "label": "Offset Edge Loop",
+        "sourceType": "mel",
+        "command": "DuplicateEdges",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyDuplicateEdgeLoop.png"
+    },
+    "fe8f17ea-c358-4bb1-b8fb-b7d4cd19a7b7": {
+        "label": "Offset Edge Loop Options",
+        "sourceType": "mel",
+        "command": "DuplicateEdgesOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyDuplicateEdgeLoop.png"
+    },
+    "1a9b3bd8-a5cb-4367-b471-58a593031fcb": {
+        "label": "Paint Reduce Weights",
+        "sourceType": "mel",
+        "command": "PaintReduceWeightsTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyPaintReduceWeights.png"
+    },
+    "d17cfbba-9b3d-4dd5-857e-e647fb8f3678": {
+        "label": "Paint Reduce Weights Options",
+        "sourceType": "mel",
+        "command": "PaintReduceWeightsToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyReduce.png"
+    },
+    "f99a4c6f-c0b7-4cc2-b9a0-b92659e5bbab": {
+        "label": "Paint Transfer Attributes",
+        "sourceType": "mel",
+        "command": "PaintTransferAttributes",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyTransferAttributesWeights.png"
+    },
+    "cdfae452-15be-486a-92e4-99737d16124c": {
+        "label": "Paint Transfer Attributes Options",
+        "sourceType": "mel",
+        "command": "artAttrToolScript 3 \"transferAttributes\"",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "polyTransferAttributesWeights.png"
+    },
+    "9381ed14-44f5-4510-9277-ce606f5c4a4a": {
+        "label": "Quad Draw",
+        "sourceType": "mel",
+        "command": "QuadDrawTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "quadDraw_NEX32.png"
+    },
+    "329291ac-0407-4f4f-9db5-97393fc8a021": {
+        "label": "Quad Draw Options",
+        "sourceType": "mel",
+        "command": "dR_quadDrawTool; toolPropertyWindow;",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "quadDraw_NEX32.png"
+    },
+    "661b7eef-1b1d-4c13-a99b-842fa063bbc8": {
+        "label": "Sculpt Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshSculptTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Sculpt.png"
+    },
+    "098f5960-ae6d-48ab-9eef-65058308cb71": {
+        "label": "Sculpt Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshSculptToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Sculpt.png"
+    },
+    "3d6af863-0e58-4986-bd67-97c9d20492a7": {
+        "label": "Smooth Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshSmoothTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Smooth.png"
+    },
+    "f10aea89-566b-4205-b2a3-8c6ddb5ecd18": {
+        "label": "Smooth Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshSmoothToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Smooth.png"
+    },
+    "294face2-f980-421f-bc05-e56e168ddc78": {
+        "label": "Relax Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshRelaxTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Relax.png"
+    },
+    "0c511f7f-e0d6-4781-a802-d045b01963ed": {
+        "label": "Relax Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshRelaxToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Relax.png"
+    },
+    "562836d2-7a98-4b04-919b-bb8d40f06127": {
+        "label": "Grab Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshGrabTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Grab.png"
+    },
+    "bb9d7c22-1782-454c-840f-05c999081875": {
+        "label": "Grab Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshGrabToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Grab.png"
+    },
+    "3a5eca06-eca9-4446-8be3-f462d3266ebd": {
+        "label": "Pinch Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshPinchTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Pinch.png"
+    },
+    "a48daa54-59b2-4fe3-b581-8aca39bb0958": {
+        "label": "Pinch Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshPinchToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Pinch.png"
+    },
+    "92824f7c-34bd-43b5-b8cf-c7f0f5964f82": {
+        "label": "Flatten Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshFlattenTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Flatten.png"
+    },
+    "020eb4be-1d16-4332-a470-2490f337937f": {
+        "label": "Flatten Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshFlattenToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Flatten.png"
+    },
+    "993e5b94-5a61-494c-a122-43845acf9446": {
+        "label": "Foamy Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshFoamyTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Foamy.png"
+    },
+    "e8be0052-fc3c-4249-8dc5-aee9dbe3e6c6": {
+        "label": "Foamy Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshFoamyToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Foamy.png"
+    },
+    "fb1b4227-26e9-47f2-b4e2-1b1ad4b9f7d9": {
+        "label": "Spray Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshSprayTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Spray.png"
+    },
+    "d589483b-e8c4-4aec-acb7-250def891e7c": {
+        "label": "Spray Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshSprayToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Spray.png"
+    },
+    "8d8d4ba6-93e4-4d0a-aa8a-c78ffd62766d": {
+        "label": "Repeat Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshRepeatTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Repeat.png"
+    },
+    "5fee1184-57bd-4785-bdc2-b515d8707461": {
+        "label": "Repeat Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshRepeatToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Repeat.png"
+    },
+    "ce6de345-27b4-4192-af6b-1d37ca5fbdc5": {
+        "label": "Imprint Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshImprintTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Imprint.png"
+    },
+    "697fe501-474b-4c0f-8253-e2819a18caef": {
+        "label": "Imprint Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshImprintToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Imprint.png"
+    },
+    "12f7383b-bf64-4efe-bc4f-83f47bdec510": {
+        "label": "Wax Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshWaxTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Wax.png"
+    },
+    "b94b26d6-c237-4710-ad11-c785e970b2ee": {
+        "label": "Wax Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshWaxToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Wax.png"
+    },
+    "b89b22cf-5711-4429-8530-0c9af848dc60": {
+        "label": "Scrape Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshScrapeTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Scrape.png"
+    },
+    "c47795bc-2bd7-4e19-80bf-f7dadd9058f9": {
+        "label": "Scrape Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshScrapeToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Scrape.png"
+    },
+    "a59d8774-c813-4e72-a5c8-d70930eb5d87": {
+        "label": "Fill Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshFillTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Fill.png"
+    },
+    "a1563d9b-96f1-4b43-a553-f93a41fb1ba2": {
+        "label": "Fill Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshFillToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Fill.png"
+    },
+    "fca72c59-60cf-4a58-b3df-a6c810911fec": {
+        "label": "Knife Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshKnifeTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Knife.png"
+    },
+    "05e297e9-709d-4f5d-a43c-bc2762a7001d": {
+        "label": "Knife Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshKnifeToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Knife.png"
+    },
+    "329b4c7e-31ae-4937-9c51-d7a6dfac2e0c": {
+        "label": "Smear Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshSmearTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Smear.png"
+    },
+    "54ab3a0d-ab83-44dd-a82f-e5ea53f02c36": {
+        "label": "Smear Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshSmearToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Smear.png"
+    },
+    "25585a11-f56e-4a0d-a1f3-35f3ad2e3fd8": {
+        "label": "Bulge Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshBulgeTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Bulge.png"
+    },
+    "21b4a8e6-2337-4ce9-a847-f4bdea5a3c74": {
+        "label": "Bulge Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshBulgeToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Bulge.png"
+    },
+    "1ae4a16a-ba4b-4140-b012-85e21bea0884": {
+        "label": "Amplify Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshAmplifyTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Amplify.png"
+    },
+    "dcc342aa-36e1-4cd1-b89d-3e87fd67fd46": {
+        "label": "Amplify Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshAmplifyToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Amplify.png"
+    },
+    "bb8c5dcd-0277-4577-85d3-04a45efd43e9": {
+        "label": "Freeze Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshFreezeTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Freeze.png"
+    },
+    "d7292940-5800-461e-86dc-547dab4afef3": {
+        "label": "Freeze Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshFreezeToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Freeze.png"
+    },
+    "16eb6816-3a0b-4545-81ec-88aa8dd57a8a": {
+        "label": "Smooth Target Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshSmoothTargetTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "SmoothTarget.png"
+    },
+    "b082f5b0-35c0-4961-9a98-c5997087f71a": {
+        "label": "Smooth Target Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshSmoothTargetToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "SmoothTarget.png"
+    },
+    "2d9f39a7-47c6-49bf-a07c-b07146a500d7": {
+        "label": "Clone Target Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshCloneTargetTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "CloneTarget.png"
+    },
+    "b3a0a613-f343-4a93-bf42-6c9f7a210875": {
+        "label": "Clone Target Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshCloneTargetToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "CloneTarget.png"
+    },
+    "e66c9c90-91df-4386-8ce5-0bfc7f10e227": {
+        "label": "Mask Target Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshMaskTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Mask.png"
+    },
+    "b2fc3bb8-574b-45d6-bcd8-db6d5fe1dfd8": {
+        "label": "Mask Target Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshMaskToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Mask.png"
+    },
+    "d27bcc51-97d0-4938-945c-71b0ee26e8de": {
+        "label": "Erase Target Tool : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "SetMeshEraseTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Erase.png"
+    },
+    "70f77118-cae5-48d1-888a-f24c94ad833e": {
+        "label": "Erase Target Tool Options : Sculpting Tools",
+        "sourceType": "mel",
+        "command": "ShowMeshEraseToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "Erase.png"
+    },
+    "004c3d4c-9c35-42b3-8fc5-24f57dbd1f5d": {
+        "label": "Slide Edge",
+        "sourceType": "mel",
+        "command": "SlideEdgeTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "slideEdgeTool.png"
+    },
+    "b4fce32f-c46c-43f6-a0c8-42554c8c98e9": {
+        "label": "Slide Edge Options",
+        "sourceType": "mel",
+        "command": "SlideEdgeToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "slideEdgeTool.png"
+    },
+    "215135ec-7b3c-41ae-95e5-08f9a38bb6e8": {
+        "label": "Target Weld",
+        "sourceType": "mel",
+        "command": "MergeVertexTool",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "weld_NEX32.png"
+    },
+    "069771f2-fd9e-4191-b133-920c9c3a5a5f": {
+        "label": "Target Weld Options",
+        "sourceType": "mel",
+        "command": "MergeVertexToolOptions",
+        "category": "",
+        "module": "Mesh Tools",
+        "icon": "weld_NEX32.png"
+    }
+}

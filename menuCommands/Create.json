@@ -1,0 +1,954 @@
+{
+    "67cb544f-c758-4233-9c40-b50b1873df56": {
+        "label": "Sphere : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSSphere",
+        "category": "",
+        "module": "Create",
+        "icon": "sphere.png"
+    },
+    "c8497863-b5af-4fb2-9ddf-aa31c6a7beb5": {
+        "label": "Sphere Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSSphereOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "sphere.png"
+    },
+    "9828dfc0-3f93-41c9-b9a9-53d3ed912e8c": {
+        "label": "Cube : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCube",
+        "category": "",
+        "module": "Create",
+        "icon": "cube.png"
+    },
+    "f1a45b25-effd-401d-a034-bb37c5d5d545": {
+        "label": "Cube Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCubeOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "cube.png"
+    },
+    "b73d48db-a0fd-4863-a908-74300613bd1b": {
+        "label": "Cylinder : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCylinder",
+        "category": "",
+        "module": "Create",
+        "icon": "cylinder.png"
+    },
+    "4367dcf9-3e91-4ca2-abf4-981c60fc5cfb": {
+        "label": "Cylinder Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCylinderOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "cylinder.png"
+    },
+    "87b66412-6315-4502-aa62-e08407628399": {
+        "label": "Cone : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCone",
+        "category": "",
+        "module": "Create",
+        "icon": "cone.png"
+    },
+    "7f2cca37-f877-4dc9-980f-4f081991e6dc": {
+        "label": "Cone Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSConeOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "cone.png"
+    },
+    "e6da7e64-50e2-4a91-9384-d549a3358394": {
+        "label": "Plane : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSPlane",
+        "category": "",
+        "module": "Create",
+        "icon": "plane.png"
+    },
+    "4468c5aa-1758-418b-9442-063a0a24fa4f": {
+        "label": "Plane Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSPlaneOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "plane.png"
+    },
+    "a79bed4a-1159-4b5e-9172-7889d7c60f62": {
+        "label": "Torus : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSTorus",
+        "category": "",
+        "module": "Create",
+        "icon": "torus.png"
+    },
+    "2e880e90-fed7-45f3-a800-b329a796add6": {
+        "label": "Torus Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSTorusOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "torus.png"
+    },
+    "8d58891c-4d19-4d86-9c87-c2fd00333302": {
+        "label": "Circle : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCircle",
+        "category": "",
+        "module": "Create",
+        "icon": "circle.png"
+    },
+    "89832e18-45a3-4816-9074-5edc9d2af53e": {
+        "label": "Circle Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSCircleOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "circle.png"
+    },
+    "f4041291-5f74-4756-89a7-12e58b3e9772": {
+        "label": "Square : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSSquare",
+        "category": "",
+        "module": "Create",
+        "icon": "square.png"
+    },
+    "20ec3238-3da6-46bb-ad0b-a994d1a5991c": {
+        "label": "Square Options : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "CreateNURBSSquareOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "square.png"
+    },
+    "f3cec2c6-01a8-4124-a095-45c30bd9c68e": {
+        "label": "Interactive Creation : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "ToggleCreateNurbsPrimitivesAsTool",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "2822edc0-3993-42ba-b1b9-41b0a32bc278": {
+        "label": "Exit On Completion : NURBS Primitives",
+        "sourceType": "mel",
+        "command": "ToggleNurbsPrimitivesAsToolExitOnComplete",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "28189d06-e1c4-401c-aa56-5b4959e3a5d4": {
+        "label": "Sphere : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSphere",
+        "category": "",
+        "module": "Create",
+        "icon": "polySphere.png"
+    },
+    "d71cff14-53d3-4252-8ed7-838a13b22143": {
+        "label": "Sphere Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSphereOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polySphere.png"
+    },
+    "2a2e0697-a400-4f27-bc65-f929b23eeb56": {
+        "label": "Cube : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonCube",
+        "category": "",
+        "module": "Create",
+        "icon": "polyCube.png"
+    },
+    "adade66b-d777-4ad2-9e4a-037efeff23bc": {
+        "label": "Cube Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonCubeOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyCube.png"
+    },
+    "5bcab226-dc5a-4f33-96b9-d1b131c1bbba": {
+        "label": "Cylinder : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonCylinder",
+        "category": "",
+        "module": "Create",
+        "icon": "polyCylinder.png"
+    },
+    "54735a03-a9f3-45f0-bd15-988944f63a60": {
+        "label": "Cylinder Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonCylinderOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyCylinder.png"
+    },
+    "ecaea799-7083-4338-93a5-0ed38f4352fc": {
+        "label": "Cone : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonCone",
+        "category": "",
+        "module": "Create",
+        "icon": "polyCone.png"
+    },
+    "0dcc4f47-552a-467b-9986-3b54291da193": {
+        "label": "Cone Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonConeOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyCone.png"
+    },
+    "309c7330-0550-4238-922a-176737e0b71f": {
+        "label": "Torus : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonTorus",
+        "category": "",
+        "module": "Create",
+        "icon": "polyTorus.png"
+    },
+    "d1a2f936-9841-4673-b68d-9ac9105b24af": {
+        "label": "Torus Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonTorusOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyTorus.png"
+    },
+    "4dbc5ad6-fc9e-4823-a49a-88497d284220": {
+        "label": "Plane : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPlane",
+        "category": "",
+        "module": "Create",
+        "icon": "polyMesh.png"
+    },
+    "3090b928-2d2b-40aa-a10e-f21003ff00aa": {
+        "label": "Plane Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPlaneOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyMesh.png"
+    },
+    "03cf596b-2c18-480d-bc98-ce40e40783f9": {
+        "label": "Disc : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonDisc",
+        "category": "",
+        "module": "Create",
+        "icon": "polyDisc.png"
+    },
+    "3dd63e6b-14bc-40c2-8c36-742d4a4a59cf": {
+        "label": "Disc Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonDiscOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyDisc.png"
+    },
+    "299cc05b-be3a-4683-8a7d-b07f088b4537": {
+        "label": "Platonic Solid : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPlatonic",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPlatonicSolid.png"
+    },
+    "70c7d387-29cc-4f7a-8068-39a63471cc50": {
+        "label": "Platonic Solid Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPlatonicOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPlatonicSolid.png"
+    },
+    "48a75931-c921-42ba-bb7e-d036d46b3f77": {
+        "label": "Pyramid : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPyramid",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPyramid.png"
+    },
+    "02eb2ec8-60db-4db8-bbe8-e62139533ed8": {
+        "label": "Pyramid Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPyramidOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPyramid.png"
+    },
+    "10ccdd2d-ea5e-4930-be19-2e2c38819fb6": {
+        "label": "Prism : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPrism",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPrism.png"
+    },
+    "1d3840a5-5a9e-492a-9558-f3d22fbc58d4": {
+        "label": "Prism Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPrismOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPrism.png"
+    },
+    "a63ac61a-abc1-4608-a4b4-bbcc5eec1675": {
+        "label": "Pipe : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPipe",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPipe.png"
+    },
+    "5bc15f4b-656e-4cf8-a3eb-24145d7f687b": {
+        "label": "Pipe Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonPipeOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyPipe.png"
+    },
+    "fe07ea12-0c9d-4374-a3af-f77d293e270e": {
+        "label": "Helix : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonHelix",
+        "category": "",
+        "module": "Create",
+        "icon": "polyHelix.png"
+    },
+    "afa3cade-b916-4490-bfb6-4392724b1e5a": {
+        "label": "Helix Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonHelixOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyHelix.png"
+    },
+    "63ec0274-517b-4c7e-9023-5ccb14df0522": {
+        "label": "Gear : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonGear",
+        "category": "",
+        "module": "Create",
+        "icon": "polyGear.png"
+    },
+    "c03be523-dcef-4269-8d56-a7278d203b1d": {
+        "label": "Gear Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonGearOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyGear.png"
+    },
+    "0e41d381-b604-4685-b9c6-873900b05784": {
+        "label": "Soccer Ball : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSoccerBall",
+        "category": "",
+        "module": "Create",
+        "icon": "polySoccerBall.png"
+    },
+    "cdf3c80e-d1f2-447f-abe5-fb74940b45ec": {
+        "label": "Soccer Ball Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSoccerBallOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polySoccerBall.png"
+    },
+    "9cea89fa-714d-47a2-8084-e3ee77162653": {
+        "label": "Super Ellipse : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSuperEllipse",
+        "category": "",
+        "module": "Create",
+        "icon": "polySuperEllipse.png"
+    },
+    "1610d521-a4be-4ca5-ac79-f710f928eff4": {
+        "label": "Super Ellipse Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSuperEllipseOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polySuperEllipse.png"
+    },
+    "eec4fc85-5baa-4d4b-b490-a6f85e30bbb5": {
+        "label": "Spherical Harmonics : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSphericalHarmonics",
+        "category": "",
+        "module": "Create",
+        "icon": "polySphericalHarmonics.png"
+    },
+    "370b527c-8b0b-48d9-a4ee-c61f705615b3": {
+        "label": "Spherical Harmonics Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonSphericalHarmonicsOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polySphericalHarmonics.png"
+    },
+    "b3ca1037-3ef6-40fb-a259-8ed26dc9db24": {
+        "label": "Ultra Shape : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonUltraShape",
+        "category": "",
+        "module": "Create",
+        "icon": "polyUltraShape.png"
+    },
+    "4764676d-22c5-4c89-a6b2-cebdedc64556": {
+        "label": "Ultra Shape Options : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "CreatePolygonUltraShapeOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "polyUltraShape.png"
+    },
+    "c72b2467-6158-4893-b4a4-a23d54dd01db": {
+        "label": "Interactive Creation : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "ToggleCreatePolyPrimitivesAsTool",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "904f02cc-a7c7-49e0-90fd-dedcea1da744": {
+        "label": "Exit On Completion : Polygon Primitives",
+        "sourceType": "mel",
+        "command": "TogglePolyPrimitivesAsToolExitOnComplete",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "5b92ec63-d933-497e-88da-95180eaeadb9": {
+        "label": "Sphere : Volume Primitives",
+        "sourceType": "mel",
+        "command": "CreateVolumeSphere",
+        "category": "",
+        "module": "Create",
+        "icon": "volumeSphere.png"
+    },
+    "8ed5fb86-be7d-4989-a3de-e98920eb4d1c": {
+        "label": "Cube : Volume Primitives",
+        "sourceType": "mel",
+        "command": "CreateVolumeCube",
+        "category": "",
+        "module": "Create",
+        "icon": "volumeCube.png"
+    },
+    "b685701d-a55e-444e-a05e-8bc635c9b6ab": {
+        "label": "Cone : Volume Primitives",
+        "sourceType": "mel",
+        "command": "CreateVolumeCone",
+        "category": "",
+        "module": "Create",
+        "icon": "volumeCone.png"
+    },
+    "8a6aab9a-2ce8-4d74-af79-c920efc4058d": {
+        "label": "Ambient Light : Lights",
+        "sourceType": "mel",
+        "command": "CreateAmbientLight",
+        "category": "",
+        "module": "Create",
+        "icon": "ambientlight.png"
+    },
+    "0e9e8fcd-6c60-4e1a-bf14-2ee032d3fa02": {
+        "label": "Ambient Light Options : Lights",
+        "sourceType": "mel",
+        "command": "CreateAmbientLightOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "ambientlight.png"
+    },
+    "ce1bec46-06bd-42bc-9805-5a1b62d1b9e5": {
+        "label": "Directional Light : Lights",
+        "sourceType": "mel",
+        "command": "CreateDirectionalLight",
+        "category": "",
+        "module": "Create",
+        "icon": "directionallight.png"
+    },
+    "a57a0b25-1b34-4446-82eb-08896234dc13": {
+        "label": "Directional Light Options : Lights",
+        "sourceType": "mel",
+        "command": "CreateDirectionalLightOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "directionallight.png"
+    },
+    "116ebdf2-21e7-4453-902c-176ab4d70e58": {
+        "label": "Point Light : Lights",
+        "sourceType": "mel",
+        "command": "CreatePointLight",
+        "category": "",
+        "module": "Create",
+        "icon": "pointlight.png"
+    },
+    "35ce6e73-7f2f-4a11-a962-3a0c6ca4b07f": {
+        "label": "Point Light Options : Lights",
+        "sourceType": "mel",
+        "command": "CreatePointLightOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "pointlight.png"
+    },
+    "8d6f750e-95f0-4ca3-8f0c-dc8993e02826": {
+        "label": "Spot Light : Lights",
+        "sourceType": "mel",
+        "command": "CreateSpotLight",
+        "category": "",
+        "module": "Create",
+        "icon": "spotlight.png"
+    },
+    "8b7aaf38-6d99-479e-af6c-09b83122271b": {
+        "label": "Spot Light Options : Lights",
+        "sourceType": "mel",
+        "command": "CreateSpotLightOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "spotlight.png"
+    },
+    "e5aab625-fc93-4474-93c5-615269eb775d": {
+        "label": "Area Light : Lights",
+        "sourceType": "mel",
+        "command": "CreateAreaLight",
+        "category": "",
+        "module": "Create",
+        "icon": "arealight.png"
+    },
+    "cbf43eb2-a03c-493a-839d-5c1de39f5867": {
+        "label": "Area Light Options : Lights",
+        "sourceType": "mel",
+        "command": "CreateAreaLightOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "arealight.png"
+    },
+    "6fee2a85-11ef-444f-9a82-e08c4dd599c7": {
+        "label": "Volume Light : Lights",
+        "sourceType": "mel",
+        "command": "CreateVolumeLight",
+        "category": "",
+        "module": "Create",
+        "icon": "volumelight.png"
+    },
+    "0a47953c-d4ee-4ee3-bfbc-1e29455786ff": {
+        "label": "Volume Light Options : Lights",
+        "sourceType": "mel",
+        "command": "CreateVolumeLightOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "volumelight.png"
+    },
+    "5da1c39e-235c-4309-8c6d-b4ee7abc7ce9": {
+        "label": "Camera : Cameras",
+        "sourceType": "mel",
+        "command": "CreateCameraOnly",
+        "category": "",
+        "module": "Create",
+        "icon": "view.png"
+    },
+    "23580b1f-6460-434e-986f-596d43dd921f": {
+        "label": "Camera Options : Cameras",
+        "sourceType": "mel",
+        "command": "CreateCameraOnlyOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "view.png"
+    },
+    "fcd45cce-cc5a-4cac-a9ab-4bf51435a2ff": {
+        "label": "Camera and Aim : Cameras",
+        "sourceType": "mel",
+        "command": "CreateCameraAim",
+        "category": "",
+        "module": "Create",
+        "icon": "cameraAim.png"
+    },
+    "62bafd2f-3887-4579-bb84-d6cdabf272f6": {
+        "label": "Camera and Aim Options : Cameras",
+        "sourceType": "mel",
+        "command": "CreateCameraAimOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "cameraAim.png"
+    },
+    "c106479f-b5c4-4bef-b610-86fef50dfc30": {
+        "label": "Camera, Aim and Up : Cameras",
+        "sourceType": "mel",
+        "command": "CreateCameraAimUp",
+        "category": "",
+        "module": "Create",
+        "icon": "cameraAimUp.png"
+    },
+    "b1860ff3-7413-4f85-9a3d-3c1947f981c1": {
+        "label": "Camera, Aim and Up Options : Cameras",
+        "sourceType": "mel",
+        "command": "CreateCameraAimUpOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "cameraAimUp.png"
+    },
+    "54a53080-03b4-4e7f-8bb6-cc40b796dc0d": {
+        "label": "CV Curve Tool : Curve Tools",
+        "sourceType": "mel",
+        "command": "CVCurveTool",
+        "category": "",
+        "module": "Create",
+        "icon": "curveCV.png"
+    },
+    "a9bbd114-e5ff-4730-aece-b39397a34e2c": {
+        "label": "CV Curve Tool Options : Curve Tools",
+        "sourceType": "mel",
+        "command": "CVCurveToolOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "curveCV.png"
+    },
+    "23a5eea6-6ecc-4f4b-b2ed-75ff45418064": {
+        "label": "EP Curve Tool : Curve Tools",
+        "sourceType": "mel",
+        "command": "EPCurveTool",
+        "category": "",
+        "module": "Create",
+        "icon": "curveEP.png"
+    },
+    "94703133-fc0b-4fd1-9606-d5cb075653aa": {
+        "label": "EP Curve Tool Options : Curve Tools",
+        "sourceType": "mel",
+        "command": "EPCurveToolOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "curveEP.png"
+    },
+    "83059523-feba-44f4-983e-df8857bdf5aa": {
+        "label": "Bezier Curve Tool : Curve Tools",
+        "sourceType": "mel",
+        "command": "CreateBezierCurveTool",
+        "category": "",
+        "module": "Create",
+        "icon": "curveBezier.png"
+    },
+    "cc355692-2940-4ab6-8227-cfbcbc009b0b": {
+        "label": "Bezier Curve Tool Options : Curve Tools",
+        "sourceType": "mel",
+        "command": "CreateBezierCurveToolOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "curveBezier.png"
+    },
+    "24fa1b73-93f0-41ad-bd2f-d2d992055317": {
+        "label": "Pencil Curve Tool : Curve Tools",
+        "sourceType": "mel",
+        "command": "PencilCurveTool",
+        "category": "",
+        "module": "Create",
+        "icon": "pencil.png"
+    },
+    "d1398038-5558-45eb-915f-cda9ca9a4e57": {
+        "label": "Pencil Curve Tool Options : Curve Tools",
+        "sourceType": "mel",
+        "command": "PencilCurveToolOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "pencil.png"
+    },
+    "7e54013b-8193-4b98-95bd-c3f6d37850b5": {
+        "label": "Three Point Circular Arc : Curve Tools",
+        "sourceType": "mel",
+        "command": "ThreePointArcTool",
+        "category": "",
+        "module": "Create",
+        "icon": "threePointArc.png"
+    },
+    "2f44860d-0d09-4bec-8acf-dce02b531b61": {
+        "label": "Three Point Circular Arc Options : Curve Tools",
+        "sourceType": "mel",
+        "command": "ThreePointArcToolOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "threePointArc.png"
+    },
+    "b28fc454-3ae2-4cec-b373-1ec79eefd673": {
+        "label": "Two Point Circular Arc : Curve Tools",
+        "sourceType": "mel",
+        "command": "TwoPointArcTool",
+        "category": "",
+        "module": "Create",
+        "icon": "twoPointArc.png"
+    },
+    "ddb5636b-a625-4edb-94a3-9262a0368098": {
+        "label": "Two Point Circular Arc Options : Curve Tools",
+        "sourceType": "mel",
+        "command": "TwoPointArcToolOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "twoPointArc.png"
+    },
+    "58283429-88bf-4765-b53f-65c28107730b": {
+        "label": "Sweep Mesh",
+        "sourceType": "mel",
+        "command": "performSweepMesh 0;",
+        "category": "",
+        "module": "Create",
+        "icon": "shelf_sweepMeshFromCurve.png"
+    },
+    "2db00345-debb-42cd-8a02-672f92510beb": {
+        "label": "Sweep Mesh Options",
+        "sourceType": "mel",
+        "command": "performSweepMesh 1;",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "7a6d215e-9a7c-4514-8200-98ea511ea4cd": {
+        "label": "Type",
+        "sourceType": "mel",
+        "command": "CreatePolygonType",
+        "category": "",
+        "module": "Create",
+        "icon": "polyType.png"
+    },
+    "8fcf1118-38ab-4c7e-8165-1d78c62270dd": {
+        "label": "Bifrost Graph",
+        "sourceType": "mel",
+        "command": "CreateNewBifrostGraph",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "9b70b784-b874-4a33-96af-39418fc4a078": {
+        "label": "SVG",
+        "sourceType": "mel",
+        "command": "CreatePolygonSVG",
+        "category": "",
+        "module": "Create",
+        "icon": "polySVG.png"
+    },
+    "62d289d9-1038-4ba7-aa54-30b66d6e62de": {
+        "label": "Adobe(R) Illustrator(R) Object...",
+        "sourceType": "mel",
+        "command": "CreateIllustratorCurves",
+        "category": "",
+        "module": "Create",
+        "icon": "aiObject.png"
+    },
+    "c59eb627-e822-4a85-9804-db7c9cc5346d": {
+        "label": "Adobe(R) Illustrator(R) Object... Options",
+        "sourceType": "mel",
+        "command": "CreateIllustratorCurvesOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "aiObject.png"
+    },
+    "9b8fd569-81ff-47df-abd0-a7db830d6b95": {
+        "label": "Construction Plane",
+        "sourceType": "mel",
+        "command": "CreateConstructionPlane",
+        "category": "",
+        "module": "Create",
+        "icon": "sketchPlane.png"
+    },
+    "d3550eb1-e560-4422-989f-0f97d827facd": {
+        "label": "Construction Plane Options",
+        "sourceType": "mel",
+        "command": "CreateConstructionPlaneOptions",
+        "category": "",
+        "module": "Create",
+        "icon": "sketchPlane.png"
+    },
+    "78591899-c297-43e3-bae7-ede8b6cde933": {
+        "label": "Free Image Plane",
+        "sourceType": "mel",
+        "command": "CreateImagePlane",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "65d107aa-97dc-428c-b9da-028e90446a07": {
+        "label": "Free Image Plane Options",
+        "sourceType": "mel",
+        "command": "CreateImagePlaneOptions",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "b33f0aea-98a1-47ca-95ec-7f1cee733a23": {
+        "label": "Locator",
+        "sourceType": "mel",
+        "command": "CreateLocator",
+        "category": "",
+        "module": "Create",
+        "icon": "locator.png"
+    },
+    "bd439949-d9f0-4794-87c7-31b4ca25a89c": {
+        "label": "Annotation...",
+        "sourceType": "mel",
+        "command": "CreateAnnotateNode",
+        "category": "",
+        "module": "Create",
+        "icon": "annotation.png"
+    },
+    "71e7bf7c-612b-4612-961e-e5364f9105ea": {
+        "label": "Distance Tool : Measure Tools",
+        "sourceType": "mel",
+        "command": "DistanceTool",
+        "category": "",
+        "module": "Create",
+        "icon": "distanceDim.png"
+    },
+    "997f6451-d63f-4e0e-ab8c-f953b0134db5": {
+        "label": "Parameter Tool : Measure Tools",
+        "sourceType": "mel",
+        "command": "ParameterTool",
+        "category": "",
+        "module": "Create",
+        "icon": "paramDim.png"
+    },
+    "40b07d6f-b92b-4b5d-b949-ef2801a7286c": {
+        "label": "Arc Length Tool : Measure Tools",
+        "sourceType": "mel",
+        "command": "ArcLengthTool",
+        "category": "",
+        "module": "Create",
+        "icon": "arcLengthDim.png"
+    },
+    "cea47da3-2f44-413f-9674-52b3bc5fd5fb": {
+        "label": "Stage with New Layer : Universal Scene Description (USD)",
+        "sourceType": "mel",
+        "command": "mayaUsdCreateStageWithNewLayer",
+        "category": "",
+        "module": "Create",
+        "icon": "USD_stage.png"
+    },
+    "3a1a7438-8c78-43b9-a0b3-39e352098ae1": {
+        "label": "Stage From File... : Universal Scene Description (USD)",
+        "sourceType": "mel",
+        "command": "mayaUsdCreateStageFromFile",
+        "category": "",
+        "module": "Create",
+        "icon": "USD_stage.png"
+    },
+    "1a47b24f-8eaf-4a80-a357-d0fcebf9d4ec": {
+        "label": "Stage From File... Options : Universal Scene Description (USD)",
+        "sourceType": "mel",
+        "command": "mayaUsdCreateStageFromFileOptions",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "7a62a96f-9b11-4cd0-94b1-c42906df318e": {
+        "label": "Assembly Definition... : Scene Assembly",
+        "sourceType": "mel",
+        "command": "assemblyCreate assemblyDefinition",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "420f948d-6d4e-4d22-bffc-8cd06ddd448b": {
+        "label": "Assembly Definition... Options : Scene Assembly",
+        "sourceType": "mel",
+        "command": "assemblyDefinitionOptionBox",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "75ffe974-23af-4c6d-bbb2-2347def76b5e": {
+        "label": "Assembly Reference... : Scene Assembly",
+        "sourceType": "mel",
+        "command": "assemblyCreate assemblyReference",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "3d5b16c3-e123-4e9a-8842-679fbe8b90e1": {
+        "label": "Empty Group",
+        "sourceType": "mel",
+        "command": "CreateEmptyGroup",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "d3ea52cd-df7e-44af-b6e1-f1aedf855dc7": {
+        "label": "Set : Sets",
+        "sourceType": "mel",
+        "command": "CreateSet",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "04e5ed8b-1ec4-400b-bd6c-f203f2e18413": {
+        "label": "Set Options : Sets",
+        "sourceType": "mel",
+        "command": "CreateSetOptions",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "000cb3cc-ec77-45b2-8b85-9ec24e681644": {
+        "label": "Partition : Sets",
+        "sourceType": "mel",
+        "command": "CreatePartition",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "7a4258e2-d7d6-4a7e-9af3-d29913a378ec": {
+        "label": "Partition Options : Sets",
+        "sourceType": "mel",
+        "command": "CreatePartitionOptions",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "a49cb3d9-e7a0-4ef1-ae43-f7d5230675b8": {
+        "label": "Quick Select Set... : Sets",
+        "sourceType": "mel",
+        "command": "CreateQuickSelectSet",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "04df90bf-db21-4a5b-9d12-a8eb6f8675f5": {
+        "label": "Create Asset : Asset",
+        "sourceType": "mel",
+        "command": "CreateContainer",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "e50cd3cd-80f8-48a7-bebb-31d7252585ed": {
+        "label": "Create Asset Options : Asset",
+        "sourceType": "mel",
+        "command": "CreateContainerOptions",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "00457522-e195-4d9d-bfe1-bab36818eb8a": {
+        "label": "Create Asset with Transform : Asset",
+        "sourceType": "mel",
+        "command": "CreateDagContainer",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    },
+    "5569de55-9426-4b83-9116-c89f8dfabd44": {
+        "label": "Create Asset with Transform Options : Asset",
+        "sourceType": "mel",
+        "command": "CreateDagContainerOptions",
+        "category": "",
+        "module": "Create",
+        "icon": ""
+    }
+}

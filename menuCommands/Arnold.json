@@ -1,0 +1,410 @@
+{
+    "f6d151fc-035b-4ecc-9dd6-efe78b730c25": {
+        "label": "Render",
+        "sourceType": "mel",
+        "command": "cmdArnoldRender",
+        "category": "",
+        "module": "Arnold",
+        "icon": "RenderShelf.png"
+    },
+    "8de74e5f-92b1-450b-b9c0-a58e26abbf04": {
+        "label": "Open Arnold RenderView",
+        "sourceType": "mel",
+        "command": "cmdArnoldMtoARenderView",
+        "category": "",
+        "module": "Arnold",
+        "icon": "RenderViewShelf.png"
+    },
+    "44516a87-5191-463e-af68-8639634de645": {
+        "label": "Open RenderView Logs",
+        "sourceType": "mel",
+        "command": "cmdArnoldMtoALogWindow",
+        "category": "",
+        "module": "Arnold",
+        "icon": "RenderViewLogsShelf.png"
+    },
+    "ae8c816d-4e99-47aa-b650-5f8fd56fc06e": {
+        "label": "Export All to .ASS.. : Scene Export",
+        "sourceType": "mel",
+        "command": "cmdArnoldExportAllStandIn",
+        "category": "",
+        "module": "Arnold",
+        "icon": "ExportStandinShelf.png"
+    },
+    "f29f953a-abc1-49fb-94a1-950c9bafe32b": {
+        "label": "Export All to .ASS.. Options : Scene Export",
+        "sourceType": "python",
+        "command": "import mtoa.ui.arnoldmenu;mtoa.ui.arnoldmenu.doExportOptionsStandIn(selected=False)",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "53b7ba73-c180-4bdd-acd4-8657c54725d3": {
+        "label": "Export All to Alembic .. : Scene Export",
+        "sourceType": "mel",
+        "command": "cmdArnoldAlembicExportAll",
+        "category": "",
+        "module": "Arnold",
+        "icon": "AlembicShelf.png"
+    },
+    "251315b2-7d81-4942-b60f-acff794dec8c": {
+        "label": "Export All to USD .. : Scene Export",
+        "sourceType": "mel",
+        "command": "cmdArnoldUsdExportAll",
+        "category": "",
+        "module": "Arnold",
+        "icon": "UsdShelf.png"
+    },
+    "ce65a393-08db-46dc-903d-545f6a75ba04": {
+        "label": "Export Selection to .ASS.. : Scene Export",
+        "sourceType": "mel",
+        "command": "cmdArnoldExportSelectedStandIn",
+        "category": "",
+        "module": "Arnold",
+        "icon": "ExportStandinShelf.png"
+    },
+    "24cf88a6-71b2-4105-ac3c-6976a699f259": {
+        "label": "Export Selection to .ASS.. Options : Scene Export",
+        "sourceType": "python",
+        "command": "import mtoa.ui.arnoldmenu;mtoa.ui.arnoldmenu.doExportOptionsStandIn(selected=True)",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "c23ac18d-dc8a-4626-a400-bfa4d2e50495": {
+        "label": "Export Selection to Alembic .. : Scene Export",
+        "sourceType": "mel",
+        "command": "cmdArnoldAlembicExportSelection",
+        "category": "",
+        "module": "Arnold",
+        "icon": "AlembicShelf.png"
+    },
+    "512ab7f5-1d90-489e-8261-a3eb173c245a": {
+        "label": "Export Selection to USD .. : Scene Export",
+        "sourceType": "mel",
+        "command": "cmdArnoldUsdExportSelection",
+        "category": "",
+        "module": "Arnold",
+        "icon": "UsdShelf.png"
+    },
+    "78c05379-66ca-4b65-9b30-bcc64002241f": {
+        "label": "Area Light : Lights",
+        "sourceType": "mel",
+        "command": "cmdArnoldAreaLights",
+        "category": "",
+        "module": "Arnold",
+        "icon": "AreaLightShelf.png"
+    },
+    "ddadc7e0-840c-4700-b04f-a7b382dfc7a4": {
+        "label": "Skydome Light : Lights",
+        "sourceType": "mel",
+        "command": "cmdSkydomeLight",
+        "category": "",
+        "module": "Arnold",
+        "icon": "SkydomeLightShelf.png"
+    },
+    "85bc13b1-07a1-48c4-bb3e-648c122fb5cd": {
+        "label": "Mesh Light : Lights",
+        "sourceType": "mel",
+        "command": "cmdArnoldMeshLight",
+        "category": "",
+        "module": "Arnold",
+        "icon": "MeshLightShelf.png"
+    },
+    "98654fc4-5c9a-4cac-81d8-8e7fc970f9d0": {
+        "label": "Photometric Light : Lights",
+        "sourceType": "mel",
+        "command": "cmdPhotometricLights",
+        "category": "",
+        "module": "Arnold",
+        "icon": "PhotometricLightShelf.png"
+    },
+    "4b401d2f-3398-4b74-8c3d-67cc78db52b7": {
+        "label": "Light Portal : Lights",
+        "sourceType": "mel",
+        "command": "cmdLightPortal",
+        "category": "",
+        "module": "Arnold",
+        "icon": "LightPortalShelf.png"
+    },
+    "451d324e-5d82-4e23-8e8f-fdd48b51c626": {
+        "label": "Physical Sky : Lights",
+        "sourceType": "mel",
+        "command": "cmdPhysicalSky",
+        "category": "",
+        "module": "Arnold",
+        "icon": "PhysicalSkyShelf.png"
+    },
+    "b562ad03-5559-4c24-935a-3b1cd704517e": {
+        "label": "Export Selected Shaders : Shaders",
+        "sourceType": "mel",
+        "command": "cmdArnoldExportShaders",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "9586cdca-0688-47ab-b5d2-610181f761fd": {
+        "label": "Import Arnold Shaders : Shaders",
+        "sourceType": "mel",
+        "command": "cmdArnoldImportShaders",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "d6bd5845-e1f4-4fea-b94a-ed81347184ed": {
+        "label": "Reload Shaders : Shaders",
+        "sourceType": "mel",
+        "command": "cmdArnoldReloadShaders",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "542eab08-c34e-4c88-8e24-2e04c4190d03": {
+        "label": "Convert Shaders to Arnold : Shaders",
+        "sourceType": "python",
+        "command": "import mtoa.ui.arnoldmenu;mtoa.ui.arnoldmenu.arnoldConvertDeprecated()",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "23c33f79-c2c3-4327-8c84-0d256d8f82bb": {
+        "label": "Export Operator Graph : Operators",
+        "sourceType": "mel",
+        "command": "cmdArnoldExportOperators",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "7c10b86b-477c-457e-a587-ed67342810f0": {
+        "label": "Import Operator Graph : Operators",
+        "sourceType": "mel",
+        "command": "cmdArnoldImportOperators",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "f27aa9e5-e21d-4cac-b3d0-333498164dcc": {
+        "label": "aiSetTransform : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiSetTransform",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "7aa3360c-036f-4780-9d44-1d145ecfff11": {
+        "label": "aiMaterialx : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiMaterialx",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "d3bd5da1-5cb3-48fb-b165-7d2566e3be26": {
+        "label": "aiMerge : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiMerge",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "a867cd8e-560f-48c2-ab66-b847692def08": {
+        "label": "aiDisable : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiDisable",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "0a383ddf-6e28-4baa-b2a6-e1e7d0d46273": {
+        "label": "aiSetParameter : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiSetParameter",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "e8b96630-07e2-41f1-aef1-a6b9ea973b29": {
+        "label": "aiSwitchOperator : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiSwitchOperator",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "524d0ab5-072a-4409-997e-3175316ffa68": {
+        "label": "aiCollection : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiCollection",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "6a600936-09cd-4e61-8be4-bccc22509783": {
+        "label": "aiIncludeGraph : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiIncludeGraph",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "f21a8b1c-7659-4b72-90ba-65739a05685f": {
+        "label": "aiStringReplace : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiStringReplace",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "cb3f6826-125d-43ea-b074-9c66432e7679": {
+        "label": "aiLookSwitch : Operators",
+        "sourceType": "mel",
+        "command": "cmdaiLookSwitch",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "5281b70f-c37a-4362-b1c4-88f4bb80319d": {
+        "label": "StandIn",
+        "sourceType": "mel",
+        "command": "cmdArnoldCreateStandIn",
+        "category": "",
+        "module": "Arnold",
+        "icon": "StandinShelf.png"
+    },
+    "aaed8a26-a34d-4a5b-bf70-0c801db53beb": {
+        "label": "StandIn Options",
+        "sourceType": "mel",
+        "command": "cmdArnoldCreateStandInFile",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "8175a6c1-760b-47d9-b409-b3e3d746ad1b": {
+        "label": "Curve Collector",
+        "sourceType": "mel",
+        "command": "cmdCurveCollector",
+        "category": "",
+        "module": "Arnold",
+        "icon": "CurveCollectorShelf.png"
+    },
+    "e891c679-f724-402a-948d-af071063854c": {
+        "label": "Volume",
+        "sourceType": "mel",
+        "command": "cmdArnoldVolume",
+        "category": "",
+        "module": "Arnold",
+        "icon": "VolumeShelf.png"
+    },
+    "0785f1d0-2c9c-4f27-9bcd-40a80eeee8f0": {
+        "label": "Textures : Flush Caches",
+        "sourceType": "mel",
+        "command": "cmdArnoldFlushTexture",
+        "category": "",
+        "module": "Arnold",
+        "icon": "FlushTextureShelf.png"
+    },
+    "6905a88a-97c7-412d-afdd-95e6a8961910": {
+        "label": "Selected Textures : Flush Caches",
+        "sourceType": "mel",
+        "command": "cmdArnoldFlushSelectedTextures",
+        "category": "",
+        "module": "Arnold",
+        "icon": "FlushTextureShelf.png"
+    },
+    "d576aa6a-35bc-450d-ac62-bd11a2a94879": {
+        "label": "Skydome Lights : Flush Caches",
+        "sourceType": "mel",
+        "command": "cmdArnoldFlushBackground",
+        "category": "",
+        "module": "Arnold",
+        "icon": "FlushBackgroundShelf.png"
+    },
+    "8fc11db2-e1f6-4c92-8495-cc7aef050143": {
+        "label": "Quad Lights : Flush Caches",
+        "sourceType": "mel",
+        "command": "cmdArnoldFlushQuads",
+        "category": "",
+        "module": "Arnold",
+        "icon": "FlushQuadLightShelf.png"
+    },
+    "e60bdb21-e10d-40f2-87ca-0bc39179318f": {
+        "label": "All : Flush Caches",
+        "sourceType": "mel",
+        "command": "cmdArnoldFlushAll",
+        "category": "",
+        "module": "Arnold",
+        "icon": "FlushAllCachesShelf.png"
+    },
+    "e3d61ff9-7000-49d8-adf5-1762336c3c4c": {
+        "label": "Arnold Denoiser (noice) : Utilities",
+        "sourceType": "mel",
+        "command": "cmdArnoldDenoise",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "89ffc4f4-cf7b-42cd-a4b8-f4c14e0c4a75": {
+        "label": "Bake Selected Geometry : Utilities",
+        "sourceType": "mel",
+        "command": "cmdArnoldBakeGeo",
+        "category": "",
+        "module": "Arnold",
+        "icon": "BakeGeometryShelf.png"
+    },
+    "676a2c2b-7cd7-45f9-8c6c-dce7bdeac541": {
+        "label": "Render Selection To Texture : Utilities",
+        "sourceType": "mel",
+        "command": "cmdArnoldRenderToTexture",
+        "category": "",
+        "module": "Arnold",
+        "icon": "RenderToTextureShelf.png"
+    },
+    "782fc9ce-e458-4214-a528-01344ce0a0ba": {
+        "label": "TX Manager : Utilities",
+        "sourceType": "mel",
+        "command": "cmdArnoldTxManager",
+        "category": "",
+        "module": "Arnold",
+        "icon": "TXManagerShelf.png"
+    },
+    "9843055a-c969-4bb5-b9bf-eefe062b71c9": {
+        "label": "Update TX Files : Utilities",
+        "sourceType": "mel",
+        "command": "cmdArnoldUpdateTx",
+        "category": "",
+        "module": "Arnold",
+        "icon": "UpdateTxShelf.png"
+    },
+    "7eb7745f-b736-4091-a28e-179b814667f9": {
+        "label": "Light Editor : Utilities",
+        "sourceType": "python",
+        "command": "import mtoa.ui.arnoldmenu;mtoa.ui.arnoldmenu.arnoldLightManager()",
+        "category": "",
+        "module": "Arnold",
+        "icon": "LightManagerShelf.png"
+    },
+    "439d5f7e-7d02-479a-9ddb-0060c1ad17b6": {
+        "label": "Export Selection to MaterialX : Utilities",
+        "sourceType": "mel",
+        "command": "cmdArnoldExportSelectedToMaterialx",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "c3e22905-7c23-4e5b-ab39-8fbd61107bc3": {
+        "label": "Pre-populate GPU Cache : Utilities",
+        "sourceType": "mel",
+        "command": "cmdGPUCache",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    },
+    "83bb148d-7a78-4539-b300-ee17aaf787b8": {
+        "label": "Abort GPU Cache pre-population : Utilities",
+        "sourceType": "mel",
+        "command": "cmdAbortGPUCache",
+        "category": "",
+        "module": "Arnold",
+        "icon": ""
+    }
+}

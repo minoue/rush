@@ -1,0 +1,82 @@
+{
+    "5840930a-76cc-4945-9be8-7ea668e18aeb": {
+        "label": "3D Paint Tool",
+        "sourceType": "mel",
+        "command": "Art3dPaintTool",
+        "category": "",
+        "module": "Texturing",
+        "icon": "art3dPaint.png"
+    },
+    "a8758286-3f04-459a-a98c-ccf90e2913d7": {
+        "label": "3D Paint Tool Options",
+        "sourceType": "mel",
+        "command": "Art3dPaintToolOptions",
+        "category": "",
+        "module": "Texturing",
+        "icon": "art3dPaint.png"
+    },
+    "b3f09137-5947-4c1c-ba16-cf764d7d2f7b": {
+        "label": "Create PSD Network...",
+        "sourceType": "mel",
+        "command": "CreatePSDTextureItem",
+        "category": "",
+        "module": "Texturing",
+        "icon": "createPsdNetwork.png"
+    },
+    "87a93eaa-ae9e-4eb2-9155-3c0f64673cc0": {
+        "label": "Edit PSD Network...",
+        "sourceType": "mel",
+        "command": "EditPSDTextureItem",
+        "category": "",
+        "module": "Texturing",
+        "icon": "editPsdNetwork.png"
+    },
+    "735c93ae-c4e5-4625-9c07-5ff70d909413": {
+        "label": "Update PSD Networks",
+        "sourceType": "mel",
+        "command": "UpdatePSDTextureItem",
+        "category": "",
+        "module": "Texturing",
+        "icon": "updatePsdNetwork.png"
+    },
+    "60f48914-f123-4439-9692-a1e86278af6e": {
+        "label": "Create Texture Reference Object",
+        "sourceType": "mel",
+        "command": "CreateTextureReferenceObject",
+        "category": "",
+        "module": "Texturing",
+        "icon": "createTextRefObj.png"
+    },
+    "b7641e3c-f25f-4df4-869f-28d526bbfb99": {
+        "label": "Delete Texture Reference Object",
+        "sourceType": "mel",
+        "command": "DeleteTextureReferenceObject",
+        "category": "",
+        "module": "Texturing",
+        "icon": "deleteTextRefObj.png"
+    },
+    "50703855-f8dc-48b4-b983-4c674c615806": {
+        "label": "Select Texture Reference Object",
+        "sourceType": "mel",
+        "command": "SelectTextureReferenceObject",
+        "category": "",
+        "module": "Texturing",
+        "icon": "selectTextRefObj.png"
+    },
+    "f42568ca-8b60-4c31-9c5a-3d4d7dc55356": {
+        "label": "NURBS Texture Placement Tool",
+        "sourceType": "mel",
+        "command": "NURBSTexturePlacementTool",
+        "category": "",
+        "module": "Texturing",
+        "icon": "texturePlacement.png"
+    },
+    "25f06c1a-c4c8-4eda-9382-87c50b191eea": {
+        "label": "NURBS Texture Placement Tool Options",
+        "sourceType": "mel",
+        "command": "NURBSTexturePlacementToolOptions",
+        "category": "",
+        "module": "Texturing",
+        "icon": ""
+    }
+}

@@ -1,0 +1,346 @@
+{
+    "7b8614ec-554e-47c3-b3d0-cdc7f16d0d94": {
+        "label": "New Scene",
+        "sourceType": "mel",
+        "command": "NewScene",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "5558be03-aeb6-48b8-b034-406f3e9c5317": {
+        "label": "New Scene Options",
+        "sourceType": "mel",
+        "command": "NewSceneOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "177fe996-fc13-4388-9e49-e29bdc2c03cc": {
+        "label": "Open Scene...",
+        "sourceType": "mel",
+        "command": "OpenScene",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "acf9978c-1ac5-4142-b899-9e04ef9c674f": {
+        "label": "Open Scene... Options",
+        "sourceType": "mel",
+        "command": "OpenSceneOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "a4d11e0a-973a-4aa1-9c46-226ec7e875d6": {
+        "label": "Save Scene",
+        "sourceType": "mel",
+        "command": "SaveScene",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "ed8b6679-082e-4bad-ae77-9d99e64e4d3a": {
+        "label": "Save Scene Options",
+        "sourceType": "mel",
+        "command": "SaveSceneOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "a924b491-a51d-4467-a42a-9e06b25422da": {
+        "label": "Save Scene As...",
+        "sourceType": "mel",
+        "command": "SaveSceneAs",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "c9a6a236-a1da-45fd-a90f-50982679735e": {
+        "label": "Save Scene As... Options",
+        "sourceType": "mel",
+        "command": "SaveSceneAsOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "0e2cfc9b-08ab-456c-b157-0fd90090ae55": {
+        "label": "Increment and Save",
+        "sourceType": "mel",
+        "command": "IncrementAndSave",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "1462a131-aa2d-4b07-af5b-506dd632e67a": {
+        "label": "Archive Scene",
+        "sourceType": "mel",
+        "command": "ArchiveScene",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "beecf91d-f1e9-4ffb-b9aa-ee619e7475ad": {
+        "label": "Archive Scene Options",
+        "sourceType": "mel",
+        "command": "ArchiveSceneOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "3fa9db5e-dd71-49ae-bf6e-eb4a9e14d216": {
+        "label": "Save Preferences",
+        "sourceType": "mel",
+        "command": "SavePreferences",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "560fff3f-942f-40f9-bbfe-eae844ec894b": {
+        "label": "Optimize Scene Size",
+        "sourceType": "mel",
+        "command": "OptimizeScene",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "ff97ed09-ab4c-4059-a991-108d206a03ac": {
+        "label": "Optimize Scene Size Options",
+        "sourceType": "mel",
+        "command": "OptimizeSceneOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "9583062d-3c2f-49de-8acb-d23e4794b449": {
+        "label": "Import...",
+        "sourceType": "mel",
+        "command": "Import",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "5011fbc9-29a8-4ae2-ab63-22c87e394821": {
+        "label": "Import... Options",
+        "sourceType": "mel",
+        "command": "ImportOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "028be33a-ab72-49cd-9b69-a811e6aa4490": {
+        "label": "Export All...",
+        "sourceType": "mel",
+        "command": "Export",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "602fbbdd-e55c-4989-aef3-c827ff01b7fc": {
+        "label": "Export All... Options",
+        "sourceType": "mel",
+        "command": "ExportOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "72cbfd1f-32d5-4a96-8f90-4dc96e6c644b": {
+        "label": "Export Selection...",
+        "sourceType": "mel",
+        "command": "ExportSelection",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "a2cbef58-0cba-42d3-af72-64dc4f8d364f": {
+        "label": "Export Selection... Options",
+        "sourceType": "mel",
+        "command": "ExportSelectionOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "77444b09-b825-4b13-8291-3cf8705a51c1": {
+        "label": "All : Send To Unity",
+        "sourceType": "mel",
+        "command": "SendToUnityAll",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "21d43c87-fdac-4460-ae1b-d1d6e8277c8f": {
+        "label": "Selection : Send To Unity",
+        "sourceType": "mel",
+        "command": "SendToUnitySelection",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "07aa532e-4071-4178-a3c0-40792631fd24": {
+        "label": "Set Unity Project : Send To Unity",
+        "sourceType": "mel",
+        "command": "SendToUnitySetProject",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "c8df32d6-d9d2-4dfd-ad33-4c23d42c26db": {
+        "label": "All : Send To Unreal",
+        "sourceType": "mel",
+        "command": "SendToUnrealAll",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "66e617f1-8295-4b7b-9ba5-da674e4a3fbd": {
+        "label": "Selection : Send To Unreal",
+        "sourceType": "mel",
+        "command": "SendToUnrealSelection",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "42525339-6553-486b-9297-52c3686cb125": {
+        "label": "Set Unreal Project : Send To Unreal",
+        "sourceType": "mel",
+        "command": "SendToUnrealSetProject",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "4bba6ca5-c9c2-4251-98c8-bc1195c94bf6": {
+        "label": "Game Exporter",
+        "sourceType": "mel",
+        "command": "gameFbxExporter",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "0c7259d7-9efe-46d0-90f7-555f90273e79": {
+        "label": "Adobe(R) After Effects(R) Live Link",
+        "sourceType": "mel",
+        "command": "OpenAELiveLink",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "3dcd4cc8-b644-47dc-9a38-b7ce51163e04": {
+        "label": "Export to Offline File...",
+        "sourceType": "mel",
+        "command": "ExportOfflineFile",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "319dadd9-9584-46d5-8a35-55c8f82d6171": {
+        "label": "Export to Offline File... Options",
+        "sourceType": "mel",
+        "command": "ExportOfflineFileOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "cb64aaac-52f5-499d-8da8-26452919b1ab": {
+        "label": "Assign Offline File...",
+        "sourceType": "mel",
+        "command": "AssignOfflineFile",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "a93a1a21-7b03-4838-b8b6-79c3dd81e1fd": {
+        "label": "Assign Offline File... Options",
+        "sourceType": "mel",
+        "command": "AssignOfflineFileOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "41aa7ecb-afdf-4beb-ae64-dfdcb0164670": {
+        "label": "Export Animation... : ATOM",
+        "sourceType": "mel",
+        "command": "ExportAnim",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "4b606b36-5662-435d-80e1-0fa6786f3521": {
+        "label": "Import Animation... : ATOM",
+        "sourceType": "mel",
+        "command": "ImportAnim",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "49a467d0-9814-42c6-ab61-714c40aeff2c": {
+        "label": "Create ATOM Template... : ATOM",
+        "sourceType": "mel",
+        "command": "ATOMTemplate",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "d6c3d55e-825e-4339-b924-9bd98261052b": {
+        "label": "Create Reference...",
+        "sourceType": "mel",
+        "command": "CreateReference",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "5c2adb16-e343-44c1-8cfd-6b0858fa6d6f": {
+        "label": "Create Reference... Options",
+        "sourceType": "mel",
+        "command": "CreateReferenceOptions",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "c3eb94eb-521c-4025-9b0d-213b5a85753a": {
+        "label": "Reference Editor",
+        "sourceType": "mel",
+        "command": "ReferenceEditor",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "172266c0-e476-493d-b63f-60b7a679846d": {
+        "label": "View Image...",
+        "sourceType": "mel",
+        "command": "ViewImage",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "ab1bda56-2ba6-4c46-9ac6-d74a4b0f0d22": {
+        "label": "View Sequence...",
+        "sourceType": "mel",
+        "command": "ViewSequence",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "5fd05b71-f9b3-41de-920f-69062bcf9b45": {
+        "label": "Project Window",
+        "sourceType": "mel",
+        "command": "ProjectWindow",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "1fee39ec-f441-4f91-bc29-7b53b4d525a6": {
+        "label": "Set Project...",
+        "sourceType": "mel",
+        "command": "SetProject",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    },
+    "e92000f1-e2c4-46da-bb2c-e8177199951f": {
+        "label": "Quit",
+        "sourceType": "mel",
+        "command": "Quit",
+        "category": "",
+        "module": "File",
+        "icon": ""
+    }
+}

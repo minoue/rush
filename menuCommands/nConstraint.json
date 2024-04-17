@@ -1,0 +1,1234 @@
+{
+    "019ba533-c7c8-4d15-b9f5-dbca91091613": {
+        "label": "Component",
+        "sourceType": "mel",
+        "command": "nConstraintComponent",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintComponent.png"
+    },
+    "fbc02840-4a96-4afe-b601-e20a8efda7d2": {
+        "label": "Component Options",
+        "sourceType": "mel",
+        "command": "nConstraintComponentOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "3c386b0f-795b-4bc2-8ac6-be7756fc4a60": {
+        "label": "Component to Component",
+        "sourceType": "mel",
+        "command": "nConstraintComponentToComponent",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintComponent.png"
+    },
+    "b1e5a78f-0f6f-4f4d-8239-761a0d39e903": {
+        "label": "Component to Component Options",
+        "sourceType": "mel",
+        "command": "nConstraintComponentToComponentOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "0824f8ae-6bbb-41ab-8936-3b2883c45dbf": {
+        "label": "Force Field",
+        "sourceType": "mel",
+        "command": "nConstraintForceField",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintForceField.png"
+    },
+    "0491b8c9-878b-4946-aa63-504b2e6e4545": {
+        "label": "Force Field Options",
+        "sourceType": "mel",
+        "command": "nConstraintForceFieldOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "88033a90-8c36-4887-8a68-76260838c390": {
+        "label": "Point to Surface",
+        "sourceType": "mel",
+        "command": "nConstraintPointToSurface",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintPointoSurface.png"
+    },
+    "4251e567-d602-46d2-a379-a05945bc02c8": {
+        "label": "Point to Surface Options",
+        "sourceType": "mel",
+        "command": "nConstraintPointToSurfaceOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "18a415e3-ccf2-4ebb-acdc-9114c39d82c0": {
+        "label": "Slide on Surface",
+        "sourceType": "mel",
+        "command": "nConstraintSlideOnSurface",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintSlideonSurface.png"
+    },
+    "48cf3cbe-1ce5-4221-8476-80f46ca4afbf": {
+        "label": "Slide on Surface Options",
+        "sourceType": "mel",
+        "command": "nConstraintSlideOnSurfaceOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "6f133422-7f73-4bb5-b2f8-423f9fb9c704": {
+        "label": "Tearable Surface",
+        "sourceType": "mel",
+        "command": "nConstraintTearableSurface",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintTearable.png"
+    },
+    "91ee9304-285b-466d-a972-608adc2f2755": {
+        "label": "Tearable Surface Options",
+        "sourceType": "mel",
+        "command": "nConstraintTearableSurfaceOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "a5ff11e5-98b0-4ee0-b104-8193294b68e7": {
+        "label": "Transform Constraint",
+        "sourceType": "mel",
+        "command": "nConstraintTransform",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintTransform.png"
+    },
+    "7552d880-0f68-4b5e-beff-fa7ff5934d0c": {
+        "label": "Transform Constraint Options",
+        "sourceType": "mel",
+        "command": "nConstraintTransformOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "8f1bb9e8-1d71-4f71-93f9-8863d99fae97": {
+        "label": "Attract to Matching Mesh",
+        "sourceType": "mel",
+        "command": "nConstraintAttractToMatch",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothMatchingMesh.png"
+    },
+    "4a63e9cd-3b05-479f-9891-8c6ab7bff634": {
+        "label": "Attract to Matching Mesh Options",
+        "sourceType": "mel",
+        "command": "nConstraintAttractToMatchOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "b6dd72d0-5516-489c-aed9-dcc74db11678": {
+        "label": "Disable Collision",
+        "sourceType": "mel",
+        "command": "nConstraintDisableCollision",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintDisableCollision.png"
+    },
+    "19de4dfb-f402-4b26-9878-8b795b7f5851": {
+        "label": "Disable Collision Options",
+        "sourceType": "mel",
+        "command": "nConstraintDisableCollisionOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "5d7e6e0a-beb4-4d73-a08a-c17c5b777fb8": {
+        "label": "Exclude Collide Pairs",
+        "sourceType": "mel",
+        "command": "nConstraintCollisionExclusion",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintExcludeCollision.png"
+    },
+    "035b1ab8-e348-4f80-80dc-056498b08bbc": {
+        "label": "Exclude Collide Pairs Options",
+        "sourceType": "mel",
+        "command": "nConstraintCollisionExclusionOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "8da8b6b0-6b18-415d-8bee-92a66d758621": {
+        "label": "Remove Dynamic Constraint",
+        "sourceType": "mel",
+        "command": "dynamicConstraintRemove",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintRemove.png"
+    },
+    "956ce40c-3447-4b49-ae94-0794d7a4570e": {
+        "label": "Weld Adjacent Borders",
+        "sourceType": "mel",
+        "command": "nConstraintWeldBorders",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintWeldBorders.png"
+    },
+    "b541ce84-025f-442f-9628-63ca8aca7ba9": {
+        "label": "Weld Adjacent Borders Options",
+        "sourceType": "mel",
+        "command": "nConstraintWeldBordersOptions",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "e722ffd1-c901-4e52-8c3f-518c4aad2896": {
+        "label": "nConstraint Membership Tool",
+        "sourceType": "mel",
+        "command": "nConstraintConstraintMembershipTool",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintMembership.png"
+    },
+    "41670d2b-c3e9-4550-aaca-6c76f9b9ab01": {
+        "label": "Add Members",
+        "sourceType": "mel",
+        "command": "nConstraintAddMembers",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintAddMembers.png"
+    },
+    "e715c15c-4e8b-4b35-9355-510b7fd5d566": {
+        "label": "Remove Members",
+        "sourceType": "mel",
+        "command": "nConstraintRemoveMembers",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintRemoveMembers.png"
+    },
+    "6d0b973a-73dc-4800-b90c-21af0a43370e": {
+        "label": "Replace Members",
+        "sourceType": "mel",
+        "command": "nConstraintReplaceMembers",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintReplaceMembers.png"
+    },
+    "8b9faed6-4260-45c0-8a7b-3d39fec3e89a": {
+        "label": "Select Members",
+        "sourceType": "mel",
+        "command": "nConstraintSelectMembers",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nConstraintSelectMembers.png"
+    },
+    "5d56af39-df6d-4a73-92d4-a94cbe907369": {
+        "label": "Bounce : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bounce\",\"\",1); artAttrNClothToolScript 4 bounce",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "cf599d78-4755-41e2-b5a2-810f923b3907": {
+        "label": "Bounce Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bounce\",\"\",1); artAttrNClothToolScript 3 bounce",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "f9c6b9ba-c759-4d01-ab28-982cac520492": {
+        "label": "Collide Strength : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"collideStrength\",\"\",1); artAttrNClothToolScript 4 collideStrength",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "8f4238c7-b6e9-48cd-b07c-3927959821ec": {
+        "label": "Collide Strength Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"collideStrength\",\"\",1); artAttrNClothToolScript 3 collideStrength",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "eaea2e34-6131-4e6a-a3d9-8510874f00a1": {
+        "label": "Field Magnitude : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"fieldMagnitude\",\"\",1); artAttrNClothToolScript 4 fieldMagnitude",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "43d39edc-06b4-4867-a4ba-e61d56f7472b": {
+        "label": "Field Magnitude Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"fieldMagnitude\",\"\",1); artAttrNClothToolScript 3 fieldMagnitude",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "e1b0c9d8-989e-4636-badd-b5444ed58610": {
+        "label": "Friction : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"friction\",\"\",1); artAttrNClothToolScript 4 friction",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "d6f5bad5-d50d-4acb-a859-8a431b57e608": {
+        "label": "Friction Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"friction\",\"\",1); artAttrNClothToolScript 3 friction",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "dc6c2dc2-b97d-4587-ac29-3772b534f569": {
+        "label": "Stickiness : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stickiness\",\"\",1); artAttrNClothToolScript 4 stickiness",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "9e3d4ec6-a796-4668-b16e-7bf729e04093": {
+        "label": "Stickiness Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stickiness\",\"\",1); artAttrNClothToolScript 3 stickiness",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "5c3cb5b6-ce7f-47eb-849f-484bcbabf0b7": {
+        "label": "Thickness : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"thickness\",\"\",1); artAttrNClothToolScript 4 thickness",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "9c76d72c-bff5-4a50-bf20-cc181b0e5f52": {
+        "label": "Thickness Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"thickness\",\"\",1); artAttrNClothToolScript 3 thickness",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "8178916e-dbe5-449a-8eed-7a6fe42d3ae9": {
+        "label": "Tangential Drag : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"tangentialDrag\",\"\",1); artAttrNClothToolScript 4 tangentialDrag",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "b75249aa-d9e1-4088-b1a8-85b6db98a91b": {
+        "label": "Tangential Drag Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"tangentialDrag\",\"\",1); artAttrNClothToolScript 3 tangentialDrag",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "3815e243-80b8-4217-9044-7ddebd14d43d": {
+        "label": "Bend : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bend\",\"\",1); artAttrNClothToolScript 4 bend",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "c64af6f7-23f7-4e35-b0d6-3d1e4d22236d": {
+        "label": "Bend Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bend\",\"\",1); artAttrNClothToolScript 3 bend",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "5655da60-419f-4f59-9733-4fcca60e46f7": {
+        "label": "Bend Angle Dropoff : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bendAngleDropoff\",\"\",1); artAttrNClothToolScript 4 bendAngleDropoff",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "38c72f40-4bd0-497a-96f1-fd4cd6fee5f3": {
+        "label": "Bend Angle Dropoff Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bendAngleDropoff\",\"\",1); artAttrNClothToolScript 3 bendAngleDropoff",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "7fd351f9-082d-4f98-ba8d-137fdf8ba45d": {
+        "label": "Compression : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"compression\",\"\",1); artAttrNClothToolScript 4 compression",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "717d5231-e23c-4e87-b06f-aaf8ddb9603c": {
+        "label": "Compression Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"compression\",\"\",1); artAttrNClothToolScript 3 compression",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "e994475e-5144-44ee-8b09-685f868976cc": {
+        "label": "Damp : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"damp\",\"\",1); artAttrNClothToolScript 4 damp",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "28b4caa5-8614-4152-872c-d9887ed139b7": {
+        "label": "Damp Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"damp\",\"\",1); artAttrNClothToolScript 3 damp",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "8a227c98-37ab-434c-8d0f-f96a5ee0bfdb": {
+        "label": "Deformability : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"deform\",\"\",1); artAttrNClothToolScript 4 deform",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "9aefadc3-7d0d-4f53-a69d-89fbc648bf93": {
+        "label": "Deformability Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"deform\",\"\",1); artAttrNClothToolScript 3 deform",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "13817cca-b31a-428a-b980-ef8222a3f370": {
+        "label": "Drag : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"drag\",\"\",1); artAttrNClothToolScript 4 drag",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "530d3b10-4974-4141-a3b6-c2e89a7b110c": {
+        "label": "Drag Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"drag\",\"\",1); artAttrNClothToolScript 3 drag",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "c51010b2-5df1-4f53-b929-62e9db566b3e": {
+        "label": "Input Attract : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"inputAttract\",\"\",1); artAttrNClothToolScript 4 inputAttract",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "ec70e19b-2b75-44d0-bb55-8595cbf93f4f": {
+        "label": "Input Attract Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"inputAttract\",\"\",1); artAttrNClothToolScript 3 inputAttract",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "7bf23342-90cf-46bd-9673-5847b45cf6a4": {
+        "label": "Lift : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"lift\",\"\",1); artAttrNClothToolScript 4 lift",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "58cf8deb-7506-4c41-81db-43dac146d6a0": {
+        "label": "Lift Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"lift\",\"\",1); artAttrNClothToolScript 3 lift",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "2f905db4-635f-4859-b289-9e7633af047a": {
+        "label": "Mass : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"mass\",\"\",1); artAttrNClothToolScript 4 mass",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "3c7d9e78-a61d-47d5-91be-e2f05a7000c1": {
+        "label": "Mass Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"mass\",\"\",1); artAttrNClothToolScript 3 mass",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "e0e0f66b-b9bd-4336-9317-bdf0413cb081": {
+        "label": "Rest Length Scale : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restLengthScale\",\"\",1); artAttrNClothToolScript 4 restLengthScale",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "16ce0e0f-f8f0-4a98-9ad0-da729976373c": {
+        "label": "Rest Length Scale Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restLengthScale\",\"\",1); artAttrNClothToolScript 3 restLengthScale",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "7ddd2883-f9c1-4a5b-8562-65da7194fce3": {
+        "label": "Restitution Angle : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restitutionAngle\",\"\",1); artAttrNClothToolScript 4 restitutionAngle",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "bec27aba-122e-4bb4-aa06-30986cc77222": {
+        "label": "Restitution Angle Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restitutionAngle\",\"\",1); artAttrNClothToolScript 3 restitutionAngle",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "a65c5e3c-f914-46dd-8019-b4d944732d7c": {
+        "label": "Rigidity : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"rigidity\",\"\",1); artAttrNClothToolScript 4 rigidity",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "d412fb8e-55bd-4fa0-8bb2-a68c14316f9d": {
+        "label": "Rigidity Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"rigidity\",\"\",1); artAttrNClothToolScript 3 rigidity",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "4bea1cf0-cdfd-4e4a-bd5d-cffe9f6e27db": {
+        "label": "Stretch : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stretch\",\"\",1); artAttrNClothToolScript 4 stretch",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "5af316f1-f22a-420e-97d6-20903ea32785": {
+        "label": "Stretch Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stretch\",\"\",1); artAttrNClothToolScript 3 stretch",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "400c6626-6351-4c58-9577-431961ef01cc": {
+        "label": "Wrinkle : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"wrinkle\",\"\",1); artAttrNClothToolScript 4 wrinkle",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "1bc565cc-9363-4674-abe2-edabe4a3d022": {
+        "label": "Wrinkle Options : Paint Properties by Vertex Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"wrinkle\",\"\",1); artAttrNClothToolScript 3 wrinkle",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintPerVertex.png"
+    },
+    "65aae80d-b44e-4697-83ed-b95ff8841915": {
+        "label": "Bounce : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bounce\",\"\",2); paintNClothTexture bounceMap \"Bounce\" 1 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "86916e38-6f75-418d-8b7a-fb0085eb5b63": {
+        "label": "Bounce Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bounce\",\"\",2); paintNClothTexture bounceMap \"Bounce\" 1 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "5998e11a-7750-4090-8361-da8e12e49dd8": {
+        "label": "Collide Strength : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"collideStrength\",\"\",2); paintNClothTexture collideStrengthMap \"Collide Strength\" 1 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "438adf2c-9f76-46b7-9605-e3d610c1e36a": {
+        "label": "Collide Strength Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"collideStrength\",\"\",2); paintNClothTexture collideStrengthMap \"Collide Strength\" 1 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "4d72faf8-0108-4e8d-a6b9-7ff140d3f3f7": {
+        "label": "Field Magnitude : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"fieldMagnitude\",\"\",2); paintNClothTexture fieldMagnitudeMap \"Field Magnitude\" 1 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "ed04c937-cef6-416e-8bc8-8376f0d0c5d5": {
+        "label": "Field Magnitude Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"fieldMagnitude\",\"\",2); paintNClothTexture fieldMagnitudeMap \"Field Magnitude\" 1 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "88073fd2-2c3e-4e22-80da-7663c663d949": {
+        "label": "Friction : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"friction\",\"\",2); paintNClothTexture frictionMap \"Friction\" 1 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "44c6f26c-9faf-4f60-a03f-96dc9a1fb63f": {
+        "label": "Friction Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"friction\",\"\",2); paintNClothTexture frictionMap \"Friction\" 1 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "cbf4b1c0-db50-4195-a709-1c4952f09c78": {
+        "label": "Stickiness : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stickiness\",\"\",2); paintNClothTexture stickinessMap \"Stickiness\" 1 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "286c46d7-153d-471d-8f47-cdfb14202bc0": {
+        "label": "Stickiness Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stickiness\",\"\",2); paintNClothTexture stickinessMap \"Stickiness\" 1 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "c8be890d-3318-4e53-832d-ce71aafff2ba": {
+        "label": "Thickness : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"thickness\",\"\",2); paintNClothTexture thicknessMap \"Thickness\" 1 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "f1e71dd1-6640-48b6-b1f7-f9629e93297d": {
+        "label": "Thickness Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"thickness\",\"\",2); paintNClothTexture thicknessMap \"Thickness\" 1 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "8b77421f-9cbb-469a-9d2b-8d2eaae91485": {
+        "label": "Tangential Drag : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"tangentialDrag\",\"\",2); paintNClothTexture tangentialDragMap \"Tangential Drag\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "3bc0cae7-2842-40ab-bfdb-812e55c3f4cf": {
+        "label": "Tangential Drag Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"tangentialDrag\",\"\",2); paintNClothTexture tangentialDragMap \"Tangential Drag\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "59e9b674-24db-41d7-9d13-4854bf48bfdd": {
+        "label": "Bend : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bend\",\"\",2); paintNClothTexture bendMap \"Bend\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "c49b2694-b020-4605-a42c-6c8493ca87ce": {
+        "label": "Bend Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bend\",\"\",2); paintNClothTexture bendMap \"Bend\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "d27125d6-640d-4942-8b07-d7aa0cbb8ab9": {
+        "label": "Bend Angle Dropoff : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bendAngleDropoff\",\"\",2); paintNClothTexture bendAngleDropoffMap \"Bend Angle Dropoff\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "d63d2cfb-517b-4a07-9de1-82b91cba8d3b": {
+        "label": "Bend Angle Dropoff Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"bendAngleDropoff\",\"\",2); paintNClothTexture bendAngleDropoffMap \"Bend Angle Dropoff\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "44c50cb5-d697-472e-b40b-341e27bcb5f3": {
+        "label": "Compression : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"compression\",\"\",2); paintNClothTexture compressionMap \"Compression\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "80686c74-fc57-4065-84e4-41be94a0e8ef": {
+        "label": "Compression Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"compression\",\"\",2); paintNClothTexture compressionMap \"Compression\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "74c7016f-db42-46e3-9618-fcf02ab10fc1": {
+        "label": "Damp : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"damp\",\"\",2); paintNClothTexture dampMap \"Damp\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "5320b11d-ad11-4714-a135-60f80a6b7f8d": {
+        "label": "Damp Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"damp\",\"\",2); paintNClothTexture dampMap \"Damp\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "0c97f2d6-25ed-4e34-968b-0c339cc6daba": {
+        "label": "Deformability : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"deform\",\"\",2); paintNClothTexture deformMap \"Deformability\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "eda63406-1e90-413f-993e-50fe1ec9663d": {
+        "label": "Deformability Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"deform\",\"\",2); paintNClothTexture deformMap \"Deformability\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "66d31a58-0a03-4967-a118-12263fa4abe0": {
+        "label": "Drag : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"drag\",\"\",2); paintNClothTexture dragMap \"Drag\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "e8fad9da-46ea-4f01-a807-c2c9ce057724": {
+        "label": "Drag Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"drag\",\"\",2); paintNClothTexture dragMap \"Drag\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "f5821efb-45ba-429c-8e98-9970b1c5f813": {
+        "label": "Input Attract : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"inputAttract\",\"\",2); paintNClothTexture inputAttractMap \"Input Attract\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "9bf35a64-3a0b-46c6-88fa-2df332d93910": {
+        "label": "Input Attract Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"inputAttract\",\"\",2); paintNClothTexture inputAttractMap \"Input Attract\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "e0e222fe-0dca-4a0d-aec8-ea4078f70264": {
+        "label": "Lift : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"lift\",\"\",2); paintNClothTexture liftMap \"Lift\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "fbd6bb84-d127-49ed-b9bd-fa4fae0de8c7": {
+        "label": "Lift Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"lift\",\"\",2); paintNClothTexture liftMap \"Lift\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "7f6f63a6-fc07-4280-adfb-d0d769629eb9": {
+        "label": "Mass : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"mass\",\"\",2); paintNClothTexture massMap \"Mass\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "e4b1d38f-d18a-4603-bd36-be3a7c01e076": {
+        "label": "Mass Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"mass\",\"\",2); paintNClothTexture massMap \"Mass\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "f0845c10-8700-4eb3-8893-d0d9f98429c6": {
+        "label": "Rest Length Scale : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restLengthScale\",\"\",2); paintNClothTexture restLengthScaleMap \"Rest Length Scale\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "197749ce-7229-46b2-9d9b-21e00a4b02e8": {
+        "label": "Rest Length Scale Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restLengthScale\",\"\",2); paintNClothTexture restLengthScaleMap \"Rest Length Scale\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "31edae6a-0995-4fd3-b6ce-158a6ba68ab3": {
+        "label": "Restitution Angle : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restitutionAngle\",\"\",2); paintNClothTexture restitutionAngleMap \"Restitution Angle\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "5e9a78cc-2ac9-45cc-aa13-ef93c6565c22": {
+        "label": "Restitution Angle Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"restitutionAngle\",\"\",2); paintNClothTexture restitutionAngleMap \"Restitution Angle\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "bfd30a81-8d5f-4222-9d01-7fd420860638": {
+        "label": "Rigidity : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"rigidity\",\"\",2); paintNClothTexture rigidityMap \"Rigidity\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "841155ea-e047-45d3-9662-341cd74f7b90": {
+        "label": "Rigidity Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"rigidity\",\"\",2); paintNClothTexture rigidityMap \"Rigidity\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "a480e366-4db1-4118-a7d3-56a867223db1": {
+        "label": "Stretch : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stretch\",\"\",2); paintNClothTexture stretchMap \"Stretch\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "c0419eb1-ba5a-4b8d-9699-06bd0473a85d": {
+        "label": "Stretch Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"stretch\",\"\",2); paintNClothTexture stretchMap \"Stretch\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "e9bccd64-2336-4fbc-8b9f-bb3d2c46da0b": {
+        "label": "Wrinkle : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"wrinkle\",\"\",2); paintNClothTexture wrinkleMap \"Wrinkle\" 0 0\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "772cea0e-7017-4920-894a-e4d3002b4247": {
+        "label": "Wrinkle Options : Paint Properties by Texture Map",
+        "sourceType": "mel",
+        "command": "setNClothMapType(\"wrinkle\",\"\",2); paintNClothTexture wrinkleMap \"Wrinkle\" 0 1\"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": "nClothPaintMap.png"
+    },
+    "31003aef-889d-4a75-81b8-bf9984865176": {
+        "label": "Bounce : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap bounceMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "42ce3f96-6b3b-4d17-a273-4b61aff7cbee": {
+        "label": "Collide Strength : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap collideStrengthMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "f9ad5da4-4b73-4325-98bd-cbd1434d239c": {
+        "label": "Field Magnitude : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap fieldMagnitudeMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "6fe13b17-7343-4ab7-9bfc-4a87fdc079a3": {
+        "label": "Friction : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap frictionMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "17c37d35-f465-4f07-a9b9-8250a574fe13": {
+        "label": "Stickiness : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap stickinessMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "cfed1f8f-8db9-4510-a2ac-7b539729b8c7": {
+        "label": "Thickness : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap thicknessMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "ddc975eb-3ee5-44d0-83f5-43b1c6651561": {
+        "label": "Tangential Drag : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap tangentialDragMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "e23ac3b6-e9f3-4c20-89a1-39ad639890ce": {
+        "label": "Bend : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap bendMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "0fcf4e17-f5c4-4cc4-9dab-b89b1f0e0b38": {
+        "label": "Bend Angle Dropoff : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap bendAngleDropoffMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "464132fa-258a-48de-9b6a-67359858f7a3": {
+        "label": "Compression : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap compressionMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "2437bea9-e265-400e-b292-aba627faea8f": {
+        "label": "Damp : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap dampMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "13bcf41f-85d0-4406-9131-ac83412194a3": {
+        "label": "Deformability : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap deformMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "198790c8-d14e-43af-9971-999effd0ca94": {
+        "label": "Drag : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap dragMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "2b8377bd-ffa1-40ff-a3a9-584cbb88f288": {
+        "label": "Input Attract : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap inputAttractMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "0b57609c-d2c4-44d5-bcd8-dff2dfd049ec": {
+        "label": "Lift : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap liftMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "05362a84-516e-490b-aeef-aa68d1766326": {
+        "label": "Mass : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap massMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "ddb37262-3536-4098-87c6-f591f91ab500": {
+        "label": "Rest Length Scale : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap restLengthScaleMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "c00b03cb-d7d0-4003-a181-ad2668972453": {
+        "label": "Restitution Angle : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap restitutionAngleMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "86d9fe93-edb4-43a8-847a-6379984b0dc5": {
+        "label": "Rigidity : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap rigidityMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "a74bf48b-dbeb-4351-8469-d5c296011086": {
+        "label": "Stretch : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap stretchMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "92208618-000b-472f-b9e4-2f5d7b1015cc": {
+        "label": "Wrinkle : Convert Texture to Vertex Map",
+        "sourceType": "mel",
+        "command": "nClothTextureMapToVtxMap wrinkleMap \"\"",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "a8f46bc3-5eb8-465b-8a30-5052c814c210": {
+        "label": "Bounce : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"bounceMap\", \"bounce\", \"1\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "33ba3c21-50a3-4fae-a5ee-8963a8e2540b": {
+        "label": "Collide Strength : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"collideStrengthMap\", \"collideStrength\", \"1\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "3ab62eed-7c70-4b67-8fe9-bfe96aa99d56": {
+        "label": "Field Magnitude : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"fieldMagnitudeMap\", \"fieldMagnitude\", \"1\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "65a164a9-cc0e-4cbc-a806-d8e1e7c2d326": {
+        "label": "Friction : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"frictionMap\", \"friction\", \"1\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "661f9803-ebec-4dc3-aa77-2876889d8494": {
+        "label": "Stickiness : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"stickinessMap\", \"stickiness\", \"1\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "15e20f05-ac95-4141-ac8c-1e61df56c4ff": {
+        "label": "Thickness : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"thicknessMap\", \"thickness\", \"1\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "1190f815-80d8-4f2b-8738-703525fe3402": {
+        "label": "Tangential Drag : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"tangentialDragMap\", \"tangentialDrag\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "f8ad678b-0b18-4ef5-b00f-598077fa3f72": {
+        "label": "Bend : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"bendMap\", \"bend\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "37aea02d-d054-4197-bc29-eb53297fa5e3": {
+        "label": "Bend Angle Dropoff : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"bendAngleDropoffMap\", \"bendAngleDropoff\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "7d770351-7f7b-4bd8-975d-e7e478e3e923": {
+        "label": "Compression : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"compressionMap\", \"compression\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "4f157f83-38ca-499c-99ea-6c15efd06d33": {
+        "label": "Damp : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"dampMap\", \"damp\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "453353a4-666b-42c2-8944-780037895997": {
+        "label": "Deformability : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"deformMap\", \"deform\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "128679dc-727b-4d19-9b5d-74a54da128f9": {
+        "label": "Drag : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"dragMap\", \"drag\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "8e6012d7-5d54-4923-bc1e-d2d4330e3c2a": {
+        "label": "Input Attract : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"inputAttractMap\", \"inputAttract\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "587fe690-5d18-4e45-af60-1b2890a8b168": {
+        "label": "Lift : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"liftMap\", \"lift\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "4c17076f-e193-429c-8950-8706581f5a43": {
+        "label": "Mass : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"massMap\", \"mass\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "ff1e26e4-8fdc-480d-8b73-3199980073c8": {
+        "label": "Rest Length Scale : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"restLengthScaleMap\", \"restLengthScale\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "2fee715c-9449-4d82-9818-a6b717d2dfe6": {
+        "label": "Restitution Angle : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"restitutionAngleMap\", \"restitutionAngle\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "edce249f-231f-45f1-a745-bf638cce39ec": {
+        "label": "Rigidity : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"rigidityMap\", \"rigidity\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "569c4925-ec2b-4ce9-b411-ec0036bbbeb2": {
+        "label": "Stretch : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"stretchMap\", \"stretch\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    },
+    "15919122-c086-441e-83b8-9403255017f1": {
+        "label": "Wrinkle : Convert Vertex to Texture Map",
+        "sourceType": "mel",
+        "command": "nClothVtxMapToTextureMap 1 { \"wrinkleMap\", \"wrinkle\", \"0\", \"\" }",
+        "category": "",
+        "module": "nConstraint",
+        "icon": ""
+    }
+}

@@ -1,0 +1,1562 @@
+{
+    "7cfc6554-ca5d-4f87-bc89-7c2c76fa1c04": {
+        "label": "Grid",
+        "sourceType": "mel",
+        "command": "ToggleGrid",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "40e48b73-6f43-4d85-9efd-1c1b526dfa69": {
+        "label": "Grid Options",
+        "sourceType": "mel",
+        "command": "GridOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a3f18cfd-3e35-4566-aa1d-aae4f14a2828": {
+        "label": "Animation Details : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleAnimationDetails",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9b0d49f7-387b-4795-bc21-4c6d41754c3e": {
+        "label": "Cache : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleCacheVisibility",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "57125cfb-9be0-4052-8c41-f5c329a5442f": {
+        "label": "Camera Names : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleCameraNames",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6fe0e6f3-3702-4166-8895-637780cf2189": {
+        "label": "Caps Lock : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleCapsLockDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7886ed6c-05f5-4811-ae8b-e26de255f278": {
+        "label": "Current Asset : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleCurrentContainerHud",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2ccada49-609c-4a20-913e-72c8b830ddd8": {
+        "label": "Current Frame : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleCurrentFrame",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5f3073ac-b510-4e27-b171-8f8e6e80fc25": {
+        "label": "Evaluation : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleEvaluationManagerVisibility",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "09321c53-31aa-459b-a277-9c278c63dca1": {
+        "label": "Focal Length : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleFocalLength",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "85513ae9-f066-46d6-99f9-d7dfa94d5ed3": {
+        "label": "Frame Rate : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleFrameRate",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "3fe58486-6487-4672-b16e-8465d31aed9b": {
+        "label": "HIK Details : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleHikDetails",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "df6d0391-772d-42f0-9301-8bfa0476ee9e": {
+        "label": "Material Loading Details : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleMaterialLoadingDetailsVisibility",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "acf0456e-a3a1-46e4-8ea2-bb74034918ce": {
+        "label": "Object Details : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleObjectDetails",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "595fc1c3-79ee-4c88-8236-5d4773b6e30e": {
+        "label": "Origin Axis : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleOriginAxis",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ab8b24f0-d240-4298-9a23-b29e0cb9db76": {
+        "label": "Particle Count : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleParticleCount",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c7299fa1-0b32-448c-80fa-a50fa8ec7117": {
+        "label": "Poly Count : Heads Up Display",
+        "sourceType": "mel",
+        "command": "TogglePolyCount",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "382a3ab0-5bc3-4853-aef0-b76229da4e26": {
+        "label": "Poly Count Options : Heads Up Display",
+        "sourceType": "mel",
+        "command": "performPolyCountOptions 1",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "eef74f71-5238-4d0f-b46e-0c7a470dea7a": {
+        "label": "Scene Timecode : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleSceneTimecode",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1e1410ba-4427-43bf-ad57-73f4ac66a080": {
+        "label": "Select Details : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleSelectDetails",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "31cc00a2-a4dd-4049-acec-377562270702": {
+        "label": "Symmetry : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleSymmetryDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1de0a08b-1758-4e65-9229-4b2f8d36f5bf": {
+        "label": "View Axis : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleViewAxis",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5a8019d3-244f-4ece-af21-4076755dc9e6": {
+        "label": "ViewCube : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleViewCube",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d31aa115-d362-4614-b1fc-4d710ef02112": {
+        "label": "Viewport Renderer : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleViewportRenderer",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8c0efe40-8ed8-4a7b-a0af-352370cc18b7": {
+        "label": "XGen Info : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleXGenDisplayHUD",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "10efebdb-5da0-483b-a8ba-ce76cec7c793": {
+        "label": "In-view Messages : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleInViewMessage",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "57c97855-4647-485a-8b14-13662d5e0cc6": {
+        "label": "In-View Editors : Heads Up Display",
+        "sourceType": "mel",
+        "command": "ToggleInViewEditor",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d7168ce8-5f95-4517-a130-c5b42800f68e": {
+        "label": "Hide Selection : Hide",
+        "sourceType": "mel",
+        "command": "HideSelectedObjects",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d8fa3a51-2e87-420b-9bc0-6a50fdb8d001": {
+        "label": "Hide Unselected Objects : Hide",
+        "sourceType": "mel",
+        "command": "HideUnselectedObjects",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1ef3e613-a930-422b-8a10-f25c8542a726": {
+        "label": "Hide Unselected CVs : Hide",
+        "sourceType": "mel",
+        "command": "HideUnselectedCVs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6db5f250-0778-475c-b722-0337376620c8": {
+        "label": "All : Hide",
+        "sourceType": "mel",
+        "command": "HideAll",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ad57b48f-f203-4bf4-bf52-ea12afd5b418": {
+        "label": "Hide Controllers : Hide",
+        "sourceType": "mel",
+        "command": "HideControllers",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ea426816-9130-4ea2-af37-5ee40aa9f34b": {
+        "label": "All : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "48b744db-eaf6-48a2-836a-52a94c0e105a": {
+        "label": "NURBS Surfaces : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideNURBSSurfaces",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a8bbe262-7e85-446e-b251-9d7254314d68": {
+        "label": "NURBS Curves : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideNURBSCurves",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "27ad2631-77c5-41c7-b3f4-e77ff86a6c59": {
+        "label": "Polygon Surfaces : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HidePolygonSurfaces",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "562c63c6-25d4-40db-b7a1-9a3d7a4f72d9": {
+        "label": "Deforming Geometry : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideDeformingGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "bb7f9a8b-a168-4a91-a0da-eccdcc6a5766": {
+        "label": "Strokes : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideStrokes",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9a5a1245-f0d4-4b45-8d5f-98ff81fe80e2": {
+        "label": "Stroke Path Curves : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideStrokePathCurves",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "50e88bf2-8d07-41ad-887d-1a314cb67040": {
+        "label": "Stroke Control Curves : Hide Geometry",
+        "sourceType": "mel",
+        "command": "HideStrokeControlCurves",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2713ad1b-a484-40e6-bb43-9e94948997fa": {
+        "label": "All : Hide Kinematics",
+        "sourceType": "mel",
+        "command": "HideKinematics",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "af7ed594-b1f8-4cd6-ab22-ad7d44bcf0c2": {
+        "label": "Joints : Hide Kinematics",
+        "sourceType": "mel",
+        "command": "HideJoints",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2bf52187-806c-421b-86c2-b8ba2516a59a": {
+        "label": "IK Handles : Hide Kinematics",
+        "sourceType": "mel",
+        "command": "HideIKHandles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "e85c5454-f5ba-44de-be57-2019760e6996": {
+        "label": "All : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideDeformers",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8d832d63-75c6-485e-8626-9a0ef1ddb733": {
+        "label": "Lattices : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideLattices",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "46b2fb69-b704-4569-8e71-146b2d3b2b42": {
+        "label": "Sculpt Objects : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideSculptObjects",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7ca380f0-2da3-4d54-bf4d-60ecf8aacea7": {
+        "label": "Clusters : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideClusters",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "09889a1d-7b30-4ece-acf5-8743492de4a7": {
+        "label": "Nonlinears : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideNonlinears",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c5339908-5efd-4c65-9f1b-ffb81767fdda": {
+        "label": "Wrap Influences : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideWrapInfluences",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1b1e618a-ce29-4a4a-b3bb-6b998a3087e6": {
+        "label": "Smooth Skin Influences : Hide Deformers",
+        "sourceType": "mel",
+        "command": "HideSmoothSkinInfluences",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "b8491fde-7f7b-46f0-bc6b-9b6fc64c9ce3": {
+        "label": "Lights : Hide",
+        "sourceType": "mel",
+        "command": "HideLights",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7178d34e-4caf-4875-b714-fe28dd56535a": {
+        "label": "Cameras : Hide",
+        "sourceType": "mel",
+        "command": "HideCameras",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c900ebb4-0b16-44f3-80c4-03b2683d0054": {
+        "label": "Texture Placements : Hide",
+        "sourceType": "mel",
+        "command": "HideTexturePlacements",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5bc6b53f-8c1f-42d2-bba5-a012242a2241": {
+        "label": "Construction Planes : Hide",
+        "sourceType": "mel",
+        "command": "HidePlanes",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "824969a9-e098-42c2-b255-ba4e0f52e9a9": {
+        "label": "Fluids : Hide",
+        "sourceType": "mel",
+        "command": "HideFluids",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6a2dc883-23f6-4ea0-808f-e6cf42b029bf": {
+        "label": "Hair Systems : Hide",
+        "sourceType": "mel",
+        "command": "HideHairSystems",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "4c6e98c7-4d4b-4398-8cf6-1498e94af435": {
+        "label": "Follicles : Hide",
+        "sourceType": "mel",
+        "command": "HideFollicles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5fb277b0-6964-439f-bd1e-387562c4854f": {
+        "label": "nCloths : Hide",
+        "sourceType": "mel",
+        "command": "HideNCloths",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "e83106d9-bbb5-4473-b2f5-613add072a67": {
+        "label": "nParticles : Hide",
+        "sourceType": "mel",
+        "command": "HideNParticles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "0c487b25-7ac4-4b2b-b6bc-2b211e332891": {
+        "label": "nRigids : Hide",
+        "sourceType": "mel",
+        "command": "HideNRigids",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9668093b-586d-4703-9fed-008421262e7f": {
+        "label": "Dynamic Constraints : Hide",
+        "sourceType": "mel",
+        "command": "HideDynamicConstraints",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "de41664e-ef2a-4709-b412-4a600216fd9b": {
+        "label": "Animation Markers : Hide",
+        "sourceType": "mel",
+        "command": "HideMarkers",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1edd779b-ef6c-4d18-bf1d-11bde4ad5fbb": {
+        "label": "Light Manipulators : Hide",
+        "sourceType": "mel",
+        "command": "HideLightManipulators",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a8cc8953-358a-441c-8655-d0b8193d8952": {
+        "label": "Camera Manipulators : Hide",
+        "sourceType": "mel",
+        "command": "HideCameraManipulators",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "03e6f4e7-6ca9-467c-bd25-5a5f83794339": {
+        "label": "Show Selection : Show",
+        "sourceType": "mel",
+        "command": "ShowSelectedObjects",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1264cf79-163f-4054-a7f2-95a0a13536a9": {
+        "label": "Show Last Hidden : Show",
+        "sourceType": "mel",
+        "command": "ShowLastHidden",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "0fdf605d-8060-4104-989e-9f783c99b06b": {
+        "label": "All Surface CVs : Show",
+        "sourceType": "mel",
+        "command": "ShowSurfaceCVs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f71194f9-f8ff-486b-9201-ecb2be9ef9ed": {
+        "label": "All Components : Show",
+        "sourceType": "mel",
+        "command": "ShowAllPolyComponents",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "acbf28a7-0543-40f3-9f74-6c6a3d868f13": {
+        "label": "All : Show",
+        "sourceType": "mel",
+        "command": "ShowAll",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6e415ee9-1c54-4088-9c4a-f50e9c662ac1": {
+        "label": "Show Controllers : Show",
+        "sourceType": "mel",
+        "command": "ShowControllers",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "fef28378-b583-4fa1-8f48-ab3cee49d734": {
+        "label": "All : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "754b86ee-ea60-4dbf-bc58-7e78e6708a0f": {
+        "label": "NURBS Surfaces : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowNURBSSurfaces",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d79f79d8-6f08-4bae-bcb2-7ca508a458eb": {
+        "label": "NURBS Curves : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowNURBSCurves",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "b66d14c3-6e04-4d8e-bf96-ae374b4e9708": {
+        "label": "Polygon Surfaces : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowPolygonSurfaces",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "891c90a0-3a47-4495-8f67-500f49152ca9": {
+        "label": "Deforming Geometry : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowDeformingGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "086a67c6-d638-48d4-97c8-3cc6aaf873fa": {
+        "label": "Strokes : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowStrokes",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "86d9ee40-d088-4dce-85bc-1fb2824e04d2": {
+        "label": "Stroke Path Curves : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowStrokePathCurves",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "32a35c00-965b-430d-a6ae-adb974a04b74": {
+        "label": "Stroke Control Curves : Show Geometry",
+        "sourceType": "mel",
+        "command": "ShowStrokeControlCurves",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f52fde71-2e2b-4a8d-bbde-0539574c25f1": {
+        "label": "All : Show Kinematics",
+        "sourceType": "mel",
+        "command": "ShowKinematics",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ebec2d9b-bd4a-468e-9907-627ada32b1ee": {
+        "label": "Joints : Show Kinematics",
+        "sourceType": "mel",
+        "command": "ShowJoints",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "0d1d4081-3fce-4ebf-90db-5c140b6e4f56": {
+        "label": "IK Handles : Show Kinematics",
+        "sourceType": "mel",
+        "command": "ShowIKHandles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "164c07a1-4d5a-4841-9002-3c7b4593e192": {
+        "label": "All : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowDeformers",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ec4be23d-700f-465d-90fe-fdfc6b9d8c1f": {
+        "label": "Lattices : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowLattices",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d61b146d-3dd4-4699-863c-72a90323ec55": {
+        "label": "Sculpt Objects : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowSculptObjects",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "19d92893-e05a-4ec0-bb5a-d23e1eb01c9b": {
+        "label": "Clusters : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowClusters",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5a9103d9-8365-45c4-b176-f6461766f95d": {
+        "label": "Nonlinears : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowNonlinears",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "24207659-59d2-433e-9747-4d950624cbd5": {
+        "label": "Wrap Influences : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowWrapInfluences",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "32e2684e-f848-497b-9afb-512110057500": {
+        "label": "Smooth Skin Influences : Show Deformers",
+        "sourceType": "mel",
+        "command": "ShowSmoothSkinInfluences",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f14a8861-1eb5-47aa-aa96-4229a1dd3a50": {
+        "label": "Lights : Show",
+        "sourceType": "mel",
+        "command": "ShowLights",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2dc26e08-9476-4766-ab2a-70af857f0cb2": {
+        "label": "Cameras : Show",
+        "sourceType": "mel",
+        "command": "ShowCameras",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "b30c7801-cdf1-49b2-8ccd-50395d8f6d03": {
+        "label": "Texture Placements : Show",
+        "sourceType": "mel",
+        "command": "ShowTexturePlacements",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "65a70cc2-76ed-4578-864b-9b72d32ebb51": {
+        "label": "Construction Planes : Show",
+        "sourceType": "mel",
+        "command": "ShowPlanes",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a1cc7cde-d838-42c6-9845-d7da68939cea": {
+        "label": "Fluids : Show",
+        "sourceType": "mel",
+        "command": "ShowFluids",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "e4eafbf7-78a4-497a-b614-eca8be244d86": {
+        "label": "Hair Systems : Show",
+        "sourceType": "mel",
+        "command": "ShowHairSystems",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "22da3309-d65d-48a1-b4e0-b8ae03d8efa0": {
+        "label": "Follicles : Show",
+        "sourceType": "mel",
+        "command": "ShowFollicles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "224f6a9e-e65e-4f59-9a52-58859e9ff192": {
+        "label": "nCloths : Show",
+        "sourceType": "mel",
+        "command": "ShowNCloths",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "73db4500-968b-4834-8a23-bd4a02f6d577": {
+        "label": "nParticles : Show",
+        "sourceType": "mel",
+        "command": "ShowNParticles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "96ebd37a-5611-4a38-b054-f772f4af2ba0": {
+        "label": "nRigids : Show",
+        "sourceType": "mel",
+        "command": "ShowNRigids",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1a929a9e-e3f0-40d8-a67f-b6ef60321b50": {
+        "label": "Dynamic Constraints : Show",
+        "sourceType": "mel",
+        "command": "ShowDynamicConstraints",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "cc9e2847-e3b5-4297-8ccb-86c22327978f": {
+        "label": "Animation Markers : Show",
+        "sourceType": "mel",
+        "command": "ShowMarkers",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "cf5f3e5d-e7cc-40f7-9213-e350d1bc19c4": {
+        "label": "Light Manipulators : Show",
+        "sourceType": "mel",
+        "command": "ShowLightManipulators",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "4bb9107b-e2f2-4182-a53c-a40466d5961b": {
+        "label": "Camera Manipulators : Show",
+        "sourceType": "mel",
+        "command": "ShowCameraManipulators",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a998ca0e-9c16-4fd8-a179-8db96b711bdb": {
+        "label": "Toggle Show/Hide",
+        "sourceType": "mel",
+        "command": "ToggleVisibilityAndKeepSelection",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ef6f1dde-db78-455e-9b8d-eaf96156bfdf": {
+        "label": "Toggle Show/Hide Options",
+        "sourceType": "mel",
+        "command": "ToggleVisibilityAndKeepSelectionOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1fb5807c-8f6e-43aa-82f1-8978c5d93540": {
+        "label": "Exclusive To Camera : Per Camera Visibility",
+        "sourceType": "mel",
+        "command": "SetExclusiveToCamera",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8dfa7e47-fc64-458b-9a4e-b4d3b4063e2e": {
+        "label": "Hidden From Camera : Per Camera Visibility",
+        "sourceType": "mel",
+        "command": "SetHiddenFromCamera",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f4d297c2-6635-4043-bffc-176eb7232979": {
+        "label": "Remove From Exclusive : Per Camera Visibility",
+        "sourceType": "mel",
+        "command": "CameraRemoveFromExclusive",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5c847ea3-5a9a-4d8d-8c61-9b13a1b1d32b": {
+        "label": "Remove From Hidden : Per Camera Visibility",
+        "sourceType": "mel",
+        "command": "CameraRemoveFromHidden",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c395b7f6-3d24-45d1-b133-6106c1cefa37": {
+        "label": "Remove All For Camera : Per Camera Visibility",
+        "sourceType": "mel",
+        "command": "CameraRemoveAll",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "48a108f5-ef97-4d91-bc62-255ee6ad57f6": {
+        "label": "Remove All : Per Camera Visibility",
+        "sourceType": "mel",
+        "command": "CameraRemoveAllForAll",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8a5ae6e2-62cb-46b2-b442-d38db2761ac1": {
+        "label": "Wireframe Color...",
+        "sourceType": "mel",
+        "command": "SetWireframeColor",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2765b5c3-7393-4886-a7ee-0af086aa6392": {
+        "label": "Template : Object Display",
+        "sourceType": "mel",
+        "command": "TemplateObject",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c164de23-3263-4c6d-9220-5cfcad9d79bb": {
+        "label": "Untemplate : Object Display",
+        "sourceType": "mel",
+        "command": "UntemplateObject",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "19c0f03a-bf5e-4354-a680-36bb23eba30a": {
+        "label": "Bounding Box : Object Display",
+        "sourceType": "mel",
+        "command": "ShowBoundingBox",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ec3b52a4-4ec2-43fd-8655-eea7726f0fe1": {
+        "label": "No Bounding Box : Object Display",
+        "sourceType": "mel",
+        "command": "HideBoundingBox",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "e2834c1d-f56b-42ac-8839-bc6d5b6cf81a": {
+        "label": "Geometry : Object Display",
+        "sourceType": "mel",
+        "command": "ShowObjectGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1304bc1b-1e79-4f78-b650-c5b6475bee62": {
+        "label": "No Geometry : Object Display",
+        "sourceType": "mel",
+        "command": "HideObjectGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "de8266af-3c7f-4aa4-9c40-405d9fd0dc8b": {
+        "label": "Ignore Hardware Shader : Object Display",
+        "sourceType": "mel",
+        "command": "IgnoreHardwareShader",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d9ec39b7-cf62-4dfd-b758-179bc148cf37": {
+        "label": "Use Hardware Shader : Object Display",
+        "sourceType": "mel",
+        "command": "UseHardwareShader",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6852cf51-63df-46e7-bc19-2b2f69395239": {
+        "label": "Fast Interaction : Object Display",
+        "sourceType": "mel",
+        "command": "ToggleFastInteraction",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a84363de-e232-40bc-9985-4f8f078596a4": {
+        "label": "Local Rotation Axes : Transform Display",
+        "sourceType": "mel",
+        "command": "ToggleLocalRotationAxes",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "b8bceac5-712c-4c1b-9a87-57080fecdd10": {
+        "label": "Rotate Pivots : Transform Display",
+        "sourceType": "mel",
+        "command": "ToggleRotationPivots",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "73fa105f-c46b-4649-b5ab-2b0dec85e3b2": {
+        "label": "Scale Pivots : Transform Display",
+        "sourceType": "mel",
+        "command": "ToggleScalePivots",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2471b460-ceb0-4832-b512-aa74caed03c2": {
+        "label": "Selection Handles : Transform Display",
+        "sourceType": "mel",
+        "command": "ToggleSelectionHandles",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1665fd93-e5d1-4b4d-8fbd-a828ad38e91b": {
+        "label": "Backface Culling : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleBackfaceGeometry",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "47b2d5e1-b16c-4816-84d7-c46779b219f6": {
+        "label": "Keep Wire : Culling Options",
+        "sourceType": "mel",
+        "command": "ToggleKeepWireCulling",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "17a8a551-7425-471f-96ff-e890e6af4ce1": {
+        "label": "Keep Hard Edges : Culling Options",
+        "sourceType": "mel",
+        "command": "ToggleKeepHardEdgeCulling",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "63c5e71f-3669-4200-b773-c8b10861df42": {
+        "label": "Keep Vertices : Culling Options",
+        "sourceType": "mel",
+        "command": "ToggleCullingVertices",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "3638d36c-8949-4dd2-b0b3-55d79bd971ff": {
+        "label": "Vertices : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleVertices",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5134d8e8-5f44-4e30-9d07-fea3a7b6a9ec": {
+        "label": "Vertex Size... : Polygons",
+        "sourceType": "mel",
+        "command": "ChangeVertexSize",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "40491ff7-d9d1-4342-8f9b-635d5ae02ee6": {
+        "label": "Crease Vertices : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleCreaseVertices",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ea48565e-2978-42d3-8356-0b542a206801": {
+        "label": "UVs : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleUVs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8bb5d950-1414-4e01-ac5a-2bacab398c55": {
+        "label": "Unshared UVs : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleUnsharedUVs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "04d7d4b4-9d98-455d-99fc-03ebb47530da": {
+        "label": "UV Size... : Polygons",
+        "sourceType": "mel",
+        "command": "ChangeUVSize",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9751bc71-4141-412d-bae8-9788984aebb9": {
+        "label": "Vertices : Component IDs",
+        "sourceType": "mel",
+        "command": "ToggleVertIDs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f42fc88d-7855-4b6d-bb8c-ffb34330a1b5": {
+        "label": "Edges : Component IDs",
+        "sourceType": "mel",
+        "command": "ToggleEdgeIDs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8d2eecd9-1606-4675-b5fb-7defc27cd5ca": {
+        "label": "Faces : Component IDs",
+        "sourceType": "mel",
+        "command": "ToggleFaceIDs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1944077d-404b-4931-af84-3b873e009b18": {
+        "label": "UVs : Component IDs",
+        "sourceType": "mel",
+        "command": "ToggleCompIDs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "92e0e86c-bfb1-4e60-b6c2-fae1309d8790": {
+        "label": "Face Normals : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleFaceNormalDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ba8a1376-0c08-412d-a3d5-b71972746a39": {
+        "label": "Vertex Normals : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleVertexNormalDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c59aea5a-abd5-411a-b9c0-377a2eb0fd4b": {
+        "label": "Tangents : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleTangentDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d8f8548f-e540-4f57-bff0-7980fdf41162": {
+        "label": "Normals Size... : Polygons",
+        "sourceType": "mel",
+        "command": "ChangeNormalSize",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "ea5f48f2-497b-4356-8eb8-b67de141b529": {
+        "label": "Standard Edges : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolyDisplayEdges",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "4eeeb91e-d060-434e-ac6a-01e91a92d68c": {
+        "label": "Soft/Hard Edges : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolyDisplaySoftEdges",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f5b1e87a-d469-4de3-80b7-54c6d4667422": {
+        "label": "Hard Edges (color) : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolyDisplayHardEdgesColor",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8481ad4e-3ea3-451f-a34b-fcf517c0b77c": {
+        "label": "Hard Edges : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolyDisplayHardEdges",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6faaa9ad-5516-407c-a1c8-076378bfea50": {
+        "label": "Border Edges : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleBorderEdges",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9170e843-59e0-4103-93c7-790f9f3ac0aa": {
+        "label": "Crease Edges : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleCreaseEdges",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "1efb2a4a-9c76-46c1-ba65-b3e5f4920e16": {
+        "label": "Texture Border Edges : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleTextureBorderEdges",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7c69de1f-9e31-40c9-91b6-0c62204672ca": {
+        "label": "Edge Width... : Polygons",
+        "sourceType": "mel",
+        "command": "ChangeEdgeWidth",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "3aca8e41-4fc3-45c4-88bc-002e2bc95905": {
+        "label": "Face Centers : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolygonFaceCenters",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "24814643-0979-4cb9-81b8-546d6ebb1d87": {
+        "label": "Face Triangles : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolygonFaceTrianglesDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "035adeda-1790-48f0-88cf-cdfc3bb48d98": {
+        "label": "Non-planar Faces : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolyNonPlanarFaceDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "41e00946-b1b7-416e-a74c-946ddf16fcde": {
+        "label": "Invisible Faces : Polygons",
+        "sourceType": "mel",
+        "command": "ToggleHoleFaces",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c0a967fe-6246-4ed5-8a60-b8a27b28e414": {
+        "label": "Visualize Metadata : Metadata",
+        "sourceType": "mel",
+        "command": "ToggleMetadata",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a81ae2c2-ff86-4667-aabe-854f2959b676": {
+        "label": "Visualize Metadata Options : Metadata",
+        "sourceType": "mel",
+        "command": "VisualizeMetadataOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d9104a27-ba5d-43b9-adf0-68ac8efa24c3": {
+        "label": "Reset Display : Polygons",
+        "sourceType": "mel",
+        "command": "ResetDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": "commandButton.png"
+    },
+    "ae22b33f-1035-4c49-b9fd-c2e7868b0930": {
+        "label": "Limit to Selected : Polygons",
+        "sourceType": "mel",
+        "command": "TogglePolyDisplayLimitToSelected",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "06181777-840a-4bfe-a2e3-5a919179e8c8": {
+        "label": "Custom Polygon Display : Polygons",
+        "sourceType": "mel",
+        "command": "CustomPolygonDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "98996b9a-2e02-4b64-93f3-8fef2a072600": {
+        "label": "Custom Polygon Display Options : Polygons",
+        "sourceType": "mel",
+        "command": "CustomPolygonDisplayOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "2b734838-87a6-4fe0-af83-678e46dd2baa": {
+        "label": "CVs : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleCVs",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9821746b-432c-4e74-8e3b-1eba50b82517": {
+        "label": "Edit Points : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleEditPoints",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "d3a3a6cb-86af-432a-a8ba-1f443287f079": {
+        "label": "Hulls : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleHulls",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a7f6c7fb-c8c9-4602-8bac-22354f74203b": {
+        "label": "Normals (Shaded Mode) : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleNormals",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6be615b2-a707-4683-9d04-cb8ef2575358": {
+        "label": "Patch Centers : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleSurfaceFaceCenters",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "22bb5cd6-c8d7-4c68-b995-664421a38402": {
+        "label": "Surface Origins : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleSurfaceOrigin",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7360ec33-49e8-4e62-a0a5-a24244ec399b": {
+        "label": "Custom : NURBS",
+        "sourceType": "mel",
+        "command": "ToggleCustomNURBSComponents",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "187464f8-b7c7-49fa-8225-c4df1444c8b0": {
+        "label": "Custom Options : NURBS",
+        "sourceType": "mel",
+        "command": "CustomNURBSComponentsOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7c7ea410-3b45-4550-8642-3001af56ea49": {
+        "label": "Hull : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessHull",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f0c06ba3-8039-4658-9a09-104dc49d3f7f": {
+        "label": "Hull Options : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessHullOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "c6d1e03c-6c1a-46c0-9949-0139b0a1d2d9": {
+        "label": "Rough : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessRough",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "92bbba4a-353b-44bc-ad4b-0a164a96b5bd": {
+        "label": "Rough Options : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessRoughOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "63670aa3-67d9-4628-901d-9ee7099dac8b": {
+        "label": "Medium : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessMedium",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "844d194b-6a39-4329-9ae6-7219d65167fe": {
+        "label": "Medium Options : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessMediumOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "9ff3101d-1835-47c8-a39b-3b6f8d29e9f2": {
+        "label": "Fine : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessFine",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "34010bad-c2df-432a-b5ce-e07930b33178": {
+        "label": "Fine Options : NURBS",
+        "sourceType": "mel",
+        "command": "NURBSSmoothnessFineOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8954c569-3472-415e-82d9-80060a8d7a50": {
+        "label": "Custom Smoothness : NURBS",
+        "sourceType": "mel",
+        "command": "CustomNURBSSmoothness",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "a7dba31e-8774-4df0-8fb5-af105adb7727": {
+        "label": "Custom Smoothness Options : NURBS",
+        "sourceType": "mel",
+        "command": "CustomNURBSSmoothnessOptions",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "319d9926-67cb-4ee5-9a2f-c0a80b3c0652": {
+        "label": "Lattice Points : Animation",
+        "sourceType": "mel",
+        "command": "ToggleLatticePoints",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "68cdd9b5-a651-4cba-95d8-350c42ee622b": {
+        "label": "Lattice Shape : Animation",
+        "sourceType": "mel",
+        "command": "ToggleLatticeShape",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "4317132b-17bf-4dc9-a822-2dda1c285928": {
+        "label": "Joint Size... : Animation",
+        "sourceType": "mel",
+        "command": "JdsWin",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "32a9a140-a0ba-43e6-a6b2-203007709668": {
+        "label": "IK/FK Joint Size... : Animation",
+        "sourceType": "mel",
+        "command": "IkfkjdsWin",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "40fb0fdf-adea-46fd-ab12-0f9742dc0bd1": {
+        "label": "IK Handle Size... : Animation",
+        "sourceType": "mel",
+        "command": "IkHdsWin",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "311d9522-04ea-401b-81dc-59b5689ce52b": {
+        "label": "Joint Labels : Animation",
+        "sourceType": "mel",
+        "command": "ToggleJointLabels",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7a9d1d68-c27b-4d77-9369-b35b47775fc5": {
+        "label": "Highlight Affected : Animation",
+        "sourceType": "mel",
+        "command": "displayPref -displayAffected #1;",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "5153189f-3d6b-46dd-aca8-f04a76c733d2": {
+        "label": "Paint Effects Mesh Display : Rendering",
+        "sourceType": "mel",
+        "command": "ToggleEffectsMeshDisplay",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "6a8fda30-6192-43c2-8585-e2f4888d70fd": {
+        "label": "0% : Stroke Display Quality",
+        "sourceType": "mel",
+        "command": "setStrokeQuality 0.0;",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "f6999d34-35f3-4111-a224-1eff367d50fc": {
+        "label": "25% : Stroke Display Quality",
+        "sourceType": "mel",
+        "command": "setStrokeQuality 25.0;",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "dab945b4-95cc-4c74-bf55-56c3c37cf333": {
+        "label": "50% : Stroke Display Quality",
+        "sourceType": "mel",
+        "command": "setStrokeQuality 50.0;",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "b48b3f21-f7eb-4793-8a20-bef5007cdcb8": {
+        "label": "75% : Stroke Display Quality",
+        "sourceType": "mel",
+        "command": "setStrokeQuality 75.0;",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "7943e651-4833-463e-b8fa-524584153d0f": {
+        "label": "100% : Stroke Display Quality",
+        "sourceType": "mel",
+        "command": "setStrokeQuality 100.0;",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "618cde64-5a88-4253-bd75-e6327289d0a6": {
+        "label": "Custom... : Stroke Display Quality",
+        "sourceType": "mel",
+        "command": "strokeQualityWin",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "b49e73c7-3680-42e4-abea-ed72b34a1b7f": {
+        "label": "Frame All in All Views",
+        "sourceType": "mel",
+        "command": "FrameAllInAllViews",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "8f7a0ce2-0eb7-452d-9728-3803a85014de": {
+        "label": "Frame Selection in All Views",
+        "sourceType": "mel",
+        "command": "FrameSelectedWithoutChildrenInAllViews",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    },
+    "553a3d69-49cf-462d-8c3d-0787398cd168": {
+        "label": "Frame Selection with Children in All Views",
+        "sourceType": "mel",
+        "command": "FrameSelectedInAllViews",
+        "category": "",
+        "module": "Display",
+        "icon": ""
+    }
+}

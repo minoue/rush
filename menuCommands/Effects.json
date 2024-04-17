@@ -1,0 +1,138 @@
+{
+    "2e39d692-6efc-4621-b90e-3fcbb9c9c3e6": {
+        "label": "Get Effects Asset...",
+        "sourceType": "mel",
+        "command": "nucleusGetEffectsAsset",
+        "category": "",
+        "module": "Effects",
+        "icon": "nPartExample.png"
+    },
+    "73036a6f-9554-45a7-bff6-f88894823009": {
+        "label": "Fire",
+        "sourceType": "mel",
+        "command": "Fire",
+        "category": "",
+        "module": "Effects",
+        "icon": "fire.png"
+    },
+    "08ac5180-bca7-41b7-8cb2-a1df0f15f8e5": {
+        "label": "Fire Options",
+        "sourceType": "mel",
+        "command": "FireOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "fire.png"
+    },
+    "69f86c95-ac6f-4310-bf9a-4e18921457ac": {
+        "label": "Fireworks",
+        "sourceType": "mel",
+        "command": "Fireworks",
+        "category": "",
+        "module": "Effects",
+        "icon": "fireworks.png"
+    },
+    "ef4ca71c-ed26-44fa-9661-e4365bab7dd8": {
+        "label": "Fireworks Options",
+        "sourceType": "mel",
+        "command": "FireworksOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "fireworks.png"
+    },
+    "21f37995-143c-4af3-a9ff-b23faf9793e9": {
+        "label": "Create Curve Flow : Flow",
+        "sourceType": "mel",
+        "command": "CurveFlow",
+        "category": "",
+        "module": "Effects",
+        "icon": "flow.png"
+    },
+    "eea525d9-9b46-48fd-8fd3-3e52a2676992": {
+        "label": "Create Curve Flow Options : Flow",
+        "sourceType": "mel",
+        "command": "CurveFlowOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "flow.png"
+    },
+    "3237f070-9d88-456a-8482-5fa19bc31b1a": {
+        "label": "Create Surface Flow : Flow",
+        "sourceType": "mel",
+        "command": "SurfaceFlow",
+        "category": "",
+        "module": "Effects",
+        "icon": "flowSurface.png"
+    },
+    "07dccbdd-c77e-499e-a957-8fc012d0f64e": {
+        "label": "Create Surface Flow Options : Flow",
+        "sourceType": "mel",
+        "command": "SurfaceFlowOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "flowSurface.png"
+    },
+    "fe409a45-22f0-4745-9eee-4539bcb2592a": {
+        "label": "Delete Selected Flow : Flow",
+        "sourceType": "mel",
+        "command": "DeleteSurfaceFlow",
+        "category": "",
+        "module": "Effects",
+        "icon": "flowSurfaceDelete.png"
+    },
+    "c8d5737b-e4c2-401d-9c79-627d37d4117b": {
+        "label": "Delete Selected Flow Options : Flow",
+        "sourceType": "mel",
+        "command": "DeleteSurfaceFlowOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "flowSurfaceDelete.png"
+    },
+    "3fe660c0-cfd2-4642-b13f-3406300f1cb7": {
+        "label": "Lightning",
+        "sourceType": "mel",
+        "command": "Lightning",
+        "category": "",
+        "module": "Effects",
+        "icon": "lightning.png"
+    },
+    "c0cec703-f50f-4929-a8b3-ccee4736a5b4": {
+        "label": "Lightning Options",
+        "sourceType": "mel",
+        "command": "LightningOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "lightning.png"
+    },
+    "464fdda2-2f4d-48c3-950f-29dab9213201": {
+        "label": "Shatter",
+        "sourceType": "mel",
+        "command": "Shatter",
+        "category": "",
+        "module": "Effects",
+        "icon": "shatter.png"
+    },
+    "e5faf1de-c266-496e-b50f-5f753ce07f9c": {
+        "label": "Shatter Options",
+        "sourceType": "mel",
+        "command": "ShatterOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "shatter.png"
+    },
+    "efbb6a6e-1819-499e-9f0c-86f7e6e23693": {
+        "label": "Smoke",
+        "sourceType": "mel",
+        "command": "Smoke",
+        "category": "",
+        "module": "Effects",
+        "icon": "smoke.png"
+    },
+    "f8bc8ea8-3f13-4991-856a-62560f169bb3": {
+        "label": "Smoke Options",
+        "sourceType": "mel",
+        "command": "SmokeOptions",
+        "category": "",
+        "module": "Effects",
+        "icon": "smoke.png"
+    }
+}

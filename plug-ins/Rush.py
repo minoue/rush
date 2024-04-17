@@ -16,8 +16,10 @@ from importlib import reload
 import rush
 reload(rush)
 
+
 __author__ = "Michi Inoue"
-__version__ = "2.8.0"
+__version__ = "2.9.0"
+PLUGIN_COMMAND = "rush2"
 
 
 QSS = """
@@ -31,9 +33,6 @@ QWidget {
     font-size: 14pt;
 }
 """
-
-PYTHON_VER = sys.version_info[0]
-PLUGIN_COMMAND = "rush2"
 
 
 # Define mel procedure to call the previous function
@@ -60,7 +59,7 @@ class History(object):
         self.history = self.read()
 
     @classmethod
-    def read(cls):
+    def read(cls) -> list:
         """ Load history
 
         Return:
@@ -70,6 +69,7 @@ class History(object):
 
         mayaScriptDir = cmds.internalVar(userScriptDir=True)
         historyPath = os.path.join(mayaScriptDir, "rushHistory.txt")
+
         if os.path.exists(historyPath):
             try:
                 historyFile = open(historyPath, 'r')
@@ -81,22 +81,22 @@ class History(object):
         else:
             return []
 
-    def append(self, command: str):
+    def append(self, uuid: str):
         """ append history
 
         Args:
-            command (str): name of a command
+            uuid (str): uuid of a command
 
         Return:
             None
 
         """
         # If command already exists in the history, move it to the front
-        if command in self.history:
+        if uuid in self.history:
             self.history.insert(
-                0, self.history.pop(self.history.index(command)))
+                0, self.history.pop(self.history.index(uuid)))
         else:
-            self.history.insert(0, command)
+            self.history.insert(0, uuid)
 
         # Set maximum number of histories
         self.history = self.history[:25]
@@ -244,19 +244,111 @@ class CustomQTableView(QtWidgets.QTableView):
             super(CustomQTableView, self).keyPressEvent(event)
 
 
+class Database():
+
+    def __init__(self):
+        self.command_dict = {**rush.cmdDict, **rush.TmpCls.commandDict}
+
+        self.filteredModel = self.createCompletionData()
+        self.historyModel = self.createHistoryData()
+
+    def createCompletionData(self) -> QtCore.QSortFilterProxyModel:
+        model = QtGui.QStandardItemModel()
+
+        # Add all command names and icon paths to the the model(model)
+        for uuid in self.command_dict:
+            # 1st column
+            dataDict = self.command_dict[uuid]
+            label = dataDict["label"]
+            icon = dataDict["icon"]
+            item = QtGui.QStandardItem(label)
+            if os.path.isabs(icon) is True:
+                iconPath = os.path.normpath(icon)
+                item.setIcon(QtGui.QIcon(iconPath))
+            else:
+                if icon == "":
+                    item.setIcon(QtGui.QIcon(":commandButton.png"))
+                else:
+                    item.setIcon(QtGui.QIcon(":%s" % icon))
+
+            item.setData(uuid, 4)
+
+            # 2nd column
+            module = QtGui.QStandardItem(dataDict['module'])
+            module.setTextAlignment(
+                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            font = module.font()
+            font.setItalic(True)
+            font.setPointSize(11)
+            module.setFont(font)
+            item.setEditable(False)
+            module.setEditable(False)
+
+            # set item
+            model.appendRow([item, module])
+
+        # Store the model(model) into the sortFilterProxy model
+        filteredModel = QtCore.QSortFilterProxyModel()
+        filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        filteredModel.setSourceModel(model)
+
+        return filteredModel
+
+    def createHistoryData(self) -> QtCore.QSortFilterProxyModel:
+        """ Create data for history list """
+
+        # History model
+        historyList = History.read()
+        historyModel = QtGui.QStandardItemModel()
+
+        for uuid in historyList:
+
+            label = self.command_dict[uuid]["label"]
+
+            # Capitalize the first letter of the command
+            displayName = label[:1].capitalize() + label[1:]
+
+            item = QtGui.QStandardItem(displayName)
+            icon = self.command_dict[uuid]['icon']
+
+            if os.path.isabs(icon) is True:
+                iconPath = os.path.normpath(icon)
+                item.setIcon(QtGui.QIcon(iconPath))
+            else:
+                item.setIcon(
+                    QtGui.QIcon(":%s" % icon))
+
+            item.setData(uuid, 4)
+
+            module = QtGui.QStandardItem("History")
+            module.setTextAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            font = module.font()
+            font.setItalic(True)
+            font.setPointSize(11)
+            module.setFont(font)
+            item.setEditable(False)
+            module.setEditable(False)
+            historyModel.appendRow([item, module])
+
+        # Store the model(model) into the sortFilterProxy model
+        historyFilteredModel = QtCore.QSortFilterProxyModel()
+        historyFilteredModel.setFilterCaseSensitivity(
+            QtCore.Qt.CaseInsensitive)
+        historyFilteredModel.setSourceModel(historyModel)
+
+        return historyFilteredModel
+
+
+# Create data only once when plugin is activated
+DATA = Database()
+
+
 class Gui(rush.TmpCls, QtWidgets.QWidget):
     """ Gui class """
 
     def __init__(self, parent=None):
-        """
-
-        Args:
-            cmdDict (dict): Dict of all commands
-
-        """
         super(Gui, self).__init__(parent)
 
-        self.cmdDict = self.commandDict
         self.history = History()
 
         self.setAttribute(QtCore.Qt.WA_DeleteOnClose)
@@ -274,13 +366,18 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.setContentsMargins(margin, margin, margin, margin)
 
         # Create Data then UI
-        self.createCommandData()
-        self.createHistoryData()
+        # Those data are created only once when the plugin is activated.
+        self.cmdDict = DATA.command_dict
+        self.filteredModel = DATA.filteredModel
+
+        # History dynamically changes so run everytime window is created.
+        self.historyModel = DATA.createHistoryData()
+
+        # self.createHistoryData()
         self.createUI()
 
         self.toolWidth = self.dpi * 6
         self.setFixedWidth(self.toolWidth)
-        # self.setFixedHeight(55)
 
         self.currentRow = 0
 
@@ -294,12 +391,14 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsView = CustomQTableView()
         self.cmdsView.setVisible(False)
         self.cmdsView.setModel(self.filteredModel)
-        self.cmdsView.horizontalHeader().resizeSection(0, 250)
+        self.cmdsView.horizontalHeader().resizeSection(0, 400)
+        self.cmdsViewSelModel = self.cmdsView.selectionModel()
+        self.cmdsViewSelModel.selectionChanged.connect(self.viewSelectionChanged)
 
         self.historyView = CustomQTableView()
         self.historyView.setVisible(False)
         self.historyView.setModel(self.historyModel)
-        self.historyView.horizontalHeader().resizeSection(0, 250)
+        self.historyView.horizontalHeader().resizeSection(0, 400)
 
         # Layout
         self.layout = QtWidgets.QBoxLayout(QtWidgets.QBoxLayout.TopToBottom)
@@ -316,6 +415,17 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsLE.backtabPressed.connect(self.complete)
         self.cmdsLE.arrowPressed.connect(self.arrowPressed)
         self.cmdsLE.setFocus()
+
+    def viewSelectionChanged(self, item: QtCore.QItemSelection):
+
+        indexes = item.indexes()
+        if len(indexes) == 2:
+            index = indexes[0]
+            data = self.filteredModel.itemData(index)
+            command_uuid = data[4]
+            command_label = self.cmdDict[command_uuid]["label"]
+            # command_exec = self.cmdDict[command_uuid]["command"]
+            self.cmdsLE.setText(command_label)
 
     def showCompleter(self, *args):
         """ Show commands
@@ -340,10 +450,10 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
                 self.shiftTabComplete(self.cmdsView, self.filteredModel)
         elif self.completeMode == "history":
             if tabType == "tab":
-                self.tabComplete(self.historyView, self.historyFilteredModel)
+                self.tabComplete(self.historyView, self.historyModel)
             else:
                 self.shiftTabComplete(
-                    self.historyView, self.historyFilteredModel)
+                    self.historyView, self.historyModel)
         else:
             pass
 
@@ -376,7 +486,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         elif self.completeMode == "normal":
             self.tabComplete(self.cmdsView, self.filteredModel)
         elif self.completeMode == "history":
-            self.tabComplete(self.historyView, self.historyFilteredModel)
+            self.tabComplete(self.historyView, self.historyModel)
         else:
             pass
 
@@ -389,42 +499,12 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         if self.completeMode == "normal":
             self.shiftTabComplete(self.cmdsView, self.filteredModel)
         elif self.completeMode == "history":
-            self.shiftTabComplete(self.historyView, self.historyFilteredModel)
+            self.shiftTabComplete(self.historyView, self.historyModel)
         else:
             pass
 
         if self.cmdsLE.text() != "":
             return
-
-    def createCommandData(self):
-        """ Crete data for standard commands """
-
-        model = QtGui.QStandardItemModel()
-
-        # Add all command names and icon paths to the the model(model)
-        for command in self.cmdDict:
-            item = QtGui.QStandardItem(command)
-            if os.path.isabs(self.cmdDict[command]['icon']) is True:
-                iconPath = os.path.normpath(self.cmdDict[command]['icon'])
-                item.setIcon(QtGui.QIcon(iconPath))
-            else:
-                item.setIcon(
-                    QtGui.QIcon(":%s" % self.cmdDict[command]['icon']))
-            module = QtGui.QStandardItem(self.cmdDict[command]['module'])
-            module.setTextAlignment(
-                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
-            font = module.font()
-            font.setItalic(True)
-            font.setPointSize(11)
-            module.setFont(font)
-            item.setEditable(False)
-            module.setEditable(False)
-            model.appendRow([item, module])
-
-        # Store the model(model) into the sortFilterProxy model
-        self.filteredModel = QtCore.QSortFilterProxyModel(self)
-        self.filteredModel.setFilterCaseSensitivity(QtCore.Qt.CaseInsensitive)
-        self.filteredModel.setSourceModel(model)
 
     def createHistoryData(self):
         """ Create data for history list """
@@ -433,7 +513,9 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.historyList = self.history.read()
         self.historyModel = QtGui.QStandardItemModel()
 
-        for command in self.historyList:
+        for uuid in self.historyList:
+
+            command = self.cmdDict[uuid]["label"]
 
             # Capitalize the first letter of the command
             displayName = command[:1].capitalize() + command[1:]
@@ -574,14 +656,13 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
             else:
                 nextRow = currentRow - 1
 
-            index = model.index(nextRow, 0)
-
-            view.selectRow(nextRow)
             view.clearSelection()
+            view.selectRow(nextRow)
+
+            index = model.index(nextRow, 0)
             selection.select(index, QtCore.QItemSelectionModel.Select)
 
         data = model.itemData(index)
-
         name = data[0]
         self.cmdsLE.setText(name)
         self.cmdsLE.setFocus()
@@ -592,31 +673,45 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         if not self.cmdsLE.text():
             return
 
-        try:
-            cmd = self.cmdDict[self.cmdsLE.text()]['command']
-        except KeyError:
-            print("No such command.")
-            return
+        index = None
+        # Get command uuid from the selection
+        if self.completeMode == "history":
+            sel = self.historyView.selectionModel().selectedRows()
+            index = sel[0]
+            data = self.historyModel.itemData(index)
+        else:
+            sel = self.cmdsViewSelModel.selectedRows()
+            index = sel[0]
+            data = self.filteredModel.itemData(index)
+
+        command_id = data[4]
+
+        # get command string
+        cmd = self.cmdDict[command_id]["command"]
 
         # Close gui first otherwise maya clashes(2017)
         self.close()
 
-        try:
-            func = getattr(self, "%s" % cmd)
-            func()
-            print("Rush command executed : %s" % cmd)
+        sourceType = self.cmdDict[command_id]["sourceType"]
+        if sourceType == "mel":
+            mel.eval(cmd)
+            mel.eval("""callLastCommand("%s")""" % cmd)
+        else:
+            try:
+                func = getattr(self, "%s" % cmd)
+                func()
+                print("Rush command executed : %s" % cmd)
 
-            # Add to repeatLast command so the comamnd can be repeatable
-            # by G key
-            cs = """python(\\"from rush import TmpCls; TmpCls.%s()\\")""" % cmd
-            mel.eval("""callLastCommand("%s")""" % cs)
+                # Add to repeatLast command so the comamnd can be repeatable
+                # by G key
+                cs = """python(\\"from rush import TmpCls; TmpCls.%s()\\")""" % cmd
+                mel.eval("""callLastCommand("%s")""" % cs)
+            except AttributeError:
+                pass
 
-            # Add command to history data
-            self.history.append(cmd)
-            self.history.save()
-
-        except AttributeError:
-            pass
+        # Add command to history data
+        self.history.append(command_id)
+        self.history.save()
 
 
 class Rush(OpenMaya.MPxCommand):

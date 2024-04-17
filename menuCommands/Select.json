@@ -1,0 +1,730 @@
+{
+    "67ed9f84-3bb0-4b78-a13a-17227f288cfd": {
+        "label": "All",
+        "sourceType": "mel",
+        "command": "SelectAll",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "25edebc5-e47b-4903-9904-c0bde2d693e7": {
+        "label": "IK Handles : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllIKHandles",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "fda73f22-012e-4f2a-8eab-399e7f9dd781": {
+        "label": "Joints : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllJoints",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "3d637527-d9fc-4419-b122-3610176bda20": {
+        "label": "Clusters : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllClusters",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "10c50be1-cc18-4908-ac6e-619dee52d750": {
+        "label": "Lattices : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllLattices",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "7d3c7b9e-166e-4540-abd8-8de876ebcecc": {
+        "label": "Sculpt Objects : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllSculptObjects",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "28d2101b-666a-41c0-8895-dc4c2cba05f8": {
+        "label": "Wires : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllWires",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "3bb8e4ea-285e-4d69-ad69-ebbc2b21a46b": {
+        "label": "Transforms : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllTransforms",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "7066f75c-dcef-43dc-880d-86234ba77b4d": {
+        "label": "Geometry : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllGeometry",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "c8c1bcf6-eee1-4536-a0f2-b52304698e85": {
+        "label": "NURBS Curves : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllNURBSCurves",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "03bfa296-09a7-4f55-a428-61e8e4aa4821": {
+        "label": "NURBS Surfaces : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllNURBSSurfaces",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "f81f4d51-646f-4d35-8e16-9028c7dc28af": {
+        "label": "Polygon Geometry : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllPolygonGeometry",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "ede75afb-0238-4dd2-abee-b24287fa0786": {
+        "label": "Cameras : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllCameras",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "7a9bc75b-1032-4983-87fc-8f714c9744e6": {
+        "label": "Lights : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllLights",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "44648ce0-40b1-4258-bee4-69ed1860f05a": {
+        "label": "Image Planes : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllImagePlanes",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "d921f509-36fc-437e-bf66-cbd5f325d8b0": {
+        "label": "Assets : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllAssets",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "7c11fc3b-bcd9-4ec7-b38c-74668d895edb": {
+        "label": "Fluids : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllFluids",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "64d5c69d-2b72-490b-a35e-38e4de258c96": {
+        "label": "Particles : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllParticles",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "0dda19b4-1d5d-4f6e-bcfa-ea72f47c9311": {
+        "label": "Rigid Bodies : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllRigidBodies",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "77695a4a-28e1-4c1d-9431-1fae46a9a6e6": {
+        "label": "Rigid Constraints : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllRigidConstraints",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "c3097677-051b-4a01-a5d3-b1133f8046d1": {
+        "label": "Brushes : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllBrushes",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "258c3f05-6297-4a10-99de-252f7b34c043": {
+        "label": "Strokes : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllStrokes",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "7d826933-9180-4591-bd4c-eac427c0414a": {
+        "label": "Dynamic Constraints : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllDynamicConstraints",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "9fbf70b5-9cc0-4417-8190-a79431573611": {
+        "label": "Follicles : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllFollicles",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "fbfd9639-8340-4911-b599-155d3506db31": {
+        "label": "nCloths : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllNCloths",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "1869e671-2366-4fdf-afc7-b3f29d5cede0": {
+        "label": "nParticles : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllNParticles",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "d4314e19-b10a-4e66-9af8-764ff8638e00": {
+        "label": "nRigids : All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllNRigids",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "70f44de6-62ad-4005-9cd8-a6951c37e682": {
+        "label": "Deselect All",
+        "sourceType": "mel",
+        "command": "SelectNone",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "09996e34-0c67-4b3f-82d6-fb822712418b": {
+        "label": "Hierarchy",
+        "sourceType": "mel",
+        "command": "SelectHierarchy",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "54f02863-a788-44a9-ad18-5b7d9b69e9d5": {
+        "label": "Inverse",
+        "sourceType": "mel",
+        "command": "InvertSelection",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "8489d8f8-0495-4ec9-afd8-e21c0746ab97": {
+        "label": "Similar",
+        "sourceType": "mel",
+        "command": "SelectSimilar",
+        "category": "",
+        "module": "Select",
+        "icon": "selectSimilar.png"
+    },
+    "c32741ad-d50b-4afe-a7fe-a9953117d9e5": {
+        "label": "Similar Options",
+        "sourceType": "mel",
+        "command": "SelectSimilarOptions",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "ad72edc3-3fbc-438a-ba8d-c63128814d2d": {
+        "label": "Grow",
+        "sourceType": "mel",
+        "command": "GrowPolygonSelectionRegion",
+        "category": "",
+        "module": "Select",
+        "icon": "polyGrowSelection.png"
+    },
+    "3db0c0f8-fec1-4da4-8f45-297311f1373c": {
+        "label": "Grow Along Loop",
+        "sourceType": "mel",
+        "command": "GrowLoopPolygonSelectionRegion",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "a0ead2fc-dcdb-48b0-b6c7-ba191142cb6c": {
+        "label": "Shrink",
+        "sourceType": "mel",
+        "command": "ShrinkPolygonSelectionRegion",
+        "category": "",
+        "module": "Select",
+        "icon": "polyShrinkSelection.png"
+    },
+    "61b72499-4d6e-4b86-857d-2840ef615a85": {
+        "label": "Shrink Along Loop",
+        "sourceType": "mel",
+        "command": "ShrinkLoopPolygonSelectionRegion",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "4aa58fcc-8e01-4824-a2fe-58e7d2e80c15": {
+        "label": "Object/Component",
+        "sourceType": "mel",
+        "command": "SelectToggleMode",
+        "category": "",
+        "module": "Select",
+        "icon": "polyObjectComponent.png"
+    },
+    "06cd392a-28a8-4963-a22e-2559850e9c00": {
+        "label": "Multi-Component : Components",
+        "sourceType": "mel",
+        "command": "SelectMultiComponentMask",
+        "category": "",
+        "module": "Select",
+        "icon": "polyMultiComponent.png"
+    },
+    "cca21d00-a143-47a8-9aba-7565c11d14a1": {
+        "label": "Vertex : Components",
+        "sourceType": "mel",
+        "command": "SelectVertexMask",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectVertex.png"
+    },
+    "8739542e-4cdf-44c1-a37f-f43bf229c917": {
+        "label": "Edge : Components",
+        "sourceType": "mel",
+        "command": "SelectEdgeMask",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectEdge.png"
+    },
+    "35718f1d-9a89-4be7-a2b5-e80a430703c2": {
+        "label": "Face : Components",
+        "sourceType": "mel",
+        "command": "SelectFacetMask",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectFace.png"
+    },
+    "d7fb11ff-8455-4c55-9aa8-18dd1a5a9e6e": {
+        "label": "Vertex Face : Components",
+        "sourceType": "mel",
+        "command": "SelectVertexFaceMask",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectVertexFace.png"
+    },
+    "ef242e97-4673-4724-bee1-217562878bcb": {
+        "label": "UV : Components",
+        "sourceType": "mel",
+        "command": "SelectUVMask",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectUV.png"
+    },
+    "afc74f92-2210-422a-86d5-9e6e180254d8": {
+        "label": "UV Shell : Components",
+        "sourceType": "mel",
+        "command": "SelectMeshUVShell",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectUVShell.png"
+    },
+    "d66fd71e-580c-4351-9c82-487951ced45a": {
+        "label": "Contiguous Edges",
+        "sourceType": "mel",
+        "command": "SelectContiguousEdges",
+        "category": "",
+        "module": "Select",
+        "icon": "polyLoopEdge.png"
+    },
+    "cd149120-982a-4573-bba3-0bf3ecfe2c1f": {
+        "label": "Contiguous Edges Options",
+        "sourceType": "mel",
+        "command": "SelectContiguousEdgesOptions",
+        "category": "",
+        "module": "Select",
+        "icon": "polyLoopEdge.png"
+    },
+    "d495a941-3cd5-46c3-9d4d-cbd7952dd0f2": {
+        "label": "Shortest Edge Path Tool",
+        "sourceType": "mel",
+        "command": "SelectShortestEdgePathTool",
+        "category": "",
+        "module": "Select",
+        "icon": "selectEdgePath.png"
+    },
+    "6f479215-a30f-4ea5-bdcb-7cbbb0c62bc6": {
+        "label": "To Vertices : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToVertices",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToVertices.png"
+    },
+    "6b7bad89-0de3-4ed7-800d-0ea7b7d128de": {
+        "label": "To Vertex Faces : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToVertexFaces",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToVertexFaces.png"
+    },
+    "d2354234-379a-4f08-b6e4-d1e37470f534": {
+        "label": "To Vertex Perimeter : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToVertexPerimeter",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToVertexPerimeter.png"
+    },
+    "e5b94952-b7eb-44c8-baf5-743edf1a9593": {
+        "label": "To Edges : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToEdges",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToEdge.png"
+    },
+    "7655ad99-84cc-4337-9cfc-7b61b97f718c": {
+        "label": "To Edge Loop : Convert Selection",
+        "sourceType": "mel",
+        "command": "SelectEdgeLoopSp",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToEdgeLoop.png"
+    },
+    "a6ab0942-fb48-49cd-9fa2-c6f04e1fc2d9": {
+        "label": "To Edge Ring : Convert Selection",
+        "sourceType": "mel",
+        "command": "SelectEdgeRingSp",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToEdgeRing.png"
+    },
+    "e860b48e-262f-45e0-9437-0fc5f0f4fe94": {
+        "label": "To Contained Edges : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToContainedEdges",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToContainedEdges.png"
+    },
+    "1c411c6b-1ab8-41fb-9b31-fd80a33966ab": {
+        "label": "To Edge Perimeter : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToEdgePerimeter",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToEdgePerimeter.png"
+    },
+    "d1d3707d-8aaa-4ff0-8120-481507d47e4f": {
+        "label": "To Faces : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToFaces",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToFace.png"
+    },
+    "99acf25e-7b1d-4f30-ad77-7f16ded3a223": {
+        "label": "To Face Path : Convert Selection",
+        "sourceType": "mel",
+        "command": "SelectFacePath",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToFacePath.png"
+    },
+    "c953e2db-4fae-45b2-b0f8-40e000896ddc": {
+        "label": "To Contained Faces : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToContainedFaces",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToContainedFaces.png"
+    },
+    "7d8f7119-f8ed-42b3-a33f-b6ae9d60f905": {
+        "label": "To Face Perimeter : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToFacePerimeter",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToFacePerimeter.png"
+    },
+    "d28939ae-65e6-43b1-9709-b7993c6d6a0d": {
+        "label": "To UVs : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToUVs",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToUVs.png"
+    },
+    "1826f086-648c-462b-9997-25b7740b4c69": {
+        "label": "To UV Shell : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToUVShell",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToUVShell.png"
+    },
+    "073cdbcb-302d-4e73-8f5b-bf9cb1f9fda7": {
+        "label": "To UV Shell Border : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToUVShellBorder",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToUVBorder.png"
+    },
+    "2b1ea5f0-b9fe-48bf-ae50-393488a4d2c0": {
+        "label": "To UV Perimeter : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToUVPerimeter",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToUVPerimeter.png"
+    },
+    "54f6e85c-4b62-4a97-9203-9bfc75da8d88": {
+        "label": "To UV Edge Loop : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToUVEdgeLoop",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToUVEdgeLoop.png"
+    },
+    "94462c50-4607-455c-8344-cfa699524fd8": {
+        "label": "To Shell : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToShell",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToShell.png"
+    },
+    "0e8e80fb-04e9-4c66-9f8e-849d47e55c1c": {
+        "label": "To Shell Border : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertSelectionToShellBorder",
+        "category": "",
+        "module": "Select",
+        "icon": "polyConvertToShellBorder.png"
+    },
+    "7bd88e6f-f0cb-4b02-8bb5-eef0f6e5e4f2": {
+        "label": "Use Constraints...",
+        "sourceType": "mel",
+        "command": "PolygonSelectionConstraints",
+        "category": "",
+        "module": "Select",
+        "icon": "polySelectUsingConstraints.png"
+    },
+    "62c7b4df-e9c5-476d-b25d-7ac651cb6779": {
+        "label": "Control Vertex : Components",
+        "sourceType": "mel",
+        "command": "SelectCVsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "57f1d7bd-fa68-477e-ac98-ec5130561344": {
+        "label": "Curve Point : Components",
+        "sourceType": "mel",
+        "command": "SelectCurvePointsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "6794b8c1-25a2-4ec7-b571-5a53f69cf76d": {
+        "label": "Edit Point : Components",
+        "sourceType": "mel",
+        "command": "SelectPointsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "2848252a-15a3-4c75-a8e1-c4ee25e25659": {
+        "label": "Hull : Components",
+        "sourceType": "mel",
+        "command": "SelectHullsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "e54128a6-adc1-409d-ae4c-74e920ed4a93": {
+        "label": "All CVs",
+        "sourceType": "mel",
+        "command": "SelectCurveCVsAll",
+        "category": "",
+        "module": "Select",
+        "icon": "selectCVs.png"
+    },
+    "a08dd190-6e2c-4cb0-a123-5a0f783fe938": {
+        "label": "First CV",
+        "sourceType": "mel",
+        "command": "SelectCurveCVsFirst",
+        "category": "",
+        "module": "Select",
+        "icon": "selectFirstCV.png"
+    },
+    "68b86c29-5852-437e-a623-5aec93b17e5b": {
+        "label": "Last CV",
+        "sourceType": "mel",
+        "command": "SelectCurveCVsLast",
+        "category": "",
+        "module": "Select",
+        "icon": "selectLastCV.png"
+    },
+    "e651bdab-72e1-4818-bb46-872a2859ac90": {
+        "label": "Cluster Curve",
+        "sourceType": "mel",
+        "command": "ClusterCurve",
+        "category": "",
+        "module": "Select",
+        "icon": "selectCluster.png"
+    },
+    "403fc14e-7289-4e0e-877a-92fd2031fe1d": {
+        "label": "Control Vertex : Components",
+        "sourceType": "mel",
+        "command": "SelectCVsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "44b9d6d7-fa67-416d-9048-10466dce2fea": {
+        "label": "Hull : Components",
+        "sourceType": "mel",
+        "command": "SelectHullsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "dc791b3c-9c30-43fa-b4dd-5e055c2477ab": {
+        "label": "Isoparm : Components",
+        "sourceType": "mel",
+        "command": "SelectLinesMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "1a69ec27-28e4-4874-82b0-d5ef0d2a75df": {
+        "label": "Surface Point : Components",
+        "sourceType": "mel",
+        "command": "SelectSurfacePointsMask",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "e8b3c676-a04c-450a-8b18-68dfa6064a9a": {
+        "label": "CV Selection Boundary",
+        "sourceType": "mel",
+        "command": "SelectCVSelectionBoundary",
+        "category": "",
+        "module": "Select",
+        "icon": "selectCVboundary.png"
+    },
+    "236efa9d-1e46-4d2e-b6ca-7237dafb7235": {
+        "label": "Surface Border",
+        "sourceType": "mel",
+        "command": "SelectSurfaceBorder",
+        "category": "",
+        "module": "Select",
+        "icon": "selectSurfaceBorder.png"
+    },
+    "64c7ddcb-82af-44bb-ae70-8de158a71829": {
+        "label": "Surface Border Options",
+        "sourceType": "mel",
+        "command": "SelectSurfaceBorderOptions",
+        "category": "",
+        "module": "Select",
+        "icon": "selectSurfaceBorder.png"
+    },
+    "1c52a812-9618-4133-8c11-6918e26afdad": {
+        "label": "(None) : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdSelectKindNone",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "be4f45d3-e819-45bc-8437-5818b0232723": {
+        "label": "Model : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdSelectKindModel",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "6793be7b-5d28-4ef0-9d9d-81b24030eb63": {
+        "label": "Group : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdSelectKindGroup",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "d93fd8e5-95ca-46f8-a2ed-57ca83cedc6b": {
+        "label": "Assembly : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdSelectKindAssembly",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "4a5e3f8f-ae03-46c7-b5b1-dca563049422": {
+        "label": "Component : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdSelectKindComponent",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "e4b9f8c3-6daa-4d59-a0d8-9236235089b9": {
+        "label": "Subcomponent : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdSelectKindSubComponent",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "6d6af10e-62c7-4243-bbb7-0d38c5c23af2": {
+        "label": "Point Instancer : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdPointInstancesPickMode_PointInstancer",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "49afab6e-34f3-493c-a2ea-bbe99d1d5818": {
+        "label": "Instances : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdPointInstancesPickMode_Instances",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    },
+    "0dce9c41-fc38-406c-a6fd-26832fefcf7a": {
+        "label": "Prototypes : USD Selection Mode",
+        "sourceType": "mel",
+        "command": "mayaUsdPointInstancesPickMode_Prototypes",
+        "category": "",
+        "module": "Select",
+        "icon": ""
+    }
+}

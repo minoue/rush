@@ -1,0 +1,370 @@
+{
+    "9b780e1e-e90d-4fa7-8548-f602361c72ae": {
+        "label": "Add Divisions",
+        "sourceType": "mel",
+        "command": "SubdividePolygon",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polySubdFacet.png"
+    },
+    "dff7aa52-1e1a-4cef-9f77-68aaf45df02b": {
+        "label": "Add Divisions Options",
+        "sourceType": "mel",
+        "command": "SubdividePolygonOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polySubdFacet.png"
+    },
+    "6aee2610-7f37-436d-ba68-39f334a356e0": {
+        "label": "Bevel",
+        "sourceType": "mel",
+        "command": "BevelPolygon",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyBevel.png"
+    },
+    "164950a0-719b-4ab1-93b1-7bd492a8c0e4": {
+        "label": "Bevel Options",
+        "sourceType": "mel",
+        "command": "BevelPolygonOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyBevel.png"
+    },
+    "544a43a4-d9c7-4e3f-a478-bf12ad4de091": {
+        "label": "Bridge",
+        "sourceType": "mel",
+        "command": "BridgeOrFill",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyBridge.png"
+    },
+    "c3750b5f-6dc6-4220-8375-71fa12384c9e": {
+        "label": "Bridge Options",
+        "sourceType": "mel",
+        "command": "BridgeEdgeOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyExtrudeEdge.png"
+    },
+    "bffb996f-c80a-4607-b90a-c1b262b92d79": {
+        "label": "Circularize",
+        "sourceType": "mel",
+        "command": "PolyCircularize",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyCircularize.png"
+    },
+    "def1d569-a640-4093-aac4-e7f9fb3552a4": {
+        "label": "Circularize Options",
+        "sourceType": "mel",
+        "command": "PolyCircularizeOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyExtrudeEdge.png"
+    },
+    "cd54d1fb-ffa1-4417-84a3-6de44bda5990": {
+        "label": "Collapse",
+        "sourceType": "mel",
+        "command": "PolygonCollapse",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyCollapseEdge.png"
+    },
+    "1c74c3a9-d151-44a3-95df-92078529b59f": {
+        "label": "Connect",
+        "sourceType": "mel",
+        "command": "ConnectComponents",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyConnectComponents.png"
+    },
+    "6db4631c-930b-4f92-8ee4-4c1396d10c41": {
+        "label": "Connect Options",
+        "sourceType": "mel",
+        "command": "ConnectComponentsOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyConnectComponents.png"
+    },
+    "2fe9fb70-7443-4cfc-a9b4-44b3bfab30f6": {
+        "label": "Detach",
+        "sourceType": "mel",
+        "command": "DetachComponent",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polySplitVertex.png"
+    },
+    "6b750bfa-e39e-4561-8d2f-87455f46c14d": {
+        "label": "Extrude",
+        "sourceType": "mel",
+        "command": "PolyExtrude",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyExtrudeFacet.png"
+    },
+    "3a7c509c-7ff1-4eaa-a639-4cb5e0ce5d2e": {
+        "label": "Extrude Options",
+        "sourceType": "mel",
+        "command": "performPolyExtrude 1",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyExtrudeFacet.png"
+    },
+    "a7fb0cbc-0f6c-4179-a6b8-ac9341dfb26f": {
+        "label": "Merge",
+        "sourceType": "mel",
+        "command": "PolyMerge",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyMerge.png"
+    },
+    "35859104-16fd-42a1-90a5-1196242c3a95": {
+        "label": "Merge Options",
+        "sourceType": "mel",
+        "command": "PolyMergeOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyMerge.png"
+    },
+    "7cf83cad-db31-4ea2-a397-03411b8a85ce": {
+        "label": "Merge to Center",
+        "sourceType": "mel",
+        "command": "MergeToCenter",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyMergeToCenter.png"
+    },
+    "ec0fbf21-5eea-40f4-aa76-4a6344209bce": {
+        "label": "Transform",
+        "sourceType": "mel",
+        "command": "MovePolygonComponent",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyMoveVertex.png"
+    },
+    "fdf1d828-949c-49e8-935d-1b9bb59fb454": {
+        "label": "Transform Options",
+        "sourceType": "mel",
+        "command": "MovePolygonComponentOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyMoveVertex.png"
+    },
+    "531d8c03-2ee2-4198-b7c5-15c43ae3cb28": {
+        "label": "Flip",
+        "sourceType": "mel",
+        "command": "FlipMesh",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyFlip.png"
+    },
+    "d9000ba3-4029-4b8c-abf3-1473e9b9d501": {
+        "label": "Symmetrize",
+        "sourceType": "mel",
+        "command": "Symmetrize",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "symmetrize.png"
+    },
+    "b292254f-de3f-4cbd-bed8-7cdf624e3ce3": {
+        "label": "Average Vertices",
+        "sourceType": "mel",
+        "command": "AverageVertex",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyAverageVertex.png"
+    },
+    "00eb8dce-b91f-4237-a174-72f18de1e157": {
+        "label": "Average Vertices Options",
+        "sourceType": "mel",
+        "command": "performPolyAverageVertex 1",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyAverageVertex.png"
+    },
+    "af22ba89-1dc7-44e3-8b35-f4226e58f15d": {
+        "label": "Chamfer Vertices",
+        "sourceType": "mel",
+        "command": "ChamferVertex",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyChamfer.png"
+    },
+    "41b5a37e-1196-4abd-afd0-445a9ec74b53": {
+        "label": "Chamfer Vertices Options",
+        "sourceType": "mel",
+        "command": "ChamferVertexOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyChamfer.png"
+    },
+    "a75ca007-6fb1-499e-9060-51b9548d69d6": {
+        "label": "Reorder Vertices",
+        "sourceType": "mel",
+        "command": "ReorderVertex",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "reorderIDs.png"
+    },
+    "4a438b61-f776-4e8e-a53b-486825c46a8b": {
+        "label": "Delete Edge/Vertex",
+        "sourceType": "mel",
+        "command": "DeletePolyElements",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyDelEdgeVertex.png"
+    },
+    "91a17440-338a-46de-93b8-d3b1343c678c": {
+        "label": "Edit Edge Flow",
+        "sourceType": "mel",
+        "command": "PolyEditEdgeFlow",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyEditEdgeFlow.png"
+    },
+    "401d8d31-a6be-4797-b4e8-935ddbe8321b": {
+        "label": "Edit Edge Flow Options",
+        "sourceType": "mel",
+        "command": "PolyEditEdgeFlowOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyEditEdgeFlow.png"
+    },
+    "af83c88d-825d-40b1-a070-ee27b5e5b54a": {
+        "label": "Flip Triangle Edge",
+        "sourceType": "mel",
+        "command": "FlipTriangleEdge",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyFlipEdge.png"
+    },
+    "62e5b5bb-3a20-4b75-a57f-da93aac1697b": {
+        "label": "Spin Edge Backward",
+        "sourceType": "mel",
+        "command": "PolySpinEdgeBackward",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polySpinEdgeBackward.png"
+    },
+    "d57515af-3786-4bfb-9f96-432a81370104": {
+        "label": "Spin Edge Forward",
+        "sourceType": "mel",
+        "command": "PolySpinEdgeForward",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polySpinEdgeForward.png"
+    },
+    "a72f9f91-6a29-42ee-9598-681d08109fd3": {
+        "label": "Assign Invisible Faces",
+        "sourceType": "mel",
+        "command": "PolyAssignSubdivHole",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyAssignSubdivHole.png"
+    },
+    "9e09cacd-444e-4576-8c28-74e14cb56733": {
+        "label": "Assign Invisible Faces Options",
+        "sourceType": "mel",
+        "command": "PolyAssignSubdivHoleOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyAssignSubdivHole.png"
+    },
+    "fcfb8c4c-d274-4188-940d-d4678be8fac0": {
+        "label": "Duplicate",
+        "sourceType": "mel",
+        "command": "DuplicateFace",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyDuplicateFacet.png"
+    },
+    "a08246d2-4fb7-40a3-a07d-c3eb2ed96e1a": {
+        "label": "Duplicate Options",
+        "sourceType": "mel",
+        "command": "DuplicateFaceOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyDuplicateFacet.png"
+    },
+    "1e47d824-66b1-463b-9a58-805c8bee98d9": {
+        "label": "Extract",
+        "sourceType": "mel",
+        "command": "ExtractFace",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyChipOff.png"
+    },
+    "5febb2a2-9b3a-4f1d-9ab9-b7197aac947c": {
+        "label": "Extract Options",
+        "sourceType": "mel",
+        "command": "ExtractFaceOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyChipOff.png"
+    },
+    "699c24ee-09e0-4283-b590-9b4c870154c3": {
+        "label": "Poke",
+        "sourceType": "mel",
+        "command": "PokePolygon",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyPoke.png"
+    },
+    "20cd4d65-e219-46b3-9aa5-64187a5c2901": {
+        "label": "Poke Options",
+        "sourceType": "mel",
+        "command": "PokePolygonOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyPoke.png"
+    },
+    "a2830318-cb9e-47fe-bda6-ea56bf6b708c": {
+        "label": "Wedge",
+        "sourceType": "mel",
+        "command": "WedgePolygon",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyWedgeFace.png"
+    },
+    "85757839-eb13-4040-91dd-9e5c90fa69e7": {
+        "label": "Wedge Options",
+        "sourceType": "mel",
+        "command": "WedgePolygonOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "polyWedgeFace.png"
+    },
+    "3fe92c43-b181-48df-bd4b-1b3267559414": {
+        "label": "Project Curve on Mesh",
+        "sourceType": "mel",
+        "command": "ProjectCurveOnMesh",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "projectCurve_Poly.png"
+    },
+    "16235351-fae9-4f94-8f15-2235dd7843c1": {
+        "label": "Project Curve on Mesh Options",
+        "sourceType": "mel",
+        "command": "ProjectCurveOnMeshOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "projectCurve.png"
+    },
+    "1074e904-eeae-42c3-9f64-ae7854e7e08a": {
+        "label": "Split Mesh with Projected Curve",
+        "sourceType": "mel",
+        "command": "SplitMeshWithProjectedCurve",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "projectCurveSplit_Poly.png"
+    },
+    "b3d2a7ca-db30-4c93-9be8-929d3f151878": {
+        "label": "Split Mesh with Projected Curve Options",
+        "sourceType": "mel",
+        "command": "SplitMeshWithProjectedCurveOptions",
+        "category": "",
+        "module": "Edit Mesh",
+        "icon": "projectCurve.png"
+    }
+}

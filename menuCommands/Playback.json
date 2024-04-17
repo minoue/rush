@@ -1,0 +1,226 @@
+{
+    "b81e4c80-68c3-4dbe-ba59-1f5d32dff919": {
+        "label": "Playblast",
+        "sourceType": "mel",
+        "command": "PlayblastWindow",
+        "category": "",
+        "module": "Playback",
+        "icon": "playblast.png"
+    },
+    "7c11a466-c3b5-427a-9d0c-1c6cf52d1653": {
+        "label": "Playblast Options",
+        "sourceType": "mel",
+        "command": "PlayblastOptions",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "55f442fe-4a87-4941-881e-85ffcfeed666": {
+        "label": "Play",
+        "sourceType": "mel",
+        "command": "PlaybackForward",
+        "category": "",
+        "module": "Playback",
+        "icon": "timeplay.png"
+    },
+    "f5cd5dc7-9dfb-4391-aab1-1bdc8cb6b9e1": {
+        "label": "Backward",
+        "sourceType": "mel",
+        "command": "PlaybackBackward",
+        "category": "",
+        "module": "Playback",
+        "icon": "timerev.png"
+    },
+    "08caee13-a23b-4d79-a0b3-ab9dfede497e": {
+        "label": "Stop",
+        "sourceType": "mel",
+        "command": "PlaybackStop",
+        "category": "",
+        "module": "Playback",
+        "icon": "timestop.png"
+    },
+    "e3648ad7-5adf-46ef-ac63-4e080247deb4": {
+        "label": "Next Key",
+        "sourceType": "mel",
+        "command": "NextKey",
+        "category": "",
+        "module": "Playback",
+        "icon": "timenext.png"
+    },
+    "979f4c60-bc1c-4a15-a46e-e52d6e8dc6ee": {
+        "label": "Prev Key",
+        "sourceType": "mel",
+        "command": "PreviousKey",
+        "category": "",
+        "module": "Playback",
+        "icon": "timeprev.png"
+    },
+    "a94a79c1-52fc-4b0e-ab97-04d2d0c8b375": {
+        "label": "Select Next Key",
+        "sourceType": "mel",
+        "command": "SelectNextKey",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "d341305d-e203-40f1-8fe5-e6860da03d30": {
+        "label": "Select Previous Key",
+        "sourceType": "mel",
+        "command": "SelectPreviousKey",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "a976e983-4419-4bb3-b552-d5f76dd666a7": {
+        "label": "Next Frame",
+        "sourceType": "mel",
+        "command": "NextFrame",
+        "category": "",
+        "module": "Playback",
+        "icon": "timestart.png"
+    },
+    "82bd9e66-6766-47be-b07b-a86955862c79": {
+        "label": "Prev Frame",
+        "sourceType": "mel",
+        "command": "PreviousFrame",
+        "category": "",
+        "module": "Playback",
+        "icon": "timeend.png"
+    },
+    "35015bb6-ce81-4a20-8bcb-446d45f21249": {
+        "label": "Play Range Start",
+        "sourceType": "mel",
+        "command": "GoToMinFrame",
+        "category": "",
+        "module": "Playback",
+        "icon": "timerew.png"
+    },
+    "be7aa732-e523-4fc3-abf4-20e41675c64c": {
+        "label": "Play Range End",
+        "sourceType": "mel",
+        "command": "GoToMaxFrame",
+        "category": "",
+        "module": "Playback",
+        "icon": "timefwd.png"
+    },
+    "593944b5-af9d-484b-b16b-adbfbe1bcca0": {
+        "label": "Enabled Clips : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeEnabledClips",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "b358b65a-251f-42b0-be2f-865574a1f04e": {
+        "label": "Min/Max : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeMinMax",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "09b04f91-cfa6-4720-8b5a-34c978008739": {
+        "label": "Preferences : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangePrefs",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "b6fe1abd-79cb-4af8-8f4f-72291eb502eb": {
+        "label": "Selected : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeHighlight",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "584193f7-491e-4e21-a671-3f9e04085a34": {
+        "label": "Sound Length : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeSound",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "10732d2f-33c7-4de8-841e-2a9e70abf858": {
+        "label": "Start/End : Set Range to",
+        "sourceType": "mel",
+        "command": "PlaybackRangeStartEnd",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "dfe3cf5a-a301-4610-8ac6-7054d3c7ef9c": {
+        "label": "Play Every Frame, Free : Playback Speed",
+        "sourceType": "mel",
+        "command": "PlaybackFree",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "5977e3c4-74d5-45d6-ba71-b444bfbcc03f": {
+        "label": "Play Every Frame, Max Real-time : Playback Speed",
+        "sourceType": "mel",
+        "command": "PlaybackPefRealtime",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "cf998aa1-fb8d-4417-b211-170c7e7e9895": {
+        "label": "Real-time : Playback Speed",
+        "sourceType": "mel",
+        "command": "PlaybackRealtime",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "0d12bce8-283c-4129-8abc-766244edc83f": {
+        "label": "Continuous : Playback Looping",
+        "sourceType": "mel",
+        "command": "PlaybackLoopContinuous",
+        "category": "",
+        "module": "Playback",
+        "icon": "playbackLoopingContinuous.png"
+    },
+    "5884663a-0793-4c65-a96e-9d8f90c06c99": {
+        "label": "Once : Playback Looping",
+        "sourceType": "mel",
+        "command": "PlaybackLoopOnce",
+        "category": "",
+        "module": "Playback",
+        "icon": "playbackLoopingOnce.png"
+    },
+    "cc09cd01-6932-4c57-9c8b-ec5eb7a7c093": {
+        "label": "Oscillate : Playback Looping",
+        "sourceType": "mel",
+        "command": "PlaybackLoopOscillate",
+        "category": "",
+        "module": "Playback",
+        "icon": "playbackLoopingOscillate.png"
+    },
+    "9d269e3c-d6ea-4bba-a21e-012f22b0f4f9": {
+        "label": "Enable Stepped Preview",
+        "sourceType": "mel",
+        "command": "PlaybackSteppedPreview",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "270b4cd7-6a68-4b2f-a173-a341a9014dd8": {
+        "label": "Render Current Frame",
+        "sourceType": "mel",
+        "command": "RenderIntoNewWindow",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    },
+    "0bd5d091-f0ec-4cc9-a517-63df45073e51": {
+        "label": "Render Settings",
+        "sourceType": "mel",
+        "command": "RenderGlobalsWindow",
+        "category": "",
+        "module": "Playback",
+        "icon": ""
+    }
+}

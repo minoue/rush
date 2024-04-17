@@ -1,0 +1,682 @@
+{
+    "c406889e-d6a6-4c2d-9901-41522132867a": {
+        "label": "Undo \"doDelete\"",
+        "sourceType": "mel",
+        "command": "Undo",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "c6246354-e615-4d4c-8759-f962e51c8e38": {
+        "label": "Redo",
+        "sourceType": "mel",
+        "command": "Redo",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "477cf617-600d-4d2b-8ae1-d2dd56754c47": {
+        "label": "Repeat \"import uuid  id = str(uui...\"",
+        "sourceType": "mel",
+        "command": "RepeatLast",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "7785da04-a2cb-415e-b0f6-617a367b9b04": {
+        "label": "Recent Commands List",
+        "sourceType": "mel",
+        "command": "RecentCommandsWindow",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "35cc5ea2-7ddf-4a82-868c-6403225189d9": {
+        "label": "Cut",
+        "sourceType": "mel",
+        "command": "CutSelected",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "4d50599c-2a49-46d9-a673-659d7175f8b2": {
+        "label": "Copy",
+        "sourceType": "mel",
+        "command": "CopySelected",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "967356b7-54ef-4e56-8612-9e47cdbacf3d": {
+        "label": "Paste",
+        "sourceType": "mel",
+        "command": "PasteSelected",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "8d07fd21-e03a-461d-bf2b-1a4b3747698e": {
+        "label": "Cut Keys : Keys",
+        "sourceType": "mel",
+        "command": "CutKeys",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "29abb385-1b2d-4951-8f1e-6ce2df7d3963": {
+        "label": "Cut Keys Options : Keys",
+        "sourceType": "mel",
+        "command": "CutKeysOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "c25c1c08-ab64-4ddb-ab31-6645ca7da990": {
+        "label": "Copy Keys : Keys",
+        "sourceType": "mel",
+        "command": "CopyKeys",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "17a957df-36b6-4dcc-b3c4-74dd79c8ce72": {
+        "label": "Copy Keys Options : Keys",
+        "sourceType": "mel",
+        "command": "CopyKeysOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "c670db0b-b1e8-4a71-985a-5fdaf2f01903": {
+        "label": "Paste Keys : Keys",
+        "sourceType": "mel",
+        "command": "PasteKeys",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "f151c64a-c9b7-4497-9b2c-37d036f6b981": {
+        "label": "Paste Keys Options : Keys",
+        "sourceType": "mel",
+        "command": "PasteKeysOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "ecd83cae-dc35-4652-89e7-407744ee3241": {
+        "label": "Delete Keys : Keys",
+        "sourceType": "mel",
+        "command": "DeleteKeys",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "d894b41a-091c-408c-b4f3-9c5287cc314a": {
+        "label": "Delete Keys Options : Keys",
+        "sourceType": "mel",
+        "command": "DeleteKeysOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "6086f1ca-55f0-4842-a8ec-752231a4cb2c": {
+        "label": "Scale Keys : Keys",
+        "sourceType": "mel",
+        "command": "ScaleKeys",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "156fc793-7403-4d16-8192-77a8774468fd": {
+        "label": "Scale Keys Options : Keys",
+        "sourceType": "mel",
+        "command": "ScaleKeysOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "45cec60d-bbdd-462a-992c-90f3c1578d84": {
+        "label": "Snap Keys : Keys",
+        "sourceType": "mel",
+        "command": "SnapKeys",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "d8c7d319-b128-4519-91d9-c9fb6c841cf9": {
+        "label": "Snap Keys Options : Keys",
+        "sourceType": "mel",
+        "command": "SnapKeysOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "2e5da431-e9d6-405a-85f7-2a0b432abbb8": {
+        "label": "Bake Simulation : Keys",
+        "sourceType": "mel",
+        "command": "BakeSimulation",
+        "category": "",
+        "module": "Edit",
+        "icon": "bakeAnimation.png"
+    },
+    "f71070fa-b261-417e-a9b2-279695effe36": {
+        "label": "Bake Simulation Options : Keys",
+        "sourceType": "mel",
+        "command": "BakeSimulationOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "e620afb2-5f24-4025-b984-054388c72a33": {
+        "label": "Delete",
+        "sourceType": "mel",
+        "command": "Delete",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "faa3f3e5-1d95-43d6-80b7-d55c93495937": {
+        "label": "History : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteHistory",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "21bb0e7d-82d4-48cb-ba34-b73b39a58803": {
+        "label": "Non-Deformer History : Delete by Type",
+        "sourceType": "mel",
+        "command": "BakeNonDefHistory",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "60bcc6e3-ca56-4f0d-a931-d7a9e0130a5e": {
+        "label": "Non-Deformer History Options : Delete by Type",
+        "sourceType": "mel",
+        "command": "BakeNonDefHistoryOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "794a7e09-be1f-481e-930e-bed409ff24f9": {
+        "label": "Channels : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteChannels",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "07f1eb39-691d-43a8-be3e-54c6dc5c5b03": {
+        "label": "Channels Options : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteChannelsOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "6e0a867d-5505-49b7-89fc-368d928bfe50": {
+        "label": "Static Channels : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteStaticChannels",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "d93bf552-8926-49d1-adfa-36f9fa2951b4": {
+        "label": "Static Channels Options : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteStaticChannelsOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "3570ac20-3b5d-416a-9398-641815b99899": {
+        "label": "Constraints : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteConstraints",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "b31b4d16-beb4-40e1-a298-f17f427237ac": {
+        "label": "Motion Paths : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteMotionPaths",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "8165da83-2386-440d-8fe6-388cf91e71e9": {
+        "label": "Non-particle Expressions : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteExpressions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "a5147f6c-91b6-475b-8dd0-0a0375af21d2": {
+        "label": "Non-particle Expressions Options : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteExpressionsOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "f8666808-2e8e-47bf-913e-bda11c86e407": {
+        "label": "Assets : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteSelectedContainers",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "6a379492-9dc3-4888-ba35-9e228a603e19": {
+        "label": "Rigid Bodies : Delete by Type",
+        "sourceType": "mel",
+        "command": "DeleteRigidBodies",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "3a2025b9-4dbc-4546-bf68-0e5cb5a97b88": {
+        "label": "History : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllHistory",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "9e2b6d2d-cce3-4195-a1e7-29ae550068a2": {
+        "label": "Non-Deformer History : Delete All by Type",
+        "sourceType": "mel",
+        "command": "BakeAllNonDefHistory",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "c688a587-0fd6-49d7-aaba-a22cee6b282c": {
+        "label": "Channels : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllChannels",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "58153d02-904e-4c77-b89e-75dab6cf03e6": {
+        "label": "Static Channels : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllStaticChannels",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "87fcb100-93f7-4b38-be9d-b9e321eba881": {
+        "label": "Clips : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllClips",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "7572c737-8f41-4cfb-bf44-c885c333da9d": {
+        "label": "Constraints : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllConstraints",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "1616853c-b55d-43e6-a30f-e78a4a4a3ec8": {
+        "label": "Motion Paths : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllMotionPaths",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "fe6fa4fa-8d9a-47fa-b6a7-7d21e80b3007": {
+        "label": "Non-particle Expressions : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllExpressions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "d9c9f91e-c90f-4af2-a399-4120c4e412cd": {
+        "label": "Sounds : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllSounds",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "ccbd6473-d16c-4014-8d4a-7f460fcfd720": {
+        "label": "IK Handles : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllIKHandles",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "dd9fb2cd-5bdf-4c6c-b6aa-c44d385ebea7": {
+        "label": "Joints : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllJoints",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "0eecabd3-1872-4379-b5d7-6a13e469b4aa": {
+        "label": "Clusters : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllClusters",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "453681c4-ceee-40b1-95bb-652291aef76c": {
+        "label": "Lattices : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllLattices",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "4f157cf3-a230-4adb-ba6a-dc2ece53fac8": {
+        "label": "Nonlinears : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllNonLinearDeformers",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "b4ff8bc6-61c2-4bb0-a866-140a12bc9885": {
+        "label": "Sculpt Objects : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllSculptObjects",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "44f0a4dc-91fe-4d49-ab7d-41628cc6d31f": {
+        "label": "Wires : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllWires",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "aebb03e9-b721-4810-b4cb-3c2cbf42a792": {
+        "label": "Cameras : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllCameras",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "fda4993a-60cc-448f-a292-c59160cf1bf1": {
+        "label": "Image Planes : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllImagePlanes",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "c8049a02-99b7-4d26-a82e-3a1d621ab228": {
+        "label": "Lights : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllLights",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "5f56cf4c-6de2-420c-b2ef-383c1bcda720": {
+        "label": "Shading Groups and Materials : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllShadingGroupsAndMaterials",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "20b1f315-545f-47de-8f59-be8721645d2d": {
+        "label": "Controllers : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllControllers",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "6fdf52b7-b1e0-4a6f-a606-2c170e97763a": {
+        "label": "Assets : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllContainers",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "71d07a7d-8b47-406a-b898-e8a304b2aed6": {
+        "label": "Fluids : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllFluids",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "2b789fcc-5d05-4bc3-9143-98f2cd4dd61c": {
+        "label": "Particles : Delete All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllParticles",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "28904d25-4da4-4851-85a6-49b61db9cec6": {
+        "label": "Rigid Bodies : Delete All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllRigidBodies",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "97f98642-f052-4d14-9ec5-6111228f2453": {
+        "label": "Rigid Constraints : Delete All by Type",
+        "sourceType": "mel",
+        "command": "SelectAllRigidConstraints",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "9e86fa59-afab-4f5b-b6a6-caa527a7b854": {
+        "label": "Strokes : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllStrokes",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "93cefbdd-c3f6-49e7-9952-62e40759982e": {
+        "label": "Dynamic Constraints : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllDynamicConstraints",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "ae9fc200-372d-497c-af78-05458bc7aaa9": {
+        "label": "nCloths : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllNCloths",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "9383416f-4da3-4cad-8c94-22325e0a30b7": {
+        "label": "nParticles : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllNParticles",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "909b5e81-7446-4f54-b85e-780034c9e8e4": {
+        "label": "nRigids : Delete All by Type",
+        "sourceType": "mel",
+        "command": "DeleteAllNRigids",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "0fe5d706-0256-42e7-a7a0-99104d431d08": {
+        "label": "Duplicate",
+        "sourceType": "mel",
+        "command": "Duplicate",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "85db5226-29f3-4572-9396-86f559237960": {
+        "label": "Duplicate Special",
+        "sourceType": "mel",
+        "command": "DuplicateSpecial",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "8c034ce6-1445-443e-a4df-1a4570ec5468": {
+        "label": "Duplicate Special Options",
+        "sourceType": "mel",
+        "command": "DuplicateSpecialOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "32a26f50-f1ec-4dcf-9aa1-c8898a511a16": {
+        "label": "Duplicate with Transform",
+        "sourceType": "mel",
+        "command": "DuplicateWithTransform",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "ef508c33-dc0e-4fb4-8db5-fb30d9fab3e2": {
+        "label": "Transfer Attribute Values",
+        "sourceType": "mel",
+        "command": "TransferAttributeValues",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "8ebcd39d-1f7b-46c9-a3d5-cabe7fb7ce85": {
+        "label": "Transfer Attribute Values Options",
+        "sourceType": "mel",
+        "command": "TransferAttributeValuesOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "0c8e249c-d4f2-4dd8-a9ae-12edcc54bc8b": {
+        "label": "Group",
+        "sourceType": "mel",
+        "command": "Group",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "2cc95024-c4a9-4eed-9e2a-aa1dc478370d": {
+        "label": "Group Options",
+        "sourceType": "mel",
+        "command": "GroupOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "4bf60ef5-6631-4e69-904d-f0175a900233": {
+        "label": "Ungroup",
+        "sourceType": "mel",
+        "command": "Ungroup",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "978de5f0-9e8c-4044-a676-2f127b1ca730": {
+        "label": "Ungroup Options",
+        "sourceType": "mel",
+        "command": "UngroupOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "387b466f-d7c8-44d6-8933-2693b6e22c43": {
+        "label": "Create LOD Group : LOD (Level of Detail)",
+        "sourceType": "mel",
+        "command": "LevelOfDetailGroup",
+        "category": "",
+        "module": "Edit",
+        "icon": "levelOfDetail.png"
+    },
+    "c46e2064-8d89-4040-8d26-2714eb01e840": {
+        "label": "Create LOD Group Options : LOD (Level of Detail)",
+        "sourceType": "mel",
+        "command": "LevelOfDetailGroupOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "2d1c3a8a-e06f-4ded-95e0-65a2c3ba1134": {
+        "label": "Generate LOD Meshes : LOD (Level of Detail)",
+        "sourceType": "mel",
+        "command": "LODGenerateMeshes",
+        "category": "",
+        "module": "Edit",
+        "icon": "levelOfDetail.png"
+    },
+    "d0e17d0b-2096-4d61-a22a-7d47219a2a2a": {
+        "label": "Generate LOD Meshes Options : LOD (Level of Detail)",
+        "sourceType": "mel",
+        "command": "LODGenerateMeshesOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "07014b3c-3a7e-45fa-9e2c-ffba95afa151": {
+        "label": "Ungroup LOD Group : LOD (Level of Detail)",
+        "sourceType": "mel",
+        "command": "LevelOfDetailUngroup",
+        "category": "",
+        "module": "Edit",
+        "icon": "levelOfDetailDelete.png"
+    },
+    "2e0d6ae7-7b2e-458c-b682-fb9e322a683b": {
+        "label": "Parent",
+        "sourceType": "mel",
+        "command": "Parent",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "90403eb1-88e0-4c34-8cc1-9747261019e7": {
+        "label": "Parent Options",
+        "sourceType": "mel",
+        "command": "ParentOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "76d7c8db-e33b-418b-b498-3073c20ce852": {
+        "label": "Unparent",
+        "sourceType": "mel",
+        "command": "Unparent",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    },
+    "ea46df83-9a3b-4e3f-9e6e-30b66ca3d885": {
+        "label": "Unparent Options",
+        "sourceType": "mel",
+        "command": "UnparentOptions",
+        "category": "",
+        "module": "Edit",
+        "icon": ""
+    }
+}

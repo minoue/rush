@@ -1,0 +1,130 @@
+{
+    "d64eb6d5-d309-47a4-b0b5-a47a47acae9f": {
+        "label": "Tag As Controller",
+        "sourceType": "mel",
+        "command": "TagAsController",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "8464f185-a99b-4289-8c2b-e01fcbb6ef22": {
+        "label": "Parent Controller",
+        "sourceType": "mel",
+        "command": "TagAsControllerParent",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "45ad57e3-d012-4cb9-8ace-d4ed9d3bcbd6": {
+        "label": "Create Control Rig",
+        "sourceType": "mel",
+        "command": "CreateControlRig",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "929959da-ed50-4a87-8882-0f7c668f7671": {
+        "label": "Create Character Set",
+        "sourceType": "mel",
+        "command": "CreateCharacter",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "113b7a19-e3a6-4669-a600-4bddaa33a33d": {
+        "label": "Create Character Set Options",
+        "sourceType": "mel",
+        "command": "CreateCharacterOptions",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "285af818-f59a-4347-bef8-139e20a3b6b0": {
+        "label": "Create Subcharacter Set",
+        "sourceType": "mel",
+        "command": "CreateSubCharacter",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "ba10508a-fb89-466d-944b-74482bb6fe78": {
+        "label": "Create Subcharacter Set Options",
+        "sourceType": "mel",
+        "command": "CreateSubCharacterOptions",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "f0d189ed-a761-474b-a8ec-e817fde34e98": {
+        "label": "Character Mapper",
+        "sourceType": "mel",
+        "command": "CharacterMapper",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "44ff2516-3c23-4412-8b2b-3be3f637b634": {
+        "label": "Attribute Editor",
+        "sourceType": "mel",
+        "command": "EditCharacterAttributes",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "b1a1d5a2-f620-4d4b-9a18-340bfffe0b44": {
+        "label": "Add to Character Set",
+        "sourceType": "mel",
+        "command": "AddToCharacterSet",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "39d93498-790d-4716-b677-8f83bb32fbd3": {
+        "label": "Remove from Character Set",
+        "sourceType": "mel",
+        "command": "RemoveFromCharacterSet",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "43963de9-f630-425a-afd0-7992bb81238f": {
+        "label": "Merge Character Sets",
+        "sourceType": "mel",
+        "command": "MergeCharacterSet",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "b86baab3-47e1-4fa6-8ce1-85ffc31296c6": {
+        "label": "None : Set Current Character Set",
+        "sourceType": "mel",
+        "command": "ClearCurrentCharacterList",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "63d55338-98a3-45d4-91d5-e6af48d8d4f2": {
+        "label": "Character Set Editor : Set Current Character Set",
+        "sourceType": "mel",
+        "command": "characterEditor( true )",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "afee6ea2-dd43-497a-a606-aec0e18e1fea": {
+        "label": "Redirect",
+        "sourceType": "mel",
+        "command": "AddAnimationOffset",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    },
+    "de3520a0-6597-4f9b-b4a7-f224b6ad41ee": {
+        "label": "Redirect Options",
+        "sourceType": "mel",
+        "command": "AddAnimationOffsetOptions",
+        "category": "",
+        "module": "Control",
+        "icon": ""
+    }
+}

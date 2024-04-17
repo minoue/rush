@@ -1,0 +1,1130 @@
+{
+    "8001b79f-324b-44d8-8e31-038d74d0aba2": {
+        "label": "Move Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "MoveTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "move_M.png"
+    },
+    "ca30c829-aa22-4083-b5a5-58aa1eea9a15": {
+        "label": "Move Tool Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "MoveToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "move_M.png"
+    },
+    "ec99d188-05f0-45e4-a4c2-aeb974317a78": {
+        "label": "Rotate Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "RotateTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "rotate_M.png"
+    },
+    "4f20282a-e2bf-44eb-bd49-040d53f683b7": {
+        "label": "Rotate Tool Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "RotateToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "rotate_M.png"
+    },
+    "8cd866c8-f359-42d2-8e8e-379684ef6d45": {
+        "label": "Scale Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "ScaleTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "scale_M.png"
+    },
+    "6da7f5e1-b6d3-466e-9898-9eae3f887d32": {
+        "label": "Scale Tool Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "ScaleToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "scale_M.png"
+    },
+    "6022093e-313d-438e-b78f-ad2ee077d4db": {
+        "label": "Type Manipulator : Transformation Tools",
+        "sourceType": "mel",
+        "command": "EditPolygonType",
+        "category": "",
+        "module": "Modify",
+        "icon": "TypeMoveTool.png"
+    },
+    "6614a04a-2272-49b2-ab68-7f36987a9135": {
+        "label": "Universal Manipulator : Transformation Tools",
+        "sourceType": "mel",
+        "command": "UniversalManip",
+        "category": "",
+        "module": "Modify",
+        "icon": "globalManip.png"
+    },
+    "2a24207e-054e-472b-84c6-0acbe1898ad4": {
+        "label": "Universal Manipulator Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "UniversalManipOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "globalManip.png"
+    },
+    "5e51e7ad-92e9-4e8d-896a-a0065fdcba8e": {
+        "label": "Move Normal Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "MoveNormalTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "moveNormal.png"
+    },
+    "b49b6cfb-46b7-4cea-93a1-a253e4d4864a": {
+        "label": "Move Normal Tool Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "MoveNormalToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "moveNormal.png"
+    },
+    "d94a1d32-7e1e-4509-a87e-830a64b4f660": {
+        "label": "Move/Rotate/Scale Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "MoveRotateScaleTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "srt.png"
+    },
+    "fd25b115-dc7a-41fa-b9f7-3fe9cd73b078": {
+        "label": "Show Manipulator Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "ShowManipulatorTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "showManip.png"
+    },
+    "7f53a130-f7a4-47b7-8e31-1ace8737a9ec": {
+        "label": "None : Default Object Manipulator",
+        "sourceType": "mel",
+        "command": "SetDefaultManipNone",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "87aac30b-a40b-4241-bdd8-8262679cd862": {
+        "label": "Move : Default Object Manipulator",
+        "sourceType": "mel",
+        "command": "SetDefaultManipMove",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "8d6376de-80b9-4739-b6cd-49657b3934f0": {
+        "label": "Rotate : Default Object Manipulator",
+        "sourceType": "mel",
+        "command": "SetDefaultManipRotate",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "af54aaa0-bbd1-4873-990e-62a665d0d4c2": {
+        "label": "Scale : Default Object Manipulator",
+        "sourceType": "mel",
+        "command": "SetDefaultManipScale",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "fd0ea1de-7dd6-4d74-87b7-3a5ecd6664e3": {
+        "label": "Transform : Default Object Manipulator",
+        "sourceType": "mel",
+        "command": "SetDefaultManipTransform",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "bfe5e709-d01a-4131-9045-9809a527bea7": {
+        "label": "Proportional Modification Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "ProportionalModificationTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "propMod.png"
+    },
+    "d30ee5be-2082-43fa-80a9-e39922ce5539": {
+        "label": "Proportional Modification Tool Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "setToolTo $gPropMod; toolPropertyWindow",
+        "category": "",
+        "module": "Modify",
+        "icon": "propMod.png"
+    },
+    "0d783a14-9133-474c-b49d-5ea0b7a99dc3": {
+        "label": "Soft Modification Tool : Transformation Tools",
+        "sourceType": "mel",
+        "command": "SoftModTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "softMod.png"
+    },
+    "c24c50f4-379c-426a-a885-dea2d989b50e": {
+        "label": "Soft Modification Tool Options : Transformation Tools",
+        "sourceType": "mel",
+        "command": "SoftModToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "softMod.png"
+    },
+    "7c026f35-db0e-475d-aedc-662538692a72": {
+        "label": "Reset Transformations",
+        "sourceType": "mel",
+        "command": "ResetTransformations",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "d14df7f2-1532-4120-a3b5-564649a4e032": {
+        "label": "Reset Transformations Options",
+        "sourceType": "mel",
+        "command": "ResetTransformationsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "a2461b8e-bc46-4c07-b6f0-c8665552e9c5": {
+        "label": "Freeze Transformations",
+        "sourceType": "mel",
+        "command": "FreezeTransformations",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "7a974236-2cc9-4c43-b756-814a4f4bf34e": {
+        "label": "Freeze Transformations Options",
+        "sourceType": "mel",
+        "command": "FreezeTransformationsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "1ba1fbb7-578c-4198-8e85-a2b5691b3280": {
+        "label": "Match All Transforms : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchTransform",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "0d99d2ea-ef34-47b4-a001-9064dbda3c68": {
+        "label": "Match All Transforms Options : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchTransformOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "a0dcfdc6-60a1-4898-997f-708960e8076b": {
+        "label": "Match Translation : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchTranslation",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "4f589593-5da6-4a1b-a824-bfe80ea5b63f": {
+        "label": "Match Translation Options : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchTranslationOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "b03c22c4-2e17-425b-9bc0-3a350b6a9c9e": {
+        "label": "Match Rotation : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchRotation",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "c46573a5-5546-43e4-a81f-071b71e4a81d": {
+        "label": "Match Rotation Options : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchRotationOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "0795fefc-2a1a-4e3e-9e0b-82327b6e2074": {
+        "label": "Match Scaling : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchScaling",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "5206842e-15cc-496f-8422-c12b6884836b": {
+        "label": "Match Scaling Options : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchScalingOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "5f120fda-727e-4805-acc8-50ef1590f4f8": {
+        "label": "Match Pivots : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchPivots",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "89d1dc75-86ee-4f18-b78e-891585629b60": {
+        "label": "Match Pivots Options : Match Transformations",
+        "sourceType": "mel",
+        "command": "MatchPivotsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "52ae043c-008e-4309-95cb-4b0f60f03010": {
+        "label": "Center Pivot",
+        "sourceType": "mel",
+        "command": "CenterPivot",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "377673b8-a756-4d9a-8f23-561612019644": {
+        "label": "Zero Pivot",
+        "sourceType": "mel",
+        "command": "ZeroPivot",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "411808a2-cad4-4e28-a5a5-7c68ee59c5c7": {
+        "label": "Bake Pivot",
+        "sourceType": "mel",
+        "command": "BakeCustomPivot",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "8c6ec4d1-b223-4120-a745-3c2b9ff22916": {
+        "label": "Bake Pivot Options",
+        "sourceType": "mel",
+        "command": "BakeCustomPivotOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "19f92967-16d7-4ac7-8ddf-ea972a35af01": {
+        "label": "Point to Point : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "SnapPointToPoint",
+        "category": "",
+        "module": "Modify",
+        "icon": "pointToPoint.png"
+    },
+    "6215252d-a741-4d46-8694-72a15eaaa108": {
+        "label": "Point to Point Options : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "SnapPointToPointOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "pointToPoint.png"
+    },
+    "267b0d43-f500-4588-865a-be9ccb897b07": {
+        "label": "2 Points to 2 Points : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "Snap2PointsTo2Points",
+        "category": "",
+        "module": "Modify",
+        "icon": "twoPointToPoint.png"
+    },
+    "a8396f0e-1253-40ec-b774-0c5534c232cc": {
+        "label": "2 Points to 2 Points Options : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "Snap2PointsTo2PointsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "twoPointToPoint.png"
+    },
+    "7f49b0ac-30a7-40cf-90e9-c296111a915a": {
+        "label": "3 Points to 3 Points : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "Snap3PointsTo3Points",
+        "category": "",
+        "module": "Modify",
+        "icon": "threePointToPoint.png"
+    },
+    "c06fb698-a16c-4bd6-bc4b-3af5dde4294d": {
+        "label": "3 Points to 3 Points Options : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "Snap3PointsTo3PointsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "threePointToPoint.png"
+    },
+    "3f398376-8091-441a-9170-d7173c327a7f": {
+        "label": "Align Objects : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "AlignObjects",
+        "category": "",
+        "module": "Modify",
+        "icon": "alignObjects.png"
+    },
+    "118f40ac-62b9-4b5d-aa32-9e32b382ea65": {
+        "label": "Align Objects Options : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "performAlignObjects 1",
+        "category": "",
+        "module": "Modify",
+        "icon": "alignObjects.png"
+    },
+    "e814a758-ebaf-4079-a136-6698b46792af": {
+        "label": "Position Along Curve : Snap Align Objects",
+        "sourceType": "mel",
+        "command": "PositionAlongCurve",
+        "category": "",
+        "module": "Modify",
+        "icon": "positionAlongCurve.png"
+    },
+    "09680cb5-396e-4343-95f5-ba3550206c44": {
+        "label": "Align Tool",
+        "sourceType": "mel",
+        "command": "SetAlignTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "alignTool.png"
+    },
+    "cfb900c2-d34b-43f5-992e-aaaf0ba6a470": {
+        "label": "Snap Together Tool",
+        "sourceType": "mel",
+        "command": "SetSnapTogetherTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "snapTogetherTool.png"
+    },
+    "fae1cff0-4aa7-429f-bb7a-a946ed049bf3": {
+        "label": "Snap Together Tool Options",
+        "sourceType": "mel",
+        "command": "SetSnapTogetherToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "948b4c67-b8cc-4d3e-a770-0598691559ab": {
+        "label": "Reorder Rotation...",
+        "sourceType": "mel",
+        "command": "ReorderRotationDialog",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "9144262f-63dd-461f-a251-458ed397ec30": {
+        "label": "Evaluate All : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableAll",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "2f8c47eb-7724-4840-9454-f2b716a2e9c8": {
+        "label": "Ignore All : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "DisableAll",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "b6b6ae1c-2b23-4bdb-9059-779f38f02dd7": {
+        "label": "IK Solvers : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableIKSolvers",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "789a7f05-01fa-4329-b114-1014f44e580e": {
+        "label": "Constraints : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableConstraints",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "22b8643d-bff4-4547-bd10-aa465e3472d7": {
+        "label": "Expressions : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableExpressions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "cd5faca5-f362-4222-a844-b5f32a002123": {
+        "label": "Fluids : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableFluids",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "c86f0489-3591-4d0c-b4d0-00495752dcd7": {
+        "label": "Global Stitch : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableGlobalStitch",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "67cac3e3-77f0-4f9c-b697-9e3e8979225f": {
+        "label": "nCloths : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableNCloths",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "6a4de5ba-cea7-4371-b0d6-ef2d51cea57f": {
+        "label": "nParticles : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableNParticles",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "1ab77741-f18a-4e0d-b2d8-71549ca2dd49": {
+        "label": "nRigids : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableNRigids",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "af032527-b3f3-40b9-93e7-7da37078c4dd": {
+        "label": "Dynamic Constraints : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableDynamicConstraints",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "6c4e45f0-6784-42b1-b897-a2c79985a1e4": {
+        "label": "nucleuses : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableNucleuses",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "23f8a70d-b473-42cf-8b39-3efd0fc0c4f6": {
+        "label": "Particles : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableParticles",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "238709b6-af35-439b-9201-8797f06eae5b": {
+        "label": "Rigid Bodies : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableRigidBodies",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "6bcf0ba1-0754-4e34-a0f5-8928352eca5f": {
+        "label": "Snapshots : Evaluate Nodes",
+        "sourceType": "mel",
+        "command": "EnableSnapshots",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "9a405ec9-549f-413e-b122-00491ad9bbf1": {
+        "label": "Prefix Hierarchy Names...",
+        "sourceType": "mel",
+        "command": "PrefixHierarchyNames",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "2c482322-6f44-4b8f-b8a9-bbe66bef165a": {
+        "label": "Search and Replace Names...",
+        "sourceType": "mel",
+        "command": "SearchAndReplaceNames",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "82409aad-034a-411e-b1ba-1908f19964ea": {
+        "label": "Add Attribute...",
+        "sourceType": "mel",
+        "command": "AddAttribute",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "4f2cb3a6-8e6a-4758-a92d-7c7f875cb99e": {
+        "label": "Edit Attribute...",
+        "sourceType": "mel",
+        "command": "RenameAttribute",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "eb2b6632-b719-4cb4-9d68-3ca4ca4bebda": {
+        "label": "Delete Attribute...",
+        "sourceType": "mel",
+        "command": "DeleteAttribute",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "d0d31e5f-e09e-4e58-9a2f-c37640c67556": {
+        "label": "Make Live",
+        "sourceType": "mel",
+        "command": "MakeLive",
+        "category": "",
+        "module": "Modify",
+        "icon": "makeLive.png"
+    },
+    "df487e83-ee4c-43ec-ac8e-7a626bfa4616": {
+        "label": "Replace Objects",
+        "sourceType": "mel",
+        "command": "ReplaceObjects",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "42d14a95-cb78-4adf-a0fc-56ea56e24020": {
+        "label": "Replace Objects Options",
+        "sourceType": "mel",
+        "command": "ReplaceObjectsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "e01069ec-046e-4caf-a0a6-6b508354669e": {
+        "label": "NURBS to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "NURBSToPolygons",
+        "category": "",
+        "module": "Modify",
+        "icon": "nurbsToPolygons.png"
+    },
+    "ee684498-0b7b-4509-b4e0-1c0f21eb3794": {
+        "label": "NURBS to Polygons Options : Convert",
+        "sourceType": "mel",
+        "command": "NURBSToPolygonsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "nurbsToPolygons.png"
+    },
+    "20604c49-c95b-46d6-b378-0fefc3a6845d": {
+        "label": "NURBS to Subdiv : Convert",
+        "sourceType": "mel",
+        "command": "CreateSubdivSurface",
+        "category": "",
+        "module": "Modify",
+        "icon": "nurbsToSubdivs.png"
+    },
+    "4c48a8b8-241f-4af3-92cb-cff798cc21be": {
+        "label": "NURBS to Subdiv Options : Convert",
+        "sourceType": "mel",
+        "command": "CreateSubdivSurfaceOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "nurbsToSubdivs.png"
+    },
+    "13c1368d-5687-4996-8d36-4515d81aa13c": {
+        "label": "Polygons to Subdiv : Convert",
+        "sourceType": "mel",
+        "command": "CreateSubdivSurfacePoly",
+        "category": "",
+        "module": "Modify",
+        "icon": "polyToSubdivs.png"
+    },
+    "cd933ebc-ed02-48bd-8b35-c2b509e8004d": {
+        "label": "Polygons to Subdiv Options : Convert",
+        "sourceType": "mel",
+        "command": "CreateSubdivSurfacePolyOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "subdivCreate.png"
+    },
+    "44ad713e-e1b5-4182-8f86-2d6e27ed3329": {
+        "label": "Smooth Mesh Preview to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "CreatePolyFromPreview",
+        "category": "",
+        "module": "Modify",
+        "icon": "meshToPolygons.png"
+    },
+    "91dcfa86-242c-42f6-a8be-ef8715f55e9c": {
+        "label": "Polygon Edges to Curve : Convert",
+        "sourceType": "mel",
+        "command": "CreateCurveFromPoly",
+        "category": "",
+        "module": "Modify",
+        "icon": "polyEdgeToCurves.png"
+    },
+    "f8610cc6-2a6c-4216-a0ec-b877f85c1dd7": {
+        "label": "Polygon Edges to Curve Options : Convert",
+        "sourceType": "mel",
+        "command": "CreateCurveFromPolyOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "2dc42d9c-9d6c-41ab-827b-cc8d9513dcad": {
+        "label": "Type to Curves : Convert",
+        "sourceType": "mel",
+        "command": "ConvertTypeCapsToCurves",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "f86afd92-0083-4afe-a357-5b1cdaac69a0": {
+        "label": "Subdiv to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "TesselateSubdivSurface",
+        "category": "",
+        "module": "Modify",
+        "icon": "subdivTessellate.png"
+    },
+    "dbcc6578-640e-45ac-bc9d-e0aee3e7b883": {
+        "label": "Subdiv to Polygons Options : Convert",
+        "sourceType": "mel",
+        "command": "TesselateSubdivSurfaceOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "subdivTessellate.png"
+    },
+    "3d879929-7a86-461e-9dab-4862153c7e4e": {
+        "label": "Subdiv to NURBS : Convert",
+        "sourceType": "mel",
+        "command": "SubdivToNURBS",
+        "category": "",
+        "module": "Modify",
+        "icon": "subdivToNurbs.png"
+    },
+    "58f8f23e-f1b1-4468-9d3c-4bccd7c8248e": {
+        "label": "Subdiv to NURBS Options : Convert",
+        "sourceType": "mel",
+        "command": "SubdivToNURBSOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "subdivToNurbs.png"
+    },
+    "84bca141-1287-4fc5-944e-3929e813249b": {
+        "label": "NURBS Curve to Bezier : Convert",
+        "sourceType": "mel",
+        "command": "NurbsCurveToBezier",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "8ed4b598-3127-4c3b-8ec9-ec92ffb47ed5": {
+        "label": "Bezier Curve to NURBS : Convert",
+        "sourceType": "mel",
+        "command": "BezierCurveToNurbs",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "82532524-5dd6-4d4c-b3e9-119b03eb2b58": {
+        "label": "Paint Effects to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "PaintEffectsToPoly",
+        "category": "",
+        "module": "Modify",
+        "icon": "paintFXtoPoly.png"
+    },
+    "bb09c538-1680-4190-a497-66a188ec6474": {
+        "label": "Paint Effects to Polygons Options : Convert",
+        "sourceType": "mel",
+        "command": "PaintEffectsToPolyOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "paintFXtoPoly.png"
+    },
+    "03708091-c21b-4518-9ffd-fae702477443": {
+        "label": "Paint Effects to NURBS : Convert",
+        "sourceType": "mel",
+        "command": "PaintEffectsToNurbs",
+        "category": "",
+        "module": "Modify",
+        "icon": "paintFXtoNurbs.png"
+    },
+    "23498e58-d45b-4d3b-83ae-1a79de36f4a6": {
+        "label": "Paint Effects to NURBS Options : Convert",
+        "sourceType": "mel",
+        "command": "PaintEffectsToNurbsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "paintFXtoNurbs.png"
+    },
+    "226d9e4c-50e4-4106-99f0-1ed63174fcb8": {
+        "label": "Paint Effects to Curves : Convert",
+        "sourceType": "mel",
+        "command": "PaintEffectsToCurve",
+        "category": "",
+        "module": "Modify",
+        "icon": "paintFXtoCurve.png"
+    },
+    "67a684e4-cb85-4f13-b6c1-601d0b7993b1": {
+        "label": "Paint Effects to Curves Options : Convert",
+        "sourceType": "mel",
+        "command": "PaintEffectsToCurveOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "paintFXtoCurve.png"
+    },
+    "fc71b694-ec01-48a8-a41e-23c657c475f5": {
+        "label": "Texture to Geometry : Convert",
+        "sourceType": "mel",
+        "command": "TextureToGeometry",
+        "category": "",
+        "module": "Modify",
+        "icon": "textureToGeom.png"
+    },
+    "61f7842c-48f8-4db6-a0a4-bdbc15bb8afe": {
+        "label": "Texture to Geometry Options : Convert",
+        "sourceType": "mel",
+        "command": "TextureToGeometryOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "textureToGeom.png"
+    },
+    "b4d8d799-62dc-40b7-a6b4-27aa8e7b3a45": {
+        "label": "Displacement to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "DisplacementToPolygon",
+        "category": "",
+        "module": "Modify",
+        "icon": "displaceToPolygons.png"
+    },
+    "85b2aea9-60c6-40b9-8f3a-f66d3ce8c680": {
+        "label": "Displacement to Polygons with History : Convert",
+        "sourceType": "mel",
+        "command": "SetupAnimatedDisplacement",
+        "category": "",
+        "module": "Modify",
+        "icon": "displaceToPolygonsHistory.png"
+    },
+    "cbb12a1c-ad86-4e0d-9262-a3738a424721": {
+        "label": "Fluid to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "FluidsToPolygons",
+        "category": "",
+        "module": "Modify",
+        "icon": "fluidtoPoly.png"
+    },
+    "6d6ac6b2-7c89-4cd4-8c1b-e9b113fc664f": {
+        "label": "nParticle to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "NParticleToPolygons",
+        "category": "",
+        "module": "Modify",
+        "icon": "nParticleToPolygons.png"
+    },
+    "b8f56ef4-d093-4d3b-ac33-9c059d1cdaf9": {
+        "label": "Instance to Object : Convert",
+        "sourceType": "mel",
+        "command": "ConvertInstanceToObject",
+        "category": "",
+        "module": "Modify",
+        "icon": "instanceToObject.png"
+    },
+    "dc9a95fc-69f9-4aad-a73f-b2178281f1b9": {
+        "label": "Geometry to Bounding Box : Convert",
+        "sourceType": "mel",
+        "command": "GeometryToBoundingBox",
+        "category": "",
+        "module": "Modify",
+        "icon": "geometryToBoundingBox.png"
+    },
+    "2473aa00-24ba-42ac-a7e6-95842f9be96e": {
+        "label": "Geometry to Bounding Box Options : Convert",
+        "sourceType": "mel",
+        "command": "GeometryToBoundingBoxOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "geometryToBoundingBox.png"
+    },
+    "3f53a67a-93b5-436b-9c62-de33e90cd95d": {
+        "label": "Convert XGen Primitives to Polygons : Convert",
+        "sourceType": "mel",
+        "command": "python(\"import xgenm.xmaya.xgmConvertPrimToPolygon as cpp;cpp.convertPrimToPolygon(False)\")",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "c7543575-8c9d-4e71-be5c-f4501982e37a": {
+        "label": "Convert XGen Primitives to Polygons Options : Convert",
+        "sourceType": "mel",
+        "command": "python(\"import xgenm.xmaya.xgmConvertPrimToPolygon as cpp;cpp.convertPrimToPolygon(True)\")",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "6b8a75ca-561b-4bf5-b072-fb9cdf339349": {
+        "label": "Paint Scripts Tool",
+        "sourceType": "mel",
+        "command": "ScriptPaintTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "userPaint.png"
+    },
+    "91aa7708-b5cd-41b7-a10d-8b48dab6f971": {
+        "label": "Paint Scripts Tool Options",
+        "sourceType": "mel",
+        "command": "ScriptPaintToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "userPaint.png"
+    },
+    "11623762-aa9c-4d41-8e8e-9c207ff9a069": {
+        "label": "Paint Attributes Tool",
+        "sourceType": "mel",
+        "command": "ArtPaintAttrTool",
+        "category": "",
+        "module": "Modify",
+        "icon": "artAttr.png"
+    },
+    "960dc896-fd9c-492c-a48b-b2421731a74f": {
+        "label": "Paint Attributes Tool Options",
+        "sourceType": "mel",
+        "command": "ArtPaintAttrToolOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": "artAttr.png"
+    },
+    "6e586093-3a00-45a1-b408-0b73c024f020": {
+        "label": "Add to Asset : Asset",
+        "sourceType": "mel",
+        "command": "AddToContainer",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "d16d00c4-65a7-470b-a667-ad4d7a1b9a53": {
+        "label": "Add to Asset Options : Asset",
+        "sourceType": "mel",
+        "command": "AddToContainerOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "a9b66ca7-059d-4bb0-ab8a-4add365d68f3": {
+        "label": "Remove from Asset : Asset",
+        "sourceType": "mel",
+        "command": "RemoveFromContainer",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "467be34d-03c7-4d9f-9391-b714089dcf99": {
+        "label": "Remove from Asset Options : Asset",
+        "sourceType": "mel",
+        "command": "RemoveFromContainerOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "80d60556-59bf-47f3-b03e-3a945e61f845": {
+        "label": "Export Proxy Asset... : Asset",
+        "sourceType": "mel",
+        "command": "ExportProxyContainer",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "dfbc9518-3880-43ba-955b-853deb4ba5ea": {
+        "label": "Export Proxy Asset... Options : Asset",
+        "sourceType": "mel",
+        "command": "ExportProxyContainerOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "7908b48d-c5a7-4c0a-95ec-ceafd36aa565": {
+        "label": "Publish Attributes : Asset",
+        "sourceType": "mel",
+        "command": "PublishAttributes",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "3cda9d54-f5f0-4b48-99ad-7221bc395904": {
+        "label": "Publish Attributes Options : Asset",
+        "sourceType": "mel",
+        "command": "PublishAttributesOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "1d82b322-67f8-4a7f-9172-ad19c153316d": {
+        "label": "Unpublish Attributes : Asset",
+        "sourceType": "mel",
+        "command": "UnpublishAttributes",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "5d78a1a5-9c51-48b9-a269-7b90057b4fff": {
+        "label": "Publish Connections : Asset",
+        "sourceType": "mel",
+        "command": "PublishConnections",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "09cd6eb3-7922-4f70-b1f6-706f1d6aabde": {
+        "label": "Publish Connections Options : Asset",
+        "sourceType": "mel",
+        "command": "PublishConnectionsOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "dcf2bc82-2dfd-4ef1-8574-e7e14e9840a1": {
+        "label": "Lock Unpublished Attributes : Asset",
+        "sourceType": "mel",
+        "command": "LockContainer",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "b070c02a-5d56-48a9-aecd-60a1c9411edc": {
+        "label": "Unlock Unpublished Attributes : Asset",
+        "sourceType": "mel",
+        "command": "UnlockContainer",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "7db721ac-25f9-4c3d-a061-a4356ff3f61a": {
+        "label": "Publish Node : Asset",
+        "sourceType": "mel",
+        "command": "PublishNode",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "b51c9349-ed13-491f-ac01-80511921e77d": {
+        "label": "Unpublish Node : Asset",
+        "sourceType": "mel",
+        "command": "UnpublishNode",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "e88c5f4f-a1f2-4a8b-920e-2782a79e65d5": {
+        "label": "Assign Template... : Asset",
+        "sourceType": "mel",
+        "command": "AssignTemplate",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "90202c32-d0ee-4467-be53-a22b83914e5f": {
+        "label": "Assign Template... Options : Asset",
+        "sourceType": "mel",
+        "command": "AssignTemplateOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "a4ba9c95-1b09-4eaa-8ea4-b50e9976beb9": {
+        "label": "Select Asset Contents : Asset",
+        "sourceType": "mel",
+        "command": "SelectContainerContents",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "d40d779d-0dff-4313-be66-b0ec82a2f07a": {
+        "label": "Publish as Selection Transform : Node Publishing",
+        "sourceType": "mel",
+        "command": "PublishRootTransform",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "f328c8ec-1edc-4062-8fdf-5c5c868ad1de": {
+        "label": "Publish as Selection Transform Options : Node Publishing",
+        "sourceType": "mel",
+        "command": "PublishRootTransformOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "743b5f21-d554-477a-a6fa-2503938a3ba4": {
+        "label": "Publish Parent Anchor : Node Publishing",
+        "sourceType": "mel",
+        "command": "PublishParentAnchor",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "0da5d7b5-c49e-4ab8-bc5b-da2c1d1e5be4": {
+        "label": "Publish Parent Anchor Options : Node Publishing",
+        "sourceType": "mel",
+        "command": "PublishParentAnchorOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "11d64d7f-55df-4591-bb19-8ca444acb755": {
+        "label": "Publish Child Anchor : Node Publishing",
+        "sourceType": "mel",
+        "command": "PublishChildAnchor",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "d34f63bf-0a1d-43d4-87c5-eaf70d08df1b": {
+        "label": "Publish Child Anchor Options : Node Publishing",
+        "sourceType": "mel",
+        "command": "PublishChildAnchorOptions",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "1cab5858-0d63-434c-8c40-04dbaea0b63b": {
+        "label": "Unpublish Selection Transform : Node Unpublishing",
+        "sourceType": "mel",
+        "command": "UnpublishRootTransform",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "890c8ca7-e4bd-44be-8497-13cae302c135": {
+        "label": "Unpublish Parent Anchor : Node Unpublishing",
+        "sourceType": "mel",
+        "command": "UnpublishParentAnchor",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "ddf58032-ec03-4148-8995-9ef59727d9c6": {
+        "label": "Unpublish Child Anchor : Node Unpublishing",
+        "sourceType": "mel",
+        "command": "UnpublishChildAnchor",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    },
+    "d8c6db28-cfa3-4ade-b865-341b0c862276": {
+        "label": "None : Set Current Asset",
+        "sourceType": "mel",
+        "command": "ClearCurrentContainer",
+        "category": "",
+        "module": "Modify",
+        "icon": ""
+    }
+}

@@ -1,0 +1,322 @@
+{
+    "998ecce9-0a41-484b-a79e-f48c9f3afec5": {
+        "label": "Open Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicOpen",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "23b10ec4-6de5-4612-95b0-4948a9d77265": {
+        "label": "Reference Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicReference",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "a87e2063-2a14-472e-8104-0193aaec6b0f": {
+        "label": "Reference Alembic... Options : Alembic Cache",
+        "sourceType": "mel",
+        "command": "CreateReferenceOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "ab62b25a-6529-4ae4-9cf3-d812cc104d1e": {
+        "label": "Import Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicImport",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "a1e59f04-6aaa-4406-b7e8-0449f3fd529d": {
+        "label": "Import Alembic... Options : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicImportOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "4e555509-7968-45cf-85d0-91a037f072f6": {
+        "label": "Replace Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicReplace",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "68f199ad-9a70-4198-90c8-e2850daf9e95": {
+        "label": "Export All to Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicExportAll",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "82ba781b-3b65-4abc-b42f-548c07336578": {
+        "label": "Export All to Alembic... Options : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicExportAllOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "f32265ad-3d11-4942-abb2-26a8dfc24498": {
+        "label": "Export Selection to Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicExportSelection",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "0870f21b-782c-4a64-9c61-892f7e9934dd": {
+        "label": "Export Selection to Alembic... Options : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicExportSelectionOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "0a8db586-5ea6-4343-8d0f-849afe75bd21": {
+        "label": "About Alembic... : Alembic Cache",
+        "sourceType": "mel",
+        "command": "AlembicHelp",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "775f7eec-be99-4397-afb8-f6a65194f03d": {
+        "label": "Create New Cache : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "createCache.png"
+    },
+    "e4b358f1-f261-479e-9cba-2f3725960119": {
+        "label": "Create New Cache Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryCacheOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "createCache.png"
+    },
+    "22c10f25-ea87-4561-bc54-472335257deb": {
+        "label": "Import Cache... : Geometry Cache",
+        "sourceType": "mel",
+        "command": "attachGeometryCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "importCache.png"
+    },
+    "666934ff-b0a1-43e6-8a90-e12cc3b1ee65": {
+        "label": "Export Cache : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryExportCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "exportCache.png"
+    },
+    "be0d85d1-30c0-4691-a96d-06f5c0521b1b": {
+        "label": "Export Cache Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryExportCacheOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "exportCache.png"
+    },
+    "f67c48ad-caf7-4bee-b16b-2076b4fc99a5": {
+        "label": "Disable All Caches On Selected : Geometry Cache",
+        "sourceType": "mel",
+        "command": "DisableAllGeometryCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "disableAllCaches.png"
+    },
+    "d6490547-c467-4976-8a98-731c64b98b66": {
+        "label": "Enable All Caches On Selected : Geometry Cache",
+        "sourceType": "mel",
+        "command": "EnableAllGeometryCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "enableAllCaches.png"
+    },
+    "60d2cde2-1de5-4479-a9f3-e90c5a4aa331": {
+        "label": "Replace Cache : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryReplaceCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "replaceCache.png"
+    },
+    "05932090-b9e2-4955-abed-05c4d15ca9c5": {
+        "label": "Replace Cache Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryReplaceCacheOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "replaceCache.png"
+    },
+    "b70759cf-30a6-462c-86f2-766d6d941a05": {
+        "label": "Merge Caches : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryMergeCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "mergeCache.png"
+    },
+    "a4350e09-57d5-4fd8-b495-16e60a4cfc1f": {
+        "label": "Merge Caches Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryMergeCacheOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "mergeCache.png"
+    },
+    "e0f21606-d068-4dde-8c6b-93439838d186": {
+        "label": "Delete Cache : Geometry Cache",
+        "sourceType": "mel",
+        "command": "deleteGeometryCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "deleteCache.png"
+    },
+    "0511c3bc-53d4-4198-83ad-ee0c1145c2d8": {
+        "label": "Delete Cache Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryDeleteCacheOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "deleteCache.png"
+    },
+    "f1ce1336-8b79-4fcf-8765-66cf59f2e534": {
+        "label": "Append to Cache : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryAppendCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "appendCache.png"
+    },
+    "3800db0e-0c4a-4fba-9880-32f69e208250": {
+        "label": "Append to Cache Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryAppendCacheOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "appendCache.png"
+    },
+    "e3a8fb29-3b03-4f83-ac4e-e557a8f90a1e": {
+        "label": "Replace Cache Frame : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryReplaceCacheFrames",
+        "category": "",
+        "module": "Cache",
+        "icon": "replaceCacheFrame.png"
+    },
+    "1a9efb74-8264-4cd0-95b0-4c1b7416dff2": {
+        "label": "Replace Cache Frame Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryReplaceCacheFramesOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "replaceCacheFrame.png"
+    },
+    "392a516d-60f9-493d-9166-72d38aabfd07": {
+        "label": "Delete Cache Frame : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryDeleteCacheFrames",
+        "category": "",
+        "module": "Cache",
+        "icon": "deleteCacheFrame.png"
+    },
+    "55607222-554a-4adc-8327-977bd35f668d": {
+        "label": "Delete Cache Frame Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "geometryDeleteCacheFramesOpt",
+        "category": "",
+        "module": "Cache",
+        "icon": "deleteCacheFrame.png"
+    },
+    "87838706-6e0c-4522-bff0-c948be0aeec7": {
+        "label": "Delete History Ahead of Cache : Geometry Cache",
+        "sourceType": "mel",
+        "command": "deleteHistoryAheadOfGeomCache",
+        "category": "",
+        "module": "Cache",
+        "icon": "deleteCacheHistory.png"
+    },
+    "fb09ebdf-601c-4adb-b536-4d5b97871cec": {
+        "label": "Paint Cache Weights Tool : Geometry Cache",
+        "sourceType": "mel",
+        "command": "PaintGeomCacheTool",
+        "category": "",
+        "module": "Cache",
+        "icon": "paintCacheWeights.png"
+    },
+    "00df0743-eeca-4369-a346-d261f8ee8f0a": {
+        "label": "Paint Cache Weights Tool Options : Geometry Cache",
+        "sourceType": "mel",
+        "command": "PaintGeomCacheToolOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": "paintCacheWeights.png"
+    },
+    "467bf535-baf5-4e49-a405-64d1c96131e9": {
+        "label": "Import... : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheImport",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "14bb993c-3cf8-478a-9b52-0dc21fb68811": {
+        "label": "Import... Options : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheImportOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "ef7f29f9-8710-41e4-8d2f-e4d3a169ab8c": {
+        "label": "Export All... : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheExportAll",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "c9542aca-c67d-4632-8d95-52e8eda4efe6": {
+        "label": "Export All... Options : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheExportAllOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "ad982a7c-594b-47ff-892f-d890965604d8": {
+        "label": "Export Selection... : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheExportSelection",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "13ac1aa2-be05-4b59-beb1-b7cb852dad69": {
+        "label": "Export Selection... Options : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheExportSelectionOptions",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    },
+    "69b70a18-3a4b-4b1c-9552-60481acf5d84": {
+        "label": "Refresh All... : GPU Cache",
+        "sourceType": "mel",
+        "command": "GpuCacheRefreshAll",
+        "category": "",
+        "module": "Cache",
+        "icon": ""
+    }
+}

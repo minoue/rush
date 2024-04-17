@@ -1,0 +1,250 @@
+{
+    "0a8bfecf-0b5a-4a38-8fb3-289f459b9f43": {
+        "label": "Render Settings...",
+        "sourceType": "mel",
+        "command": "unifiedRenderGlobalsWindow",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "2e1366ff-5b30-4c38-bbf1-e8d91c550735": {
+        "label": "Maya Software : Render Using",
+        "sourceType": "mel",
+        "command": "setCurrentRenderer mayaSoftware",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "281124b7-471b-4ec1-82b9-b6526212c4dd": {
+        "label": "Maya Hardware 2.0 : Render Using",
+        "sourceType": "mel",
+        "command": "setCurrentRenderer mayaHardware2",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "fd325eaf-189b-4b7f-8108-e46dc077040f": {
+        "label": "Arnold Renderer : Render Using",
+        "sourceType": "mel",
+        "command": "setCurrentRenderer arnold",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "48e80f1b-2921-4948-8894-05883a6287f8": {
+        "label": "Camera Panel : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(0)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "46af7a6d-f133-465e-9104-6f4bd7c7777a": {
+        "label": "Render Settings (960x540) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(1)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "ed718221-4337-45f5-877b-c2b16420655f": {
+        "label": "10% Settings (96x54) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(2)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "32bad35d-a5e2-48d8-b969-3c03cbd0849c": {
+        "label": "25% Settings (240x135) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(3)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "771737b3-c0c4-4acb-a3ec-00947726f53c": {
+        "label": "50% Settings (480x270) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(4)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "9946240c-08b8-400a-8ea9-51b7b6c63505": {
+        "label": "75% Settings (720x405) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(5)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "17dc4ae2-2484-4386-a5fc-0e2f22b2b500": {
+        "label": "110% Settings (1056x594) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(6)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "ebc3567d-e1a9-4c66-9ab0-2d1f9c32b3b9": {
+        "label": "125% Settings (1200x675) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(7)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "864dcc07-395d-4245-ac3e-f33325e4deca": {
+        "label": "150% Settings (1440x810) : Test Resolution",
+        "sourceType": "mel",
+        "command": "setTestResolutionVar(8)",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "6405f9a4-c0cd-4220-a633-496163dbc12e": {
+        "label": "Set NURBS Tessellation",
+        "sourceType": "mel",
+        "command": "PerformTessellationSetup",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "6adb3c62-eb67-40bd-b1c5-a56fa3237ee1": {
+        "label": "Set NURBS Tessellation Options",
+        "sourceType": "mel",
+        "command": "PerformTessellationSetupOptions",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "bc2f26ac-1571-41af-b6b4-7ad0a86a8f64": {
+        "label": "Run Render Diagnostics",
+        "sourceType": "mel",
+        "command": "RenderDiagnostics",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "dc11403b-6c55-4308-bc89-535858124d7c": {
+        "label": "Export Pre-Compositing",
+        "sourceType": "mel",
+        "command": "PerformPrecompExport",
+        "category": "",
+        "module": "Render",
+        "icon": "toxikicon.png"
+    },
+    "c6c92268-5424-4390-ae94-f6a72585ee8e": {
+        "label": "Export Pre-Compositing Options",
+        "sourceType": "mel",
+        "command": "PerformPrecompExportOptions",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "5f1afaf4-9fc5-433d-ae4e-5ff9766015d5": {
+        "label": "Render Current Frame",
+        "sourceType": "mel",
+        "command": "RenderIntoNewWindow",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "0c14ffdd-ca16-4886-bd7d-3ef54defb513": {
+        "label": "Render Current Frame Options",
+        "sourceType": "mel",
+        "command": "RenderOptions",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "55a08d66-f1ca-42ca-a488-34f1c28e0edc": {
+        "label": "Redo Previous Render",
+        "sourceType": "mel",
+        "command": "RedoPreviousRender",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "3b6447e1-167c-4de8-98de-5289a104fcbf": {
+        "label": "IPR Render Current Frame",
+        "sourceType": "mel",
+        "command": "IPRRenderIntoNewWindow",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "cd89e75c-73ce-48cc-81fd-07f0504aa107": {
+        "label": "IPR Render Current Frame Options",
+        "sourceType": "mel",
+        "command": "IPROptions",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "00dfa631-c84c-4e3f-94c6-6871058e10e6": {
+        "label": "Redo Previous IPR Render",
+        "sourceType": "mel",
+        "command": "RedoPreviousIPRRender",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "28e33d1b-c994-45ef-a605-75e658bf2497": {
+        "label": "Render Sequence",
+        "sourceType": "mel",
+        "command": "RenderSequence",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "39fdf448-b89d-4ed9-8ead-0ed02e9bc8ab": {
+        "label": "Render Sequence Options",
+        "sourceType": "mel",
+        "command": "RenderSequenceOptions",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "1be8e48c-98e3-4195-87b2-a307eed573bf": {
+        "label": "Batch Render",
+        "sourceType": "mel",
+        "command": "BatchRender",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "402f9bb3-02a3-40c9-a174-fdfc59271056": {
+        "label": "Batch Render Options",
+        "sourceType": "mel",
+        "command": "BatchRenderOptions",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "76e679b1-ad85-4bb6-9e86-8010dc01b758": {
+        "label": "Cancel Batch Render",
+        "sourceType": "mel",
+        "command": "CancelBatchRender",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "9bbfb49f-22a9-46c8-9d61-b1a091e34635": {
+        "label": "Show Batch Render",
+        "sourceType": "mel",
+        "command": "ShowBatchRender",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    },
+    "87d059f7-76ec-41b2-acb1-32f4bd6dc6e2": {
+        "label": "Create Backburner Job...",
+        "sourceType": "mel",
+        "command": "PerformExportToBackburner",
+        "category": "",
+        "module": "Render",
+        "icon": ""
+    }
+}

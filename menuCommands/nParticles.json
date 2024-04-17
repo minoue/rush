@@ -1,0 +1,322 @@
+{
+    "e362be36-63ee-4a19-8330-8f09b9e44bee": {
+        "label": "Fill Object",
+        "sourceType": "mel",
+        "command": "ParticleFill",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartfillObject.png"
+    },
+    "f91b24b2-d7ce-4c96-858f-12ad144a4169": {
+        "label": "Fill Object Options",
+        "sourceType": "mel",
+        "command": "ParticleFillOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": ""
+    },
+    "2b005823-a0cc-46a3-b69a-08387ec52609": {
+        "label": "Get nParticle Example...",
+        "sourceType": "mel",
+        "command": "nucleusGetnParticleExample",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartExample.png"
+    },
+    "3cdee397-5fe3-4a2a-bcec-fafdacb606de": {
+        "label": "Goal",
+        "sourceType": "mel",
+        "command": "Goal",
+        "category": "",
+        "module": "nParticles",
+        "icon": "goal.png"
+    },
+    "07655e2d-1571-4f6b-8c7f-6b83355c69a7": {
+        "label": "Goal Options",
+        "sourceType": "mel",
+        "command": "GoalOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "goal.png"
+    },
+    "00ee87b8-a21b-466b-89e0-6f3532a133d6": {
+        "label": "Instancer",
+        "sourceType": "mel",
+        "command": "ParticleInstancer",
+        "category": "",
+        "module": "nParticles",
+        "icon": "instancer.png"
+    },
+    "88f02cf8-cee6-4510-878a-ef0b5b63b29b": {
+        "label": "Instancer Options",
+        "sourceType": "mel",
+        "command": "ParticleInstancerOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "instancer.png"
+    },
+    "c9c9e8c0-32b4-4e14-81a4-1acac77394cc": {
+        "label": "nParticle Tool",
+        "sourceType": "mel",
+        "command": "NParticleTool",
+        "category": "",
+        "module": "nParticles",
+        "icon": "particle.png"
+    },
+    "50440ff9-853a-450b-b15b-789852e51073": {
+        "label": "nParticle Tool Options",
+        "sourceType": "mel",
+        "command": "NParticleToolOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "particle.png"
+    },
+    "1eaf019f-21ed-4909-8ea3-a4232d54db26": {
+        "label": "Soft Body",
+        "sourceType": "mel",
+        "command": "CreateNSoftBody",
+        "category": "",
+        "module": "nParticles",
+        "icon": "soft.png"
+    },
+    "df413607-1af1-4cee-b5d5-d3427de1b18c": {
+        "label": "Soft Body Options",
+        "sourceType": "mel",
+        "command": "CreateNSoftBodyOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "soft.png"
+    },
+    "2fac5694-bf09-4a79-8286-a6cc6446c462": {
+        "label": "Paint Soft Body Weights Tool",
+        "sourceType": "mel",
+        "command": "PaintSoftWeights",
+        "category": "",
+        "module": "nParticles",
+        "icon": "attrPaint.png"
+    },
+    "ba27601f-6a2a-4c21-84d8-e44015f6aa0f": {
+        "label": "Paint Soft Body Weights Tool Options",
+        "sourceType": "mel",
+        "command": "PaintSoftWeightsOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "attrPaint.png"
+    },
+    "0b05f87b-4c9c-4a3d-82de-a230e7dd6769": {
+        "label": "Create Springs",
+        "sourceType": "mel",
+        "command": "CreateSpring",
+        "category": "",
+        "module": "nParticles",
+        "icon": "spring.png"
+    },
+    "154d6209-4a10-4b2c-a14f-e502259a3da5": {
+        "label": "Create Springs Options",
+        "sourceType": "mel",
+        "command": "CreateSpringOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "spring.png"
+    },
+    "df066260-5261-4994-90eb-0083cb5bde8e": {
+        "label": "Point : Create Options",
+        "sourceType": "mel",
+        "command": "NParticleStylePoints",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartPoints.png"
+    },
+    "c99a5f2b-9f78-4908-b02e-5943f11cde2b": {
+        "label": "Balls : Create Options",
+        "sourceType": "mel",
+        "command": "NParticleStyleBalls",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartBalls.png"
+    },
+    "34e8dcb8-186b-43c1-90a4-2e9a1d28dbe4": {
+        "label": "Cloud : Create Options",
+        "sourceType": "mel",
+        "command": "NParticleStyleCloud",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartCloud.png"
+    },
+    "28e56c7f-0e41-4711-9a07-4602c32c1447": {
+        "label": "Thick Cloud : Create Options",
+        "sourceType": "mel",
+        "command": "NParticleStyleThickCloud",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartThickCloud.png"
+    },
+    "b7cc2768-9a14-49b7-ac7c-9269b1a7ccaf": {
+        "label": "Water : Create Options",
+        "sourceType": "mel",
+        "command": "NParticleStyleWater",
+        "category": "",
+        "module": "nParticles",
+        "icon": "nPartWater.png"
+    },
+    "878fee85-feb9-43bb-8b40-3c3046901727": {
+        "label": "Create Emitter",
+        "sourceType": "mel",
+        "command": "NCreateEmitter",
+        "category": "",
+        "module": "nParticles",
+        "icon": "posEmitter.png"
+    },
+    "590d30f3-5341-44bb-9b43-a05c6c0a68b4": {
+        "label": "Create Emitter Options",
+        "sourceType": "mel",
+        "command": "NCreateEmitterOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "posEmitter.png"
+    },
+    "f5b70b51-312c-4cde-ac9d-0adf9c04c84b": {
+        "label": "Emit from Object",
+        "sourceType": "mel",
+        "command": "NEmitFromObject",
+        "category": "",
+        "module": "nParticles",
+        "icon": "emitter.png"
+    },
+    "0f2eb4c6-21f1-4632-80f0-383a7a75fd96": {
+        "label": "Emit from Object Options",
+        "sourceType": "mel",
+        "command": "NEmitFromObjectOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "emitter.png"
+    },
+    "68c1fdce-78b5-4d3e-911d-ae2d15d1e4df": {
+        "label": "Per-Point Emission Rates",
+        "sourceType": "mel",
+        "command": "PerPointEmissionRates",
+        "category": "",
+        "module": "nParticles",
+        "icon": "emission.png"
+    },
+    "1bfb22f7-ebdf-4df6-a6e1-06b217c973d8": {
+        "label": "Use Selected Emitter",
+        "sourceType": "mel",
+        "command": "UseSelectedEmitter",
+        "category": "",
+        "module": "nParticles",
+        "icon": "connectEmit.png"
+    },
+    "0bb2b7d8-4c14-4e1c-a540-d3fe3da239e0": {
+        "label": "Particle Collision Event Editor",
+        "sourceType": "mel",
+        "command": "ParticleCollisionEvents",
+        "category": "",
+        "module": "nParticles",
+        "icon": "collisionEvents.png"
+    },
+    "539fb1a2-47e7-442e-8b8d-ef8096802f87": {
+        "label": "Sprite Wizard...",
+        "sourceType": "mel",
+        "command": "PartSpriteWizard",
+        "category": "",
+        "module": "nParticles",
+        "icon": ""
+    },
+    "0f8d9e46-625b-49ef-8265-74a1b49dd887": {
+        "label": "Create Emitter",
+        "sourceType": "mel",
+        "command": "CreateEmitter",
+        "category": "",
+        "module": "nParticles",
+        "icon": "posEmitter.png"
+    },
+    "6c0c34f9-ddcf-44bb-afad-fd9ceeb32586": {
+        "label": "Create Emitter Options",
+        "sourceType": "mel",
+        "command": "CreateEmitterOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "posEmitter.png"
+    },
+    "e1d26933-3a77-415d-ae4e-eb5d05cdbcd2": {
+        "label": "Create Springs",
+        "sourceType": "mel",
+        "command": "CreateSpring",
+        "category": "",
+        "module": "nParticles",
+        "icon": "spring.png"
+    },
+    "9f489334-8f2c-443d-b728-3e6286278f89": {
+        "label": "Create Springs Options",
+        "sourceType": "mel",
+        "command": "CreateSpringOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "spring.png"
+    },
+    "7788d070-148d-43b9-9337-2246fdd0a9e1": {
+        "label": "Emit from Object",
+        "sourceType": "mel",
+        "command": "EmitFromObject",
+        "category": "",
+        "module": "nParticles",
+        "icon": "emitter.png"
+    },
+    "49d45fee-e2a6-4b9a-8f58-d75904a2cdcd": {
+        "label": "Emit from Object Options",
+        "sourceType": "mel",
+        "command": "EmitFromObjectOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "emitter.png"
+    },
+    "c5cdac94-c451-4e9f-a646-f360298813e1": {
+        "label": "Make Collide",
+        "sourceType": "mel",
+        "command": "MakeCollide",
+        "category": "",
+        "module": "nParticles",
+        "icon": "collision.png"
+    },
+    "683acfba-9018-4f35-a03d-aa94f373b5be": {
+        "label": "Make Collide Options",
+        "sourceType": "mel",
+        "command": "MakeCollideOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "collision.png"
+    },
+    "9ed2d1b4-c762-4d6f-8c5e-d67bb3b0f2f1": {
+        "label": "Particle Tool",
+        "sourceType": "mel",
+        "command": "ParticleTool",
+        "category": "",
+        "module": "nParticles",
+        "icon": "particle.png"
+    },
+    "af0c3b82-932a-4e5f-b824-913ebb041950": {
+        "label": "Particle Tool Options",
+        "sourceType": "mel",
+        "command": "ParticleToolOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "particle.png"
+    },
+    "f84cd4b4-f5d7-4c79-b3ba-cb4acbf02bc7": {
+        "label": "Soft Body",
+        "sourceType": "mel",
+        "command": "CreateSoftBody",
+        "category": "",
+        "module": "nParticles",
+        "icon": "soft.png"
+    },
+    "acf89eb5-3678-4200-8baa-c08776e8f367": {
+        "label": "Soft Body Options",
+        "sourceType": "mel",
+        "command": "CreateSoftBodyOptions",
+        "category": "",
+        "module": "nParticles",
+        "icon": "soft.png"
+    }
+}

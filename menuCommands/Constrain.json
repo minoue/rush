@@ -1,0 +1,306 @@
+{
+    "c9bf8390-ef48-4515-b520-19eecbcacbff": {
+        "label": "Parent",
+        "sourceType": "mel",
+        "command": "ParentConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "parentConstraint.png"
+    },
+    "7b6bb54c-f6de-4750-a24b-8c0faa6e2e64": {
+        "label": "Parent Options",
+        "sourceType": "mel",
+        "command": "ParentConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "parentConstraint.png"
+    },
+    "cd51cfd7-bd2b-4130-82d9-077e052bb497": {
+        "label": "Point",
+        "sourceType": "mel",
+        "command": "PointConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "posConstraint.png"
+    },
+    "a2a0baf5-87b7-4bb9-aa9d-e430e949863d": {
+        "label": "Point Options",
+        "sourceType": "mel",
+        "command": "PointConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "posConstraint.png"
+    },
+    "874f724b-c8b4-42d2-ae51-2d3ec134505c": {
+        "label": "Orient",
+        "sourceType": "mel",
+        "command": "OrientConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "orientConstraint.png"
+    },
+    "155ad589-1e74-4d58-b88b-4a80bb21cf1c": {
+        "label": "Orient Options",
+        "sourceType": "mel",
+        "command": "OrientConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "orientConstraint.png"
+    },
+    "ffaeb907-b0d0-4012-bb62-44bfe1989cb9": {
+        "label": "Scale",
+        "sourceType": "mel",
+        "command": "ScaleConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "scaleConstraint.png"
+    },
+    "74ffdbd5-acf6-483f-b82b-bb25998d4b93": {
+        "label": "Scale Options",
+        "sourceType": "mel",
+        "command": "ScaleConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "scaleConstraint.png"
+    },
+    "66ff7aee-4703-4dd9-9e12-04099e42e963": {
+        "label": "Aim",
+        "sourceType": "mel",
+        "command": "AimConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "aimConstraint.png"
+    },
+    "c9943a36-98fb-4a10-a9b6-a60e2cf96d36": {
+        "label": "Aim Options",
+        "sourceType": "mel",
+        "command": "AimConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "aimConstraint.png"
+    },
+    "371d1eab-0759-44b0-845c-065a348f43e8": {
+        "label": "Pole Vector",
+        "sourceType": "mel",
+        "command": "PoleVectorConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "poleVectorConstraint.png"
+    },
+    "113bad47-0a16-468e-ba97-f0635f3a1a9f": {
+        "label": "Pole Vector Options",
+        "sourceType": "mel",
+        "command": "PoleVectorConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "poleVectorConstraint.png"
+    },
+    "252a5084-0ca5-419c-896f-e70b3d35e4b5": {
+        "label": "Rivet",
+        "sourceType": "mel",
+        "command": "Rivet",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "16ad4b10-3e35-4e74-ae5b-35fd655a492a": {
+        "label": "Attach to Motion Path : Motion Paths",
+        "sourceType": "mel",
+        "command": "AttachToPath",
+        "category": "",
+        "module": "Constrain",
+        "icon": "motionPath.png"
+    },
+    "881f28be-762a-4652-ae14-efb390e6652d": {
+        "label": "Attach to Motion Path Options : Motion Paths",
+        "sourceType": "mel",
+        "command": "AttachToPathOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "motionPath.png"
+    },
+    "96ee974a-3ac8-46e7-b0b3-410e42957eb9": {
+        "label": "Flow Path Object : Motion Paths",
+        "sourceType": "mel",
+        "command": "FlowPathObject",
+        "category": "",
+        "module": "Constrain",
+        "icon": "flowPathObj.png"
+    },
+    "d08892b1-a905-4d13-a727-5aff6f6b3901": {
+        "label": "Flow Path Object Options : Motion Paths",
+        "sourceType": "mel",
+        "command": "FlowPathObjectOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "9acaca11-aafb-430a-9c59-701cede11582": {
+        "label": "Set Motion Path Key : Motion Paths",
+        "sourceType": "mel",
+        "command": "SetKeyPath",
+        "category": "",
+        "module": "Constrain",
+        "icon": "motionPathKey.png"
+    },
+    "aa074ed8-7575-456f-853f-4019a51ddfb8": {
+        "label": "Closest Point",
+        "sourceType": "mel",
+        "command": "ClosestPointOn",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "dd699191-855a-4dad-8fc5-26d89dbdebab": {
+        "label": "Closest Point Options",
+        "sourceType": "mel",
+        "command": "ClosestPointOnOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "16a56ec2-fe88-4d7e-b744-1a75c0b53831": {
+        "label": "Point On Poly",
+        "sourceType": "mel",
+        "command": "PointOnPolyConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "pointOnPolyConstraint.png"
+    },
+    "9a89287a-3504-4867-a009-f82b7b355d35": {
+        "label": "Point On Poly Options",
+        "sourceType": "mel",
+        "command": "PointOnPolyConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "pointOnPolyConstraint.png"
+    },
+    "fe201eb7-fc42-4a25-b22e-1953f621c9d6": {
+        "label": "Geometry",
+        "sourceType": "mel",
+        "command": "GeometryConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "geometryConstraint.png"
+    },
+    "c74c4104-7ed0-4427-8fe2-a30ebf388157": {
+        "label": "Geometry Options",
+        "sourceType": "mel",
+        "command": "GeometryConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "geometryConstraint.png"
+    },
+    "a8d9fdea-a46c-4b7b-a135-8e740007918e": {
+        "label": "Normal",
+        "sourceType": "mel",
+        "command": "NormalConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "normalConstraint.png"
+    },
+    "6ed88cd4-f914-44a1-bab6-f3eb82c4e6d8": {
+        "label": "Normal Options",
+        "sourceType": "mel",
+        "command": "NormalConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "normalConstraint.png"
+    },
+    "63142b7e-7a4c-4b6d-948b-30a60f01e0e1": {
+        "label": "Tangent",
+        "sourceType": "mel",
+        "command": "TangentConstraint",
+        "category": "",
+        "module": "Constrain",
+        "icon": "tangentConstraint.png"
+    },
+    "b0e1d3fc-286c-4f43-8869-4709275bf081": {
+        "label": "Tangent Options",
+        "sourceType": "mel",
+        "command": "TangentConstraintOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": "tangentConstraint.png"
+    },
+    "b21812cd-0295-497a-82ef-37191fc6cd50": {
+        "label": "UV Pin",
+        "sourceType": "mel",
+        "command": "UVPin",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "e8490fb9-35bc-41ab-9cb0-210e3ff0488a": {
+        "label": "UV Pin Options",
+        "sourceType": "mel",
+        "command": "UVPinOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "671b89b5-8748-4751-873a-9d7285a93fc3": {
+        "label": "Proximity Pin",
+        "sourceType": "mel",
+        "command": "ProximityPin",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "b4ecdb48-f35c-419f-95ff-e4f2c4fc149f": {
+        "label": "Proximity Pin Options",
+        "sourceType": "mel",
+        "command": "ProximityPinOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "aa6baf9e-646c-4904-9625-9aee6ea574ca": {
+        "label": "Remove Target",
+        "sourceType": "mel",
+        "command": "RemoveConstraintTarget",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "52e05651-aa2f-4ee1-86ec-cad0a39ae982": {
+        "label": "Remove Target Options",
+        "sourceType": "mel",
+        "command": "RemoveConstraintTargetOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "879acd0e-ab1b-4977-8a97-3cdba67622d9": {
+        "label": "From Start : Set Rest Position",
+        "sourceType": "mel",
+        "command": "SetHairRestPositionFromStart",
+        "category": "",
+        "module": "Constrain",
+        "icon": "hairRestFromStart.png"
+    },
+    "49c5b54c-d894-4c16-a7cc-61eeb34c611f": {
+        "label": "From Current : Set Rest Position",
+        "sourceType": "mel",
+        "command": "SetHairRestPositionFromCurrent",
+        "category": "",
+        "module": "Constrain",
+        "icon": "hairRestFromCurrent.png"
+    },
+    "5fc5a288-ac85-48cb-a3ee-94c4f1179e53": {
+        "label": "Modify Constrained Axis...",
+        "sourceType": "mel",
+        "command": "ModifyConstraintAxis",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    },
+    "7e924c38-4cd5-4ab4-9bf6-2cac10c29818": {
+        "label": "Modify Constrained Axis... Options",
+        "sourceType": "mel",
+        "command": "ModifyConstraintAxisOptions",
+        "category": "",
+        "module": "Constrain",
+        "icon": ""
+    }
+}

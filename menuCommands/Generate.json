@@ -1,0 +1,786 @@
+{
+    "f693e32e-8f18-402b-a8ef-1dd7b1f5fe51": {
+        "label": "XGen Editor",
+        "sourceType": "mel",
+        "command": "XgCreateDescriptionEditor",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgDEditor.png"
+    },
+    "f51721f5-8aff-45c8-b558-47cbe7abf9af": {
+        "label": "XGen Library",
+        "sourceType": "mel",
+        "command": "XGenOpenLibraryWindow",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgLibrary.png"
+    },
+    "0239d546-da6a-44dc-a615-81fcd75d5332": {
+        "label": "Create Description...",
+        "sourceType": "mel",
+        "command": "XgCreateDescription",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgCreateDescription.png"
+    },
+    "084e23df-4ed7-4f46-82b3-a63f7c81ee7a": {
+        "label": "Import Collections or Descriptions...",
+        "sourceType": "mel",
+        "command": "XgImportCollections",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgImportDescription.png"
+    },
+    "98d9f54b-1b1f-4754-ac02-1b7da267953f": {
+        "label": "Export Collections or Descriptions...",
+        "sourceType": "mel",
+        "command": "XgExportCollections",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "826747f0-99e3-46f1-b06b-994a26b44e4a": {
+        "label": "Export Selection as Archive(s)...",
+        "sourceType": "mel",
+        "command": "XgExportArchive",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "64127e7a-8626-4494-b5af-12ebf2c1f2cb": {
+        "label": "Batch Convert Scenes to Archives...",
+        "sourceType": "mel",
+        "command": "XgBatchExportArchive",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "4c889f1a-dc2a-44e5-8526-033483ee5b8e": {
+        "label": "Convert XGen Primitives to Polygons...",
+        "sourceType": "mel",
+        "command": "XgConvertToPolygon",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgConvertToPoly.png"
+    },
+    "c7d13f48-5d63-47b9-acba-98912fa6b8b1": {
+        "label": "Convert to Interactive Groom...",
+        "sourceType": "mel",
+        "command": "XgConvertToInteractiveGroom",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgConvertToIG.png"
+    },
+    "c951f564-56ea-4e85-afe0-62898551be4a": {
+        "label": "Import Preset...",
+        "sourceType": "mel",
+        "command": "XgImportPreset",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "ab64116e-36dd-4ed5-8835-c94af02b9362": {
+        "label": "Export as Preset...",
+        "sourceType": "mel",
+        "command": "XgExportPreset",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "2d48ad3e-71df-42b4-891f-fe5cd7de2535": {
+        "label": "Create Interactive Groom Splines",
+        "sourceType": "mel",
+        "command": "XgmCreateInteractiveGroomSplines",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_creation.png"
+    },
+    "c0eac561-ef80-40cd-bb4a-f7fc507a9c69": {
+        "label": "Create Interactive Groom Splines Options",
+        "sourceType": "mel",
+        "command": "XgmCreateInteractiveGroomSplinesOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "05a2cd51-b7e7-4a4a-9ee0-9df317027f09": {
+        "label": "Interactive Groom Editor",
+        "sourceType": "mel",
+        "command": "XgCreateIgSplineEditor",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_editor.png"
+    },
+    "ce5ba07d-d864-4b4b-8d02-8a21d03abe60": {
+        "label": "Density Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetDensityBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_density.png"
+    },
+    "24a1c365-d19b-4ff9-84de-69ca44b873f7": {
+        "label": "Density Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetDensityBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "19eacf5f-07a7-40aa-af41-4d1efce3e509": {
+        "label": "Place Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetPlaceBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_place.png"
+    },
+    "839e76fe-ff1d-46c9-ad5c-7dd6bd84f9ae": {
+        "label": "Place Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetPlaceBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "531b4f95-2bb6-455e-8d2c-2f794126f44f": {
+        "label": "Length Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetLengthBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_length.png"
+    },
+    "984b346e-0d22-4d9f-9a76-c1fa94db0cf4": {
+        "label": "Length Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetLengthBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "40bd6353-3f03-4747-8a26-098ffdb23ab9": {
+        "label": "Cut Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetCutBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_cut.png"
+    },
+    "4e2c3e9c-a66e-4c76-95fb-f85247f1689f": {
+        "label": "Cut Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetCutBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "486c7bb6-3c21-4eec-ab40-5929ff49c5bd": {
+        "label": "Width Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetWidthBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_width.png"
+    },
+    "780f66b0-0734-4e46-bc73-0d34399a3d1f": {
+        "label": "Width Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetWidthBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "df7d8efa-1464-4ff7-92fd-1b1e68347f06": {
+        "label": "Comb Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetCombBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_comb.png"
+    },
+    "278f3731-c792-45c1-9788-d1c0e7d19813": {
+        "label": "Comb Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetCombBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "c755207a-4e62-4fa7-9525-90ec7c852cdf": {
+        "label": "Grab Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetGrabBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_grab.png"
+    },
+    "ca3b6642-1bce-4298-987d-846dea8d208b": {
+        "label": "Grab Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetGrabBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "beba5626-22cd-4891-9943-ee7c0480ac4d": {
+        "label": "Twist Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetDirectionBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_twist.png"
+    },
+    "c8d93eae-95bd-44f9-bf31-e75c6b5d61c3": {
+        "label": "Twist Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetDirectionBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "4eec1102-465c-4e01-8ab4-15d243bbd273": {
+        "label": "Smooth Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetSmoothBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_smooth.png"
+    },
+    "672c1fd6-b5a1-4376-8fa1-d075aceb758f": {
+        "label": "Smooth Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetSmoothBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "38cd892a-9f0c-40cc-aeb4-a97ca24dfe15": {
+        "label": "Noise Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetNoiseBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_noise.png"
+    },
+    "b137af94-03f5-4e12-8b03-ca29191ba91b": {
+        "label": "Noise Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetNoiseBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "db8fcd4d-1807-4993-9d14-9e9c84a8841f": {
+        "label": "Clump Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetClumpBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_clump.png"
+    },
+    "35a8ab6f-b0d2-4122-ad9c-89ef29d34d52": {
+        "label": "Clump Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetClumpBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "a8e4979c-9ee7-4a68-ba81-0a864fec7dfd": {
+        "label": "Part Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetPartBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_part.png"
+    },
+    "925cb844-da42-424e-b2e5-95e4d72853d2": {
+        "label": "Part Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetPartBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "5a66a93e-7dd9-4781-a5a0-c6933271cc20": {
+        "label": "Freeze Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetFreezeBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_freeze.png"
+    },
+    "80b3201f-e68b-4f67-bb65-78c0c37655b3": {
+        "label": "Freeze Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetFreezeBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "153a06e0-cd9a-4e05-971b-e2c510ad500f": {
+        "label": "Select Brush : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetSelectBrushTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "xgIG_select.png"
+    },
+    "8da798b9-1933-4322-a3f6-206d191cba70": {
+        "label": "Select Brush Options : Interactive Grooming Tools",
+        "sourceType": "mel",
+        "command": "XgmSetSelectBrushToolOption",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "78e742b0-80f4-42f9-b0e6-7e1a9a1b52a7": {
+        "label": "Create New Cache : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheCreate",
+        "category": "",
+        "module": "Generate",
+        "icon": "createCache.png"
+    },
+    "4ad072e4-8241-4d39-b892-3cb3ce7cdd95": {
+        "label": "Create New Cache Options : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheCreateOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "2ef03d6b-de1a-43dc-85ac-0d3e77d3005c": {
+        "label": "Import Cache : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheImport",
+        "category": "",
+        "module": "Generate",
+        "icon": "importCache.png"
+    },
+    "ef3f74a4-4b86-4d50-b15f-968bfa870079": {
+        "label": "Import Cache Options : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheImportOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "233f0356-11a8-4502-a30e-fca892df54b6": {
+        "label": "Export Cache : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheExport",
+        "category": "",
+        "module": "Generate",
+        "icon": "exportCache.png"
+    },
+    "31bef1f0-d6b2-4c4e-81cf-d5c04d72d184": {
+        "label": "Export Cache Options : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheExportOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "679385c6-d2a8-4229-ad88-5f03ee60a725": {
+        "label": "Disable All Caches On Selected : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheDisableSelectedCache",
+        "category": "",
+        "module": "Generate",
+        "icon": "disableAllCaches.png"
+    },
+    "d5e45ae5-a938-4f76-bc3f-d6df714850e8": {
+        "label": "Enable All Caches On Selected : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheEnableSelectedCache",
+        "category": "",
+        "module": "Generate",
+        "icon": "enableAllCaches.png"
+    },
+    "cc6a86af-42dd-4c8f-9409-445051cd7896": {
+        "label": "Replace Cache : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheReplace",
+        "category": "",
+        "module": "Generate",
+        "icon": "replaceCache.png"
+    },
+    "7ef42ed0-c116-42ee-8599-f6084d5948bb": {
+        "label": "Replace Cache Options : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheReplaceOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "02148248-694a-40c2-bf16-920475da5a0c": {
+        "label": "Delete Cache : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheDelete",
+        "category": "",
+        "module": "Generate",
+        "icon": "deleteCache.png"
+    },
+    "52439f2a-a651-4624-b099-6ad591054cee": {
+        "label": "Delete Cache Options : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheDeleteOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "5d4a7a38-ad04-4ecb-a6f5-c7189db0ff2d": {
+        "label": "Delete Nodes Ahead of Cache : Cache",
+        "sourceType": "mel",
+        "command": "XgmSplineCacheDeleteNodesAhead",
+        "category": "",
+        "module": "Generate",
+        "icon": "deleteCacheHistory.png"
+    },
+    "cdb75435-74ca-4886-af8d-451aa906f0eb": {
+        "label": "Convert Interactive Groom to Polygons...",
+        "sourceType": "mel",
+        "command": "XgConvertInteractiveGroomToPoly",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "b0d6d46b-2c9d-439e-968d-b3b81faed1ff": {
+        "label": "Display HUD",
+        "sourceType": "mel",
+        "command": "ToggleXGenDisplayHUD",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "eb3ae7cc-3815-406d-9acc-413ece4130ca": {
+        "label": "Character Generator",
+        "sourceType": "mel",
+        "command": "showHelp -absolute \"https://charactergenerator.autodesk.com/account/MyAvatars.aspx\"",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "482d29c2-1965-4321-8168-9aaf287b7da2": {
+        "label": "ReCap",
+        "sourceType": "mel",
+        "command": "showHelp -absolute \"https://recap360.autodesk.com/\"",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "6b5aaeb9-10e4-446c-84b5-761ab2114756": {
+        "label": "Paint Effects Tool",
+        "sourceType": "mel",
+        "command": "PaintEffectsTool",
+        "category": "",
+        "module": "Generate",
+        "icon": "paintEffectsTool.png"
+    },
+    "d79d921a-ca05-4d9c-ae01-1f08966de930": {
+        "label": "Paint Effects Tool Options",
+        "sourceType": "mel",
+        "command": "PaintEffectsToolOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": "paintEffectsTool.png"
+    },
+    "dbd781a5-97ab-44af-9310-c21f0ffb6371": {
+        "label": "Make Paintable",
+        "sourceType": "mel",
+        "command": "MakePaintable",
+        "category": "",
+        "module": "Generate",
+        "icon": "makePaintable.png"
+    },
+    "b8f05df6-f1cd-4803-9b30-d98dcbfc5948": {
+        "label": "Get Brush...",
+        "sourceType": "mel",
+        "command": "PfxGetBrush",
+        "category": "",
+        "module": "Generate",
+        "icon": "paintEffectsBrushesLarge.png"
+    },
+    "c14f95cc-324d-47f4-b150-4b76be038b00": {
+        "label": "Template Brush Settings...",
+        "sourceType": "mel",
+        "command": "TemplateBrushSettings",
+        "category": "",
+        "module": "Generate",
+        "icon": "templateBrushSettings.png"
+    },
+    "62ca8903-877b-4681-aedd-44ea0e937b36": {
+        "label": "Reset Template Brush",
+        "sourceType": "mel",
+        "command": "ResetTemplateBrush",
+        "category": "",
+        "module": "Generate",
+        "icon": "resetTemplateBrush.png"
+    },
+    "89a9ffee-02c8-4dc1-a954-7578c7c1552a": {
+        "label": "Flip Tube Direction",
+        "sourceType": "mel",
+        "command": "PfxFlipTubeDir",
+        "category": "",
+        "module": "Generate",
+        "icon": "flipTube.png"
+    },
+    "f11da8a1-b33d-4a55-b6af-f3f4fe854705": {
+        "label": "Make Collide",
+        "sourceType": "mel",
+        "command": "PfxMakeCollide",
+        "category": "",
+        "module": "Generate",
+        "icon": "hairCollide.png"
+    },
+    "d829062f-a61c-4d6b-910f-23cfcc1e820b": {
+        "label": "Paint on Paintable Objects",
+        "sourceType": "mel",
+        "command": "PaintOnPaintableObjects",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "31b43bed-601c-42dc-a7af-a179d1a1b1de": {
+        "label": "Paint on View Plane",
+        "sourceType": "mel",
+        "command": "PaintOnViewPlane",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "17a3c6f3-dd61-4f3b-bcc0-03b52fd11af3": {
+        "label": "Apply Settings to Last Stroke",
+        "sourceType": "mel",
+        "command": "ApplySettingsToLastStroke",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "9bec6aae-bda0-4b69-be70-70ab03d9eee3": {
+        "label": "Get Settings from Selected Stroke",
+        "sourceType": "mel",
+        "command": "GetSettingsFromSelectedStroke",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "97589842-9886-4578-a9a7-c06809d04c8e": {
+        "label": "Apply Settings to Selected Strokes",
+        "sourceType": "mel",
+        "command": "ApplySettingsToSelectedStroke",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "942a8966-810d-4776-a2da-889fac55d475": {
+        "label": "Share One Brush",
+        "sourceType": "mel",
+        "command": "ShareOneBrush",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "5ef3fe0f-c7c2-4408-acb8-0c99f0fe1bfe": {
+        "label": "Remove Brush Sharing",
+        "sourceType": "mel",
+        "command": "RemoveBrushSharing",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "38cecc89-568d-4e1a-aa1c-9162fbc6337b": {
+        "label": "Select Brush/Stroke Names Containing...",
+        "sourceType": "mel",
+        "command": "SelectBrushNames",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "0a09bec1-392b-44dd-bb4e-15621a9972de": {
+        "label": "Create Modifier",
+        "sourceType": "mel",
+        "command": "CreateLineModifier",
+        "category": "",
+        "module": "Generate",
+        "icon": "toonLineModifier.png"
+    },
+    "efe8f998-e660-4319-b8ff-3535805dc764": {
+        "label": "Set Modifier Fill Object",
+        "sourceType": "mel",
+        "command": "PfxSetLineModifierObject",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "15e584d2-f25c-4254-b62e-5b2ff8849c9a": {
+        "label": "Loop Brush Animation : Brush Animation",
+        "sourceType": "mel",
+        "command": "LoopBrushAnimation",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "63ddd21d-a1e5-4b3d-bf63-036a706490e0": {
+        "label": "Loop Brush Animation Options : Brush Animation",
+        "sourceType": "mel",
+        "command": "LoopBrushAnimationOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "37dfd57e-490f-4d82-9386-c5524d116b3b": {
+        "label": "Make Brush Spring : Brush Animation",
+        "sourceType": "mel",
+        "command": "MakeBrushSpring",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "b90dd7e6-5186-4d86-973b-e42f4b6cf12e": {
+        "label": "Make Brush Spring Options : Brush Animation",
+        "sourceType": "mel",
+        "command": "MakeBrushSpringOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "83ec3d3b-e4e9-4825-b4d0-179e053e5f23": {
+        "label": "Bake Spring Animation : Brush Animation",
+        "sourceType": "mel",
+        "command": "BakeSpringAnimation",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "dbd5143a-9898-463c-9a3d-60c51acfe935": {
+        "label": "Bake Spring Animation Options : Brush Animation",
+        "sourceType": "mel",
+        "command": "BakeSpringAnimationOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "38444634-e12e-4b79-a2b5-d3b5f37394ba": {
+        "label": "Simplify Stroke Path Curves : Curve Utilities",
+        "sourceType": "mel",
+        "command": "SimplifyStrokePathCurves",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "2b2244ac-b18c-433b-a8d3-1a43151f0325": {
+        "label": "Set Stroke Control Curves : Curve Utilities",
+        "sourceType": "mel",
+        "command": "SetStrokeControlCurves",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "e5cb75e6-6300-4e06-bbd6-47c2b90c3d63": {
+        "label": "Attach Brush to Curves : Curve Utilities",
+        "sourceType": "mel",
+        "command": "AttachBrushToCurves",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "28c878e9-3f61-4f5c-a2f9-4cfadf537e90": {
+        "label": "Transfer All Strokes to new Object : Curve Utilities",
+        "sourceType": "mel",
+        "command": "PfxBrushTransfer",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "36b644eb-d466-4904-9814-9f781c01443f": {
+        "label": "Make Pressure Curve : Curve Utilities",
+        "sourceType": "mel",
+        "command": "MakePressureCurve",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "0ade16af-4b77-471d-bcd5-1d0e91f0fb97": {
+        "label": "Make Pressure Curve Options : Curve Utilities",
+        "sourceType": "mel",
+        "command": "MakePressureCurveOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "a72b2f9e-0809-473c-874a-a0e9ff3800a6": {
+        "label": "Paint Grid : Auto Paint",
+        "sourceType": "mel",
+        "command": "PaintGrid",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "2f4c1362-ea55-4d75-8778-83bfb53e51da": {
+        "label": "Paint Grid Options : Auto Paint",
+        "sourceType": "mel",
+        "command": "PaintGridOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "5ef52c68-9d57-405b-bb3f-cb40148da567": {
+        "label": "Paint Random : Auto Paint",
+        "sourceType": "mel",
+        "command": "PaintRandom",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "4122dc44-6da4-41b3-95b0-1fedc2fc1c2a": {
+        "label": "Paint Random Options : Auto Paint",
+        "sourceType": "mel",
+        "command": "PaintRandomOptions",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "b417ee55-3240-45be-820d-5ba7e26238ed": {
+        "label": "Paint Effects Globals",
+        "sourceType": "mel",
+        "command": "PaintEffectsGlobalSettings",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "48fe31ca-7dcd-4d72-b7e6-b8f799f52a8e": {
+        "label": "Mesh Quality Attributes",
+        "sourceType": "mel",
+        "command": "PaintEffectsMeshQuality",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "408a2740-4e43-4c4e-8bd1-33cb2c40144f": {
+        "label": "Preset Blending",
+        "sourceType": "mel",
+        "command": "PfxPresetBlend",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "b2657430-38b9-4151-a71a-d2576fbe539b": {
+        "label": "Preset Blending Options",
+        "sourceType": "mel",
+        "command": "PresetBlendingWindow",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    },
+    "4d0b7117-10e3-4051-98b2-6f7ed1100413": {
+        "label": "Save Brush Preset...",
+        "sourceType": "mel",
+        "command": "SaveBrushPreset",
+        "category": "",
+        "module": "Generate",
+        "icon": ""
+    }
+}

@@ -1,0 +1,418 @@
+{
+    "b846b915-1829-4b42-8932-54a57a2bf925": {
+        "label": "Set Key",
+        "sourceType": "mel",
+        "command": "SetKey",
+        "category": "",
+        "module": "Key",
+        "icon": "setKeyframe.png"
+    },
+    "104d5d5c-6271-4296-b67d-cc3d9cfd42cb": {
+        "label": "Set Key Options",
+        "sourceType": "mel",
+        "command": "SetKeyOptions",
+        "category": "",
+        "module": "Key",
+        "icon": "setKeyframe.png"
+    },
+    "72a34baa-220d-444f-bd3a-3a9c65c992bb": {
+        "label": "Set Key on Animated",
+        "sourceType": "mel",
+        "command": "SetKeyAnimated",
+        "category": "",
+        "module": "Key",
+        "icon": "setKeyOnAnim.png"
+    },
+    "c6e83aab-7c93-4502-bcdc-8b2803c0f2e7": {
+        "label": "Set Key on Translate",
+        "sourceType": "mel",
+        "command": "SetKeyTranslate",
+        "category": "",
+        "module": "Key",
+        "icon": "setKeyOnTranslate.png"
+    },
+    "7134f58c-a166-4569-b0da-2237d13230db": {
+        "label": "Set Key on Rotate",
+        "sourceType": "mel",
+        "command": "SetKeyRotate",
+        "category": "",
+        "module": "Key",
+        "icon": "setKeyOnRotate.png"
+    },
+    "472dc99b-58b2-4b64-b3c9-28d1747b0120": {
+        "label": "Set Key on Scale",
+        "sourceType": "mel",
+        "command": "SetKeyScale",
+        "category": "",
+        "module": "Key",
+        "icon": "setKeyOnScale.png"
+    },
+    "707dce92-5e9f-47ff-8da3-348556c7f381": {
+        "label": "Set Breakdown Key",
+        "sourceType": "mel",
+        "command": "SetBreakdownKey",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "4f761f7a-8b28-4452-bbdd-b21433ed59ca": {
+        "label": "Set Breakdown Key Options",
+        "sourceType": "mel",
+        "command": "SetBreakdownKeyOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "5d51b33e-66cf-46cd-acb6-b7bd0e50a389": {
+        "label": "Set... : Set Driven Key",
+        "sourceType": "mel",
+        "command": "SetDrivenKey",
+        "category": "",
+        "module": "Key",
+        "icon": "setDrivenKeyframe.png"
+    },
+    "5bcd6f6d-45fb-4459-b4b6-65bb7ecd71d3": {
+        "label": "Go to Previous : Set Driven Key",
+        "sourceType": "mel",
+        "command": "GoToPreviousDrivenKey",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "ae5233fa-f57c-40f0-877a-56677bc74757": {
+        "label": "Go to Next : Set Driven Key",
+        "sourceType": "mel",
+        "command": "GoToNextDrivenKey",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "9f1f5f0e-ea0b-49fd-a327-ea34633be2bc": {
+        "label": "Set Blend Shape Target Weight Keys",
+        "sourceType": "mel",
+        "command": "KeyBlendShapeTargetsWeight",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "db21bcc4-2757-4c93-99ab-74830e29e154": {
+        "label": "Insert Key",
+        "sourceType": "mel",
+        "command": "InsertKey",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "45bfd682-f329-4af2-bfec-5635bc541cdf": {
+        "label": "Insert Key on Translate",
+        "sourceType": "mel",
+        "command": "InsertKeyTranslate",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "a98f4e11-ed9d-40a7-b3dc-883f81fc51c7": {
+        "label": "Insert Key on Rotate",
+        "sourceType": "mel",
+        "command": "InsertKeyRotate",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "3a927651-7388-4a24-a653-94e544a93b59": {
+        "label": "Insert Key on Scale",
+        "sourceType": "mel",
+        "command": "InsertKeyScale",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "b6d9e39b-c106-470f-a42d-2f5ce68ea459": {
+        "label": "Cut Keys",
+        "sourceType": "mel",
+        "command": "CutKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "d50d1804-d3b4-4e83-bb11-fb56e2e374c2": {
+        "label": "Cut Keys Options",
+        "sourceType": "mel",
+        "command": "CutKeysOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "1366c756-cf0e-4393-b625-dfd4e0816e1a": {
+        "label": "Copy Keys",
+        "sourceType": "mel",
+        "command": "CopyKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "52365e8a-f573-4d16-b58a-1464d5debf15": {
+        "label": "Copy Keys Options",
+        "sourceType": "mel",
+        "command": "CopyKeysOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "08f6d4d1-5870-4aa8-9b1a-53b7571cc4e0": {
+        "label": "Paste Keys",
+        "sourceType": "mel",
+        "command": "PasteKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "4fec3ef1-19e0-4af0-ba97-553bc710748e": {
+        "label": "Paste Keys Options",
+        "sourceType": "mel",
+        "command": "PasteKeysOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "60e730ae-8ab7-4fb1-af2a-678acc4e6887": {
+        "label": "Delete Keys",
+        "sourceType": "mel",
+        "command": "DeleteKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "f93bd5a4-1985-4a39-a00e-9574776d8d07": {
+        "label": "Delete Keys Options",
+        "sourceType": "mel",
+        "command": "DeleteKeysOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "e6448bfd-9a6d-4d7a-947a-69126478ded9": {
+        "label": "Scale Keys",
+        "sourceType": "mel",
+        "command": "ScaleKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "466e9d5a-5551-4bf3-b30f-d5e1801bfae3": {
+        "label": "Scale Keys Options",
+        "sourceType": "mel",
+        "command": "ScaleKeysOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "01877ed5-3830-4f2c-bc59-df3c120daa35": {
+        "label": "Snap Keys",
+        "sourceType": "mel",
+        "command": "SnapKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "9b2833e5-75b7-479a-8204-f9df57893245": {
+        "label": "Snap Keys Options",
+        "sourceType": "mel",
+        "command": "SnapKeysOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "1795a0c7-60f4-4363-945d-03a0fc85f98b": {
+        "label": "Bake Simulation",
+        "sourceType": "mel",
+        "command": "BakeSimulation",
+        "category": "",
+        "module": "Key",
+        "icon": "bakeAnimation.png"
+    },
+    "b1944586-ec1b-482b-86e6-eea29ce9ba5c": {
+        "label": "Bake Simulation Options",
+        "sourceType": "mel",
+        "command": "BakeSimulationOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "30002d2c-2cc1-4309-a436-076158560e33": {
+        "label": "Hold Current Keys",
+        "sourceType": "mel",
+        "command": "HoldCurrentKeys",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "14e70988-344d-4c82-a4fe-fbcfec532cdb": {
+        "label": "Set IK/FK Key : IK/FK Keys",
+        "sourceType": "mel",
+        "command": "SetIKFKKeyframe",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "ae19e0b1-cc22-4deb-935a-819808191e43": {
+        "label": "Enable IK Solver : IK/FK Keys",
+        "sourceType": "mel",
+        "command": "ToggleFkIk",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "bc7e5c16-9f17-4d31-a894-9e55be5b920e": {
+        "label": "Connect to IK/FK : IK/FK Keys",
+        "sourceType": "mel",
+        "command": "ConnectNodeToIKFK",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "a38e3fa2-a7ba-4b13-bb98-575a33a8201b": {
+        "label": "Move IK to FK : IK/FK Keys",
+        "sourceType": "mel",
+        "command": "MoveIKtoFK",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "c815d54e-81ea-4e9b-a0d5-22795e40fb0b": {
+        "label": "Create Character Set",
+        "sourceType": "mel",
+        "command": "CreateCharacter",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "e67dff93-937f-4a98-a5ed-91b51bfd590d": {
+        "label": "Create Character Set Options",
+        "sourceType": "mel",
+        "command": "CreateCharacterOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "231bf9fe-0e09-43af-a96e-c4b500725c66": {
+        "label": "Create Subcharacter Set",
+        "sourceType": "mel",
+        "command": "CreateSubCharacter",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "94963b7f-ac4c-48f1-98d1-5ddd5742414f": {
+        "label": "Create Subcharacter Set Options",
+        "sourceType": "mel",
+        "command": "CreateSubCharacterOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "cbd07a6c-e201-45bd-8d69-30cbd4144182": {
+        "label": "Character Mapper",
+        "sourceType": "mel",
+        "command": "CharacterMapper",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "b16d51d6-180c-48f4-a83f-06b2c668caf0": {
+        "label": "Attribute Editor",
+        "sourceType": "mel",
+        "command": "EditCharacterAttributes",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "b147a5e7-64fd-40df-bfbc-734245d3c5c7": {
+        "label": "Add to Character Set",
+        "sourceType": "mel",
+        "command": "AddToCharacterSet",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "8062e714-0b1a-498d-8071-520f22dd2d17": {
+        "label": "Remove from Character Set",
+        "sourceType": "mel",
+        "command": "RemoveFromCharacterSet",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "e9161247-ffd2-4ff3-82ce-de7d1c06e668": {
+        "label": "Merge Character Sets",
+        "sourceType": "mel",
+        "command": "MergeCharacterSet",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "a69909aa-2ed8-48fe-b818-8aca29a8f16d": {
+        "label": "None : Set Current Character Set",
+        "sourceType": "mel",
+        "command": "ClearCurrentCharacterList",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "f970b40a-b0c9-4dbe-9ab2-044fe5833712": {
+        "label": "Character Set Editor : Set Current Character Set",
+        "sourceType": "mel",
+        "command": "characterEditor( true )",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "0b4b7f69-9b9e-4ac1-bd3d-69e01e4bdd7f": {
+        "label": "Redirect",
+        "sourceType": "mel",
+        "command": "AddAnimationOffset",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "61b44701-56be-406c-ae91-0e84b27be599": {
+        "label": "Redirect Options",
+        "sourceType": "mel",
+        "command": "AddAnimationOffsetOptions",
+        "category": "",
+        "module": "Key",
+        "icon": ""
+    },
+    "071ab213-0ec3-474a-8ba6-2332c8e6b398": {
+        "label": "Add Scene Time Warp : Scene Time Warp",
+        "sourceType": "mel",
+        "command": "AddTimeWarp",
+        "category": "",
+        "module": "Key",
+        "icon": "addTimeWarp.png"
+    },
+    "3799fb22-6bdd-497b-b483-1b6789b4340b": {
+        "label": "Select Scene Time Warp : Scene Time Warp",
+        "sourceType": "mel",
+        "command": "SelectTimeWarp",
+        "category": "",
+        "module": "Key",
+        "icon": "selectTimeWarp.png"
+    },
+    "7147708f-ca6c-4b72-a201-9465a88f84a4": {
+        "label": "Delete Scene Time Warp : Scene Time Warp",
+        "sourceType": "mel",
+        "command": "DeleteTimeWarp",
+        "category": "",
+        "module": "Key",
+        "icon": "deleteTimeWarp.png"
+    },
+    "84059813-74ab-4c4e-a152-ab44cade1d0f": {
+        "label": "Enable Scene Time Warp : Scene Time Warp",
+        "sourceType": "mel",
+        "command": "EnableTimeWarp",
+        "category": "",
+        "module": "Key",
+        "icon": "enableTimeWarp.png"
+    }
+}

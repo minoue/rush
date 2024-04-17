@@ -1,0 +1,210 @@
+{
+    "d732fbe4-9275-4fb4-8306-8f19552e4683": {
+        "label": "Create Editable Motion Trail",
+        "sourceType": "mel",
+        "command": "CreateMotionTrail",
+        "category": "",
+        "module": "Visualize",
+        "icon": "motionTrail.png"
+    },
+    "4e24d29d-dcb1-4d98-a3d7-c167477812b5": {
+        "label": "Create Editable Motion Trail Options",
+        "sourceType": "mel",
+        "command": "CreateMotionTrailOptions",
+        "category": "",
+        "module": "Visualize",
+        "icon": "motionTrail.png"
+    },
+    "33994235-568b-4af6-bc69-e3897d0ac301": {
+        "label": "Create Turntable...",
+        "sourceType": "mel",
+        "command": "AnimationTurntable",
+        "category": "",
+        "module": "Visualize",
+        "icon": "animTurntable.png"
+    },
+    "a667a126-4ef7-47c0-999e-eb289aed2408": {
+        "label": "Create Turntable... Options",
+        "sourceType": "mel",
+        "command": "AnimationTurntableOptions",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "0148ce10-d0d9-4822-bb0a-781a5a46501a": {
+        "label": "Blue Pencil",
+        "sourceType": "mel",
+        "command": "OpenBluePencil",
+        "category": "",
+        "module": "Visualize",
+        "icon": "BluePencil.png"
+    },
+    "257332c6-a169-4595-99ff-048da72c3acd": {
+        "label": "Open Ghosting Editor",
+        "sourceType": "mel",
+        "command": "OpenGhostEditor",
+        "category": "",
+        "module": "Visualize",
+        "icon": "ghostingEditor.png"
+    },
+    "f6e025ef-406d-43f4-ad43-4e26cd805f09": {
+        "label": "Ghost Selected",
+        "sourceType": "mel",
+        "command": "GhostSelected",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "6fd578c9-353a-4cb5-aac5-cbc3ace9aa6c": {
+        "label": "Unghost Selected",
+        "sourceType": "mel",
+        "command": "UnghostSelected",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "0f073d5c-1d88-4efd-ae83-f03fd947de0a": {
+        "label": "Unghost All",
+        "sourceType": "mel",
+        "command": "UnghostAll",
+        "category": "",
+        "module": "Visualize",
+        "icon": "ghostOff.png"
+    },
+    "9a390a8c-5417-4d41-866d-a25557beb4e7": {
+        "label": "Create Animation Snapshot",
+        "sourceType": "mel",
+        "command": "AnimationSnapshot",
+        "category": "",
+        "module": "Visualize",
+        "icon": "animateSnapshot.png"
+    },
+    "067f8cff-7414-4483-90d2-5a6ac6da1e48": {
+        "label": "Create Animation Snapshot Options",
+        "sourceType": "mel",
+        "command": "AnimationSnapshotOptions",
+        "category": "",
+        "module": "Visualize",
+        "icon": "animateSnapshot.png"
+    },
+    "a9eec939-89a1-425d-8f8b-a7e9c58691c1": {
+        "label": "Update Snapshot",
+        "sourceType": "mel",
+        "command": "UpdateSnapshot",
+        "category": "",
+        "module": "Visualize",
+        "icon": "updateMotionTrail.png"
+    },
+    "d5ae5bc3-a103-4f18-b697-5fe79af95689": {
+        "label": "Create Animated Sweep",
+        "sourceType": "mel",
+        "command": "AnimationSweep",
+        "category": "",
+        "module": "Visualize",
+        "icon": "animateSweep.png"
+    },
+    "00c6c76d-1b60-4cd5-bac6-b4a85108d382": {
+        "label": "Create Animated Sweep Options",
+        "sourceType": "mel",
+        "command": "AnimationSweepOptions",
+        "category": "",
+        "module": "Visualize",
+        "icon": "animateSweep.png"
+    },
+    "eb94ff0e-f86d-413c-bad3-ab9ca9112ef6": {
+        "label": "Create : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "CreateTimeSliderBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": "createBookmark.png"
+    },
+    "9d6a429b-2bd8-4643-8fb8-6df5139c6350": {
+        "label": "Edit : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "EditBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "900b812c-406a-4125-8d70-48caceb7a2e7": {
+        "label": "Next Bookmark : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "NextTimeSliderBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "b1deffa0-0b5f-4aab-8ad4-f42c889ecd11": {
+        "label": "Previous Bookmark : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "PreviousTimeSliderBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "46f989b3-8a34-4abd-b1f8-92e9a2586c9a": {
+        "label": "Frame Bookmark : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "FrameTimeSliderBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": "frameBookmark.png"
+    },
+    "5f506564-d37d-4e75-bcfd-c0a95a6e8897": {
+        "label": "Frame Previous Bookmark : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "FramePreviousTimeSliderBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": "previousBookmark.png"
+    },
+    "d4cd708e-55bb-4bc7-9146-fa18a0a0a0b9": {
+        "label": "Frame Next Bookmark : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "FrameNextTimeSliderBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": "nextBookmark.png"
+    },
+    "32ffa8f4-1137-4c13-ad93-60b27117b4ce": {
+        "label": "Unframe : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "PlaybackRangeAnimStartEnd",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "4f824cb9-1b8b-45ac-a435-19d6eb92c9da": {
+        "label": "Delete : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "DeleteCurrentBookmark",
+        "category": "",
+        "module": "Visualize",
+        "icon": "delete.png"
+    },
+    "eea0f048-9aad-4d05-bb94-da5443b2c701": {
+        "label": "Show Bookmarks : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "ToggleBookmarkVisibility",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "40bd718c-117f-49c4-80d0-049796031d80": {
+        "label": "Delete All Bookmarks : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "DeleteAllBookmarks",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    },
+    "0f4cfc9e-6034-4d87-be05-92142069a40d": {
+        "label": "Bookmark Manager : Time Slider Bookmarks",
+        "sourceType": "mel",
+        "command": "BookmarkManager",
+        "category": "",
+        "module": "Visualize",
+        "icon": ""
+    }
+}

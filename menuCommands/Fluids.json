@@ -1,0 +1,362 @@
+{
+    "58f2752c-65dd-4883-a75c-0451b785a024": {
+        "label": "3D Container",
+        "sourceType": "mel",
+        "command": "Create3DContainerEmitter",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidCreate3D.png"
+    },
+    "47899702-0438-4ac6-bc0d-3d9b5154fa6a": {
+        "label": "3D Container Options",
+        "sourceType": "mel",
+        "command": "Create3DContainerEmitterOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "5b7f02f8-84d2-4e30-a6c3-2f30bb30c17e": {
+        "label": "2D Container",
+        "sourceType": "mel",
+        "command": "Create2DContainerEmitter",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidCreate2D.png"
+    },
+    "4b991d97-6cdc-4204-8fa4-02e644e92f57": {
+        "label": "2D Container Options",
+        "sourceType": "mel",
+        "command": "Create2DContainerEmitterOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "ef572e22-f01a-419c-952f-f14d9c80d327": {
+        "label": "Emitter : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "FluidEmitter",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidEmitterAdd.png"
+    },
+    "bb45186e-2aa9-4f40-a3c7-b3afaf9f0021": {
+        "label": "Emitter Options : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "FluidEmitterOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "331182f2-d3e1-42d0-a923-a3c127d56cf6": {
+        "label": "Emit from Object : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "EmitFluidFromObject",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidObjectEmit.png"
+    },
+    "566bf8b3-0f95-40ce-841a-65895962ff21": {
+        "label": "Emit from Object Options : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "EmitFluidFromObjectOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "73e007b3-de8f-4852-93af-437457becbb6": {
+        "label": "Gradients : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "FluidGradients",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "99500a82-1dc9-4150-a9af-3d4246c38a24": {
+        "label": "Gradients Options : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "FluidGradientsOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "04d0d27d-f06b-474e-b4c1-3b005f259802": {
+        "label": "Paint Fluids Tool : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "PaintFluidsTool",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidPaint.png"
+    },
+    "603d03b4-d482-4014-b709-c76f918e23bc": {
+        "label": "Paint Fluids Tool Options : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "PaintFluidsToolOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "c028da4d-273f-4358-8f2b-57224c8d14bb": {
+        "label": "With Curve : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "SetFluidAttrFromCurve",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "117fc209-b4fe-43f9-9694-2cbfa6c3ae62": {
+        "label": "With Curve Options : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "SetFluidAttrFromCurveOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "fc5c02dc-523c-4f15-8f0e-6e1b937ba877": {
+        "label": "Initial States... : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "InitialFluidStates",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidGetInitialStatePresets.png"
+    },
+    "84644d4a-73c1-4efc-9ded-5fc7a84eef72": {
+        "label": "Initial States... Options : Add/Edit Contents",
+        "sourceType": "mel",
+        "command": "InitialFluidStatesOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "b507cf12-9f1b-46fe-bd86-f3a9046a0ebb": {
+        "label": "Fluid : Get Example...",
+        "sourceType": "mel",
+        "command": "GetFluidExample",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidGetExamples.png"
+    },
+    "dd3f4e83-c0a3-4b3b-b3df-8782faacb587": {
+        "label": "Ocean/Pond : Get Example...",
+        "sourceType": "mel",
+        "command": "GetOceanPondExample",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidOceanPresets.png"
+    },
+    "4097e9bf-cbfc-4504-9f56-575aa22c5dbf": {
+        "label": "Ocean",
+        "sourceType": "mel",
+        "command": "CreateOcean",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidCreateOcean.png"
+    },
+    "3276a9a2-389a-41df-afff-bf25c340db27": {
+        "label": "Ocean Options",
+        "sourceType": "mel",
+        "command": "CreateOceanOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidCreateOcean.png"
+    },
+    "f484a03d-9d90-4cd1-ae6d-3654d4065b34": {
+        "label": "Pond",
+        "sourceType": "mel",
+        "command": "CreatePond",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "b0fb66fe-2f76-49be-8453-9d3673cce347": {
+        "label": "Pond Options",
+        "sourceType": "mel",
+        "command": "CreatePondOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "67e1040b-2ce2-43b4-a353-8e3c32e73737": {
+        "label": "Extend Fluid",
+        "sourceType": "mel",
+        "command": "ExtendFluid",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidExtend.png"
+    },
+    "957b5301-da1b-4efe-a4fe-48f4083f92e0": {
+        "label": "Extend Fluid Options",
+        "sourceType": "mel",
+        "command": "ExtendFluidOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "3680ff90-ce56-4211-a59b-4898dfbf92dc": {
+        "label": "Edit Fluid Resolution",
+        "sourceType": "mel",
+        "command": "EditFluidResolution",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidEditRes.png"
+    },
+    "c2ed3143-d9c5-4728-a72f-64d4841f88d4": {
+        "label": "Edit Fluid Resolution Options",
+        "sourceType": "mel",
+        "command": "EditFluidResolutionOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "2d67afc5-6e79-4c59-a611-9ceefb7dc50f": {
+        "label": "Make Collide",
+        "sourceType": "mel",
+        "command": "MakeFluidCollide",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidCollide.png"
+    },
+    "73294952-a30e-4c74-b75f-5036e2c58df0": {
+        "label": "Make Collide Options",
+        "sourceType": "mel",
+        "command": "MakeFluidCollideOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "3f273a45-8d20-4081-8d67-323b7b1465cb": {
+        "label": "Make Motion Field",
+        "sourceType": "mel",
+        "command": "MakeMotionField",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "ae36f1e1-8256-4ae1-9748-f30809dbd902": {
+        "label": "Surface : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddOceanSurfaceLocator",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidaddOceanLocator.png"
+    },
+    "d9278d0a-14a7-4995-8fdf-6c4b8a822037": {
+        "label": "Dynamic Boat : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddBoatLocator",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "9239b465-0689-4f8e-b933-f1dc68b4fcee": {
+        "label": "Dynamic Boat Options : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddBoatLocatorOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "5d715fa2-2030-49ff-a77c-8d3ba710a68f": {
+        "label": "Dynamic Simple : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddOceanDynamicLocator",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "69ffe574-e9a2-4650-b2ba-de929dd4f02b": {
+        "label": "Dynamic Simple Options : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddOceanDynamicLocatorOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "0e8a6a97-f45c-4a77-bb11-80791db4f734": {
+        "label": "Dynamic Surface : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddDynamicBuoy",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "dc4c996f-ea2f-4c89-876d-db14e7da150e": {
+        "label": "Dynamic Surface Options : Add Dynamic Locator",
+        "sourceType": "mel",
+        "command": "AddDynamicBuoyOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "5cb6a1c1-d2bc-4673-a11c-a5eeae625b81": {
+        "label": "Add Preview Plane",
+        "sourceType": "mel",
+        "command": "AddOceanPreviewPlane",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidaddOceanPreviewPlane.png"
+    },
+    "849d400b-a77a-4b8a-9daa-d0da37b6a4e3": {
+        "label": "Float Selected Object(s) : Create Boat",
+        "sourceType": "mel",
+        "command": "FloatSelectedObjects",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "696b35f3-450d-416b-a99a-4253bd50e6fb": {
+        "label": "Float Selected Object(s) Options : Create Boat",
+        "sourceType": "mel",
+        "command": "FloatSelectedObjectsOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "d5715db4-d848-438e-91e3-e88a43695a06": {
+        "label": "Make Boat : Create Boat",
+        "sourceType": "mel",
+        "command": "MakeBoats",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "44ad5590-60ad-4b10-aa4f-5ef8c23dd8ed": {
+        "label": "Make Boat Options : Create Boat",
+        "sourceType": "mel",
+        "command": "MakeBoatsOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "4c343fd5-9d3f-4e68-a6b6-967ddd04873f": {
+        "label": "Make Motor Boat : Create Boat",
+        "sourceType": "mel",
+        "command": "MakeMotorBoats",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidOceanMotorBoats.png"
+    },
+    "1fb818cb-f29f-43de-ad1f-f9aac958c072": {
+        "label": "Make Motor Boat Options : Create Boat",
+        "sourceType": "mel",
+        "command": "MakeMotorBoatsOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    },
+    "741b863e-7070-436f-a421-f76ed9e7308b": {
+        "label": "Create Wake",
+        "sourceType": "mel",
+        "command": "CreateOceanWake",
+        "category": "",
+        "module": "Fluids",
+        "icon": "fluidaddOceanPreviewPlane.png"
+    },
+    "6a261053-660a-4a0a-8cfd-f59fabd6c291": {
+        "label": "Create Wake Options",
+        "sourceType": "mel",
+        "command": "CreateOceanWakeOptions",
+        "category": "",
+        "module": "Fluids",
+        "icon": ""
+    }
+}

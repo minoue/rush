@@ -1,0 +1,426 @@
+{
+    "1dd0452e-e868-448d-946a-c57db2665bec": {
+        "label": "Bind Skin",
+        "sourceType": "mel",
+        "command": "SmoothBindSkin",
+        "category": "",
+        "module": "Skin",
+        "icon": "smoothSkin.png"
+    },
+    "5b106a8a-f1c1-4516-81ac-ac148e357f77": {
+        "label": "Bind Skin Options",
+        "sourceType": "mel",
+        "command": "SmoothBindSkinOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "3290bf39-6f61-415d-b450-f716a3decebd": {
+        "label": "Interactive Bind Skin",
+        "sourceType": "mel",
+        "command": "InteractiveBindSkin",
+        "category": "",
+        "module": "Skin",
+        "icon": "interactiveBindTool.png"
+    },
+    "edf49091-4f24-43f4-b1fb-a51a86662de6": {
+        "label": "Interactive Bind Skin Options",
+        "sourceType": "mel",
+        "command": "InteractiveBindSkinOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "cedaca00-7584-42ee-aad2-d03de27169e3": {
+        "label": "Unbind Skin",
+        "sourceType": "mel",
+        "command": "DetachSkin",
+        "category": "",
+        "module": "Skin",
+        "icon": "detachSkin.png"
+    },
+    "312b5e23-9eb4-4f32-920a-dc964ba3b575": {
+        "label": "Unbind Skin Options",
+        "sourceType": "mel",
+        "command": "DetachSkinOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "50388c7e-46c8-43af-a528-424b0c2ad5e2": {
+        "label": "Go to Bind Pose",
+        "sourceType": "mel",
+        "command": "GoToBindPose",
+        "category": "",
+        "module": "Skin",
+        "icon": "goToBindPose.png"
+    },
+    "c192c822-96d2-4139-93a3-1baa48669f22": {
+        "label": "Go to Bind Pose Options",
+        "sourceType": "mel",
+        "command": "GoToBindPoseOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "4cc38cc4-7996-4973-b399-35a53995411b": {
+        "label": "Paint Skin Weights",
+        "sourceType": "mel",
+        "command": "ArtPaintSkinWeightsTool",
+        "category": "",
+        "module": "Skin",
+        "icon": "paintSkinWeights.png"
+    },
+    "307b26c8-5565-469f-8ad8-a2fc365f3236": {
+        "label": "Paint Skin Weights Options",
+        "sourceType": "mel",
+        "command": "ArtPaintSkinWeightsToolOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "8692ec51-e515-4ed7-9275-55afd028fdb2": {
+        "label": "Mirror Skin Weights",
+        "sourceType": "mel",
+        "command": "MirrorSkinWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": "mirrorSkinWeight.png"
+    },
+    "40250b62-bb70-48b3-923b-86b474a6b080": {
+        "label": "Mirror Skin Weights Options",
+        "sourceType": "mel",
+        "command": "MirrorSkinWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "3346513d-77cc-46e8-9362-1b5ea1a1b147": {
+        "label": "Copy Skin Weights",
+        "sourceType": "mel",
+        "command": "CopySkinWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": "copySkinWeight.png"
+    },
+    "d36502bf-478d-469c-ac4d-2378865c3ecf": {
+        "label": "Copy Skin Weights Options",
+        "sourceType": "mel",
+        "command": "CopySkinWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "9cbcf05c-7c0a-4616-8908-ff134728dbf9": {
+        "label": "Smooth Skin Weights",
+        "sourceType": "mel",
+        "command": "SmoothSkinWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": "smoothSkinWeights.png"
+    },
+    "0791bcf8-4a69-4f7d-85da-98bf5be0cb4f": {
+        "label": "Smooth Skin Weights Options",
+        "sourceType": "mel",
+        "command": "SmoothSkinWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "3b06edfa-e182-4ff9-8030-7c6bfcd1a8d6": {
+        "label": "Hammer Skin Weights",
+        "sourceType": "mel",
+        "command": "WeightHammer",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "3b165010-3533-4a54-843f-179125da945d": {
+        "label": "Hammer Skin Weights Options",
+        "sourceType": "mel",
+        "command": "WeightHammerOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "35ccec37-ecdd-480f-9c78-a57593cc7751": {
+        "label": "Copy Vertex Weights",
+        "sourceType": "mel",
+        "command": "CopyVertexWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "bc695a66-ca4f-41dd-a919-2da0ca6a1b5c": {
+        "label": "Copy Vertex Weights Options",
+        "sourceType": "mel",
+        "command": "CopyVertexWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "12a029c0-a97d-4dca-be89-7e84f6cbe163": {
+        "label": "Paste Vertex Weights",
+        "sourceType": "mel",
+        "command": "PasteVertexWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "87238474-9a7e-40b7-b2fa-2cfef32eb247": {
+        "label": "Paste Vertex Weights Options",
+        "sourceType": "mel",
+        "command": "PasteVertexWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "69abbbd9-4a8f-4341-87d3-b53d2aaf4990": {
+        "label": "Prune Small Weights",
+        "sourceType": "mel",
+        "command": "PruneSmallWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "b0069f81-91f0-43f1-ac3f-806142cf26d9": {
+        "label": "Prune Small Weights Options",
+        "sourceType": "mel",
+        "command": "PruneSmallWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "1db45f5a-adaf-4fa8-99c8-caebb513241f": {
+        "label": "Reset Default Weights",
+        "sourceType": "mel",
+        "command": "ResetWeightsToDefault",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "b0c4b1e8-34ed-49c9-9ebb-13c1b1b7f267": {
+        "label": "Reset Default Weights Options",
+        "sourceType": "mel",
+        "command": "ResetWeightsToDefaultOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "13e5d590-8ae9-4988-81bf-398d543ce5b1": {
+        "label": "Disable Weight Normalization : Normalize Weights",
+        "sourceType": "mel",
+        "command": "DisableWeightNrm",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "018511dc-4b82-4854-bcf8-c80d7821a61a": {
+        "label": "Disable Weight Normalization Options : Normalize Weights",
+        "sourceType": "mel",
+        "command": "DisableWeightNrmOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "4a05076f-1829-4e56-b562-50d3679cc391": {
+        "label": "Enable Weight Post Normalization : Normalize Weights",
+        "sourceType": "mel",
+        "command": "EnableWeightPostNrm",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "7761c0b5-05ec-4ee2-8a7e-4277aea1e012": {
+        "label": "Enable Weight Post Normalization Options : Normalize Weights",
+        "sourceType": "mel",
+        "command": "EnableWeightPostNrmOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "4c291b03-d998-4dc0-b473-dd3db1883fb6": {
+        "label": "Enable Weight Normalization : Normalize Weights",
+        "sourceType": "mel",
+        "command": "EnableWeightNrm",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "c4b6086d-182c-4ccf-ab75-d51a1a350d8d": {
+        "label": "Enable Weight Normalization Options : Normalize Weights",
+        "sourceType": "mel",
+        "command": "EnableWeightNrmOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "1a2aae40-e074-44a7-a40a-eb351f172282": {
+        "label": "Normalize Weights : Normalize Weights",
+        "sourceType": "mel",
+        "command": "NormalizeWeights",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "907b0086-3f16-4f5e-858a-e78ab30973c0": {
+        "label": "Normalize Weights Options : Normalize Weights",
+        "sourceType": "mel",
+        "command": "NormalizeWeightsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "c65d2cd9-095b-4e88-8928-840210246cd7": {
+        "label": "Export Weight Maps...",
+        "sourceType": "mel",
+        "command": "ExportSkinWeightMaps",
+        "category": "",
+        "module": "Skin",
+        "icon": "exportSmoothSkin.png"
+    },
+    "8de7b3b6-f382-4db6-a4f8-4021e2d11dcc": {
+        "label": "Export Weight Maps... Options",
+        "sourceType": "mel",
+        "command": "ExportSkinWeightMapsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "f3fe1db1-54aa-4812-9aae-dc93ee577d4d": {
+        "label": "Import Weights Maps...",
+        "sourceType": "mel",
+        "command": "ImportSkinWeightMaps",
+        "category": "",
+        "module": "Skin",
+        "icon": "importSmoothSkin.png"
+    },
+    "9a0fa35a-f143-4cf8-939c-cda1e098af30": {
+        "label": "Import Weights Maps... Options",
+        "sourceType": "mel",
+        "command": "ImportSkinWeightMapsOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "a2955c1c-e6f5-4821-b47d-cdcf34ffec62": {
+        "label": "Interactive Bind Skin Tool",
+        "sourceType": "mel",
+        "command": "VolumeSkinBinding",
+        "category": "",
+        "module": "Skin",
+        "icon": "interactiveBindTool.png"
+    },
+    "fbdd1352-947f-4800-adbf-55debed503a5": {
+        "label": "Interactive Bind Skin Tool Options",
+        "sourceType": "mel",
+        "command": "VolumeSkinBindingOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": "interactiveBindTool.png"
+    },
+    "cb072029-a4b2-4df1-95f8-3182c61cd6a2": {
+        "label": "Move Skinned Joints",
+        "sourceType": "mel",
+        "command": "MoveSkinJointsTool",
+        "category": "",
+        "module": "Skin",
+        "icon": "moveSkinnedJoint.png"
+    },
+    "87f09f54-ff4b-4608-bb56-68891ff11827": {
+        "label": "Move Skinned Joints Options",
+        "sourceType": "mel",
+        "command": "MoveSkinJointsToolOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "51da9ed5-0694-4de9-8454-0e1b46710f71": {
+        "label": "Move Weights to Influences",
+        "sourceType": "mel",
+        "command": "MoveInfluence",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "c6ce03bd-4438-4993-95ca-f717fabfc836": {
+        "label": "Add Influence : Edit Influences",
+        "sourceType": "mel",
+        "command": "AddInfluence",
+        "category": "",
+        "module": "Skin",
+        "icon": "addWrapInfluence.png"
+    },
+    "f492a82e-ccf2-4a89-9f32-1019b01669ae": {
+        "label": "Add Influence Options : Edit Influences",
+        "sourceType": "mel",
+        "command": "AddInfluenceOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "f5763442-0a36-42c4-a8af-8c0c3a4aa843": {
+        "label": "Remove Influence : Edit Influences",
+        "sourceType": "mel",
+        "command": "RemoveInfluence",
+        "category": "",
+        "module": "Skin",
+        "icon": "removeWrapInfluence.png"
+    },
+    "2015a583-3e41-4992-8440-71a6f6af4177": {
+        "label": "Remove Influence Options : Edit Influences",
+        "sourceType": "mel",
+        "command": "RemoveInfluenceOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "bf5fae32-6c3d-421b-af07-95b97888d3cc": {
+        "label": "Set Max Influences... : Edit Influences",
+        "sourceType": "mel",
+        "command": "SetMaxInfluences",
+        "category": "",
+        "module": "Skin",
+        "icon": "setMaxInfluence.png"
+    },
+    "30c7bf2f-798a-46c1-b63d-1769294edc89": {
+        "label": "Remove Unused Influences : Edit Influences",
+        "sourceType": "mel",
+        "command": "RemoveUnusedInfluences",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "2b1ed7fd-3408-408d-84b8-bf2bbc0cbe77": {
+        "label": "Remove Unused Influences Options : Edit Influences",
+        "sourceType": "mel",
+        "command": "RemoveUnusedInfluencesOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "505a17a7-ccf5-4aff-bbb7-76c190e3ca91": {
+        "label": "Substitute Geometry",
+        "sourceType": "mel",
+        "command": "SubstituteGeometry",
+        "category": "",
+        "module": "Skin",
+        "icon": "substGeometry.png"
+    },
+    "6e9911c8-b382-4e87-8ba0-9f66ec1d6a7c": {
+        "label": "Substitute Geometry Options",
+        "sourceType": "mel",
+        "command": "SubstituteGeometryOptions",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    },
+    "9ea8e4fb-3da6-48d3-bc86-c377b3e39972": {
+        "label": "Bake Deformation to Skin Weights...",
+        "sourceType": "mel",
+        "command": "BakeDeformerTool",
+        "category": "",
+        "module": "Skin",
+        "icon": ""
+    }
+}

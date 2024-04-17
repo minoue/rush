@@ -1,0 +1,234 @@
+{
+    "3fc81899-30b1-4b87-8ac8-fc751fdd575c": {
+        "label": "Material Attributes",
+        "sourceType": "mel",
+        "command": "ShowShadingGroupAttributeEditor",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "2c69607f-a9da-48b4-ad6e-7732f52b6851": {
+        "label": "Assign New Material...",
+        "sourceType": "mel",
+        "command": "createAssignNewMaterialTreeLister \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "f29ed571-1ed4-4fe7-998d-d995126caa63": {
+        "label": "Standard Surface : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader standardSurface \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "42b3af7c-d858-4919-ae7b-57b7de1672db": {
+        "label": "Blinn : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader blinn \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "15421f57-7aed-45be-af37-037cf92dfa3b": {
+        "label": "Lambert : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader lambert \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "728b339a-6ad1-4fa9-86f6-95c6e43970f6": {
+        "label": "Layered Shader : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader layeredShader \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "79017f2a-20e4-4567-b1bd-3ff889d729f6": {
+        "label": "Phong : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader phong \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "1f7546ac-f907-4f44-8804-93948f0039ae": {
+        "label": "Phong E : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader phongE \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "7b8d7aa4-bced-4cc4-a53e-fac3df1fd30d": {
+        "label": "Ramp Shader : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader rampShader \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "c15a287e-b075-48e9-bb7a-41a5c873bf30": {
+        "label": "Surface Shader : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader surfaceShader \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "d510aa8a-be6a-4594-9ab0-0c02a206b5ed": {
+        "label": "Use Background : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "createAndAssignShader useBackground \"\"",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "73a17c17-28dd-4d31-815c-9ce2b83d655a": {
+        "label": "Automatic Attribute Editor : Assign Favorite Material",
+        "sourceType": "mel",
+        "command": "optionVar -intValue AEpopupWhenCreatingShaders #1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "f2673345-62d4-4127-9ed6-583922f65c09": {
+        "label": "lambert1 : Assign Existing Material",
+        "sourceType": "mel",
+        "command": "hyperShade -assign lambert1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "b1a5ea5e-5313-4501-86f5-125ef83004bf": {
+        "label": "lambert1 Options : Assign Existing Material",
+        "sourceType": "mel",
+        "command": "showEditor lambert1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "fa50f509-a899-4785-8165-c53cf0489a77": {
+        "label": "standardSurface1 : Assign Existing Material",
+        "sourceType": "mel",
+        "command": "hyperShade -assign standardSurface1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "bc9a5105-9463-403e-9386-39e327527472": {
+        "label": "standardSurface1 Options : Assign Existing Material",
+        "sourceType": "mel",
+        "command": "showEditor standardSurface1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "b18421b3-6b55-4864-88db-92433d8ca92b": {
+        "label": "particleCloud1 : Assign Existing Material",
+        "sourceType": "mel",
+        "command": "hyperShade -assign particleCloud1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "ce5d2519-6f4d-4520-a4df-798a7acaf66d": {
+        "label": "particleCloud1 Options : Assign Existing Material",
+        "sourceType": "mel",
+        "command": "showEditor particleCloud1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "470d7352-28ab-4837-bff8-f556327a3435": {
+        "label": "Transfer Maps...",
+        "sourceType": "mel",
+        "command": "performSurfaceSampling 1",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "2e46edc1-f5b5-4ac0-9767-eaa8898b5035": {
+        "label": "Light-Centric : Light Linking Editor",
+        "sourceType": "mel",
+        "command": "LightCentricLightLinkingEditor",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "e6bfe1f7-2c41-4e08-9e33-199a1309c1c7": {
+        "label": "Object-Centric : Light Linking Editor",
+        "sourceType": "mel",
+        "command": "ObjectCentricLightLinkingEditor",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "dbf85c6f-62d3-4a15-b0bb-50398a668695": {
+        "label": "Make Light Links",
+        "sourceType": "mel",
+        "command": "MakeLightLinks",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "b6e45e55-b4d4-4649-a835-22b9df8c8cf4": {
+        "label": "Break Light Links",
+        "sourceType": "mel",
+        "command": "BreakLightLinks",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "553a0cc2-bb4f-4168-a67c-0b3e3ae5da19": {
+        "label": "Select Objects Illuminated by Light",
+        "sourceType": "mel",
+        "command": "SelectObjectsIlluminatedByLight",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "c8d2f84e-8ea7-4036-bd3d-b11b51d14c71": {
+        "label": "Select Lights Illuminating Object",
+        "sourceType": "mel",
+        "command": "SelectLightsIlluminatingObject",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "2d626f9f-95dc-470f-8f63-d0ad38dd663f": {
+        "label": "Make Shadow Links",
+        "sourceType": "mel",
+        "command": "MakeShadowLinks",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "4fab9a86-176e-48b7-a321-d03f7b9fbace": {
+        "label": "Break Shadow Links",
+        "sourceType": "mel",
+        "command": "BreakShadowLinks",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "f59b4091-2884-45d4-8d89-6d8621e34021": {
+        "label": "Select Objects Shadowed by Light",
+        "sourceType": "mel",
+        "command": "SelectObjectsShadowedByLight",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    },
+    "aba4ee17-d309-4b14-9812-4321619dce1a": {
+        "label": "Select Lights Shadowing Object",
+        "sourceType": "mel",
+        "command": "SelectLightsShadowingObject",
+        "category": "",
+        "module": "Lighting_Shading",
+        "icon": ""
+    }
+}

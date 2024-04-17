@@ -1,0 +1,466 @@
+{
+    "101aa7d2-9398-494e-bfd0-6997468edc98": {
+        "label": "Union : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanUnion",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansUnion.png"
+    },
+    "765a0f1d-c2b4-4d39-88be-0231a00c3e82": {
+        "label": "Union Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanUnionOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansUnion.png"
+    },
+    "0993c3ec-a77c-446c-942e-897ef6cb85fa": {
+        "label": "Difference (A - B) : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanDifference",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansDifference.png"
+    },
+    "2255c2dc-dbbd-4907-b932-1c3db83d867a": {
+        "label": "Difference (A - B) Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanDifferenceOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansDifference.png"
+    },
+    "4593651e-02cd-4310-9fcb-361cf13785c9": {
+        "label": "Difference (B - A) : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanDifferenceBA",
+        "category": "",
+        "module": "Mesh",
+        "icon": "Bool_BMinusA.png"
+    },
+    "a38f9f53-95b9-47da-9401-aac3da221b4b": {
+        "label": "Difference (B - A) Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanDifferenceBAOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "85233def-172a-4592-a145-642ab567ab4d": {
+        "label": "Intersection : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanIntersection",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "d3e6fd59-5b80-41a1-be3c-819a7f7dc606": {
+        "label": "Intersection Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanIntersectionOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "e82dcb21-c7ab-4e54-9be0-1498adb7273a": {
+        "label": "Slice : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanSlice",
+        "category": "",
+        "module": "Mesh",
+        "icon": "Bool_Slice.png"
+    },
+    "98b4c7f2-a324-4658-8eab-205d3112a6dc": {
+        "label": "Slice Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanSliceOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "fc012161-c56f-406c-a9ea-11d55b7a9ed2": {
+        "label": "Hole Punch : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanHolePunch",
+        "category": "",
+        "module": "Mesh",
+        "icon": "Bool_HolePunch.png"
+    },
+    "3c90bcc3-8bac-4694-b7b2-b5f21ca75947": {
+        "label": "Hole Punch Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanHolePunchOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "12147fca-881e-46e2-a61d-048a8dc06d70": {
+        "label": "Cut Out : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanCutOut",
+        "category": "",
+        "module": "Mesh",
+        "icon": "Bool_CutOut.png"
+    },
+    "d02bfe59-3af8-4307-a7c5-af6cf55ec9d0": {
+        "label": "Cut Out Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanCutOutOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "9b4e57ba-423c-496c-9dd2-ed01472ca5ef": {
+        "label": "Split Edges : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanSplitEdges",
+        "category": "",
+        "module": "Mesh",
+        "icon": "Bool_SplitEdges.png"
+    },
+    "32268179-2e48-4ee4-aadc-6cdd25246e9e": {
+        "label": "Split Edges Options : Booleans",
+        "sourceType": "mel",
+        "command": "PolygonBooleanSplitEdgesOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyBooleansIntersection.png"
+    },
+    "552fe65a-f3a6-4e59-9297-47a712935f71": {
+        "label": "Combine",
+        "sourceType": "mel",
+        "command": "CombinePolygons",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyUnite.png"
+    },
+    "858967b1-e3a4-48df-b503-7b1819514010": {
+        "label": "Combine Options",
+        "sourceType": "mel",
+        "command": "CombinePolygonsOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyUnite.png"
+    },
+    "6ee9441b-d47d-4110-928a-0cec033d8482": {
+        "label": "Separate",
+        "sourceType": "mel",
+        "command": "SeparatePolygon",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polySeparate.png"
+    },
+    "17801c5d-2a18-4e66-897a-5f9a8c5f1030": {
+        "label": "Conform",
+        "sourceType": "mel",
+        "command": "ConformPolygon",
+        "category": "",
+        "module": "Mesh",
+        "icon": ""
+    },
+    "15d2ba33-762d-4139-8739-5d9b9bc8e428": {
+        "label": "Conform Options",
+        "sourceType": "mel",
+        "command": "ConformPolygonOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": ""
+    },
+    "457239bc-af1b-4283-bc4a-879f338e742e": {
+        "label": "Fill Hole",
+        "sourceType": "mel",
+        "command": "FillHole",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyCloseBorder.png"
+    },
+    "9ce3b876-2293-4be2-85f8-0adbbc03b738": {
+        "label": "Reduce",
+        "sourceType": "mel",
+        "command": "ReducePolygon",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyReduce.png"
+    },
+    "60fa6d87-8540-41ba-ba83-248616ca2b6a": {
+        "label": "Reduce Options",
+        "sourceType": "mel",
+        "command": "ReducePolygonOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyReduce.png"
+    },
+    "a8a139b7-8a6a-413d-af43-2e892dc6e906": {
+        "label": "Remesh",
+        "sourceType": "mel",
+        "command": "PolyRemesh",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyRemesh.png"
+    },
+    "0daa14de-f4a2-47a7-b6e8-9b9cf145da69": {
+        "label": "Remesh Options",
+        "sourceType": "mel",
+        "command": "PolyRemeshOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTriangulate.png"
+    },
+    "82bb2ab0-96a4-488f-8daa-eba564ecadd2": {
+        "label": "Retopologize",
+        "sourceType": "mel",
+        "command": "PolyRetopo",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyRetopo.png"
+    },
+    "baab886c-28d6-411d-a0af-a4fddc8fc84b": {
+        "label": "Retopologize Options",
+        "sourceType": "mel",
+        "command": "PolyRetopoOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTriangulate.png"
+    },
+    "50e26921-4b5c-44b6-902d-f85ee5f12bfa": {
+        "label": "Smooth",
+        "sourceType": "mel",
+        "command": "SmoothPolygon",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polySmooth.png"
+    },
+    "4c8e6745-a2f4-467a-a5b6-b5ec5b4c6866": {
+        "label": "Smooth Options",
+        "sourceType": "mel",
+        "command": "SmoothPolygonOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polySmooth.png"
+    },
+    "5573cba1-3baa-4238-81c2-210219ae95ac": {
+        "label": "Unsmooth",
+        "sourceType": "mel",
+        "command": "UnsmoothPolygon",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyUnsmooth.png"
+    },
+    "ebf2eedd-2b27-4fb8-9985-2f0ce711f754": {
+        "label": "Unsmooth Options",
+        "sourceType": "mel",
+        "command": "UnsmoothPolygonOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyUnsmooth.png"
+    },
+    "df77c916-7b7c-402c-b8db-32f03aeb2fbd": {
+        "label": "Triangulate",
+        "sourceType": "mel",
+        "command": "Triangulate",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTriangulate.png"
+    },
+    "354b9eb2-ea77-47de-bd65-dfff611d6906": {
+        "label": "Quadrangulate",
+        "sourceType": "mel",
+        "command": "Quadrangulate",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyQuad.png"
+    },
+    "5969836d-317e-4afa-a95d-34fca16c0401": {
+        "label": "Quadrangulate Options",
+        "sourceType": "mel",
+        "command": "QuadrangulateOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyQuad.png"
+    },
+    "6b46642a-cf42-4cb0-8efb-b9d9b34e09d5": {
+        "label": "Mirror",
+        "sourceType": "mel",
+        "command": "MirrorPolygonGeometry",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyMirrorGeometry.png"
+    },
+    "b97a7b38-eed9-4b14-8158-4b13f58a0b43": {
+        "label": "Mirror Options",
+        "sourceType": "mel",
+        "command": "MirrorPolygonGeometryOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyMirrorGeometry.png"
+    },
+    "6e559204-6683-4150-acfc-edf2b384af0c": {
+        "label": "Copy Attributes : Clipboard Actions",
+        "sourceType": "mel",
+        "command": "PolygonCopy",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyCopyColors.png"
+    },
+    "a76b4349-57ca-4579-bc7b-93dcebbaebc5": {
+        "label": "Copy Attributes Options : Clipboard Actions",
+        "sourceType": "mel",
+        "command": "PolygonCopyOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyCopyColors.png"
+    },
+    "98bfdee1-fc22-4eaa-aadc-8ddbfe2e414d": {
+        "label": "Paste Attributes : Clipboard Actions",
+        "sourceType": "mel",
+        "command": "PolygonPaste",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyPasteColors.png"
+    },
+    "dee9f31e-1ba5-458f-8cd8-12f4a33bace3": {
+        "label": "Paste Attributes Options : Clipboard Actions",
+        "sourceType": "mel",
+        "command": "PolygonPasteOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyPasteColors.png"
+    },
+    "931aa18f-5b7a-47e4-afe3-ad688d55755a": {
+        "label": "Clear Clipboard : Clipboard Actions",
+        "sourceType": "mel",
+        "command": "PolygonClearClipboard",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyClearColors.png"
+    },
+    "0acc8bec-1f8b-4d03-b41e-6b44974a9c12": {
+        "label": "Clear Clipboard Options : Clipboard Actions",
+        "sourceType": "mel",
+        "command": "PolygonClearClipboardOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyClearColors.png"
+    },
+    "10158a2b-8fe2-45c7-8780-37873d3102a0": {
+        "label": "Transfer Attributes",
+        "sourceType": "mel",
+        "command": "TransferAttributes",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTransferAttributes.png"
+    },
+    "863e41c2-9778-47aa-8d83-528b4baa6bf6": {
+        "label": "Transfer Attributes Options",
+        "sourceType": "mel",
+        "command": "performTransferAttributes 1",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTransferAttributes.png"
+    },
+    "4734697f-300f-4100-8ab2-6d3d3b3d9ab4": {
+        "label": "Transfer Shading Sets",
+        "sourceType": "mel",
+        "command": "TransferShadingSets",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTransferShadingSets.png"
+    },
+    "f3c9ce38-e21f-458f-85fa-ca65007259f3": {
+        "label": "Transfer Shading Sets Options",
+        "sourceType": "mel",
+        "command": "performTransferShadingSets 1",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyTransferShadingSets.png"
+    },
+    "593d3590-5da9-4c44-98aa-d9a206bc7b26": {
+        "label": "Transfer Vertex Order",
+        "sourceType": "mel",
+        "command": "TransferVertexOrder",
+        "category": "",
+        "module": "Mesh",
+        "icon": "transferIDs.png"
+    },
+    "c8716958-3d66-44f7-8046-0ddbe525207f": {
+        "label": "Cleanup...",
+        "sourceType": "mel",
+        "command": "CleanupPolygon",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyCleanup.png"
+    },
+    "010ccdfd-bbc8-466a-a735-cfb584eb4ac8": {
+        "label": "Cleanup... Options",
+        "sourceType": "mel",
+        "command": "CleanupPolygonOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": ""
+    },
+    "d6fc668e-49b8-4fef-b2af-e99420bfa3c8": {
+        "label": "Subdiv Proxy : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "SmoothProxy",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polySmoothProxy.png"
+    },
+    "aa065918-129a-44b8-a18e-b31846ffcacb": {
+        "label": "Subdiv Proxy Options : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "SmoothProxyOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polySmoothProxy.png"
+    },
+    "2c7b534d-f2fa-418e-b412-4c42a3fcde3d": {
+        "label": "Remove Subdiv Proxy Mirror : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "UnmirrorSmoothProxy",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyUnmirrorSmoothProxy.png"
+    },
+    "bd534352-27f8-42ee-82d9-7a7f53f98145": {
+        "label": "Remove Subdiv Proxy Mirror Options : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "UnmirrorSmoothProxyOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyUnmirrorSmoothProxy.png"
+    },
+    "d09533c3-dd66-4ce9-bf38-658ed2404b49": {
+        "label": "Crease Tool : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "PolyCreaseTool",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyCrease.png"
+    },
+    "d82714ea-64f7-4dc3-a2d6-8df2a85c0894": {
+        "label": "Crease Tool Options : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "PolyCreaseToolOptions",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyCrease.png"
+    },
+    "1b296cd2-5a3e-4d85-bab4-aaad341b4322": {
+        "label": "Toggle Proxy Display : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "SmoothingDisplayToggle",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyToggleProxy.png"
+    },
+    "348757ba-fe5f-48ed-8997-853c1cdcb3c1": {
+        "label": "Both Proxy and Subdiv Display : Smooth Proxy",
+        "sourceType": "mel",
+        "command": "SmoothingDisplayShowBoth",
+        "category": "",
+        "module": "Mesh",
+        "icon": "polyToggleProxySubdiv.png"
+    }
+}

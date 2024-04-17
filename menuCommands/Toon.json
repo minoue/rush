@@ -1,0 +1,202 @@
+{
+    "0fed73d5-e44b-4a48-a881-cf0f192c4cbb": {
+        "label": "Solid Color : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderSolid",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonSolid.png"
+    },
+    "9c3242cf-2b8f-4b50-af22-dafae6844430": {
+        "label": "Light Angle Two Tone : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderLightAngle",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonLightAngle2.png"
+    },
+    "964dfc79-71e8-4624-bf5e-f2f20874cfd7": {
+        "label": "Shaded Brightness Two Tone : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderShadedBrightness",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonBrightness2.png"
+    },
+    "5eee3b3a-f591-4856-b448-4742147c4584": {
+        "label": "Shaded Brightness Three Tone : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderThreeToneBrightness",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonBrightness3.png"
+    },
+    "0c74a23a-7323-4afb-82dd-df2664132fb0": {
+        "label": "Dark Profile : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderDarkProfile",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonDarkProfile.png"
+    },
+    "2820d5a9-9a62-4482-be3d-55146355a3cf": {
+        "label": "Rim Light : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderRimLight",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonRimLight.png"
+    },
+    "b5ca9f7e-093e-4f1b-a355-30e4429b3dec": {
+        "label": "Circle Highlight : Assign Fill Shader",
+        "sourceType": "mel",
+        "command": "AssignToonShaderCircleHighlight",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonCircleHigh.png"
+    },
+    "4c66ee62-d57e-48af-8b5d-2c7d4396994e": {
+        "label": "Add New Toon Outline : Assign Outline",
+        "sourceType": "mel",
+        "command": "AssignNewPfxToon",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonAddOutline.png"
+    },
+    "3bb54a56-d454-497c-9bb5-e3c814aa0574": {
+        "label": "Remove Current Toon Outlines : Assign Outline",
+        "sourceType": "mel",
+        "command": "RemoveNewPfxToon",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonRemoveOutline.png"
+    },
+    "74037021-0bca-4ea7-84c1-7fb9a18c8cc3": {
+        "label": "Create Modifier",
+        "sourceType": "mel",
+        "command": "CreateLineModifier",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonLineModifier.png"
+    },
+    "ce65d34b-2772-463a-96f2-cb8907b3674c": {
+        "label": "persp : Set Camera Background Color",
+        "sourceType": "mel",
+        "command": "editAttributeColor persp.backgroundColor",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPerspBackground.png"
+    },
+    "152d4cde-9e73-4ce1-a861-98e87da846ce": {
+        "label": "front : Set Camera Background Color",
+        "sourceType": "mel",
+        "command": "editAttributeColor front.backgroundColor",
+        "category": "",
+        "module": "Toon",
+        "icon": ""
+    },
+    "9f92df1f-942b-4388-b979-e303fe394ca5": {
+        "label": "side : Set Camera Background Color",
+        "sourceType": "mel",
+        "command": "editAttributeColor side.backgroundColor",
+        "category": "",
+        "module": "Toon",
+        "icon": ""
+    },
+    "bd495127-a70e-478a-886a-09ad097cf665": {
+        "label": "top : Set Camera Background Color",
+        "sourceType": "mel",
+        "command": "editAttributeColor top.backgroundColor",
+        "category": "",
+        "module": "Toon",
+        "icon": ""
+    },
+    "1778f46b-ff83-4663-b1e9-4dd1341037a7": {
+        "label": "Reverse Surfaces",
+        "sourceType": "mel",
+        "command": "ReverseToonObjects",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonReverseSurfaces.png"
+    },
+    "c2721d22-de6c-4833-8ecb-1584743d259c": {
+        "label": "Convert Toon To Polygons",
+        "sourceType": "mel",
+        "command": "ConvertPaintEffectsToPoly",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonToPolygons.png"
+    },
+    "13344217-d67f-4a1a-9a8d-2569c25b0419": {
+        "label": "Convert Toon To Polygons Options",
+        "sourceType": "mel",
+        "command": "PaintEffectsToPolyOptions",
+        "category": "",
+        "module": "Toon",
+        "icon": ""
+    },
+    "b281ec0e-743d-438a-8494-30d617508677": {
+        "label": "Line Width : Paint Line Attributes",
+        "sourceType": "mel",
+        "command": "PaintToonLineWidth",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPaintWidth.png"
+    },
+    "4580ee9e-d43a-4ff7-894b-9b898908d3da": {
+        "label": "Line Offset : Paint Line Attributes",
+        "sourceType": "mel",
+        "command": "PaintToonLineOffset",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPaintOffset.png"
+    },
+    "50844439-55ba-4a35-8520-27242b28b608": {
+        "label": "Line Opacity : Paint Line Attributes",
+        "sourceType": "mel",
+        "command": "PaintToonLineOpacity",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPaintOpacity.png"
+    },
+    "0c20e6ed-3d4d-4d89-9431-2aa730c3ff39": {
+        "label": "Profile Color : Paint Line Attributes",
+        "sourceType": "mel",
+        "command": "PaintToonProfileColor",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPaintProfileColor.png"
+    },
+    "9837e6db-bce6-4a37-9457-fc1588e81177": {
+        "label": "Crease Color : Paint Line Attributes",
+        "sourceType": "mel",
+        "command": "PaintToonCreaseColor",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPaintCreaseColor.png"
+    },
+    "7489beca-5bf8-4014-85a5-662aa19a0981": {
+        "label": "Border Color : Paint Line Attributes",
+        "sourceType": "mel",
+        "command": "PaintToonBorderColor",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonPaintBorderColor.png"
+    },
+    "7de86ba9-f9d2-40da-a3b4-e23520364d3c": {
+        "label": "Assign Paint Effects Brush to Toon Lines",
+        "sourceType": "mel",
+        "command": "AssignBrushToPfxToon",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonAssignPfxBrush.png"
+    },
+    "1ce086b3-16b6-416a-aa1a-431896084284": {
+        "label": "Get Toon Example...",
+        "sourceType": "mel",
+        "command": "GetCartoonExample",
+        "category": "",
+        "module": "Toon",
+        "icon": "toonGetExample.png"
+    }
+}

@@ -1,0 +1,258 @@
+{
+    "499fd7d0-834b-474f-a0b2-56046c0e45bb": {
+        "label": "nObject : Create New Cache",
+        "sourceType": "mel",
+        "command": "nClothCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheCreate.png"
+    },
+    "c3c054ba-b944-4ce3-92ee-a01039e994a5": {
+        "label": "nObject Options : Create New Cache",
+        "sourceType": "mel",
+        "command": "nClothCacheOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheCreate.png"
+    },
+    "68e98cd6-9f97-4715-9a2a-920c6487e8c4": {
+        "label": "Maya Fluid : Create New Cache",
+        "sourceType": "mel",
+        "command": "CreateFluidCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "fluidCacheCreate.png"
+    },
+    "d9f1b8dd-1730-43ac-96ee-0e1762d6bb4a": {
+        "label": "Maya Fluid Options : Create New Cache",
+        "sourceType": "mel",
+        "command": "CreateFluidCacheOptions",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "c64c8c12-1c55-41ba-9594-5028e3b36b0e": {
+        "label": "nObject : Merge Caches",
+        "sourceType": "mel",
+        "command": "nClothMergeCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheMerge.png"
+    },
+    "297af8be-1306-4328-908e-7f13e14e5b37": {
+        "label": "nObject Options : Merge Caches",
+        "sourceType": "mel",
+        "command": "nClothMergeCacheOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheMerge.png"
+    },
+    "b2fafed8-9dc7-411b-b75c-e2e8fb9d3287": {
+        "label": "Maya Fluid : Merge Caches",
+        "sourceType": "mel",
+        "command": "fluidMergeCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheMerge.png"
+    },
+    "ec96aeeb-50cb-4069-af0b-6ce0f3de116e": {
+        "label": "Maya Fluid Options : Merge Caches",
+        "sourceType": "mel",
+        "command": "fluidMergeCacheOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "d0977fe2-3ddc-42dc-9507-58f17a973d27": {
+        "label": "nObject : Replace Caches",
+        "sourceType": "mel",
+        "command": "nClothReplaceCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheReplace.png"
+    },
+    "b027c024-f7bd-42da-aac3-ff60fa5967c1": {
+        "label": "nObject Options : Replace Caches",
+        "sourceType": "mel",
+        "command": "nClothReplaceCacheOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheMerge.png"
+    },
+    "c73ec09d-dfae-45ca-9cd0-8885fe1f14d2": {
+        "label": "Maya Fluid : Replace Caches",
+        "sourceType": "mel",
+        "command": "fluidReplaceCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "fluidCacheReplace.png"
+    },
+    "bf48f3d0-35c2-4ea5-9c7f-324eaf5db52a": {
+        "label": "Maya Fluid Options : Replace Caches",
+        "sourceType": "mel",
+        "command": "fluidReplaceCacheOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "7ee7453c-57d0-4112-b3bc-92b8ef738d60": {
+        "label": "Enable All Caches on Selected",
+        "sourceType": "mel",
+        "command": "EnableAllCaches",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheEnable.png"
+    },
+    "c2c91339-8ceb-4a2a-bd0b-2428b6661b8f": {
+        "label": "Disable All Caches on Selected",
+        "sourceType": "mel",
+        "command": "DisableAllCaches",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheDisable.png"
+    },
+    "78dc0abb-c4ec-4773-8834-2da4ccecdb6b": {
+        "label": "Append to Cache",
+        "sourceType": "mel",
+        "command": "cacheAppend",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheAppend.png"
+    },
+    "1da578d4-8fee-43d8-90fc-a245e55e42c0": {
+        "label": "Append to Cache Options",
+        "sourceType": "mel",
+        "command": "cacheAppendOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheAppend.png"
+    },
+    "6987c1e5-b04b-4831-91f8-5d1cc959b41e": {
+        "label": "Attach Cache...",
+        "sourceType": "mel",
+        "command": "attachCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheExisting.png"
+    },
+    "6b28bcdf-e262-445a-8023-c08b9ec1f315": {
+        "label": "Delete Cache",
+        "sourceType": "mel",
+        "command": "fluidDeleteCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheDelete.png"
+    },
+    "a6f0d6a7-a7c6-4963-81b0-11205e413056": {
+        "label": "Delete Cache Options",
+        "sourceType": "mel",
+        "command": "fluidDeleteCacheOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheDelete.png"
+    },
+    "33c590ff-4dc4-4870-bfee-178a71592d9e": {
+        "label": "Replace Cache Frame",
+        "sourceType": "mel",
+        "command": "replaceCacheFrames",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheReplaceFrames.png"
+    },
+    "54467e6d-37d0-4056-bdf0-3b42d59afd10": {
+        "label": "Replace Cache Frame Options",
+        "sourceType": "mel",
+        "command": "replaceCacheFramesOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheReplaceFrames.png"
+    },
+    "5ad336ed-a5b8-4797-92aa-9a0e907fd4f3": {
+        "label": "Delete Cache Frame",
+        "sourceType": "mel",
+        "command": "fluidDeleteCacheFrames",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheDeleteFrame.png"
+    },
+    "2900bd45-6596-465f-a10a-a5722d838639": {
+        "label": "Delete Cache Frame Options",
+        "sourceType": "mel",
+        "command": "fluidDeleteCacheFramesOpt",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "172e7640-ea57-4d2f-9aaa-e11321305bd3": {
+        "label": "Paint Cache Weights Tool",
+        "sourceType": "mel",
+        "command": "PaintCacheTool",
+        "category": "",
+        "module": "nCache",
+        "icon": "paintCacheWeights.png"
+    },
+    "7618bb10-002b-48fe-8b9b-e078f767d2d8": {
+        "label": "Paint Cache Weights Tool Options",
+        "sourceType": "mel",
+        "command": "PaintCacheToolOptions",
+        "category": "",
+        "module": "nCache",
+        "icon": "paintCacheWeights.png"
+    },
+    "d715508c-1bca-4275-b1c0-b050502fb2e2": {
+        "label": "Transfer Cache To Input Mesh",
+        "sourceType": "mel",
+        "command": "MoveCacheToInput",
+        "category": "",
+        "module": "nCache",
+        "icon": "nClothCacheTransfer.png"
+    },
+    "7c5369ba-5733-43bb-8a2b-b9e7fcfa0ce1": {
+        "label": "Create Particle Disk Cache",
+        "sourceType": "mel",
+        "command": "CreateParticleDiskCache",
+        "category": "",
+        "module": "nCache",
+        "icon": "bakeParticles.png"
+    },
+    "e5a2a5ac-4298-43cd-948e-7a2528926acf": {
+        "label": "Create Particle Disk Cache Options",
+        "sourceType": "mel",
+        "command": "CreateParticleDiskCacheOptions",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "eae75cdb-16ca-4059-822f-133d184b2b59": {
+        "label": "Edit Oversampling or Cache Settings...",
+        "sourceType": "mel",
+        "command": "EditOversamplingForCacheSettings",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "9e354e2e-b01d-468f-b7db-d714ebe85cf8": {
+        "label": "Enable : Memory Caching",
+        "sourceType": "mel",
+        "command": "EnableMemoryCaching",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "0fdde9c5-f8ee-4abd-a57f-d52263159405": {
+        "label": "Disable : Memory Caching",
+        "sourceType": "mel",
+        "command": "DisableMemoryCaching",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    },
+    "925aaf93-dd0c-4dbf-a67f-3fa7a60d75cf": {
+        "label": "Delete : Memory Caching",
+        "sourceType": "mel",
+        "command": "DeleteMemoryCaching",
+        "category": "",
+        "module": "nCache",
+        "icon": ""
+    }
+}

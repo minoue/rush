@@ -8,6 +8,7 @@ from PySide2 import QtWidgets, QtCore
 import shiboken2
 import rush
 
+from importlib import reload
 reload(rush)
 
 

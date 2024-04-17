@@ -1,0 +1,146 @@
+{
+    "9456cb02-6f74-46a0-bc0b-6a4395f2f9b8": {
+        "label": "Create MASH Network",
+        "sourceType": "mel",
+        "command": "CreateMashNetwork",
+        "category": "",
+        "module": "MASH",
+        "icon": "out_MASH_Waiter.png"
+    },
+    "4b48cb37-ddcf-49cf-a1b5-0244e254a492": {
+        "label": "Create MASH Network Options",
+        "sourceType": "mel",
+        "command": "CreateMashNetworkOptions",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    },
+    "4ddeeec6-8fb4-49ca-ab91-b58e0b3380db": {
+        "label": "MASH Editor",
+        "sourceType": "mel",
+        "command": "OpenMashEditor",
+        "category": "",
+        "module": "MASH",
+        "icon": "ae_MASH_Editor.png"
+    },
+    "21de1c52-4fac-4d56-b9c7-842817a9d036": {
+        "label": "Cache MASH network : Utilities",
+        "sourceType": "mel",
+        "command": "CacheMashNetwork",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_CacheNetwork.png"
+    },
+    "73492e87-d7ff-4f39-aa7e-082306dea312": {
+        "label": "Create MASH Deformer : Utilities",
+        "sourceType": "mel",
+        "command": "AddMashDeformer",
+        "category": "",
+        "module": "MASH",
+        "icon": "out_MASH_Deformer.png"
+    },
+    "7fef6c41-0c6c-4877-acaf-8af2bd3e994c": {
+        "label": "Create MASH Blend Deformer : Utilities",
+        "sourceType": "mel",
+        "command": "AddMashBlendDeformer",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_CreateBlendDeformer.png"
+    },
+    "879c7cd8-3bd8-4bb6-8853-f3f5157a079a": {
+        "label": "Create Jiggle Deformer : Utilities",
+        "sourceType": "mel",
+        "command": "AddMashJiggleDeformer",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_CreateJiggleDeformer.png"
+    },
+    "02ee8959-7ced-4f07-a5f1-2d8a3eec5a7a": {
+        "label": "Create Mesh from MASH Points : Utilities",
+        "sourceType": "mel",
+        "command": "CreateMeshFromMashPoints",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_CreateMeshFromPoints.png"
+    },
+    "81f054ac-5228-4ddf-ada7-ca40ae83d2c4": {
+        "label": "Connect MASH to Type/ SVG : Utilities",
+        "sourceType": "mel",
+        "command": "ConnectMashToVector",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_ConnectToType.png"
+    },
+    "e9118ae1-55f9-4af6-954e-a059e66770b0": {
+        "label": "Use nParticles to distribute MASH points : Utilities",
+        "sourceType": "mel",
+        "command": "ConnectMashToParticles",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    },
+    "e7359cd0-aa4e-454c-b8e4-a2509dfe5bde": {
+        "label": "Set up nParticles with an initial state from MASH : Utilities",
+        "sourceType": "mel",
+        "command": "BakeMashToParticles",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    },
+    "dadbbc84-04f2-4fd8-bca4-06ee6185c9e8": {
+        "label": "Add Trails to Particles : Utilities",
+        "sourceType": "mel",
+        "command": "AddTrailsToParticles",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_AddTrailsToParticles.png"
+    },
+    "a1847afd-b843-425f-b0b6-f39e93286ad0": {
+        "label": "Switch MASH Geometry Type : Utilities",
+        "sourceType": "mel",
+        "command": "SwitchMashGeometryType",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_SwitchGeometryType.png"
+    },
+    "1cc3b6ca-a017-4ee3-a41f-11e5079dc579": {
+        "label": "Bake Instancer to objects : Utilities",
+        "sourceType": "mel",
+        "command": "BakeInstancerToGeometry",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    },
+    "e127fcfb-0fdf-4b73-b422-d80136b21444": {
+        "label": "Create Instancer Pivot : Utilities",
+        "sourceType": "mel",
+        "command": "CreateInstancerPivot",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    },
+    "490ed7f4-a90f-49a6-8bfc-9d9897f95d10": {
+        "label": "Add Shell Dynamics : Dynamics",
+        "sourceType": "mel",
+        "command": "AddShellDynamics",
+        "category": "",
+        "module": "MASH",
+        "icon": "MASH_ShellDynamics.png"
+    },
+    "020d9df2-a2e2-4448-869a-2dd2bde74e1e": {
+        "label": "Add Solver : Dynamics",
+        "sourceType": "mel",
+        "command": "AddMashBulletSolver",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    },
+    "85042f2f-80d7-4962-954c-f9878789383d": {
+        "label": "Assign Solver : Dynamics",
+        "sourceType": "mel",
+        "command": "AssignMashBulletSolver",
+        "category": "",
+        "module": "MASH",
+        "icon": ""
+    }
+}

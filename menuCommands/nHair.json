@@ -1,0 +1,418 @@
+{
+    "4bb6af5b-d856-4def-8e10-0395c7a43889": {
+        "label": "Create Hair",
+        "sourceType": "mel",
+        "command": "CreateHair",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairCreate.png"
+    },
+    "5e27fcb6-adc7-45b8-a8d8-d2ca925bfdc5": {
+        "label": "Create Hair Options",
+        "sourceType": "mel",
+        "command": "CreateHairOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "68551828-3009-4554-bfe0-72d6ee4efc8d": {
+        "label": "Get Hair Example...",
+        "sourceType": "mel",
+        "command": "GetHairExample",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairGetExamples.png"
+    },
+    "32e377e6-8821-4ed0-8408-ee81bc914b57": {
+        "label": "Paint Hair Follicles",
+        "sourceType": "mel",
+        "command": "PaintHairFollicles",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairPaint.png"
+    },
+    "05051b60-6411-43b4-a166-b56251f5bb59": {
+        "label": "Paint Hair Follicles Options",
+        "sourceType": "mel",
+        "command": "PaintHairFolliclesOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairPaint.png"
+    },
+    "b463f20a-45ca-4c5d-8ec8-ab72ff248f1b": {
+        "label": "Baldness : Paint Hair Textures",
+        "sourceType": "mel",
+        "command": "PaintHairBaldness",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairPaintBaldness.png"
+    },
+    "65889646-6f4a-4365-ba02-afb9726e718f": {
+        "label": "Hair Color : Paint Hair Textures",
+        "sourceType": "mel",
+        "command": "PaintHairColor",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairPaintColor.png"
+    },
+    "b88fbccd-d578-4444-ae5e-d76fbfe3aba1": {
+        "label": "Specular Color : Paint Hair Textures",
+        "sourceType": "mel",
+        "command": "PaintHairSpecularColor",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairPaintSpecular.png"
+    },
+    "1499afe5-a95c-472a-a6ec-75281ddaa4f0": {
+        "label": "New Hair System : Assign Hair System",
+        "sourceType": "mel",
+        "command": "assignNewHairSystem",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairAssignHairSystem.png"
+    },
+    "e11ab728-95bd-4b5a-bbb2-d6a7cfb1b2d9": {
+        "label": "To Follicles : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToFollicles",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertFollicles.png"
+    },
+    "50759ee1-b35e-4688-a1c7-84f2701a44c3": {
+        "label": "To Start Curves : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToStartCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertStart.png"
+    },
+    "f586d76b-4bb7-4c37-9c60-946c9cdb64cb": {
+        "label": "To Rest Curves : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToRestCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertRest.png"
+    },
+    "d32ca4de-3854-483a-86a5-6bce89e68b19": {
+        "label": "To Current Positions : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToCurrentPositions",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertCurrent.png"
+    },
+    "6c6ca414-526f-4b64-8ed6-2d608e1f7469": {
+        "label": "To Hair Systems : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToHairSystems",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertHairSystem.png"
+    },
+    "9c5d865c-9d58-46e4-a4c4-fb3928dabcfd": {
+        "label": "To Hair Constraints : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToConstraints",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertHairSystem.png"
+    },
+    "41c545d4-c155-47e0-a652-6f73a0b0dee6": {
+        "label": "To Start Curve End CVs : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToStartCurveEndCVs",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertStartEndCVs.png"
+    },
+    "cff01b42-e182-4cc4-bc1f-783e9949fd91": {
+        "label": "To Rest Curve End CVs : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToRestCurveEndCVs",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertRestEndCVs.png"
+    },
+    "d5aedd12-9e94-4ab2-bd07-f37d829ada02": {
+        "label": "To Start and Rest End CVs : Convert Selection",
+        "sourceType": "mel",
+        "command": "ConvertHairSelectionToStartAndRestCurveEndCVs",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairConvertStartRestEndCVs.png"
+    },
+    "6532bd48-06ca-4bb9-808d-803d28be4b84": {
+        "label": "All Curves : Display",
+        "sourceType": "mel",
+        "command": "DisplayHairCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDisplayAll.png"
+    },
+    "2da45d87-e1e0-41d1-8fca-c4bf22c98b1c": {
+        "label": "Current Position : Display",
+        "sourceType": "mel",
+        "command": "DisplayCurrentHairCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDisplayCurrent.png"
+    },
+    "3c3e6d8a-a77a-43e1-97cc-a1c573588dca": {
+        "label": "Start Position : Display",
+        "sourceType": "mel",
+        "command": "DisplayHairCurvesStart",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDisplayStart.png"
+    },
+    "9b07b41c-50e2-492e-ad73-9c96ea288a5d": {
+        "label": "Rest Position : Display",
+        "sourceType": "mel",
+        "command": "DisplayHairCurvesRestPosition",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDisplayRest.png"
+    },
+    "2ba930eb-9fff-48c3-ad99-2e1d94ff6b1c": {
+        "label": "Current and Start : Display",
+        "sourceType": "mel",
+        "command": "DisplayHairCurvesCurrentAndStart",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDisplayCurrentStart.png"
+    },
+    "48eb57ae-3175-4c05-b043-c10947986af5": {
+        "label": "Current and Rest : Display",
+        "sourceType": "mel",
+        "command": "DisplayHairCurvesCurrentAndRest",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDisplayCurrentRest.png"
+    },
+    "7efda8ec-d8dd-40db-af31-b6e5529668ba": {
+        "label": "Make Selected Curves Dynamic",
+        "sourceType": "mel",
+        "command": "MakeCurvesDynamic",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDynamicCurves.png"
+    },
+    "c820c2cf-5631-4bdf-9c09-bbd7a7d061e0": {
+        "label": "Make Selected Curves Dynamic Options",
+        "sourceType": "mel",
+        "command": "MakeCurvesDynamicOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "d2a6485a-1f35-4653-8a1a-aebbcd6f80d1": {
+        "label": "Lock Length : Modify Curves",
+        "sourceType": "mel",
+        "command": "LockCurveLength",
+        "category": "",
+        "module": "nHair",
+        "icon": "lockLength.png"
+    },
+    "1ce9bb31-621d-4c2d-bc0b-e0ce7be2bf1d": {
+        "label": "Unlock Length : Modify Curves",
+        "sourceType": "mel",
+        "command": "UnlockCurveLength",
+        "category": "",
+        "module": "nHair",
+        "icon": "unlockLength.png"
+    },
+    "2a4383e7-101a-4600-9235-e4baf186c039": {
+        "label": "Straighten : Modify Curves",
+        "sourceType": "mel",
+        "command": "StraightenCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyStraighten.png"
+    },
+    "b681f469-2a9b-4215-9695-41d6fc3bfbd8": {
+        "label": "Straighten Options : Modify Curves",
+        "sourceType": "mel",
+        "command": "StraightenCurvesOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyStraighten.png"
+    },
+    "24c72c3b-b48f-47fc-9dec-02b913f71722": {
+        "label": "Smooth : Modify Curves",
+        "sourceType": "mel",
+        "command": "SmoothHairCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifySmooth.png"
+    },
+    "3d95fb79-a954-45c4-bcb7-3bc3bea58298": {
+        "label": "Smooth Options : Modify Curves",
+        "sourceType": "mel",
+        "command": "SmoothHairCurvesOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifySmooth.png"
+    },
+    "a1d63990-e7d2-4296-a98a-bffcf9743656": {
+        "label": "Curl : Modify Curves",
+        "sourceType": "mel",
+        "command": "CurlCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyCurl.png"
+    },
+    "d4d7daef-9fe9-48d1-a16f-7d029f71341b": {
+        "label": "Curl Options : Modify Curves",
+        "sourceType": "mel",
+        "command": "CurlCurvesOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyCurl.png"
+    },
+    "7e1c33d6-d9e0-455b-af6c-61d401cf3c09": {
+        "label": "Bend : Modify Curves",
+        "sourceType": "mel",
+        "command": "BendCurves",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyBend.png"
+    },
+    "1f52a691-521d-4b0c-8fd2-2e8d3fbd1762": {
+        "label": "Bend Options : Modify Curves",
+        "sourceType": "mel",
+        "command": "BendCurvesOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyBend.png"
+    },
+    "38bc97c5-976d-4a61-a6dc-8af1728d5baf": {
+        "label": "Scale Curvature : Modify Curves",
+        "sourceType": "mel",
+        "command": "ScaleCurvature",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyScaleCurvature.png"
+    },
+    "ccbb626b-2053-45de-a817-5317368b8a21": {
+        "label": "Scale Curvature Options : Modify Curves",
+        "sourceType": "mel",
+        "command": "ScaleCurvatureOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": "modifyScaleCurvature.png"
+    },
+    "dd13ddf3-0a95-4643-802a-2ee2c0c8ebed": {
+        "label": "From Start : Set Rest Position",
+        "sourceType": "mel",
+        "command": "SetHairRestPositionFromStart",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairRestFromStart.png"
+    },
+    "64c15b47-887b-4f73-8c58-2801704effbd": {
+        "label": "From Current : Set Rest Position",
+        "sourceType": "mel",
+        "command": "SetHairRestPositionFromCurrent",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairRestFromCurrent.png"
+    },
+    "3ee82f3d-2806-4348-9724-0132dc932f3b": {
+        "label": "From Current : Set Start Position",
+        "sourceType": "mel",
+        "command": "SetHairStartPositionFromCurrent",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairStartFromCurrent.png"
+    },
+    "38372d95-f792-412e-b00d-bc1a053f7697": {
+        "label": "From Rest : Set Start Position",
+        "sourceType": "mel",
+        "command": "SetHairStartPositionFromRest",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairStartFromRest.png"
+    },
+    "cec2cccc-718c-4b7b-bc25-a595d24be6b4": {
+        "label": "Add Output Curves to Hair",
+        "sourceType": "mel",
+        "command": "AddCurvesToHairSystem",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "a95d1517-dbec-476e-99b7-1be3db481b28": {
+        "label": "Assign Paint Effects Brush to Hair",
+        "sourceType": "mel",
+        "command": "AssignBrushToHairSystem",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairAssignPFXbrush.png"
+    },
+    "e5527d43-39cf-47a9-9192-74a502b58ace": {
+        "label": "Add Paint Effects Output to Hair",
+        "sourceType": "mel",
+        "command": "AddPfxToHairSystem",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "5a606e26-df4a-4696-a2f3-799ab67a1333": {
+        "label": "Randomize Follicles",
+        "sourceType": "mel",
+        "command": "RandomizeFollicles",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "2b298a2f-3471-426b-8ac3-727e38af8582": {
+        "label": "Randomize Follicles Options",
+        "sourceType": "mel",
+        "command": "RandomizeFolliclesOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "8138caf7-3711-4c3b-b40d-4d4bb868838b": {
+        "label": "Scale Hair Tool",
+        "sourceType": "mel",
+        "command": "HairScaleTool",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairScaleTool.png"
+    },
+    "d2f82232-f44d-4e44-80cb-822e888d25a9": {
+        "label": "Transplant Hair",
+        "sourceType": "mel",
+        "command": "TransplantHair",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairTransplant.png"
+    },
+    "e6030f85-c9af-4b2b-9216-143694afb5ce": {
+        "label": "Transplant Hair Options",
+        "sourceType": "mel",
+        "command": "TransplantHairOptions",
+        "category": "",
+        "module": "nHair",
+        "icon": ""
+    },
+    "6cbb8cd4-4aaf-48b7-be93-0e395b422c99": {
+        "label": "Delete Hair",
+        "sourceType": "mel",
+        "command": "DeleteHair",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDelete.png"
+    },
+    "47828835-22db-4170-ab6d-fdf65108f42a": {
+        "label": "Delete Entire Hair System",
+        "sourceType": "mel",
+        "command": "DeleteEntireHairSystem",
+        "category": "",
+        "module": "nHair",
+        "icon": "hairDeleteEntire.png"
+    }
+}

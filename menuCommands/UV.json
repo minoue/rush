@@ -1,0 +1,242 @@
+{
+    "9c5c1f08-5c95-4a68-b882-0c310f4b7455": {
+        "label": "UV Editor",
+        "sourceType": "mel",
+        "command": "TextureViewWindow",
+        "category": "",
+        "module": "UV",
+        "icon": "textureEditor.png"
+    },
+    "cc1cacad-0a30-4237-9fd1-2b639c23fdea": {
+        "label": "UV Set Editor",
+        "sourceType": "mel",
+        "command": "UVSetEditor",
+        "category": "",
+        "module": "UV",
+        "icon": "polyUVSetEditor.png"
+    },
+    "4287d5ff-9cbd-4dc8-985e-4acabf639de5": {
+        "label": "Assign Checker Shader",
+        "sourceType": "mel",
+        "command": "TogglePolyUVsCreateShader",
+        "category": "",
+        "module": "UV",
+        "icon": "polyCheck.png"
+    },
+    "0ad20085-dae4-4229-862a-f7388238cadc": {
+        "label": "Automatic",
+        "sourceType": "mel",
+        "command": "UVAutomaticProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polyAutoProjLarge.png"
+    },
+    "4e59700c-babc-4366-b36c-2b75daff8320": {
+        "label": "Automatic Options",
+        "sourceType": "mel",
+        "command": "UVAutomaticProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyAutoProjLarge.png"
+    },
+    "838fcd44-ec58-4ed8-8ea1-6e2e2c557a74": {
+        "label": "Best Plane",
+        "sourceType": "mel",
+        "command": "BestPlaneTexturingTool",
+        "category": "",
+        "module": "UV",
+        "icon": "bestPlaneTxt.png"
+    },
+    "d7d49da8-d091-410a-aeb7-3ef6355265ee": {
+        "label": "Camera-based",
+        "sourceType": "mel",
+        "command": "UVCameraBasedProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polyCameraUVs.png"
+    },
+    "8315c8f3-d3c8-4502-aeaa-43d708dc461d": {
+        "label": "Camera-based Options",
+        "sourceType": "mel",
+        "command": "UVCameraBasedProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyCameraUVs.png"
+    },
+    "52771782-0b5f-49bc-9405-6e7b17296c3f": {
+        "label": "Contour Stretch",
+        "sourceType": "mel",
+        "command": "UVContourStretchProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polyContourProjLarge.png"
+    },
+    "13ed51c3-20a3-457e-8530-a31efaa963a1": {
+        "label": "Contour Stretch Options",
+        "sourceType": "mel",
+        "command": "UVContourStretchProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyContourProjLarge.png"
+    },
+    "3b65ecb5-3809-4733-ac4e-9e6fac350d8f": {
+        "label": "Normal-Based",
+        "sourceType": "mel",
+        "command": "UVNormalBasedProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polyNormalProjLarge.png"
+    },
+    "9412865f-7d0b-42c2-8989-79d966049c0b": {
+        "label": "Normal-Based Options",
+        "sourceType": "mel",
+        "command": "UVNormalBasedProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyNormalProjLarge.png"
+    },
+    "bbd5c3b3-3e48-464a-8a60-7ee1a0b71a0f": {
+        "label": "Cylindrical",
+        "sourceType": "mel",
+        "command": "UVCylindricProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polyCylProjLarge.png"
+    },
+    "bafd031e-7ff3-4f47-8f8c-0b4eefc5c9a3": {
+        "label": "Cylindrical Options",
+        "sourceType": "mel",
+        "command": "UVCylindricProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyCylProjLarge.png"
+    },
+    "117c71a5-0add-40c5-ae80-371ab2f4a606": {
+        "label": "Planar",
+        "sourceType": "mel",
+        "command": "UVPlanarProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polyPlanProjLarge.png"
+    },
+    "64f93f81-441b-47e6-bf80-672fa67780b2": {
+        "label": "Planar Options",
+        "sourceType": "mel",
+        "command": "UVPlanarProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyPlanProjLarge.png"
+    },
+    "6dd8559a-5ccb-4eb7-8043-d8295228f40a": {
+        "label": "Spherical",
+        "sourceType": "mel",
+        "command": "UVSphericalProjection",
+        "category": "",
+        "module": "UV",
+        "icon": "polySphereProjLarge.png"
+    },
+    "b4057a73-ee2f-4a59-b178-bde905f677e1": {
+        "label": "Spherical Options",
+        "sourceType": "mel",
+        "command": "UVSphericalProjectionOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polySphereProjLarge.png"
+    },
+    "7b25406e-e9fe-4c46-98c0-a6d55cc4375e": {
+        "label": "Auto Seams",
+        "sourceType": "mel",
+        "command": "AutoSeamUVs",
+        "category": "",
+        "module": "UV",
+        "icon": "polyAutoSeamsLarge.png"
+    },
+    "08c2982e-0d87-4b66-98cd-dba954906025": {
+        "label": "Auto Seams Options",
+        "sourceType": "mel",
+        "command": "AutoSeamUVsOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "polyAutoSeams.png"
+    },
+    "84714d70-e6c5-4417-a262-e0b14b712b9d": {
+        "label": "Cut UV Edges",
+        "sourceType": "mel",
+        "command": "CutUVsWithoutHotkey",
+        "category": "",
+        "module": "UV",
+        "icon": "polyCutUVLarge.png"
+    },
+    "73720bf2-0553-40ab-a4a2-c5917ab0487e": {
+        "label": "Sew UV Edges",
+        "sourceType": "mel",
+        "command": "SewUVsWithoutHotkey",
+        "category": "",
+        "module": "UV",
+        "icon": "polySewUVLarge.png"
+    },
+    "16aeb188-6214-47ea-ad26-4ed280042b79": {
+        "label": "Split UVs",
+        "sourceType": "mel",
+        "command": "SplitUV",
+        "category": "",
+        "module": "UV",
+        "icon": "polySplitUVsLarge.png"
+    },
+    "3eb1de21-c0ac-42ec-aad9-9212012082fe": {
+        "label": "Delete UVs",
+        "sourceType": "mel",
+        "command": "DeleteUVsWithoutHotkey",
+        "category": "",
+        "module": "UV",
+        "icon": "polyMapDel.png"
+    },
+    "982c79c5-1967-4af7-be6d-ddcf2f904c29": {
+        "label": "Merge UVs",
+        "sourceType": "mel",
+        "command": "MergeUV",
+        "category": "",
+        "module": "UV",
+        "icon": "polyMergeUV.png"
+    },
+    "e95ac919-60f9-4f31-81d7-cd9e45179345": {
+        "label": "Merge UVs Options",
+        "sourceType": "mel",
+        "command": "performPolyMergeUV 1",
+        "category": "",
+        "module": "UV",
+        "icon": "polyMergeUV.png"
+    },
+    "d6397bcd-05ac-4be9-ad85-d0f26e729c44": {
+        "label": "3D Cut and Sew UV Tool",
+        "sourceType": "mel",
+        "command": "SetCutSewUVTool",
+        "category": "",
+        "module": "UV",
+        "icon": "CutSewUVTool.png"
+    },
+    "beba4d69-e774-4717-8f3f-d328ccace3f6": {
+        "label": "3D Cut and Sew UV Tool Options",
+        "sourceType": "mel",
+        "command": "SetCutSewUVTool;toolPropertyWindow;",
+        "category": "",
+        "module": "UV",
+        "icon": "CutSewUVTool.png"
+    },
+    "823f5cc0-aab8-49d8-b0b1-9594acefa510": {
+        "label": "3D Grab UV Tool",
+        "sourceType": "mel",
+        "command": "SetMeshGrabUVTool",
+        "category": "",
+        "module": "UV",
+        "icon": "UV_3D_Grab_Brush.png"
+    },
+    "41078cb3-584c-4c6e-9ec0-6edee246abdc": {
+        "label": "3D Grab UV Tool Options",
+        "sourceType": "mel",
+        "command": "ShowMeshGrabUVToolOptions",
+        "category": "",
+        "module": "UV",
+        "icon": "UV_3D_Grab_Brush.png"
+    }
+}

@@ -1,0 +1,1522 @@
+{
+    "2f458cb4-56cc-4c75-a4de-c72218b3ae0d": {
+        "label": "Blend Shape",
+        "sourceType": "mel",
+        "command": "CreateBlendShape",
+        "category": "",
+        "module": "Deform",
+        "icon": "blendShape.png"
+    },
+    "ff414b12-d78e-4e8d-abb4-b1af9c866938": {
+        "label": "Blend Shape Options",
+        "sourceType": "mel",
+        "command": "CreateBlendShapeOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "blendShape.png"
+    },
+    "51e40659-34ed-4d4a-8c83-c3b8899f4ddd": {
+        "label": "Cluster",
+        "sourceType": "mel",
+        "command": "CreateCluster",
+        "category": "",
+        "module": "Deform",
+        "icon": "cluster.png"
+    },
+    "7879d42b-7118-48d4-a14a-bbce59bb9c22": {
+        "label": "Cluster Options",
+        "sourceType": "mel",
+        "command": "CreateClusterOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "cluster.png"
+    },
+    "e683d708-f4e7-49c5-8b3d-0f5ec8cdadf7": {
+        "label": "Curve Warp",
+        "sourceType": "mel",
+        "command": "CurveWarp",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "4b4a7f67-27f2-49a7-9e6b-a33f0a928fef": {
+        "label": "Delta Mush",
+        "sourceType": "mel",
+        "command": "DeltaMush",
+        "category": "",
+        "module": "Deform",
+        "icon": "deltaMush.png"
+    },
+    "419fae34-c3e6-443d-979d-d7926d2d3599": {
+        "label": "Delta Mush Options",
+        "sourceType": "mel",
+        "command": "DeltaMushOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "deltaMush.png"
+    },
+    "25dfac8d-8def-41fe-9eea-578a3a0f9f58": {
+        "label": "Tension",
+        "sourceType": "mel",
+        "command": "Tension",
+        "category": "",
+        "module": "Deform",
+        "icon": "tension.png"
+    },
+    "020e324b-4eb6-42a6-a41d-118b40ff624f": {
+        "label": "Tension Options",
+        "sourceType": "mel",
+        "command": "TensionOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "tension.png"
+    },
+    "414379ac-dad9-452f-bf2b-18a4afda67bb": {
+        "label": "Solidify",
+        "sourceType": "mel",
+        "command": "Solidify",
+        "category": "",
+        "module": "Deform",
+        "icon": "solidify.png"
+    },
+    "134b74d6-e762-46ad-a5bb-f293ac1126f6": {
+        "label": "Solidify Options",
+        "sourceType": "mel",
+        "command": "SolidifyOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "solidify.png"
+    },
+    "189f1369-a115-4dd9-936e-fed23ac54c23": {
+        "label": "Lattice",
+        "sourceType": "mel",
+        "command": "CreateLattice",
+        "category": "",
+        "module": "Deform",
+        "icon": "lattice.png"
+    },
+    "7f259880-0064-4617-9e90-769d4b87fbb9": {
+        "label": "Lattice Options",
+        "sourceType": "mel",
+        "command": "CreateLatticeOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "lattice.png"
+    },
+    "4fc6132a-b3e5-4e54-9b74-1ab63fcac092": {
+        "label": "Proximity Wrap",
+        "sourceType": "mel",
+        "command": "ProximityWrap",
+        "category": "",
+        "module": "Deform",
+        "icon": "proximityWrap.png"
+    },
+    "238e0efd-3967-41d7-ae14-4803f04cc425": {
+        "label": "Proximity Wrap Options",
+        "sourceType": "mel",
+        "command": "ProximityWrapOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "proximityWrap.png"
+    },
+    "b647c1c0-b4d1-4175-bec0-9e49132038df": {
+        "label": "Wrap",
+        "sourceType": "mel",
+        "command": "CreateWrap",
+        "category": "",
+        "module": "Deform",
+        "icon": "wrap.png"
+    },
+    "8b8aabd3-4f7e-4bd5-844c-851dbbb03e9c": {
+        "label": "Wrap Options",
+        "sourceType": "mel",
+        "command": "CreateWrapOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "wrap.png"
+    },
+    "255e0653-f1df-4af3-8c50-57615c22e7df": {
+        "label": "ShrinkWrap",
+        "sourceType": "mel",
+        "command": "CreateShrinkWrap",
+        "category": "",
+        "module": "Deform",
+        "icon": "shrinkwrap.png"
+    },
+    "e298d15f-86d1-49eb-8b29-eae5664b8305": {
+        "label": "ShrinkWrap Options",
+        "sourceType": "mel",
+        "command": "CreateShrinkWrapOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "shrinkwrap.png"
+    },
+    "c3a7134f-4f4c-4ea2-9e16-6a61107bae52": {
+        "label": "Morph",
+        "sourceType": "mel",
+        "command": "Morph",
+        "category": "",
+        "module": "Deform",
+        "icon": "morph.png"
+    },
+    "c7257ab8-8c5d-4117-8bbb-faf67c546641": {
+        "label": "Morph Options",
+        "sourceType": "mel",
+        "command": "MorphOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "morph.png"
+    },
+    "65853f1b-95c2-43ed-8d7c-82b40def4b50": {
+        "label": "Wire",
+        "sourceType": "mel",
+        "command": "WireTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "wire.png"
+    },
+    "e23095bb-9d7a-4e8a-894f-791f6971de00": {
+        "label": "Wire Options",
+        "sourceType": "mel",
+        "command": "WireToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "wire.png"
+    },
+    "1f4efb53-f568-4320-93a2-3d4e313eb4fa": {
+        "label": "Wrinkle",
+        "sourceType": "mel",
+        "command": "WrinkleTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "wrinkle.png"
+    },
+    "6c2723e7-c356-4c99-8632-9411ceece50c": {
+        "label": "Wrinkle Options",
+        "sourceType": "mel",
+        "command": "WrinkleToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "wrinkle.png"
+    },
+    "afc84e51-59e5-4d15-b3a3-060795550dae": {
+        "label": "Create Pose Interpolator : Pose Space Deformation",
+        "sourceType": "mel",
+        "command": "CreatePoseInterpolator",
+        "category": "",
+        "module": "Deform",
+        "icon": "pi-add.png"
+    },
+    "438d5155-ab7a-4427-8452-348e3ec24cfe": {
+        "label": "Create Pose Interpolator Options : Pose Space Deformation",
+        "sourceType": "mel",
+        "command": "CreatePoseInterpolatorOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "pi-add.png"
+    },
+    "e2cb13c0-0a15-4085-848a-d45aba6b9184": {
+        "label": "Pose Editor : Pose Space Deformation",
+        "sourceType": "mel",
+        "command": "PoseEditor",
+        "category": "",
+        "module": "Deform",
+        "icon": "poseEditor.png"
+    },
+    "f27f83be-fb98-4e1a-8e0a-12ee157c03cd": {
+        "label": "Muscle Creator... : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscle_cMuscleCreatorUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_creatorUI.png"
+    },
+    "0dc98dc2-2a37-4095-a67d-7b97eb0216da": {
+        "label": "Convert Surface to Muscle/Bone : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscle_makeMuscle(0); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_convertToMuscle.png"
+    },
+    "7c5e97d5-4b9b-4cd4-8a3a-28665d85e127": {
+        "label": "Make Capsule : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscle_makeCapsule(0); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_makeCapsule.png"
+    },
+    "9f711160-b5b1-420d-8765-300cccda8346": {
+        "label": "Make Capsule with End Locator : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscle_makeCapsule(0); cMuscle_makeEndLenReader(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_makeCapsuleAndLoc.png"
+    },
+    "46d87e4d-78c1-4d77-90bf-ae4665573942": {
+        "label": "Add End Locator to Capsule : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscle_makeEndLenReader(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_addCapsuleLoc.png"
+    },
+    "52f547f1-6748-45a4-819c-94ec61592458": {
+        "label": "Generate Polygon Cylinders from Capsules : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscle_capsuleToPolyCyl(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_capToPolyCyl.png"
+    },
+    "1d15e134-d28b-4876-9fee-ee7b1b376912": {
+        "label": "Delete Muscle Jiggle Cache... : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMS_delJiggleCacheUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_delJiggleCache.png"
+    },
+    "4aa2a27a-8cad-4454-a089-73d8eef2911e": {
+        "label": "Fix Invalid Muscle Object nodes... : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cM_checkForInvalidMuscleObjects(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_fixInvalid.png"
+    },
+    "74c7228b-4873-4d87-bcec-6c1fe4b94c73": {
+        "label": "Setup Master Muscle Control... : Muscles / Bones",
+        "sourceType": "mel",
+        "command": "cMuscleSetupMasterControl(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_setupMasterCtrl.png"
+    },
+    "a953256b-baf1-46e5-964f-4a771484ed4e": {
+        "label": "Muscle Builder... : Simple Muscles",
+        "sourceType": "mel",
+        "command": "cMuscleBuilder(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_muscleBuilder.png"
+    },
+    "42933f75-98f3-4f94-8d5e-8fe15b36f03e": {
+        "label": "Set Muscle Parameters... : Simple Muscles",
+        "sourceType": "mel",
+        "command": "cMuscleBuilder(); tabLayout -e -selectTabIndex 4 bldTabs ;",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_muscleParams.png"
+    },
+    "c071fe03-54eb-4a04-b462-c6416fa1e095": {
+        "label": "Apply Muscle Spline Deformer... : Simple Muscles",
+        "sourceType": "mel",
+        "command": "cMuscleSplineDeformerUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_muscleSplineDef.png"
+    },
+    "24dea5cd-0788-4433-ac4f-29217ff0d7a9": {
+        "label": "Custom Muscle Shapes... : Simple Muscles",
+        "sourceType": "mel",
+        "command": "cMuscleSplineDeformerShapeUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_muscleShapes.png"
+    },
+    "0be853aa-d7ed-4c08-ba5e-a31d30e414dc": {
+        "label": "Reset Base Pose for Muscle Spline Deformer : Simple Muscles",
+        "sourceType": "mel",
+        "command": "cMS_resetSplineDefBasePoseSel(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_splineReset.png"
+    },
+    "1ffd3c3a-79dd-41c5-97fb-9be36d7a0bf5": {
+        "label": "Apply Muscle Stretch Deformer : Simple Muscles",
+        "sourceType": "mel",
+        "command": "cMuscle_setupStretch(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_muscleStretchDef.png"
+    },
+    "d3eb371f-2db5-44a3-b682-a04fd7b5e9ac": {
+        "label": "Apply Muscle System Skin Deformer : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_makeMuscleSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_apply.png"
+    },
+    "2e27522e-edd2-4d26-9b76-dba376d88520": {
+        "label": "Convert Smooth Skin to Muscle System : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscleConvertSkin(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_convert.png"
+    },
+    "a5f72835-c706-462e-86d5-78cfeabf0995": {
+        "label": "Re-Initialize Setup Data on Muscle System : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_prepareRelax(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_initRelax.png"
+    },
+    "2eb38f91-bfe3-4056-9f5a-7450442baadd": {
+        "label": "Bind Fat on Muscle System : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_bindFat(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_bindFat.png"
+    },
+    "a99081b0-eba1-4184-9419-87a7e1c2e221": {
+        "label": "Auto-Fix Invalid Sticky Bind Points : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_fixStickyBindUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_autoFixSticky.png"
+    },
+    "cd72a7a9-a4d6-4332-895d-6317717a7e6c": {
+        "label": "Auto-Fix Deleted/Missing Muscles : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_fixDisconnectedUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_autoFixMissingMus.png"
+    },
+    "2e4e6299-d7ea-493d-9fe3-5536e4515b35": {
+        "label": "Safe Delete History : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_bake(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_safeDelHistory.png"
+    },
+    "81098889-fc66-4caf-9d4d-e05f2bd5127a": {
+        "label": "Disconnect all Muscle Objects : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_disconnAllMus.png"
+    },
+    "9f4945ab-ea5b-42c5-aa19-f5eaa39b97b4": {
+        "label": "Disconnect all Muscle Directions : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectDirSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_disconnAllDir.png"
+    },
+    "3ed10547-d594-44de-b2ef-513dd05e92ce": {
+        "label": "Disconnect all Muscle Displaces : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectDisplaceSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_disconnAllDisp.png"
+    },
+    "50c7b864-8ef3-445e-9c1f-a8898d42ad82": {
+        "label": "Disconnect all Muscle Smart Collides : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectSmartCollideSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_disconnAllSmart.png"
+    },
+    "af4870c7-d3d9-410d-8aad-4416608f8cfc": {
+        "label": "Setup for Relative Sticky Deformation : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_setupSelectedSystemsForRelative(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_setupRelative.png"
+    },
+    "d2202448-7368-4dc6-bbf3-c14867125040": {
+        "label": "Set selected Muscles/Bones as Not Relative : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_markSelectedMuscleObjectsRelative(0); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_relativeOff.png"
+    },
+    "9aab260d-5f29-49d3-8aee-44f81ddc76cd": {
+        "label": "Set selected Muscles/Bones as Relative : Skin Setup",
+        "sourceType": "mel",
+        "command": "cMuscle_markSelectedMuscleObjectsRelative(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_relativeOn.png"
+    },
+    "41a808a7-d70e-4b3f-bb90-9ad3ade70346": {
+        "label": "Connect selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_connectToSystem(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_connMus.png"
+    },
+    "6a8ebeef-1567-45ee-a1f5-6381a40ac7f6": {
+        "label": "Disconnect selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectSelMusclesFromSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_disconnMus.png"
+    },
+    "9c1cc33f-16d7-4606-98fa-2e14cd5b59e0": {
+        "label": "Delete selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_deleteMusclesFromSystem(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_muscle_delete.png"
+    },
+    "4c868c23-d8c9-4ead-9195-00983297f80c": {
+        "label": "Reset Base Pose for selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_resetBindPose(0, 1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_resetBase.png"
+    },
+    "569cf2fd-8929-46a3-9d58-663ce700cbc8": {
+        "label": "Create Base for selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_resetBindPose(1, 1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_createBase.png"
+    },
+    "e8ea1c63-7c68-445f-8ef2-100e9263133f": {
+        "label": "Re-Bind Sticky for selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_bindStickySel(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_rebindSticky.png"
+    },
+    "404a91f7-9793-47c5-ab4e-041312033a85": {
+        "label": "Visualize Sticky Bind Distance for selected Muscle Objects : Muscle Objects",
+        "sourceType": "mel",
+        "command": "cMuscle_visualizeStickyBindDistanceSel(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_visSticky.png"
+    },
+    "36f2b9bf-5b0d-4a3d-99e5-50927fa9334c": {
+        "label": "Paint Muscle Weights... : Muscle",
+        "sourceType": "mel",
+        "command": "cMusclePaint(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_paint.png"
+    },
+    "46e0d1de-1427-49d8-a807-ff34b4364e79": {
+        "label": "Apply Default Weights... : Weighting",
+        "sourceType": "mel",
+        "command": "cMuscleWeightDefaultUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_applyDefault.png"
+    },
+    "1e7b6c0e-dbf1-4eaa-84fd-da107bf790da": {
+        "label": "Load/Save Weights... : Weighting",
+        "sourceType": "mel",
+        "command": "cMuscleSaveWeights(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_saveWeights.png"
+    },
+    "dadcf3f1-6182-45ae-aa6d-2a13d5e2058d": {
+        "label": "Mirror Weights... : Weighting",
+        "sourceType": "mel",
+        "command": "cMuscleMirrorWeights(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_mirrorWts.png"
+    },
+    "03fb0b0f-6aa6-493f-989e-1e68fd674447": {
+        "label": "Transfer Weights... : Weighting",
+        "sourceType": "mel",
+        "command": "cMuscleTransferWeights(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_transferWeights.png"
+    },
+    "f606ebcc-da92-4dc5-be71-f1ba2bfe7ccc": {
+        "label": "Prune Weights... : Weighting",
+        "sourceType": "mel",
+        "command": "cMuscleWeightPruneUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_wtprune.png"
+    },
+    "cc4637b6-bb8b-45c1-88d5-f99c9c967310": {
+        "label": "Make Muscle Direction : Direction",
+        "sourceType": "mel",
+        "command": "cMuscle_makeDir(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_makeDir.png"
+    },
+    "7d3b6010-191b-4ada-bbcd-c933c5298c95": {
+        "label": "Connect selected Muscle Directions : Direction",
+        "sourceType": "mel",
+        "command": "cMuscle_connectDirToSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_connDir.png"
+    },
+    "654ae354-7480-4dc3-996b-c95d17670d47": {
+        "label": "Disconnect selected Muscle Directions : Direction",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectSelDirFromSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_disconnDir.png"
+    },
+    "983233f4-3d62-4e7a-8c34-3bce11170519": {
+        "label": "Create Muscle Displace : Displace",
+        "sourceType": "mel",
+        "command": "cMuscle_createDisplaceUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_disp_create.png"
+    },
+    "0c0b1110-a103-41ab-9d43-9a0c43b5f576": {
+        "label": "Connect selected Muscle Displace nodes : Displace",
+        "sourceType": "mel",
+        "command": "cMuscle_connectDisplaceToSysUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_disp_connect.png"
+    },
+    "73333643-b9e7-4770-9869-553430704cdc": {
+        "label": "Disconnect selected Muscle Displace nodes : Displace",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectDisplaceFromSysUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_disp_disconnect.png"
+    },
+    "298dad8e-3131-4f3e-bc84-01bee7eb98f8": {
+        "label": "Connect NURBs Curve to Muscle Displace : Displace",
+        "sourceType": "mel",
+        "command": "cMuscle_connectCurveToDisplaceUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_disp_connectCurve.png"
+    },
+    "4b3c557f-764c-44d3-ab69-b316e7d47457": {
+        "label": "Disconnect NURBs Curve from Muscle Displace : Displace",
+        "sourceType": "mel",
+        "command": "cMuscle_disconnectCurveFromDisplaceUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_disp_disconnectCurve.png"
+    },
+    "4d4bae10-3640-49dd-a942-ae3478f4b294": {
+        "label": "Create Maya Muscle Shader Network : Displace",
+        "sourceType": "mel",
+        "command": "cMuscle_createShaderUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_disp_mayaShader.png"
+    },
+    "1a914705-9ec1-4bf9-a5ea-a2f5fa5d279e": {
+        "label": "Create Muscle Smart Collide : Smart Collision",
+        "sourceType": "mel",
+        "command": "cMuscleSmartCollide_setup(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_smart_create.png"
+    },
+    "8900aae8-8dfc-4226-a457-682de3e4a86d": {
+        "label": "Connect selected Muscle Smart Collide nodes : Smart Collision",
+        "sourceType": "mel",
+        "command": "cMuscleSmartCollide_connectSCToSystem(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_smart_connect.png"
+    },
+    "d2223ab1-4297-431b-893f-c46d37428cfd": {
+        "label": "Disconnect selected Muscle Smart Collide nodes : Smart Collision",
+        "sourceType": "mel",
+        "command": "cMuscleSmartCollide_disconnectFromSys(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_smart_disconnect.png"
+    },
+    "4424ea43-3e76-49b4-a042-17120ad4eb95": {
+        "label": "Self Collision Grouping... : Self / Multi Collision",
+        "sourceType": "mel",
+        "command": "cMuscleSelfCollisionUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_multi_apply.png"
+    },
+    "ab33857f-b7e1-472e-b8c9-72c898ce0c3c": {
+        "label": "Apply Muscle Multi Collide Deformer : Self / Multi Collision",
+        "sourceType": "mel",
+        "command": "cMuscleMultiCollide_setup(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_multi_apply.png"
+    },
+    "d29801a5-eb8c-4271-aa81-4ede065719e1": {
+        "label": "Rig selection for KeepOut : Self / Multi Collision",
+        "sourceType": "mel",
+        "command": "cMuscle_rigKeepOutSel(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_keepout_rig.png"
+    },
+    "282994d6-5615-4944-bb42-894d6b08ed70": {
+        "label": "Connect Muscles to KeepOut : Self / Multi Collision",
+        "sourceType": "mel",
+        "command": "cMuscle_keepOutAddRemMuscle(1); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_keepout_connect.png"
+    },
+    "328ca847-dd65-40bf-82ff-0da6e17acd53": {
+        "label": "Disconnect Muscles from KeepOut : Self / Multi Collision",
+        "sourceType": "mel",
+        "command": "cMuscle_keepOutAddRemMuscle(0); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_keepout_disconnect.png"
+    },
+    "4b728b7c-f3fd-4125-8488-e689c360467b": {
+        "label": "Set Location of File Cache... : Caching",
+        "sourceType": "mel",
+        "command": "cMuscle_chooseCacheFile(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_cacheFile.png"
+    },
+    "c412bc9f-6d6e-4ab8-8c8c-190d63fd03c7": {
+        "label": "Create Cache... : Caching",
+        "sourceType": "mel",
+        "command": "cMuscle_makeCacheUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_cacheCreate.png"
+    },
+    "6686d974-425e-4fb9-8d2c-b9c1dd4ce7ee": {
+        "label": "Delete Node Cache... : Caching",
+        "sourceType": "mel",
+        "command": "cMuscle_deleteNodeCacheUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_cacheDelete.png"
+    },
+    "0117a6e9-d0ca-4687-9476-d32f268eab74": {
+        "label": "Delete Per-Point Skin Jiggle Cache... : Caching",
+        "sourceType": "mel",
+        "command": "cMuscle_deleteSkinJiggleCacheUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_skin_cacheDeleteJiggle.png"
+    },
+    "643eacd4-384d-4aef-9ca2-a91a14231d9d": {
+        "label": "Select connected muscleObjects from selected muscleSystems : Selection",
+        "sourceType": "mel",
+        "command": "cMuscle_selMusclesFromSystem(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_sel_musFromSys.png"
+    },
+    "c3bf738d-a8a0-4d74-8356-497803bc758b": {
+        "label": "Select connected muscleDirections from selected muscleSystems : Selection",
+        "sourceType": "mel",
+        "command": "cMuscle_selDirFromSystem(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_sel_dirFromSys.png"
+    },
+    "1450724c-1836-4895-bc36-545bec33065c": {
+        "label": "Select connected muscleSystems from selected muscleObjects : Selection",
+        "sourceType": "mel",
+        "command": "cMuscle_selSystemFromMuscles(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_sel_sysFromMus.png"
+    },
+    "2789e95b-37b4-495c-9dc6-551f888138f8": {
+        "label": "Select connected muscleSystems from muscleDirectons : Selection",
+        "sourceType": "mel",
+        "command": "cMuscle_selSystemFromDir(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_sel_sysFromDir.png"
+    },
+    "90cdcdfb-1ca3-438f-b801-a0a6fc11e9f8": {
+        "label": "Create Muscle Spline... : Bonus Rigging",
+        "sourceType": "mel",
+        "command": "cMuscleSplineUI(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_bonus_spline.png"
+    },
+    "0636b631-4a9f-49be-b0d7-8b8af68fc0c5": {
+        "label": "Surface Attach : Bonus Rigging",
+        "sourceType": "mel",
+        "command": "cMuscleSurfAttachSetup(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_bonus_surfAttach.png"
+    },
+    "8c77e236-54b5-4d89-a2ca-4aaee5621f24": {
+        "label": "Fix Surface Attach to allow for Poly Smooth : Bonus Rigging",
+        "sourceType": "mel",
+        "command": "cMuscle_fixSurfAttachForPolySmooth(); ",
+        "category": "",
+        "module": "Deform",
+        "icon": "cMuscle_bonus_surfAttach.png"
+    },
+    "964763d6-248e-4360-a073-32938f46f74b": {
+        "label": "Bend : Nonlinear",
+        "sourceType": "mel",
+        "command": "Bend",
+        "category": "",
+        "module": "Deform",
+        "icon": "bendNLD.png"
+    },
+    "912ab576-ef6f-45ee-bc59-2bde641a063b": {
+        "label": "Bend Options : Nonlinear",
+        "sourceType": "mel",
+        "command": "BendOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "bendNLD.png"
+    },
+    "b10727dc-39f4-4b8f-8902-ab8ad4017af3": {
+        "label": "Flare : Nonlinear",
+        "sourceType": "mel",
+        "command": "Flare",
+        "category": "",
+        "module": "Deform",
+        "icon": "flareNLD.png"
+    },
+    "97360ff5-5741-4065-b92c-ed360293878b": {
+        "label": "Flare Options : Nonlinear",
+        "sourceType": "mel",
+        "command": "FlareOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "flareNLD.png"
+    },
+    "2a05b2c6-1da7-4cec-b5a4-6cf1701aa83a": {
+        "label": "Sine : Nonlinear",
+        "sourceType": "mel",
+        "command": "Sine",
+        "category": "",
+        "module": "Deform",
+        "icon": "sineNLD.png"
+    },
+    "583346ec-bdf3-4cfc-a70f-a7040017509e": {
+        "label": "Sine Options : Nonlinear",
+        "sourceType": "mel",
+        "command": "SineOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "sineNLD.png"
+    },
+    "2f2a955f-3322-43f3-9aa3-480c636a158e": {
+        "label": "Squash : Nonlinear",
+        "sourceType": "mel",
+        "command": "Squash",
+        "category": "",
+        "module": "Deform",
+        "icon": "squashNLD.png"
+    },
+    "c001eadb-bda9-4775-b784-da4a0ed4a495": {
+        "label": "Squash Options : Nonlinear",
+        "sourceType": "mel",
+        "command": "SquashOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "squashNLD.png"
+    },
+    "ea0e1bf5-5d2b-4e1d-818c-6091fc0f8c14": {
+        "label": "Twist : Nonlinear",
+        "sourceType": "mel",
+        "command": "Twist",
+        "category": "",
+        "module": "Deform",
+        "icon": "twistNLD.png"
+    },
+    "6d19a5b1-f163-4909-891a-ccc4dff9e084": {
+        "label": "Twist Options : Nonlinear",
+        "sourceType": "mel",
+        "command": "TwistOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "twistNLD.png"
+    },
+    "152aa23c-18be-4c62-a3fa-a1090c833708": {
+        "label": "Wave : Nonlinear",
+        "sourceType": "mel",
+        "command": "Wave",
+        "category": "",
+        "module": "Deform",
+        "icon": "waveNLD.png"
+    },
+    "3376abdc-a4e1-45ab-aaec-34fd3591d79b": {
+        "label": "Wave Options : Nonlinear",
+        "sourceType": "mel",
+        "command": "WaveOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "waveNLD.png"
+    },
+    "807c0c29-a6ae-48e0-b417-9827235eb6c2": {
+        "label": "Soft Modification Tool",
+        "sourceType": "mel",
+        "command": "SoftModTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "softMod.png"
+    },
+    "6efae0bb-6819-4904-815f-72b43803366f": {
+        "label": "Soft Modification Tool Options",
+        "sourceType": "mel",
+        "command": "SoftModToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "softMod.png"
+    },
+    "62ed3ac0-0b33-4de0-91df-50adc1e9a724": {
+        "label": "Sculpt",
+        "sourceType": "mel",
+        "command": "CreateSculptDeformer",
+        "category": "",
+        "module": "Deform",
+        "icon": "sculpt.png"
+    },
+    "b1da6960-7994-435e-adc3-d1679445cfcc": {
+        "label": "Sculpt Options",
+        "sourceType": "mel",
+        "command": "CreateSculptDeformerOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "sculpt.png"
+    },
+    "1b7c5266-d8ce-4fca-9584-d581858025c5": {
+        "label": "Texture",
+        "sourceType": "mel",
+        "command": "CreateTextureDeformer",
+        "category": "",
+        "module": "Deform",
+        "icon": "textureDeformer.png"
+    },
+    "72375ce1-1f14-4a97-aee2-6b77a829bae0": {
+        "label": "Texture Options",
+        "sourceType": "mel",
+        "command": "CreateTextureDeformerOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "textureDeformer.png"
+    },
+    "13bf9933-1435-466e-800a-6107ef51d474": {
+        "label": "Jiggle Deformer : Jiggle",
+        "sourceType": "mel",
+        "command": "CreateJiggleDeformer",
+        "category": "",
+        "module": "Deform",
+        "icon": "jiggleDeformer.png"
+    },
+    "4853db9d-3a49-419b-aa01-dc94738a97a5": {
+        "label": "Jiggle Deformer Options : Jiggle",
+        "sourceType": "mel",
+        "command": "CreateJiggleOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "jiggleDeformer.png"
+    },
+    "0b5e7cbc-6657-4c26-beb1-def3522fd100": {
+        "label": "Jiggle Disk Cache : Jiggle",
+        "sourceType": "mel",
+        "command": "CreateDiskCache",
+        "category": "",
+        "module": "Deform",
+        "icon": "jiggleCache.png"
+    },
+    "fd1052ba-ea48-48f4-b155-644b116ea32e": {
+        "label": "Jiggle Disk Cache Options : Jiggle",
+        "sourceType": "mel",
+        "command": "CreateDiskCacheOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "jiggleCache.png"
+    },
+    "21081842-92b8-4f71-b1d6-69ce516326af": {
+        "label": "Jiggle Disk Cache Attributes : Jiggle",
+        "sourceType": "mel",
+        "command": "GlobalDiskCacheControl",
+        "category": "",
+        "module": "Deform",
+        "icon": "jiggleCacheAttr.png"
+    },
+    "059747b2-f6de-41a1-9dc6-08cd1b56b7ee": {
+        "label": "Point On Curve",
+        "sourceType": "mel",
+        "command": "PointOnCurve",
+        "category": "",
+        "module": "Deform",
+        "icon": "ptPosCrvConstraint.png"
+    },
+    "f4cfe2a0-64e1-4e2b-af25-dc70c88ccc0e": {
+        "label": "Point On Curve Options",
+        "sourceType": "mel",
+        "command": "PointOnCurveOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "ptPosCrvConstraint.png"
+    },
+    "3139ca7d-dceb-4eb8-9726-ea88f3325c5a": {
+        "label": "Add Tweak",
+        "sourceType": "mel",
+        "command": "AddTweak",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "367ac0e9-382e-4c4a-8c30-b6efd104263a": {
+        "label": "Add : Blend Shape",
+        "sourceType": "mel",
+        "command": "AddBlendShape",
+        "category": "",
+        "module": "Deform",
+        "icon": "blendShapePlus.png"
+    },
+    "d61a5955-c7fe-4df2-b810-13a3a0da9791": {
+        "label": "Add Options : Blend Shape",
+        "sourceType": "mel",
+        "command": "AddBlendShapeOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "blendShapePlus.png"
+    },
+    "cc536c12-39a2-4773-90de-1ac26624f0aa": {
+        "label": "Remove : Blend Shape",
+        "sourceType": "mel",
+        "command": "RemoveBlendShape",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeBlendShape.png"
+    },
+    "4d224a2c-4c0a-49c4-9739-f20d444f3273": {
+        "label": "Remove Options : Blend Shape",
+        "sourceType": "mel",
+        "command": "RemoveBlendShapeOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeBlendShape.png"
+    },
+    "932a00a5-ed90-411e-a9c7-4e88e67b88e1": {
+        "label": "Swap : Blend Shape",
+        "sourceType": "mel",
+        "command": "SwapBlendShape",
+        "category": "",
+        "module": "Deform",
+        "icon": "swapBlendShape.png"
+    },
+    "51a15343-aabd-40b5-8a55-12e042708257": {
+        "label": "Swap Options : Blend Shape",
+        "sourceType": "mel",
+        "command": "SwapBlendShapeOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "swapBlendShape.png"
+    },
+    "42f29b53-341f-4b0d-ba7e-a7bb95d26e09": {
+        "label": "Bake Topology To Targets : Blend Shape",
+        "sourceType": "mel",
+        "command": "BakeTopologyToTargets",
+        "category": "",
+        "module": "Deform",
+        "icon": "bakeBlendShape.png"
+    },
+    "ae9e42e2-ada3-4019-b267-f39172f9ade1": {
+        "label": "Edit Normalization Groups : Blend Shape",
+        "sourceType": "mel",
+        "command": "EditNormalizationGroups",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "1ccfed61-81d1-45f0-a047-2513a8bf3a76": {
+        "label": "Remove Lattice Tweaks : Lattice",
+        "sourceType": "mel",
+        "command": "RemoveLatticeTweaks",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeTweaks.png"
+    },
+    "eba3c3c2-595f-4581-8043-00e059e4d050": {
+        "label": "Reset Lattice : Lattice",
+        "sourceType": "mel",
+        "command": "ResetLattice",
+        "category": "",
+        "module": "Deform",
+        "icon": "resetLattice.png"
+    },
+    "c801f57d-2de4-45b0-a5e3-c5088146d5ec": {
+        "label": "Add Influence : Wrap",
+        "sourceType": "mel",
+        "command": "AddWrapInfluence",
+        "category": "",
+        "module": "Deform",
+        "icon": "addWrapInfluence.png"
+    },
+    "9f3cef81-a319-43ee-88f6-e545d98aaa56": {
+        "label": "Remove Influence : Wrap",
+        "sourceType": "mel",
+        "command": "RemoveWrapInfluence",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeWrapInfluence.png"
+    },
+    "0182bfd6-288a-42ef-b383-ac286a0cf728": {
+        "label": "Add surfaces : ShrinkWrap",
+        "sourceType": "mel",
+        "command": "AddShrinkWrapSurfaces",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "96414c0b-9473-4d36-a7a7-5ad67bf3b51f": {
+        "label": "Remove Inner Object : ShrinkWrap",
+        "sourceType": "mel",
+        "command": "RemoveShrinkWrapInnerObject",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeShrinkWrapInnerObject.png"
+    },
+    "c2c87f86-616d-42b4-9d91-858c93eefe49": {
+        "label": "Remove surfaces : ShrinkWrap",
+        "sourceType": "mel",
+        "command": "RemoveShrinkWrapSurfaces",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "2cb7ff2e-7517-42c1-b68e-4fda6d324387": {
+        "label": "Remove Target : ShrinkWrap",
+        "sourceType": "mel",
+        "command": "RemoveShrinkWrapTarget",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeShrinkWrapTarget.png"
+    },
+    "d4c40535-9fe0-453c-88d7-64ab41033b8c": {
+        "label": "Set Inner Object : ShrinkWrap",
+        "sourceType": "mel",
+        "command": "SetShrinkWrapInnerObject",
+        "category": "",
+        "module": "Deform",
+        "icon": "setShrinkWrapInnerObject.png"
+    },
+    "b56db4e4-2004-4f9d-bb4d-94bc3943c85a": {
+        "label": "Set Target : ShrinkWrap",
+        "sourceType": "mel",
+        "command": "SetShrinkWrapTarget",
+        "category": "",
+        "module": "Deform",
+        "icon": "setShrinkWrapTarget.png"
+    },
+    "088dea33-e400-4f41-847f-4dade6bf2da9": {
+        "label": "Add : Wire",
+        "sourceType": "mel",
+        "command": "AddWire",
+        "category": "",
+        "module": "Deform",
+        "icon": "addWire.png"
+    },
+    "088f5e77-0108-47bd-96b0-fc35a6b891d2": {
+        "label": "Add Options : Wire",
+        "sourceType": "mel",
+        "command": "AddWireOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "addWire.png"
+    },
+    "af9ac05c-216a-4d76-822a-7cf9b465c587": {
+        "label": "Add Holder : Wire",
+        "sourceType": "mel",
+        "command": "AddHolder",
+        "category": "",
+        "module": "Deform",
+        "icon": "addWireHolder.png"
+    },
+    "0a2c9793-f472-41c1-9c5a-4d9a021bad27": {
+        "label": "Add Holder Options : Wire",
+        "sourceType": "mel",
+        "command": "AddHolderOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "addWireHolder.png"
+    },
+    "a0a8154e-6e01-48c7-b4bb-98132ca73ce4": {
+        "label": "Parent Base Wire : Wire",
+        "sourceType": "mel",
+        "command": "ParentBaseWire",
+        "category": "",
+        "module": "Deform",
+        "icon": "parentBaseWire.png"
+    },
+    "b8883221-1e14-4284-a821-0978c9c8c6cd": {
+        "label": "Parent Base Wire Options : Wire",
+        "sourceType": "mel",
+        "command": "ParentBaseWireOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "parentBaseWire.png"
+    },
+    "0324061e-f75c-4a9d-b743-1652438fdc15": {
+        "label": "Remove : Wire",
+        "sourceType": "mel",
+        "command": "RemoveWire",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeWire.png"
+    },
+    "0615037c-bb38-413b-8624-7d62350369db": {
+        "label": "Remove Options : Wire",
+        "sourceType": "mel",
+        "command": "RemoveWireOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "removeWire.png"
+    },
+    "c2840e42-3062-4aff-a2cf-b5ff49216fe4": {
+        "label": "Reset : Wire",
+        "sourceType": "mel",
+        "command": "ResetWire",
+        "category": "",
+        "module": "Deform",
+        "icon": "resetWire.png"
+    },
+    "e9b30283-d62a-438b-98c4-9e64fd524d36": {
+        "label": "Reset Options : Wire",
+        "sourceType": "mel",
+        "command": "ResetWireOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "resetWire.png"
+    },
+    "b4f9ead7-0fcf-41d4-88d0-f4afb74d63d3": {
+        "label": "Show Base Wire : Wire",
+        "sourceType": "mel",
+        "command": "ShowBaseWire",
+        "category": "",
+        "module": "Deform",
+        "icon": "showBaseWire.png"
+    },
+    "fbe720c5-b07c-4f5c-a3ec-8927d37fcee0": {
+        "label": "Wire Dropoff Locator : Wire",
+        "sourceType": "mel",
+        "command": "WireDropoffLocator",
+        "category": "",
+        "module": "Deform",
+        "icon": "wireDropoff.png"
+    },
+    "d1190321-55d4-45a0-ba83-650b8d295590": {
+        "label": "Wire Dropoff Locator Options : Wire",
+        "sourceType": "mel",
+        "command": "WireDropoffLocatorOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "wireDropoff.png"
+    },
+    "fce185e1-39ce-44b5-99c4-452e93f0cec7": {
+        "label": "Display Intermediate Objects",
+        "sourceType": "mel",
+        "command": "DisplayIntermediateObjects",
+        "category": "",
+        "module": "Deform",
+        "icon": "displayIntermObj.png"
+    },
+    "f0d37852-8142-4f0f-a635-3f8e57f4a7e5": {
+        "label": "Hide Intermediate Objects",
+        "sourceType": "mel",
+        "command": "HideIntermediateObjects",
+        "category": "",
+        "module": "Deform",
+        "icon": "hideIntermObj.png"
+    },
+    "66b4671e-5158-4d6f-97c1-af65738124e1": {
+        "label": "Blend Shape : Paint Weights",
+        "sourceType": "mel",
+        "command": "ArtPaintBlendShapeWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintBlendshape.png"
+    },
+    "f54714b8-f24f-4e1f-8463-1def0d2d57a7": {
+        "label": "Blend Shape Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "ArtPaintBlendShapeWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintBlendshape.png"
+    },
+    "28622789-a934-4ba6-9ad1-90b9c4d05997": {
+        "label": "Cluster : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintClusterWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintCluster.png"
+    },
+    "ef9175c3-0d5d-41b6-b36f-6d422dd4a5ad": {
+        "label": "Cluster Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintClusterWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintCluster.png"
+    },
+    "8abcd6e1-b2ec-4ef8-8312-78c5ae2de0a8": {
+        "label": "Delta Mush : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintDeltaMushWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "e28704c6-ea7a-4913-b3d5-2c35fb19fe96": {
+        "label": "Delta Mush Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintDeltaMushWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "e2744cd1-c713-4c9b-aca2-b396543d2880": {
+        "label": "Tension : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintTensionWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "66851502-f2e9-425e-ac7c-7a07236b0391": {
+        "label": "Tension Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintTensionWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "25bf3dda-cde4-4035-85dc-89a18d0a1bfc": {
+        "label": "Proximity Wrap : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintProximityWrapWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "75bbfca1-1d78-459e-ae77-486b847a3487": {
+        "label": "Proximity Wrap Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintProximityWrapWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "94e176cf-b14c-479d-90be-7c2579d1e820": {
+        "label": "Lattice : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintLatticeWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "8364d780-5ce0-424e-8681-134b4f59f897": {
+        "label": "Lattice Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintLatticeWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "90c0d7d9-a651-4cdb-b65a-636d3ea8ad7c": {
+        "label": "ShrinkWrap : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintShrinkWrapWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintShrinkWrap.png"
+    },
+    "8d310f82-e80b-4eea-bb13-f3d161efdd8e": {
+        "label": "ShrinkWrap Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintShrinkWrapWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintShrinkWrap.png"
+    },
+    "8354d130-f60a-4325-be55-88046ef5f1b8": {
+        "label": "Wire : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintWireWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintWire.png"
+    },
+    "e13df136-8baa-469d-b5b8-87063b81a146": {
+        "label": "Wire Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintWireWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintWire.png"
+    },
+    "4c99b66e-909a-407b-bc50-68f4eaf983d4": {
+        "label": "Nonlinear : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintNonlinearWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "b9dbca56-f346-4250-a035-c1238c452d49": {
+        "label": "Nonlinear Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintNonlinearWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": ""
+    },
+    "5ed80756-c3e5-4b2c-9d6b-4f55159d7432": {
+        "label": "Jiggle : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintJiggleWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintJiggle.png"
+    },
+    "52385e4b-3e95-42bf-b4a9-a25f7a4d5896": {
+        "label": "Jiggle Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintJiggleWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintJiggle.png"
+    },
+    "4d5d9e12-376b-449f-b547-fd4037bf0d9e": {
+        "label": "Texture Deformer : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintTextureDeformerWeightsTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintTextureDeformer.png"
+    },
+    "29f86f1b-674e-49a2-818d-a0df8af01acc": {
+        "label": "Texture Deformer Options : Paint Weights",
+        "sourceType": "mel",
+        "command": "PaintTextureDeformerWeightsToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintTextureDeformer.png"
+    },
+    "fb1ffcb0-0350-478d-82cc-2dc906fb0f2c": {
+        "label": "Mirror Deformer Weights",
+        "sourceType": "mel",
+        "command": "MirrorDeformerWeights",
+        "category": "",
+        "module": "Deform",
+        "icon": "mirrorSkinWeight.png"
+    },
+    "c4ae48b7-4fca-491e-a538-47e2b984f692": {
+        "label": "Mirror Deformer Weights Options",
+        "sourceType": "mel",
+        "command": "MirrorDeformerWeightsOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "mirrorSkinWeight.png"
+    },
+    "ebcd9a00-b468-4ae4-a9da-2c1a28bf41b7": {
+        "label": "Export Weights...",
+        "sourceType": "mel",
+        "command": "ExportDeformerWeights",
+        "category": "",
+        "module": "Deform",
+        "icon": "deformExportWeights.png"
+    },
+    "119cee24-7e58-4b7f-8b16-5578e9b40df4": {
+        "label": "Import Weights...",
+        "sourceType": "mel",
+        "command": "ImportDeformerWeights",
+        "category": "",
+        "module": "Deform",
+        "icon": "deformImportWeights.png"
+    },
+    "cd2003b0-18a1-464f-bb90-a7a22781d8f6": {
+        "label": "Edit Membership Tool",
+        "sourceType": "mel",
+        "command": "EditMembershipTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "setEdit.png"
+    },
+    "040b0930-3cae-49cd-9871-f5f482d7673f": {
+        "label": "Cluster : Prune Membership",
+        "sourceType": "mel",
+        "command": "PruneCluster",
+        "category": "",
+        "module": "Deform",
+        "icon": "pruneCluster.png"
+    },
+    "717791ae-63c0-429f-9e36-b0662cded977": {
+        "label": "Lattice : Prune Membership",
+        "sourceType": "mel",
+        "command": "PruneLattice",
+        "category": "",
+        "module": "Deform",
+        "icon": "pruneLattice.png"
+    },
+    "9aada3fb-9165-4a08-aaa9-f073c20dd421": {
+        "label": "Sculpt : Prune Membership",
+        "sourceType": "mel",
+        "command": "PruneSculpt",
+        "category": "",
+        "module": "Deform",
+        "icon": "pruneSculpt.png"
+    },
+    "3af67c4f-bd04-4b39-8d6f-2170cf1d8225": {
+        "label": "Wire : Prune Membership",
+        "sourceType": "mel",
+        "command": "PruneWire",
+        "category": "",
+        "module": "Deform",
+        "icon": "pruneWire.png"
+    },
+    "ba8d185d-ca69-4aa7-bb9d-11712c3e9a06": {
+        "label": "Paint Membership",
+        "sourceType": "mel",
+        "command": "PaintSetMembershipTool",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintSetMembership.png"
+    },
+    "4b374f93-a06f-4c0d-af5b-592051253177": {
+        "label": "Paint Membership Options",
+        "sourceType": "mel",
+        "command": "PaintSetMembershipToolOptions",
+        "category": "",
+        "module": "Deform",
+        "icon": "paintSetMembership.png"
+    }
+}

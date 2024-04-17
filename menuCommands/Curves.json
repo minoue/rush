@@ -1,0 +1,482 @@
+{
+    "df1ec8b8-9bc9-47ef-a679-b11b7fe33d79": {
+        "label": "Lock Length",
+        "sourceType": "mel",
+        "command": "LockCurveLength",
+        "category": "",
+        "module": "Curves",
+        "icon": "lockLength.png"
+    },
+    "8dc535ab-65ba-44e2-95d5-b59a610c98f7": {
+        "label": "Unlock Length",
+        "sourceType": "mel",
+        "command": "UnlockCurveLength",
+        "category": "",
+        "module": "Curves",
+        "icon": "unlockLength.png"
+    },
+    "a4027af1-a292-4932-81dc-a0f9ae344609": {
+        "label": "Bend",
+        "sourceType": "mel",
+        "command": "BendCurves",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyBend.png"
+    },
+    "e8093d3e-ba11-4c0d-b142-0e984a436209": {
+        "label": "Bend Options",
+        "sourceType": "mel",
+        "command": "BendCurvesOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyBend.png"
+    },
+    "983f8728-303b-4ade-b731-a056c1f9846b": {
+        "label": "Curl",
+        "sourceType": "mel",
+        "command": "CurlCurves",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyCurl.png"
+    },
+    "5efe6b1d-0296-48b1-af44-4f6e4de21f96": {
+        "label": "Curl Options",
+        "sourceType": "mel",
+        "command": "CurlCurvesOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyCurl.png"
+    },
+    "9701eee7-7c68-4ef0-8460-2ddeef94ba61": {
+        "label": "Scale Curvature",
+        "sourceType": "mel",
+        "command": "ScaleCurvature",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyScaleCurvature.png"
+    },
+    "776ac0fb-e5dc-4b74-ab90-c2fb567f0bd1": {
+        "label": "Scale Curvature Options",
+        "sourceType": "mel",
+        "command": "ScaleCurvatureOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyScaleCurvature.png"
+    },
+    "d053cb7b-8f51-45ee-9b5b-4bc92946e0bf": {
+        "label": "Smooth",
+        "sourceType": "mel",
+        "command": "SmoothHairCurves",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifySmooth.png"
+    },
+    "f1b1a139-0108-4b89-a15d-3491d32ed8b0": {
+        "label": "Smooth Options",
+        "sourceType": "mel",
+        "command": "SmoothHairCurvesOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifySmooth.png"
+    },
+    "f5f2dcaf-03fb-4aa5-986e-73b193e1a4f4": {
+        "label": "Straighten",
+        "sourceType": "mel",
+        "command": "StraightenCurves",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyStraighten.png"
+    },
+    "0686049a-b70b-498a-add8-4c4704c5077c": {
+        "label": "Straighten Options",
+        "sourceType": "mel",
+        "command": "StraightenCurvesOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "modifyStraighten.png"
+    },
+    "383e0d41-bb43-4500-b83b-5b1f78670935": {
+        "label": "Duplicate Surface Curves",
+        "sourceType": "mel",
+        "command": "DuplicateCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "duplicateCurve.png"
+    },
+    "5bcf1e8c-690f-423a-8fc1-a794f8880f7e": {
+        "label": "Duplicate Surface Curves Options",
+        "sourceType": "mel",
+        "command": "DuplicateCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "duplicateCurve.png"
+    },
+    "fc5e7a2b-dff1-41b3-a9f7-80275f617755": {
+        "label": "Align",
+        "sourceType": "mel",
+        "command": "AlignCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "alignCurve.png"
+    },
+    "f332764a-61cf-48f4-b71f-10b9753abf74": {
+        "label": "Align Options",
+        "sourceType": "mel",
+        "command": "AlignCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "alignCurve.png"
+    },
+    "5fe6c88a-4a5a-4c84-afe4-2fb2e177bec3": {
+        "label": "Add Points Tool",
+        "sourceType": "mel",
+        "command": "AddPointsTool",
+        "category": "",
+        "module": "Curves",
+        "icon": "curveAddPt.png"
+    },
+    "b530e7ec-9deb-450b-8532-5c96d37e1031": {
+        "label": "Attach",
+        "sourceType": "mel",
+        "command": "AttachCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "attachCurves.png"
+    },
+    "fa34c301-b3eb-4d51-8847-a550ff7703b7": {
+        "label": "Attach Options",
+        "sourceType": "mel",
+        "command": "AttachCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "attachCurves.png"
+    },
+    "ec8f0acd-adc0-47dd-af1d-ba7e5158dba5": {
+        "label": "Detach",
+        "sourceType": "mel",
+        "command": "DetachCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "detachCurve.png"
+    },
+    "7b6ef66b-14da-4c08-80ca-ff33528223cc": {
+        "label": "Detach Options",
+        "sourceType": "mel",
+        "command": "DetachCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "detachCurve.png"
+    },
+    "f1f0a291-1958-4619-91f4-4f588b616335": {
+        "label": "Edit Curve Tool",
+        "sourceType": "mel",
+        "command": "CurveEditTool",
+        "category": "",
+        "module": "Curves",
+        "icon": "curveEditor.png"
+    },
+    "d93c8a85-bc6d-458a-b484-f021c042e13d": {
+        "label": "Move Seam",
+        "sourceType": "mel",
+        "command": "MoveCurveSeam",
+        "category": "",
+        "module": "Curves",
+        "icon": "newSeamLocation.png"
+    },
+    "36775dcb-32ef-48b1-b405-a1ac11479ef9": {
+        "label": "Open/Close",
+        "sourceType": "mel",
+        "command": "OpenCloseCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "closeGeom.png"
+    },
+    "6f4fb71f-ce6b-4476-b949-e9a6a891b02b": {
+        "label": "Open/Close Options",
+        "sourceType": "mel",
+        "command": "OpenCloseCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "closeGeom.png"
+    },
+    "dba8b183-1cca-4ee3-b809-c2269cd12348": {
+        "label": "Fillet",
+        "sourceType": "mel",
+        "command": "CurveFillet",
+        "category": "",
+        "module": "Curves",
+        "icon": "fillet.png"
+    },
+    "940fc180-4b98-49c5-9578-4ed8dca031f3": {
+        "label": "Fillet Options",
+        "sourceType": "mel",
+        "command": "CurveFilletOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "fillet.png"
+    },
+    "c7e36ccb-c135-467b-94c4-c68e8f4dc412": {
+        "label": "Cut",
+        "sourceType": "mel",
+        "command": "CutCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "cutCurves.png"
+    },
+    "8d215fe7-c1f7-48ab-b50e-26ca15b2197e": {
+        "label": "Cut Options",
+        "sourceType": "mel",
+        "command": "CutCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "cutCurves.png"
+    },
+    "ea67ad9d-9e07-4b45-95fc-72f2a3b336de": {
+        "label": "Intersect",
+        "sourceType": "mel",
+        "command": "IntersectCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "intersectCurves.png"
+    },
+    "dfd456f7-0852-43d8-8fb0-a9371b2a9ae6": {
+        "label": "Intersect Options",
+        "sourceType": "mel",
+        "command": "IntersectCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "intersectCurves.png"
+    },
+    "c5216b50-7496-4135-a9f3-4d012f9e5165": {
+        "label": "Extend Curve : Extend",
+        "sourceType": "mel",
+        "command": "ExtendCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "extend.png"
+    },
+    "cfc64576-0534-45e1-9c5e-26477894e16b": {
+        "label": "Extend Curve Options : Extend",
+        "sourceType": "mel",
+        "command": "ExtendCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "extend.png"
+    },
+    "0c91d289-a2ad-40ce-a664-813d7d180da3": {
+        "label": "Extend Curve On Surface : Extend",
+        "sourceType": "mel",
+        "command": "ExtendCurveOnSurface",
+        "category": "",
+        "module": "Curves",
+        "icon": "extendCos.png"
+    },
+    "824edbf0-83c5-401b-817d-b69e4640f83e": {
+        "label": "Extend Curve On Surface Options : Extend",
+        "sourceType": "mel",
+        "command": "ExtendCurveOnSurfaceOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "extendCos.png"
+    },
+    "565848ff-fa84-408d-9572-c4949e57c6dd": {
+        "label": "Insert Knot",
+        "sourceType": "mel",
+        "command": "InsertKnot",
+        "category": "",
+        "module": "Curves",
+        "icon": "insertKnot.png"
+    },
+    "0454c127-fab8-4f07-b75f-9075503398d7": {
+        "label": "Insert Knot Options",
+        "sourceType": "mel",
+        "command": "InsertKnotOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "insertKnot.png"
+    },
+    "bcf7fff7-f0e2-4d6f-834c-0cfbc38a736a": {
+        "label": "Offset Curve : Offset",
+        "sourceType": "mel",
+        "command": "OffsetCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "offsetCurve.png"
+    },
+    "94512a67-3a3d-4829-9ffa-059805ad91bb": {
+        "label": "Offset Curve Options : Offset",
+        "sourceType": "mel",
+        "command": "OffsetCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "offsetCurve.png"
+    },
+    "2dd82eff-9d63-4167-89fc-f809aecc8c28": {
+        "label": "Offset Curve On Surface : Offset",
+        "sourceType": "mel",
+        "command": "OffsetCurveOnSurface",
+        "category": "",
+        "module": "Curves",
+        "icon": "offsetCos.png"
+    },
+    "69df0369-9474-44b3-9ba1-d3d4ef0c0012": {
+        "label": "Offset Curve On Surface Options : Offset",
+        "sourceType": "mel",
+        "command": "OffsetCurveOnSurfaceOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "offsetCos.png"
+    },
+    "84db3fee-ec08-4784-a7ec-9cf21d9971d5": {
+        "label": "CV Hardness",
+        "sourceType": "mel",
+        "command": "CVHardness",
+        "category": "",
+        "module": "Curves",
+        "icon": "cvHardness.png"
+    },
+    "ef098517-a0fd-43c7-b62e-e4f86264e37a": {
+        "label": "CV Hardness Options",
+        "sourceType": "mel",
+        "command": "CVHardnessOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "cvHardness.png"
+    },
+    "e451a2f3-0e2c-4228-ab5a-6edb3fc56005": {
+        "label": "Fit B-spline",
+        "sourceType": "mel",
+        "command": "FitBSpline",
+        "category": "",
+        "module": "Curves",
+        "icon": "fitBSpline.png"
+    },
+    "4aa5bc3a-a6f8-4a4e-97ed-307f5c391a44": {
+        "label": "Fit B-spline Options",
+        "sourceType": "mel",
+        "command": "FitBSplineOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "fitBSpline.png"
+    },
+    "3868db01-c7df-483e-9a76-7755e19173e6": {
+        "label": "Project Tangent",
+        "sourceType": "mel",
+        "command": "ProjectTangent",
+        "category": "",
+        "module": "Curves",
+        "icon": "projectTangent.png"
+    },
+    "1d664d3f-c789-4598-813d-e44cc05e8914": {
+        "label": "Project Tangent Options",
+        "sourceType": "mel",
+        "command": "ProjectTangentOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "projectTangent.png"
+    },
+    "fa0ebadd-ff2d-4baa-916d-bb649640db3e": {
+        "label": "Smooth",
+        "sourceType": "mel",
+        "command": "SmoothCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "smoothCurve.png"
+    },
+    "195493a4-e96c-432b-b2a0-92e0ad9a4eb8": {
+        "label": "Smooth Options",
+        "sourceType": "mel",
+        "command": "SmoothCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "smoothCurve.png"
+    },
+    "c53bb5c3-f6f9-4208-9884-fbb27670ab26": {
+        "label": "Bezier : Anchor Presets",
+        "sourceType": "mel",
+        "command": "BezierPresetBezier",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "0ca1057e-db63-449f-9db5-4824d00e3993": {
+        "label": "Bezier Corner : Anchor Presets",
+        "sourceType": "mel",
+        "command": "BezierPresetBezierCorner",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "01c4e116-6e96-41f5-a867-a4efc7bb39be": {
+        "label": "Corner : Anchor Presets",
+        "sourceType": "mel",
+        "command": "BezierPresetCorner",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "4dd9b6f3-a895-488b-ba05-17f7f77c691d": {
+        "label": "Smooth Anchor Tangents : Tangent Options",
+        "sourceType": "mel",
+        "command": "BezierSetAnchorSmooth",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "3d6f456a-f943-4a93-9592-162358e7707a": {
+        "label": "Break Anchor Tangents : Tangent Options",
+        "sourceType": "mel",
+        "command": "BezierSetAnchorBroken",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "c1878519-3c84-479b-b7af-32e444c2c44a": {
+        "label": "Even Anchor Tangents : Tangent Options",
+        "sourceType": "mel",
+        "command": "BezierSetAnchorEven",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "50cb74fb-6a2e-4ee4-9c91-9c2912f46c24": {
+        "label": "Uneven Anchor Tangents : Tangent Options",
+        "sourceType": "mel",
+        "command": "BezierSetAnchorUneven",
+        "category": "",
+        "module": "Curves",
+        "icon": ""
+    },
+    "fdd1d14c-ca19-408a-af81-bd9aaeb847a7": {
+        "label": "Rebuild",
+        "sourceType": "mel",
+        "command": "RebuildCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "rebuildCurve.png"
+    },
+    "6dcc7895-9990-40fd-bddd-478d92fee04c": {
+        "label": "Rebuild Options",
+        "sourceType": "mel",
+        "command": "RebuildCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "rebuildCurve.png"
+    },
+    "172214ca-634e-49c4-9043-80b92a11879b": {
+        "label": "Reverse Direction",
+        "sourceType": "mel",
+        "command": "ReverseCurve",
+        "category": "",
+        "module": "Curves",
+        "icon": "reverse.png"
+    },
+    "0cbb2377-dc2d-4398-a384-8af736f76eac": {
+        "label": "Reverse Direction Options",
+        "sourceType": "mel",
+        "command": "ReverseCurveOptions",
+        "category": "",
+        "module": "Curves",
+        "icon": "reverse.png"
+    }
+}
