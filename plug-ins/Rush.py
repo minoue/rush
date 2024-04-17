@@ -18,7 +18,7 @@ reload(rush)
 
 
 __author__ = "Michi Inoue"
-__version__ = "2.9.0"
+__version__ = "2.9.1"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -377,6 +377,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.createUI()
 
         self.toolWidth = self.dpi * 6
+        self.toolHeight = 70
         self.setFixedWidth(self.toolWidth)
 
         self.currentRow = 0
@@ -415,6 +416,8 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsLE.backtabPressed.connect(self.complete)
         self.cmdsLE.arrowPressed.connect(self.arrowPressed)
         self.cmdsLE.setFocus()
+
+        self.showHistory()
 
     def viewSelectionChanged(self, item: QtCore.QItemSelection):
 
@@ -473,16 +476,19 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         else:
             pass
 
+    def showHistory(self):
+        self.cmdsView.setVisible(False)
+        self.historyView.setVisible(True)
+        self.historyView.setFixedHeight(390)
+        self.setFixedHeight(390)
+        self.completeMode = "history"
+
     def downPressed(self):
         """ Down arrow key pressed event """
 
         if self.completeMode is None:
             # Show history view
-            self.cmdsView.setVisible(False)
-            self.historyView.setVisible(True)
-            self.historyView.setFixedHeight(300)
-            self.setFixedHeight(300)
-            self.completeMode = "history"
+            self.showHistory()
         elif self.completeMode == "normal":
             self.tabComplete(self.cmdsView, self.filteredModel)
         elif self.completeMode == "history":
@@ -725,7 +731,7 @@ class Rush(OpenMaya.MPxCommand):
         pos = QtGui.QCursor.pos()
         mainWindow.move(
             pos.x() - (mainWindow.width() / 2),
-            pos.y() - (mainWindow.height() / 2))
+            pos.y() - (mainWindow.toolHeight / 2))
 
         mainWindow.raise_()
         mainWindow.activateWindow()
