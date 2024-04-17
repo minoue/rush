@@ -18,7 +18,7 @@ reload(rush)
 
 
 __author__ = "Michi Inoue"
-__version__ = "2.9.2"
+__version__ = "2.9.3"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -394,6 +394,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsView.setModel(self.filteredModel)
         self.cmdsView.horizontalHeader().resizeSection(0, 400)
         self.cmdsView.doubleClicked.connect(self.execute)
+        self.cmdsView.setSelectionMode(QtWidgets.QListView.SingleSelection)
         self.cmdsViewSelModel = self.cmdsView.selectionModel()
         self.cmdsViewSelModel.selectionChanged.connect(self.viewSelectionChanged)
 
@@ -401,6 +402,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.historyView.setVisible(False)
         self.historyView.setModel(self.historyModel)
         self.historyView.horizontalHeader().resizeSection(0, 400)
+        self.historyView.setSelectionMode(QtWidgets.QListView.SingleSelection)
         self.historyView.selectionModel().selectionChanged.connect(self.viewSelectionChanged)
         self.historyView.doubleClicked.connect(self.execute)
 
