@@ -18,7 +18,7 @@ reload(rush)
 
 
 __author__ = "Michi Inoue"
-__version__ = "2.9.3"
+__version__ = "2.9.4"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -321,7 +321,8 @@ class Database():
             item.setData(uuid, 4)
 
             module = QtGui.QStandardItem("History")
-            module.setTextAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
+            module.setTextAlignment(
+                QtCore.Qt.AlignRight | QtCore.Qt.AlignVCenter)
             font = module.font()
             font.setItalic(True)
             font.setPointSize(11)
@@ -396,14 +397,16 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         self.cmdsView.doubleClicked.connect(self.execute)
         self.cmdsView.setSelectionMode(QtWidgets.QListView.SingleSelection)
         self.cmdsViewSelModel = self.cmdsView.selectionModel()
-        self.cmdsViewSelModel.selectionChanged.connect(self.viewSelectionChanged)
+        self.cmdsViewSelModel.selectionChanged.connect(
+            self.viewSelectionChanged)
 
         self.historyView = CustomQTableView()
         self.historyView.setVisible(False)
         self.historyView.setModel(self.historyModel)
         self.historyView.horizontalHeader().resizeSection(0, 400)
         self.historyView.setSelectionMode(QtWidgets.QListView.SingleSelection)
-        self.historyView.selectionModel().selectionChanged.connect(self.viewSelectionChanged)
+        self.historyView.selectionModel().selectionChanged.connect(
+            self.viewSelectionChanged)
         self.historyView.doubleClicked.connect(self.execute)
 
         # Layout
@@ -715,7 +718,7 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
 
                 # Add to repeatLast command so the comamnd can be repeatable
                 # by G key
-                cs = """python(\\"from rush import TmpCls; TmpCls.%s()\\")""" % cmd
+                cs = R'python("from rush import TmpCls; TmpCls.%s()")' % cmd
                 mel.eval("""callLastCommand("%s")""" % cs)
             except AttributeError:
                 pass
