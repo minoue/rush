@@ -10,6 +10,8 @@ import sys
 import imp
 import os
 import glob
+from collections import OrderedDict
+from operator import getitem
 from maya import cmds
 
 
@@ -156,13 +158,22 @@ for module_name in MODULES:
         funcObj = funcTuple[1]
         setattr(TmpCls, funcName, staticmethod(funcObj))
 
+
+# Set up a dict to be used in the main plugin file
+cmdDict = {}
+
 current_file_path = os.path.dirname(__file__)
 default_command_path = os.path.join(current_file_path, "menuCommands")
 
-# Dict to be used in the main plugin file
-cmdDict = {}
-
+# Load all menu files as dict and append to cmdDict
 commandFiles = glob.glob("{}/*.json".format(default_command_path))
 for f in commandFiles:
     with open(f, "r") as cmdFile:
         cmdDict |= json.load(cmdFile)
+
+# Sort by label string length
+cmdOrderedDict = OrderedDict(
+    sorted(cmdDict.items(), key=lambda x: len(getitem(x[1], 'label'))))
+
+# Convert back to normal dict
+cmdDict = dict(cmdOrderedDict)
