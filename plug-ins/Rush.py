@@ -18,7 +18,7 @@ reload(rush)
 
 
 __author__ = "Michi Inoue"
-__version__ = "2.9.5"
+__version__ = "2.9.6"
 PLUGIN_COMMAND = "rush2"
 
 

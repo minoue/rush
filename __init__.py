@@ -169,6 +169,8 @@ default_command_path = os.path.join(current_file_path, "menuCommands")
 commandFiles = glob.glob("{}/*.json".format(default_command_path))
 for f in commandFiles:
     with open(f, "r") as cmdFile:
+        # dict_tmp = json.load(cmdFile)
+        # cmdDict = {**cmdDict, **dict_tmp}
         cmdDict |= json.load(cmdFile)
 
 # Sort by label string length
