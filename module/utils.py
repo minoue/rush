@@ -4,8 +4,16 @@ import subprocess
 
 from maya import cmds
 from maya import OpenMayaUI
-from PySide2 import QtWidgets, QtCore
-import shiboken2
+
+MAYA_VER = int(cmds.about(v=True))
+
+if MAYA_VER > 2024:
+    from PySide6 import QtGui, QtWidgets, QtCore
+    import shiboken6 as shiboken
+else:
+    from PySide2 import QtGui, QtWidgets, QtCore
+    import shiboken2 as shiboken
+
 import rush
 
 from importlib import reload
@@ -16,7 +24,7 @@ def getMayaWindow():
     """ Get main window pointer """
 
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
+    return shiboken.wrapInstance(int(ptr), QtWidgets.QMainWindow)
 
 
 commandDict = {}

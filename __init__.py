@@ -1,181 +1,144 @@
-# -*- coding: utf-8 -*-
-
-""" Initialize rush plugin commands
-
-"""
-
-import inspect
-import json
-import sys
-import imp
 import os
+import json
 import glob
-from collections import OrderedDict
+import inspect
+
+from pathlib import Path
 from operator import getitem
+from collections import OrderedDict
+from importlib.util import module_from_spec
+from importlib.util import spec_from_file_location
+
 from maya import cmds
 
 
-def __loadConfig() -> list:
-    """ Load config file
-
-    Return:
-        config(list): List of path module paths
-
-    """
-    configFilePath = os.path.normpath(os.path.join(
-        cmds.internalVar(userScriptDir=True), 'rush.json'))
-
-    defaultModulePath = os.path.normpath(os.path.join(
-        cmds.internalVar(userScriptDir=True), 'rush', 'module'))
-
-    config = [defaultModulePath]
-
-    # Use only default module path if config file does not exist
-    if not os.path.exists(configFilePath):
-        print("Additional config file not found: %s" % configFilePath)
-        return config
-
-    # Open and load config file in use home dir and append it to the
-    # config list
-    try:
-        fileData = open(configFilePath, 'r')
-        extraConfig = json.load(fileData)
-        additionalPaths = extraConfig["path"]
-        fileData.close()
-    except IOError:
-        print("Failed to load config file")
-
-    config.extend(additionalPaths)
-
-    return config
-
-
-def __getModulePath(moduleDirPath: str) -> list:
-    """ Create and return a list of module paths
-
-    Args:
-        moduleDirPath (str): directory path to search modules
-
-    Return:
-        mods (list): List of module paths
-    """
-
-    if not os.path.exists(moduleDirPath):
-        return []
-
-    # Get all module files in the directories
-
-    module_paths = []
-
-    for root, _, files in os.walk(moduleDirPath):
-        for f in files:
-            if f.endswith(".py"):
-                path = os.path.join(root, f)
-                module_paths.append(path)
-
-    return module_paths
-
-
-def __loadModule(modulePath: str):
-    """ Load module
-
-    Args:
-        modulePath (str): Full path to the python module
-
-    Return:
-        mod (module object): command module
-        None: if path doesn't exist
-
-    """
-    # Create module names for import, for exapmle ...
-    #
-    # "rush/template"
-    # "animation/animate"
-    # "common/create"
-    # "common/display"
-
-    normPath = os.path.normpath(modulePath)
-
-    if sys.platform == "win32":
-        name = os.path.splitext(normPath)[0].split("\\")
-    else:
-        name = os.path.splitext(normPath)[0].split("/")
-
-    name = "/".join(name[-2:])
-
-    try:
-        mod = imp.load_source(name, modulePath)
-        return mod
-    except Exception:
-        print("Failed to load module : %s" % modulePath)
-        return None
-
-
-class TmpCls(object):
-
+class Commands(object):
     commandDict = {}
 
 
-MODULES = []
+def __loadModules(*args) -> list:
+    """Return a list of module objects
+
+    Returns:
+        list: module objects
+
+    """
+    scriptDir = cmds.internalVar(userScriptDir=True)
+    pluginPath = os.path.join(scriptDir, "rush", "module")
+
+    modules = []
+
+    for root, dirs, files in os.walk(pluginPath):
+        for name in files:
+            if name.endswith(".py"):
+                modulePath = os.path.join(root, name)
+                baseName = Path(modulePath).stem
+                spec = spec_from_file_location(baseName, modulePath)
+                module = module_from_spec(spec)
+                spec.loader.exec_module(module)
+                modules.append(module)
+    return modules
 
 
-for module_dir in __loadConfig():
-    normpath = os.path.normpath(module_dir)
-    if os.path.exists(normpath):
-        module_paths = __getModulePath(module_dir)
-        for i in module_paths:
-            MODULES.append(i)
+def __initCommands(*args) -> None:
+    """
+    """
 
-
-for module_name in MODULES:
-    m = __loadModule(module_name)
-
-    try:
-        tempDict = {}
+    modules = __loadModules()
+    for m in modules:
+        # Update cmd dict for all commands from all modules
         for cmd in m.commandDict:
-            displayName = cmd[:1].capitalize() + cmd[1:]
+            label = cmd[:1].capitalize() + cmd[1:]
+            id = label + "_exmod"
+            runTimeCommandName = "rush_{}".format(id)
 
-            # id = str(uuid.uuid4())
-            id = displayName + "_exmod"
             command_data = {}
             command_data[id] = {
-                    'label': displayName,
-                    'icon': m.commandDict[cmd],
-                    'path': module_name,
-                    'command': cmd,
-                    'module': m.__name__,
-                    'sourceType': "python",
-                }
-            tempDict.update(command_data)
-        TmpCls.commandDict.update(tempDict)
-    except AttributeError:
-        pass
+                'label': label,
+                'icon': m.commandDict[cmd],
+                'path': "",
+                'command': runTimeCommandName,
+                'module': m.__name__,
+                'sourceType': "mel",
+                'sourceCommand': cmd}
+            Commands.commandDict.update(command_data)
 
-    functions = inspect.getmembers(m, inspect.isfunction)
-
-    for funcTuple in functions:
-        funcName = funcTuple[0]
-        funcObj = funcTuple[1]
-        setattr(TmpCls, funcName, staticmethod(funcObj))
+        # set all functions from each module to the tmp class
+        functions = inspect.getmembers(m, inspect.isfunction)
+        for func_name, func_obj in functions:
+            setattr(Commands, func_name, staticmethod(func_obj))
 
 
-# Set up a dict to be used in the main plugin file
-cmdDict = {}
+def __initMenuCommandds(*args):
+    """
 
-current_file_path = os.path.dirname(__file__)
-default_command_path = os.path.join(current_file_path, "menuCommands")
+    Returns:
+        dict: Menu commands from files
 
-# Load all menu files as dict and append to cmdDict
-commandFiles = glob.glob("{}/*.json".format(default_command_path))
-for f in commandFiles:
-    with open(f, "r") as cmdFile:
-        # dict_tmp = json.load(cmdFile)
-        # cmdDict = {**cmdDict, **dict_tmp}
-        cmdDict |= json.load(cmdFile)
+    """
 
-# Sort by label string length
-cmdOrderedDict = OrderedDict(
-    sorted(cmdDict.items(), key=lambda x: len(getitem(x[1], 'label'))))
+    cmdDict = {}
 
-# Convert back to normal dict
-cmdDict = dict(cmdOrderedDict)
+    current_file_path = os.path.dirname(__file__)
+    default_command_path = os.path.join(
+        current_file_path, "menuCommands")
+
+    if not os.path.exists(default_command_path):
+        print("not found")
+        return
+
+    # Load all menu files as dict and append to cmdDict
+    commandFiles = glob.glob("{}/*.json".format(default_command_path))
+    for f in commandFiles:
+        with open(f, "r") as cmdFile:
+            tmpDict = json.load(cmdFile)
+            cmdDict = {**cmdDict, **tmpDict}
+            # cmdDict |= json.load(cmdFile)
+
+    # Sort by label string length
+    cmdOrderedDict = OrderedDict(
+        sorted(cmdDict.items(), key=lambda x: len(getitem(x[1], 'label'))))
+
+    # Convert back to normal dict
+    cmdDict = dict(cmdOrderedDict)
+
+    return cmdDict
+
+
+def init():
+    """ Initialize commands class
+    """
+
+    print('init commands')
+
+    # Cleanup commands
+    allCommands = cmds.runTimeCommand(q=True, userCommandArray=True)
+    if allCommands is not None:
+        for c in allCommands:
+            if c.startswith("rush_"):
+                cmds.runTimeCommand(c, e=True, delete=True)
+
+    __initCommands()
+
+    # Register runtTimeCommands
+    for cmdID in Commands.commandDict:
+
+        cmd = Commands.commandDict[cmdID]['sourceCommand']
+        cmd_str = "from rush import Commands; Commands.{}()".format(cmd)
+        label = Commands.commandDict[cmdID]['label']
+        runtimeCommandName = Commands.commandDict[cmdID]['command']
+
+        cmds.runTimeCommand(
+            runtimeCommandName,
+            label=label,
+            annotation="Rush custom command",
+            commandLanguage="python",
+            command=cmd_str,
+            keywords="rush")
+
+    menuCommands = __initMenuCommandds()
+    Commands.commandDict = {**Commands.commandDict, **menuCommands}
+
+
+if __name__ == "__main__":
+    init()

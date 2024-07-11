@@ -4,21 +4,30 @@ Rush, tab-menu like command launcher
 
 import sys
 import os
+from importlib import reload
 
 from maya import OpenMayaUI
 from maya.api import OpenMaya
 from maya import cmds
 from maya import mel
-from PySide2 import QtGui, QtWidgets, QtCore
-import shiboken2
-from importlib import reload
+
+MAYA_VER = int(cmds.about(v=True))
+
+if MAYA_VER > 2024:
+    from PySide6 import QtGui, QtWidgets, QtCore
+    import shiboken6 as shiboken
+else:
+    from PySide2 import QtGui, QtWidgets, QtCore
+    import shiboken2 as shiboken
 
 import rush
 reload(rush)
 
+rush.init()
+
 
 __author__ = "Michi Inoue"
-__version__ = "2.9.6"
+__version__ = "2.10.0"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -48,7 +57,7 @@ def getMayaWindow():
     """ Get main window pointer """
 
     ptr = OpenMayaUI.MQtUtil.mainWindow()
-    return shiboken2.wrapInstance(int(ptr), QtWidgets.QMainWindow)
+    return shiboken.wrapInstance(int(ptr), QtWidgets.QMainWindow)
 
 
 class History(object):
@@ -247,7 +256,7 @@ class CustomQTableView(QtWidgets.QTableView):
 class Database():
 
     def __init__(self):
-        self.command_dict = {**rush.cmdDict, **rush.TmpCls.commandDict}
+        self.command_dict = rush.Commands.commandDict
 
         self.filteredModel = self.createCompletionData()
         self.historyModel = self.createHistoryData()
@@ -344,7 +353,7 @@ class Database():
 DATA = Database()
 
 
-class Gui(rush.TmpCls, QtWidgets.QWidget):
+class Gui(rush.Commands, QtWidgets.QWidget):
     """ Gui class """
 
     def __init__(self, parent=None):
@@ -588,10 +597,12 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
                 text += "(?=.*{})".format(word)
 
         # Set commands to case insensitive
-        regExp = QtCore.QRegExp(
-            text, QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
-
-        self.filteredModel.setFilterRegExp(regExp)
+        if MAYA_VER > 2024:
+            self.filteredModel.setFilterRegularExpression(text)
+        else:
+            regExp = QtCore.QRegExp(
+                text, QtCore.Qt.CaseInsensitive, QtCore.QRegExp.RegExp)
+            self.filteredModel.setFilterRegExp(regExp)
 
         numRows = self.cmdsView.model().rowCount()
         if numRows == 0:
@@ -703,26 +714,13 @@ class Gui(rush.TmpCls, QtWidgets.QWidget):
         # get command string
         cmd = self.cmdDict[command_id]["command"]
 
-        # Close gui first otherwise maya clashes(2017)
-        self.close()
-
         sourceType = self.cmdDict[command_id]["sourceType"]
         if sourceType == "mel":
-            mel.eval(cmd)
+            OpenMaya.MGlobal.executeCommandOnIdle(cmd)
             mel.eval("""callLastCommand("%s")""" % cmd)
         else:
-            try:
-                func = getattr(self, "%s" % cmd)
-                func()
-                print("Rush command executed : %s" % cmd)
-
-                # Add to repeatLast command so the comamnd can be repeatable
-                # by G key
-                cs = R'python("from rush import TmpCls; TmpCls.%s()")' % cmd
-                mel.eval("""callLastCommand("%s")""" % cs)
-            except AttributeError:
-                pass
-
+            print("failed")
+        
         # Add command to history data
         self.history.append(command_id)
         self.history.save()
