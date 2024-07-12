@@ -20,7 +20,7 @@ def __loadModules(*args) -> list:
     """Return a list of module objects
 
     Returns:
-        list: module objects
+        list[module]: module objects
 
     """
     scriptDir = cmds.internalVar(userScriptDir=True)

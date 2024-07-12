@@ -27,7 +27,7 @@ rush.init()
 
 
 __author__ = "Michi Inoue"
-__version__ = "2.10.0"
+__version__ = "2.10.1"
 PLUGIN_COMMAND = "rush2"
 
 
@@ -68,11 +68,11 @@ class History(object):
         self.history = self.read()
 
     @classmethod
-    def read(cls) -> list:
+    def read(cls) -> list[str]:
         """ Load history
 
         Return:
-            history(list): list of commands
+            history(list[str]): list of command IDs
 
         """
 
@@ -90,7 +90,7 @@ class History(object):
         else:
             return []
 
-    def append(self, uuid: str):
+    def append(self, uuid: str) -> None:
         """ append history
 
         Args:
@@ -262,6 +262,12 @@ class Database():
         self.historyModel = self.createHistoryData()
 
     def createCompletionData(self) -> QtCore.QSortFilterProxyModel:
+        """ Create data for command list
+
+        Returns:
+            QtCore.QSortFilterProxyModel: Filtered model for commands
+
+        """
         model = QtGui.QStandardItemModel()
 
         # Add all command names and icon paths to the the model(model)
@@ -304,7 +310,12 @@ class Database():
         return filteredModel
 
     def createHistoryData(self) -> QtCore.QSortFilterProxyModel:
-        """ Create data for history list """
+        """ Create data for history list
+        
+        Returns:
+            QtCore.QSortFilterProxyModel: Filtered model for history commands
+
+        """
 
         # History model
         historyList = History.read()
@@ -436,7 +447,7 @@ class Gui(rush.Commands, QtWidgets.QWidget):
 
         self.showHistory()
 
-    def viewSelectionChanged(self, item: QtCore.QItemSelection):
+    def viewSelectionChanged(self, item: QtCore.QItemSelection) -> None:
 
         indexes = item.indexes()
         if len(indexes) == 2:
@@ -459,7 +470,7 @@ class Gui(rush.Commands, QtWidgets.QWidget):
             self.completeMode = "normal"
 
     def complete(self, *args):
-        """ docstring """
+        """ Complete commands """
 
         tabType = args[0]
 
@@ -477,8 +488,7 @@ class Gui(rush.Commands, QtWidgets.QWidget):
         else:
             pass
 
-    def arrowPressed(self, direction: str):
-        # type: (str) -> None
+    def arrowPressed(self, direction: str) -> None:
         """ key press event when arrow key pressed
 
         Args:
@@ -615,10 +625,15 @@ class Gui(rush.Commands, QtWidgets.QWidget):
 
     def tabComplete(self,
                     view: QtWidgets.QTableView,
-                    model: QtCore.QSortFilterProxyModel):
+                    model: QtCore.QSortFilterProxyModel) -> None:
         """ Complete commands by tab key
+
         Args:
-            currentView (QTableView): view
+            view (QTableView): view
+            model (QtCore.QSortFilterProxyModel): model
+        
+        Return:
+            None
 
         """
 
